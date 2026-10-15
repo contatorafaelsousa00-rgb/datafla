@@ -202,3 +202,43 @@ def normalizar(partidas: list[dict], team_id: int = config.TEAM_ID) -> dict[str,
         tabelas["eventos"] += linhas_eventos(p, team_id)
         tabelas["estatisticas_time"] += linhas_estatisticas(p, team_id)
     return tabelas
+
+
+def linhas_calendario(jogos: list[dict], team_id: int = config.TEAM_ID) -> list[dict]:
+    """Todos os jogos da temporada (inclusive futuros), a partir da lista de /fixtures."""
+    linhas = []
+    for j in jogos:
+        nos, eles = _lado(j, team_id)
+        linhas.append({
+            "id_partida": j["fixture"]["id"],
+            "data_utc": j["fixture"]["date"],
+            "status": j["fixture"]["status"]["short"],
+            "competicao_id": j["league"]["id"],
+            "competicao": j["league"]["name"],
+            "rodada": j["league"].get("round"),
+            "mando": "Casa" if nos == "home" else "Fora",
+            "adversario_id": j["teams"][eles]["id"],
+            "adversario": j["teams"][eles]["name"],
+            "gols_pro": j["goals"][nos],
+            "gols_contra": j["goals"][eles],
+            "estadio": (j["fixture"].get("venue") or {}).get("name"),
+        })
+    return linhas
+
+
+def linhas_elenco(squads: list[dict], team_id: int = config.TEAM_ID) -> list[dict]:
+    """Elenco atual a partir de /players/squads."""
+    linhas = []
+    for bloco in squads:
+        if bloco["team"]["id"] != team_id:
+            continue
+        for j in bloco.get("players", []):
+            linhas.append({
+                "jogador_id": j["id"],
+                "jogador": j["name"],
+                "idade": j.get("age"),
+                "numero": j.get("number"),
+                "posicao": j.get("position"),
+                "foto": j.get("photo"),
+            })
+    return linhas

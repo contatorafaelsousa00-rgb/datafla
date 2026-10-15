@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DataFla · Flamengo 2026</title>
+  <meta name="description" content="Desempenho do Flamengo em 2026 em todas as competições: resultados, xG e minutagem dos jogadores.">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo-conteudo">
+      <div>
+        <h1>DataFla <span>· Flamengo 2026</span></h1>
+        <p id="atualizado" class="sutil"></p>
+      </div>
+    </div>
+  </header>
+
+  <div id="aviso-demo" class="aviso" hidden>
+    Dados fictícios, gerados só para testar o painel. Não representam jogos nem jogadores reais.
+  </div>
+
+  <main>
+    <section class="filtros" aria-label="Filtros">
+      <div class="grupo-filtro">
+        <span class="rotulo-filtro">Competições</span>
+        <div id="filtro-competicoes" class="chips"></div>
+      </div>
+      <div class="grupo-filtro">
+        <span class="rotulo-filtro">Mando</span>
+        <div id="filtro-mando" class="segmentado" role="radiogroup">
+          <button data-mando="" aria-pressed="true">Todos</button>
+          <button data-mando="Casa" aria-pressed="false">Casa</button>
+          <button data-mando="Fora" aria-pressed="false">Fora</button>
+        </div>
+      </div>
+    </section>
+
+    <nav class="abas" role="tablist">
+      <button role="tab" data-aba="geral" aria-selected="true">Visão geral</button>
+      <button role="tab" data-aba="jogadores" aria-selected="false">Jogadores</button>
+      <button role="tab" data-aba="minutagem" aria-selected="false">Minutagem</button>
+      <button role="tab" data-aba="jogos" aria-selected="false">Jogos</button>
+      <button role="tab" data-aba="qualidade" aria-selected="false">Qualidade dos dados</button>
+    </nav>
+
+    <section id="aba-geral" class="aba">
+      <div id="kpis" class="kpis"></div>
+      <div class="grade-2">
+        <article class="cartao">
+          <h2>Aproveitamento por competição</h2>
+          <p class="sutil">Pontos conquistados ÷ pontos possíveis (vitória 3, empate 1).</p>
+          <div id="graf-aproveitamento" class="grafico"></div>
+        </article>
+        <article class="cartao">
+          <h2>Gols por faixa de minutos</h2>
+          <p class="sutil">Gols marcados e sofridos em cada intervalo de 15 minutos.</p>
+          <div id="graf-faixas" class="grafico"></div>
+        </article>
+      </div>
+      <article class="cartao">
+        <h2>Gols e xG acumulados</h2>
+        <p id="xg-nota" class="sutil"></p>
+        <div id="graf-xg" class="grafico"></div>
+      </article>
+      <div class="grade-2">
+        <article class="cartao">
+          <h2>Sequência de resultados</h2>
+          <p class="sutil">Do mais antigo ao mais recente.</p>
+          <div id="sequencia" class="sequencia"></div>
+        </article>
+        <article class="cartao">
+          <h2>Próximos jogos</h2>
+          <div id="proximos"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="aba-jogadores" class="aba" hidden>
+      <article class="cartao">
+        <div class="barra-cartao">
+          <h2>Jogadores</h2>
+          <input id="busca-jogador" type="search" placeholder="Buscar jogador" aria-label="Buscar jogador">
+        </div>
+        <p class="sutil">Clique num jogador para ver os detalhes. "% min." = minutos jogados ÷ minutos dos jogos filtrados.</p>
+        <div class="tabela-rolagem"><table id="tabela-jogadores" class="tabela"></table></div>
+      </article>
+      <article id="detalhe-jogador" class="cartao" hidden></article>
+    </section>
+
+    <section id="aba-minutagem" class="aba" hidden>
+      <article class="cartao">
+        <h2>Minutagem jogo a jogo</h2>
+        <p class="sutil">Cada linha é um jogador, cada coluna um jogo (mais antigo à esquerda). Quanto mais escuro, mais minutos.</p>
+        <div id="legenda-minutagem" class="legenda"></div>
+        <div id="mapa-minutagem" class="mapa-rolagem"></div>
+      </article>
+    </section>
+
+    <section id="aba-jogos" class="aba" hidden>
+      <article class="cartao">
+        <h2>Jogos</h2>
+        <p class="sutil">Clique num jogo para ver escalação, eventos e estatísticas.</p>
+        <div class="tabela-rolagem"><table id="tabela-jogos" class="tabela"></table></div>
+      </article>
+      <article id="detalhe-jogo" class="cartao" hidden></article>
+    </section>
+
+    <section id="aba-qualidade" class="aba" hidden>
+      <article class="cartao">
+        <h2>Completude por competição</h2>
+        <p class="sutil">Porcentagem dos jogos encerrados que têm cada tipo de dado na API.</p>
+        <div class="tabela-rolagem"><table id="tabela-completude" class="tabela"></table></div>
+      </article>
+      <article class="cartao">
+        <h2>Jogos para conferir na súmula</h2>
+        <p class="sutil">Inconsistências encontradas pelas regras automáticas (gols × placar, titulares, substituições, minutos, finalizações).</p>
+        <div class="tabela-rolagem"><table id="tabela-apontamentos" class="tabela"></table></div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="rodape sutil">
+    Dados: API-Football. Projeto independente, sem vínculo com o Clube de Regatas do Flamengo.
+  </footer>
+
+  <div id="dica" class="dica" role="tooltip" hidden></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

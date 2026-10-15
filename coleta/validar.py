@@ -61,7 +61,9 @@ def checar_partida(partida, jogadores, eventos, estatisticas) -> list[dict]:
     for time_id, gols in gols_time.items():
         js = [j for j in jogadores if j["time_id"] == time_id]
         if not js:
-            reg(time_id, "escalacao", ERRO, "sem jogadores para este time")
+            # O painel é do Flamengo: falta de dados do adversário não é erro.
+            if time_id == config.TEAM_ID:
+                reg(time_id, "escalacao", ERRO, "sem jogadores do Flamengo")
             continue
 
         # 1. Gols dos jogadores somam o placar (gols contra explicam diferença)

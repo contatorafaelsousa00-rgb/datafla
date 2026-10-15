@@ -3,3 +3,5 @@ __pycache__/
 data/raw/
 data/*.db
 .env
+data-demo/
+site/dados-demo/
