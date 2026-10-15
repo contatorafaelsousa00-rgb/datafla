@@ -95,4 +95,8 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   sem cópia local, o JSON leva a URL original. O workflow faz commit de `site/fotos`.
 - Jogadores: cada grupo abre ordenado pela estatística principal (gols, assistências, desarmes, gols evitados);
   perfil em seções Ataque/Criação/Defesa, cada uma da melhor para a pior posição no elenco.
+- Aba "Dados" saiu (relatório de qualidade segue em data/<ano>/validacao/). Entrou "Sua opinião" (15/10/2026):
+  formulário de elogios/críticas/sugestões grava em Firestore (`opinioes`, banco (default) em nam5) via REST com a
+  chave pública do app web; `firestore.rules` só permite criar com campos validados; leitura só pelo console:
+  https://console.firebase.google.com/project/datafla/firestore/databases/-default-/data/~2Fopinioes
 - 29 testes (`python -m pytest`).

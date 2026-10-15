@@ -141,6 +141,10 @@ O site é estático (`site/`), sem servidor nem banco: o painel lê `site/dados/
 Cache: dados, JS, CSS e HTML saem com `no-cache` (o navegador revalida e só baixa o que mudou), então uma publicação aparece na hora.
 `site/dados-demo/` nunca é publicado. Tudo no Hosting é público.
 
+**Elogios, críticas e sugestões** (aba "Sua opinião"): gravados no Firestore do projeto, coleção `opinioes`.
+As regras (`firestore.rules`, publicadas com `firebase deploy --only firestore:rules`) só permitem criar
+mensagens válidas; ninguém lê pelo site. Para ler: console do Firebase → Firestore Database → `opinioes`.
+
 ## O que já foi confirmado nos dados reais (15/10/2026)
 
 - **API-Football, plano grátis:** só libera 2022 a 2024 e recusa `/fixtures?ids=`; em 2024 o Carioca

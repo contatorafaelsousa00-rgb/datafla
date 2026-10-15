@@ -456,3 +456,28 @@ h2 { font-weight: 600; letter-spacing: -.01em; }
 
 /* cartões abertos por clique param abaixo do topo e da barra de filtros fixos */
 #detalhe-jogo { scroll-margin-top: calc(var(--altura-topo, 64px) + 110px); }
+
+/* ---------- aba "Sua opinião" ---------- */
+body.sem-filtros .filtros { display: none; }
+.opiniao { max-width: 760px; }
+#form-opiniao { display: flex; flex-direction: column; gap: 16px; margin-top: 18px; }
+.campo { display: flex; flex-direction: column; gap: 6px; border: 0; padding: 0; margin: 0; min-width: 0; }
+.rotulo-campo { font: 600 12px/1 var(--fonte-titulo); letter-spacing: .06em; text-transform: uppercase; color: var(--mudo); padding: 0; }
+.rotulo-campo small { text-transform: none; letter-spacing: 0; font-weight: 400; }
+.grade-campos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; }
+#form-opiniao textarea, #form-opiniao input[type="text"] { font: inherit; font-size: 14px; color: var(--texto); background: var(--superficie-2);
+  border: 1px solid var(--borda-forte); border-radius: 10px; padding: 10px 12px; width: 100%; resize: vertical; }
+#form-opiniao textarea:focus, #form-opiniao input[type="text"]:focus { outline: none; border-color: var(--marca); }
+.ajuda { display: flex; justify-content: space-between; gap: 12px; font-size: 12px; color: var(--mudo); font-family: var(--fonte-numero); }
+.erro { color: var(--marca); font-family: var(--fonte); }
+.tipos label { position: relative; }
+.tipos input { position: absolute; opacity: 0; pointer-events: none; }
+.tipos span { display: inline-block; padding: 6px 14px; border-radius: 7px; font-size: 13px; color: var(--texto-2); cursor: pointer; }
+.tipos input:checked + span { background: var(--marca); color: #fff; font-weight: 600; }
+.tipos input:focus-visible + span { outline: 2px solid var(--marca); outline-offset: 2px; }
+.isca { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.acoes { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.botao-primario { border: 0; border-radius: 10px; padding: 10px 22px; background: var(--marca); color: #fff; font: 600 14px var(--fonte-titulo);
+  cursor: pointer; transition: background .15s; }
+.botao-primario:hover { background: var(--marca-forte); }
+.botao-primario:disabled { opacity: .6; cursor: wait; }

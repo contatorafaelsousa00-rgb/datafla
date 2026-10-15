@@ -1,0 +1,40 @@
+rules_version = '2';
+
+// Mensagens da aba "Sua opinião": qualquer visitante pode ENVIAR, ninguém lê, altera ou apaga pelo site.
+// O dono lê pelo console do Firebase (que não passa por estas regras).
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /opinioes/{id} {
+      allow create: if valida(request.resource.data);
+      allow read, update, delete: if false;
+    }
+
+    // Todo o resto do banco fica fechado
+    match /{documento=**} {
+      allow read, write: if false;
+    }
+
+    function texto(campo, minimo, maximo) {
+      return campo is string && campo.size() >= minimo && campo.size() <= maximo;
+    }
+
+    function opcional(dados, campo, maximo) {
+      return !(campo in dados) || texto(dados[campo], 0, maximo);
+    }
+
+    function valida(dados) {
+      return dados.keys().hasOnly(['tipo', 'mensagem', 'nome', 'contato', 'aba', 'criado_em'])
+        && dados.keys().hasAll(['tipo', 'mensagem', 'criado_em'])
+        && dados.tipo in ['elogio', 'critica', 'sugestao']
+        && texto(dados.mensagem, 3, 2000)
+        && opcional(dados, 'nome', 80)
+        && opcional(dados, 'contato', 120)
+        && opcional(dados, 'aba', 30)
+        // horário do envio perto do horário do servidor (evita datas inventadas)
+        && dados.criado_em is timestamp
+        && dados.criado_em > request.time - duration.value(15, 'm')
+        && dados.criado_em < request.time + duration.value(15, 'm');
+    }
+  }
+}

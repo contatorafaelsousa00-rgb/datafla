@@ -87,7 +87,7 @@
       <button role="tab" data-aba="jogadores" aria-selected="false">Jogadores</button>
       <button role="tab" data-aba="elenco" aria-selected="false">Elenco</button>
       <button role="tab" data-aba="estilo" aria-selected="false">Estilo de jogo</button>
-      <button role="tab" data-aba="dados" aria-selected="false">Dados</button>
+      <button role="tab" data-aba="opiniao" aria-selected="false">Sua opinião</button>
     </nav>
 
     <!-- TEMPORADA: como o time está -->
@@ -242,21 +242,43 @@
       </div>
     </section>
 
-    <!-- DADOS: cobertura e qualidade -->
-    <section id="aba-dados" class="aba" hidden>
-      <article class="cartao">
-        <h2>Cobertura</h2>
-        <p id="cobertura" class="sutil"></p>
-      </article>
-      <article class="cartao">
-        <h2>Completude por competição</h2>
-        <p class="sutil">Porcentagem dos jogos encerrados que têm cada tipo de dado na fonte.</p>
-        <div class="tabela-rolagem"><table id="tabela-completude" class="tabela"></table></div>
-      </article>
-      <article class="cartao">
-        <h2>Jogos para conferir na súmula</h2>
-        <p class="sutil">Inconsistências encontradas pelas regras automáticas (gols × placar, titulares, substituições, minutos, finalizações).</p>
-        <div class="tabela-rolagem"><table id="tabela-apontamentos" class="tabela"></table></div>
+    <!-- SUA OPINIÃO: elogios, críticas e sugestões (gravadas no Firestore; só o dono lê, pelo console) -->
+    <section id="aba-opiniao" class="aba" hidden>
+      <article class="cartao opiniao">
+        <h2>Elogios, críticas e sugestões</h2>
+        <p class="sutil">Viu um número estranho, sentiu falta de alguma análise ou curtiu algo? Conta pra gente.
+          Nome e contato são opcionais e só quem mantém o site vê.</p>
+        <form id="form-opiniao" novalidate>
+          <fieldset class="campo">
+            <legend class="rotulo-campo">Tipo</legend>
+            <div class="segmentado tipos" role="radiogroup">
+              <label><input type="radio" name="tipo" value="elogio"><span>Elogio</span></label>
+              <label><input type="radio" name="tipo" value="critica"><span>Crítica</span></label>
+              <label><input type="radio" name="tipo" value="sugestao" checked><span>Sugestão</span></label>
+            </div>
+          </fieldset>
+          <label class="campo">
+            <span class="rotulo-campo">Mensagem</span>
+            <textarea id="op-mensagem" name="mensagem" rows="6" maxlength="2000" placeholder="O que você achou? O que podemos melhorar?" required></textarea>
+            <span class="ajuda"><span id="op-erro" class="erro" role="alert"></span><span id="op-contador">0/2000</span></span>
+          </label>
+          <div class="grade-campos">
+            <label class="campo">
+              <span class="rotulo-campo">Nome <small>(opcional)</small></span>
+              <input id="op-nome" name="nome" type="text" maxlength="80" autocomplete="name" placeholder="Como quer ser chamado">
+            </label>
+            <label class="campo">
+              <span class="rotulo-campo">Contato <small>(opcional)</small></span>
+              <input id="op-contato" name="contato" type="text" maxlength="120" autocomplete="email" placeholder="E-mail ou @ para resposta">
+            </label>
+          </div>
+          <!-- armadilha para robôs: invisível para pessoas -->
+          <input class="isca" name="site" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="acoes">
+            <button id="op-enviar" type="submit" class="botao-primario">Enviar</button>
+            <span id="op-status" class="sutil" role="status"></span>
+          </div>
+        </form>
       </article>
     </section>
   </main>

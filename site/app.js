@@ -897,39 +897,51 @@ function renderEstilo(js) {
 }
 
 // =====================================================================
-// DADOS
+// SUA OPINIÃO
 // =====================================================================
-const CAMPOS_COMPL = [["escalacao", "Escalação"], ["minutagem", "Minutagem"], ["estatisticas_jogador", "Estat. jogador"],
-  ["nota", "Nota"], ["estatisticas_time", "Estat. time"], ["xg", "xG"]];
-const NOME_REGRA = { gols: "Gols × placar", titulares: "Titulares", titulares_sem_minutos: "Titular sem minutos",
-  substituicoes: "Substituições", substituicoes_vs_eventos: "Substituições × eventos", minutos: "Soma de minutos",
-  finalizacoes: "Finalizações", escalacao: "Escalação" };
 const NOME_FONTE = { highlightly: "Highlightly", "api-football": "API-Football" };
 const nomeFonte = () => NOME_FONTE[D.bruto.meta.fonte ?? "api-football"] ?? D.bruto.meta.fonte;
 
-function renderDados() {
-  const v = D.bruto.validacao;
-  const total = D.encerrados.length, det = D.encerrados.filter((p) => p.detalhe).length;
-  $("cobertura").textContent = `Fonte: ${nomeFonte()}. ${total} jogos encerrados, ${det} com detalhes baixados`
-    + (det < total ? ` (os ${total - det} restantes entram nas próximas coletas, conforme a cota diária da fonte)` : "")
-    + `. Atualizado em ${new Date(D.bruto.meta.gerado_em).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })}.`;
-  const compl = v.completude.filter((c) => compOk(c.competicao));
-  const porComp = D.competicoes.map((c) => [c, compl.filter((x) => x.competicao === c)]).filter(([, l]) => l.length);
-  $("tabela-completude").replaceChildren(
-    h("thead", {}, h("tr", {}, h("th", {}, "Competição"), h("th", { class: "num" }, "Jogos"), CAMPOS_COMPL.map(([, t]) => h("th", {}, t)))),
-    h("tbody", {}, porComp.map(([c, l]) => h("tr", {}, h("td", {}, tagComp(c)), h("td", { class: "num" }, l.length),
-      CAMPOS_COMPL.map(([k]) => {
-        const f = l.filter((x) => x[k]).length / l.length;
-        return h("td", {}, h("span", { class: "medidor" }, h("b", { style: `width:${f * 100}%` })), pct(f, 0));
-      })))));
-  const probs = v.checagens.filter((c) => c.status !== "ok" && compOk(c.competicao))
-    .sort((a, b) => b.data_utc.localeCompare(a.data_utc));
-  $("tabela-apontamentos").replaceChildren(
-    h("thead", {}, h("tr", {}, ["Data", "Competição", "Jogo", "Time", "Regra", "Status", "Detalhe"].map((t) => h("th", {}, t)))),
-    h("tbody", {}, probs.length ? probs.map((c) => h("tr", {}, h("td", {}, dataLonga(c.data_utc)), h("td", {}, tagComp(c.competicao)),
-      h("td", {}, `x ${c.adversario}`), h("td", {}, c.time), h("td", {}, NOME_REGRA[c.regra] ?? c.regra),
-      h("td", {}, h("span", { class: `status ${c.status}` }, c.status === "erro" ? "Erro" : "Alerta")), h("td", {}, c.detalhe)))
-      : h("tr", {}, h("td", { colspan: 7, class: "vazio" }, "Nenhuma inconsistência nos jogos filtrados."))));
+// Firestore do projeto datafla. A chave é a chave pública do app web (feita para ficar no site):
+// quem protege os dados são as regras em firestore.rules (só permitem criar; ninguém lê pelo site).
+const URL_OPINIOES = "https://firestore.googleapis.com/v1/projects/datafla/databases/(default)/documents/opinioes"
+  + "?key=AIzaSyBK83GdLEgnJPrn7NEtOSV2nTpySaAplYo";
+const ESPERA_REENVIO_MS = 30_000;
+
+async function gravarOpiniao(dados) {
+  const fields = { criado_em: { timestampValue: new Date().toISOString() } };
+  for (const [k, v] of Object.entries(dados)) if (v) fields[k] = { stringValue: v };
+  const resp = await fetch(URL_OPINIOES, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ fields }) });
+  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+}
+
+function montarOpiniao() {
+  const form = $("form-opiniao"), msg = $("op-mensagem"), erro = $("op-erro"), status = $("op-status"), botao = $("op-enviar");
+  const contar = () => { $("op-contador").textContent = `${msg.value.length}/2000`; };
+  msg.addEventListener("input", () => { contar(); erro.textContent = ""; });
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const texto = msg.value.trim();
+    if (texto.length < 3) { erro.textContent = "Escreva a sua mensagem antes de enviar."; msg.focus(); return; }
+    let ultimo = 0;
+    try { ultimo = Number(localStorage.getItem("datafla-opiniao") || 0); } catch {}
+    if (Date.now() - ultimo < ESPERA_REENVIO_MS) { status.textContent = "Você acabou de enviar uma mensagem. Espere alguns segundos."; return; }
+    if (form.elements.site.value) { form.reset(); contar(); status.textContent = "Mensagem enviada. Obrigado!"; return; } // robô
+    botao.disabled = true;
+    status.textContent = "Enviando…";
+    try {
+      await gravarOpiniao({ tipo: form.elements.tipo.value, mensagem: texto, nome: $("op-nome").value.trim(),
+        contato: $("op-contato").value.trim(), aba: "opiniao" });
+      try { localStorage.setItem("datafla-opiniao", String(Date.now())); } catch {}
+      form.reset();
+      contar();
+      status.textContent = "Mensagem enviada. Obrigado!";
+    } catch {
+      status.textContent = "Não foi possível enviar agora. Tente de novo em instantes.";
+    } finally {
+      botao.disabled = false;
+    }
+  });
 }
 
 // =====================================================================
@@ -1013,6 +1025,7 @@ function montarTemporadas(atual) {
 
 function marcarAba(aba) {
   estado.aba = aba;
+  document.body.classList.toggle("sem-filtros", aba === "opiniao");
   for (const x of document.querySelectorAll(".abas button")) x.setAttribute("aria-selected", x.dataset.aba === aba);
   for (const s of document.querySelectorAll(".aba")) s.hidden = s.id !== `aba-${aba}`;
 }
@@ -1049,7 +1062,7 @@ function montarControlesFixos() {
 function render() {
   const js = filtrados();
   ({ temporada: renderTemporada, jogos: renderJogos, jogadores: renderJogadores, elenco: renderElenco,
-    estilo: renderEstilo, dados: renderDados })[estado.aba](js);
+    estilo: renderEstilo, opiniao: () => {} })[estado.aba](js);
   if ($("modal-jogador").open) renderPerfil(js, agregarJogadores(js));
 }
 
@@ -1106,6 +1119,7 @@ async function iniciar() {
   const ano = TEMPORADAS.some((t) => t.temporada === pedida) ? pedida : TEMPORADAS[0].temporada;
   montarControlesFixos();
   montarModal();
+  montarOpiniao();
   const aba = params.get("aba");
   if (aba && document.getElementById(`aba-${aba}`)) marcarAba(aba);
   await carregarTemporada(ano);
