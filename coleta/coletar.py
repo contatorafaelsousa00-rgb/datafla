@@ -10,6 +10,7 @@
     python -m coleta.coletar tudo       # jogos + elenco + detalhes + processar
     python -m coleta.coletar modelo-sumula <id_partida>  # cria planilha para conferir com a súmula
     python -m coleta.coletar sumulas    # compara as súmulas preenchidas com a API
+    python -m coleta.coletar inspecionar  # responde as dúvidas da documentação usando os jogos baixados
 """
 
 from __future__ import annotations
@@ -19,7 +20,7 @@ import os
 import sys
 from datetime import datetime, timedelta, timezone
 
-from . import alteracoes, armazenar, config, exportar, normalizar, sumulas, validar
+from . import alteracoes, armazenar, config, exportar, inspecionar, normalizar, sumulas, validar
 from .api import ClienteAPI, ErroAPI, ler_raw, salvar_raw
 
 ARQ_JOGOS = "jogos"
@@ -188,10 +189,23 @@ def cmd_sumulas():
     return 0
 
 
+def cmd_inspecionar():
+    partidas = carregar_partidas()
+    if not partidas:
+        print("Nenhum jogo baixado ainda. Rode antes: python -m coleta.coletar tudo")
+        return 1
+    texto = inspecionar.relatorio(partidas)
+    config.RELATORIO_DIR.mkdir(parents=True, exist_ok=True)
+    (config.RELATORIO_DIR / "inspecao.md").write_text(texto, encoding="utf-8")
+    print(texto)
+    print(f"-> {config.RELATORIO_DIR / 'inspecao.md'}")
+    return 0
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("comando", choices=[
-        "status", "jogos", "elenco", "detalhes", "processar", "tudo", "modelo-sumula", "sumulas"])
+        "status", "jogos", "elenco", "detalhes", "processar", "tudo", "modelo-sumula", "sumulas", "inspecionar"])
     parser.add_argument("id_partida", nargs="?", type=int)
     parser.add_argument("-t", "--temporada", type=int, help=f"ano da temporada (padrão: {config.SEASON})")
     args = parser.parse_args(argv)
@@ -203,6 +217,8 @@ def main(argv=None):
         return cmd_processar()
     if args.comando == "sumulas":
         return cmd_sumulas()
+    if args.comando == "inspecionar":
+        return cmd_inspecionar()
     if args.comando == "modelo-sumula":
         if args.id_partida is None:
             parser.error("informe o id_partida (veja data/<ano>/csv/partidas.csv)")

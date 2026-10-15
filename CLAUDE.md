@@ -27,6 +27,8 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
   - `normalizar.py` JSON da API → tabelas planas. `validar.py` regras de coerência + completude.
   - `sumulas.py` comparação com súmulas preenchidas à mão (casamento por número da camisa).
   - `exportar.py` traduz nomes de competição/posição e gera `site/dados/<ano>.json`.
+  - `inspecionar.py` (`coletar inspecionar`) decide pelos dados reais: `player`/`assist` na substituição,
+    time do evento de gol contra, `passes.accuracy` contagem ou %, cobertura de xG por competição.
   - `alteracoes.py` registra o que muda entre coletas do mesmo jogo (mede quando a API estabiliza).
   - **Multi-temporada**: tudo é separado por ano em `data/<ano>/` e `site/dados/<ano>.json` + `temporadas.json`.
     `config.aplicar_temporada(ano)` troca todos os caminhos; CLI aceita `--temporada`. Padrão = ano atual.
@@ -49,9 +51,11 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
 
 ## Estado atual (15/10/2026)
 
-- Código pronto e testado só com dados sintéticos (`python -m pytest`, 14 testes). **Ainda não rodou contra a API real.**
+- Código pronto e testado só com dados sintéticos (`python -m pytest`, 16 testes).
+- Documentação oficial (api-football.com/documentation-v3) não acessível pela sessão na nuvem; confirmado por
+  buscas: máx. 20 ids em `/fixtures?ids=`, resposta por id traz events/lineups/statistics/players, live a cada 15 s. **Ainda não rodou contra a API real.**
 - Próximo passo: Rafael cria a chave grátis, roda `python -m coleta.coletar status` e depois `tudo`.
-  Ao ver a primeira resposta real, confirmar os pontos da seção "Pontos a confirmar" do README
+  Ao ver a primeira resposta real, rodar `coletar inspecionar` e ajustar conforme os pontos da seção "Pontos a confirmar" do README
   (ID 127, acesso a 2026 no grátis, time do evento de gol contra, `player`/`assist` na substituição,
   `passes.accuracy`, cobertura de `expected_goals`) e ajustar `normalizar.py`/`validar.py`.
 - Depois: rodar a conferência com súmulas em ~10 jogos (4 Brasileirão, 3 Libertadores, 2 Copa do Brasil, 1 Carioca);

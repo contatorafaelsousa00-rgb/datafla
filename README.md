@@ -51,6 +51,7 @@ cd site && python -m http.server 8000
 | `tudo` | `jogos` + `elenco` + `detalhes` + `processar` | ~6 |
 | `modelo-sumula <id>` | cria `data/<ano>/sumulas/<id>.csv` para conferir com a súmula oficial | 0 |
 | `sumulas` | compara as súmulas preenchidas com a API → `data/<ano>/validacao/sumulas.md` | 0 |
+| `inspecionar` | responde as dúvidas da documentação (substituição, gol contra, `passes.accuracy`, xG) pelos dados baixados | 0 |
 
 Todos aceitam `--temporada <ano>`.
 
@@ -114,6 +115,9 @@ O site é estático (`site/`), sem banco nem servidor.
 `site/dados-demo/` nunca é publicado.
 
 ## Pontos a confirmar na primeira coleta real
+
+Depois do primeiro `tudo`, rode `python -m coleta.coletar inspecionar`. Ele responde pelos próprios
+dados as dúvidas que a documentação não esclarece e grava `data/<ano>/validacao/inspecao.md`:
 
 - O ID do Flamengo (`127`): o comando `status` confere.
 - Se o plano grátis libera a temporada 2026.
