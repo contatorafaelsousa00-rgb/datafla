@@ -14,8 +14,8 @@ API-Football ──► coleta/ (Python) ──► data/<ano>/csv, flamengo.db �
 ```bash
 python -m pip install -r requirements.txt
 
-# PowerShell: $env:API_FOOTBALL_KEY="sua_chave"
-export API_FOOTBALL_KEY="sua_chave"
+# Crie o arquivo .env a partir do modelo e coloque sua chave nele
+copy .env.exemplo .env        # Linux/Mac: cp .env.exemplo .env
 
 python -m coleta.coletar status   # confere chave, cota, ID do time e acesso a 2026
 python -m coleta.coletar tudo     # baixa tudo, gera banco, CSVs, validação e o JSON do site
@@ -27,7 +27,7 @@ Cada temporada fica separada em `data/<ano>/` e `site/dados/<ano>.json`; o paine
 temporadas de `site/dados/temporadas.json` e tem um seletor (link direto: `?t=2025`).
 O plano grátis da API pode não liberar todas as temporadas antigas; o `status --temporada <ano>` mostra.
 
-A chave nunca vai para o código nem para o Git.
+A chave fica só no `.env`, que o `.gitignore` mantém fora do Git. Uma variável de ambiente com o mesmo nome tem prioridade sobre o arquivo.
 
 ### Ver o painel
 

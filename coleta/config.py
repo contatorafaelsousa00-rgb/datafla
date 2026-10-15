@@ -1,10 +1,31 @@
-"""Configurações do projeto. Tudo pode ser sobrescrito por variável de ambiente."""
+"""Configurações do projeto.
+
+Valores vêm de variáveis de ambiente ou do arquivo `.env` na raiz do projeto
+(veja `.env.exemplo`). Uma variável já definida no terminal tem prioridade sobre o `.env`.
+"""
 
 import os
 from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+
+
+def carregar_env(caminho: Path) -> None:
+    """Lê linhas CHAVE=valor do .env sem sobrescrever o que já está no ambiente."""
+    if not caminho.exists():
+        return
+    for linha in caminho.read_text(encoding="utf-8-sig").splitlines():
+        linha = linha.strip()
+        if not linha or linha.startswith("#") or "=" not in linha:
+            continue
+        chave, valor = linha.split("=", 1)
+        if not os.environ.get(chave.strip()):  # vazio conta como não definido
+            os.environ[chave.strip()] = valor.strip().strip('"').strip("'")
+
+
+carregar_env(ROOT / ".env")
+
 # Pasta base; cada temporada fica numa subpasta (data/2026/, data/2025/...).
 DATA_DIR = Path(os.environ.get("FLA_DATA_DIR", ROOT / "data"))
 TEMPORADA_ATUAL = datetime.now(timezone.utc).year
@@ -45,6 +66,7 @@ def api_key() -> str:
     key = os.environ.get(API_KEY_ENV)
     if not key:
         raise RuntimeError(
-            f"Defina a variável de ambiente {API_KEY_ENV} com a sua chave da API-Football."
+            f"Chave da API não encontrada. Crie o arquivo .env na raiz do projeto com a linha\n"
+            f"  {API_KEY_ENV}=sua_chave\n(modelo em .env.exemplo) ou defina a variável de ambiente."
         )
     return key

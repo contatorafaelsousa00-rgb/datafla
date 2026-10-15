@@ -33,7 +33,7 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
   - **Multi-temporada**: tudo é separado por ano em `data/<ano>/` e `site/dados/<ano>.json` + `temporadas.json`.
     `config.aplicar_temporada(ano)` troca todos os caminhos; CLI aceita `--temporada`. Padrão = ano atual.
     Elenco (`/players/squads`) só existe para a temporada atual.
-  - Configuração por variável de ambiente: `API_FOOTBALL_KEY`, `FLA_TEAM_ID` (127), `FLA_SEASON` (padrão: ano atual), `FLA_DATA_DIR` (pasta base), `FLA_SITE_DADOS`.
+  - Configuração pelo arquivo `.env` na raiz (modelo `.env.exemplo`, fora do Git; variável do terminal tem prioridade) ou variável de ambiente: `API_FOOTBALL_KEY`, `FLA_TEAM_ID` (127), `FLA_SEASON` (padrão: ano atual), `FLA_DATA_DIR` (pasta base), `FLA_SITE_DADOS`.
 - `site/` — HTML/CSS/JS puro, gráficos SVG próprios (`graficos.js`), sem build. Seletor de temporada (`?t=2025`). Abas: visão geral,
   jogadores, minutagem (mapa de calor jogador × jogo), jogos (detalhe com escalação/eventos), qualidade.
   Cores de competição fixas (paleta validada para daltonismo): Brasileirão s1, Libertadores s2,
