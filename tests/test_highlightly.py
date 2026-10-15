@@ -113,3 +113,57 @@ def test_linhas_proximo_descarta_detalhe_velho():
     assert linha["prob_vitoria"] == 0.6 and linha["estadio"] == "Maracana Stadium" and linha["flamengo_logo"] is None
     outro = {**p["match"], "id": 99}
     assert hl.linhas_proximo(p, [outro]) == []  # o salvo não é mais o próximo jogo
+
+
+def _cenario(tmp_path, monkeypatch, jogos, partidas=(), lista_coletada="2026-10-15T12:00:00+00:00"):
+    """Monta lista e partidas salvas numa pasta temporária, como o workflow encontraria."""
+    from coleta.api import salvar_raw
+    config.aplicar_fonte("highlightly")
+    monkeypatch.setattr(config, "RAW_DIR", tmp_path)
+    salvar_raw(hl.ARQ_JOGOS, {"data": jogos, "_coletado_em": lista_coletada}, tmp_path)
+    for pid, quando in partidas:
+        salvar_raw(f"partida_{pid}", {"match": {"id": pid}, "_coletado_em": quando}, tmp_path)
+
+
+def _jogo(pid, data, estado="Not started"):
+    return {"id": pid, "date": data, "state": {"description": estado},
+            "homeTeam": {"id": FLA, "name": "Flamengo"}, "awayTeam": {"id": ADV, "name": "Fluminense"}}
+
+
+def test_planejar_pula_sem_novidade_e_coleta_quando_jogo_termina(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+    jogos = [_jogo(1, "2026-10-16T00:30:00.000Z")]  # 21:30 de Brasília
+    _cenario(tmp_path, monkeypatch, jogos, lista_coletada="2026-10-15T20:00:00+00:00")  # lista ainda nova
+    durante = datetime(2026, 10, 16, 1, 30, tzinfo=timezone.utc)  # 1 h de jogo
+    assert hl.planejar(durante)[0] is False
+    depois = datetime(2026, 10, 16, 2, 45, tzinfo=timezone.utc)   # 2h15 depois do início
+    coletar, motivo = hl.planejar(depois)
+    assert coletar and "Fluminense" in motivo
+
+
+def test_planejar_recoleta_a_cada_6h_dentro_de_48h(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+    jogos = [_jogo(1, "2026-10-16T00:30:00.000Z", "Finished")]
+    _cenario(tmp_path, monkeypatch, jogos, partidas=[(1, "2026-10-16T03:00:00+00:00")],
+             lista_coletada="2026-10-16T03:00:00+00:00")
+    assert hl.planejar(datetime(2026, 10, 16, 6, 0, tzinfo=timezone.utc))[0] is False   # 3 h depois da coleta
+    assert hl.planejar(datetime(2026, 10, 16, 9, 30, tzinfo=timezone.utc))[0] is True   # 6h30 depois
+    # coleta feita 50 h depois do jogo: fora da janela, não recoleta mais; a lista ainda está nova
+    _cenario(tmp_path, monkeypatch, jogos, partidas=[(1, "2026-10-18T03:00:00+00:00")],
+             lista_coletada="2026-10-18T03:00:00+00:00")
+    assert hl.planejar(datetime(2026, 10, 18, 10, 0, tzinfo=timezone.utc))[0] is False
+
+
+def test_planejar_renova_lista_velha_ou_ausente(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+    _cenario(tmp_path, monkeypatch, [], lista_coletada="2026-10-15T00:00:00+00:00")
+    assert hl.planejar(datetime(2026, 10, 15, 13, 0, tzinfo=timezone.utc))[0] is True
+    monkeypatch.setattr(config, "RAW_DIR", tmp_path / "vazio")
+    assert hl.planejar(datetime(2026, 10, 15, 13, 0, tzinfo=timezone.utc))[0] is True
+
+
+def test_planejar_escreve_saida_do_github(tmp_path, monkeypatch):
+    saida = tmp_path / "saida.txt"
+    monkeypatch.setenv("GITHUB_OUTPUT", str(saida))
+    assert hl.cmd_planejar(forcar=True) == 0
+    assert saida.read_text(encoding="utf-8") == "coletar=true\n"

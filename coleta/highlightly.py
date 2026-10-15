@@ -153,7 +153,7 @@ def cmd_jogos(api: ClienteHighlightly):
         if total > 100:
             print(f"ATENÇÃO: {total} jogos em {campo}; só os 100 primeiros foram lidos.")
     lista = sorted(jogos.values(), key=lambda j: j["date"])
-    salvar_raw(ARQ_JOGOS, {"data": lista})
+    salvar_raw(ARQ_JOGOS, {"data": lista, "_coletado_em": datetime.now(timezone.utc).isoformat()})
     encerrados = sum(_status(j) in config.STATUS_ENCERRADO for j in lista)
     print(f"{len(lista)} jogos na temporada, {encerrados} encerrados.")
     return 0
@@ -168,12 +168,56 @@ def _data(jogo: dict) -> datetime:
     return datetime.fromisoformat(jogo["date"].replace("Z", "+00:00"))
 
 
-def _precisa_coletar(jogo: dict) -> bool:
+HORAS_ENTRE_RECOLETAS = 6     # dentro da janela de 48 h, baixa de novo no máximo a cada 6 h
+DURACAO_ESPERADA = timedelta(hours=2, minutes=10)  # início → apito final (com acréscimos e intervalo)
+HORAS_LISTA = 12              # a lista da temporada (datas, próximo jogo) é renovada a cada 12 h
+
+
+def _precisa_coletar(jogo: dict, agora: datetime | None = None) -> bool:
     salvo = ler_raw(f"partida_{jogo['id']}")
     if salvo is None:
         return True
+    agora = agora or datetime.now(timezone.utc)
     coletado = datetime.fromisoformat(salvo["_coletado_em"])
-    return coletado - _data(jogo) < timedelta(hours=config.JANELA_RECOLETA_HORAS)
+    return (coletado - _data(jogo) < timedelta(hours=config.JANELA_RECOLETA_HORAS)
+            and agora - coletado >= timedelta(hours=HORAS_ENTRE_RECOLETAS))
+
+
+def planejar(agora: datetime | None = None) -> tuple[bool, str]:
+    """Decide, sem chamar a API, se vale coletar agora (o workflow roda a cada 30 min).
+
+    Coleta quando: não há lista salva; a lista tem mais de 12 h; um jogo já deveria ter terminado
+    e ainda não foi baixado; ou um jogo das últimas 48 h está na hora da recoleta (a cada 6 h).
+    """
+    agora = agora or datetime.now(timezone.utc)
+    lista = ler_raw(ARQ_JOGOS)
+    if lista is None or "_coletado_em" not in lista:
+        return True, "não há lista de jogos salva (ou é de uma versão antiga)"
+    idade = agora - datetime.fromisoformat(lista["_coletado_em"])
+    for jogo in lista["data"]:
+        if _status(jogo) in {"ABD", "PST", "CANC"}:
+            continue
+        inicio = _data(jogo)
+        if not (agora - timedelta(hours=config.JANELA_RECOLETA_HORAS) <= inicio <= agora - DURACAO_ESPERADA):
+            continue
+        rival = jogo["awayTeam"]["name"] if jogo["homeTeam"]["id"] == config.TEAM_ID else jogo["homeTeam"]["name"]
+        if ler_raw(f"partida_{jogo['id']}") is None:
+            return True, f"jogo contra {rival} já terminou e ainda não foi baixado"
+        if _precisa_coletar(jogo, agora):
+            return True, f"recoleta do jogo contra {rival} (correções das primeiras 48 h)"
+    if idade >= timedelta(hours=HORAS_LISTA):
+        return True, f"lista de jogos com {idade.total_seconds() / 3600:.0f} h"
+    return False, "nada a coletar agora"
+
+
+def cmd_planejar(forcar: bool = False) -> int:
+    coletar, motivo = (True, "coleta forçada") if forcar else planejar()
+    print(f"{'Coletar' if coletar else 'Pular'}: {motivo}.")
+    saida = os.environ.get("GITHUB_OUTPUT")
+    if saida:  # no GitHub Actions, os próximos passos leem steps.<id>.outputs.coletar
+        with open(saida, "a", encoding="utf-8") as f:
+            f.write(f"coletar={'true' if coletar else 'false'}\n")
+    return 0
 
 
 def cmd_detalhes(api: ClienteHighlightly):

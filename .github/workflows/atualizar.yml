@@ -1,19 +1,32 @@
-# Coleta da temporada atual duas vezes por dia e publicação do site no Firebase Hosting.
-# Temporadas passadas: rode localmente `python -m coleta.coletar tudo --temporada 2025` e faça commit.
+# Coleta da temporada atual e publicação do site no Firebase Hosting.
+#
+# Quando roda:
+#   - a cada 30 min, disparado de fora (cron-job.org → API do GitHub, "workflow_dispatch"), no horário exato;
+#   - 00:17 e 07:17 (Brasília) pelo agendador do GitHub, como reserva (ele costuma atrasar);
+#   - em push no painel (site/ ou firebase.json): só publica, sem coletar.
+# Cada execução agendada primeiro decide, sem gastar cota da API, se há algo para coletar
+# (`coletar planejar`: jogo que acabou, recoleta das primeiras 48 h a cada 6 h, lista com mais de 12 h).
+# Se não houver, termina em segundos sem coletar nem publicar.
+#
+# Temporadas passadas: rode localmente `python -m coleta.coletar tudo --fonte api-football --temporada 2024`.
 # Segredos (Settings > Secrets and variables > Actions):
 #   HIGHLIGHTLY_KEY           chave da Highlightly (fonte da temporada atual; obrigatório para coletar)
-#   API_FOOTBALL_KEY          chave da API-Football (só para temporadas antigas, rodadas localmente)
-#   FIREBASE_SERVICE_ACCOUNT  JSON da conta de serviço do Firebase (opcional; sem ele não publica)
+#   API_FOOTBALL_KEY          chave da API-Football (opcional: fotos dos jogadores, 1 req/semana)
+#   FIREBASE_SERVICE_ACCOUNT  JSON da conta de serviço do Firebase (sem ele não publica)
 # Variável (aba Variables):
 #   FIREBASE_PROJECT_ID       ID do projeto no Firebase
 name: Atualizar dados
 
 on:
   schedule:
-    - cron: "17 3 * * *"    # 00:17 em Brasília: pega os jogos da noite logo após o fim
-    - cron: "17 10 * * *"   # 07:17 em Brasília: recoleta com as correções da madrugada
+    - cron: "17 3 * * *"    # 00:17 em Brasília (reserva do disparo externo)
+    - cron: "17 10 * * *"   # 07:17 em Brasília (reserva do disparo externo)
   workflow_dispatch:
-  # Mudança no painel publica na hora, sem coletar (não gasta cota da API)
+    inputs:
+      forcar:
+        description: "Coletar mesmo sem novidade"
+        type: boolean
+        default: false
   push:
     branches: [main]
     paths: ["site/**", "firebase.json"]
@@ -31,7 +44,7 @@ jobs:
     timeout-minutes: 20
     env:
       HIGHLIGHTLY_KEY: ${{ secrets.HIGHLIGHTLY_KEY }}
-      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}  # opcional: só para as fotos dos jogadores (1 req/semana)
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
       TEM_FIREBASE: ${{ secrets.FIREBASE_SERVICE_ACCOUNT != '' }}
     steps:
       - uses: actions/checkout@v4
@@ -43,26 +56,33 @@ jobs:
       - name: Instalar dependências
         run: pip install -r requirements.txt
 
+      - name: Decidir se coleta
+        id: plano
+        if: github.event_name != 'push' && env.HIGHLIGHTLY_KEY != ''
+        run: python -m coleta.coletar planejar ${{ inputs.forcar && '--forcar' || '' }}
+
       - name: Testes
+        if: github.event_name == 'push' || steps.plano.outputs.coletar == 'true'
         run: python -m pytest -q
 
       - name: Coletar e processar
-        if: github.event_name != 'push' && env.HIGHLIGHTLY_KEY != ''
+        if: steps.plano.outputs.coletar == 'true'
         run: python -m coleta.coletar tudo --fonte highlightly
 
       - name: Salvar dados no repositório
-        if: github.event_name != 'push' && env.HIGHLIGHTLY_KEY != ''
+        if: steps.plano.outputs.coletar == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # As respostas da Highlightly ficam no Git: a próxima execução não baixa de novo os jogos
           # já coletados (100 requisições por dia, 2 por jogo) e o site nunca sai com dados parciais.
           git add data/*/csv data/*/validacao data/*/raw-highlightly site/dados site/fotos
-          git diff --cached --quiet || git commit -m "Atualiza dados ($(date -u +%Y-%m-%d))"
+          git diff --cached --quiet || git commit -m "Atualiza dados ($(date -u +%Y-%m-%d\ %H:%M) UTC)"
+          git pull --rebase --autostash
           git push
 
       - name: Publicar no Firebase
-        if: env.TEM_FIREBASE == 'true'
+        if: env.TEM_FIREBASE == 'true' && (github.event_name == 'push' || steps.plano.outputs.coletar == 'true')
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}

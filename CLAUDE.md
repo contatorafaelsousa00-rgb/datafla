@@ -54,7 +54,10 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
   nacionais em vermelho (Brasileirão --s1, Copa do Brasil --s3), continentais em dourado (Libertadores --s2, Recopa --s6),
   demais em cinzas (Carioca --s4, Supercopa --s5, amistosos --s7). Distinção depende mais de luminosidade que de matiz.
 - `scripts/gerar_demo.py` — temporadas FICTÍCIAS 2025 e 2026 em `data-demo/` e `site/dados-demo/` (fora do Git); abrir com `?demo=1`.
-- `.github/workflows/atualizar.yml` — coleta da temporada atual 00:17 e 07:17 (Brasília) + commit dos dados + deploy no Firebase.
+- `.github/workflows/atualizar.yml` — disparado a cada 30 min de fora (cron-job.org → workflow_dispatch, horário exato;
+  o agendador do GitHub atrasa) + reservas 00:17/07:17 do GitHub. Cada execução roda `coletar planejar` (sem gastar cota):
+  coleta se um jogo acabou (início + 2h10), recoleta das primeiras 48 h a cada 6 h, ou lista com 12 h+; senão termina.
+  Coletando: testes, `tudo`, commit dos dados, deploy. Push em site/: só testes + deploy.
 - Login/Firestore: só se houver dado privado ou recurso por usuário. Lembrar que arquivos do Hosting são públicos mesmo atrás de uma tela de login.
 
 ## Disponibilidade dos dados após o jogo

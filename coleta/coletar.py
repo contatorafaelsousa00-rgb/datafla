@@ -1,6 +1,7 @@
 """Linha de comando da coleta.
 
     python -m coleta.coletar status     # confere chave, cota, time e acesso à temporada
+    python -m coleta.coletar planejar   # decide, sem usar a API, se vale coletar agora (usado pelo workflow)
     (todos aceitam --temporada 2025; o padrão é o ano atual)
     (e --fonte highlightly|api-football; o padrão é highlightly quando há HIGHLIGHTLY_KEY no .env)
 
@@ -228,9 +229,10 @@ def cmd_inspecionar():
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("comando", choices=[
-        "status", "jogos", "elenco", "detalhes", "proximo", "fotos", "processar", "tudo", "modelo-sumula", "sumulas", "inspecionar"])
+        "status", "planejar", "jogos", "elenco", "detalhes", "proximo", "fotos", "processar", "tudo", "modelo-sumula", "sumulas", "inspecionar"])
     parser.add_argument("id_partida", nargs="?", type=int)
     parser.add_argument("-t", "--temporada", type=int, help=f"ano da temporada (padrão: {config.SEASON})")
+    parser.add_argument("--forcar", action="store_true", help="planejar: coleta mesmo sem novidade")
     parser.add_argument("-f", "--fonte", choices=sorted(config.FONTES), help=f"fonte dos dados (padrão: {config.FONTE})")
     args = parser.parse_args(argv)
     if args.fonte:
@@ -239,6 +241,8 @@ def main(argv=None):
         config.aplicar_temporada(args.temporada)
     print(f"Temporada {config.SEASON} · fonte {config.FONTE}")
 
+    if args.comando == "planejar":
+        return highlightly.cmd_planejar(args.forcar)
     if args.comando == "processar":
         return cmd_processar()
     if args.comando == "sumulas":
