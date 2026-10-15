@@ -1,4 +1,5 @@
-# Coleta diária dos dados e publicação do site no Firebase Hosting.
+# Coleta da temporada atual duas vezes por dia e publicação do site no Firebase Hosting.
+# Temporadas passadas: rode localmente `python -m coleta.coletar tudo --temporada 2025` e faça commit.
 # Segredos (Settings > Secrets and variables > Actions):
 #   API_FOOTBALL_KEY          chave da API-Football (obrigatório para coletar)
 #   FIREBASE_SERVICE_ACCOUNT  JSON da conta de serviço do Firebase (opcional; sem ele não publica)
@@ -8,7 +9,8 @@ name: Atualizar dados
 
 on:
   schedule:
-    - cron: "17 10 * * *"   # todo dia, 07:17 em Brasília
+    - cron: "17 3 * * *"    # 00:17 em Brasília: pega os jogos da noite logo após o fim
+    - cron: "17 10 * * *"   # 07:17 em Brasília: recoleta com as correções da madrugada
   workflow_dispatch:
 
 permissions:
@@ -46,7 +48,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/csv data/validacao site/dados
+          git add data/*/csv data/*/validacao site/dados
           git diff --cached --quiet || git commit -m "Atualiza dados ($(date -u +%Y-%m-%d))"
           git push
 

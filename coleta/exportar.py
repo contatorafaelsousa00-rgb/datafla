@@ -1,4 +1,4 @@
-"""Exporta as tabelas em JSON para o site estático (pasta site/dados/)."""
+"""Exporta as tabelas em JSON para o site estático: site/dados/<temporada>.json + temporadas.json."""
 
 from __future__ import annotations
 
@@ -66,7 +66,22 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         "temporada": config.SEASON,
         "demo": demo,
     }
-    (destino / "dados.json").write_text(
-        json.dumps(conteudo, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
-    )
-    return destino / "dados.json"
+    arquivo = destino / f"{config.SEASON}.json"
+    arquivo.write_text(json.dumps(conteudo, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    atualizar_indice(destino)
+    return arquivo
+
+
+def atualizar_indice(destino: Path) -> Path:
+    """Reescreve temporadas.json com as temporadas exportadas, da mais recente para a mais antiga."""
+    temporadas = []
+    for arq in sorted(destino.glob("[0-9][0-9][0-9][0-9].json"), reverse=True):
+        dados = json.loads(arq.read_text(encoding="utf-8"))
+        temporadas.append({
+            "temporada": dados["meta"]["temporada"],
+            "jogos": len(dados["partidas"]),
+            "gerado_em": dados["meta"]["gerado_em"],
+        })
+    indice = destino / "temporadas.json"
+    indice.write_text(json.dumps(temporadas, ensure_ascii=False, indent=1), encoding="utf-8")
+    return indice

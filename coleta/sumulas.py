@@ -1,7 +1,7 @@
 """Comparação dos dados da API com as súmulas oficiais, preenchidas à mão.
 
 Fluxo:
-1. `python -m coleta.coletar modelo-sumula <id_partida>` cria data/sumulas/<id>.csv
+1. `python -m coleta.coletar modelo-sumula <id_partida>` cria data/<temporada>/sumulas/<id>.csv
    com os jogadores do Flamengo relacionados (nome e camisa) e as colunas a preencher.
 2. Você preenche a partir da súmula oficial (CBF: cbf.com.br, página do jogo).
    Minutos em tempo corrido: 2º tempo aos 15' = 60. Prorrogação: 1º tempo aos 5' = 95.
@@ -17,13 +17,12 @@ from pathlib import Path
 
 from . import config
 
-SUMULAS_DIR = config.DATA_DIR / "sumulas"
 CAMPOS = ["camisa", "jogador", "titular", "entrou_min", "saiu_min", "gols", "amarelos", "vermelhos"]
 TOLERANCIA_MIN = 1
 
 
 def criar_modelo(partida: dict, jogadores: list[dict], pasta: Path | None = None) -> Path:
-    pasta = pasta or SUMULAS_DIR
+    pasta = pasta or config.SUMULAS_DIR
     pasta.mkdir(parents=True, exist_ok=True)
     caminho = pasta / f"{partida['id_partida']}.csv"
     if caminho.exists():
@@ -105,7 +104,7 @@ def comparar(partida: dict, jogadores: list[dict], sumula: list[dict]) -> list[d
 
 def resumo_markdown(comparacoes: list[dict]) -> str:
     if not comparacoes:
-        return "# Comparação com súmulas\n\nNenhuma súmula preenchida em data/sumulas/.\n"
+        return "# Comparação com súmulas\n\nNenhuma súmula preenchida em data/<temporada>/sumulas/.\n"
     jogos = sorted({(c["data_utc"][:10], c["adversario"], c["competicao"]) for c in comparacoes})
     linhas = ["# Comparação com súmulas", "", f"{len(jogos)} jogo(s) conferido(s).", "",
               "| Campo | Conferem | Total | % |", "|---|---:|---:|---:|"]

@@ -15,7 +15,7 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
   Ligar as duas APIs: jogos por data + mandante + visitante; jogadores por uma tabela de correspondência manual.
 - **Descartados**: Sofascore/FotMob/ESPN (APIs internas, sem autorização), FBref (perdeu a Opta em jan/2026),
   football-data.org (sem escalações no grátis).
-- **Hospedagem: Firebase Hosting, site estático** lendo `site/dados/dados.json`. Sem banco por enquanto;
+- **Hospedagem: Firebase Hosting, site estático** lendo `site/dados/<ano>.json`. Sem banco por enquanto;
   Supabase só se vier multi-temporada, consultas livres ou login.
 - **Editor**: VS Code/Cursor com Claude Code (sem pagar a IA do Cursor).
 - Relatório de decisão da API (Claude Docs): https://claude.ai/code/artifact/bf22ba93-bc03-469e-9fd1-08558ca87e16
@@ -23,21 +23,33 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
 ## Estrutura
 
 - `coleta/` — Python, só `requests` (+ `pytest`). CLI: `python -m coleta.coletar {status,jogos,elenco,detalhes,processar,tudo,modelo-sumula,sumulas}`.
-  - `api.py` cliente com retry, pausa de 6,5 s entre chamadas (`FLA_PAUSA_SEG`), cache em `data/raw/`.
+  - `api.py` cliente com retry, pausa de 6,5 s entre chamadas (`FLA_PAUSA_SEG`), cache em `data/<ano>/raw/`.
   - `normalizar.py` JSON da API → tabelas planas. `validar.py` regras de coerência + completude.
   - `sumulas.py` comparação com súmulas preenchidas à mão (casamento por número da camisa).
-  - `exportar.py` traduz nomes de competição/posição e gera `site/dados/dados.json`.
-  - Configuração por variável de ambiente: `API_FOOTBALL_KEY`, `FLA_TEAM_ID` (127), `FLA_SEASON` (2026), `FLA_DATA_DIR`, `FLA_SITE_DADOS`.
-- `site/` — HTML/CSS/JS puro, gráficos SVG próprios (`graficos.js`), sem build. Abas: visão geral,
+  - `exportar.py` traduz nomes de competição/posição e gera `site/dados/<ano>.json`.
+  - `alteracoes.py` registra o que muda entre coletas do mesmo jogo (mede quando a API estabiliza).
+  - **Multi-temporada**: tudo é separado por ano em `data/<ano>/` e `site/dados/<ano>.json` + `temporadas.json`.
+    `config.aplicar_temporada(ano)` troca todos os caminhos; CLI aceita `--temporada`. Padrão = ano atual.
+    Elenco (`/players/squads`) só existe para a temporada atual.
+  - Configuração por variável de ambiente: `API_FOOTBALL_KEY`, `FLA_TEAM_ID` (127), `FLA_SEASON` (padrão: ano atual), `FLA_DATA_DIR` (pasta base), `FLA_SITE_DADOS`.
+- `site/` — HTML/CSS/JS puro, gráficos SVG próprios (`graficos.js`), sem build. Seletor de temporada (`?t=2025`). Abas: visão geral,
   jogadores, minutagem (mapa de calor jogador × jogo), jogos (detalhe com escalação/eventos), qualidade.
   Cores de competição fixas (paleta validada para daltonismo): Brasileirão s1, Libertadores s2,
   Copa do Brasil s3, Carioca s4, Supercopa s5, Recopa s6. Claro e escuro.
-- `scripts/gerar_demo.py` — temporada FICTÍCIA em `data-demo/` e `site/dados-demo/` (fora do Git); abrir com `?demo=1`.
-- `.github/workflows/atualizar.yml` — coleta diária + commit dos dados + deploy no Firebase.
+- `scripts/gerar_demo.py` — temporadas FICTÍCIAS 2025 e 2026 em `data-demo/` e `site/dados-demo/` (fora do Git); abrir com `?demo=1`.
+- `.github/workflows/atualizar.yml` — coleta da temporada atual 00:17 e 07:17 (Brasília) + commit dos dados + deploy no Firebase.
+- Login/Firestore: só se houver dado privado ou recurso por usuário. Lembrar que arquivos do Hosting são públicos mesmo atrás de uma tela de login.
+
+## Disponibilidade dos dados após o jogo
+
+Pesquisa (15/10/2026): a API-Football diz atualizar placar/eventos a cada 15 s ao vivo; o guia oficial
+manda buscar estatísticas de jogador após o apito final; não há prazo publicado para correções
+(um post antigo fala em atualização a cada 5 min no endpoint de jogadores). Concorrentes: TheStatsAPI
+diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para medir na prática.
 
 ## Estado atual (15/10/2026)
 
-- Código pronto e testado só com dados sintéticos (`python -m pytest`, 11 testes). **Ainda não rodou contra a API real.**
+- Código pronto e testado só com dados sintéticos (`python -m pytest`, 14 testes). **Ainda não rodou contra a API real.**
 - Próximo passo: Rafael cria a chave grátis, roda `python -m coleta.coletar status` e depois `tudo`.
   Ao ver a primeira resposta real, confirmar os pontos da seção "Pontos a confirmar" do README
   (ID 127, acesso a 2026 no grátis, time do evento de gol contra, `player`/`assist` na substituição,

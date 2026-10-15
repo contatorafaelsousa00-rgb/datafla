@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DataFla · Flamengo 2026</title>
-  <meta name="description" content="Desempenho do Flamengo em 2026 em todas as competições: resultados, xG e minutagem dos jogadores.">
+  <title>DataFla · Flamengo</title>
+  <meta name="description" content="Desempenho do Flamengo por temporada, em todas as competições: resultados, xG e minutagem dos jogadores.">
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
   <header class="topo">
     <div class="topo-conteudo">
       <div>
-        <h1>DataFla <span>· Flamengo 2026</span></h1>
+        <h1>DataFla <span id="titulo-temporada">· Flamengo</span></h1>
         <p id="atualizado" class="sutil"></p>
       </div>
     </div>
@@ -23,6 +23,10 @@
 
   <main>
     <section class="filtros" aria-label="Filtros">
+      <div class="grupo-filtro">
+        <span class="rotulo-filtro">Temporada</span>
+        <div id="filtro-temporada" class="segmentado"></div>
+      </div>
       <div class="grupo-filtro">
         <span class="rotulo-filtro">Competições</span>
         <div id="filtro-competicoes" class="chips"></div>

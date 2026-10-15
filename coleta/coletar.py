@@ -1,6 +1,8 @@
 """Linha de comando da coleta.
 
     python -m coleta.coletar status     # confere chave, cota, time e acesso à temporada
+    (todos aceitam --temporada 2025; o padrão é o ano atual)
+
     python -m coleta.coletar jogos      # baixa a lista de jogos do Flamengo na temporada
     python -m coleta.coletar elenco     # baixa o elenco atual (idade, posição, número)
     python -m coleta.coletar detalhes   # baixa os detalhes dos jogos encerrados que faltam
@@ -17,10 +19,10 @@ import os
 import sys
 from datetime import datetime, timedelta, timezone
 
-from . import armazenar, config, exportar, normalizar, sumulas, validar
+from . import alteracoes, armazenar, config, exportar, normalizar, sumulas, validar
 from .api import ClienteAPI, ErroAPI, ler_raw, salvar_raw
 
-ARQ_JOGOS = f"jogos_{config.SEASON}"
+ARQ_JOGOS = "jogos"
 ARQ_ELENCO = "elenco"
 
 
@@ -66,6 +68,10 @@ def cmd_jogos(api: ClienteAPI):
 
 
 def cmd_elenco(api: ClienteAPI):
+    if config.SEASON != config.TEMPORADA_ATUAL:
+        # /players/squads só devolve o elenco de hoje; idade e número não valem para temporadas passadas.
+        print(f"Elenco ignorado: a API só tem o elenco atual, não o de {config.SEASON}.")
+        return 0
     corpo = api.get("players/squads", team=config.TEAM_ID)
     salvar_raw(ARQ_ELENCO, corpo)
     n = sum(len(b.get("players", [])) for b in corpo["response"])
@@ -96,10 +102,17 @@ def cmd_detalhes(api: ClienteAPI):
     for i in range(0, len(pendentes), config.LOTE_DETALHES):
         lote = pendentes[i:i + config.LOTE_DETALHES]
         corpo = api.get("fixtures", ids="-".join(map(str, lote)))
+        mudancas = []
         for partida in corpo["response"]:
             partida["_coletado_em"] = _agora().isoformat()
-            salvar_raw(f"partida_{partida['fixture']['id']}", partida)
-        print(f"  lote {i // config.LOTE_DETALHES + 1}: {len(corpo['response'])} jogos salvos")
+            nome = f"partida_{partida['fixture']['id']}"
+            anterior = ler_raw(nome)
+            if anterior is not None:
+                mudancas += alteracoes.comparar(anterior, partida)
+            salvar_raw(nome, partida)
+        alteracoes.registrar(mudancas)
+        print(f"  lote {i // config.LOTE_DETALHES + 1}: {len(corpo['response'])} jogos salvos"
+              + (f", {len(mudancas)} valores mudaram desde a coleta anterior" if mudancas else ""))
     return 0
 
 
@@ -160,7 +173,7 @@ def cmd_sumulas():
         return 1
     partidas = {p["id_partida"]: p for p in t["partidas"]}
     comparacoes = []
-    for arq in sorted(sumulas.SUMULAS_DIR.glob("*.csv")):
+    for arq in sorted(config.SUMULAS_DIR.glob("*.csv")):
         pid = int(arq.stem)
         if pid not in partidas:
             print(f"  {arq.name}: partida não baixada, ignorada")
@@ -180,7 +193,11 @@ def main(argv=None):
     parser.add_argument("comando", choices=[
         "status", "jogos", "elenco", "detalhes", "processar", "tudo", "modelo-sumula", "sumulas"])
     parser.add_argument("id_partida", nargs="?", type=int)
+    parser.add_argument("-t", "--temporada", type=int, help=f"ano da temporada (padrão: {config.SEASON})")
     args = parser.parse_args(argv)
+    if args.temporada:
+        config.aplicar_temporada(args.temporada)
+    print(f"Temporada {config.SEASON}")
 
     if args.comando == "processar":
         return cmd_processar()
@@ -188,7 +205,7 @@ def main(argv=None):
         return cmd_sumulas()
     if args.comando == "modelo-sumula":
         if args.id_partida is None:
-            parser.error("informe o id_partida (veja data/csv/partidas.csv)")
+            parser.error("informe o id_partida (veja data/<ano>/csv/partidas.csv)")
         return cmd_modelo_sumula(args.id_partida)
 
     try:

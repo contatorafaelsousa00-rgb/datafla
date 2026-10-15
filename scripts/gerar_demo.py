@@ -2,7 +2,8 @@
 
     python scripts/gerar_demo.py
 
-Escreve em data-demo/ e site/dados-demo/ (ambos fora do Git). Abra o site com ?demo=1.
+Gera duas temporadas (2025 encerrada e 2026 em andamento) em data-demo/ e site/dados-demo/,
+ambos fora do Git. Abra o site com ?demo=1.
 Nada aqui representa jogos ou jogadores reais.
 """
 
@@ -17,7 +18,6 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data-demo" / "raw"
 FLA = 127
 HOJE = datetime(2026, 10, 15, tzinfo=timezone.utc)
 rnd = random.Random(2026)
@@ -26,15 +26,24 @@ POS = ["G"] * 3 + ["D"] * 9 + ["M"] * 9 + ["F"] * 7
 ELENCO = [{"id": 9000 + i, "name": f"Atleta {i + 1:02d}", "number": i + 1, "pos": p,
            "age": rnd.randint(19, 35), "peso": rnd.random()} for i, p in enumerate(POS)]
 
-# (nome na API, id, nº de jogos, início, intervalo em dias, tem estatística de jogador, tem xG)
-COMPETICOES = [
-    ("Carioca - 1", 624, 10, datetime(2026, 1, 14), 5, False, False),
-    ("Super Cup", 732, 1, datetime(2026, 2, 1), 1, True, True),
-    ("Recopa Sudamericana", 541, 2, datetime(2026, 2, 19), 7, True, True),
-    ("Serie A", 71, 38, datetime(2026, 4, 1), 6, True, True),
-    ("CONMEBOL Libertadores", 13, 10, datetime(2026, 4, 8), 14, True, True),
-    ("Copa Do Brasil", 73, 4, datetime(2026, 5, 6), 21, True, False),
-]
+# (nome na API, id, nº de jogos, (mês, dia) de início, intervalo em dias, tem estatística de jogador, tem xG)
+COMPETICOES = {
+    2026: [
+        ("Carioca - 1", 624, 10, (1, 14), 5, False, False),
+        ("Super Cup", 732, 1, (2, 1), 1, True, True),
+        ("Recopa Sudamericana", 541, 2, (2, 19), 7, True, True),
+        ("Serie A", 71, 38, (4, 1), 6, True, True),
+        ("CONMEBOL Libertadores", 13, 10, (4, 8), 14, True, True),
+        ("Copa Do Brasil", 73, 4, (5, 6), 21, True, False),
+    ],
+    2025: [
+        ("Carioca - 1", 624, 12, (1, 12), 5, False, False),
+        ("Super Cup", 732, 1, (2, 2), 1, True, True),
+        ("Serie A", 71, 38, (3, 29), 6, True, True),
+        ("CONMEBOL Libertadores", 13, 13, (4, 2), 14, True, True),
+        ("Copa Do Brasil", 73, 6, (4, 30), 21, True, False),
+    ],
+}
 RIVAIS = [f"Rival {c}" for c in "ABCDEFGHIJKLMNOPQRST"]
 
 
@@ -153,13 +162,17 @@ def jogo(fid, comp, data, encerrado):
     return base, base
 
 
-def main():
-    RAW.mkdir(parents=True, exist_ok=True)
-    for f in RAW.glob("*.json"):
+def gerar(ano):
+    global rnd
+    rnd = random.Random(ano)
+    raw = ROOT / "data-demo" / str(ano) / "raw"
+    raw.mkdir(parents=True, exist_ok=True)
+    for f in raw.glob("*.json"):
         f.unlink()
-    lista, fid = [], 1000
-    for comp in COMPETICOES:
-        _, _, n, inicio, passo, _, _ = comp
+    lista, fid = [], ano * 1000
+    for comp in COMPETICOES[ano]:
+        _, _, n, (mes, dia), passo, _, _ = comp
+        inicio = datetime(ano, mes, dia)
         for k in range(n):
             data = (inicio + timedelta(days=passo * k, hours=21)).replace(tzinfo=timezone.utc)
             fid += 1
@@ -167,10 +180,10 @@ def main():
             lista.append(resumo)
             if detalhe:
                 detalhe["_coletado_em"] = (data + timedelta(days=3)).isoformat()
-                (RAW / f"partida_{fid}.json").write_text(json.dumps(detalhe, ensure_ascii=False), encoding="utf-8")
+                (raw / f"partida_{fid}.json").write_text(json.dumps(detalhe, ensure_ascii=False), encoding="utf-8")
 
     # Duas falhas de propósito, para a página de qualidade ter o que mostrar.
-    falhas = sorted(RAW.glob("partida_*.json"))[12:14]
+    falhas = sorted(raw.glob("partida_*.json"))[12:14]
     for k, f in enumerate(falhas):
         d = json.loads(f.read_text(encoding="utf-8"))
         if k == 0:
@@ -179,14 +192,20 @@ def main():
             d["statistics"][0]["statistics"][0]["value"] += 6
         f.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
 
-    (RAW / "jogos_2026.json").write_text(json.dumps({"response": lista}, ensure_ascii=False), encoding="utf-8")
-    (RAW / "elenco.json").write_text(json.dumps({"response": [{"team": {"id": FLA}, "players": [
-        {"id": j["id"], "name": j["name"], "age": j["age"], "number": j["number"],
-         "position": {"G": "Goalkeeper", "D": "Defender", "M": "Midfielder", "F": "Attacker"}[j["pos"]], "photo": None}
-        for j in ELENCO]}]}, ensure_ascii=False), encoding="utf-8")
+    (raw / "jogos.json").write_text(json.dumps({"response": lista}, ensure_ascii=False), encoding="utf-8")
+    if ano == HOJE.year:  # a API só tem o elenco atual
+        (raw / "elenco.json").write_text(json.dumps({"response": [{"team": {"id": FLA}, "players": [
+            {"id": j["id"], "name": j["name"], "age": j["age"], "number": j["number"],
+             "position": {"G": "Goalkeeper", "D": "Defender", "M": "Midfielder", "F": "Attacker"}[j["pos"]], "photo": None}
+            for j in ELENCO]}]}, ensure_ascii=False), encoding="utf-8")
 
     env = dict(os.environ, FLA_DATA_DIR=str(ROOT / "data-demo"), FLA_SITE_DADOS=str(ROOT / "site" / "dados-demo"), FLA_DEMO="1")
-    subprocess.run([sys.executable, "-m", "coleta.coletar", "processar"], cwd=ROOT, env=env, check=True)
+    subprocess.run([sys.executable, "-m", "coleta.coletar", "processar", "--temporada", str(ano)], cwd=ROOT, env=env, check=True)
+
+
+def main():
+    for ano in COMPETICOES:
+        gerar(ano)
 
 
 if __name__ == "__main__":

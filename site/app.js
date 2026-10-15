@@ -399,15 +399,27 @@ function renderQualidade() {
 }
 
 // ---------- filtros, abas, render ----------
-function montarFiltros() {
+const BASE = DEMO ? "dados-demo/" : "dados/";
+let TEMPORADAS = [];
+
+function montarCompeticoes() {
   const caixa = $("filtro-competicoes");
   caixa.replaceChildren(...D.competicoes.map((c) => h("button", {
-    class: "chip", "aria-pressed": "true", onclick: (e) => {
+    class: "chip", "aria-pressed": "true", "data-comp": c, onclick: () => {
       if (estado.comps.has(c)) { if (estado.comps.size > 1) estado.comps.delete(c); } else estado.comps.add(c);
       for (const b of caixa.children) b.setAttribute("aria-pressed", estado.comps.has(b.dataset.comp));
       render();
-    }, "data-comp": c,
+    },
   }, h("span", { class: "ponto", style: `background:${corComp(c)}` }), c)));
+}
+
+function montarTemporadas(atual) {
+  $("filtro-temporada").replaceChildren(...TEMPORADAS.map((t) => h("button", {
+    "aria-pressed": String(t.temporada === atual), onclick: () => carregarTemporada(t.temporada),
+  }, String(t.temporada))));
+}
+
+function montarControlesFixos() {
   for (const b of $("filtro-mando").children) b.addEventListener("click", () => {
     estado.mando = b.dataset.mando;
     for (const x of $("filtro-mando").children) x.setAttribute("aria-pressed", x === b);
@@ -427,21 +439,56 @@ function render() {
   ({ geral: renderGeral, jogadores: renderJogadores, minutagem: renderMinutagem, jogos: renderJogos, qualidade: renderQualidade })[estado.aba](ps);
 }
 
-async function iniciar() {
+function semDados(msg) {
+  document.querySelector("main").replaceChildren(h("div", { class: "cartao" }, h("h2", {}, "Sem dados ainda"),
+    h("p", { class: "sutil" }, msg)));
+}
+
+async function buscarJson(caminho) {
+  const resp = await fetch(BASE + caminho, { cache: "no-store" });
+  if (!resp.ok) throw new Error(`${caminho}: HTTP ${resp.status}`);
+  return resp.json();
+}
+
+async function carregarTemporada(ano) {
+  document.querySelector("main").style.opacity = ".5";
   try {
-    const resp = await fetch(DEMO ? "dados-demo/dados.json" : "dados/dados.json", { cache: "no-store" });
-    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-    D = preparar(await resp.json());
+    D = preparar(await buscarJson(`${ano}.json`));
   } catch (e) {
-    document.querySelector("main").replaceChildren(h("div", { class: "cartao" }, h("h2", {}, "Sem dados ainda"),
-      h("p", { class: "sutil" }, "Rode a coleta (python -m coleta.coletar tudo) para gerar site/dados/dados.json, ou abra com ?demo=1 para ver dados fictícios.")));
+    document.querySelector("main").style.opacity = "";
+    semDados(`Não foi possível carregar a temporada ${ano} (${e.message}).`);
     return;
   }
+  document.querySelector("main").style.opacity = "";
+  const url = new URL(location);
+  url.searchParams.set("t", ano);
+  history.replaceState(null, "", url);
+  document.title = `DataFla · Flamengo ${ano}`;
+  $("titulo-temporada").textContent = `· Flamengo ${ano}`;
   $("aviso-demo").hidden = !D.bruto.meta.demo;
   $("atualizado").textContent = `Atualizado em ${new Date(D.bruto.meta.gerado_em).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })}`;
-  D.competicoes.forEach((c) => estado.comps.add(c));
-  montarFiltros();
+  estado.comps = new Set(D.competicoes);
+  estado.jogador = null;
+  estado.jogo = null;
+  montarTemporadas(ano);
+  montarCompeticoes();
   render();
+}
+
+async function iniciar() {
+  try {
+    TEMPORADAS = await buscarJson("temporadas.json");
+  } catch {
+    TEMPORADAS = [];
+  }
+  if (!TEMPORADAS.length) {
+    semDados("Rode a coleta (python -m coleta.coletar tudo) para gerar site/dados/, ou abra com ?demo=1 para ver dados fictícios.");
+    return;
+  }
+  const pedida = Number(new URLSearchParams(location.search).get("t"));
+  const ano = TEMPORADAS.some((t) => t.temporada === pedida) ? pedida : TEMPORADAS[0].temporada;
+  montarControlesFixos();
+  await carregarTemporada(ano);
   let t;
   window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(render, 150); });
 }

@@ -1,7 +1,7 @@
 __pycache__/
 .pytest_cache/
-data/raw/
-data/*.db
+data/*/raw/
+data/**/*.db
 .env
 data-demo/
 site/dados-demo/

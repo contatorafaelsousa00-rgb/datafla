@@ -1,5 +1,7 @@
 """Testa o fluxo da linha de comando com uma API falsa (sem rede)."""
 
+import json
+
 from coleta import coletar, config
 from tests.test_pipeline import partida_exemplo
 
@@ -52,6 +54,22 @@ def test_fluxo_completo(tmp_path, monkeypatch):
         assert list(csv.DictReader(f))[0]["idade"] == "25"
 
     import json
-    dados = json.loads((tmp_path / "site" / "dados.json").read_text(encoding="utf-8"))
+    dados = json.loads((tmp_path / "site" / f"{config.SEASON}.json").read_text(encoding="utf-8"))
+    indice = json.loads((tmp_path / "site" / "temporadas.json").read_text(encoding="utf-8"))
+    assert indice[0]["temporada"] == config.SEASON and indice[0]["jogos"] == 24
     assert dados["partidas"][0]["competicao"] == "Brasileirão"
     assert all(j["eh_flamengo"] for j in dados["jogadores"])
+
+
+def test_temporadas_separadas(tmp_path, monkeypatch):
+    from coleta import exportar, normalizar, validar
+    monkeypatch.setattr(config, "DATA_DIR", tmp_path)
+    monkeypatch.setattr(exportar, "SITE_DADOS", tmp_path / "site")
+    for ano in (2025, 2026):
+        config.aplicar_temporada(ano)
+        assert config.RAW_DIR == tmp_path / str(ano) / "raw"
+        t = normalizar.normalizar([partida_exemplo()])
+        exportar.exportar(t, validar.validar(t))
+    config.aplicar_temporada(config.TEMPORADA_ATUAL)
+    indice = json.loads((tmp_path / "site" / "temporadas.json").read_text(encoding="utf-8"))
+    assert [i["temporada"] for i in indice] == [2026, 2025]
