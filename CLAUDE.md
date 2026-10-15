@@ -56,7 +56,7 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
 - `scripts/gerar_demo.py` — temporadas FICTÍCIAS 2025 e 2026 em `data-demo/` e `site/dados-demo/` (fora do Git); abrir com `?demo=1`.
 - `.github/workflows/atualizar.yml` — disparado a cada 30 min de fora (cron-job.org → workflow_dispatch, horário exato;
   o agendador do GitHub atrasa) + reservas 00:17/07:17 do GitHub. Cada execução roda `coletar planejar` (sem gastar cota):
-  coleta se um jogo acabou (início + 2h10), recoleta das primeiras 48 h a cada 6 h, ou lista com 12 h+; senão termina.
+  coleta se um jogo acabou (início + 2h10) ou 1x por dia (24 h após a última coleta; recoleta jogos das últimas 48 h); senão termina.
   Coletando: testes, `tudo`, commit dos dados, deploy. Push em site/: só testes + deploy.
 - Login/Firestore: só se houver dado privado ou recurso por usuário. Lembrar que arquivos do Hosting são públicos mesmo atrás de uma tela de login.
 

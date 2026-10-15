@@ -141,23 +141,25 @@ def test_planejar_pula_sem_novidade_e_coleta_quando_jogo_termina(tmp_path, monke
     assert coletar and "Fluminense" in motivo
 
 
-def test_planejar_recoleta_a_cada_6h_dentro_de_48h(tmp_path, monkeypatch):
+def test_planejar_recoleta_so_na_atualizacao_diaria(tmp_path, monkeypatch):
     from datetime import datetime, timezone
     jogos = [_jogo(1, "2026-10-16T00:30:00.000Z", "Finished")]
     _cenario(tmp_path, monkeypatch, jogos, partidas=[(1, "2026-10-16T03:00:00+00:00")],
              lista_coletada="2026-10-16T03:00:00+00:00")
-    assert hl.planejar(datetime(2026, 10, 16, 6, 0, tzinfo=timezone.utc))[0] is False   # 3 h depois da coleta
-    assert hl.planejar(datetime(2026, 10, 16, 9, 30, tzinfo=timezone.utc))[0] is True   # 6h30 depois
-    # coleta feita 50 h depois do jogo: fora da janela, não recoleta mais; a lista ainda está nova
+    assert hl.planejar(datetime(2026, 10, 16, 15, 0, tzinfo=timezone.utc))[0] is False  # 12 h depois: espera o dia
+    assert hl.planejar(datetime(2026, 10, 17, 3, 5, tzinfo=timezone.utc))[0] is True    # 24 h: atualização diária
+    assert hl._precisa_coletar(jogos[0], datetime(2026, 10, 17, 3, 5, tzinfo=timezone.utc))  # e recoleta o jogo
+    # coleta feita 50 h depois do jogo: fora da janela, não recoleta mais
     _cenario(tmp_path, monkeypatch, jogos, partidas=[(1, "2026-10-18T03:00:00+00:00")],
              lista_coletada="2026-10-18T03:00:00+00:00")
-    assert hl.planejar(datetime(2026, 10, 18, 10, 0, tzinfo=timezone.utc))[0] is False
+    assert not hl._precisa_coletar(jogos[0], datetime(2026, 10, 19, 3, 5, tzinfo=timezone.utc))
 
 
 def test_planejar_renova_lista_velha_ou_ausente(tmp_path, monkeypatch):
     from datetime import datetime, timezone
     _cenario(tmp_path, monkeypatch, [], lista_coletada="2026-10-15T00:00:00+00:00")
-    assert hl.planejar(datetime(2026, 10, 15, 13, 0, tzinfo=timezone.utc))[0] is True
+    assert hl.planejar(datetime(2026, 10, 15, 23, 0, tzinfo=timezone.utc))[0] is False
+    assert hl.planejar(datetime(2026, 10, 16, 0, 5, tzinfo=timezone.utc))[0] is True
     monkeypatch.setattr(config, "RAW_DIR", tmp_path / "vazio")
     assert hl.planejar(datetime(2026, 10, 15, 13, 0, tzinfo=timezone.utc))[0] is True
 

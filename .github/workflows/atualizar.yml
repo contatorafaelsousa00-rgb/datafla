@@ -5,7 +5,7 @@
 #   - 00:17 e 07:17 (Brasília) pelo agendador do GitHub, como reserva (ele costuma atrasar);
 #   - em push no painel (site/ ou firebase.json): só publica, sem coletar.
 # Cada execução agendada primeiro decide, sem gastar cota da API, se há algo para coletar
-# (`coletar planejar`: jogo que acabou, recoleta das primeiras 48 h a cada 6 h, lista com mais de 12 h).
+# (`coletar planejar`: jogo que acabou há pouco, ou atualização diária 24 h após a última coleta).
 # Se não houver, termina em segundos sem coletar nem publicar.
 #
 # Temporadas passadas: rode localmente `python -m coleta.coletar tudo --fonte api-football --temporada 2024`.

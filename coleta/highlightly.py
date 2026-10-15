@@ -168,9 +168,9 @@ def _data(jogo: dict) -> datetime:
     return datetime.fromisoformat(jogo["date"].replace("Z", "+00:00"))
 
 
-HORAS_ENTRE_RECOLETAS = 6     # dentro da janela de 48 h, baixa de novo no máximo a cada 6 h
+HORAS_ENTRE_RECOLETAS = 12    # recoleta (dentro de 48 h) só na atualização diária e com 12 h+ desde a última
 DURACAO_ESPERADA = timedelta(hours=2, minutes=10)  # início → apito final (com acréscimos e intervalo)
-HORAS_LISTA = 12              # a lista da temporada (datas, próximo jogo) é renovada a cada 12 h
+HORAS_LISTA = 24              # atualização diária: lista da temporada, próximo jogo e recoletas
 
 
 def _precisa_coletar(jogo: dict, agora: datetime | None = None) -> bool:
@@ -184,10 +184,10 @@ def _precisa_coletar(jogo: dict, agora: datetime | None = None) -> bool:
 
 
 def planejar(agora: datetime | None = None) -> tuple[bool, str]:
-    """Decide, sem chamar a API, se vale coletar agora (o workflow roda a cada 30 min).
+    """Decide, sem chamar a API, se vale coletar agora (o workflow é disparado a cada 30 min).
 
-    Coleta quando: não há lista salva; a lista tem mais de 12 h; um jogo já deveria ter terminado
-    e ainda não foi baixado; ou um jogo das últimas 48 h está na hora da recoleta (a cada 6 h).
+    Coleta só em dois casos: um jogo já deveria ter terminado (início + 2h10) e ainda não foi baixado;
+    ou a última coleta tem 24 h (atualização diária, que também recoleta os jogos das últimas 48 h).
     """
     agora = agora or datetime.now(timezone.utc)
     lista = ler_raw(ARQ_JOGOS)
@@ -200,13 +200,11 @@ def planejar(agora: datetime | None = None) -> tuple[bool, str]:
         inicio = _data(jogo)
         if not (agora - timedelta(hours=config.JANELA_RECOLETA_HORAS) <= inicio <= agora - DURACAO_ESPERADA):
             continue
-        rival = jogo["awayTeam"]["name"] if jogo["homeTeam"]["id"] == config.TEAM_ID else jogo["homeTeam"]["name"]
         if ler_raw(f"partida_{jogo['id']}") is None:
+            rival = jogo["awayTeam"]["name"] if jogo["homeTeam"]["id"] == config.TEAM_ID else jogo["homeTeam"]["name"]
             return True, f"jogo contra {rival} já terminou e ainda não foi baixado"
-        if _precisa_coletar(jogo, agora):
-            return True, f"recoleta do jogo contra {rival} (correções das primeiras 48 h)"
     if idade >= timedelta(hours=HORAS_LISTA):
-        return True, f"lista de jogos com {idade.total_seconds() / 3600:.0f} h"
+        return True, f"atualização diária (última coleta há {idade.total_seconds() / 3600:.0f} h)"
     return False, "nada a coletar agora"
 
 
