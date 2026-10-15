@@ -15,11 +15,22 @@ function texto(pai, x, y, conteudo, attrs = {}) {
   return t;
 }
 
-function novoSvg(container, altura) {
+function novoSvg(container, altura, resumo) {
   container.replaceChildren();
   const largura = Math.max(280, container.clientWidth || 600);
   const s = el("svg", { width: largura, height: altura, viewBox: `0 0 ${largura} ${altura}`, role: "img" }, container);
+  rotular(s, container, resumo);
   return { s, largura };
+}
+
+// ---------- texto alternativo (leitores de tela) ----------
+// Cada gráfico vira "Título do cartão. Resumo dos dados"; o resumo sai dos próprios dados do gráfico.
+const fmtNum = (v) => (typeof v === "number" ? v.toLocaleString("pt-BR", { maximumFractionDigits: 1 }) : String(v ?? "–"));
+
+function rotular(svg, container, resumo) {
+  const titulo = container.closest(".cartao")?.querySelector("h2, h3")?.textContent?.trim();
+  const texto = [titulo, resumo].filter(Boolean).join(". ");
+  if (texto) svg.setAttribute("aria-label", texto);
 }
 
 // ---------- dica (tooltip) ----------
@@ -118,7 +129,8 @@ export function legenda(container, itens, tipo = "caixa") {
 export function barrasHorizontais(container, itens, { max, larguraRotulo = 120 } = {}) {
   const linha = 30, espessura = 16, icone = 24;
   const comIcone = itens.some((i) => i.icone);
-  const { s, largura } = novoSvg(container, itens.length * linha + 4);
+  const { s, largura } = novoSvg(container, itens.length * linha + 4,
+    itens.map((i) => `${i.rotulo}: ${i.texto ?? fmtNum(i.valor)}`).join("; "));
   const maxV = max ?? Math.max(...itens.map((i) => i.valor), 1);
   const inicio = larguraRotulo + (comIcone ? icone + 8 : 0);
   larguraRotulo = inicio;
@@ -145,7 +157,8 @@ export function barrasHorizontais(container, itens, { max, larguraRotulo = 120 }
 // categorias: [rótulo], series: [{nome, cor, valores: []}]
 export function colunasAgrupadas(container, categorias, series, { altura = 230 } = {}) {
   const m = { t: 10, r: 8, b: 26, l: 32 };
-  const { s, largura } = novoSvg(container, altura);
+  const { s, largura } = novoSvg(container, altura,
+    series.map((x) => `${x.nome}: ` + categorias.map((c, k) => `${c} ${fmtNum(x.valores[k])}`).join(", ")).join("; "));
   const max = Math.max(...series.flatMap((x) => x.valores), 1);
   const ticks = divisoes(max);
   const topo = ticks[ticks.length - 1];
@@ -178,7 +191,10 @@ export function linhas(container, rotulosX, series, { altura = 260, formato = (v
   // Margem direita do tamanho do maior rótulo de fim de linha (~6,6 px por caractere a 12px)
   const maiorRotulo = Math.max(...series.map((se) => `${formato(se.valores[se.valores.length - 1])} ${se.nome}`.length));
   const m = { t: 12, r: Math.ceil(maiorRotulo * 6.6) + 14, b: 26, l: 32 };
-  const { s, largura } = novoSvg(container, altura);
+  const { s, largura } = novoSvg(container, altura, rotulosX.length
+    ? `De ${rotulosX[0]} a ${rotulosX[rotulosX.length - 1]} (${rotulosX.length} jogos). No fim: `
+      + series.map((x) => `${x.nome} ${formato(x.valores[x.valores.length - 1])}`).join(", ")
+    : "Sem dados");
   const n = rotulosX.length;
   const max = Math.max(...series.flatMap((x) => x.valores), 1);
   const ticks = divisoes(max);
@@ -229,7 +245,9 @@ export function linhas(container, rotulosX, series, { altura = 260, formato = (v
 // itens: [{valor, cor, rotulo, dica}]; rotulosX: índice -> texto (opcional)
 export function colunas(container, itens, { altura = 200, max, rotuloX } = {}) {
   const m = { t: 10, r: 8, b: 26, l: 32 };
-  const { s, largura } = novoSvg(container, altura);
+  const { s, largura } = novoSvg(container, altura, itens.length
+    ? `${itens.length} colunas, média ${fmtNum(itens.reduce((t, i) => t + (i.valor ?? 0), 0) / itens.length)}, máximo ${fmtNum(Math.max(...itens.map((i) => i.valor ?? 0)))}`
+    : "Sem dados");
   const maxV = max ?? Math.max(...itens.map((i) => i.valor), 1);
   const ticks = divisoes(maxV, 3);
   const topo = ticks[ticks.length - 1];
@@ -263,6 +281,7 @@ export function mapaCalor(container, linhasM, colunasM, valor, { celula = 14, la
   const larguraTotal = larguraRotulo + colunasM.length * (celula + 2) + 60;
   const altura = 14 + linhasM.length * (celula + 2) + 4;
   const s = el("svg", { width: larguraTotal, height: altura, viewBox: `0 0 ${larguraTotal} ${altura}`, role: "img" }, container);
+  rotular(s, container, `${linhasM.length} jogadores em ${colunasM.length} jogos`);
   colunasM.forEach((c, ci) => {
     const g = el("g", { class: "marca", tabindex: -1 }, s);
     el("rect", { x: larguraRotulo + ci * (celula + 2), y: 2, width: celula, height: 6, rx: 2, fill: c.cor }, g);
@@ -289,7 +308,8 @@ export function mapaCalor(container, linhasM, colunasM, valor, { celula = 14, la
 // pontos: [{x, y, rotulo, cor, destaque, dica}]; desenha a diagonal y = x como referência.
 export function dispersao(container, pontos, { altura = 320, nomeX = "x", nomeY = "y", diagonal = true } = {}) {
   const m = { t: 14, r: 16, b: 38, l: 40 };
-  const { s, largura } = novoSvg(container, altura);
+  const { s, largura } = novoSvg(container, altura, `${pontos.length} jogadores; horizontal: ${nomeX}; vertical: ${nomeY}. `
+    + pontos.filter((p) => p.destaque).map((p) => `${p.rotulo}: ${fmtNum(p.x)} e ${fmtNum(p.y)}`).join("; "));
   const max = Math.max(1, ...pontos.flatMap((p) => [p.x, p.y]));
   const ticks = divisoes(max);
   const topo = ticks[ticks.length - 1];
@@ -319,7 +339,10 @@ export function dispersao(container, pontos, { altura = 320, nomeX = "x", nomeY 
 // linhas: [{rotulo, a, b, texto: v => string}]; cada linha é normalizada pelo maior dos dois lados.
 export function barrasEspelhadas(container, linhasE, { nomeA = "A", nomeB = "B", corA = "var(--serie-1)", corB = "var(--serie-2)" } = {}) {
   const linha = 34, espessura = 8;
-  const { s, largura } = novoSvg(container, linhasE.length * linha + 4);
+  const { s, largura } = novoSvg(container, linhasE.length * linha + 4, linhasE.map((l) => {
+    const fmt = l.texto ?? fmtNum;
+    return `${l.rotulo}: ${nomeA} ${l.a == null ? "–" : fmt(l.a)}, ${nomeB} ${l.b == null ? "–" : fmt(l.b)}`;
+  }).join("; "));
   const meio = largura / 2, raio = espessura / 2;
   linhasE.forEach((l, i) => {
     const y0 = i * linha;
@@ -345,6 +368,7 @@ export function mapaGol(container, finalizacoes, { cor = "var(--serie-1)" } = {}
   container.replaceChildren();
   const altura = 196;
   const s = el("svg", { width: largura, height: altura, viewBox: `0 0 ${largura} ${altura}`, role: "img" }, container);
+  rotular(s, container, `${finalizacoes.length} finalizações, ${finalizacoes.filter((f) => f.resultado === "Goal").length} gols`);
   const gx = 20, gy = 18, gw = largura - 40, gh = 110;
   const col = (a) => (/left/i.test(a) ? 0 : /right/i.test(a) ? 2 : /cent/i.test(a) ? 1 : null);
   const lin = (a) => (/high|top/i.test(a) ? 0 : /low|bottom/i.test(a) ? 1 : null);
@@ -377,7 +401,8 @@ export function mapaGol(container, finalizacoes, { cor = "var(--serie-1)" } = {}
 // itens: [{valor (+/-), cor, marcador: 'V'|'E'|'D', dica}]; marcador aparece abaixo do eixo.
 export function colunasDivergentes(container, itens, { altura = 220, rotuloX, formato = (v) => v.toFixed(1) } = {}) {
   const m = { t: 10, r: 8, b: 40, l: 36 };
-  const { s, largura } = novoSvg(container, altura);
+  const { s, largura } = novoSvg(container, altura,
+    `Positivo em ${itens.filter((i) => (i.valor ?? 0) > 0).length} de ${itens.length}; maior ${fmtNum(Math.max(...itens.map((i) => i.valor ?? 0)))}, menor ${fmtNum(Math.min(...itens.map((i) => i.valor ?? 0)))}`);
   const maxAbs = Math.max(0.5, ...itens.map((i) => Math.abs(i.valor ?? 0)));
   const ticks = divisoes(maxAbs, 2);
   const topo = ticks[ticks.length - 1];
@@ -415,7 +440,10 @@ export function colunasDivergentes(container, itens, { altura = 220, rotuloX, fo
 // itens: [{valor|null, cor, dica}]; referencia: linha tracejada (ex.: média).
 export function serie(container, itens, { altura = 180, min = 0, max = 10, referencia, rotuloX, formato = (v) => v.toFixed(1) } = {}) {
   const m = { t: 12, r: 12, b: 26, l: 32 };
-  const { s, largura } = novoSvg(container, altura);
+  const { s, largura } = novoSvg(container, altura, (() => {
+    const v = itens.map((it) => it.valor).filter((x) => x != null);
+    return v.length ? `${v.length} jogos, média ${formato(v.reduce((t, x) => t + x, 0) / v.length)}, de ${formato(Math.min(...v))} a ${formato(Math.max(...v))}` : "Sem dados";
+  })());
   const h = altura - m.t - m.b, w = largura - m.l - m.r;
   const n = itens.length;
   const x = (i) => m.l + (n <= 1 ? w / 2 : (i / (n - 1)) * w);
@@ -452,7 +480,7 @@ export function serie(container, itens, { altura = 180, min = 0, max = 10, refer
 export function linhaTempo(container, marcas, { duracao = 90 } = {}) {
   const altura = 132;
   const m = { l: 12, r: 12 };
-  const { s, largura } = novoSvg(container, altura);
+  const { s, largura } = novoSvg(container, altura, `${marcas.filter((k) => k.tipo === "gol").length} gols e ${marcas.length} lances marcados ao longo de ${duracao} minutos`);
   const w = largura - m.l - m.r, meio = 66;
   const fim = Math.max(duracao, ...marcas.map((k) => k.minuto ?? 0));
   const x = (min) => m.l + (Math.min(min, fim) / fim) * w;

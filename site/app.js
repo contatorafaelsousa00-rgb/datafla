@@ -1093,7 +1093,7 @@ async function carregarTemporada(ano) {
   document.title = `DataFla · Flamengo ${ano}`;
   $("aviso-demo").hidden = !D.bruto.meta.demo;
   $("fonte").textContent = nomeFonte();
-  $("atualizado").textContent = `Temporada ${ano} · atualizado em ${new Date(D.bruto.meta.gerado_em).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo", dateStyle: "short", timeStyle: "short" })}`;
+  $("atualizado").textContent = `Temporada ${ano} · atualizado em ${new Date(D.bruto.meta.coletado_em ?? D.bruto.meta.gerado_em).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo", dateStyle: "short", timeStyle: "short" })}`;
   estado.jogador = null;
   estado.jogo = null;
   montarTemporadas(ano);

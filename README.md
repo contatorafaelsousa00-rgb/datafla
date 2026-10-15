@@ -79,8 +79,8 @@ execução. A carga inicial de uma temporada inteira (~60 jogos) leva 2 dias no 
 
 Segundo a API-Football, placar e eventos atualizam a cada 15 segundos durante o jogo, e o guia
 oficial recomenda buscar as estatísticas dos jogadores depois do apito final. Não há prazo publicado
-para as correções. Por isso o workflow coleta às 00:17 e às 07:17 (Brasília) e recoleta cada jogo
-até 48 h depois; cada recoleta grava o que mudou em `data/<ano>/validacao/alteracoes.csv`
+para as correções. Por isso o workflow coleta cada jogo 2h10 depois do início e, na atualização diária,
+recoleta os jogos das últimas 48 h; cada recoleta grava o que mudou em `data/<ano>/validacao/alteracoes.csv`
 (coluna `horas_apos_jogo`). Depois de algumas rodadas, esse arquivo mostra quanto tempo a API leva
 para estabilizar e permite ajustar `JANELA_RECOLETA_HORAS` em `coleta/config.py`.
 
@@ -96,12 +96,18 @@ para estabilizar e permite ajustar `JANELA_RECOLETA_HORAS` em `coleta/config.py`
 - `data/<ano>/validacao/relatorio.md` — completude por competição e jogos com inconsistências.
 - `data/<ano>/validacao/alteracoes.csv` — o que mudou entre coletas do mesmo jogo.
 - `site/dados/<ano>.json` e `site/dados/temporadas.json` — o que o painel usa.
+- `site/fotos/` e `site/logos/` — cópias das fotos dos jogadores e dos escudos/símbolos de competição
+  (o site não depende dos endereços das fontes; só imagens novas são baixadas).
+
+No Git ficam só as respostas brutas da Highlightly (`data/<ano>/raw-highlightly/`), as fotos e os logos.
+Banco, CSVs, validação e o JSON do site são gerados por `processar` (sem usar a API), localmente ou
+no workflow na hora de publicar, para o repositório não crescer a cada coleta.
 
 ## Qualidade dos dados
 
 Duas camadas:
 
-1. **Regras automáticas** em todo jogo encerrado (`data/<ano>/validacao/relatorio.md` e aba "Qualidade dos dados"):
+1. **Regras automáticas** em todo jogo encerrado (`data/<ano>/validacao/relatorio.md`):
 
    | Regra | O que verifica |
    |---|---|
@@ -131,12 +137,22 @@ O site é estático (`site/`), sem servidor nem banco: o painel lê `site/dados/
    firebase deploy --only hosting
    ```
 3. Publicação automática (`.github/workflows/atualizar.yml`):
-   - 00:17 e 07:17 (Brasília): coleta a temporada atual, faz commit dos dados e publica;
-   - push em `site/**` ou `firebase.json` na `main`: só publica (não gasta cota da API);
+   - disparo a cada 30 min pelo cron-job.org (POST em `/actions/workflows/atualizar.yml/dispatches`
+     com um token fine-grained só com *Actions: read and write* neste repositório; vence em 15/10/2027),
+     mais reservas do agendador do GitHub às 00:17 e 07:17 (Brasília);
+   - cada execução roda `coletar planejar`, sem gastar cota: coleta só se um jogo acabou (início + 2h10)
+     ou 1x por dia (24 h após a última coleta); senão termina em segundos. Coletando: testes, `tudo`,
+     commit das respostas brutas, fotos e logos, e publicação. O resumo de cada execução (decisão,
+     jogos baixados e pendentes, cota restante) aparece na página da execução no GitHub;
+   - manual: aba Actions → "Atualizar dados" → *Run workflow* ("Coletar mesmo sem novidade" força a coleta);
+   - push em `site/**`, `coleta/**` ou `firebase.json` na `main`: gera os dados e publica (não gasta cota da API);
    - em *Settings → Secrets and variables → Actions* do GitHub:
      - segredo `HIGHLIGHTLY_KEY`
      - segredo `FIREBASE_SERVICE_ACCOUNT` (gerado por `firebase init hosting:github`, ou uma chave JSON de conta de serviço com papel "Firebase Hosting Admin")
      - variável `FIREBASE_PROJECT_ID`
+
+Prévia ao compartilhar o link: tags `og:` no `index.html` com `site/capa.png` (1200×630),
+gerada de `scripts/capa.html` (comando no topo do arquivo).
 
 Cache: dados, JS, CSS e HTML saem com `no-cache` (o navegador revalida e só baixa o que mudou), então uma publicação aparece na hora.
 `site/dados-demo/` nunca é publicado. Tudo no Hosting é público.

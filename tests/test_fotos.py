@@ -36,3 +36,21 @@ def test_foto_local_usa_copia_e_cai_na_url_sem_rede(tmp_path, monkeypatch):
     monkeypatch.setattr(fotos.requests, "get", sem_rede)
     url = "https://media.api-sports.io/football/players/8.png"
     assert fotos.foto_local(url, tmp_path) == url  # sem cópia e sem rede: mantém a URL original
+
+
+def test_logos_locais_troca_url_pela_copia_por_tipo(tmp_path, monkeypatch):
+    from coleta import imagens
+    (tmp_path / "logos" / "teams").mkdir(parents=True)
+    (tmp_path / "logos" / "teams" / "5.png").write_bytes(b"png")
+
+    def sem_rede(*a, **k):
+        raise imagens.requests.ConnectionError("sem rede")
+    monkeypatch.setattr(imagens.requests, "get", sem_rede)
+    url_liga = "https://highlightly.net/soccer/images/leagues/5.png"
+    tabelas = {"partidas": [{"adversario_logo": "https://highlightly.net/soccer/images/teams/5.png",
+                             "competicao_logo": url_liga, "flamengo_logo": None}], "meta": {}}
+    assert imagens.logos_locais(tabelas, tmp_path) == 1
+    linha = tabelas["partidas"][0]
+    assert linha["adversario_logo"] == "logos/teams/5.png"
+    assert linha["competicao_logo"] == url_liga  # mesmo ID, outro tipo: sem cópia e sem rede, mantém a URL
+    assert linha["flamengo_logo"] is None

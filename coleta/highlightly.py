@@ -8,8 +8,7 @@ e a coleta para sozinha antes de esgotar a cota do dia (100 no plano grátis).
 
 As respostas são guardadas como vieram, em data/<ano>/raw-highlightly/partida_<id>.json
 ({"match": ..., "boxscore": ..., "_coletado_em": ...}); `normalizar` gera as mesmas tabelas
-da API-Football (para o validador) com colunas a mais.
-"""
+da API-Football (para o validador) com colunas a mais.\n"""
 
 from __future__ import annotations
 
@@ -208,9 +207,26 @@ def planejar(agora: datetime | None = None) -> tuple[bool, str]:
     return False, "nada a coletar agora"
 
 
+def resumo_github(texto: str) -> None:
+    """Escreve no resumo da execução do GitHub Actions (aparece na página da execução, sem abrir o log)."""
+    caminho = os.environ.get("GITHUB_STEP_SUMMARY")
+    if caminho:
+        with open(caminho, "a", encoding="utf-8") as f:
+            f.write(texto.rstrip() + "\n")
+
+
+def situacao_coleta() -> dict:
+    """Jogos encerrados no calendário × jogos com detalhes baixados (sem usar a API)."""
+    lista = ler_raw(ARQ_JOGOS)
+    encerrados = [j for j in (lista or {}).get("data", []) if _status(j) in config.STATUS_ENCERRADO]
+    baixados = sum(ler_raw(f"partida_{j['id']}") is not None for j in encerrados)
+    return {"encerrados": len(encerrados), "baixados": baixados, "pendentes": len(encerrados) - baixados}
+
+
 def cmd_planejar(forcar: bool = False) -> int:
     coletar, motivo = (True, "coleta forçada") if forcar else planejar()
     print(f"{'Coletar' if coletar else 'Pular'}: {motivo}.")
+    resumo_github(f"**{'Coletar' if coletar else 'Pular'}:** {motivo}.\n")
     saida = os.environ.get("GITHUB_OUTPUT")
     if saida:  # no GitHub Actions, os próximos passos leem steps.<id>.outputs.coletar
         with open(saida, "a", encoding="utf-8") as f:

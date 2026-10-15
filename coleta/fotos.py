@@ -18,7 +18,7 @@ from pathlib import Path
 
 import requests
 
-from . import config
+from . import config, imagens
 from .api import ClienteAPI, ErroAPI, ler_raw, salvar_raw
 
 ARQ = "elenco_fotos"
@@ -29,18 +29,7 @@ PASTA_SITE = Path(os.environ.get("FLA_SITE_FOTOS", config.ROOT / "site" / "fotos
 
 def foto_local(url: str, pasta: Path | None = None) -> str:
     """Caminho relativo ao site ("fotos/123.png") se a cópia existir ou puder ser baixada; senão a URL."""
-    pasta = pasta or PASTA_SITE
-    nome = url.rsplit("/", 1)[-1]
-    destino = pasta / nome
-    if not destino.exists():
-        try:
-            resp = requests.get(url, timeout=15)
-            if resp.ok and resp.headers.get("content-type", "").startswith("image/"):
-                pasta.mkdir(parents=True, exist_ok=True)
-                destino.write_bytes(resp.content)
-        except requests.RequestException:
-            pass
-    return f"fotos/{nome}" if destino.exists() else url
+    return imagens.copia_local(url, pasta or PASTA_SITE, "fotos")
 
 
 def _norm(texto: str | None) -> str:

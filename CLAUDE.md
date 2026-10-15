@@ -17,8 +17,8 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
   logo de barras crescentes (a última vermelha, também favicon); Space Grotesk (títulos), JetBrains Mono (números),
   Inter (texto); escuro #0E0F11 / cartões #17191C / vermelho #FF3341 (claro: #E01E2D) / cinzas frios #8A9099.
   Logos são desenhos próprios: nunca usar escudo ou marca do Flamengo. Propostas em `site/.propostas/` (fora do deploy).
-- **Fonte de dados: API-Football** (api-sports.io, `v3.football.api-sports.io`, header `x-apisports-key`),
-  começando no plano grátis (100 req/dia). Escolhida por cobrir as 6 competições com minutagem por jogador.
+- **API-Football** (api-sports.io, `v3.football.api-sports.io`, header `x-apisports-key`): hoje só para temporadas
+  2022–2024 e fotos do elenco (fonte original, antes da Highlightly; plano grátis, 100 req/dia). Escolhida por cobrir as 6 competições com minutagem por jogador.
   Ponto fraco: xG não é documentado; o código captura `expected_goals` de `/fixtures` quando existir.
 - **xG**: se a API-Football não trouxer xG suficiente, plano B é uma segunda API só para xG:
   Sportmonks (Starter, 5 ligas, + add-on xG; ~€48/mês, a confirmar) cobre Brasileirão (liga 648)
@@ -48,8 +48,7 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
     `config.aplicar_temporada(ano)` troca todos os caminhos; CLI aceita `--temporada`. Padrão = ano atual.
     Elenco (`/players/squads`) só existe para a temporada atual.
   - Configuração pelo arquivo `.env` na raiz (modelo `.env.exemplo`, fora do Git; variável do terminal tem prioridade) ou variável de ambiente: `API_FOOTBALL_KEY`, `FLA_TEAM_ID` (127), `FLA_SEASON` (padrão: ano atual), `FLA_DATA_DIR` (pasta base), `FLA_SITE_DADOS`.
-- `site/` — HTML/CSS/JS puro, gráficos SVG próprios (`graficos.js`), sem build. Seletor de temporada (`?t=2025`). Abas: visão geral,
-  jogadores, minutagem (mapa de calor jogador × jogo), jogos (detalhe com escalação/eventos), qualidade.
+- `site/` — HTML/CSS/JS puro, gráficos SVG próprios (`graficos.js`), sem build. Seletor de temporada (`?t=2025`). Abas: Temporada, Jogos, Jogadores, Elenco, Estilo de jogo, Sua opinião (detalhes em "Estado atual").
   Cores de competição em famílias da identidade (15/10/2026, pedido do Rafael, troca a paleta azul/laranja anterior):
   nacionais em vermelho (Brasileirão --s1, Copa do Brasil --s3), continentais em dourado (Libertadores --s2, Recopa --s6),
   demais em cinzas (Carioca --s4, Supercopa --s5, amistosos --s7). Distinção depende mais de luminosidade que de matiz.
@@ -72,7 +71,8 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
 - 2024 coletado pela API-Football (75 jogos) e 2026 pela Highlightly: 41 de 58 jogos encerrados; os 17 restantes
   (mais antigos, incluindo Carioca/Supercopa/Recopa) chegam na próxima coleta, quando a cota diária renovar.
 - Respostas da Highlightly ficam versionadas em `data/<ano>/raw-highlightly/` (o workflow faz commit), para a coleta
-  não baixar de novo e o site nunca sair parcial. Workflow usa o segredo `HIGHLIGHTLY_KEY` (falta cadastrar no GitHub).
+  não baixar de novo e o site nunca sair parcial. Segredos `HIGHLIGHTLY_KEY` e `FIREBASE_SERVICE_ACCOUNT` cadastrados;
+  disparo pelo cron-job.org funcionando desde 15/10/2026 (token fine-grained vence em 15/10/2027).
 - `coleta/highlightly.py`: cliente, coleta com parada antes de esgotar a cota (`FLA_HL_RESERVA`), normalização nativa
   (mesmas tabelas da API-Football + xg/xa/xgot por jogador, previsão pré-jogo, clima, tabela `finalizacoes`).
 - Validador usa a duração real do jogo (minutos incluem acréscimos). Restam alertas de fonte: 12º titular com 0 min
@@ -102,4 +102,11 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   formulário de elogios/críticas/sugestões grava em Firestore (`opinioes`, banco (default) em nam5) via REST com a
   chave pública do app web; `firestore.rules` só permite criar com campos validados; leitura só pelo console:
   https://console.firebase.google.com/project/datafla/firestore/databases/-default-/data/~2Fopinioes
-- 29 testes (`python -m pytest`).
+- 35 testes (`python -m pytest`).
+- Melhorias de 15/10/2026 (análise geral, itens 1–6): no Git só respostas brutas, fotos e logos; JSON do site,
+  CSVs e validação são gerados por `processar` (workflow gera no deploy; `meta.coletado_em` = hora da última coleta,
+  mostrada em "atualizado em"). Logos (escudos e competições) copiados para `site/logos/<teams|leagues>/`
+  (`coleta/imagens.py`). Resumo no GitHub (`$GITHUB_STEP_SUMMARY`). Tags `og:` + `site/capa.png`
+  (de `scripts/capa.html`). Gráficos SVG com `aria-label` = título do cartão + resumo gerado dos dados.
+  Sugestões ainda abertas: separar `app.js` por aba, enxugar `jogadores` no JSON, teste de fumaça do painel,
+  medir visitas, aviso de opinião nova por e-mail, App Check se vier spam, investigar divergências da fonte.

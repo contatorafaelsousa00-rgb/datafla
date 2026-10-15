@@ -169,3 +169,15 @@ def test_planejar_escreve_saida_do_github(tmp_path, monkeypatch):
     monkeypatch.setenv("GITHUB_OUTPUT", str(saida))
     assert hl.cmd_planejar(forcar=True) == 0
     assert saida.read_text(encoding="utf-8") == "coletar=true\n"
+
+
+def test_planejar_e_situacao_escrevem_resumo_do_github(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+    jogos = [_jogo(1, "2026-10-10T20:00:00.000Z", "Finished"), _jogo(2, "2026-10-12T20:00:00.000Z", "Finished")]
+    _cenario(tmp_path, monkeypatch, jogos, partidas=[(1, "2026-10-11T00:00:00+00:00")])
+    assert hl.situacao_coleta() == {"encerrados": 2, "baixados": 1, "pendentes": 1}
+    resumo = tmp_path / "resumo.md"
+    monkeypatch.setenv("GITHUB_STEP_SUMMARY", str(resumo))
+    monkeypatch.setattr(hl, "planejar", lambda: (False, "nada a coletar agora"))
+    hl.cmd_planejar()
+    assert resumo.read_text(encoding="utf-8") == "**Pular:** nada a coletar agora.\n"

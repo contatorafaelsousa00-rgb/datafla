@@ -10,3 +10,7 @@ site/dados-demo/
 .firebase/
 # Temporada 2024 (API-Football) fica só local: o painel é focado em 2026
 data/2024/
+# Gerados por `coletar processar` a partir das respostas brutas (o workflow gera na hora de publicar)
+site/dados/
+data/*/csv/
+data/*/validacao/

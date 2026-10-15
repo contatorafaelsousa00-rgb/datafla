@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- Imagem de prévia ao compartilhar o link (site/capa.png, 1200×630). Para regerar:
+     msedge --headless --hide-scrollbars --window-size=1200,630 --screenshot=site/capa.png scripts/capa.html -->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { width: 1200px; height: 630px; overflow: hidden; background: #0E0F11; color: #F2F3F5;
+         font-family: Inter, sans-serif; position: relative; }
+  .grade { position: absolute; inset: 0;
+           background-image: linear-gradient(#1B1D21 1px, transparent 1px), linear-gradient(90deg, #1B1D21 1px, transparent 1px);
+           background-size: 60px 60px; opacity: .55; }
+  .conteudo { position: absolute; left: 88px; top: 120px; }
+  .marca { display: flex; align-items: center; gap: 28px; }
+  .marca svg { width: 120px; height: 120px; }
+  h1 { font-family: "Space Grotesk", sans-serif; font-weight: 700; font-size: 132px; letter-spacing: -4px; line-height: 1; }
+  h1 span { color: #FF3341; }
+  p { margin-top: 44px; font-size: 34px; color: #C4C8CE; max-width: 820px; line-height: 1.35; }
+  .numeros { position: absolute; left: 88px; bottom: 64px; display: flex; gap: 36px;
+             font-family: "JetBrains Mono", monospace; font-size: 22px; color: #8A9099; }
+  .numeros b { color: #F2F3F5; font-weight: 500; }
+  .barras { position: absolute; right: 88px; bottom: 64px; display: flex; align-items: flex-end; gap: 14px; }
+  .barras i { display: block; width: 26px; border-radius: 5px; background: #2C2F34; }
+  .barras i:last-child { background: #FF3341; }
+</style>
+</head>
+<body>
+  <div class="grade"></div>
+  <div class="conteudo">
+    <div class="marca">
+      <svg viewBox="0 0 56 56"><rect x="1" y="1" width="54" height="54" rx="12" fill="#17191C" stroke="#2C2F34"/><rect x="11" y="32" width="7" height="13" rx="2" fill="#5B6068"/><rect x="21" y="25" width="7" height="20" rx="2" fill="#5B6068"/><rect x="31" y="18" width="7" height="27" rx="2" fill="#8A9099"/><rect x="41" y="10" width="7" height="35" rx="2" fill="#FF3341"/></svg>
+      <h1>datafla<span>.</span></h1>
+    </div>
+    <p>O Flamengo em números: xG, minutagem e desempenho em todas as competições.</p>
+  </div>
+  <div class="numeros"><span><b>xG</b> jogo a jogo</span><span><b>min</b> por jogador</span><span><b>6</b> competições</span></div>
+  <div class="barras"><i style="height:60px"></i><i style="height:96px"></i><i style="height:78px"></i><i style="height:132px"></i><i style="height:112px"></i><i style="height:170px"></i><i style="height:150px"></i><i style="height:220px"></i></div>
+</body>
+</html>

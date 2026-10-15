@@ -24,7 +24,7 @@ import os
 import sys
 from datetime import datetime, timedelta, timezone
 
-from . import alteracoes, armazenar, config, exportar, fotos, highlightly, inspecionar, normalizar, sumulas, validar
+from . import alteracoes, armazenar, config, exportar, fotos, highlightly, imagens, inspecionar, normalizar, sumulas, validar
 from .api import ClienteAPI, ErroAPI, ler_raw, salvar_raw
 
 ARQ_JOGOS = "jogos"
@@ -154,6 +154,7 @@ def cmd_processar():
     if _hl() and jogos:
         tabelas["proximo"] = highlightly.linhas_proximo(ler_raw(highlightly.ARQ_PROXIMO), jogos["data"])
         tabelas["fotos"] = fotos.linhas_fotos(tabelas["jogadores_partida"])
+        imagens.logos_locais(tabelas)
     armazenar.salvar_sqlite(tabelas)
     armazenar.salvar_csv(tabelas)
 
@@ -163,7 +164,9 @@ def cmd_processar():
         validar.relatorio_markdown(resultado), encoding="utf-8"
     )
     armazenar.salvar_csv(resultado, config.RELATORIO_DIR)
-    site = exportar.exportar(tabelas, resultado, demo=os.environ.get("FLA_DEMO") == "1")
+    # "Atualizado em" do painel = última coleta (não a hora do deploy, que roda processar de novo)
+    coletado = jogos.get("_coletado_em") if isinstance(jogos, dict) else None
+    site = exportar.exportar(tabelas, resultado, demo=os.environ.get("FLA_DEMO") == "1", coletado_em=coletado)
     problemas = sum(c["status"] != validar.OK for c in resultado["checagens"])
     print(f"{len(partidas)} jogos processados -> {config.DB_PATH}")
     print(f"Validação: {problemas} apontamentos -> {config.RELATORIO_DIR / 'relatorio.md'}")
@@ -275,8 +278,19 @@ def main(argv=None):
             if args.comando == "fotos":
                 return fotos.cmd_fotos(forcar=True)
             # Jogos encerrados têm prioridade na cota; o próximo jogo vem depois.
-            return (highlightly.cmd_jogos(api) or highlightly.cmd_detalhes(api)
-                    or highlightly.cmd_proximo(api) or fotos.cmd_fotos() or cmd_processar())
+            antes = highlightly.situacao_coleta()["baixados"]
+            try:
+                return (highlightly.cmd_jogos(api) or highlightly.cmd_detalhes(api)
+                        or highlightly.cmd_proximo(api) or fotos.cmd_fotos() or cmd_processar())
+            finally:
+                s = highlightly.situacao_coleta()
+                highlightly.resumo_github(
+                    "| Coleta | |\n|---|---|\n"
+                    f"| Jogos encerrados no calendário | {s['encerrados']} |\n"
+                    f"| Com detalhes baixados | {s['baixados']} (+{s['baixados'] - antes} nesta execução) |\n"
+                    f"| Pendentes | {s['pendentes']} |\n"
+                    f"| Requisições usadas | {api.chamadas} |\n"
+                    f"| Cota restante hoje | {api.restantes_hoje if api.restantes_hoje is not None else '?'} |\n")
         if args.comando == "status":
             return cmd_status(api)
         if args.comando == "jogos":

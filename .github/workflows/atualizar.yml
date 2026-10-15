@@ -3,7 +3,9 @@
 # Quando roda:
 #   - a cada 30 min, disparado de fora (cron-job.org → API do GitHub, "workflow_dispatch"), no horário exato;
 #   - 00:17 e 07:17 (Brasília) pelo agendador do GitHub, como reserva (ele costuma atrasar);
-#   - em push no painel (site/ ou firebase.json): só publica, sem coletar.
+#   - em push no painel ou na coleta (site/, coleta/, firebase.json): gera os dados e publica, sem usar a API.
+# Só as respostas brutas da Highlightly, as fotos e os logos ficam no Git; o JSON do site e os CSVs são
+# gerados a cada publicação por `coletar processar` (não gasta cota), para o repositório não inchar.
 # Cada execução agendada primeiro decide, sem gastar cota da API, se há algo para coletar
 # (`coletar planejar`: jogo que acabou há pouco, ou atualização diária 24 h após a última coleta).
 # Se não houver, termina em segundos sem coletar nem publicar.
@@ -29,7 +31,7 @@ on:
         default: false
   push:
     branches: [main]
-    paths: ["site/**", "firebase.json"]
+    paths: ["site/**", "coleta/**", "firebase.json"]
 
 permissions:
   contents: write
@@ -69,6 +71,10 @@ jobs:
         if: steps.plano.outputs.coletar == 'true'
         run: python -m coleta.coletar tudo --fonte highlightly
 
+      - name: Gerar dados do site
+        if: github.event_name == 'push'
+        run: python -m coleta.coletar processar --fonte highlightly
+
       - name: Salvar dados no repositório
         if: steps.plano.outputs.coletar == 'true'
         run: |
@@ -76,7 +82,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # As respostas da Highlightly ficam no Git: a próxima execução não baixa de novo os jogos
           # já coletados (100 requisições por dia, 2 por jogo) e o site nunca sai com dados parciais.
-          git add data/*/csv data/*/validacao data/*/raw-highlightly site/dados site/fotos
+          git add data/*/raw-highlightly site/fotos site/logos
           git diff --cached --quiet || git commit -m "Atualiza dados ($(date -u +%Y-%m-%d\ %H:%M) UTC)"
           git pull --rebase --autostash
           git push

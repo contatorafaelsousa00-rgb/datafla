@@ -43,7 +43,7 @@ def _traduzir(linhas: list[dict]) -> list[dict]:
 
 
 def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | None = None,
-             demo: bool = False) -> Path:
+             demo: bool = False, coletado_em: str | None = None) -> Path:
     destino = destino or SITE_DADOS
     destino.mkdir(parents=True, exist_ok=True)
     conteudo = {
@@ -66,8 +66,10 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
     for item in validacao.get("checagens", []) + validacao.get("completude", []):
         item["competicao"] = nome_competicao(item["competicao"])
 
+    agora = datetime.now(timezone.utc).isoformat(timespec="seconds")
     conteudo["meta"] = {
-        "gerado_em": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "gerado_em": agora,
+        "coletado_em": coletado_em or agora,
         "temporada": config.SEASON,
         "demo": demo,
         "fonte": config.FONTE,
