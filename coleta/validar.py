@@ -101,16 +101,19 @@ def checar_partida(partida, jogadores, eventos, estatisticas) -> list[dict]:
             reg(time_id, "substituicoes_vs_eventos", ALERTA,
                 f"{subs_evento} eventos de substituição, {len(entraram)} reservas com minutos")
 
-        # 4. Soma de minutos fecha com 11 x duração, descontando expulsões
+        # 4. Soma de minutos fecha com 11 x duração, descontando expulsões.
+        # Algumas fontes contam os acréscimos nos minutos (jogo de 96 min): a duração real
+        # é o maior tempo jogado por um atleta, nunca menos que a regulamentar.
         if any(j["minutos"] is None for j in titulares):
             reg(time_id, "minutos", ALERTA, "minutagem ausente em algum titular")
         else:
+            dur_real = max([dur] + [_z(j["minutos"]) for j in js])
             perdidos = sum(
-                max(0, dur - _z(e["minuto"]))
+                max(0, dur_real - _z(e["minuto"]))
                 for e in eventos
                 if e["time_id"] == time_id and e["tipo"] == "Card" and e["detalhe"] in CARTOES_VERMELHOS
             )
-            esperado = 11 * dur - perdidos
+            esperado = 11 * dur_real - perdidos
             soma = sum(_z(j["minutos"]) for j in js)
             dif = soma - esperado
             status = OK if abs(dif) <= 15 else ALERTA if abs(dif) <= 45 else ERRO

@@ -7,7 +7,7 @@ import copy
 
 from coleta import armazenar, config, normalizar, validar
 
-FLA, ADV = config.TEAM_ID, 999
+FLA, ADV = config.FONTES["api-football"]["team_id"], 999
 
 
 def jogador(pid, minutos, titular=True, gols=None, chutes=None, passes=20, nota="7.0"):

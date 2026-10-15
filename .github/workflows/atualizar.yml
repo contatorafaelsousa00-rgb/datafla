@@ -1,7 +1,8 @@
 # Coleta da temporada atual duas vezes por dia e publicação do site no Firebase Hosting.
 # Temporadas passadas: rode localmente `python -m coleta.coletar tudo --temporada 2025` e faça commit.
 # Segredos (Settings > Secrets and variables > Actions):
-#   API_FOOTBALL_KEY          chave da API-Football (obrigatório para coletar)
+#   HIGHLIGHTLY_KEY           chave da Highlightly (fonte da temporada atual; obrigatório para coletar)
+#   API_FOOTBALL_KEY          chave da API-Football (só para temporadas antigas, rodadas localmente)
 #   FIREBASE_SERVICE_ACCOUNT  JSON da conta de serviço do Firebase (opcional; sem ele não publica)
 # Variável (aba Variables):
 #   FIREBASE_PROJECT_ID       ID do projeto no Firebase
@@ -12,6 +13,10 @@ on:
     - cron: "17 3 * * *"    # 00:17 em Brasília: pega os jogos da noite logo após o fim
     - cron: "17 10 * * *"   # 07:17 em Brasília: recoleta com as correções da madrugada
   workflow_dispatch:
+  # Mudança no painel publica na hora, sem coletar (não gasta cota da API)
+  push:
+    branches: [main]
+    paths: ["site/**", "firebase.json"]
 
 permissions:
   contents: write
@@ -23,8 +28,10 @@ concurrency:
 jobs:
   atualizar:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     env:
-      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+      HIGHLIGHTLY_KEY: ${{ secrets.HIGHLIGHTLY_KEY }}
+      API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}  # opcional: só para as fotos dos jogadores (1 req/semana)
       TEM_FIREBASE: ${{ secrets.FIREBASE_SERVICE_ACCOUNT != '' }}
     steps:
       - uses: actions/checkout@v4
@@ -40,15 +47,17 @@ jobs:
         run: python -m pytest -q
 
       - name: Coletar e processar
-        if: env.API_FOOTBALL_KEY != ''
-        run: python -m coleta.coletar tudo
+        if: github.event_name != 'push' && env.HIGHLIGHTLY_KEY != ''
+        run: python -m coleta.coletar tudo --fonte highlightly
 
       - name: Salvar dados no repositório
-        if: env.API_FOOTBALL_KEY != ''
+        if: github.event_name != 'push' && env.HIGHLIGHTLY_KEY != ''
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/*/csv data/*/validacao site/dados
+          # As respostas da Highlightly ficam no Git: a próxima execução não baixa de novo os jogos
+          # já coletados (100 requisições por dia, 2 por jogo) e o site nunca sai com dados parciais.
+          git add data/*/csv data/*/validacao data/*/raw-highlightly site/dados site/fotos
           git diff --cached --quiet || git commit -m "Atualiza dados ($(date -u +%Y-%m-%d))"
           git push
 

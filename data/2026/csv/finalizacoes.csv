@@ -1,0 +1,1044 @@
+﻿id_partida,time_id,eh_flamengo,ordem,minuto,acrescimo,jogador,resultado,alvo
+1269816179,108861,True,0,5,,Lucas Paquetá,Missed,
+1269816179,108861,True,1,11,,Jorginho,Missed,Close Right And High
+1269816179,108861,True,2,12,,Samuel Lino,Blocked,Low Right
+1269816179,108861,True,3,14,,Jorge Carrascal,Goal,High Right
+1269816179,108861,True,4,17,,Lucas Paquetá,Blocked,Low Left
+1269816179,108861,True,5,17,,Jorginho,Missed,
+1269816179,108861,True,6,25,,Pedro,Missed,
+1269816179,108861,True,7,32,,Léo Ortiz,Missed,High Left
+1269816179,108861,True,8,40,,Samuel Lino,Blocked,Low Centre
+1269816179,108861,True,9,40,,Guillermo Varela,Saved,Low Centre
+1269816179,108861,True,10,43,,Lucas Paquetá,Goal,Low Right
+1269816179,108861,True,11,45,4,Lucas Paquetá,Blocked,Low Centre
+1269816179,108861,True,12,45,4,Leo Pereira,Missed,High Right
+1269816179,108861,True,13,52,,Giorgian de Arrascaeta,Saved,Low Centre
+1269816179,6679432,False,0,35,,André Luis,Missed,CloseLeft
+1269816179,6679432,False,1,55,,Igor Formiga,Saved,Low Centre
+1269816179,6679432,False,2,58,,Igor Formiga,Missed,Close High
+1269816179,6679432,False,3,74,,Shaylon,Blocked,Low Centre
+1269816179,6679432,False,4,80,,Reinaldo,Blocked,Low Left
+1269816179,6679432,False,5,80,,Fernandinho,Missed,CloseLeft
+1269816179,6679432,False,6,86,,Denilson,Missed,CloseLeft
+1269816179,6679432,False,7,90,3,Bruno Santos,Saved,Low Left
+1269828944,102904,False,0,4,,Cristian Medina,Missed,
+1269828944,102904,False,1,9,,Arthur Cabral,Missed,
+1269828944,102904,False,2,18,,Matheus Martins,Saved,Low Centre
+1269828944,102904,False,3,21,,Cristian Medina,Blocked,Low Centre
+1269828944,102904,False,4,48,,Danilo,Missed,
+1269828944,102904,False,5,60,,Alex Telles,Missed,High Left
+1269828944,102904,False,6,62,,Cristian Medina,Blocked,Low Left
+1269828944,108861,True,0,2,,Pedro,Missed,
+1269828944,108861,True,1,13,,Samuel Lino,Goal,Low Right
+1269828944,108861,True,2,38,,Samuel Lino,Missed,
+1269828944,108861,True,3,42,,Erick Pulgar,Blocked,Low Centre
+1269828944,108861,True,4,45,2,Leo Pereira,Goal,Low Right
+1269828944,108861,True,5,45,11,Leo Pereira,Blocked,Low Left
+1269828944,108861,True,6,45,11,Leo Pereira,Saved,Low Centre
+1269828944,108861,True,7,49,,Pedro,Goal,Low Left
+1269828944,108861,True,8,51,,Jorge Carrascal,Blocked,Low Right
+1269828944,108861,True,9,55,,Samuel Lino,Missed,CloseLeft
+1269828944,108861,True,10,73,,Evertton Araujo,Missed,
+1269828944,108861,True,11,75,,Jorge Carrascal,Blocked,Low Centre
+1269828944,108861,True,12,78,,Lucas Paquetá,Missed,
+1269828944,108861,True,13,84,,Lucas Paquetá,Saved,Low Right
+1269828944,108861,True,14,85,,Jorge Carrascal,Blocked,Low Centre
+1269828944,108861,True,15,89,,Lucas Paquetá,Missed,High Left
+1269828944,108861,True,16,90,4,Gonzalo Plata,Saved,Low Left
+1269828944,108861,True,17,90,7,Evertton Araujo,Missed,CloseLeft
+1269840858,108861,True,0,7,,Samuel Lino,Blocked,Low Left
+1269840858,108861,True,1,9,,Samuel Lino,Blocked,Low Centre
+1269840858,108861,True,2,19,,Léo Ortiz,Goal,Low Left
+1269840858,108861,True,3,45,3,Samuel Lino,Blocked,Low Centre
+1269840858,108861,True,4,46,,Samuel Lino,Blocked,Low Centre
+1269840858,108861,True,5,48,,Samuel Lino,Goal,Low Centre
+1269840858,108861,True,6,54,,Luiz Araújo,Goal,Low Left
+1269840858,108861,True,7,61,,Giorgian de Arrascaeta,Missed,
+1269840858,108861,True,8,61,,Giorgian de Arrascaeta,Missed,Close Right
+1269840858,108861,True,9,85,,Guillermo Varela,Blocked,Low Centre
+1269840858,108861,True,10,90,5,Luiz Araújo,Blocked,Low Right
+1269840858,1020282,False,0,4,,Zé Ricardo,Saved,Low Centre
+1269840858,1020282,False,1,6,,Vitor Bueno,Missed,High Right
+1269840858,1020282,False,2,10,,Alef Manga,Blocked,Low Centre
+1269840858,1020282,False,3,31,,Patrick de Paula,Missed,High Left
+1269840858,1020282,False,4,44,,Marcelinho,Missed,
+1269840858,1020282,False,5,52,,Patrick de Paula,Missed,High Left
+1269840858,1020282,False,6,55,,Vitor Bueno,Missed,High Right
+1269847666,112265,False,0,11,,André,Blocked,Low Right
+1269847666,112265,False,1,19,,Yuri Alberto,Goal,Low Right
+1269847666,112265,False,2,29,,André,Blocked,Low Centre
+1269847666,112265,False,3,43,,Gabriel Paulista,Blocked,Low Right
+1269847666,112265,False,4,45,,Gustavo Henrique,Blocked,Low Centre
+1269847666,112265,False,5,45,1,Matheus Bidu,Missed,
+1269847666,112265,False,6,45,3,Matheuzinho,Blocked,Low Centre
+1269847666,112265,False,7,45,6,Gabriel Paulista,Blocked,Low Centre
+1269847666,112265,False,8,63,,Rodrigo Garro,Missed,High Left
+1269847666,112265,False,9,65,,Gabriel Paulista,Blocked,Low Left
+1269847666,112265,False,10,90,5,Gui Negão,Missed,
+1269847666,112265,False,11,90,5,Yuri Alberto,Saved,High Left
+1269847666,112265,False,12,90,8,Matheus Pereira,Missed,High Left
+1269847666,108861,True,0,3,,Lucas Paquetá,Goal,Low Left
+1269847666,108861,True,1,8,,Samuel Lino,Missed,
+1269847666,108861,True,2,30,,Pedro,Missed,High Right
+1269847666,108861,True,3,45,4,Giorgian de Arrascaeta,Saved,Low Right
+1269847666,108861,True,4,49,,Ayrton Lucas,Blocked,Low Left
+1269847666,108861,True,5,49,,Evertton Araujo,Missed,
+1269847666,108861,True,6,59,,Giorgian de Arrascaeta,Blocked,Low Centre
+1269847666,108861,True,7,83,,Lucas Paquetá,Missed,CloseLeft
+1269847666,108861,True,8,90,1,Nicolas De La Cruz,Missed,
+1269847666,108861,True,9,90,9,Wallace Yan,Blocked,Low Centre
+1269856176,676478,False,0,3,,Matheus Fernandes,Missed,
+1269856176,676478,False,1,17,,Isidro Pitta,Goal,High Centre
+1269856176,676478,False,2,20,,Juninho Capixaba,Blocked,Low Centre
+1269856176,676478,False,3,29,,Matheus Fernandes,Missed,High Right
+1269856176,676478,False,4,37,,José Herrera,Blocked,Low Centre
+1269856176,676478,False,5,39,,Gabriel Girotto,Goal,Low Left
+1269856176,676478,False,6,45,1,José Herrera,Saved,Low Right
+1269856176,676478,False,7,45,2,Isidro Pitta,Missed,
+1269856176,676478,False,8,54,,Henry Mosquera,Missed,
+1269856176,676478,False,9,55,,Lucas Barbosa,Goal,High Right
+1269856176,676478,False,10,63,,Lucas Barbosa,Missed,CloseLeft
+1269856176,676478,False,11,66,,Nacho Sosa,Saved,High Right
+1269856176,676478,False,12,68,,Isidro Pitta,Missed,High Left
+1269856176,676478,False,13,79,,Isidro Pitta,Saved,Low Centre
+1269856176,676478,False,14,79,,Agustín Sant'Anna,Missed,
+1269856176,676478,False,15,81,,Nacho Sosa,Blocked,Low Left
+1269856176,676478,False,16,88,,Gabriel Girotto,Blocked,Low Centre
+1269856176,676478,False,17,90,1,José Hurtado,Blocked,Low Left
+1269856176,108861,True,0,8,,Ayrton Lucas,Saved,Low Centre
+1269856176,108861,True,1,11,,Lucas Paquetá,Blocked,Low Right
+1269856176,108861,True,2,58,,Vitão,Blocked,Low Left
+1269856176,108861,True,3,59,,Everton,Missed,Close Right
+1269856176,108861,True,4,76,,Nicolas De La Cruz,Blocked,Low Right
+1269856176,108861,True,5,76,,Vitão,Missed,
+1269856176,108861,True,6,82,,Jorge Carrascal,Blocked,Low Left
+1269867239,108861,True,0,8,,Giorgian de Arrascaeta,Blocked,Low Centre
+1269867239,108861,True,1,8,,Giorgian de Arrascaeta,Missed,
+1269867239,108861,True,2,13,,Evertton Araujo,Missed,
+1269867239,108861,True,3,18,,Guillermo Varela,Missed,
+1269867239,108861,True,4,27,,Leo Pereira,Blocked,Low Right
+1269867239,108861,True,5,37,,Jorge Carrascal,Missed,
+1269867239,108861,True,6,43,,Pedro,Blocked,Low Left
+1269867239,108861,True,7,45,1,Ayrton Lucas,Saved,Low Centre
+1269867239,108861,True,8,45,3,Jorge Carrascal,Missed,High Right
+1269867239,108861,True,9,51,,Leo Pereira,Missed,Close High
+1269867239,108861,True,10,62,,Guillermo Varela,Blocked,Low Centre
+1269867239,108861,True,11,63,,Jorginho,Blocked,Low Centre
+1269867239,108861,True,12,64,,Pedro,Goal,High Left
+1269867239,108861,True,13,71,,Jorginho,Goal,Low Left
+1269867239,108861,True,14,84,,Bruno Henrique,Blocked,Low Right
+1269867239,108861,True,15,89,,Luiz Araújo,Blocked,Low Centre
+1269867239,108861,True,16,89,,Lucas Paquetá,Goal,High Left
+1269867239,108861,True,17,90,11,Gonzalo Plata,Post,
+1269867239,108861,True,18,90,11,Bruno Henrique,Blocked,Low Centre
+1269867239,109712,False,0,22,,Gonzalo Escobar,Missed,
+1269867239,109712,False,1,25,,Thaciano,Missed,CloseLeft
+1269867239,109712,False,2,29,,Álvaro Barreal,Blocked,Low Centre
+1269867239,109712,False,3,30,,Christian Oliva,Blocked,Low Centre
+1269867239,109712,False,4,32,,Christian Oliva,Blocked,Low Centre
+1269867239,109712,False,5,40,,Thaciano,Missed,High Right
+1269867239,109712,False,6,45,2,Gonzalo Escobar,Missed,
+1269867239,109712,False,7,48,,Lautaro Díaz,Goal,High Right
+1269867239,109712,False,8,60,,Gonzalo Escobar,Blocked,Low Centre
+1269867239,109712,False,9,80,,Álvaro Barreal,Blocked,Low Right
+1269867239,109712,False,10,80,,Gabriel Bontempo,Blocked,Low Centre
+1269867239,109712,False,11,85,,Lautaro Díaz,Missed,
+1269867239,109712,False,12,90,5,Moises,Saved,Low Centre
+1269867239,109712,False,13,90,5,Gabriel Barbosa,Blocked,Low Centre
+1269867239,109712,False,14,90,5,Lautaro Díaz,Blocked,Low Centre
+1269867239,109712,False,15,90,6,Lucas Veríssimo,Blocked,Low Right
+1269867239,109712,False,16,90,10,Gabriel Barbosa,Blocked,Low Centre
+1269874898,106308,False,0,13,,Renê,Missed,
+1269874898,106308,False,1,41,,Matheus Martinelli,Blocked,Low Left
+1269874898,106308,False,2,45,2,John Kennedy,Blocked,Low Left
+1269874898,106308,False,3,54,,Juan Pablo Freytes,Missed,Close Right
+1269874898,106308,False,4,56,,John Kennedy,Blocked,Low Centre
+1269874898,106308,False,5,58,,Juan Pablo Freytes,Blocked,Low Left
+1269874898,106308,False,6,58,,Paulo Henrique Ganso,Saved,Low Centre
+1269874898,106308,False,7,61,,Samuel Xavier,Blocked,Low Right
+1269874898,106308,False,8,61,,Juan Pablo Freytes,Blocked,Low Left
+1269874898,106308,False,9,67,,Rodrigo Castillo,Missed,CloseLeft
+1269874898,106308,False,10,68,,Hércules,Saved,Low Left
+1269874898,106308,False,11,68,,Jemmes,Missed,High Right
+1269874898,106308,False,12,75,,Renê,Saved,High Right
+1269874898,106308,False,13,76,,Jefferson Savarino,Goal,Low Left
+1269874898,106308,False,14,87,,Rodrigo Castillo,Missed,Close High
+1269874898,106308,False,15,90,3,Jefferson Savarino,Saved,Low Right
+1269874898,106308,False,16,90,4,Hércules,Saved,Low Right
+1269874898,106308,False,17,90,7,Guilherme Arana,Blocked,Low Centre
+1269874898,106308,False,18,90,8,Rodrigo Castillo,Missed,
+1269874898,108861,True,0,4,,Samuel Lino,Missed,
+1269874898,108861,True,1,4,,Evertton Araujo,Missed,CloseLeft
+1269874898,108861,True,2,7,,Pedro,Goal,Low Centre
+1269874898,108861,True,3,13,,Gonzalo Plata,Saved,Low Centre
+1269874898,108861,True,4,19,,Giorgian de Arrascaeta,Blocked,Low Centre
+1269874898,108861,True,5,28,,Leo Pereira,Missed,Close Right
+1269874898,108861,True,6,32,,Giorgian de Arrascaeta,Saved,Low Right
+1269874898,108861,True,7,34,,Gonzalo Plata,Saved,Low Right
+1269874898,108861,True,8,50,,Gonzalo Plata,Saved,Low Centre
+1269874898,108861,True,9,51,,Pedro,Blocked,Low Left
+1269874898,108861,True,10,51,,Pedro,Goal,High Right
+1269874898,108861,True,11,55,,Pedro,Saved,Low Centre
+1269874898,108861,True,12,55,,Lucas Paquetá,Blocked,Low Left
+1269874898,108861,True,13,64,,Pedro,Post,
+1269874898,108861,True,14,64,,Giorgian de Arrascaeta,Blocked,Low Left
+1269874898,108861,True,15,90,1,Jorge Carrascal,Saved,Low Left
+1269874898,108861,True,16,90,3,Bruno Henrique,Missed,
+1269883408,108861,True,0,2,,Evertton Araujo,Missed,
+1269883408,108861,True,1,8,,Gonzalo Plata,Saved,Low Centre
+1269883408,108861,True,2,17,,Giorgian de Arrascaeta,Goal,Low Left
+1269883408,108861,True,3,19,,Lucas Paquetá,Blocked,Low Centre
+1269883408,108861,True,4,20,,Pedro,Missed,
+1269883408,108861,True,5,35,,Evertton Araujo,Blocked,Low Centre
+1269883408,108861,True,6,40,,Samuel Lino,Blocked,Low Left
+1269883408,108861,True,7,53,,Giorgian de Arrascaeta,Saved,Low Right
+1269883408,108861,True,8,54,,Pedro,Saved,Low Centre
+1269883408,108861,True,9,56,,Giorgian de Arrascaeta,Post,
+1269883408,108861,True,10,56,,Giorgian de Arrascaeta,Missed,
+1269883408,108861,True,11,65,,Gonzalo Plata,Blocked,Low Centre
+1269883408,108861,True,12,66,,Léo Ortiz,Blocked,Low Centre
+1269883408,108861,True,13,69,,Gonzalo Plata,Blocked,Low Centre
+1269883408,108861,True,14,74,,Pedro,Missed,
+1269883408,108861,True,15,76,,Pedro,Saved,High Centre
+1269883408,108861,True,16,78,,Gonzalo Plata,Saved,Low Centre
+1269883408,108861,True,17,80,,Lucas Paquetá,Goal,High Left
+1269883408,108861,True,18,86,,Everton,Missed,
+1269883408,108861,True,19,89,,Lucas Paquetá,Saved,Low Centre
+1269883408,101202,False,0,4,,Luciano Juba,Missed,
+1269883408,101202,False,1,29,,Everton Ribeiro,Missed,
+1269883408,101202,False,2,29,,David Duarte,Blocked,Low Centre
+1269883408,101202,False,3,29,,Erick Pulga,Saved,Low Centre
+1269883408,101202,False,4,41,,Kike Olivera,Saved,High Centre
+1269883408,101202,False,5,45,1,Nicolás Acevedo,Missed,
+1269883408,101202,False,6,46,,Everaldo,Saved,Low Centre
+1269883408,101202,False,7,58,,Erick Pulga,Blocked,Low Centre
+1269883408,101202,False,8,63,,Jean Lucas,Post,
+1269883408,101202,False,9,67,,Nicolás Acevedo,Saved,Low Centre
+1269883408,101202,False,10,83,,Kike Olivera,Saved,Low Left
+1269883408,101202,False,11,84,,Michel Araújo,Missed,High Left
+1269883408,101202,False,12,90,,Mateo Sanabria,Missed,High Right
+1269889365,904546,False,0,2,,Tomas Cuello,Missed,CloseLeft
+1269889365,904546,False,1,10,,Tomas Cuello,Missed,
+1269889365,904546,False,2,12,,Tomas Cuello,Saved,Low Centre
+1269889365,904546,False,3,16,,Tomas Cuello,Blocked,Low Right
+1269889365,904546,False,4,29,,Natanael,Saved,Low Right
+1269889365,904546,False,5,30,,Tomas Cuello,Saved,High Centre
+1269889365,904546,False,6,45,4,Ruan Tressoldi,Saved,Low Left
+1269889365,904546,False,7,56,,Tomas Cuello,Blocked,Low Centre
+1269889365,904546,False,8,58,,Victor Hugo,Blocked,Low Centre
+1269889365,904546,False,9,65,,Alan Minda,Saved,Low Centre
+1269889365,904546,False,10,76,,Mateo Cassierra,Blocked,Low Centre
+1269889365,904546,False,11,76,,Gustavo Scarpa,Missed,Close High
+1269889365,904546,False,12,80,,Victor Hugo,Blocked,Low Centre
+1269889365,904546,False,13,80,,Dudu,Blocked,Low Centre
+1269889365,904546,False,14,81,,Gustavo Scarpa,Missed,CloseLeft
+1269889365,904546,False,15,90,1,Victor Hugo,Saved,Low Centre
+1269889365,904546,False,16,90,1,Gustavo Scarpa,Missed,
+1269889365,904546,False,17,90,3,Dudu,Blocked,Low Centre
+1269889365,108861,True,0,8,,Pedro,Goal,Low Right
+1269889365,108861,True,1,16,,Giorgian de Arrascaeta,Saved,Low Right
+1269889365,108861,True,2,31,,Gonzalo Plata,Goal,Low Left
+1269889365,108861,True,3,45,,Samuel Lino,Saved,High Centre
+1269889365,108861,True,4,45,,Leo Pereira,Blocked,Low Left
+1269889365,108861,True,5,45,,Jorginho,Blocked,Low Centre
+1269889365,108861,True,6,45,1,Giorgian de Arrascaeta,Goal,Low Left
+1269889365,108861,True,7,84,,Pedro,Goal,Low Centre
+1269889365,108861,True,8,90,3,Evertton Araujo,Post,
+1269900428,108861,True,0,8,,Pedro,Goal,High Left
+1269900428,108861,True,1,11,,Leo Pereira,Missed,
+1269900428,108861,True,2,18,,Luiz Araújo,Blocked,Low Centre
+1269900428,108861,True,3,26,,Pedro,Missed,
+1269900428,108861,True,4,31,,Luiz Araújo,Blocked,Low Left
+1269900428,108861,True,5,31,,Gonzalo Plata,Saved,Low Right
+1269900428,108861,True,6,53,,Gonzalo Plata,Blocked,Low Left
+1269900428,108861,True,7,60,,Jorginho,Goal,Low Left
+1269900428,108861,True,8,77,,Gonzalo Plata,Saved,High Left
+1269900428,108861,True,9,80,,Leo Pereira,Saved,High Right
+1269900428,108861,True,10,80,,Leo Pereira,Missed,High Right
+1269900428,108861,True,11,87,,Saúl Ñíguez,Blocked,Low Left
+1269900428,113967,False,0,3,,Thiago Mendes,Missed,CloseLeft
+1269900428,113967,False,1,6,,Puma Rodriguez,Missed,
+1269900428,113967,False,2,15,,Johan Rojas,Saved,Low Left
+1269900428,113967,False,3,20,,Paulo Henrique,Blocked,Low Centre
+1269900428,113967,False,4,25,,David,Missed,
+1269900428,113967,False,5,29,,Lucas Piton,Missed,
+1269900428,113967,False,6,30,,Brenner,Missed,High Left
+1269900428,113967,False,7,35,,Johan Rojas,Saved,Low Centre
+1269900428,113967,False,8,42,,Puma Rodriguez,Blocked,Low Centre
+1269900428,113967,False,9,47,,Johan Rojas,Missed,
+1269900428,113967,False,10,47,,Puma Rodriguez,Blocked,Low Right
+1269900428,113967,False,11,51,,Puma Rodriguez,Missed,High Left
+1269900428,113967,False,12,55,,Johan Rojas,Blocked,Low Centre
+1269900428,113967,False,13,62,,David,Missed,
+1269900428,113967,False,14,68,,Claudio Spinelli,Saved,Low Left
+1269900428,113967,False,15,84,,Robert Renan,Goal,Low Right
+1269900428,113967,False,16,86,,Puma Rodriguez,Saved,High Centre
+1269900428,113967,False,17,90,,Andrés Gómez,Missed,High Left
+1269900428,113967,False,18,90,3,Claudio Spinelli,Blocked,Low Centre
+1269900428,113967,False,19,90,7,Hugo Moura,Goal,Low Left
+1269909789,111414,False,0,12,,Caio Paulista,Missed,High Right
+1269909789,111414,False,1,35,,Erick Noriega,Blocked,Low Right
+1269909789,111414,False,2,36,,Gabriel Mec,Missed,
+1269909789,111414,False,3,45,4,Francis Amuzu,Saved,High Centre
+1269909789,111414,False,4,57,,Gabriel Mec,Blocked,Low Centre
+1269909789,111414,False,5,60,,Carlos Vinicius,Saved,Low Centre
+1269909789,108861,True,0,2,,Jorginho,Missed,
+1269909789,108861,True,1,5,,Gonzalo Plata,Post,
+1269909789,108861,True,2,6,,Ayrton Lucas,Missed,
+1269909789,108861,True,3,23,,Evertton Araujo,Missed,Close Right And High
+1269909789,108861,True,4,24,,Gonzalo Plata,Missed,
+1269909789,108861,True,5,24,,Evertton Araujo,Missed,
+1269909789,108861,True,6,25,,Jorge Carrascal,Blocked,Low Centre
+1269909789,108861,True,7,25,,Guillermo Varela,Blocked,Low Right
+1269909789,108861,True,8,25,,Samuel Lino,Saved,High Right
+1269909789,108861,True,9,43,,Pedro,Saved,Low Right
+1269909789,108861,True,10,44,,Evertton Araujo,Missed,
+1269909789,108861,True,11,54,,Samuel Lino,Saved,Low Centre
+1269909789,108861,True,12,55,,Samuel Lino,Blocked,Low Centre
+1269909789,108861,True,13,61,,Gonzalo Plata,Missed,
+1269909789,108861,True,14,63,,Gonzalo Plata,Blocked,Low Left
+1269909789,108861,True,15,68,,Jorge Carrascal,Goal,High Centre
+1269909789,108861,True,16,88,,Luiz Araújo,Missed,
+1269909789,108861,True,17,89,,Evertton Araujo,Blocked,Low Centre
+1269909789,108861,True,18,90,2,Bruno Henrique,Saved,Low Centre
+1269909789,108861,True,19,90,3,Nicolas De La Cruz,Missed,
+1269914044,114818,False,0,4,,Stiven  Mendoza,Blocked,Low Centre
+1269914044,114818,False,1,4,,Gastón Benavídez,Blocked,Low Right
+1269914044,114818,False,2,8,,Gastón Benavídez,Blocked,Low Left
+1269914044,114818,False,3,11,,Stiven  Mendoza,Goal,High Right
+1269914044,114818,False,4,21,,Kevin Viveros,Missed,CloseLeft
+1269914044,114818,False,5,28,,Arthur Dias,Missed,
+1269914044,114818,False,6,32,,Juan Aguirre,Blocked,Low Right
+1269914044,114818,False,7,46,,Kevin Viveros,Blocked,Low Centre
+1269914044,114818,False,8,46,,Gastón Benavídez,Saved,Low Centre
+1269914044,114818,False,9,46,,Stiven  Mendoza,Missed,
+1269914044,114818,False,10,48,,Stiven  Mendoza,Saved,Low Right
+1269914044,114818,False,11,79,,Kevin Viveros,Saved,Low Centre
+1269914044,114818,False,12,79,,Kevin Viveros,Saved,Low Centre
+1269914044,114818,False,13,79,,Kevin Viveros,Post,
+1269914044,114818,False,14,82,,Claudinho,Blocked,Low Left
+1269914044,114818,False,15,83,,Felipinho,Post,
+1269914044,114818,False,16,85,,Claudinho,Missed,
+1269914044,114818,False,17,90,4,Felipinho,Missed,
+1269914044,108861,True,0,10,,Lucas Paquetá,Missed,High Left
+1269914044,108861,True,1,16,,Pedro,Blocked,Low Centre
+1269914044,108861,True,2,16,,Samuel Lino,Saved,High Right
+1269914044,108861,True,3,33,,Lucas Paquetá,Blocked,Low Centre
+1269914044,108861,True,4,34,,Danilo,Missed,
+1269914044,108861,True,5,43,,Leo Pereira,Missed,
+1269914044,108861,True,6,51,,Jorge Carrascal,Saved,High Left
+1269914044,108861,True,7,58,,Pedro,Missed,
+1269914044,108861,True,8,60,,Everton,Blocked,Low Right
+1269914044,108861,True,9,84,,Pedro,Goal,Low Right
+1269914044,108861,True,10,86,,Leo Pereira,Missed,Close Right
+1269914044,108861,True,11,89,,Bruno Henrique,Blocked,Low Centre
+1269925107,108861,True,0,2,,Samuel Lino,Saved,High Left
+1269925107,108861,True,1,2,,Evertton Araujo,Missed,
+1269925107,108861,True,2,8,,Lucas Paquetá,Blocked,Low Right
+1269925107,108861,True,3,15,,Lucas Paquetá,Saved,Low Centre
+1269925107,108861,True,4,16,,Lucas Paquetá,Blocked,Low Centre
+1269925107,108861,True,5,16,,Alex Sandro,Blocked,Low Centre
+1269925107,108861,True,6,16,,Lucas Paquetá,Missed,High Right
+1269925107,108861,True,7,33,,Lucas Paquetá,Blocked,Low Centre
+1269925107,108861,True,8,34,,Lucas Paquetá,Missed,Close Right
+1269925107,108861,True,9,40,,Samuel Lino,Blocked,Low Centre
+1269925107,108861,True,10,43,,Samuel Lino,Blocked,Low Centre
+1269925107,108861,True,11,47,,Samuel Lino,Missed,
+1269925107,108861,True,12,50,,Leo Pereira,Blocked,Low Centre
+1269925107,108861,True,13,55,,Samuel Lino,Saved,High Centre
+1269925107,108861,True,14,56,,Bruno Henrique,Blocked,Low Centre
+1269925107,108861,True,15,56,,Lucas Paquetá,Missed,High Right
+1269925107,108861,True,16,62,,Leo Pereira,Missed,Close Right
+1269925107,108861,True,17,72,,Pedro,Missed,
+1269925107,108861,True,18,76,,Lucas Paquetá,Blocked,Low Centre
+1269925107,108861,True,19,80,,Lucas Paquetá,Missed,CloseLeft
+1269925107,108861,True,20,85,,Pedro,Blocked,Low Right
+1269925107,108861,True,21,90,,Gonzalo Plata,Missed,
+1269925107,103755,False,0,3,,Andreas Pereira,Missed,Close Right
+1269925107,103755,False,1,36,,Andreas Pereira,Blocked,Low Centre
+1269925107,103755,False,2,38,,Jose Manuel Lopez,Goal,Low Left
+1269925107,103755,False,3,44,,Agustín Giay,Blocked,Low Centre
+1269925107,103755,False,4,45,2,Marlon Freitas,Missed,
+1269925107,103755,False,5,48,,Jhon Arias,Missed,CloseLeft
+1269925107,103755,False,6,57,,Jhon Arias,Blocked,Low Left
+1269925107,103755,False,7,57,,Allan Ellias,Goal,High Left
+1269925107,103755,False,8,63,,Jose Manuel Lopez,Saved,High Centre
+1269925107,103755,False,9,77,,Agustín Giay,Saved,Low Centre
+1269925107,103755,False,10,83,,Mauricio,Saved,Low Left
+1269925107,103755,False,11,90,5,Paulinho,Goal,Low Left
+1269934468,108861,True,0,11,,Samuel Lino,Goal,Low Left
+1269934468,108861,True,1,13,,Luiz Araújo,Missed,High Left
+1269934468,108861,True,2,20,,Ayrton Lucas,Missed,CloseLeft
+1269934468,108861,True,3,21,,Pedro,Saved,Low Right
+1269934468,108861,True,4,24,,Samuel Lino,Saved,Low Left
+1269934468,108861,True,5,25,,Pedro,Saved,Low Centre
+1269934468,108861,True,6,25,,Bruno Henrique,Blocked,Low Centre
+1269934468,108861,True,7,26,,Luiz Araújo,Saved,Low Left
+1269934468,108861,True,8,45,,Pedro,Missed,
+1269934468,108861,True,9,45,3,Bruno Henrique,Missed,
+1269934468,108861,True,10,45,6,Erick Pulgar,Missed,
+1269934468,108861,True,11,45,6,Emerson Royal,Saved,Low Centre
+1269934468,108861,True,12,51,,Pedro,Saved,Low Right
+1269934468,108861,True,13,52,,Samuel Lino,Missed,Close High
+1269934468,108861,True,14,60,,Pedro,Goal,Low Centre
+1269934468,108861,True,15,62,,Bruno Henrique,Missed,
+1269934468,108861,True,16,70,,Samuel Lino,Goal,Low Right
+1269934468,108861,True,17,79,,Evertton Araujo,Blocked,High Centre
+1269934468,108861,True,18,82,,Luiz Araújo,Missed,CloseLeft
+1269934468,108861,True,19,84,,Saúl Ñíguez,Blocked,Low Right
+1269934468,108861,True,20,87,,Everton,Missed,Close High
+1269934468,125881,False,0,8,,João Pedro Chermont,Missed,
+1269934468,125881,False,1,8,,Sebastián Gómez,Missed,
+1269934468,125881,False,2,10,,Jacy,Missed,
+1269934468,125881,False,3,17,,Sebastián Gómez,Missed,
+1269934468,125881,False,4,42,,Jacy,Missed,
+1269934468,125881,False,5,58,,Thiago Santos,Blocked,Low Right
+1269934468,125881,False,6,59,,Thiago Santos,Saved,High Right
+1269934468,125881,False,7,68,,Gustavo Oliveira,Missed,
+1269934468,125881,False,8,68,,Felipe Jonatan,Missed,
+1269934468,125881,False,9,82,,Breno Lopes,Saved,Low Right
+1269941276,113116,False,0,4,,Yannick Bolasie,Missed,
+1269941276,113116,False,1,18,,Giovanni Augusto,Saved,Low Left
+1269941276,113116,False,2,38,,Rafael Thyere,Goal,High Right
+1269941276,113116,False,3,42,,Yannick Bolasie,Blocked,Low Centre
+1269941276,113116,False,4,44,,Eduardo Doma,Missed,
+1269941276,113116,False,5,66,,Bruno Matias,Missed,Close Right
+1269941276,113116,False,6,66,,Bruno Matias,Missed,High Right
+1269941276,113116,False,7,67,,Giovanni Augusto,Saved,Low Right
+1269941276,113116,False,8,67,,Bruno Pacheco,Blocked,Low Centre
+1269941276,113116,False,9,70,,Neto Pessoa,Missed,
+1269941276,113116,False,10,79,,Marcinho,Saved,Low Centre
+1269941276,113116,False,11,79,,Bruno Matias,Missed,High Right
+1269941276,113116,False,12,90,2,Ênio,Missed,
+1269941276,113116,False,13,90,3,Neto Pessoa,Missed,
+1269941276,108861,True,0,8,,Ayrton Lucas,Missed,
+1269941276,108861,True,1,19,,Pedro,Missed,
+1269941276,108861,True,2,26,,Pedro,Goal,Low Right
+1269941276,108861,True,3,48,,Lorran,Saved,Low Centre
+1269941276,108861,True,4,48,,Lorran,Goal,Low Centre
+1269941276,108861,True,5,85,,Pedro,Saved,Low Centre
+1269941276,108861,True,6,86,,Samuel Lino,Saved,High Right
+1269941276,108861,True,7,86,,Samuel Lino,Blocked,Low Centre
+1269941276,108861,True,8,86,,Pedro,Goal,Low Centre
+1269941276,108861,True,9,90,3,Pedro,Missed,High Right
+1269951488,108861,True,0,9,,Samuel Lino,Missed,
+1269951488,108861,True,1,11,,Lorran,Saved,Low Centre
+1269951488,108861,True,2,19,,Erick Pulgar,Post,
+1269951488,108861,True,3,34,,Lorran,Saved,Low Centre
+1269951488,108861,True,4,49,,Vitão,Missed,
+1269951488,108861,True,5,56,,Bruno Henrique,Saved,High Right
+1269951488,108861,True,6,57,,Jorginho,Missed,
+1269951488,108861,True,7,57,,Leo Pereira,Goal,Low Centre
+1269951488,108861,True,8,63,,Pedro,Missed,
+1269951488,108861,True,9,68,,Giorgian de Arrascaeta,Saved,Low Right
+1269951488,108861,True,10,70,,Erick Pulgar,Missed,
+1269951488,108861,True,11,74,,Samuel Lino,Missed,High Left
+1269951488,108861,True,12,82,,Emerson Royal,Saved,High Centre
+1269951488,108861,True,13,87,,Pedro,Missed,
+1269951488,108861,True,14,87,,Vitão,Missed,
+1269951488,108861,True,15,89,,Giorgian de Arrascaeta,Missed,
+1269951488,108861,True,16,90,7,Samuel Lino,Missed,
+1269951488,108861,True,17,90,9,Samuel Lino,Missed,
+1269951488,108010,False,0,5,,Wendell,Missed,
+1269951488,108010,False,1,24,,Artur,Missed,Close Right
+1269951488,108010,False,2,70,,Jonathan Calleri,Goal,Low Left
+1269951488,108010,False,3,73,,Ferreira,Blocked,Low Centre
+1269961700,102053,False,0,2,,Johan Carbonero,Missed,High Right
+1269961700,102053,False,1,4,,Alan Patrick,Blocked,Low Centre
+1269961700,102053,False,2,6,,Bruno Henrique,Missed,High Right
+1269961700,102053,False,3,25,,Vitinho,Blocked,Low Left
+1269961700,102053,False,4,25,,Alan Patrick,Missed,High Left
+1269961700,102053,False,5,27,,Johan Carbonero,Saved,Low Centre
+1269961700,102053,False,6,27,,Vitinho,Goal,High Centre
+1269961700,102053,False,7,30,,Johan Carbonero,Missed,Close Right
+1269961700,102053,False,8,41,,Johan Carbonero,Missed,
+1269961700,102053,False,9,66,,Guillermo Maripán,Blocked,Low Left
+1269961700,102053,False,10,66,,Bruno Henrique,Blocked,Low Centre
+1269961700,102053,False,11,66,,Johan Carbonero,Missed,CloseLeft
+1269961700,102053,False,12,66,,Guillermo Maripán,Saved,Low Centre
+1269961700,102053,False,13,73,,Alexandro Bernabei,Missed,Close Right
+1269961700,102053,False,14,76,,Paulinho Paula,Saved,Low Right
+1269961700,102053,False,15,77,,Alexandro Bernabei,Saved,Low Left
+1269961700,108861,True,0,7,,Jorge Carrascal,Saved,Low Centre
+1269961700,108861,True,1,9,,Samuel Lino,Saved,Low Centre
+1269961700,108861,True,2,12,,Giorgian de Arrascaeta,Missed,High Right
+1269961700,108861,True,3,29,,Pedro,Blocked,Low Left
+1269961700,108861,True,4,34,,Samuel Lino,Blocked,Low Centre
+1269961700,108861,True,5,45,3,Evertton Araujo,Missed,
+1269961700,108861,True,6,53,,Erick Pulgar,Missed,
+1269961700,108861,True,7,60,,Vitão,Blocked,Low Centre
+1269961700,108861,True,8,62,,Pedro,Saved,High Centre
+1269961700,108861,True,9,70,,Samuel Lino,Missed,
+1269961700,108861,True,10,79,,Pedro,Saved,Low Centre
+1269961700,108861,True,11,79,,Samuel Lino,Goal,High Left
+1269961700,108861,True,12,86,,Samuel Lino,Blocked,Low Centre
+1269961700,108861,True,13,86,,Giorgian de Arrascaeta,Blocked,Low Centre
+1269969359,108861,True,0,1,,Jorge Carrascal,Saved,Low Centre
+1269969359,108861,True,1,4,,Samuel Lino,Blocked,Low Right
+1269969359,108861,True,2,4,,Erick Pulgar,Blocked,Low Centre
+1269969359,108861,True,3,8,,Pedro,Blocked,Low Centre
+1269969359,108861,True,4,14,,Erick Pulgar,Goal,High Left
+1269969359,108861,True,5,17,,Leo Pereira,Saved,High Right
+1269969359,108861,True,6,20,,Samuel Lino,Blocked,Low Centre
+1269969359,108861,True,7,20,,Ayrton Lucas,Blocked,Low Centre
+1269969359,108861,True,8,28,,Samuel Lino,Blocked,Low Centre
+1269969359,108861,True,9,34,,Léo Ortiz,Missed,Close High
+1269969359,108861,True,10,37,,Jorge Carrascal,Missed,
+1269969359,108861,True,11,40,,Samuel Lino,Missed,
+1269969359,108861,True,12,53,,Giorgian de Arrascaeta,Saved,High Centre
+1269969359,108861,True,13,59,,Guillermo Varela,Blocked,Low Centre
+1269969359,108861,True,14,70,,Lucas Paquetá,Blocked,Low Centre
+1269969359,108861,True,15,73,,Samuel Lino,Post,
+1269969359,108861,True,16,79,,Lucas Paquetá,Saved,High Centre
+1269969359,108861,True,17,80,,Bruno Henrique,Goal,High Right
+1269969359,108861,True,18,85,,Evertton Araujo,Missed,CloseLeft
+1269969359,108861,True,19,90,4,Gonzalo Plata,Blocked,Low Centre
+1269969359,116520,False,0,26,,Erick,Missed,
+1269969359,116520,False,1,32,,Emmanuel Martínez,Saved,Low Centre
+1269969359,116520,False,2,61,,Diego Tarzia,Blocked,Low Right
+1269969359,116520,False,3,68,,Renê,Missed,
+1269969359,116520,False,4,71,,Fabiano,Missed,
+1269969359,116520,False,5,89,,Marinho,Blocked,Low Centre
+1269969359,116520,False,6,90,2,Jamerson,Missed,Close Right
+1269978720,6679432,False,0,6,,Bruno Santos,Saved,High Centre
+1269978720,6679432,False,1,8,,Edson Carioca,Blocked,Low Centre
+1269978720,6679432,False,2,14,,Fernandinho,Missed,High Right
+1269978720,6679432,False,3,25,,Wallisson,Missed,High Left
+1269978720,6679432,False,4,39,,Bruno Santos,Saved,Low Right
+1269978720,6679432,False,5,45,3,Willian Machado,Blocked,Low Right
+1269978720,6679432,False,6,58,,Eduardo,Saved,High Centre
+1269978720,6679432,False,7,59,,Bruno Santos,Missed,
+1269978720,6679432,False,8,60,,Eduardo,Post,
+1269978720,6679432,False,9,70,,Reinaldo,Missed,
+1269978720,6679432,False,10,71,,Eduardo,Missed,
+1269978720,6679432,False,11,77,,Gustavo Silva,Blocked,Low Centre
+1269978720,6679432,False,12,77,,João Victor,Goal,High Centre
+1269978720,6679432,False,13,78,,Japa,Blocked,Low Left
+1269978720,6679432,False,14,81,,Japa,Missed,
+1269978720,6679432,False,15,89,,Japa,Missed,High Left
+1269978720,108861,True,0,1,,Jorge Carrascal,Saved,High Centre
+1269978720,108861,True,1,1,,Gonzalo Plata,Missed,Close High
+1269978720,108861,True,2,9,,Pedro,Blocked,Low Centre
+1269978720,108861,True,3,16,,Ayrton Lucas,Blocked,Low Centre
+1269978720,108861,True,4,22,,Jorge Carrascal,Goal,Low Centre
+1269978720,108861,True,5,31,,Jorge Carrascal,Saved,Low Centre
+1269978720,108861,True,6,35,,Gonzalo Plata,Blocked,Low Left
+1269978720,108861,True,7,37,,Pedro,Saved,Low Centre
+1269978720,108861,True,8,45,1,Lucas Paquetá,Blocked,Low Centre
+1269978720,108861,True,9,48,,Luiz Araújo,Blocked,Low Centre
+1269978720,108861,True,10,48,,Lucas Paquetá,Missed,
+1269978720,108861,True,11,53,,Luiz Araújo,Goal,Low Right
+1269978720,108861,True,12,56,,Pedro,Goal,High Centre
+1269978720,108861,True,13,66,,Pedro,Goal,Low Left
+1269978720,108861,True,14,74,,Samuel Lino,Goal,High Left
+1269985528,115669,False,0,5,,Keny Arroyo,Missed,Close Right And High
+1269985528,115669,False,1,9,,Kaio Jorge,Blocked,Low Centre
+1269985528,115669,False,2,9,,Lucas Villalba,Blocked,Low Left
+1269985528,115669,False,3,24,,João Costa,Blocked,Low Centre
+1269985528,115669,False,4,30,,João Costa,Missed,Close Right
+1269985528,115669,False,5,38,,Matheus Pereira,Blocked,Low Left
+1269985528,115669,False,6,45,1,Matheus Henrique,Missed,
+1269985528,115669,False,7,53,,Lucas Romero,Missed,High Left
+1269985528,115669,False,8,55,,Keny Arroyo,Goal,High Left
+1269985528,115669,False,9,58,,Keny Arroyo,Saved,High Centre
+1269985528,115669,False,10,62,,Matheus Henrique,Missed,
+1269985528,115669,False,11,68,,Lucas Villalba,Saved,Low Centre
+1269985528,115669,False,12,71,,Wesley Gassova,Missed,Close Right And High
+1269985528,115669,False,13,77,,João Marcelo,Missed,Close Right
+1269985528,115669,False,14,79,,Fágner,Missed,
+1269985528,115669,False,15,81,,Gerson,Blocked,Low Centre
+1269985528,115669,False,16,86,,Matheus Pereira,Blocked,Low Centre
+1269985528,115669,False,17,88,,Fágner,Blocked,Low Centre
+1269985528,115669,False,18,89,,Fágner,Missed,
+1269985528,115669,False,19,90,1,Wesley Gassova,Saved,Low Left
+1269985528,115669,False,20,90,2,Matheus Pereira,Missed,High Left
+1269985528,115669,False,21,90,4,João Marcelo,Missed,
+1269985528,115669,False,22,90,5,Fágner,Saved,Low Centre
+1269985528,115669,False,23,90,5,Matheus Pereira,Goal,Low Centre
+1269985528,108861,True,0,3,,Jorge Carrascal,Missed,
+1269985528,108861,True,1,7,,Jorge Carrascal,Blocked,Low Right
+1269985528,108861,True,2,18,,Pedro,Missed,CloseLeft
+1269985528,108861,True,3,22,,Ayrton Lucas,Blocked,Low Left
+1269985528,108861,True,4,22,,Pedro,Goal,Low Right
+1269985528,108861,True,5,33,,Léo Ortiz,Missed,Close Right
+1269985528,108861,True,6,49,,Giorgian de Arrascaeta,Missed,High Right
+1269985528,108861,True,7,58,,Pedro,Saved,Low Centre
+1269985528,108861,True,8,73,,Evertton Araujo,Blocked,Low Right
+1269985528,108861,True,9,74,,Ayrton Lucas,Saved,Low Centre
+1269985528,108861,True,10,85,,Jorginho,Missed,High Right
+1269985528,108861,True,11,90,,Bruno Henrique,Blocked,Low Centre
+1269985528,108861,True,12,90,1,Bruno Henrique,Blocked,Low Left
+1269985528,108861,True,13,90,3,Jorge Carrascal,Missed,Close Right
+1269994038,108861,True,0,4,,Samuel Lino,Blocked,Low Centre
+1269994038,108861,True,1,13,,Samuel Lino,Goal,Low Centre
+1269994038,108861,True,2,25,,Samuel Lino,Blocked,Low Left
+1269994038,108861,True,3,25,,Ayrton Lucas,Missed,
+1269994038,108861,True,4,26,,Léo Ortiz,Blocked,Low Centre
+1269994038,108861,True,5,27,,Ayrton Lucas,Missed,
+1269994038,108861,True,6,30,,Samuel Lino,Blocked,Low Centre
+1269994038,108861,True,7,30,,Ayrton Lucas,Saved,Low Centre
+1269994038,108861,True,8,33,,Giorgian de Arrascaeta,Missed,
+1269994038,108861,True,9,38,,Giorgian de Arrascaeta,Missed,
+1269994038,108861,True,10,40,,Giorgian de Arrascaeta,Missed,
+1269994038,108861,True,11,43,,Luiz Araújo,Blocked,Low Centre
+1269994038,108861,True,12,47,,Leo Pereira,Missed,
+1269994038,108861,True,13,49,,Pedro,Blocked,Low Right
+1269994038,108861,True,14,64,,Giorgian de Arrascaeta,Saved,Low Centre
+1269994038,108861,True,15,78,,Lucas Paquetá,Saved,Low Centre
+1269994038,108861,True,16,86,,Samuel Lino,Goal,Low Right
+1269994038,108861,True,17,90,,Jorge Carrascal,Goal,Low Right
+1269994038,102904,False,0,4,,Danilo Santos,Saved,Low Left
+1269994038,102904,False,1,21,,Arthur Cabral,Blocked,Low Centre
+1269994038,102904,False,2,24,,Arthur Cabral,Saved,Low Right
+1269994038,102904,False,3,45,2,Arthur Cabral,Missed,High Left
+1269994038,102904,False,4,51,,Arthur Cabral,Blocked,Low Centre
+1269994038,102904,False,5,53,,Vitinho,Missed,
+1269994038,102904,False,6,55,,Danilo Santos,Blocked,Low Left
+1269994038,102904,False,7,58,,Nahuel Ferraresi,Blocked,Low Centre
+1269994038,102904,False,8,61,,Arthur Cabral,Missed,
+1269994038,102904,False,9,62,,Danilo Santos,Missed,Close Right
+1269994038,102904,False,10,74,,Huguinho,Missed,
+1269994038,102904,False,11,76,,Arthur Cabral,Saved,Low Centre
+1269994038,102904,False,12,80,,Huguinho,Blocked,Low Centre
+1269994038,102904,False,13,81,,Danilo Pereira,Saved,Low Centre
+1270005101,1020282,False,0,11,,Antonio Galeano,Missed,
+1270005101,1020282,False,1,27,,Gabriel Taliari,Blocked,Low Centre
+1270005101,1020282,False,2,45,,Gabriel Taliari,Saved,Low Right
+1270005101,1020282,False,3,54,,Leonel Picco,Missed,
+1270005101,1020282,False,4,68,,Gabriel Taliari,Blocked,Low Centre
+1270005101,1020282,False,5,78,,Jajá,Blocked,Low Centre
+1270005101,1020282,False,6,85,,Alef Manga,Missed,
+1270005101,108861,True,0,2,,Giorgian de Arrascaeta,Missed,Close Right
+1270005101,108861,True,1,5,,Jorge Carrascal,Missed,
+1270005101,108861,True,2,18,,Pedro,Saved,Low Left
+1270005101,108861,True,3,21,,Pedro,Missed,High Left
+1270005101,108861,True,4,28,,Samuel Lino,Saved,Low Centre
+1270005101,108861,True,5,28,,Giorgian de Arrascaeta,Blocked,Low Centre
+1270005101,108861,True,6,30,,Pedro,Missed,
+1270005101,108861,True,7,30,,Lucas Paquetá,Missed,
+1270005101,108861,True,8,34,,Pedro,Missed,High Right
+1270005101,108861,True,9,39,,Jorge Carrascal,Blocked,Low Centre
+1270005101,108861,True,10,49,,Samuel Lino,Post,
+1270005101,108861,True,11,51,,Pedro,Saved,High Centre
+1270005101,108861,True,12,56,,Pedro,Saved,Low Centre
+1270005101,108861,True,13,56,,Ayrton Lucas,Blocked,Low Right
+1270005101,108861,True,14,57,,Jorginho,Blocked,Low Centre
+1270005101,108861,True,15,59,,Léo Ortiz,Missed,High Left
+1270005101,108861,True,16,65,,Samuel Lino,Goal,Low Right
+1270005101,108861,True,17,74,,Giorgian de Arrascaeta,Blocked,Low Centre
+1270005101,108861,True,18,74,,Samuel Lino,Blocked,Low Left
+1270005101,108861,True,19,79,,Lucas Paquetá,Missed,CloseLeft
+1270005101,108861,True,20,84,,Leo Pereira,Missed,
+1270011909,108861,True,0,8,,Gonzalo Plata,Saved,Low Centre
+1270011909,108861,True,1,10,,Gonzalo Plata,Missed,
+1270011909,108861,True,2,10,,Lucas Paquetá,Blocked,Low Centre
+1270011909,108861,True,3,15,,Erick Pulgar,Blocked,Low Centre
+1270011909,108861,True,4,22,,Pedro,Saved,Low Centre
+1270011909,108861,True,5,22,,Ayrton Lucas,Blocked,Low Right
+1270011909,108861,True,6,29,,Erick Pulgar,Blocked,Low Left
+1270011909,108861,True,7,30,,Pedro,Saved,Low Centre
+1270011909,108861,True,8,30,,Giorgian de Arrascaeta,Blocked,Low Right
+1270011909,108861,True,9,31,,Erick Pulgar,Blocked,Low Left
+1270011909,108861,True,10,31,,Lucas Paquetá,Blocked,Low Centre
+1270011909,108861,True,11,32,,Samuel Lino,Saved,Low Right
+1270011909,108861,True,12,33,,Giorgian de Arrascaeta,Missed,High Left
+1270011909,108861,True,13,35,,Samuel Lino,Missed,High Right
+1270011909,108861,True,14,37,,Samuel Lino,Saved,Low Centre
+1270011909,108861,True,15,39,,Giorgian de Arrascaeta,Missed,
+1270011909,108861,True,16,44,,Danilo,Blocked,Low Left
+1270011909,108861,True,17,45,,Guillermo Varela,Missed,High Left
+1270011909,108861,True,18,48,,Lucas Paquetá,Goal,High Right
+1270011909,108861,True,19,58,,Samuel Lino,Missed,
+1270011909,108861,True,20,60,,Giorgian de Arrascaeta,Blocked,Low Centre
+1270011909,108861,True,21,61,,Ayrton Lucas,Missed,
+1270011909,108861,True,22,64,,Gonzalo Plata,Blocked,Low Right
+1270011909,108861,True,23,66,,Samuel Lino,Missed,
+1270011909,108861,True,24,70,,Ayrton Lucas,Blocked,Low Left
+1270011909,108861,True,25,80,,Bruno Henrique,Saved,Low Left
+1270011909,108861,True,26,81,,Lucas Paquetá,Saved,Low Left
+1270011909,108861,True,27,82,,Bruno Henrique,Missed,
+1270011909,108861,True,28,84,,Bruno Henrique,Missed,Close Right
+1270011909,108861,True,29,88,,Samuel Lino,Blocked,Low Centre
+1270011909,108861,True,30,88,,Jorginho,Blocked,Low Centre
+1270011909,108861,True,31,89,,Bruno Henrique,Goal,High Left
+1270011909,112265,False,0,70,,Matheus Pereira,Blocked,Low Centre
+1270011909,112265,False,1,71,,Jesse Lingard,Missed,
+1270011909,112265,False,2,78,,Gui Negão,Goal,Low Centre
+1270018717,108861,True,0,10,,Giorgian de Arrascaeta,Post,
+1270018717,108861,True,1,10,,Gonzalo Plata,Saved,Low Centre
+1270018717,108861,True,2,13,,Guillermo Varela,Goal,Low Right
+1270018717,108861,True,3,17,,Jorginho,Blocked,Low Centre
+1270018717,108861,True,4,28,,Jorge Carrascal,Saved,Low Right
+1270018717,108861,True,5,29,,Jorge Carrascal,Saved,Low Centre
+1270018717,108861,True,6,40,,Giorgian de Arrascaeta,Missed,Close Right
+1270018717,108861,True,7,45,3,Jorge Carrascal,Missed,
+1270018717,108861,True,8,53,,Jorge Carrascal,Saved,Low Right
+1270018717,108861,True,9,53,,Giorgian de Arrascaeta,Missed,Close Right
+1270018717,108861,True,10,71,,Pedro,Goal,Low Left
+1270018717,108861,True,11,86,,Bruno Henrique,Goal,Low Right
+1270018717,676478,False,0,3,,Rodriguinho,Blocked,Low Centre
+1270018717,676478,False,1,3,,Rodriguinho,Blocked,Low Centre
+1270018717,676478,False,2,36,,Agustín Sant'Anna,Saved,Low Centre
+1270018717,676478,False,3,37,,Gustavo Marques,Saved,Low Centre
+1270018717,676478,False,4,45,1,Lucas Barbosa,Post,
+1270018717,676478,False,5,46,,Fernando,Missed,
+1270018717,676478,False,6,52,,Agustín Sant'Anna,Blocked,Low Centre
+1270018717,676478,False,7,52,,Vanderlan,Blocked,Low Centre
+1270018717,676478,False,8,79,,Agustín Sant'Anna,Saved,High Centre
+1270018717,676478,False,9,84,,Agustín Sant'Anna,Blocked,Low Centre
+1270018717,676478,False,10,85,,José Herrera,Saved,Low Right
+1270018717,676478,False,11,86,,Henry Mosquera,Saved,Low Left
+1270018717,676478,False,12,90,3,Fernando,Missed,
+1270018717,676478,False,13,90,3,Lucas Barbosa,Missed,
+1270018717,676478,False,14,90,7,Fernando,Missed,
+1270031482,109712,False,0,10,,Álvaro Barreal,Saved,Low Centre
+1270031482,109712,False,1,13,,Gabriel Barbosa,Missed,
+1270031482,109712,False,2,24,,Gabriel Barbosa,Blocked,Low Centre
+1270031482,109712,False,3,24,,Gabriel Bontempo,Missed,
+1270031482,109712,False,4,28,,Gabriel Barbosa,Missed,
+1270031482,109712,False,5,32,,Philippe Coutinho,Missed,
+1270031482,109712,False,6,54,,Rony,Missed,High Right
+1270031482,109712,False,7,69,,Gabriel Barbosa,Blocked,Low Centre
+1270031482,109712,False,8,72,,Gabriel Bontempo,Post,
+1270031482,109712,False,9,72,,Gabriel Barbosa,Saved,Low Right
+1270031482,109712,False,10,82,,Neymar,Goal,Low Left
+1270031482,109712,False,11,88,,Neymar,Goal,Low Left
+1270031482,109712,False,12,90,5,Rony,Missed,
+1270031482,109712,False,13,90,8,Rodinei,Missed,
+1270031482,109712,False,14,90,10,Gabriel Bontempo,Missed,CloseLeft
+1270031482,109712,False,15,90,11,Gabriel Barbosa,Missed,
+1270031482,108861,True,0,8,,Pedro,Blocked,Low Centre
+1270031482,108861,True,1,9,,Samuel Lino,Blocked,Low Left
+1270031482,108861,True,2,11,,Lucas Paquetá,Missed,High Left
+1270031482,108861,True,3,14,,Samuel Lino,Missed,High Right
+1270031482,108861,True,4,36,,Danilo,Blocked,Low Left
+1270031482,108861,True,5,36,,Pedro,Saved,High Right
+1270031482,108861,True,6,43,,Danilo,Goal,Low Left
+1270031482,108861,True,7,45,3,Lucas Paquetá,Saved,Low Left
+1270031482,108861,True,8,45,3,Samuel Lino,Blocked,Low Left
+1270031482,108861,True,9,45,4,Lucas Paquetá,Goal,Low Left
+1270031482,108861,True,10,47,,Lucas Paquetá,Missed,Close Left And High
+1270031482,108861,True,11,67,,Samuel Lino,Saved,Low Right
+1270037439,108861,True,0,1,,Samuel Lino,Saved,Low Centre
+1270037439,108861,True,1,2,,Erick Pulgar,Missed,
+1270037439,108861,True,2,7,,Lucas Paquetá,Blocked,Low Centre
+1270037439,108861,True,3,9,,Saúl Ñíguez,Missed,
+1270037439,108861,True,4,11,,Lucas Paquetá,Saved,Low Centre
+1270037439,108861,True,5,18,,Léo Ortiz,Saved,Low Centre
+1270037439,108861,True,6,27,,Samuel Lino,Blocked,Low Centre
+1270037439,108861,True,7,37,,Pedro,Missed,CloseLeft
+1270037439,108861,True,8,38,,Jorge Carrascal,Missed,
+1270037439,108861,True,9,45,3,Lucas Paquetá,Saved,Low Centre
+1270037439,108861,True,10,48,,Samuel Lino,Saved,Low Left
+1270037439,108861,True,11,52,,Erick Pulgar,Missed,High Right
+1270037439,108861,True,12,54,,Pedro,Missed,
+1270037439,108861,True,13,65,,Jorge Carrascal,Goal,Low Centre
+1270037439,108861,True,14,78,,Joaquín Freitas,Missed,
+1270037439,108861,True,15,84,,Nicolas De La Cruz,Blocked,Low Centre
+1270037439,108861,True,16,90,8,Leo Pereira,Blocked,Low Centre
+1270037439,106308,False,0,14,,Matheus Martinelli,Missed,
+1270037439,106308,False,1,26,,Rodrigo Castillo,Saved,High Left
+1270037439,106308,False,2,44,,Matheus Martinelli,Blocked,Low Centre
+1270037439,106308,False,3,45,6,Rodrigo Castillo,Missed,High Right
+1270037439,106308,False,4,46,,Guilherme Arana,Blocked,Low Centre
+1270037439,106308,False,5,56,,Rodrigo Castillo,Blocked,Low Centre
+1270037439,106308,False,6,56,,Rodrigo Castillo,Blocked,Low Left
+1270037439,106308,False,7,62,,Matheus Martinelli,Saved,Low Left
+1270037439,106308,False,8,82,,Hulk,Missed,
+1270037439,106308,False,9,90,,Ignácio,Saved,High Left
+1270037439,106308,False,10,90,2,Kevin Serna,Saved,Low Centre
+1270037439,106308,False,11,90,6,Hulk,Missed,High Right
+1306487471,8521847,False,0,23,,Nicolas Silva,Saved,High Centre
+1306487471,8521847,False,1,45,,Facundo Callejo,Blocked,Low Centre
+1306487471,8521847,False,2,45,3,Facundo Callejo,Blocked,Low Centre
+1306487471,8521847,False,3,46,,Facundo Callejo,Missed,Close High
+1306487471,8521847,False,4,57,,Facundo Callejo,Blocked,Low Centre
+1306487471,8521847,False,5,82,,Juan Manuel Tévez,Blocked,Low Left
+1306487471,8521847,False,6,90,5,Iván Colman,Blocked,Low Left
+1306487471,8521847,False,7,90,5,Facundo Callejo,Saved,Low Centre
+1306487471,108861,True,0,5,,Gonzalo Plata,Saved,High Left
+1306487471,108861,True,1,9,,Lucas Paquetá,Missed,CloseLeft
+1306487471,108861,True,2,18,,Lucas Paquetá,Blocked,Low Centre
+1306487471,108861,True,3,27,,Bruno Henrique,Saved,Low Left
+1306487471,108861,True,4,31,,Lucas Paquetá,Missed,
+1306487471,108861,True,5,35,,Lucas Paquetá,Saved,Low Right
+1306487471,108861,True,6,36,,Bruno Henrique,Missed,High Left
+1306487471,108861,True,7,38,,Lucas Paquetá,Saved,Low Left
+1306487471,108861,True,8,48,,Ayrton Lucas,Blocked,Low Centre
+1306487471,108861,True,9,59,,Bruno Henrique,Goal,Low Left
+1306487471,108861,True,10,76,,Nicolas De La Cruz,Blocked,Low Centre
+1306487471,108861,True,11,81,,Gonzalo Plata,Blocked,Low Left
+1306487471,108861,True,12,81,,Nicolas De La Cruz,Saved,Low Left
+1306487471,108861,True,13,82,,Gonzalo Plata,Blocked,Low Centre
+1306487471,108861,True,14,84,,Luiz Araújo,Missed,
+1306487471,108861,True,15,90,2,Luiz Araújo,Saved,High Centre
+1306487471,108861,True,16,90,2,Giorgian de Arrascaeta,Blocked,Low Centre
+1306487471,108861,True,17,90,2,Giorgian de Arrascaeta,Goal,Low Centre
+1306487471,108861,True,18,90,4,Giorgian de Arrascaeta,Saved,Low Left
+1306503640,108861,True,0,3,,Jorge Carrascal,Missed,Close Right
+1306503640,108861,True,1,15,,Lucas Paquetá,Goal,Low Right
+1306503640,108861,True,2,17,,Giorgian de Arrascaeta,Missed,Close High
+1306503640,108861,True,3,18,,Samuel Lino,Missed,
+1306503640,108861,True,4,31,,Ayrton Lucas,Saved,High Left
+1306503640,108861,True,5,37,,Giorgian de Arrascaeta,Saved,High Right
+1306503640,108861,True,6,38,,Danilo,Missed,
+1306503640,108861,True,7,38,,Giorgian de Arrascaeta,Post,
+1306503640,108861,True,8,42,,Evertton Araujo,Blocked,Low Centre
+1306503640,108861,True,9,45,,Bruno Henrique,Goal,High Centre
+1306503640,108861,True,10,45,6,Jorge Carrascal,Saved,Low Right
+1306503640,108861,True,11,49,,Giorgian de Arrascaeta,Goal,Low Centre
+1306503640,108861,True,12,59,,Evertton Araujo,Missed,
+1306503640,108861,True,13,61,,Samuel Lino,Blocked,Low Centre
+1306503640,108861,True,14,72,,Bruno Henrique,Saved,Low Right
+1306503640,108861,True,15,80,,Gonzalo Plata,Blocked,Low Centre
+1306503640,108861,True,16,80,,Pedro,Blocked,Low Centre
+1306503640,108861,True,17,82,,Jorge Carrascal,Saved,Low Centre
+1306503640,108861,True,18,84,,Leo Pereira,Blocked,Low Centre
+1306503640,108861,True,19,84,,Wallace Yan,Blocked,Low Centre
+1306503640,108861,True,20,84,,Ayrton Lucas,Missed,High Left
+1306503640,108861,True,21,90,1,Luiz Araújo,Missed,CloseLeft
+1306503640,108861,True,22,90,2,Luiz Araújo,Saved,Low Left
+1306503640,108861,True,23,90,6,Pedro,Goal,Low Right
+1306503640,960712,False,0,17,,Francisco Chaverra,Missed,High Left
+1306503640,960712,False,1,40,,Yony González,Goal,Low Right
+1306503640,960712,False,2,44,,Francisco Chaverra,Missed,High Left
+1306503640,960712,False,3,45,5,Francisco Fydriszewski,Post,
+1306503640,960712,False,4,45,5,Yony González,Missed,CloseLeft
+1306503640,960712,False,5,45,7,Daniel Londoño,Missed,High Left
+1306503640,960712,False,6,56,,Baldomero Perlaza,Missed,
+1306503640,960712,False,7,57,,Francisco Chaverra,Missed,CloseLeft
+1306517256,383734,False,0,10,,Gastón Benedetti,Blocked,Low Centre
+1306517256,383734,False,1,14,,Facundo Farías,Missed,CloseLeft
+1306517256,383734,False,2,30,,Facundo Farías,Missed,
+1306517256,383734,False,3,46,,Facundo Farías,Blocked,Low Left
+1306517256,383734,False,4,46,,Mikel Amondarain,Saved,Low Centre
+1306517256,383734,False,5,51,,Facundo Farías,Missed,
+1306517256,383734,False,6,53,,Ezequiel Piovi,Saved,Low Centre
+1306517256,383734,False,7,55,,Facundo Farías,Blocked,Low Centre
+1306517256,383734,False,8,55,,Guido Carrillo,Saved,Low Left
+1306517256,383734,False,9,55,,Guido Carrillo,Goal,Low Left
+1306517256,383734,False,10,72,,Eric Meza,Missed,
+1306517256,383734,False,11,83,,Tiago Palacios,Missed,Close High
+1306517256,383734,False,12,89,,Edwin Cetré,Saved,Low Centre
+1306517256,383734,False,13,90,4,Mikel Amondarain,Saved,Low Left
+1306517256,108861,True,0,12,,Luiz Araújo,Blocked,Low Right
+1306517256,108861,True,1,27,,Samuel Lino,Missed,
+1306517256,108861,True,2,33,,Luiz Araújo,Goal,Low Centre
+1306517256,108861,True,3,55,,Bruno Henrique,Saved,Low Centre
+1306517256,108861,True,4,55,,Luiz Araújo,Saved,Low Centre
+1306517256,108861,True,5,75,,Gonzalo Plata,Missed,Close Right
+1306517256,108861,True,6,90,3,Pedro,Saved,Low Right
+1306517256,108861,True,7,90,3,Pedro,Saved,Low Centre
+1306542786,108861,True,0,8,,Jorginho,Missed,Close High
+1306542786,108861,True,1,27,,Emerson Royal,Missed,CloseLeft
+1306542786,108861,True,2,39,,Leo Pereira,Saved,Low Right
+1306542786,108861,True,3,45,,Pedro,Blocked,Low Centre
+1306542786,108861,True,4,55,,Luiz Araújo,Missed,
+1306542786,108861,True,5,60,,Leo Pereira,Missed,Close Right And High
+1306542786,108861,True,6,65,,Pedro,Goal,Low Right
+1306542786,108861,True,7,70,,Jorge Carrascal,Saved,Low Left
+1306542786,108861,True,8,70,,Pedro,Missed,High Right
+1306542786,108861,True,9,73,,Samuel Lino,Saved,Low Centre
+1306542786,108861,True,10,77,,Pedro,Missed,
+1306542786,108861,True,11,90,4,Samuel Lino,Missed,High Right
+1306542786,108861,True,12,90,5,Wallace Yan,Missed,Close Right
+1306542786,383734,False,0,6,,Leandro Gonzalez Pirez,Missed,
+1306542786,383734,False,1,9,,Tiago Palacios,Missed,
+1306542786,383734,False,2,14,,Guido Carrillo,Blocked,Low Centre
+1306542786,383734,False,3,23,,Brian Aguirre,Blocked,Low Left
+1306542786,383734,False,4,57,,Brian Aguirre,Missed,Close Right And High
+1306542786,383734,False,5,84,,Tiago Palacios,Saved,High Centre
+1306542786,383734,False,6,87,,Eric Meza,Blocked,Low Centre
+1306542786,383734,False,7,90,6,Edwin Cetré,Missed,High Right
+1306558104,108861,True,0,7,,Nicolas De La Cruz,Blocked,Low Centre
+1306558104,108861,True,1,10,,Gonzalo Plata,Blocked,Low Centre
+1306558104,108861,True,2,10,,Luiz Araújo,Missed,High Left
+1306558104,108861,True,3,25,,Evertton Araujo,Post,
+1306558104,108861,True,4,29,,Emerson Royal,Missed,
+1306558104,108861,True,5,35,,Nicolas De La Cruz,Saved,High Centre
+1306558104,108861,True,6,45,2,Nicolas De La Cruz,Blocked,Low Centre
+1306558104,108861,True,7,45,3,Evertton Araujo,Saved,High Right
+1306558104,108861,True,8,45,3,Ayrton Lucas,Saved,Low Centre
+1306558104,108861,True,9,49,,Saúl Ñíguez,Missed,
+1306558104,108861,True,10,52,,Saúl Ñíguez,Saved,Low Left
+1306558104,108861,True,11,56,,Luiz Araújo,Saved,Low Centre
+1306558104,108861,True,12,57,,Emerson Royal,Missed,High Left
+1306558104,108861,True,13,59,,Luiz Araújo,Blocked,Low Left
+1306558104,108861,True,14,59,,Evertton Araujo,Blocked,Low Centre
+1306558104,108861,True,15,59,,Nicolas De La Cruz,Missed,High Right
+1306558104,108861,True,16,74,,Emerson Royal,Saved,Low Centre
+1306558104,108861,True,17,77,,Emerson Royal,Saved,Low Right
+1306558104,108861,True,18,78,,Pedro,Missed,
+1306558104,108861,True,19,79,,Samuel Lino,Blocked,Low Left
+1306558104,108861,True,20,80,,Lucas Paquetá,Saved,Low Centre
+1306558104,108861,True,21,80,,Bruno Henrique,Goal,Low Centre
+1306558104,108861,True,22,84,,Bruno Henrique,Goal,Low Right
+1306558104,108861,True,23,89,,Samuel Lino,Saved,Low Right
+1306558104,108861,True,24,89,,Gonzalo Plata,Blocked,Low Right
+1306558104,108861,True,25,90,1,Lucas Paquetá,Goal,Low Left
+1306558104,108861,True,26,90,2,Pedro,Saved,High Centre
+1306558104,8521847,False,0,44,,Nicolas Silva,Saved,Low Left
+1306558104,8521847,False,1,45,,Carlo Diez,Missed,Close Right
+1306558104,8521847,False,2,45,,Carlo Diez,Missed,
+1306558104,8521847,False,3,48,,Lucas Colitto,Missed,Close Right
+1307994592,116520,False,0,7,,Erick,Goal,High Left
+1307994592,116520,False,1,20,,Matheuzinho,Saved,Low Centre
+1307994592,116520,False,2,49,,Zé Vitor,Blocked,Low Centre
+1307994592,116520,False,3,61,,Renê,Saved,High Left
+1307994592,116520,False,4,62,,Luan Candido,Goal,Low Centre
+1307994592,108861,True,0,17,,Evertton Araujo,Blocked,Low Centre
+1307994592,108861,True,1,22,,Samuel Lino,Missed,
+1307994592,108861,True,2,24,,Evertton Araujo,Blocked,Low Centre
+1307994592,108861,True,3,32,,Jorge Carrascal,Blocked,Low Left
+1307994592,108861,True,4,37,,Luiz Araújo,Saved,High Left
+1307994592,108861,True,5,37,,Samuel Lino,Blocked,Low Right
+1307994592,108861,True,6,38,,Bruno Henrique,Blocked,Low Centre
+1307994592,108861,True,7,39,,Jorginho,Missed,
+1307994592,108861,True,8,44,,Bruno Henrique,Saved,Low Left
+1307994592,108861,True,9,45,,Luiz Araújo,Saved,Low Left
+1307994592,108861,True,10,45,1,Bruno Henrique,Blocked,Low Centre
+1307994592,108861,True,11,45,3,Jorginho,Saved,Low Right
+1307994592,108861,True,12,50,,Jorge Carrascal,Saved,High Centre
+1307994592,108861,True,13,53,,Bruno Henrique,Blocked,Low Centre
+1307994592,108861,True,14,54,,Samuel Lino,Missed,
+1307994592,108861,True,15,56,,Luiz Araújo,Blocked,Low Left
+1307994592,108861,True,16,57,,Bruno Henrique,Saved,High Centre
+1307994592,108861,True,17,66,,Everton,Blocked,Low Left
+1307994592,108861,True,18,79,,Leo Pereira,Post,
+1307994592,108861,True,19,84,,Emerson Royal,Blocked,Low Right
+1307994592,108861,True,20,84,,Evertton Araujo,Blocked,Low Left
+1307994592,108861,True,21,84,,Everton,Missed,
+1307994592,108861,True,22,87,,Pedro,Saved,Low Right
+1307994592,108861,True,23,90,,Leo Pereira,Missed,
+1307994592,108861,True,24,90,2,Evertton Araujo,Missed,
+1307994592,108861,True,25,90,5,Everton,Missed,
+1308015016,108861,True,0,10,,Evertton Araujo,Goal,High Left
+1308015016,108861,True,1,21,,Emerson Royal,Saved,High Right
+1308015016,108861,True,2,22,,Everton,Saved,Low Left
+1308015016,108861,True,3,28,,Bruno Henrique,Blocked,Low Centre
+1308015016,108861,True,4,29,,Nicolas De La Cruz,Saved,High Left
+1308015016,108861,True,5,32,,Luiz Araújo,Blocked,Low Left
+1308015016,108861,True,6,41,,Pedro,Blocked,Low Centre
+1308015016,108861,True,7,42,,Léo Ortiz,Saved,Low Right
+1308015016,108861,True,8,44,,Everton,Saved,Low Centre
+1308015016,108861,True,9,45,1,Pedro,Missed,
+1308015016,108861,True,10,45,3,Everton,Saved,Low Centre
+1308015016,108861,True,11,45,5,Pedro,Blocked,Low Centre
+1308015016,108861,True,12,47,,Bruno Henrique,Missed,
+1308015016,108861,True,13,51,,Luiz Araújo,Saved,Low Right
+1308015016,108861,True,14,52,,Pedro,Goal,Low Left
+1308015016,108861,True,15,56,,Ayrton Lucas,Blocked,Low Centre
+1308015016,108861,True,16,65,,Giorgian de Arrascaeta,Saved,High Left
+1308015016,108861,True,17,79,,Luiz Araújo,Missed,High Right
+1308015016,108861,True,18,81,,Giorgian de Arrascaeta,Missed,
+1308015016,108861,True,19,90,3,Pedro,Missed,
+1308015016,108861,True,20,90,7,Samuel Lino,Missed,CloseLeft
+1308015016,116520,False,0,8,,Renê,Blocked,Low Left
+1308015016,116520,False,1,11,,Erick,Goal,High Right
+1308015016,116520,False,2,24,,Zé Vitor,Saved,Low Right
+1308015016,116520,False,3,61,,Matheuzinho,Missed,Close Right
+1308015016,116520,False,4,87,,Diego Tarzia,Blocked,Low Centre
+1317141991,115669,False,0,4,,Kaio Jorge,Blocked,Low Centre
+1317141991,115669,False,1,7,,Wesley Gassova,Missed,
+1317141991,115669,False,2,18,,Keny Arroyo,Blocked,Low Centre
+1317141991,115669,False,3,18,,Matheus Henrique,Missed,
+1317141991,115669,False,4,27,,Keny Arroyo,Blocked,Low Right
+1317141991,115669,False,5,31,,Matheus Pereira,Blocked,Low Centre
+1317141991,115669,False,6,32,,Keny Arroyo,Missed,
+1317141991,115669,False,7,53,,Keny Arroyo,Goal,High Left
+1317141991,115669,False,8,57,,Wesley Gassova,Blocked,Low Left
+1317141991,115669,False,9,85,,Kaio Jorge,Missed,
+1317141991,115669,False,10,90,,Matheus Pereira,Missed,
+1317141991,108861,True,0,2,,Samuel Lino,Saved,Low Centre
+1317141991,108861,True,1,21,,Samuel Lino,Missed,Close Right
+1317141991,108861,True,2,35,,Bruno Henrique,Post,
+1317141991,108861,True,3,39,,Samuel Lino,Blocked,Low Left
+1317141991,108861,True,4,39,,Gonzalo Plata,Missed,
+1317141991,108861,True,5,45,,Erick Pulgar,Blocked,Low Centre
+1317141991,108861,True,6,45,,Bruno Henrique,Blocked,Low Centre
+1317141991,108861,True,7,47,,Samuel Lino,Blocked,Low Centre
+1317141991,108861,True,8,50,,Erick Pulgar,Missed,High Right
+1317141991,108861,True,9,59,,Jorginho,Saved,High Right
+1317141991,108861,True,10,60,,Erick Pulgar,Missed,CloseLeft
+1317141991,108861,True,11,64,,Ayrton Lucas,Saved,Low Centre
+1317141991,108861,True,12,67,,Léo Ortiz,Post,
+1317141991,108861,True,13,67,,Lucas Paquetá,Goal,High Centre
+1317141991,108861,True,14,89,,Jorge Carrascal,Saved,Low Right
+1317151352,108861,True,0,2,,Ayrton Lucas,Missed,
+1317151352,108861,True,1,7,,Léo Ortiz,Missed,Close Right
+1317151352,108861,True,2,10,,Jorginho,Missed,
+1317151352,108861,True,3,11,,Giorgian de Arrascaeta,Missed,
+1317151352,108861,True,4,12,,Samuel Lino,Saved,Low Centre
+1317151352,108861,True,5,12,,Pedro,Saved,Low Centre
+1317151352,108861,True,6,13,,Pedro,Blocked,Low Centre
+1317151352,108861,True,7,13,,Samuel Lino,Blocked,Low Centre
+1317151352,108861,True,8,16,,Giorgian de Arrascaeta,Saved,High Centre
+1317151352,108861,True,9,18,,Samuel Lino,Missed,Close Right
+1317151352,108861,True,10,21,,Pedro,Missed,Close Left And High
+1317151352,108861,True,11,31,,Erick Pulgar,Blocked,Low Centre
+1317151352,108861,True,12,31,,Pedro,Missed,
+1317151352,108861,True,13,35,,Giorgian de Arrascaeta,Goal,High Right
+1317151352,108861,True,14,39,,Ayrton Lucas,Missed,High Left
+1317151352,108861,True,15,56,,Giorgian de Arrascaeta,Missed,
+1317151352,108861,True,16,61,,Gonzalo Plata,Missed,
+1317151352,108861,True,17,62,,Samuel Lino,Goal,Low Centre
+1317151352,108861,True,18,65,,Lucas Paquetá,Saved,Low Centre
+1317151352,108861,True,19,72,,Samuel Lino,Blocked,Low Centre
+1317151352,108861,True,20,74,,Jorge Carrascal,Saved,Low Centre
+1317151352,108861,True,21,82,,Lucas Paquetá,Missed,High Left
+1317151352,108861,True,22,85,,Evertton Araujo,Saved,High Centre
+1317151352,108861,True,23,90,,Lucas Paquetá,Saved,Low Centre
+1317151352,115669,False,0,34,,Matheus Pereira,Blocked,Low Left
+1317151352,115669,False,1,40,,Wesley Gassova,Blocked,Low Centre
+1317151352,115669,False,2,45,2,Wesley Gassova,Blocked,Low Centre
+1317151352,115669,False,3,48,,Gabriel Rojas,Missed,High Left
+1317151352,115669,False,4,51,,Lucas Romero,Goal,Low Left
+1317151352,115669,False,5,55,,Gerson,Missed,High Left
+1317151352,115669,False,6,56,,Kaio Jorge,Missed,CloseLeft
+1317151352,115669,False,7,58,,Kaio Jorge,Missed,
+1317151352,115669,False,8,75,,Matheus Pereira,Saved,Low Centre
+1317151352,115669,False,9,78,,João Costa,Blocked,Low Centre
+1317151352,115669,False,10,88,,João Costa,Blocked,Low Centre
+1317151352,115669,False,11,88,,Keny Arroyo,Missed,
+1317151352,115669,False,12,90,1,Luciano Rodríguez,Saved,High Centre
+1317151352,115669,False,13,90,2,Matheus Pereira,Missed,
+1391714270,981987,False,0,6,,Jordy Alcivar,Missed,
+1391714270,981987,False,1,8,,Carlos Gonzalez,Missed,
+1391714270,981987,False,2,16,,Emerson Pata,Missed,High Right
+1391714270,981987,False,3,20,,Carlos Gonzalez,Post,
+1391714270,981987,False,4,34,,Emerson Pata,Blocked,Low Centre
+1391714270,981987,False,5,35,,Aron Rodriguez,Blocked,Low Centre
+1391714270,981987,False,6,35,,Layan Loor,Missed,High Right
+1391714270,981987,False,7,36,,Mateo Carabajal,Missed,
+1391714270,981987,False,8,40,,Jordy Alcivar,Missed,
+1391714270,981987,False,9,40,,Júnior Sornoza,Missed,High Right
+1391714270,981987,False,10,49,,Júnior Sornoza,Saved,High Centre
+1391714270,981987,False,11,61,,Júnior Sornoza,Saved,High Centre
+1391714270,981987,False,12,67,,Hugo Quintana,Blocked,Low Centre
+1391714270,981987,False,13,67,,Jordy Alcivar,Blocked,Low Left
+1391714270,981987,False,14,67,,Mateo Carabajal,Missed,
+1391714270,981987,False,15,69,,Júnior Sornoza,Missed,CloseLeft
+1391714270,981987,False,16,79,,Ronald Briones,Missed,Close Right
+1391714270,981987,False,17,80,,Matías Perello,Saved,Low Left
+1391714270,108861,True,0,59,,Léo Ortiz,Missed,Close High
+1391714270,108861,True,1,61,,Bruno Henrique,Goal,Low Centre
+1391714270,108861,True,2,74,,Gonzalo Plata,Blocked,Low Right
+1391714270,108861,True,3,75,,Leo Pereira,Goal,Low Right
+1391715121,108861,True,0,8,,Samuel Lino,Blocked,Low Centre
+1391715121,108861,True,1,14,,Bruno Henrique,Saved,Low Centre
+1391715121,108861,True,2,41,,Bruno Henrique,Missed,
+1391715121,108861,True,3,43,,Samuel Lino,Missed,
+1391715121,108861,True,4,45,3,Erick Pulgar,Saved,Low Right
+1391715121,108861,True,5,60,,Leo Pereira,Blocked,Low Centre
+1391715121,108861,True,6,61,,Léo Ortiz,Blocked,Low Left
+1391715121,108861,True,7,62,,Ayrton Lucas,Missed,
+1391715121,108861,True,8,64,,Erick Pulgar,Missed,High Right
+1391715121,108861,True,9,83,,Giorgian de Arrascaeta,Goal,Low Right
+1391715121,981987,False,0,2,,Emerson Pata,Blocked,Low Right
+1391715121,981987,False,1,22,,Emerson Pata,Missed,
+1391715121,981987,False,2,31,,Djorkaeff Reasco,Goal,Low Right
+1391715121,981987,False,3,77,,Emerson Pata,Blocked,Low Left
+1391715121,981987,False,4,81,,Yandri Vásquez,Saved,High Centre
+1391715121,981987,False,5,89,,Mateo Carabajal,Missed,Close Right
+1391715121,981987,False,6,90,3,Mateo Carabajal,Saved,Low Left
+1391715121,981987,False,7,90,6,Júnior Sornoza,Saved,Low Right

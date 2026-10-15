@@ -1,0 +1,636 @@
+{
+ "match": {
+  "venue": {
+   "city": null,
+   "name": null,
+   "country": null,
+   "capacity": null
+  },
+  "referee": {
+   "name": null,
+   "nationality": null
+  },
+  "forecast": {
+   "status": null,
+   "temperature": null
+  },
+  "events": [
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "6",
+    "type": "Goal",
+    "assist": null,
+    "player": "E. Delmas",
+    "playerId": 74071424,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "29",
+    "type": "Goal",
+    "assist": null,
+    "player": "Pedro",
+    "playerId": 1661835,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "32",
+    "type": "Goal",
+    "assist": null,
+    "player": "Lorran",
+    "playerId": 64931454,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "45+1",
+    "type": "Goal",
+    "assist": null,
+    "player": "Bruno Henrique",
+    "playerId": 1639134,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "45+1",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": null,
+    "playerId": null,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "46",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Lorran",
+    "playerId": 64931454,
+    "substituted": "Emerson Royal",
+    "assistingPlayerId": 252280
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "46",
+    "type": "Substitution",
+    "assist": null,
+    "player": "E. Pulgar",
+    "playerId": 412314,
+    "substituted": "Luiz Araujo",
+    "assistingPlayerId": 3580472
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "46",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Bruno Henrique",
+    "playerId": 1639134,
+    "substituted": "Jorginho",
+    "assistingPlayerId": 368683
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "46",
+    "type": "Substitution",
+    "assist": null,
+    "player": "G. Varela",
+    "playerId": 207844,
+    "substituted": "Everton",
+    "assistingPlayerId": 388808
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "46",
+    "type": "Substitution",
+    "assist": null,
+    "player": "J. Vera",
+    "playerId": 943936,
+    "substituted": "G. Vargas",
+    "assistingPlayerId": 44819334
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "55",
+    "type": "Goal",
+    "assist": null,
+    "player": "F. Cardozo",
+    "playerId": 11394285,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "60",
+    "type": "Goal",
+    "assist": null,
+    "player": "Pedro",
+    "playerId": 1661835,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "61",
+    "type": "Substitution",
+    "assist": null,
+    "player": "J. F. Alfaro",
+    "playerId": 9418010,
+    "substituted": "F. Alfonso",
+    "assistingPlayerId": 62909455
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "61",
+    "type": "Substitution",
+    "assist": null,
+    "player": "R. Sanchez",
+    "playerId": 11346307,
+    "substituted": "S. Quintana",
+    "assistingPlayerId": 51450763
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "61",
+    "type": "Substitution",
+    "assist": null,
+    "player": "F. Cardozo",
+    "playerId": 11394285,
+    "substituted": "A. F. Franco Zayas",
+    "assistingPlayerId": 45297826
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "61",
+    "type": "Substitution",
+    "assist": null,
+    "player": "R. Benitez",
+    "playerId": 45045539,
+    "substituted": "P. Zarza",
+    "assistingPlayerId": 76450360
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "63",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": null,
+    "playerId": null,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "64",
+    "type": "Substitution",
+    "assist": null,
+    "player": "A. Rossi",
+    "playerId": 1892870,
+    "substituted": "A. da Silva Ventura",
+    "assistingPlayerId": 12965162
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "64",
+    "type": "Substitution",
+    "assist": null,
+    "player": "J. Goes",
+    "playerId": 82551294,
+    "substituted": "Ayrton Lucas",
+    "assistingPlayerId": 285285
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "65",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Samuel Lino",
+    "playerId": 20436850,
+    "substituted": "Joshua",
+    "assistingPlayerId": 87694439
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "65",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Pedro",
+    "playerId": 1661835,
+    "substituted": "Wallace Yan",
+    "assistingPlayerId": 65230914
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "69",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Luiz Araujo",
+    "playerId": 3580472,
+    "substituted": "S. Niguez",
+    "assistingPlayerId": 7882
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "72",
+    "type": "Substitution",
+    "assist": null,
+    "player": "E. Delmas",
+    "playerId": 74071424,
+    "substituted": "D. Gonzalez",
+    "assistingPlayerId": 405713
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "80",
+    "type": "Substitution",
+    "assist": null,
+    "player": "M. Gamarra",
+    "playerId": 11132016,
+    "substituted": "B. Bentaberry",
+    "assistingPlayerId": 8278452
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "80",
+    "type": "Substitution",
+    "assist": null,
+    "player": "B. Romero",
+    "playerId": 1634143,
+    "substituted": "H. Sandoval",
+    "assistingPlayerId": 15339107
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "82",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Evertton Araujo",
+    "playerId": 53557448,
+    "substituted": "Rayan Lucas",
+    "assistingPlayerId": 65681392
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "84",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": null,
+    "playerId": null,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    },
+    "time": "87",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": null,
+    "playerId": null,
+    "substituted": null,
+    "assistingPlayerId": null
+   }
+  ],
+  "predictions": {
+   "live": [],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Olimpia.",
+     "generatedAt": "2026-07-17T09:36:51.746Z",
+     "probabilities": {
+      "away": "9.41%",
+      "draw": "15.70%",
+      "home": "74.89%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Olimpia.",
+     "generatedAt": "2026-07-17T12:54:48.654Z",
+     "probabilities": {
+      "away": "10.46%",
+      "draw": "16.66%",
+      "home": "72.87%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Olimpia.",
+     "generatedAt": "2026-07-17T16:16:11.519Z",
+     "probabilities": {
+      "away": "11.09%",
+      "draw": "16.74%",
+      "home": "72.17%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Olimpia.",
+     "generatedAt": "2026-07-17T19:45:41.288Z",
+     "probabilities": {
+      "away": "11.48%",
+      "draw": "16.89%",
+      "home": "71.63%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Olimpia.",
+     "generatedAt": "2026-07-18T10:30:09.034Z",
+     "probabilities": {
+      "away": "11.43%",
+      "draw": "17.70%",
+      "home": "70.87%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Olimpia.",
+     "generatedAt": "2026-07-18T14:06:52.767Z",
+     "probabilities": {
+      "away": "11.43%",
+      "draw": "17.70%",
+      "home": "70.87%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Olimpia.",
+     "generatedAt": "2026-07-18T17:38:01.932Z",
+     "probabilities": {
+      "away": "11.43%",
+      "draw": "17.70%",
+      "home": "70.87%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Olimpia.",
+     "generatedAt": "2026-07-18T21:14:53.362Z",
+     "probabilities": {
+      "away": "11.43%",
+      "draw": "17.70%",
+      "home": "70.87%"
+     }
+    }
+   ]
+  },
+  "statistics": [
+   {
+    "statistics": [
+     {
+      "value": 77,
+      "displayName": "Attacks"
+     },
+     {
+      "value": 20,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 0,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 0,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 0.5,
+      "displayName": "Possession"
+     },
+     {
+      "value": 2,
+      "displayName": "Corners"
+     },
+     {
+      "value": 1,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 1,
+      "displayName": "Yellow cards"
+     }
+    ],
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    }
+   },
+   {
+    "statistics": [
+     {
+      "value": 88,
+      "displayName": "Attacks"
+     },
+     {
+      "value": 9,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 0,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 0,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 0.5,
+      "displayName": "Possession"
+     },
+     {
+      "value": 7,
+      "displayName": "Corners"
+     },
+     {
+      "value": 2,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 3,
+      "displayName": "Yellow cards"
+     }
+    ],
+    "team": {
+     "id": 1006666,
+     "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+     "name": "Olimpia"
+    }
+   }
+  ],
+  "id": 1347423975,
+  "round": "Club Friendlies",
+  "date": "2026-07-17T23:00:00.000Z",
+  "country": {
+   "code": "World",
+   "name": "World",
+   "logo": "https://highlightly.net/soccer/images/countries/World.png"
+  },
+  "state": {
+   "clock": 90,
+   "score": {
+    "current": "4 - 2",
+    "penalties": null
+   },
+   "description": "Finished"
+  },
+  "awayTeam": {
+   "id": 1006666,
+   "logo": "https://highlightly.net/soccer/images/teams/1006666.png",
+   "name": "Olimpia",
+   "topPlayers": [],
+   "shots": []
+  },
+  "homeTeam": {
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo",
+   "topPlayers": [],
+   "shots": []
+  },
+  "league": {
+   "id": 568401,
+   "logo": "https://highlightly.net/soccer/images/leagues/568401.png",
+   "name": "Friendlies Clubs",
+   "season": 2026
+  },
+  "news": []
+ },
+ "boxscore": [],
+ "_coletado_em": "2026-10-15T17:02:59.951319+00:00"
+}

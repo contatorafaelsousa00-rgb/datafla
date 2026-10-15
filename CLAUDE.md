@@ -5,6 +5,18 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
 
 ## Decisões já tomadas (não reabrir sem motivo)
 
+- **Fonte da temporada atual: Highlightly** (`soccer.highlightly.net`, header `x-rapidapi-key`, plano BASIC grátis,
+  100 req/dia). Decidido em 15/10/2026 porque o grátis da API-Football não libera o ano corrente
+  ("Free plans do not have access to this season, try from 2022 to 2024") nem `?ids=`. Custo: 2 req/jogo
+  (`/matches/{id}` + `/box-score/{id}`); `/lineups` não é baixado (só daria formação). Sem busca em lote.
+  ID do Flamengo: 108861. Lista da temporada: `/matches?homeTeamId=` e `?awayTeamId=` (não existe `teamId`).
+  API-Football fica para 2022–2024. Nunca misturar fontes numa temporada (pastas `raw/` × `raw-highlightly/`).
+- **Painel**: não está preso ao desenho antigo; deve mostrar o melhor que os dados permitem (pedido do Rafael, 15/10/2026).
+  Tema escuro (preto) por padrão + claro pelo botão; vermelho como destaque; cores de competição: ver identidade abaixo.
+- **Identidade visual: direção B "Analítico"** (escolhida em 15/10/2026): marca "datafla." em minúsculas com ponto vermelho,
+  logo de barras crescentes (a última vermelha, também favicon); Space Grotesk (títulos), JetBrains Mono (números),
+  Inter (texto); escuro #0E0F11 / cartões #17191C / vermelho #FF3341 (claro: #E01E2D) / cinzas frios #8A9099.
+  Logos são desenhos próprios: nunca usar escudo ou marca do Flamengo. Propostas em `site/.propostas/` (fora do deploy).
 - **Fonte de dados: API-Football** (api-sports.io, `v3.football.api-sports.io`, header `x-apisports-key`),
   começando no plano grátis (100 req/dia). Escolhida por cobrir as 6 competições com minutagem por jogador.
   Ponto fraco: xG não é documentado; o código captura `expected_goals` de `/fixtures` quando existir.
@@ -15,6 +27,8 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
   Ligar as duas APIs: jogos por data + mandante + visitante; jogadores por uma tabela de correspondência manual.
 - **Descartados**: Sofascore/FotMob/ESPN (APIs internas, sem autorização), FBref (perdeu a Opta em jan/2026),
   football-data.org (sem escalações no grátis).
+- **Banco de dados: nenhum no ar** (reconfirmado em 15/10/2026). O JSON do site tem 1,3 MB (~75 KB gzip) por temporada;
+  SQLite fica só local para análise. Reabrir só se vier consulta livre pelo usuário, login ou várias temporadas pesadas.
 - **Hospedagem: Firebase Hosting, site estático** lendo `site/dados/<ano>.json`. Sem banco por enquanto;
   Supabase só se vier multi-temporada, consultas livres ou login.
 - **Editor**: VS Code/Cursor com Claude Code (sem pagar a IA do Cursor).
@@ -36,8 +50,9 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
   - Configuração pelo arquivo `.env` na raiz (modelo `.env.exemplo`, fora do Git; variável do terminal tem prioridade) ou variável de ambiente: `API_FOOTBALL_KEY`, `FLA_TEAM_ID` (127), `FLA_SEASON` (padrão: ano atual), `FLA_DATA_DIR` (pasta base), `FLA_SITE_DADOS`.
 - `site/` — HTML/CSS/JS puro, gráficos SVG próprios (`graficos.js`), sem build. Seletor de temporada (`?t=2025`). Abas: visão geral,
   jogadores, minutagem (mapa de calor jogador × jogo), jogos (detalhe com escalação/eventos), qualidade.
-  Cores de competição fixas (paleta validada para daltonismo): Brasileirão s1, Libertadores s2,
-  Copa do Brasil s3, Carioca s4, Supercopa s5, Recopa s6. Claro e escuro.
+  Cores de competição em famílias da identidade (15/10/2026, pedido do Rafael, troca a paleta azul/laranja anterior):
+  nacionais em vermelho (Brasileirão --s1, Copa do Brasil --s3), continentais em dourado (Libertadores --s2, Recopa --s6),
+  demais em cinzas (Carioca --s4, Supercopa --s5, amistosos --s7). Distinção depende mais de luminosidade que de matiz.
 - `scripts/gerar_demo.py` — temporadas FICTÍCIAS 2025 e 2026 em `data-demo/` e `site/dados-demo/` (fora do Git); abrir com `?demo=1`.
 - `.github/workflows/atualizar.yml` — coleta da temporada atual 00:17 e 07:17 (Brasília) + commit dos dados + deploy no Firebase.
 - Login/Firestore: só se houver dado privado ou recurso por usuário. Lembrar que arquivos do Hosting são públicos mesmo atrás de uma tela de login.
@@ -51,20 +66,33 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
 
 ## Estado atual (15/10/2026)
 
-- Código pronto e testado só com dados sintéticos (`python -m pytest`, 16 testes).
-- Documentação oficial (api-football.com/documentation-v3) não acessível pela sessão na nuvem; confirmado por
-  buscas: máx. 20 ids em `/fixtures?ids=`, resposta por id traz events/lineups/statistics/players, live a cada 15 s. **Ainda não rodou contra a API real.**
-- Próximo passo: Rafael cria a chave grátis, roda `python -m coleta.coletar status` e depois `tudo`.
-  Ao ver a primeira resposta real, rodar `coletar inspecionar` e ajustar conforme os pontos da seção "Pontos a confirmar" do README
-  (ID 127, acesso a 2026 no grátis, time do evento de gol contra, `player`/`assist` na substituição,
-  `passes.accuracy`, cobertura de `expected_goals`) e ajustar `normalizar.py`/`validar.py`.
-- Depois: rodar a conferência com súmulas em ~10 jogos (4 Brasileirão, 3 Libertadores, 2 Copa do Brasil, 1 Carioca);
-  meta 100% em escalação/eventos e ±1 min nas substituições.
-- Depois: configurar Firebase (projeto, segredos do workflow) e publicar.
-
-## Convenções
-
-- Código e mensagens em português, comentários só onde explicam o porquê.
-- Nunca colocar chaves no código, em commits ou no chat.
-- Não inventar dados: o demo é sempre marcado como fictício e nunca vai para `site/dados/`.
-- Ao mexer no site, conferir no navegador (claro, escuro e 390 px de largura) antes de dar por pronto.
+- 2024 coletado pela API-Football (75 jogos) e 2026 pela Highlightly: 41 de 58 jogos encerrados; os 17 restantes
+  (mais antigos, incluindo Carioca/Supercopa/Recopa) chegam na próxima coleta, quando a cota diária renovar.
+- Respostas da Highlightly ficam versionadas em `data/<ano>/raw-highlightly/` (o workflow faz commit), para a coleta
+  não baixar de novo e o site nunca sair parcial. Workflow usa o segredo `HIGHLIGHTLY_KEY` (falta cadastrar no GitHub).
+- `coleta/highlightly.py`: cliente, coleta com parada antes de esgotar a cota (`FLA_HL_RESERVA`), normalização nativa
+  (mesmas tabelas da API-Football + xg/xa/xgot por jogador, previsão pré-jogo, clima, tabela `finalizacoes`).
+- Validador usa a duração real do jogo (minutos incluem acréscimos). Restam alertas de fonte: 12º titular com 0 min
+  em alguns jogos; finalizações dos jogadores ≠ total do time em vários jogos (a investigar).
+- Painel redesenhado (15/10/2026), só 2026 (2024 saiu do site a pedido do Rafael; `data/2024/` segue local, fora do Git):
+  6 abas — Temporada (KPIs, saldo de xG jogo a jogo, pontos × esperado, tendência, casa × fora, contra a previsão),
+  Jogos (relatório: previsão, linha do tempo, comparativo, escalação com xG/nota, mapa do gol), Jogadores (grupos
+  Geral/Ataque/Criação/Defesa/Goleiros, totais ou por 90, perfil com percentis vs mesma posição, nota por jogo, dispersões),
+  Elenco (em alta/baixa, carga 30 dias, rotação, minutagem), Estilo de jogo (médias × adversários, finalizações e gols por
+  momento, gols × xG, posse e último terço), Dados (cobertura, completude, apontamentos). Resultados vêm do calendário
+  (todos os encerrados); visões de detalhe usam só jogos já baixados. Símbolos das competições = logos da Highlightly.
+  Filtros (15/10/2026): barra fixa abaixo do topo — competição de seleção única (símbolos; nome na selecionada),
+  período (temporada, últimos 10/5, mês; aplicado depois de competição e mando), mando, resumo com "Limpar filtros";
+  no celular vira botão "Filtros (n)". Ficam na URL: `?comp=brasileirao&periodo=10&mando=casa` (mês: `periodo=2026-09`).
+- No ar: https://datafla.web.app (projeto Firebase `datafla` na conta contatorafaelsousa00@gmail.com; nesta pasta o
+  Firebase CLI usa essa conta via `firebase login:use`; a conta padrão da máquina é outra, de trabalho).
+- Cartão "Próximo jogo" no topo da Temporada: `coletar proximo` (1 req, renovado a cada 6 h, roda depois dos detalhes
+  no `tudo`) → `proximo` no JSON; sem detalhe (ex.: filtro de competição), o cartão usa o calendário.
+- Fotos dos jogadores (15/10/2026): Highlightly não tem (logo null no box-score e em /players/{id}); vêm do elenco atual
+  da API-Football (`coletar fotos`, 1 req, renovado a cada 7 dias, segredo opcional API_FOOTBALL_KEY no workflow),
+  casadas por nome/número (`coleta/fotos.py`): 30 de 31 que jogaram em 2026 (Everton, Lorran, Wallace fora do elenco atual).
+  Copiadas para `site/fotos/` e servidas pelo próprio site (a rede do Rafael não resolve media.api-sports.io);
+  sem cópia local, o JSON leva a URL original. O workflow faz commit de `site/fotos`.
+- Jogadores: cada grupo abre ordenado pela estatística principal (gols, assistências, desarmes, gols evitados);
+  perfil em seções Ataque/Criação/Defesa, cada uma da melhor para a pior posição no elenco.
+- 29 testes (`python -m pytest`).

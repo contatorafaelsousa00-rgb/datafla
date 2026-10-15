@@ -1,0 +1,512 @@
+{
+ "match": {
+  "venue": {
+   "city": "Algarve",
+   "name": "Estadio Algarve",
+   "country": "Portugal",
+   "capacity": "30305"
+  },
+  "referee": {
+   "name": null,
+   "nationality": null
+  },
+  "forecast": {
+   "status": "clear day",
+   "temperature": "21.95°C"
+  },
+  "events": [
+   {
+    "team": {
+     "id": 180345,
+     "logo": "https://highlightly.net/soccer/images/teams/180345.png",
+     "name": "Benfica"
+    },
+    "time": "30",
+    "type": "Substitution",
+    "assist": null,
+    "player": "J. Umeh",
+    "playerId": 71556282,
+    "substituted": "G. Prestianni",
+    "assistingPlayerId": 58403709
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "38",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "E. Pulgar",
+    "playerId": 412314,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "45+5",
+    "type": "Goal",
+    "assist": null,
+    "player": "Samuel Lino",
+    "playerId": 20436850,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 180345,
+     "logo": "https://highlightly.net/soccer/images/teams/180345.png",
+     "name": "Benfica"
+    },
+    "time": "45+8",
+    "type": "Goal",
+    "assist": null,
+    "player": "V. Pavlidis",
+    "playerId": 5924632,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "68",
+    "type": "Goal",
+    "assist": null,
+    "player": "Wallace Yan",
+    "playerId": 65230914,
+    "substituted": null,
+    "assistingPlayerId": null
+   }
+  ],
+  "predictions": {
+   "live": [],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-06T16:37:10.747Z",
+     "probabilities": {
+      "away": "30.27%",
+      "draw": "28.23%",
+      "home": "41.49%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-06T19:29:20.888Z",
+     "probabilities": {
+      "away": "30.27%",
+      "draw": "28.23%",
+      "home": "41.49%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-07T08:28:09.817Z",
+     "probabilities": {
+      "away": "29.71%",
+      "draw": "28.61%",
+      "home": "41.68%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-07T11:27:22.727Z",
+     "probabilities": {
+      "away": "29.80%",
+      "draw": "28.56%",
+      "home": "41.65%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-07T14:23:50.729Z",
+     "probabilities": {
+      "away": "29.79%",
+      "draw": "28.56%",
+      "home": "41.66%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-07T17:25:37.466Z",
+     "probabilities": {
+      "away": "29.79%",
+      "draw": "28.56%",
+      "home": "41.66%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-07T20:27:01.418Z",
+     "probabilities": {
+      "away": "29.79%",
+      "draw": "28.56%",
+      "home": "41.66%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-08T08:43:14.012Z",
+     "probabilities": {
+      "away": "29.89%",
+      "draw": "28.46%",
+      "home": "41.65%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-08T11:42:11.984Z",
+     "probabilities": {
+      "away": "29.89%",
+      "draw": "28.46%",
+      "home": "41.65%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-08T14:41:22.607Z",
+     "probabilities": {
+      "away": "29.89%",
+      "draw": "28.46%",
+      "home": "41.65%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-08T17:44:16.075Z",
+     "probabilities": {
+      "away": "29.89%",
+      "draw": "28.46%",
+      "home": "41.65%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-08T20:44:56.326Z",
+     "probabilities": {
+      "away": "30.00%",
+      "draw": "28.37%",
+      "home": "41.64%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-09T08:47:28.544Z",
+     "probabilities": {
+      "away": "30.00%",
+      "draw": "28.37%",
+      "home": "41.64%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-09T11:52:27.461Z",
+     "probabilities": {
+      "away": "30.00%",
+      "draw": "28.37%",
+      "home": "41.64%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-09T14:58:16.336Z",
+     "probabilities": {
+      "away": "30.50%",
+      "draw": "27.96%",
+      "home": "41.54%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-09T18:03:12.823Z",
+     "probabilities": {
+      "away": "30.51%",
+      "draw": "27.90%",
+      "home": "41.59%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-09T21:07:28.655Z",
+     "probabilities": {
+      "away": "30.54%",
+      "draw": "27.87%",
+      "home": "41.58%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-10T08:39:22.160Z",
+     "probabilities": {
+      "away": "30.54%",
+      "draw": "27.87%",
+      "home": "41.58%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-10T11:46:31.902Z",
+     "probabilities": {
+      "away": "30.54%",
+      "draw": "27.90%",
+      "home": "41.57%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Benfica.",
+     "generatedAt": "2026-07-10T14:59:21.116Z",
+     "probabilities": {
+      "away": "37.89%",
+      "draw": "26.86%",
+      "home": "35.25%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Benfica.",
+     "generatedAt": "2026-07-10T18:15:08.326Z",
+     "probabilities": {
+      "away": "37.86%",
+      "draw": "26.99%",
+      "home": "35.14%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Benfica.",
+     "generatedAt": "2026-07-10T21:30:56.873Z",
+     "probabilities": {
+      "away": "38.59%",
+      "draw": "26.84%",
+      "home": "34.56%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-11T10:07:32.604Z",
+     "probabilities": {
+      "away": "32.61%",
+      "draw": "26.26%",
+      "home": "41.13%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-11T13:33:17.699Z",
+     "probabilities": {
+      "away": "33.15%",
+      "draw": "26.50%",
+      "home": "40.35%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-11T16:55:11.849Z",
+     "probabilities": {
+      "away": "32.39%",
+      "draw": "26.46%",
+      "home": "41.15%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Benfica is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-11T20:23:06.879Z",
+     "probabilities": {
+      "away": "32.70%",
+      "draw": "26.29%",
+      "home": "41.02%"
+     }
+    }
+   ]
+  },
+  "statistics": [
+   {
+    "statistics": [
+     {
+      "value": 0,
+      "displayName": "Attacks"
+     },
+     {
+      "value": 18,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 7,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 2,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 0.5,
+      "displayName": "Possession"
+     },
+     {
+      "value": 6,
+      "displayName": "Corners"
+     },
+     {
+      "value": 0,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 0,
+      "displayName": "Yellow cards"
+     }
+    ],
+    "team": {
+     "id": 180345,
+     "logo": "https://highlightly.net/soccer/images/teams/180345.png",
+     "name": "Benfica"
+    }
+   },
+   {
+    "statistics": [
+     {
+      "value": 0,
+      "displayName": "Attacks"
+     },
+     {
+      "value": 13,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 3,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 2,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 0.5,
+      "displayName": "Possession"
+     },
+     {
+      "value": 5,
+      "displayName": "Corners"
+     },
+     {
+      "value": 3,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 4,
+      "displayName": "Yellow cards"
+     }
+    ],
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    }
+   }
+  ],
+  "id": 1328069682,
+  "round": "Club Friendlies",
+  "date": "2026-07-11T18:30:00.000Z",
+  "country": {
+   "code": "World",
+   "name": "World",
+   "logo": "https://highlightly.net/soccer/images/countries/World.png"
+  },
+  "state": {
+   "clock": 90,
+   "score": {
+    "current": "1 - 2",
+    "penalties": null
+   },
+   "description": "Finished"
+  },
+  "awayTeam": {
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo",
+   "topPlayers": [],
+   "shots": []
+  },
+  "homeTeam": {
+   "id": 180345,
+   "logo": "https://highlightly.net/soccer/images/teams/180345.png",
+   "name": "Benfica",
+   "topPlayers": [],
+   "shots": []
+  },
+  "league": {
+   "id": 568401,
+   "logo": "https://highlightly.net/soccer/images/leagues/568401.png",
+   "name": "Friendlies Clubs",
+   "season": 2026
+  },
+  "news": []
+ },
+ "boxscore": [],
+ "_coletado_em": "2026-10-15T17:03:06.116445+00:00"
+}

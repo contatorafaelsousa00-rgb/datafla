@@ -71,7 +71,8 @@ def _resultado(pro, contra):
     return "V" if pro > contra else "D" if pro < contra else "E"
 
 
-def linha_partida(p: dict, team_id: int = config.TEAM_ID) -> dict:
+def linha_partida(p: dict, team_id: int | None = None) -> dict:
+    team_id = team_id or config.TEAM_ID
     nos, eles = _lado(p, team_id)
     fx, score = p["fixture"], p.get("score", {})
     escalacao = next(
@@ -105,7 +106,8 @@ def linha_partida(p: dict, team_id: int = config.TEAM_ID) -> dict:
     }
 
 
-def linhas_jogadores(p: dict, team_id: int = config.TEAM_ID) -> list[dict]:
+def linhas_jogadores(p: dict, team_id: int | None = None) -> list[dict]:
+    team_id = team_id or config.TEAM_ID
     linhas = []
     for bloco in p.get("players", []):
         time_id = bloco["team"]["id"]
@@ -158,7 +160,8 @@ def linhas_jogadores(p: dict, team_id: int = config.TEAM_ID) -> list[dict]:
     return linhas
 
 
-def linhas_eventos(p: dict, team_id: int = config.TEAM_ID) -> list[dict]:
+def linhas_eventos(p: dict, team_id: int | None = None) -> list[dict]:
+    team_id = team_id or config.TEAM_ID
     linhas = []
     for ordem, ev in enumerate(p.get("events", [])):
         t = ev.get("time") or {}
@@ -180,7 +183,8 @@ def linhas_eventos(p: dict, team_id: int = config.TEAM_ID) -> list[dict]:
     return linhas
 
 
-def linhas_estatisticas(p: dict, team_id: int = config.TEAM_ID) -> list[dict]:
+def linhas_estatisticas(p: dict, team_id: int | None = None) -> list[dict]:
+    team_id = team_id or config.TEAM_ID
     linhas = []
     for bloco in p.get("statistics", []):
         for st in bloco.get("statistics", []):
@@ -194,7 +198,8 @@ def linhas_estatisticas(p: dict, team_id: int = config.TEAM_ID) -> list[dict]:
     return linhas
 
 
-def normalizar(partidas: list[dict], team_id: int = config.TEAM_ID) -> dict[str, list[dict]]:
+def normalizar(partidas: list[dict], team_id: int | None = None) -> dict[str, list[dict]]:
+    team_id = team_id or config.TEAM_ID
     tabelas = {"partidas": [], "jogadores_partida": [], "eventos": [], "estatisticas_time": []}
     for p in partidas:
         tabelas["partidas"].append(linha_partida(p, team_id))
@@ -204,8 +209,9 @@ def normalizar(partidas: list[dict], team_id: int = config.TEAM_ID) -> dict[str,
     return tabelas
 
 
-def linhas_calendario(jogos: list[dict], team_id: int = config.TEAM_ID) -> list[dict]:
+def linhas_calendario(jogos: list[dict], team_id: int | None = None) -> list[dict]:
     """Todos os jogos da temporada (inclusive futuros), a partir da lista de /fixtures."""
+    team_id = team_id or config.TEAM_ID
     linhas = []
     for j in jogos:
         nos, eles = _lado(j, team_id)
@@ -226,8 +232,9 @@ def linhas_calendario(jogos: list[dict], team_id: int = config.TEAM_ID) -> list[
     return linhas
 
 
-def linhas_elenco(squads: list[dict], team_id: int = config.TEAM_ID) -> list[dict]:
+def linhas_elenco(squads: list[dict], team_id: int | None = None) -> list[dict]:
     """Elenco atual a partir de /players/squads."""
+    team_id = team_id or config.TEAM_ID
     linhas = []
     for bloco in squads:
         if bloco["team"]["id"] != team_id:

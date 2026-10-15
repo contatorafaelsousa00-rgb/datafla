@@ -5,3 +5,8 @@ data/**/*.db
 .env
 data-demo/
 site/dados-demo/
+
+# Cache local do Firebase CLI
+.firebase/
+# Temporada 2024 (API-Football) fica só local: o painel é focado em 2026
+data/2024/

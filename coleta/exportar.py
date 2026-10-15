@@ -19,6 +19,7 @@ COMPETICOES = [
     ("copa do brasil", "Copa do Brasil"),
     ("carioca", "Carioca"),
     ("serie a", "Brasileirão"),
+    ("friendlies", "Amistosos"),
 ]
 
 POSICOES = {"G": "Goleiro", "D": "Defensor", "M": "Meio-campo", "F": "Atacante",
@@ -53,7 +54,11 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         "jogadores": [j for j in tabelas["jogadores_partida"] if j["eh_flamengo"]],
         "eventos": tabelas["eventos"],
         "estatisticas": tabelas["estatisticas_time"],
-        "validacao": validacao,
+        "finalizacoes": tabelas.get("finalizacoes", []),
+        "proximo": tabelas.get("proximo", []),
+        "fotos": tabelas.get("fotos", []),
+        # O painel só lista o que precisa de conferência; as checagens "ok" ficam no relatório local.
+        "validacao": {**validacao, "checagens": [c for c in validacao.get("checagens", []) if c["status"] != "ok"]},
     }
     for nome, linhas in conteudo.items():
         if isinstance(linhas, list):
@@ -65,6 +70,7 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         "gerado_em": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "temporada": config.SEASON,
         "demo": demo,
+        "fonte": config.FONTE,
     }
     arquivo = destino / f"{config.SEASON}.json"
     arquivo.write_text(json.dumps(conteudo, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

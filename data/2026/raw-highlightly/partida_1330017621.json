@@ -1,0 +1,466 @@
+{
+ "match": {
+  "venue": {
+   "city": null,
+   "name": null,
+   "country": null,
+   "capacity": null
+  },
+  "referee": {
+   "name": null,
+   "nationality": null
+  },
+  "forecast": {
+   "status": null,
+   "temperature": null
+  },
+  "events": [
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "46",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Emerson Royal",
+    "playerId": 252280,
+    "substituted": "Ayrton Lucas",
+    "assistingPlayerId": 285285
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "46",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Luiz Araujo",
+    "playerId": 3580472,
+    "substituted": "Lorran",
+    "assistingPlayerId": 64931454
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "51",
+    "type": "Goal",
+    "assist": null,
+    "player": "Lorran",
+    "playerId": 64931454,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "71",
+    "type": "Goal",
+    "assist": null,
+    "player": "Wallace Yan",
+    "playerId": 65230914,
+    "substituted": null,
+    "assistingPlayerId": null
+   }
+  ],
+  "predictions": {
+   "live": [
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T19:30:59.645Z",
+     "probabilities": {
+      "away": "64.81%",
+      "draw": "19.85%",
+      "home": "15.34%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T19:40:58.595Z",
+     "probabilities": {
+      "away": "60.55%",
+      "draw": "22.22%",
+      "home": "17.23%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T19:50:59.109Z",
+     "probabilities": {
+      "away": "61.10%",
+      "draw": "23.16%",
+      "home": "15.75%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T20:00:50.031Z",
+     "probabilities": {
+      "away": "58.66%",
+      "draw": "25.34%",
+      "home": "16.00%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T20:10:43.490Z",
+     "probabilities": {
+      "away": "55.91%",
+      "draw": "28.36%",
+      "home": "15.73%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T20:20:39.216Z",
+     "probabilities": {
+      "away": "53.01%",
+      "draw": "31.19%",
+      "home": "15.80%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T20:30:31.799Z",
+     "probabilities": {
+      "away": "52.49%",
+      "draw": "31.43%",
+      "home": "16.09%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T20:40:28.919Z",
+     "probabilities": {
+      "away": "73.22%",
+      "draw": "19.74%",
+      "home": "7.04%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T20:50:24.066Z",
+     "probabilities": {
+      "away": "78.38%",
+      "draw": "16.80%",
+      "home": "4.82%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T21:00:24.106Z",
+     "probabilities": {
+      "away": "88.41%",
+      "draw": "9.24%",
+      "home": "2.36%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T21:10:19.446Z",
+     "probabilities": {
+      "away": "90.64%",
+      "draw": "7.61%",
+      "home": "1.74%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T21:20:15.668Z",
+     "probabilities": {
+      "away": "91.25%",
+      "draw": "6.91%",
+      "home": "1.84%"
+     }
+    }
+   ],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-06T19:09:25.951Z",
+     "probabilities": {
+      "away": "51.44%",
+      "draw": "25.06%",
+      "home": "23.50%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-07T08:06:32.964Z",
+     "probabilities": {
+      "away": "51.31%",
+      "draw": "25.08%",
+      "home": "23.61%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-07T11:01:44.508Z",
+     "probabilities": {
+      "away": "51.31%",
+      "draw": "25.08%",
+      "home": "23.61%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-07T14:00:22.949Z",
+     "probabilities": {
+      "away": "52.19%",
+      "draw": "24.65%",
+      "home": "23.16%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-07T17:00:47.980Z",
+     "probabilities": {
+      "away": "52.12%",
+      "draw": "24.65%",
+      "home": "23.23%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-07T20:02:34.914Z",
+     "probabilities": {
+      "away": "52.13%",
+      "draw": "24.66%",
+      "home": "23.21%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T08:16:03.030Z",
+     "probabilities": {
+      "away": "52.09%",
+      "draw": "25.22%",
+      "home": "22.70%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T11:15:22.131Z",
+     "probabilities": {
+      "away": "60.71%",
+      "draw": "22.47%",
+      "home": "16.82%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T14:13:35.662Z",
+     "probabilities": {
+      "away": "63.05%",
+      "draw": "21.68%",
+      "home": "15.27%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T17:15:51.238Z",
+     "probabilities": {
+      "away": "60.43%",
+      "draw": "21.69%",
+      "home": "17.88%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Lausanne.",
+     "generatedAt": "2026-07-08T20:16:07.992Z",
+     "probabilities": {
+      "away": "63.56%",
+      "draw": "20.38%",
+      "home": "16.06%"
+     }
+    }
+   ]
+  },
+  "statistics": [
+   {
+    "statistics": [
+     {
+      "value": 56,
+      "displayName": "Attacks"
+     },
+     {
+      "value": 14,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 11,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 9,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 0.5,
+      "displayName": "Possession"
+     },
+     {
+      "value": 8,
+      "displayName": "Corners"
+     },
+     {
+      "value": 0,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 0,
+      "displayName": "Yellow cards"
+     }
+    ],
+    "team": {
+     "id": 863698,
+     "logo": "https://highlightly.net/soccer/images/teams/863698.png",
+     "name": "Lausanne"
+    }
+   },
+   {
+    "statistics": [
+     {
+      "value": 77,
+      "displayName": "Attacks"
+     },
+     {
+      "value": 13,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 15,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 2,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 0.5,
+      "displayName": "Possession"
+     },
+     {
+      "value": 4,
+      "displayName": "Corners"
+     },
+     {
+      "value": 0,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 1,
+      "displayName": "Yellow cards"
+     }
+    ],
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    }
+   }
+  ],
+  "id": 1330017621,
+  "round": "Club Friendlies",
+  "date": "2026-07-08T19:30:00.000Z",
+  "country": {
+   "code": "World",
+   "name": "World",
+   "logo": "https://highlightly.net/soccer/images/countries/World.png"
+  },
+  "state": {
+   "clock": 90,
+   "score": {
+    "current": "2 - 0",
+    "penalties": null
+   },
+   "description": "Finished"
+  },
+  "awayTeam": {
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo",
+   "topPlayers": [],
+   "shots": []
+  },
+  "homeTeam": {
+   "id": 863698,
+   "logo": "https://highlightly.net/soccer/images/teams/863698.png",
+   "name": "Lausanne",
+   "topPlayers": [],
+   "shots": []
+  },
+  "league": {
+   "id": 568401,
+   "logo": "https://highlightly.net/soccer/images/leagues/568401.png",
+   "name": "Friendlies Clubs",
+   "season": 2026
+  },
+  "news": []
+ },
+ "boxscore": [],
+ "_coletado_em": "2026-10-15T17:03:10.428981+00:00"
+}

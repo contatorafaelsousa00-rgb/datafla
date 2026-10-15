@@ -1,0 +1,614 @@
+{
+ "match": {
+  "venue": {
+   "city": null,
+   "name": null,
+   "country": null,
+   "capacity": null
+  },
+  "referee": {
+   "name": null,
+   "nationality": null
+  },
+  "forecast": {
+   "status": null,
+   "temperature": null
+  },
+  "events": [
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "8",
+    "type": "Goal",
+    "assist": null,
+    "player": "S. Driussi",
+    "playerId": 196896,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "29",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "Fausto Vera",
+    "playerId": 1082879,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "30",
+    "type": "Goal",
+    "assist": "Jorginho",
+    "player": "Samuel Lino",
+    "playerId": 20436850,
+    "substituted": null,
+    "assistingPlayerId": 368683
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "32",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "E. Pulgar",
+    "playerId": 412314,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "33",
+    "type": "Goal",
+    "assist": "Samuel Lino",
+    "player": "Bruno Henrique",
+    "playerId": 1639134,
+    "substituted": null,
+    "assistingPlayerId": 20436850
+   },
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "38",
+    "type": "Goal",
+    "assist": "G. Gonzalez",
+    "player": "S. Driussi",
+    "playerId": 196896,
+    "substituted": null,
+    "assistingPlayerId": 420364
+   },
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "46",
+    "type": "Substitution",
+    "assist": null,
+    "player": "J. Meza",
+    "playerId": 76083441,
+    "substituted": "L. Silva",
+    "assistingPlayerId": 105886795
+   },
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "58",
+    "type": "Substitution",
+    "assist": null,
+    "player": "M. Arambarri",
+    "playerId": 7608692,
+    "substituted": "F. Gonzalez",
+    "assistingPlayerId": 86676597
+   },
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "58",
+    "type": "Substitution",
+    "assist": null,
+    "player": "S. Driussi",
+    "playerId": 196896,
+    "substituted": "T. Goytia",
+    "assistingPlayerId": 105293671
+   },
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "58",
+    "type": "Substitution",
+    "assist": null,
+    "player": "M. Acuna",
+    "playerId": 240527,
+    "substituted": "L. Pereyra",
+    "assistingPlayerId": 103390168
+   },
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "58",
+    "type": "Substitution",
+    "assist": null,
+    "player": "F. Colidio",
+    "playerId": 34608,
+    "substituted": "J. Freitas",
+    "assistingPlayerId": 90210708
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "60",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Pedro",
+    "playerId": 1661835,
+    "substituted": "J. Goes",
+    "assistingPlayerId": 82551294
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "60",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Bruno Henrique",
+    "playerId": 1639134,
+    "substituted": "Wallace Yan",
+    "assistingPlayerId": 65230914
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "60",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Jorginho",
+    "playerId": 368683,
+    "substituted": "Everton",
+    "assistingPlayerId": 388808
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "68",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Emerson Royal",
+    "playerId": 252280,
+    "substituted": "S. Niguez",
+    "assistingPlayerId": 7882
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "68",
+    "type": "Substitution",
+    "assist": null,
+    "player": "A. Rossi",
+    "playerId": 1892870,
+    "substituted": "A. da Silva Ventura",
+    "assistingPlayerId": 12965162
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "68",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Luiz Araujo",
+    "playerId": 3580472,
+    "substituted": "Daniel Sales",
+    "assistingPlayerId": 64931293
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "77",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Samuel Lino",
+    "playerId": 20436850,
+    "substituted": "Joshua",
+    "assistingPlayerId": 87694439
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "77",
+    "type": "Substitution",
+    "assist": null,
+    "player": "E. Pulgar",
+    "playerId": 412314,
+    "substituted": "Lorran",
+    "assistingPlayerId": 64931454
+   },
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "79",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "G. Gonzalez",
+    "playerId": 420364,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "85",
+    "type": "Substitution",
+    "assist": null,
+    "player": "G. Gonzalez",
+    "playerId": 420364,
+    "substituted": "U. Gimenez",
+    "assistingPlayerId": 66717105
+   },
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "85",
+    "type": "Substitution",
+    "assist": null,
+    "player": "L. Martinez Quarta",
+    "playerId": 966154,
+    "substituted": "V. Lucero",
+    "assistingPlayerId": 90235502
+   },
+   {
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    },
+    "time": "90+5",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "L. Rivero",
+    "playerId": 74680165,
+    "substituted": null,
+    "assistingPlayerId": null
+   }
+  ],
+  "predictions": {
+   "live": [
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "River Plate is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-07-03T18:52:59.369Z",
+     "probabilities": {
+      "away": "27.33%",
+      "draw": "29.14%",
+      "home": "43.52%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-03T19:02:36.406Z",
+     "probabilities": {
+      "away": "49.79%",
+      "draw": "31.44%",
+      "home": "18.77%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-03T19:12:28.107Z",
+     "probabilities": {
+      "away": "53.63%",
+      "draw": "30.99%",
+      "home": "15.38%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-03T19:22:53.473Z",
+     "probabilities": {
+      "away": "46.27%",
+      "draw": "35.83%",
+      "home": "17.90%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-03T19:32:36.222Z",
+     "probabilities": {
+      "away": "46.10%",
+      "draw": "35.65%",
+      "home": "18.25%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-03T19:43:08.663Z",
+     "probabilities": {
+      "away": "43.55%",
+      "draw": "38.12%",
+      "home": "18.33%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "The match will most likely result in a draw.",
+     "generatedAt": "2026-07-03T19:53:02.972Z",
+     "probabilities": {
+      "away": "38.08%",
+      "draw": "46.31%",
+      "home": "15.62%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "The match will most likely result in a draw.",
+     "generatedAt": "2026-07-03T20:02:08.732Z",
+     "probabilities": {
+      "away": "31.83%",
+      "draw": "53.57%",
+      "home": "14.60%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "The match will most likely result in a draw.",
+     "generatedAt": "2026-07-03T20:11:43.305Z",
+     "probabilities": {
+      "away": "26.48%",
+      "draw": "60.36%",
+      "home": "13.16%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "The match will most likely result in a draw.",
+     "generatedAt": "2026-07-03T20:21:41.829Z",
+     "probabilities": {
+      "away": "12.80%",
+      "draw": "79.82%",
+      "home": "7.38%"
+     }
+    }
+   ],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-02T08:19:31.818Z",
+     "probabilities": {
+      "away": "44.63%",
+      "draw": "27.68%",
+      "home": "27.68%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-02T11:23:54.112Z",
+     "probabilities": {
+      "away": "44.70%",
+      "draw": "27.78%",
+      "home": "27.52%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-02T14:32:20.364Z",
+     "probabilities": {
+      "away": "45.56%",
+      "draw": "27.67%",
+      "home": "26.77%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-02T17:42:35.725Z",
+     "probabilities": {
+      "away": "45.68%",
+      "draw": "27.64%",
+      "home": "26.68%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-02T20:52:54.496Z",
+     "probabilities": {
+      "away": "45.45%",
+      "draw": "27.48%",
+      "home": "27.07%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-03T08:57:59.600Z",
+     "probabilities": {
+      "away": "47.04%",
+      "draw": "27.02%",
+      "home": "25.93%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-03T12:04:49.143Z",
+     "probabilities": {
+      "away": "45.70%",
+      "draw": "27.18%",
+      "home": "27.13%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-03T15:14:15.822Z",
+     "probabilities": {
+      "away": "43.78%",
+      "draw": "28.78%",
+      "home": "27.44%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against River Plate.",
+     "generatedAt": "2026-07-03T18:28:00.253Z",
+     "probabilities": {
+      "away": "51.00%",
+      "draw": "26.68%",
+      "home": "22.33%"
+     }
+    }
+   ]
+  },
+  "statistics": [
+   {
+    "statistics": [],
+    "team": {
+     "id": 370969,
+     "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+     "name": "River Plate"
+    }
+   },
+   {
+    "statistics": [],
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    }
+   }
+  ],
+  "id": 1327991390,
+  "round": "Club Friendlies",
+  "date": "2026-07-03T18:30:00.000Z",
+  "country": {
+   "code": "World",
+   "name": "World",
+   "logo": "https://highlightly.net/soccer/images/countries/World.png"
+  },
+  "state": {
+   "clock": 90,
+   "score": {
+    "current": "2 - 2",
+    "penalties": null
+   },
+   "description": "Finished"
+  },
+  "awayTeam": {
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo",
+   "topPlayers": [],
+   "shots": []
+  },
+  "homeTeam": {
+   "id": 370969,
+   "logo": "https://highlightly.net/soccer/images/teams/370969.png",
+   "name": "River Plate",
+   "topPlayers": [],
+   "shots": []
+  },
+  "league": {
+   "id": 568401,
+   "logo": "https://highlightly.net/soccer/images/leagues/568401.png",
+   "name": "Friendlies Clubs",
+   "season": 2026
+  },
+  "news": []
+ },
+ "boxscore": [],
+ "_coletado_em": "2026-10-15T17:03:14.495564+00:00"
+}

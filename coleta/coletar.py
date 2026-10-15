@@ -2,10 +2,13 @@
 
     python -m coleta.coletar status     # confere chave, cota, time e acesso à temporada
     (todos aceitam --temporada 2025; o padrão é o ano atual)
+    (e --fonte highlightly|api-football; o padrão é highlightly quando há HIGHLIGHTLY_KEY no .env)
 
     python -m coleta.coletar jogos      # baixa a lista de jogos do Flamengo na temporada
     python -m coleta.coletar elenco     # baixa o elenco atual (idade, posição, número)
     python -m coleta.coletar detalhes   # baixa os detalhes dos jogos encerrados que faltam
+    python -m coleta.coletar proximo    # detalhe do próximo jogo: previsão, estádio, árbitro (Highlightly)
+    python -m coleta.coletar fotos      # fotos dos jogadores (elenco da API-Football; renovado a cada 7 dias)
     python -m coleta.coletar processar  # gera banco, CSVs e relatório de validação (sem usar a API)
     python -m coleta.coletar tudo       # jogos + elenco + detalhes + processar
     python -m coleta.coletar modelo-sumula <id_partida>  # cria planilha para conferir com a súmula
@@ -20,7 +23,7 @@ import os
 import sys
 from datetime import datetime, timedelta, timezone
 
-from . import alteracoes, armazenar, config, exportar, inspecionar, normalizar, sumulas, validar
+from . import alteracoes, armazenar, config, exportar, fotos, highlightly, inspecionar, normalizar, sumulas, validar
 from .api import ClienteAPI, ErroAPI, ler_raw, salvar_raw
 
 ARQ_JOGOS = "jogos"
@@ -102,7 +105,10 @@ def cmd_detalhes(api: ClienteAPI):
     print(f"{len(pendentes)} jogos para baixar ({-(-len(pendentes) // config.LOTE_DETALHES)} requisições).")
     for i in range(0, len(pendentes), config.LOTE_DETALHES):
         lote = pendentes[i:i + config.LOTE_DETALHES]
-        corpo = api.get("fixtures", ids="-".join(map(str, lote)))
+        if len(lote) == 1:
+            corpo = api.get("fixtures", id=lote[0])
+        else:
+            corpo = api.get("fixtures", ids="-".join(map(str, lote)))
         mudancas = []
         for partida in corpo["response"]:
             partida["_coletado_em"] = _agora().isoformat()
@@ -124,15 +130,29 @@ def carregar_partidas() -> list[dict]:
     ]
 
 
+def _hl() -> bool:
+    return config.FONTE == "highlightly"
+
+
+def _normalizar(partidas: list[dict]) -> dict:
+    return highlightly.normalizar(partidas) if _hl() else normalizar.normalizar(partidas, config.TEAM_ID)
+
+
 def cmd_processar():
     partidas = carregar_partidas()
     if not partidas:
-        print("Nenhum jogo baixado ainda.")
+        print(f"Nenhum jogo baixado ainda em {config.RAW_DIR} (fonte {config.FONTE}).")
         return 1
-    tabelas = normalizar.normalizar(partidas)
+    tabelas = _normalizar(partidas)
     jogos, elenco = ler_raw(ARQ_JOGOS), ler_raw(ARQ_ELENCO)
-    tabelas["calendario"] = normalizar.linhas_calendario(jogos["response"]) if jogos else []
-    tabelas["elenco"] = normalizar.linhas_elenco(elenco["response"]) if elenco else []
+    if _hl():
+        tabelas["calendario"] = highlightly.linhas_calendario(jogos["data"]) if jogos else []
+    else:
+        tabelas["calendario"] = normalizar.linhas_calendario(jogos["response"], config.TEAM_ID) if jogos else []
+    tabelas["elenco"] = normalizar.linhas_elenco(elenco["response"], config.TEAM_ID) if elenco else []
+    if _hl() and jogos:
+        tabelas["proximo"] = highlightly.linhas_proximo(ler_raw(highlightly.ARQ_PROXIMO), jogos["data"])
+        tabelas["fotos"] = fotos.linhas_fotos(tabelas["jogadores_partida"])
     armazenar.salvar_sqlite(tabelas)
     armazenar.salvar_csv(tabelas)
 
@@ -152,7 +172,7 @@ def cmd_processar():
 
 def _tabelas_baixadas():
     partidas = carregar_partidas()
-    return normalizar.normalizar(partidas) if partidas else None
+    return _normalizar(partidas) if partidas else None
 
 
 def cmd_modelo_sumula(id_partida: int):
@@ -190,6 +210,9 @@ def cmd_sumulas():
 
 
 def cmd_inspecionar():
+    if _hl():
+        print("O comando inspecionar responde dúvidas da API-Football; use --fonte api-football.")
+        return 1
     partidas = carregar_partidas()
     if not partidas:
         print("Nenhum jogo baixado ainda. Rode antes: python -m coleta.coletar tudo")
@@ -205,13 +228,16 @@ def cmd_inspecionar():
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("comando", choices=[
-        "status", "jogos", "elenco", "detalhes", "processar", "tudo", "modelo-sumula", "sumulas", "inspecionar"])
+        "status", "jogos", "elenco", "detalhes", "proximo", "fotos", "processar", "tudo", "modelo-sumula", "sumulas", "inspecionar"])
     parser.add_argument("id_partida", nargs="?", type=int)
     parser.add_argument("-t", "--temporada", type=int, help=f"ano da temporada (padrão: {config.SEASON})")
+    parser.add_argument("-f", "--fonte", choices=sorted(config.FONTES), help=f"fonte dos dados (padrão: {config.FONTE})")
     args = parser.parse_args(argv)
+    if args.fonte:
+        config.aplicar_fonte(args.fonte)
     if args.temporada:
         config.aplicar_temporada(args.temporada)
-    print(f"Temporada {config.SEASON}")
+    print(f"Temporada {config.SEASON} · fonte {config.FONTE}")
 
     if args.comando == "processar":
         return cmd_processar()
@@ -225,11 +251,28 @@ def main(argv=None):
         return cmd_modelo_sumula(args.id_partida)
 
     try:
-        api = ClienteAPI()
+        api = highlightly.ClienteHighlightly() if _hl() else ClienteAPI()
     except RuntimeError as e:
         print(e)
         return 1
     try:
+        if _hl():
+            if args.comando == "status":
+                return highlightly.cmd_status(api)
+            if args.comando == "jogos":
+                return highlightly.cmd_jogos(api)
+            if args.comando == "elenco":
+                print("Elenco: a fonte Highlightly não tem elenco; os jogadores vêm dos jogos.")
+                return 0
+            if args.comando == "detalhes":
+                return highlightly.cmd_detalhes(api)
+            if args.comando == "proximo":
+                return highlightly.cmd_proximo(api)
+            if args.comando == "fotos":
+                return fotos.cmd_fotos(forcar=True)
+            # Jogos encerrados têm prioridade na cota; o próximo jogo vem depois.
+            return (highlightly.cmd_jogos(api) or highlightly.cmd_detalhes(api)
+                    or highlightly.cmd_proximo(api) or fotos.cmd_fotos() or cmd_processar())
         if args.comando == "status":
             return cmd_status(api)
         if args.comando == "jogos":

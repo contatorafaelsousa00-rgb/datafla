@@ -1,9 +1,52 @@
 {
   "hosting": {
     "public": "site",
-    "ignore": ["**/.*", "dados-demo/**"],
+    "ignore": [
+      "**/.*",
+      "dados-demo/**"
+    ],
+    "cleanUrls": true,
     "headers": [
-      { "source": "dados/**", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] }
+      {
+        "source": "**/dados/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(js|css|html)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          }
+        ]
+      }
     ]
   }
 }

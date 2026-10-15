@@ -16,9 +16,9 @@ CAMPOS = ["id_partida", "data_jogo", "coletado_antes", "coletado_agora", "horas_
           "tabela", "chave", "campo", "antes", "depois"]
 
 
-def _indexar(partida: dict) -> dict[tuple, dict]:
+def _indexar(partida: dict, normalizador=None) -> dict[tuple, dict]:
     """Achata a partida em {(tabela, chave): linha} para comparar campo a campo."""
-    t = normalizar.normalizar([partida])
+    t = (normalizador or normalizar.normalizar)([partida])
     idx = {("partida", ""): t["partidas"][0]}
     for j in t["jogadores_partida"]:
         idx[("jogador", f"{j['time_id']}:{j['jogador_id']}")] = j
@@ -29,13 +29,19 @@ def _indexar(partida: dict) -> dict[tuple, dict]:
     return idx
 
 
-def comparar(antiga: dict, nova: dict) -> list[dict]:
-    a, n = _indexar(antiga), _indexar(nova)
-    data_jogo = datetime.fromisoformat(nova["fixture"]["date"])
+def _id_e_data(partida: dict) -> tuple[int, str]:
+    return partida["fixture"]["id"], partida["fixture"]["date"]
+
+
+def comparar(antiga: dict, nova: dict, normalizador=None, id_e_data=_id_e_data) -> list[dict]:
+    """`normalizador` e `id_e_data` permitem comparar respostas de outra fonte (Highlightly)."""
+    a, n = _indexar(antiga, normalizador), _indexar(nova, normalizador)
+    pid, data_txt = id_e_data(nova)
+    data_jogo = datetime.fromisoformat(data_txt)
     agora = datetime.fromisoformat(nova["_coletado_em"])
     base = {
-        "id_partida": nova["fixture"]["id"],
-        "data_jogo": nova["fixture"]["date"],
+        "id_partida": pid,
+        "data_jogo": data_txt,
         "coletado_antes": antiga.get("_coletado_em"),
         "coletado_agora": nova["_coletado_em"],
         "horas_apos_jogo": round((agora - data_jogo).total_seconds() / 3600, 1),

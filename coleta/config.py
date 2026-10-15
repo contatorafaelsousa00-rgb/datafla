@@ -33,9 +33,25 @@ TEMPORADA_ATUAL = datetime.now(timezone.utc).year
 BASE_URL = "https://v3.football.api-sports.io"
 API_KEY_ENV = "API_FOOTBALL_KEY"
 
-# ID do Flamengo na API-Football. O comando `python -m coleta.coletar status`
-# confere se o ID corresponde mesmo ao Flamengo antes de coletar.
-TEAM_ID = int(os.environ.get("FLA_TEAM_ID", "127"))
+# Fontes de dados. Cada uma tem seus próprios IDs, então o ID do Flamengo e a pasta das
+# respostas brutas dependem da fonte (nunca misturar fontes na mesma temporada).
+#   highlightly  — temporada atual no plano grátis (padrão quando há HIGHLIGHTLY_KEY)
+#   api-football — temporadas 2022 a 2024 no plano grátis
+FONTES = {
+    "api-football": {"team_id": int(os.environ.get("FLA_TEAM_ID", "127")), "raw": "raw"},
+    "highlightly": {"team_id": int(os.environ.get("FLA_HL_TEAM_ID", "108861")), "raw": "raw-highlightly"},
+}
+_padrao = "highlightly" if os.environ.get("HIGHLIGHTLY_KEY", "cole_sua_chave_aqui") != "cole_sua_chave_aqui" else "api-football"
+FONTE = os.environ.get("FLA_FONTE", _padrao)
+TEAM_ID = FONTES[FONTE]["team_id"]
+
+
+def aplicar_fonte(fonte: str) -> None:
+    """Troca a fonte de dados (ID do Flamengo e pasta das respostas brutas)."""
+    global FONTE, TEAM_ID
+    FONTE = fonte
+    TEAM_ID = FONTES[fonte]["team_id"]
+    aplicar_temporada(SEASON)
 
 
 def aplicar_temporada(ano: int) -> None:
@@ -43,7 +59,7 @@ def aplicar_temporada(ano: int) -> None:
     global SEASON, PASTA_TEMPORADA, RAW_DIR, DB_PATH, CSV_DIR, RELATORIO_DIR, SUMULAS_DIR
     SEASON = int(ano)
     PASTA_TEMPORADA = DATA_DIR / str(SEASON)
-    RAW_DIR = PASTA_TEMPORADA / "raw"
+    RAW_DIR = PASTA_TEMPORADA / FONTES[FONTE]["raw"]
     DB_PATH = PASTA_TEMPORADA / "flamengo.db"
     CSV_DIR = PASTA_TEMPORADA / "csv"
     RELATORIO_DIR = PASTA_TEMPORADA / "validacao"
@@ -52,8 +68,9 @@ def aplicar_temporada(ano: int) -> None:
 
 aplicar_temporada(os.environ.get("FLA_SEASON", TEMPORADA_ATUAL))
 
-# A API aceita até 20 IDs por chamada em /fixtures?ids=
-LOTE_DETALHES = 20
+# A API aceita até 20 IDs por chamada em /fixtures?ids=, mas o plano grátis
+# recusa o parâmetro `ids`; com FLA_LOTE_DETALHES=1 cada jogo vai por /fixtures?id=.
+LOTE_DETALHES = int(os.environ.get("FLA_LOTE_DETALHES", "20"))
 
 # Jogos encerrados há menos que isso são coletados de novo, porque a API
 # costuma corrigir estatísticas nas horas seguintes ao jogo.

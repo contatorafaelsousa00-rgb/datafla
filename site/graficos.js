@@ -1,4 +1,4 @@
-// Gráficos em SVG, sem bibliotecas. Cores vêm das variáveis CSS (--s1..--s6, --seq-*).
+// Gráficos em SVG, sem bibliotecas. Cores vêm das variáveis CSS (--s1..--s6, --serie-*, --seq-*).
 
 const NS = "http://www.w3.org/2000/svg";
 
@@ -113,14 +113,23 @@ export function legenda(container, itens, tipo = "caixa") {
 }
 
 // ---------- barras horizontais ----------
-// itens: [{rotulo, valor, texto, cor, dica: () => nós}]
+// itens: [{rotulo, valor, texto, cor, dica: () => nós, icone?: {src, classe}}]
+// Com ícones (ex.: logos das competições), uma coluna à esquerda mostra o ícone, ou a bolinha da cor se faltar.
 export function barrasHorizontais(container, itens, { max, larguraRotulo = 120 } = {}) {
-  const linha = 30, espessura = 16;
+  const linha = 30, espessura = 16, icone = 24;
+  const comIcone = itens.some((i) => i.icone);
   const { s, largura } = novoSvg(container, itens.length * linha + 4);
   const maxV = max ?? Math.max(...itens.map((i) => i.valor), 1);
+  const inicio = larguraRotulo + (comIcone ? icone + 8 : 0);
+  larguraRotulo = inicio;
   const util = largura - larguraRotulo - 56;
   itens.forEach((it, k) => {
     const y = k * linha;
+    if (comIcone) {
+      if (it.icone) el("image", { href: it.icone.src, x: 0, y: y + (linha - icone) / 2, width: icone, height: icone,
+        class: it.icone.classe, preserveAspectRatio: "xMidYMid meet" }, s);
+      else el("circle", { cx: icone / 2, cy: y + linha / 2, r: 5, fill: it.cor }, s);
+    }
     texto(s, larguraRotulo - 10, y + linha / 2 + 4, it.rotulo, { class: "rotulo-cat", "text-anchor": "end" });
     const w = Math.max(2, (it.valor / maxV) * util);
     const g = el("g", { class: "marca", tabindex: 0 }, s);
@@ -274,4 +283,205 @@ export function mapaCalor(container, linhasM, colunasM, valor, { celula = 14, la
     });
     texto(s, larguraRotulo + colunasM.length * (celula + 2) + 6, y + celula - 3, l.extra, { class: "eixo-texto" });
   });
+}
+
+// ---------- dispersão (ex.: gols × xG por jogador) ----------
+// pontos: [{x, y, rotulo, cor, destaque, dica}]; desenha a diagonal y = x como referência.
+export function dispersao(container, pontos, { altura = 320, nomeX = "x", nomeY = "y", diagonal = true } = {}) {
+  const m = { t: 14, r: 16, b: 38, l: 40 };
+  const { s, largura } = novoSvg(container, altura);
+  const max = Math.max(1, ...pontos.flatMap((p) => [p.x, p.y]));
+  const ticks = divisoes(max);
+  const topo = ticks[ticks.length - 1];
+  const h = altura - m.t - m.b, w = largura - m.l - m.r;
+  const x = (v) => m.l + (v / topo) * w;
+  const y = (v) => m.t + h - (v / topo) * h;
+  for (const t of ticks) {
+    el("line", { x1: m.l, x2: m.l + w, y1: y(t), y2: y(t), class: t === 0 ? "linha-base" : "linha-grade" }, s);
+    el("line", { x1: x(t), x2: x(t), y1: m.t, y2: m.t + h, class: t === 0 ? "linha-base" : "linha-grade" }, s);
+    texto(s, m.l - 6, y(t) + 4, String(t), { class: "eixo-texto", "text-anchor": "end" });
+    texto(s, x(t), m.t + h + 16, String(t), { class: "eixo-texto", "text-anchor": "middle" });
+  }
+  texto(s, m.l + w, altura - 4, nomeX, { class: "eixo-texto", "text-anchor": "end" });
+  texto(s, m.l + 4, m.t + 10, nomeY, { class: "eixo-texto" });
+  if (diagonal) el("line", { x1: x(0), y1: y(0), x2: x(topo), y2: y(topo), stroke: "var(--eixo)", "stroke-dasharray": "4 4" }, s);
+  const ordenados = pontos.slice().sort((a, b) => (a.destaque ? 1 : 0) - (b.destaque ? 1 : 0));
+  for (const p of ordenados) {
+    const g = el("g", { class: "marca", tabindex: 0 }, s);
+    el("circle", { cx: x(p.x), cy: y(p.y), r: p.destaque ? 6 : 4.5, fill: p.cor, "fill-opacity": p.destaque ? 1 : 0.75,
+      stroke: "var(--superficie)", "stroke-width": 1.5 }, g);
+    if (p.destaque) texto(s, x(p.x) + 9, y(p.y) + 4, p.rotulo, { class: "rotulo-dado" });
+    if (p.dica) dica(g, p.dica);
+  }
+}
+
+// ---------- barras espelhadas (Flamengo × adversário) ----------
+// linhas: [{rotulo, a, b, texto: v => string}]; cada linha é normalizada pelo maior dos dois lados.
+export function barrasEspelhadas(container, linhasE, { nomeA = "A", nomeB = "B", corA = "var(--serie-1)", corB = "var(--serie-2)" } = {}) {
+  const linha = 34, espessura = 8;
+  const { s, largura } = novoSvg(container, linhasE.length * linha + 4);
+  const meio = largura / 2, raio = espessura / 2;
+  linhasE.forEach((l, i) => {
+    const y0 = i * linha;
+    const total = Math.max((l.a ?? 0) + (l.b ?? 0), 1e-9);
+    const metade = meio - 4;
+    const wa = ((l.a ?? 0) / total) * metade, wb = ((l.b ?? 0) / total) * metade;
+    const fmt = l.texto ?? ((v) => String(v));
+    texto(s, meio, y0 + 12, l.rotulo, { class: "rotulo-cat", "text-anchor": "middle" });
+    texto(s, 0, y0 + 12, l.a === null || l.a === undefined ? "–" : fmt(l.a), { class: "rotulo-dado", "font-weight": (l.a ?? 0) > (l.b ?? 0) ? 700 : 400 });
+    texto(s, largura, y0 + 12, l.b === null || l.b === undefined ? "–" : fmt(l.b), { class: "rotulo-dado", "text-anchor": "end", "font-weight": (l.b ?? 0) > (l.a ?? 0) ? 700 : 400 });
+    el("rect", { x: 0, y: y0 + 18, width: largura, height: espessura, rx: raio, fill: "var(--grade)" }, s);
+    if (wa > 0) el("rect", { x: meio - 2 - wa, y: y0 + 18, width: wa, height: espessura, rx: raio, fill: corA }, s);
+    if (wb > 0) el("rect", { x: meio + 2, y: y0 + 18, width: wb, height: espessura, rx: raio, fill: corB }, s);
+  });
+  legenda(container, [{ nome: nomeA, cor: corA }, { nome: nomeB, cor: corB }]);
+}
+
+// ---------- mapa do gol (onde as finalizações foram) ----------
+// finalizacoes: [{alvo: "Low Left" | "High Centre" | null, resultado: "Goal" | "Saved" | "Missed" | "Blocked" ...}]
+// Vista de quem chuta: colunas esquerda/centro/direita, linhas alto/baixo; o que não foi no gol vai abaixo.
+export function mapaGol(container, finalizacoes, { cor = "var(--serie-1)" } = {}) {
+  const largura = Math.min(360, Math.max(260, container.clientWidth || 320));
+  container.replaceChildren();
+  const altura = 196;
+  const s = el("svg", { width: largura, height: altura, viewBox: `0 0 ${largura} ${altura}`, role: "img" }, container);
+  const gx = 20, gy = 18, gw = largura - 40, gh = 110;
+  const col = (a) => (/left/i.test(a) ? 0 : /right/i.test(a) ? 2 : /cent/i.test(a) ? 1 : null);
+  const lin = (a) => (/high|top/i.test(a) ? 0 : /low|bottom/i.test(a) ? 1 : null);
+  const celulas = Array.from({ length: 6 }, () => ({ total: 0, gols: 0 }));
+  const fora = { total: 0, gols: 0 };
+  for (const f of finalizacoes) {
+    const c = f.alvo ? col(f.alvo) : null, r = f.alvo ? lin(f.alvo) : null;
+    const gol = /goal/i.test(f.resultado ?? "");
+    const no = c !== null && r !== null && !/missed|blocked|post|bar/i.test(f.resultado ?? "") ? celulas[r * 3 + c] : fora;
+    no.total++; if (gol) no.gols++;
+  }
+  const max = Math.max(1, ...celulas.map((c) => c.total));
+  el("rect", { x: gx, y: gy, width: gw, height: gh, fill: "none", stroke: "var(--texto-2)", "stroke-width": 3 }, s);
+  el("line", { x1: 0, x2: largura, y1: gy + gh, y2: gy + gh, class: "linha-base" }, s);
+  celulas.forEach((c, i) => {
+    const cx = gx + (i % 3) * (gw / 3), cy = gy + Math.floor(i / 3) * (gh / 2);
+    const g = el("g", { class: "marca", tabindex: 0 }, s);
+    el("rect", { x: cx + 3, y: cy + 3, width: gw / 3 - 6, height: gh / 2 - 6, rx: 6, fill: cor,
+      "fill-opacity": c.total ? 0.15 + 0.75 * (c.total / max) : 0.04 }, g);
+    if (c.total) texto(s, cx + gw / 6, cy + gh / 4 + 5, c.gols ? `${c.total} · ${c.gols} gol${c.gols > 1 ? "s" : ""}` : String(c.total),
+      { class: "rotulo-dado", "text-anchor": "middle", "font-weight": 600 });
+    const nomes = ["alto à esquerda", "alto no centro", "alto à direita", "baixo à esquerda", "baixo no centro", "baixo à direita"];
+    dica(g, () => conteudoDica(`Canto ${nomes[i]}`, [{ valor: c.total, nome: "no alvo" }, { valor: c.gols, nome: "gols" }]));
+  });
+  texto(s, largura / 2, gy + gh + 30, `${fora.total} finalizações fora do alvo ou bloqueadas`, { class: "eixo-texto", "text-anchor": "middle" });
+  texto(s, largura / 2, gy + gh + 48, `Total: ${finalizacoes.length}`, { class: "eixo-texto", "text-anchor": "middle" });
+}
+
+// ---------- colunas divergentes (ex.: saldo de xG por jogo) ----------
+// itens: [{valor (+/-), cor, marcador: 'V'|'E'|'D', dica}]; marcador aparece abaixo do eixo.
+export function colunasDivergentes(container, itens, { altura = 220, rotuloX, formato = (v) => v.toFixed(1) } = {}) {
+  const m = { t: 10, r: 8, b: 40, l: 36 };
+  const { s, largura } = novoSvg(container, altura);
+  const maxAbs = Math.max(0.5, ...itens.map((i) => Math.abs(i.valor ?? 0)));
+  const ticks = divisoes(maxAbs, 2);
+  const topo = ticks[ticks.length - 1];
+  const h = altura - m.t - m.b, w = largura - m.l - m.r;
+  const meio = m.t + h / 2;
+  const y = (v) => meio - (v / topo) * (h / 2);
+  for (const t of ticks) for (const sinal of t === 0 ? [1] : [1, -1]) {
+    const v = t * sinal;
+    el("line", { x1: m.l, x2: largura - m.r, y1: y(v), y2: y(v), class: v === 0 ? "linha-base" : "linha-grade" }, s);
+    texto(s, m.l - 6, y(v) + 4, (v > 0 ? "+" : "") + formato(v).replace(/\.0$/, ""), { class: "eixo-texto", "text-anchor": "end" });
+  }
+  const banda = w / Math.max(1, itens.length);
+  const barra = Math.max(2, Math.min(18, banda - 3));
+  let ultimoRotulo = -Infinity;
+  itens.forEach((it, i) => {
+    const x0 = m.l + i * banda + (banda - barra) / 2;
+    const g = el("g", { class: "marca", tabindex: 0 }, s);
+    el("rect", { x: m.l + i * banda, y: m.t, width: banda, height: h + 22, fill: "transparent" }, g);
+    if (it.valor !== null && it.valor !== undefined) {
+      const y1 = Math.min(y(it.valor), meio), alt = Math.max(1, Math.abs(y(it.valor) - meio));
+      el("rect", { x: x0, y: y1, width: barra, height: alt, rx: Math.min(3, barra / 2), fill: it.cor }, g);
+    }
+    if (it.marcador) el("circle", { cx: x0 + barra / 2, cy: m.t + h + 10, r: Math.min(4, barra / 2 + 1),
+      class: `ponto-res ${it.marcador}` }, g);
+    if (it.dica) dica(g, it.dica);
+    const rx = rotuloX?.(i);
+    if (rx && m.l + i * banda - ultimoRotulo > 56) {
+      texto(s, m.l + i * banda + banda / 2, altura - 4, rx, { class: "eixo-texto", "text-anchor": "middle" });
+      ultimoRotulo = m.l + i * banda;
+    }
+  });
+}
+
+// ---------- série com faixa fixa (ex.: nota por jogo, de 5 a 9) ----------
+// itens: [{valor|null, cor, dica}]; referencia: linha tracejada (ex.: média).
+export function serie(container, itens, { altura = 180, min = 0, max = 10, referencia, rotuloX, formato = (v) => v.toFixed(1) } = {}) {
+  const m = { t: 12, r: 12, b: 26, l: 32 };
+  const { s, largura } = novoSvg(container, altura);
+  const h = altura - m.t - m.b, w = largura - m.l - m.r;
+  const n = itens.length;
+  const x = (i) => m.l + (n <= 1 ? w / 2 : (i / (n - 1)) * w);
+  const y = (v) => m.t + h - ((Math.max(min, Math.min(max, v)) - min) / (max - min)) * h;
+  const passo = (max - min) / 4;
+  for (let v = min; v <= max + 1e-9; v += passo) {
+    el("line", { x1: m.l, x2: m.l + w, y1: y(v), y2: y(v), class: v === min ? "linha-base" : "linha-grade" }, s);
+    texto(s, m.l - 6, y(v) + 4, formato(v).replace(/\.0$/, ""), { class: "eixo-texto", "text-anchor": "end" });
+  }
+  if (referencia !== null && referencia !== undefined)
+    el("line", { x1: m.l, x2: m.l + w, y1: y(referencia), y2: y(referencia), stroke: "var(--texto-2)", "stroke-dasharray": "4 4" }, s);
+  let d = "", aberto = false;
+  itens.forEach((it, i) => {
+    if (it.valor === null || it.valor === undefined) { aberto = false; return; }
+    d += `${aberto ? "L" : "M"}${x(i)},${y(it.valor)}`;
+    aberto = true;
+  });
+  el("path", { d, fill: "none", stroke: "var(--eixo)", "stroke-width": 1.5 }, s);
+  let ultimoRotulo = -Infinity;
+  itens.forEach((it, i) => {
+    if (it.valor !== null && it.valor !== undefined) {
+      const g = el("g", { class: "marca", tabindex: 0 }, s);
+      el("circle", { cx: x(i), cy: y(it.valor), r: 9, fill: "transparent" }, g);
+      el("circle", { cx: x(i), cy: y(it.valor), r: 4, fill: it.cor ?? "var(--serie-1)", stroke: "var(--superficie)", "stroke-width": 1.5 }, g);
+      if (it.dica) dica(g, it.dica);
+    }
+    const rx = rotuloX?.(i);
+    if (rx && x(i) - ultimoRotulo > 56) { texto(s, x(i), altura - 8, rx, { class: "eixo-texto", "text-anchor": "middle" }); ultimoRotulo = x(i); }
+  });
+}
+
+// ---------- linha do tempo da partida ----------
+// marcas: [{minuto, lado: 'pro'|'contra', tipo: 'chute'|'alvo'|'gol'|'amarelo'|'vermelho'|'sub', dica}]
+export function linhaTempo(container, marcas, { duracao = 90 } = {}) {
+  const altura = 132;
+  const m = { l: 12, r: 12 };
+  const { s, largura } = novoSvg(container, altura);
+  const w = largura - m.l - m.r, meio = 66;
+  const fim = Math.max(duracao, ...marcas.map((k) => k.minuto ?? 0));
+  const x = (min) => m.l + (Math.min(min, fim) / fim) * w;
+  el("line", { x1: m.l, x2: m.l + w, y1: meio, y2: meio, class: "linha-base" }, s);
+  for (const t of [0, 15, 30, 45, 60, 75, 90].concat(fim > 95 ? [105, 120] : []).filter((t) => t <= fim)) {
+    el("line", { x1: x(t), x2: x(t), y1: meio - 4, y2: meio + 4, class: "linha-base" }, s);
+    texto(s, x(t), altura - 2, `${t}'`, { class: "eixo-texto", "text-anchor": "middle" });
+  }
+  el("rect", { x: x(45), y: 8, width: 0.5, height: altura - 26, fill: "var(--grade)" }, s);
+  // Empilha marcas do mesmo lado que caem no mesmo minuto
+  const pilha = new Map();
+  const ordem = { gol: 0, alvo: 1, chute: 2, vermelho: 3, amarelo: 4, sub: 5 };
+  for (const k of marcas.slice().sort((a, b) => (a.minuto - b.minuto) || ordem[a.tipo] - ordem[b.tipo])) {
+    const chave = `${k.lado}:${Math.round(x(k.minuto) / 7)}`;
+    const nivel = pilha.get(chave) ?? 0;
+    pilha.set(chave, nivel + 1);
+    const sinal = k.lado === "pro" ? -1 : 1;
+    const cy = meio + sinal * (14 + nivel * 10);
+    const cx = x(k.minuto);
+    const g = el("g", { class: "marca", tabindex: 0 }, s);
+    const cor = k.lado === "pro" ? "var(--serie-1)" : "var(--serie-2)";
+    if (k.tipo === "gol") {
+      el("circle", { cx, cy, r: 6.5, fill: cor, stroke: "var(--superficie)", "stroke-width": 2 }, g);
+      el("circle", { cx, cy, r: 9.5, fill: "none", stroke: cor, "stroke-width": 1.5 }, g);
+    } else if (k.tipo === "alvo") el("circle", { cx, cy, r: 4, fill: cor }, g);
+    else if (k.tipo === "chute") el("circle", { cx, cy, r: 3.5, fill: "none", stroke: cor, "stroke-width": 1.5 }, g);
+    else if (k.tipo === "amarelo" || k.tipo === "vermelho")
+      el("rect", { x: cx - 3, y: cy - 4.5, width: 6, height: 9, rx: 1, fill: k.tipo === "amarelo" ? "var(--alerta)" : "var(--critico)" }, g);
+    else el("path", { d: `M${cx - 4},${cy}h8M${cx + 1},${cy - 3}l3,3l-3,3`, fill: "none", stroke: "var(--texto-2)", "stroke-width": 1.5 }, g);
+    if (k.dica) dica(g, k.dica);
+  }
 }

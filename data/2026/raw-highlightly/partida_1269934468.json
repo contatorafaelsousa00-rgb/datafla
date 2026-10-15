@@ -1,0 +1,3795 @@
+{
+ "match": {
+  "venue": {
+   "city": "Rio de Janeiro",
+   "name": "Maracana Stadium",
+   "country": "Brazil",
+   "capacity": "73139"
+  },
+  "referee": {
+   "name": "Rodrigues de Souza, Flavio",
+   "nationality": "Brazil"
+  },
+  "forecast": {
+   "status": "cloudy",
+   "temperature": "24.59°C"
+  },
+  "events": [
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "11",
+    "type": "Goal",
+    "assist": "Pedro",
+    "player": "Samuel Lino",
+    "playerId": 20436850,
+    "substituted": null,
+    "assistingPlayerId": 1661835
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "19",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Leo Ortiz",
+    "playerId": 1522892,
+    "substituted": "Joao Souza",
+    "assistingPlayerId": 72329887
+   },
+   {
+    "team": {
+     "id": 125881,
+     "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+     "name": "Coritiba"
+    },
+    "time": "36",
+    "type": "Red Card",
+    "assist": null,
+    "player": "Pedro Rocha",
+    "playerId": 1627220,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "41",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "E. Pulgar",
+    "playerId": 412314,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 125881,
+     "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+     "name": "Coritiba"
+    },
+    "time": "46",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Joao Pedro Chermont",
+    "playerId": 66717588,
+    "substituted": "Lucas Taverna",
+    "assistingPlayerId": 81398051
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "54",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "Evertton Araujo",
+    "playerId": 53557448,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "60",
+    "type": "Goal",
+    "assist": "Samuel Lino",
+    "player": "Pedro",
+    "playerId": 1661835,
+    "substituted": null,
+    "assistingPlayerId": 20436850
+   },
+   {
+    "team": {
+     "id": 125881,
+     "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+     "name": "Coritiba"
+    },
+    "time": "63",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Josue",
+    "playerId": 346304,
+    "substituted": "Gustavo",
+    "assistingPlayerId": 47984755
+   },
+   {
+    "team": {
+     "id": 125881,
+     "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+     "name": "Coritiba"
+    },
+    "time": "63",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Thiago Santos",
+    "playerId": 1597918,
+    "substituted": "Vini Paulista",
+    "assistingPlayerId": 49829493
+   },
+   {
+    "team": {
+     "id": 125881,
+     "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+     "name": "Coritiba"
+    },
+    "time": "63",
+    "type": "Substitution",
+    "assist": null,
+    "player": "J. Lavega",
+    "playerId": 50806763,
+    "substituted": "Felipe Jonatan",
+    "assistingPlayerId": 1608383
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "70",
+    "type": "Goal",
+    "assist": "Ayrton Lucas",
+    "player": "Samuel Lino",
+    "playerId": 20436850,
+    "substituted": null,
+    "assistingPlayerId": 285285
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "75",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Samuel Lino",
+    "playerId": 20436850,
+    "substituted": "Everton",
+    "assistingPlayerId": 388808
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "76",
+    "type": "Substitution",
+    "assist": null,
+    "player": "E. Pulgar",
+    "playerId": 412314,
+    "substituted": "S. Niguez",
+    "assistingPlayerId": 7882
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "84",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "Luiz Araujo",
+    "playerId": 3580472,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "85",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Luiz Araujo",
+    "playerId": 3580472,
+    "substituted": "Wallace Yan",
+    "assistingPlayerId": 65230914
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "85",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Pedro",
+    "playerId": 1661835,
+    "substituted": "Joshua",
+    "assistingPlayerId": 87694439
+   },
+   {
+    "team": {
+     "id": 125881,
+     "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+     "name": "Coritiba"
+    },
+    "time": "88",
+    "type": "Substitution",
+    "assist": null,
+    "player": "S. Gomez",
+    "playerId": 2143064,
+    "substituted": "Wallisson",
+    "assistingPlayerId": 25678527
+   }
+  ],
+  "predictions": {
+   "live": [
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T19:00:31.748Z",
+     "probabilities": {
+      "away": "11.27%",
+      "draw": "17.97%",
+      "home": "70.75%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T19:10:21.915Z",
+     "probabilities": {
+      "away": "12.10%",
+      "draw": "19.85%",
+      "home": "68.05%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T19:21:18.704Z",
+     "probabilities": {
+      "away": "5.74%",
+      "draw": "12.95%",
+      "home": "81.30%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T19:30:23.149Z",
+     "probabilities": {
+      "away": "5.13%",
+      "draw": "12.57%",
+      "home": "82.31%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T19:40:25.951Z",
+     "probabilities": {
+      "away": "2.05%",
+      "draw": "7.39%",
+      "home": "90.56%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T19:50:21.257Z",
+     "probabilities": {
+      "away": "1.89%",
+      "draw": "7.93%",
+      "home": "90.18%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T20:00:28.244Z",
+     "probabilities": {
+      "away": "1.78%",
+      "draw": "7.73%",
+      "home": "90.49%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T20:10:24.528Z",
+     "probabilities": {
+      "away": "1.58%",
+      "draw": "7.68%",
+      "home": "90.74%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T20:20:22.924Z",
+     "probabilities": {
+      "away": "1.35%",
+      "draw": "7.69%",
+      "home": "90.96%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T20:30:25.526Z",
+     "probabilities": {
+      "away": "1.06%",
+      "draw": "5.93%",
+      "home": "93.01%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T20:40:22.820Z",
+     "probabilities": {
+      "away": "0.99%",
+      "draw": "5.73%",
+      "home": "93.28%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T20:50:21.876Z",
+     "probabilities": {
+      "away": "0.99%",
+      "draw": "5.73%",
+      "home": "93.28%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T21:00:25.455Z",
+     "probabilities": {
+      "away": "1.01%",
+      "draw": "5.93%",
+      "home": "93.06%"
+     }
+    }
+   ],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-23T09:11:21.566Z",
+     "probabilities": {
+      "away": "11.53%",
+      "draw": "19.36%",
+      "home": "69.11%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-23T13:46:44.793Z",
+     "probabilities": {
+      "away": "11.52%",
+      "draw": "19.33%",
+      "home": "69.15%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-23T18:28:08.538Z",
+     "probabilities": {
+      "away": "10.27%",
+      "draw": "18.78%",
+      "home": "70.95%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-24T09:54:36.306Z",
+     "probabilities": {
+      "away": "10.21%",
+      "draw": "18.71%",
+      "home": "71.08%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-24T14:05:32.209Z",
+     "probabilities": {
+      "away": "10.21%",
+      "draw": "18.72%",
+      "home": "71.06%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-24T18:18:05.167Z",
+     "probabilities": {
+      "away": "10.10%",
+      "draw": "18.85%",
+      "home": "71.04%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-25T08:30:26.696Z",
+     "probabilities": {
+      "away": "10.95%",
+      "draw": "19.31%",
+      "home": "69.74%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-25T12:00:44.455Z",
+     "probabilities": {
+      "away": "10.98%",
+      "draw": "19.07%",
+      "home": "69.95%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-25T15:35:54.039Z",
+     "probabilities": {
+      "away": "10.97%",
+      "draw": "19.04%",
+      "home": "69.98%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-25T19:15:18.239Z",
+     "probabilities": {
+      "away": "10.94%",
+      "draw": "19.06%",
+      "home": "69.99%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-26T08:23:14.828Z",
+     "probabilities": {
+      "away": "10.59%",
+      "draw": "17.92%",
+      "home": "71.50%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-26T11:59:38.406Z",
+     "probabilities": {
+      "away": "11.31%",
+      "draw": "18.49%",
+      "home": "70.19%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-26T15:37:15.299Z",
+     "probabilities": {
+      "away": "11.34%",
+      "draw": "18.60%",
+      "home": "70.05%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-26T19:17:21.498Z",
+     "probabilities": {
+      "away": "11.36%",
+      "draw": "18.61%",
+      "home": "70.03%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-27T08:23:39.015Z",
+     "probabilities": {
+      "away": "13.07%",
+      "draw": "19.62%",
+      "home": "67.32%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-27T12:05:30.999Z",
+     "probabilities": {
+      "away": "13.16%",
+      "draw": "19.73%",
+      "home": "67.12%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-27T15:40:44.291Z",
+     "probabilities": {
+      "away": "13.55%",
+      "draw": "19.94%",
+      "home": "66.51%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-28T08:09:41.431Z",
+     "probabilities": {
+      "away": "14.54%",
+      "draw": "20.55%",
+      "home": "64.91%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-28T11:39:10.863Z",
+     "probabilities": {
+      "away": "14.68%",
+      "draw": "20.42%",
+      "home": "64.90%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-28T15:11:51.660Z",
+     "probabilities": {
+      "away": "14.68%",
+      "draw": "20.42%",
+      "home": "64.90%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-28T18:47:05.093Z",
+     "probabilities": {
+      "away": "14.67%",
+      "draw": "20.43%",
+      "home": "64.89%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-29T08:16:12.559Z",
+     "probabilities": {
+      "away": "13.93%",
+      "draw": "19.98%",
+      "home": "66.09%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-29T11:47:59.839Z",
+     "probabilities": {
+      "away": "13.55%",
+      "draw": "19.71%",
+      "home": "66.73%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-29T15:16:59.849Z",
+     "probabilities": {
+      "away": "13.32%",
+      "draw": "19.77%",
+      "home": "66.91%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-29T19:08:56.108Z",
+     "probabilities": {
+      "away": "13.41%",
+      "draw": "19.91%",
+      "home": "66.68%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T11:36:30.434Z",
+     "probabilities": {
+      "away": "13.46%",
+      "draw": "20.05%",
+      "home": "66.49%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T14:55:19.279Z",
+     "probabilities": {
+      "away": "13.51%",
+      "draw": "20.09%",
+      "home": "66.39%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-05-30T18:46:07.521Z",
+     "probabilities": {
+      "away": "12.18%",
+      "draw": "18.92%",
+      "home": "68.90%"
+     }
+    }
+   ]
+  },
+  "statistics": [
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "statistics": [
+     {
+      "value": 1.46,
+      "displayName": "Expected Goals"
+     },
+     {
+      "value": 2,
+      "displayName": "Big Chances Created"
+     },
+     {
+      "value": 2,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 1.97,
+      "displayName": "Expected Assists"
+     },
+     {
+      "value": 5,
+      "displayName": "Successful Crosses"
+     },
+     {
+      "value": 21,
+      "displayName": "Crosses"
+     },
+     {
+      "value": 190,
+      "displayName": "Passes Own Half"
+     },
+     {
+      "value": 472,
+      "displayName": "Passes Opposition Half"
+     },
+     {
+      "value": 20,
+      "displayName": "Successful Long Passes"
+     },
+     {
+      "value": 29,
+      "displayName": "Long Passes"
+     },
+     {
+      "value": 16,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 17,
+      "displayName": "Key Passes"
+     },
+     {
+      "value": 200,
+      "displayName": "Passes Into Final Third"
+     },
+     {
+      "value": 91,
+      "displayName": "Backward Passes"
+     },
+     {
+      "value": 8,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 8,
+      "displayName": "Interceptions"
+     },
+     {
+      "value": 5,
+      "displayName": "Successful Tackles"
+     },
+     {
+      "value": 12,
+      "displayName": "Tackles"
+     },
+     {
+      "value": 18,
+      "displayName": "Clearances"
+     },
+     {
+      "value": 7,
+      "displayName": "Successful Aerial Duels"
+     },
+     {
+      "value": 15,
+      "displayName": "Aerial Duels"
+     },
+     {
+      "value": 7,
+      "displayName": "Successful Dribbles"
+     },
+     {
+      "value": 14,
+      "displayName": "Dribbles"
+     },
+     {
+      "value": 0.43,
+      "displayName": "Shots accuracy"
+     },
+     {
+      "value": 53,
+      "displayName": "Failed passes"
+     },
+     {
+      "value": 0.62,
+      "displayName": "Possession"
+     },
+     {
+      "value": 9,
+      "displayName": "Shots on target"
+     },
+     {
+      "value": 6,
+      "displayName": "Corners"
+     },
+     {
+      "value": 0,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 588,
+      "displayName": "Successful passes"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 9,
+      "displayName": "Shots off target"
+     },
+     {
+      "value": 3,
+      "displayName": "Blocked shots"
+     },
+     {
+      "value": 8,
+      "displayName": "Shots within penalty area"
+     },
+     {
+      "value": 641,
+      "displayName": "Total passes"
+     },
+     {
+      "value": 2,
+      "displayName": "Goalkeeper saves"
+     },
+     {
+      "value": 10,
+      "displayName": "Fouls"
+     },
+     {
+      "value": 3,
+      "displayName": "Yellow cards"
+     },
+     {
+      "value": 13,
+      "displayName": "Shots outside penalty area"
+     }
+    ]
+   },
+   {
+    "team": {
+     "id": 125881,
+     "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+     "name": "Coritiba"
+    },
+    "statistics": [
+     {
+      "value": 0.83,
+      "displayName": "Expected Goals"
+     },
+     {
+      "value": 1,
+      "displayName": "Big Chances Created"
+     },
+     {
+      "value": 10,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 0.65,
+      "displayName": "Expected Assists"
+     },
+     {
+      "value": 4,
+      "displayName": "Successful Crosses"
+     },
+     {
+      "value": 15,
+      "displayName": "Crosses"
+     },
+     {
+      "value": 224,
+      "displayName": "Passes Own Half"
+     },
+     {
+      "value": 185,
+      "displayName": "Passes Opposition Half"
+     },
+     {
+      "value": 16,
+      "displayName": "Successful Long Passes"
+     },
+     {
+      "value": 43,
+      "displayName": "Long Passes"
+     },
+     {
+      "value": 9,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 9,
+      "displayName": "Key Passes"
+     },
+     {
+      "value": 64,
+      "displayName": "Passes Into Final Third"
+     },
+     {
+      "value": 87,
+      "displayName": "Backward Passes"
+     },
+     {
+      "value": 11,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 5,
+      "displayName": "Interceptions"
+     },
+     {
+      "value": 4,
+      "displayName": "Successful Tackles"
+     },
+     {
+      "value": 9,
+      "displayName": "Tackles"
+     },
+     {
+      "value": 31,
+      "displayName": "Clearances"
+     },
+     {
+      "value": 8,
+      "displayName": "Successful Aerial Duels"
+     },
+     {
+      "value": 15,
+      "displayName": "Aerial Duels"
+     },
+     {
+      "value": 2,
+      "displayName": "Successful Dribbles"
+     },
+     {
+      "value": 2,
+      "displayName": "Dribbles"
+     },
+     {
+      "value": 0.2,
+      "displayName": "Shots accuracy"
+     },
+     {
+      "value": 60,
+      "displayName": "Failed passes"
+     },
+     {
+      "value": 0.38,
+      "displayName": "Possession"
+     },
+     {
+      "value": 2,
+      "displayName": "Shots on target"
+     },
+     {
+      "value": 4,
+      "displayName": "Corners"
+     },
+     {
+      "value": 0,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 334,
+      "displayName": "Successful passes"
+     },
+     {
+      "value": 1,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 7,
+      "displayName": "Shots off target"
+     },
+     {
+      "value": 1,
+      "displayName": "Blocked shots"
+     },
+     {
+      "value": 9,
+      "displayName": "Shots within penalty area"
+     },
+     {
+      "value": 394,
+      "displayName": "Total passes"
+     },
+     {
+      "value": 6,
+      "displayName": "Goalkeeper saves"
+     },
+     {
+      "value": 2,
+      "displayName": "Fouls"
+     },
+     {
+      "value": 0,
+      "displayName": "Yellow cards"
+     },
+     {
+      "value": 1,
+      "displayName": "Shots outside penalty area"
+     }
+    ]
+   }
+  ],
+  "id": 1269934468,
+  "round": "Regular Season - 18",
+  "date": "2026-05-30T19:00:00.000Z",
+  "country": {
+   "code": "BR",
+   "name": "Brazil",
+   "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+  },
+  "state": {
+   "clock": 90,
+   "score": {
+    "current": "3 - 0",
+    "penalties": null
+   },
+   "description": "Finished"
+  },
+  "awayTeam": {
+   "id": 125881,
+   "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+   "name": "Coritiba",
+   "topPlayers": [
+    {
+     "name": "Pedro Rocha",
+     "position": "Attacker",
+     "statistics": [
+      {
+       "name": "Total Shots",
+       "value": 0
+      },
+      {
+       "name": "Shots On Target",
+       "value": 0
+      },
+      {
+       "name": "Offsides",
+       "value": 0
+      }
+     ]
+    },
+    {
+     "name": "Sebastián Gómez",
+     "position": "Midfielder",
+     "statistics": [
+      {
+       "name": "Total Shots",
+       "value": 2
+      },
+      {
+       "name": "Shots On Target",
+       "value": 0
+      },
+      {
+       "name": "Shots Off Target",
+       "value": 2
+      }
+     ]
+    },
+    {
+     "name": "Jacy",
+     "position": "Defender",
+     "statistics": [
+      {
+       "name": "Total Shots",
+       "value": 2
+      },
+      {
+       "name": "Shots Off Target",
+       "value": 2
+      },
+      {
+       "name": "Offsides",
+       "value": 0
+      }
+     ]
+    }
+   ],
+   "shots": [
+    {
+     "time": "8'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "João Pedro Chermont"
+    },
+    {
+     "time": "8'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Sebastián Gómez"
+    },
+    {
+     "time": "10'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Jacy"
+    },
+    {
+     "time": "17'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Sebastián Gómez"
+    },
+    {
+     "time": "42'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Jacy"
+    },
+    {
+     "time": "58'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Right",
+     "playerName": "Thiago Santos"
+    },
+    {
+     "time": "59'",
+     "outcome": "Saved",
+     "goalTarget": "High Right",
+     "playerName": "Thiago Santos"
+    },
+    {
+     "time": "68'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Gustavo Oliveira"
+    },
+    {
+     "time": "68'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Felipe Jonatan"
+    },
+    {
+     "time": "82'",
+     "outcome": "Saved",
+     "goalTarget": "Low Right",
+     "playerName": "Breno Lopes"
+    }
+   ]
+  },
+  "homeTeam": {
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo",
+   "topPlayers": [
+    {
+     "name": "Pedro",
+     "position": "Attacker",
+     "statistics": [
+      {
+       "name": "Total Shots",
+       "value": 5
+      },
+      {
+       "name": "Shots On Target",
+       "value": 4
+      },
+      {
+       "name": "Offsides",
+       "value": 0
+      }
+     ]
+    },
+    {
+     "name": "Samuel Lino",
+     "position": "Midfielder",
+     "statistics": [
+      {
+       "name": "Total Shots",
+       "value": 4
+      },
+      {
+       "name": "Shots On Target",
+       "value": 3
+      },
+      {
+       "name": "Shots Off Target",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "name": "Ayrton Lucas",
+     "position": "Defender",
+     "statistics": [
+      {
+       "name": "Total Shots",
+       "value": 1
+      },
+      {
+       "name": "Shots Off Target",
+       "value": 1
+      },
+      {
+       "name": "Offsides",
+       "value": 0
+      }
+     ]
+    }
+   ],
+   "shots": [
+    {
+     "time": "11'",
+     "outcome": "Goal",
+     "goalTarget": "Low Left",
+     "playerName": "Samuel Lino"
+    },
+    {
+     "time": "13'",
+     "outcome": "Missed",
+     "goalTarget": "High Left",
+     "playerName": "Luiz Araújo"
+    },
+    {
+     "time": "20'",
+     "outcome": "Missed",
+     "goalTarget": "CloseLeft",
+     "playerName": "Ayrton Lucas"
+    },
+    {
+     "time": "21'",
+     "outcome": "Saved",
+     "goalTarget": "Low Right",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "24'",
+     "outcome": "Saved",
+     "goalTarget": "Low Left",
+     "playerName": "Samuel Lino"
+    },
+    {
+     "time": "25'",
+     "outcome": "Saved",
+     "goalTarget": "Low Centre",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "25'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Bruno Henrique"
+    },
+    {
+     "time": "26'",
+     "outcome": "Saved",
+     "goalTarget": "Low Left",
+     "playerName": "Luiz Araújo"
+    },
+    {
+     "time": "45'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Pedro"
+    },
+    {
+     "time": "45 + 3'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Bruno Henrique"
+    },
+    {
+     "time": "45 + 6'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Erick Pulgar"
+    },
+    {
+     "time": "45 + 6'",
+     "outcome": "Saved",
+     "goalTarget": "Low Centre",
+     "playerName": "Emerson Royal"
+    },
+    {
+     "time": "51'",
+     "outcome": "Saved",
+     "goalTarget": "Low Right",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "52'",
+     "outcome": "Missed",
+     "goalTarget": "Close High",
+     "playerName": "Samuel Lino"
+    },
+    {
+     "time": "60'",
+     "outcome": "Goal",
+     "goalTarget": "Low Centre",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "62'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Bruno Henrique"
+    },
+    {
+     "time": "70'",
+     "outcome": "Goal",
+     "goalTarget": "Low Right",
+     "playerName": "Samuel Lino"
+    },
+    {
+     "time": "79'",
+     "outcome": "Blocked",
+     "goalTarget": "High Centre",
+     "playerName": "Evertton Araujo"
+    },
+    {
+     "time": "82'",
+     "outcome": "Missed",
+     "goalTarget": "CloseLeft",
+     "playerName": "Luiz Araújo"
+    },
+    {
+     "time": "84'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Right",
+     "playerName": "Saúl Ñíguez"
+    },
+    {
+     "time": "87'",
+     "outcome": "Missed",
+     "goalTarget": "Close High",
+     "playerName": "Everton"
+    }
+   ]
+  },
+  "league": {
+   "id": 61205,
+   "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+   "name": "Serie A",
+   "season": 2026
+  },
+  "news": []
+ },
+ "boxscore": [
+  {
+   "team": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "players": [
+    {
+     "id": 1892870,
+     "name": "A. Rossi",
+     "matchRating": "7.15",
+     "shirtNumber": 1,
+     "position": "Goalkeeper",
+     "isCaptain": false,
+     "minutesPlayed": 90,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 2,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "93.75 %",
+      "passesSuccessful": 15,
+      "passesFailed": 1,
+      "passesTotal": 16,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": 0.38,
+      "expectedGoalsPrevented": 0.38
+     },
+     "fullName": "Agustín Daniel Rossi",
+     "logo": null
+    },
+    {
+     "id": 252280,
+     "name": "Emerson Royal",
+     "matchRating": "7.25",
+     "shirtNumber": 22,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 90,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 1,
+      "dribblesSuccessful": 1,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "100.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 2,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 2,
+      "shotsOnTarget": 1,
+      "shotsOffTarget": 0,
+      "shotsTotal": 1,
+      "shotsAccuracy": "100.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "90.32 %",
+      "passesSuccessful": 56,
+      "passesFailed": 6,
+      "passesTotal": 62,
+      "passesKey": 2,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 6,
+      "duelsWon": 2,
+      "duelsLost": 4,
+      "duelSuccessRate": "33.33 %",
+      "expectedAssists": 0.27,
+      "expectedGoals": 0.02,
+      "expectedGoalsOnTarget": 0.01,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Emerson Aparecido Leite de Souza Júnior",
+     "logo": null
+    },
+    {
+     "id": 1522892,
+     "name": "Léo Ortiz",
+     "matchRating": "6.93",
+     "shirtNumber": 3,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 19,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 1,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "90.91 %",
+      "passesSuccessful": 10,
+      "passesFailed": 1,
+      "passesTotal": 11,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 2,
+      "duelsWon": 1,
+      "duelsLost": 1,
+      "duelSuccessRate": "50.00 %",
+      "expectedAssists": 0,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Leonardo Rech Ortiz",
+     "logo": null
+    },
+    {
+     "id": 1595503,
+     "name": "Vitão",
+     "matchRating": "7.49",
+     "shirtNumber": 44,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 90,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 1,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "94.74 %",
+      "passesSuccessful": 72,
+      "passesFailed": 4,
+      "passesTotal": 76,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 2,
+      "duelsWon": 2,
+      "duelsLost": 0,
+      "duelSuccessRate": "100.00 %",
+      "expectedAssists": 0.01,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Vitor Eduardo da Silva Matos",
+     "logo": null
+    },
+    {
+     "id": 285285,
+     "name": "Ayrton Lucas",
+     "matchRating": "7.93",
+     "shirtNumber": 6,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 90,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 1,
+      "dribblesTotal": 1,
+      "dribblesSuccessful": 1,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "100.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 1,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 1,
+      "shotsTotal": 1,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "89.47 %",
+      "passesSuccessful": 68,
+      "passesFailed": 8,
+      "passesTotal": 76,
+      "passesKey": 2,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 4,
+      "duelsWon": 3,
+      "duelsLost": 1,
+      "duelSuccessRate": "75.00 %",
+      "expectedAssists": 0.16,
+      "expectedGoals": 0.01,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Ayrton Lucas Dantas de Medeiros",
+     "logo": null
+    },
+    {
+     "id": 53557448,
+     "name": "Evertton Araújo",
+     "matchRating": "7.03",
+     "shirtNumber": 52,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 90,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 1,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 1,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 1,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 2,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "94.44 %",
+      "passesSuccessful": 85,
+      "passesFailed": 5,
+      "passesTotal": 90,
+      "passesKey": 2,
+      "cardsRed": 0,
+      "cardsYellow": 1,
+      "cardsSecondYellow": 1,
+      "duelsTotal": 2,
+      "duelsWon": 0,
+      "duelsLost": 2,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0.06,
+      "expectedGoals": 0.01,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Evertton Gustavo Fernandes Araújo",
+     "logo": null
+    },
+    {
+     "id": 412314,
+     "name": "E. Pulgar",
+     "matchRating": "7.26",
+     "shirtNumber": 5,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 76,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 1,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 1,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 1,
+      "shotsTotal": 1,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "93.33 %",
+      "passesSuccessful": 56,
+      "passesFailed": 4,
+      "passesTotal": 60,
+      "passesKey": 2,
+      "cardsRed": 0,
+      "cardsYellow": 1,
+      "cardsSecondYellow": 1,
+      "duelsTotal": 1,
+      "duelsWon": 0,
+      "duelsLost": 1,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0.29,
+      "expectedGoals": 0.01,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Erick Antonio Pulgar Farfán",
+     "logo": null
+    },
+    {
+     "id": 3580472,
+     "name": "Luiz Araújo",
+     "matchRating": "7.24",
+     "shirtNumber": 7,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 85,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 3,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 3,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 2,
+      "tacklesTotal": 4,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 1,
+      "shotsOffTarget": 2,
+      "shotsTotal": 3,
+      "shotsAccuracy": "33.33 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "90.91 %",
+      "passesSuccessful": 50,
+      "passesFailed": 5,
+      "passesTotal": 55,
+      "passesKey": 2,
+      "cardsRed": 0,
+      "cardsYellow": 1,
+      "cardsSecondYellow": 1,
+      "duelsTotal": 11,
+      "duelsWon": 4,
+      "duelsLost": 7,
+      "duelSuccessRate": "36.36 %",
+      "expectedAssists": 0.19,
+      "expectedGoals": 0.06,
+      "expectedGoalsOnTarget": 0.04,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Luiz de Araújo Guimarães Neto",
+     "logo": null
+    },
+    {
+     "id": 20436850,
+     "name": "Samuel Lino",
+     "matchRating": "9.98",
+     "shirtNumber": 16,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 75,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 2,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 1,
+      "dribblesTotal": 2,
+      "dribblesSuccessful": 1,
+      "dribblesFailed": 1,
+      "dribbleSuccessRate": "50.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 1,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 3,
+      "shotsOffTarget": 1,
+      "shotsTotal": 4,
+      "shotsAccuracy": "75.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "86.49 %",
+      "passesSuccessful": 32,
+      "passesFailed": 5,
+      "passesTotal": 37,
+      "passesKey": 1,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 3,
+      "duelsWon": 2,
+      "duelsLost": 1,
+      "duelSuccessRate": "66.67 %",
+      "expectedAssists": 0.72,
+      "expectedGoals": 0.22,
+      "expectedGoalsOnTarget": 0.63,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Samuel Dias Lino",
+     "logo": null
+    },
+    {
+     "id": 1639134,
+     "name": "Bruno Henrique",
+     "matchRating": "6.25",
+     "shirtNumber": 27,
+     "position": "Midfielder",
+     "isCaptain": true,
+     "minutesPlayed": 90,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 1,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 1,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 1,
+      "fouledOthers": 2,
+      "tacklesTotal": 2,
+      "interceptionsTotal": 2,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 2,
+      "shotsTotal": 2,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "84.21 %",
+      "passesSuccessful": 32,
+      "passesFailed": 6,
+      "passesTotal": 38,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 10,
+      "duelsWon": 4,
+      "duelsLost": 6,
+      "duelSuccessRate": "40.00 %",
+      "expectedAssists": 0.1,
+      "expectedGoals": 0.2,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Bruno Henrique Pinto",
+     "logo": null
+    },
+    {
+     "id": 1661835,
+     "name": "Pedro",
+     "matchRating": "8.24",
+     "shirtNumber": 9,
+     "position": "Forward",
+     "isCaptain": false,
+     "minutesPlayed": 85,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 1,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 1,
+      "dribblesTotal": 4,
+      "dribblesSuccessful": 3,
+      "dribblesFailed": 1,
+      "dribbleSuccessRate": "75.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 3,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 4,
+      "shotsOffTarget": 1,
+      "shotsTotal": 5,
+      "shotsAccuracy": "80.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "85.71 %",
+      "passesSuccessful": 18,
+      "passesFailed": 3,
+      "passesTotal": 21,
+      "passesKey": 3,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 8,
+      "duelsWon": 7,
+      "duelsLost": 1,
+      "duelSuccessRate": "87.50 %",
+      "expectedAssists": 0.04,
+      "expectedGoals": 0.89,
+      "expectedGoalsOnTarget": 1.77,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Pedro Guilherme Abreu dos Santos",
+     "logo": null
+    },
+    {
+     "id": 72329887,
+     "name": "João Victor",
+     "matchRating": "6.96",
+     "shirtNumber": 61,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 71,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 1,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "96.83 %",
+      "passesSuccessful": 61,
+      "passesFailed": 2,
+      "passesTotal": 63,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 1,
+      "duelsWon": 0,
+      "duelsLost": 1,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0.02,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "João Victor de Souza Cunha",
+     "logo": null
+    },
+    {
+     "id": 388808,
+     "name": "Everton",
+     "matchRating": "6.48",
+     "shirtNumber": 11,
+     "position": "Forward",
+     "isCaptain": false,
+     "minutesPlayed": 15,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 1,
+      "dribblesSuccessful": 1,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "100.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 1,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 1,
+      "shotsTotal": 1,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "90.91 %",
+      "passesSuccessful": 10,
+      "passesFailed": 1,
+      "passesTotal": 11,
+      "passesKey": 2,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 4,
+      "duelsWon": 1,
+      "duelsLost": 3,
+      "duelSuccessRate": "25.00 %",
+      "expectedAssists": 0.02,
+      "expectedGoals": 0.02,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Everton Sousa Soares",
+     "logo": null
+    },
+    {
+     "id": 7882,
+     "name": "Saúl",
+     "matchRating": "6.86",
+     "shirtNumber": 8,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 14,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "94.44 %",
+      "passesSuccessful": 17,
+      "passesFailed": 1,
+      "passesTotal": 18,
+      "passesKey": 1,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 2,
+      "duelsWon": 1,
+      "duelsLost": 1,
+      "duelSuccessRate": "50.00 %",
+      "expectedAssists": 0.08,
+      "expectedGoals": 0.02,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Saúl Ñíguez Esclapez",
+     "logo": null
+    },
+    {
+     "id": 87694439,
+     "name": "Caio Joshua",
+     "matchRating": "6.31",
+     "shirtNumber": 79,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 9,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 1,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "100.00 %",
+      "passesSuccessful": 4,
+      "passesFailed": 0,
+      "passesTotal": 4,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 1,
+      "duelsWon": 0,
+      "duelsLost": 1,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": null,
+     "logo": null
+    },
+    {
+     "id": 65230914,
+     "name": "Wallace",
+     "matchRating": "6.25",
+     "shirtNumber": 64,
+     "position": "Forward",
+     "isCaptain": false,
+     "minutesPlayed": 9,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "66.67 %",
+      "passesSuccessful": 2,
+      "passesFailed": 1,
+      "passesTotal": 3,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 1,
+      "duelsWon": 1,
+      "duelsLost": 0,
+      "duelSuccessRate": "100.00 %",
+      "expectedAssists": 0,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Wallace Yan de Souza Barreto",
+     "logo": null
+    },
+    {
+     "id": 59905517,
+     "name": "Dyogo",
+     "matchRating": null,
+     "shirtNumber": 49,
+     "position": "Goalkeeper",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": null,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Francisco Dyogo Bento Alves",
+     "logo": null
+    },
+    {
+     "id": 12965162,
+     "name": "Andrew",
+     "matchRating": null,
+     "shirtNumber": 42,
+     "position": "Goalkeeper",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0.01,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": 2.5,
+      "expectedGoalsPrevented": -0.55
+     },
+     "fullName": "Andrew da Silva Ventura",
+     "logo": null
+    },
+    {
+     "id": 102197641,
+     "name": "Daniel Silva",
+     "matchRating": null,
+     "shirtNumber": 87,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": null,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": null,
+     "logo": null
+    },
+    {
+     "id": 64931293,
+     "name": "Daniel Sales",
+     "matchRating": null,
+     "shirtNumber": 51,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": null,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Daniel dos Santos Sales",
+     "logo": null
+    },
+    {
+     "id": 82551294,
+     "name": "Johnny Góes",
+     "matchRating": null,
+     "shirtNumber": 77,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": null,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Johnny Monteiro Góes",
+     "logo": null
+    },
+    {
+     "id": 82202568,
+     "name": "Luiz Felipe",
+     "matchRating": null,
+     "shirtNumber": 75,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": null,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Luiz Felipe Mariano dos Santos",
+     "logo": null
+    },
+    {
+     "id": 94888241,
+     "name": "Alan da Silva Santos",
+     "matchRating": null,
+     "shirtNumber": 59,
+     "position": "Forward",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": null,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": null,
+     "logo": null
+    }
+   ]
+  },
+  {
+   "team": {
+    "id": 125881,
+    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+    "name": "Coritiba"
+   },
+   "players": [
+    {
+     "id": 47262509,
+     "name": "Pedro Rangel",
+     "matchRating": "6.22",
+     "shirtNumber": 22,
+     "position": "Goalkeeper",
+     "isCaptain": false,
+     "minutesPlayed": 90,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 6,
+      "goalsConceded": 3,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "61.54 %",
+      "passesSuccessful": 24,
+      "passesFailed": 15,
+      "passesTotal": 39,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 1,
+      "duelsWon": 1,
+      "duelsLost": 0,
+      "duelSuccessRate": "100.00 %",
+      "expectedAssists": 0.01,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": 2.5,
+      "expectedGoalsPrevented": -0.55
+     },
+     "fullName": "Pedro Felipe de Faria Rangel",
+     "logo": null
+    },
+    {
+     "id": 66717588,
+     "name": "JoÃ£o Pedro Chermont",
+     "matchRating": "6.04",
+     "shirtNumber": 44,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 45,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 1,
+      "fouledOthers": 0,
+      "tacklesTotal": 1,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 1,
+      "shotsTotal": 1,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "62.50 %",
+      "passesSuccessful": 10,
+      "passesFailed": 6,
+      "passesTotal": 16,
+      "passesKey": 1,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 4,
+      "duelsWon": 3,
+      "duelsLost": 1,
+      "duelSuccessRate": "75.00 %",
+      "expectedAssists": 0,
+      "expectedGoals": 0.02,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "João Pedro Chermont Crema",
+     "logo": null
+    },
+    {
+     "id": 49109340,
+     "name": "Tiago Cóser",
+     "matchRating": "5.97",
+     "shirtNumber": 23,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 90,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 1,
+      "tacklesTotal": 2,
+      "interceptionsTotal": 2,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "81.48 %",
+      "passesSuccessful": 22,
+      "passesFailed": 5,
+      "passesTotal": 27,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 5,
+      "duelsWon": 3,
+      "duelsLost": 2,
+      "duelSuccessRate": "60.00 %",
+      "expectedAssists": 0,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Tiago Cóser",
+     "logo": null
+    },
+    {
+     "id": 1551067,
+     "name": "Jacy",
+     "matchRating": "6.01",
+     "shirtNumber": 55,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 90,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 1,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 2,
+      "shotsTotal": 2,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "92.31 %",
+      "passesSuccessful": 36,
+      "passesFailed": 3,
+      "passesTotal": 39,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 4,
+      "duelsWon": 3,
+      "duelsLost": 1,
+      "duelSuccessRate": "75.00 %",
+      "expectedAssists": null,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Jacy Maranhão Oliveira",
+     "logo": null
+    },
+    {
+     "id": 1677130,
+     "name": "Bruno Melo",
+     "matchRating": "6.04",
+     "shirtNumber": 26,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 90,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 1,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "86.27 %",
+      "passesSuccessful": 44,
+      "passesFailed": 7,
+      "passesTotal": 51,
+      "passesKey": 2,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 2,
+      "duelsWon": 1,
+      "duelsLost": 1,
+      "duelSuccessRate": "50.00 %",
+      "expectedAssists": 0.08,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Bruno Ferreira Melo",
+     "logo": null
+    },
+    {
+     "id": 1597918,
+     "name": "Thiago Santos",
+     "matchRating": "6.92",
+     "shirtNumber": 21,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 63,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 1,
+      "fouledOthers": 0,
+      "tacklesTotal": 1,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 1,
+      "shotsOffTarget": 0,
+      "shotsTotal": 1,
+      "shotsAccuracy": "100.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "93.75 %",
+      "passesSuccessful": 30,
+      "passesFailed": 2,
+      "passesTotal": 32,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 4,
+      "duelsWon": 3,
+      "duelsLost": 1,
+      "duelSuccessRate": "75.00 %",
+      "expectedAssists": 0.01,
+      "expectedGoals": 0.18,
+      "expectedGoalsOnTarget": 0.18,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Thiago dos Santos",
+     "logo": null
+    },
+    {
+     "id": 2143064,
+     "name": "S. Gómez",
+     "matchRating": "6.90",
+     "shirtNumber": 19,
+     "position": "Midfielder",
+     "isCaptain": true,
+     "minutesPlayed": 88,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 1,
+      "interceptionsTotal": 2,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 2,
+      "shotsTotal": 2,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "91.89 %",
+      "passesSuccessful": 34,
+      "passesFailed": 3,
+      "passesTotal": 37,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 6,
+      "duelsWon": 3,
+      "duelsLost": 3,
+      "duelSuccessRate": "50.00 %",
+      "expectedAssists": 0.01,
+      "expectedGoals": 0.06,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Sebastián Gómez Londoño",
+     "logo": null
+    },
+    {
+     "id": 50806763,
+     "name": "J. Lavega",
+     "matchRating": "6.58",
+     "shirtNumber": 7,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 63,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 2,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "78.26 %",
+      "passesSuccessful": 18,
+      "passesFailed": 5,
+      "passesTotal": 23,
+      "passesKey": 1,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 3,
+      "duelsWon": 2,
+      "duelsLost": 1,
+      "duelSuccessRate": "66.67 %",
+      "expectedAssists": 0.04,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Joaquín Lavega Colzada",
+     "logo": null
+    },
+    {
+     "id": 346304,
+     "name": "Josué",
+     "matchRating": "6.27",
+     "shirtNumber": 10,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 63,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 1,
+      "dribblesSuccessful": 1,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "100.00 %",
+      "fouledByOthers": 2,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "84.62 %",
+      "passesSuccessful": 33,
+      "passesFailed": 6,
+      "passesTotal": 39,
+      "passesKey": 1,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 8,
+      "duelsWon": 3,
+      "duelsLost": 5,
+      "duelSuccessRate": "37.50 %",
+      "expectedAssists": 0.03,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Josué Filipe Soares Pesqueira",
+     "logo": null
+    },
+    {
+     "id": 8688680,
+     "name": "Breno Lopes",
+     "matchRating": "6.89",
+     "shirtNumber": 77,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 90,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 2,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 1,
+      "shotsOffTarget": 0,
+      "shotsTotal": 1,
+      "shotsAccuracy": "100.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "91.43 %",
+      "passesSuccessful": 32,
+      "passesFailed": 3,
+      "passesTotal": 35,
+      "passesKey": 2,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 5,
+      "duelsWon": 2,
+      "duelsLost": 3,
+      "duelSuccessRate": "40.00 %",
+      "expectedAssists": 0.43,
+      "expectedGoals": 0.03,
+      "expectedGoalsOnTarget": 0.2,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Breno Henrique Vasconcelos Lopes",
+     "logo": null
+    },
+    {
+     "id": 1627220,
+     "name": "Pedro Rocha",
+     "matchRating": "5.17",
+     "shirtNumber": 32,
+     "position": "Forward",
+     "isCaptain": false,
+     "minutesPlayed": 36,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 1,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 1,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "100.00 %",
+      "passesSuccessful": 3,
+      "passesFailed": 0,
+      "passesTotal": 3,
+      "passesKey": 0,
+      "cardsRed": 1,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 2,
+      "duelsWon": 0,
+      "duelsLost": 2,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Pedro Rocha Neves",
+     "logo": null
+    },
+    {
+     "id": 81398051,
+     "name": "Lucas Taverna",
+     "matchRating": "6.05",
+     "shirtNumber": 86,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 45,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "93.75 %",
+      "passesSuccessful": 15,
+      "passesFailed": 1,
+      "passesTotal": 16,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 5,
+      "duelsWon": 1,
+      "duelsLost": 4,
+      "duelSuccessRate": "20.00 %",
+      "expectedAssists": 0.01,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Lucas Taverna",
+     "logo": null
+    },
+    {
+     "id": 1608383,
+     "name": "Felipe Jonatan",
+     "matchRating": "6.19",
+     "shirtNumber": 6,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 27,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 1,
+      "dribblesSuccessful": 1,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "100.00 %",
+      "fouledByOthers": 2,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 1,
+      "shotsTotal": 1,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "94.12 %",
+      "passesSuccessful": 16,
+      "passesFailed": 1,
+      "passesTotal": 17,
+      "passesKey": 1,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 6,
+      "duelsWon": 3,
+      "duelsLost": 3,
+      "duelSuccessRate": "50.00 %",
+      "expectedAssists": 0,
+      "expectedGoals": 0.3,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Felipe Jonatan Rocha Andrade",
+     "logo": null
+    },
+    {
+     "id": 47984755,
+     "name": "Gustavo",
+     "matchRating": "6.29",
+     "shirtNumber": 39,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 27,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 1,
+      "shotsTotal": 1,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "87.50 %",
+      "passesSuccessful": 7,
+      "passesFailed": 1,
+      "passesTotal": 8,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 1,
+      "duelsWon": 0,
+      "duelsLost": 1,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0.01,
+      "expectedGoals": 0.21,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Gustavo Silva de Oliveira",
+     "logo": null
+    },
+    {
+     "id": 49829493,
+     "name": "Vini Paulista",
+     "matchRating": "6.64",
+     "shirtNumber": 36,
+     "position": "Forward",
+     "isCaptain": false,
+     "minutesPlayed": 27,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 1,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "80.00 %",
+      "passesSuccessful": 8,
+      "passesFailed": 2,
+      "passesTotal": 10,
+      "passesKey": 1,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 1,
+      "duelsWon": 1,
+      "duelsLost": 0,
+      "duelSuccessRate": "100.00 %",
+      "expectedAssists": 0.01,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Vinicius Romualdo dos Santos",
+     "logo": null
+    },
+    {
+     "id": 25678527,
+     "name": "Wallisson",
+     "matchRating": null,
+     "shirtNumber": 8,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 2,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 1,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "100.00 %",
+      "passesSuccessful": 2,
+      "passesFailed": 0,
+      "passesTotal": 2,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 1,
+      "duelsWon": 1,
+      "duelsLost": 0,
+      "duelSuccessRate": "100.00 %",
+      "expectedAssists": 0,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Wallisson Luiz Alves Máximo",
+     "logo": null
+    },
+    {
+     "id": 1669724,
+     "name": "Keiller",
+     "matchRating": null,
+     "shirtNumber": 13,
+     "position": "Goalkeeper",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": null,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Keiller da Silva Nunes",
+     "logo": null
+    },
+    {
+     "id": 1671012,
+     "name": "Rodrigo Moledo",
+     "matchRating": null,
+     "shirtNumber": 4,
+     "position": "Defender",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": null,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Rodrigo Modesto da Silva Moledo",
+     "logo": null
+    },
+    {
+     "id": 66082443,
+     "name": "Lucas Ronier",
+     "matchRating": null,
+     "shirtNumber": 11,
+     "position": "Forward",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0.01,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Lucas Ronier Vieira Pires",
+     "logo": null
+    },
+    {
+     "id": 12910261,
+     "name": "Fernando Sobral",
+     "matchRating": null,
+     "shirtNumber": 88,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0.27,
+      "expectedGoals": 0.02,
+      "expectedGoalsOnTarget": 0.01,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Fernando Pereira do Nascimento",
+     "logo": null
+    },
+    {
+     "id": 1482642,
+     "name": "Willian Oliveira",
+     "matchRating": null,
+     "shirtNumber": 29,
+     "position": "Midfielder",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0.01,
+      "expectedGoals": 0.21,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Willian Osmar de Oliveira Silva",
+     "logo": null
+    },
+    {
+     "id": 23081919,
+     "name": "Fabinho",
+     "matchRating": null,
+     "shirtNumber": 28,
+     "position": "Forward",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": true,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": 0.72,
+      "expectedGoals": 0.22,
+      "expectedGoalsOnTarget": 0.63,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Fabio Augusto Luciano da Silva",
+     "logo": null
+    },
+    {
+     "id": 58008937,
+     "name": "Renato Marques",
+     "matchRating": null,
+     "shirtNumber": 78,
+     "position": "Forward",
+     "isCaptain": false,
+     "minutesPlayed": 0,
+     "isSubstitute": false,
+     "offsides": 0,
+     "statistics": {
+      "goalsScored": 0,
+      "goalsSaved": 0,
+      "goalsConceded": 0,
+      "assists": 0,
+      "dribblesTotal": 0,
+      "dribblesSuccessful": 0,
+      "dribblesFailed": 0,
+      "dribbleSuccessRate": "0.00 %",
+      "fouledByOthers": 0,
+      "fouledOthers": 0,
+      "tacklesTotal": 0,
+      "interceptionsTotal": 0,
+      "shotsOnTarget": 0,
+      "shotsOffTarget": 0,
+      "shotsTotal": 0,
+      "shotsAccuracy": "0.00 %",
+      "penaltiesScored": 0,
+      "penaltiesMissed": 0,
+      "penaltiesTotal": 0,
+      "penaltiesAccuracy": "0.00 %",
+      "passesAccuracy": "0.00 %",
+      "passesSuccessful": 0,
+      "passesFailed": 0,
+      "passesTotal": 0,
+      "passesKey": 0,
+      "cardsRed": 0,
+      "cardsYellow": 0,
+      "cardsSecondYellow": 0,
+      "duelsTotal": 0,
+      "duelsWon": 0,
+      "duelsLost": 0,
+      "duelSuccessRate": "0.00 %",
+      "expectedAssists": null,
+      "expectedGoals": null,
+      "expectedGoalsOnTarget": null,
+      "expectedGoalsOnTargetConceded": null,
+      "expectedGoalsPrevented": null
+     },
+     "fullName": "Renato Marques de Oliveira Júnior",
+     "logo": null
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-15T17:03:19.458796+00:00"
+}
