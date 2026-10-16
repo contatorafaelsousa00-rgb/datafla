@@ -281,3 +281,9 @@ def test_gols_e_assistencias_vem_dos_lances_quando_o_box_score_falha():
     certo = [{"jogador_id": 1, "gols": 2, "assistencias": 0}, {"jogador_id": 2, "gols": 0, "assistencias": 1}]
     hl._completar_gols_pelos_lances(m, FLA, certo)  # box-score completo: nada muda
     assert [(l["gols"], l["assistencias"]) for l in certo] == [(2, 0), (0, 1)]
+
+
+def test_nome_do_arbitro_sem_virgula():
+    assert hl.nome_arbitro("Benitez, Juan Gabriel") == "Juan Gabriel Benitez"
+    assert hl.nome_arbitro("Pereira Sampaio, Wilton") == "Wilton Pereira Sampaio"
+    assert hl.nome_arbitro("Anderson Daronco") == "Anderson Daronco" and hl.nome_arbitro(None) is None

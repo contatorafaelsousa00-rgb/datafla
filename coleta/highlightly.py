@@ -557,6 +557,14 @@ def _probabilidades(m: dict, nos: str):
     return vit, numero(pr.get("draw")), der
 
 
+def nome_arbitro(nome: str | None) -> str | None:
+    """A fonte manda "Sobrenome, Nome" ("Benitez, Juan Gabriel"); o painel mostra "Juan Gabriel Benitez"."""
+    if not nome or "," not in nome:
+        return nome
+    sobrenome, prenome = nome.split(",", 1)
+    return " ".join(f"{prenome.strip()} {sobrenome.strip()}".split())
+
+
 def linha_partida(m: dict, team_id: int) -> dict:
     nos, eles = _lados(m, team_id)
     casa, fora = placar(m)
@@ -590,7 +598,7 @@ def linha_partida(m: dict, team_id: int) -> dict:
         "estadio": (m.get("venue") or {}).get("name"),
         "cidade": (m.get("venue") or {}).get("city"),
         "publico_capacidade": numero((m.get("venue") or {}).get("capacity")),
-        "arbitro": (m.get("referee") or {}).get("name"),
+        "arbitro": nome_arbitro((m.get("referee") or {}).get("name")),
         "formacao": None,
         "tecnico": None,
         "prob_vitoria": vit,
