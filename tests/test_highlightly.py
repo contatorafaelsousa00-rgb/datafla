@@ -217,7 +217,18 @@ def test_chutes_bloqueados_entram_nas_finalizacoes_do_jogador():
                                             {"outcome": "Blocked", "playerName": "Ninguém"}]},
          "awayTeam": {"id": ADV, "shots": []}}
     jogadores = [{"id": 1, "name": "L. Pereira", "fullName": "Leonardo Pereira"}, {"id": 2, "name": "Pedro", "fullName": "Pedro Guilherme"}]
-    assert hl._bloqueadas_por_jogador(m, FLA, jogadores) == {1: 2}  # sem dono conhecido: não é atribuído
+    # jogadores sem shotsTotal (0) + 3 bloqueados <= 4 chutes: os bloqueados faltam e são somados
+    assert hl._bloqueadas_por_jogador(m, FLA, jogadores) == ({1: 2}, True)  # sem dono conhecido: não é atribuído
+
+
+def test_chutes_bloqueados_nao_somam_quando_a_fonte_ja_contou():
+    """Estudiantes 16/10: shotsTotal dos jogadores já somava os 21 chutes da lista (6 bloqueados incluídos)."""
+    chutes = [{"outcome": "Blocked", "playerName": "Leo Pereira"}] * 2 + [{"outcome": "Missed", "playerName": "Pedro"}] * 2
+    m = {"homeTeam": {"id": FLA, "shots": chutes}, "awayTeam": {"id": ADV, "shots": []}}
+    jogadores = [{"id": 1, "name": "L. Pereira", "fullName": "Leonardo Pereira", "statistics": {"shotsTotal": 2}},
+                 {"id": 2, "name": "Pedro", "fullName": "Pedro Guilherme", "statistics": {"shotsTotal": 2}}]
+    bloqueadas, somar = hl._bloqueadas_por_jogador(m, FLA, jogadores)
+    assert bloqueadas == {1: 2} and somar is False  # 4 + 2 > 4 chutes: a fonte já contou; a coluna Bloq continua
 
 
 def test_titulares_a_mais_sem_minutos_voltam_para_o_banco():

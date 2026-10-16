@@ -635,17 +635,24 @@ def _dono_do_chute(nome: str | None, jogadores: list[dict]) -> dict | None:
     return None
 
 
-def _bloqueadas_por_jogador(m: dict, time_id: int, jogadores: list[dict]) -> Counter:
-    """O shotsTotal do jogador na fonte não conta chutes bloqueados (o total do time conta).
-    Eles vêm da lista de chutes da partida, casados pelo nome."""
+def _bloqueadas_por_jogador(m: dict, time_id: int, jogadores: list[dict]) -> tuple[Counter, bool]:
+    """Chutes bloqueados de cada jogador, da lista de chutes da partida (casados pelo nome).
+
+    Na maioria dos jogos o shotsTotal do jogador na fonte NÃO conta os bloqueados (o total do time conta); em alguns
+    (vários a partir de set/2026) já conta. Por isso só somam quando cabem: soma dos jogadores + bloqueados <= chutes da
+    lista. Somar sempre contava duas vezes (Estudiantes 16/10: 21 + 6 = 27 para 21 chutes).
+    Devolve (bloqueados por jogador, se precisam ser somados ao shotsTotal)."""
     lado = "homeTeam" if m["homeTeam"]["id"] == time_id else "awayTeam"
+    chutes = m[lado].get("shots") or []
+    soma = sum(numero((p.get("statistics") or {}).get("shotsTotal")) or 0 for p in jogadores)
+    somar = soma + sum(1 for c in chutes if c.get("outcome") == "Blocked") <= len(chutes)
     contagem = Counter()
-    for chute in m[lado].get("shots") or []:
+    for chute in chutes:
         if chute.get("outcome") == "Blocked":
             dono = _dono_do_chute(chute.get("playerName"), jogadores)
             if dono:
                 contagem[dono["id"]] += 1
-    return contagem
+    return contagem, somar
 
 
 def _completar_gols_pelos_lances(m: dict, time_id: int, linhas: list[dict]) -> None:
@@ -688,7 +695,7 @@ def linhas_jogadores(m: dict, box: list, team_id: int) -> list[dict]:
     for bloco in box or []:
         time_id = bloco["team"]["id"]
         do_time = []
-        bloqueadas = _bloqueadas_por_jogador(m, time_id, bloco.get("players", []))
+        bloqueadas, somar_bloqueadas = _bloqueadas_por_jogador(m, time_id, bloco.get("players", []))
         subs = [ev for ev in m.get("events") or [] if ev.get("type") == "Substitution" and (ev.get("team") or {}).get("id") == time_id]
         for p in bloco.get("players", []):
             st = p.get("statistics") or {}
@@ -713,7 +720,7 @@ def linhas_jogadores(m: dict, box: list, team_id: int) -> list[dict]:
                 "gols_sofridos": numero(st.get("goalsConceded")),
                 "defesas": numero(st.get("goalsSaved")),
                 "finalizacoes": (None if numero(st.get("shotsTotal")) is None
-                                 else numero(st.get("shotsTotal")) + bloqueadas[p["id"]]),
+                                 else numero(st.get("shotsTotal")) + (bloqueadas[p["id"]] if somar_bloqueadas else 0)),
                 "finalizacoes_bloqueadas": bloqueadas[p["id"]],
                 "finalizacoes_alvo": numero(st.get("shotsOnTarget")),
                 "xg": numero(st.get("expectedGoals")),
