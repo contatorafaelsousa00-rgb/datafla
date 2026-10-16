@@ -15,6 +15,7 @@ esgotá-la; o que faltar vem nas próximas coletas (a carga inicial leva uns 2 d
 from __future__ import annotations
 
 import os
+import re
 from collections import defaultdict
 from datetime import datetime, timedelta, timezone
 
@@ -215,7 +216,7 @@ POSICAO_DETALHADA = {
 }
 PAISES = {"Brazil": "Brasil", "Uruguay": "Uruguai", "Argentina": "Argentina", "Chile": "Chile", "Colombia": "Colômbia",
           "Ecuador": "Equador", "Paraguay": "Paraguai", "Peru": "Peru", "Venezuela": "Venezuela", "Portugal": "Portugal",
-          "Spain": "Espanha", "Italy": "Itália", "France": "França", "Germany": "Alemanha", "England": "Inglaterra"}
+          "Spain": "Espanha", "Italy": "Itália", "France": "França", "Germany": "Alemanha", "England": "Inglaterra", "Belgium": "Bélgica", "Netherlands": "Holanda", "Mexico": "México", "Bolivia": "Bolívia", "United States": "Estados Unidos", "Japan": "Japão", "Croatia": "Croácia"}
 PES = {"right": "Direito", "left": "Esquerdo", "both": "Ambos"}
 
 
@@ -247,12 +248,13 @@ def linhas_perfis() -> list[dict]:
         atual = next((l for l in lesoes if (_data_br(l.get("toDate")) or "9999") >= hoje and (_data_br(l.get("fromDate")) or "") <= hoje), None)
         pos = (perfil.get("position") or {})
         detalhada, grupo = POSICAO_DETALHADA.get(pos.get("main"), (pos.get("main"), None))
-        altura = (perfil.get("height") or "").replace(" m", "").replace(",", ".")
+        achou = re.search(r"(\d)[,.](\d{2})", perfil.get("height") or "")  # "1,85 m" (às vezes com espaço especial)
+        altura = float(f"{achou.group(1)}.{achou.group(2)}") if achou else None
         linhas.append({
             "jogador_id": dados["id"], "jogador": dados.get("name"), "nome_completo": perfil.get("fullName") or dados.get("fullName"),
             "nascimento": _data_br(perfil.get("birthDate")), "naturalidade": perfil.get("birthPlace"),
-            "nacionalidade": PAISES.get(perfil.get("citizenship"), perfil.get("citizenship")),
-            "altura": float(altura) if altura.replace(".", "", 1).isdigit() else None,
+            "nacionalidade": ", ".join(PAISES.get(x.strip(), x.strip()) for x in (perfil.get("citizenship") or "").split(",") if x.strip()) or None,
+            "altura": altura,
             "pe": PES.get(perfil.get("foot"), perfil.get("foot")),
             "posicao_detalhada": detalhada, "grupo": grupo,
             "posicao_secundaria": ", ".join(POSICAO_DETALHADA.get(x.strip(), (x.strip(), None))[0]

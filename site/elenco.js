@@ -62,7 +62,7 @@ function renderFicha(js) {
       const doGrupo = linhas.filter((l) => (g ? l.grupo === g : !GRUPOS_ELENCO.includes(l.grupo))).sort(ordenar);
       if (!doGrupo.length) return null;
       return h("article", { class: "cartao" }, h("h2", {}, g ?? "Sem posição na fonte",
-          h("span", { class: "sutil" }, ` · ${doGrupo.length} jogadores · ${euros(doGrupo.reduce((s, l) => s + (l.valor_mercado ?? 0), 0))}`)),
+          h("span", { class: "sutil" }, ` · ${doGrupo.length} ${doGrupo.length === 1 ? "jogador" : "jogadores"} · ${euros(doGrupo.reduce((s, l) => s + (l.valor_mercado ?? 0), 0))}`)),
         h("div", { class: "tabela-rolagem" }, h("table", { class: "tabela tabela-ficha" }, cab.cloneNode(true), h("tbody", {}, doGrupo.map(celula)))));
     }),
     h("p", { class: "sutil" }, "Fonte: perfil dos jogadores na Highlightly (dados do Transfermarkt), atualizado uma vez por semana. "
