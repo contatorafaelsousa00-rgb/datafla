@@ -94,6 +94,11 @@ jobs:
         if: env.TEM_FIREBASE == 'true' && (github.event_name == 'push' || steps.plano.outputs.coletar == 'true')
         run: python scripts/teste_painel.py
 
+      - name: Testes de front-end
+        # Playwright com o Chrome do ubuntu-latest: telas, filtros, contraste, celular, mata-mata, imagem exportada
+        if: env.TEM_FIREBASE == 'true' && (github.event_name == 'push' || steps.plano.outputs.coletar == 'true')
+        run: python -m pytest tests/front -q
+
       - name: Publicar no Firebase
         if: env.TEM_FIREBASE == 'true' && (github.event_name == 'push' || steps.plano.outputs.coletar == 'true')
         uses: FirebaseExtended/action-hosting-deploy@v0

@@ -95,6 +95,7 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         "classificacao": tabelas.get("classificacao", []),
         "carreira": tabelas.get("carreira", []),
         "liga": tabelas.get("liga", []),
+        "mata_mata": tabelas.get("mata_mata", []),
         "perfis": tabelas.get("perfis", []),
         "fotos": tabelas.get("fotos", []),
         # O painel só lista o que precisa de conferência; as checagens "ok" ficam no relatório local.

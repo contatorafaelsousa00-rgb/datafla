@@ -104,7 +104,9 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   formulário de elogios/críticas/sugestões grava em Firestore (`opinioes`, banco (default) em nam5) via REST com a
   chave pública do app web; `firestore.rules` só permite criar com campos validados; leitura só pelo console:
   https://console.firebase.google.com/project/datafla/firestore/databases/-default-/data/~2Fopinioes
-- 40 testes (`python -m pytest`) + `python scripts/teste_painel.py` (painel).
+- Testes: `python -m pytest` (coleta) + `python scripts/teste_painel.py` (fumaça) + `tests/front/` (Playwright, ~1,5 min:
+  abas nos 2 temas, celular sem rolagem lateral, tela do jogo, tabela Jogadores, pré-jogo, contraste WCAG, seletor de
+  competição, lógica do mata-mata com jogos inventados, PNG exportado). Pulam sem Playwright/dados; rodam no workflow antes do deploy.
 - **Regra de exibição (16/10/2026)**: todo placar ou xG de UM jogo aparece na ordem **mandante × visitante**, com os nomes
   (`comum.js`: `mandanteVisitante`, `confronto`, `textoConfronto`). Somas da temporada ficam "a favor × contra", rotuladas.
 - Jogo clicado (disputado ou próximo) abre numa tela inteira (`#modal-jogo` em tela cheia, conteúdo até 1400 px, botão "Voltar para a lista"), não rola a página;
@@ -149,6 +151,10 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   posição do rival) e Detalhada (+ data, chances, pontos esperados, projeção, resumo). Sempre com marca e datafla.web.app.
 - Relatório do jogo disputado com abas Resumo | Jogadores (`tabela-partida.js`, 16/10/2026): box-score dos dois times
   (só colunas que a fonte trouxe), ordenável, filtro por time, clique abre a ficha. Escanteios/cruzamentos por jogador não existem na fonte.
+- Classificação de outras competições (16/10/2026): seletor Brasileirão | Libertadores | Copa do Brasil | Carioca (`?tabela=`).
+  Grupos vêm de `/standings` (tabela `classificacao`); mata-mata de `copa_<liga>` = `/matches?leagueId=` das copas (2 páginas,
+  a cada 20 h enquanto houver jogo aberto) → tabela `mata_mata` (só fases eliminatórias, com pênaltis). `copas.js`:
+  confrontos ida+volta somados, ordem do chaveamento de trás para frente, coluna da Final "a definir" até a fonte criar o jogo.
 - Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
 - **Publicação**: só depois do Rafael validar no servidor local (`python scripts/servidor_local.py`, porta 8765) — pedido de 16/10/2026.
 - Próximos jogos (16/10/2026): aba Jogos com chave "Próximos jogos | Jogos disputados" (`?lista=`; `?jogo=<id>` abre o

@@ -2,7 +2,8 @@
 // Palpites: o visitante escolhe casa/empate/fora em qualquer jogo restante e a tabela se refaz na hora.
 // Chances: os jogos sem palpite são sorteados milhares de vezes (modelo de Poisson com a força de ataque e defesa
 // de cada time em casa e fora, puxada para a média do campeonato para não exagerar amostras pequenas).
-import { $, D, data, h, num, pct, preencher, vazio } from "./comum.js";
+import { $, D, data, estado, h, num, pct, preencher, simboloComp, vazio } from "./comum.js";
+import { competicoesComTabela, renderCopa } from "./copas.js";
 import { horaBR } from "./temporada.js";
 
 const SIMULACOES = 4000;
@@ -130,7 +131,25 @@ const logo = (src) => (src ? h("img", { src, alt: "", width: 18, height: 18, loa
 const chance = (v) => h("td", { class: "num chance-celula", style: v > 0.005 ? `--v:${v}` : "" },
   v >= 0.995 ? ">99%" : v > 0 && v < 0.005 ? "<1%" : v === 0 ? "–" : pct(v, 0));
 
+// Seletor de competição: Brasileirão (tabela + simulador) ou as copas/estaduais (grupos + mata-mata, copas.js)
 export function renderClassificacao() {
+  const outras = competicoesComTabela();
+  const opcoes = ["Brasileirão", ...outras];
+  if (!opcoes.includes(estado.tabelaComp)) estado.tabelaComp = "Brasileirão";
+  const seletor = $("classificacao-comp");
+  seletor.hidden = opcoes.length < 2;
+  preencher(seletor, opcoes.map((c) => h("button", { type: "button", "aria-pressed": String(estado.tabelaComp === c), onclick: () => {
+    estado.tabelaComp = c;
+    const url = new URL(location);
+    if (c === "Brasileirão") url.searchParams.delete("tabela"); else url.searchParams.set("tabela", c.toLowerCase().replace(/\s+/g, "-"));
+    history.replaceState(null, "", url);
+    renderClassificacao();
+  } }, simboloComp(c), c)));
+  if (estado.tabelaComp === "Brasileirão") renderBrasileirao();
+  else renderCopa($("classificacao-corpo"), estado.tabelaComp);
+}
+
+function renderBrasileirao() {
   const liga = D.bruto.liga ?? [];
   if (!liga.length) {
     preencher($("classificacao-corpo"), vazio("A tabela do Brasileirão chega na próxima coleta."));

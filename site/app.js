@@ -226,6 +226,7 @@ async function iniciar() {
   registrarVisita(estado.aba);
   await carregarTemporada(ano);
   estado.subElenco = params.get("sub") === "ficha" ? "ficha" : "desempenho";
+  estado.tabelaComp = { libertadores: "Libertadores", "copa-do-brasil": "Copa do Brasil", carioca: "Carioca" }[params.get("tabela")] ?? "Brasileirão";
   const jogo = Number(params.get("jogo"));
   estado.lista = jogo ? "disputados" : ["disputados", "comparar"].includes(params.get("lista")) ? params.get("lista") : "proximos";
   const proximo = Number(params.get("proximo"));

@@ -10,6 +10,8 @@ esgotá-la; o que faltar vem nas próximas coletas (a carga inicial leva uns 2 d
                                                         mercado, lesões (1 vez por semana, 15 por coleta) — ficha do elenco
     liga_<liga>        /matches?leagueId=&season=      todos os jogos do campeonato de pontos corridos (4 páginas, 1 vez
                                                         por dia): tabela e simulador da aba Classificação
+    copa_<liga>        /matches?leagueId=&season=      todos os jogos de Libertadores e Copa do Brasil (2 páginas; renova
+                                                        a cada 20 h enquanto houver jogo por acontecer): chaveamento do mata-mata
 """
 
 from __future__ import annotations
@@ -89,7 +91,24 @@ def tarefas(jogos: list[dict]) -> list[tuple[str, str, dict]]:
                       if ((j.get("league") or {}).get("name") or "").lower() == "serie a"}
     liga = [(f"liga_{lid}", "matches", {"leagueId": lid, "season": temp or config.SEASON}) for lid, temp in ligas_corridas.items()
             if (_idade(f"liga_{lid}") or timedelta(days=999)) >= timedelta(hours=HORAS_LIGA)]
-    return escalacoes[:5] + liga + perfis[:5] + escalacoes[5:] + tabelas + perfis[5:] + carreiras
+    return escalacoes[:5] + liga + perfis[:5] + escalacoes[5:] + tabelas + copas(jogos) + perfis[5:] + carreiras
+
+
+COPAS = ("libertadores", "copa do brasil")
+
+
+def copas(jogos: list[dict]) -> list[tuple[str, str, dict]]:
+    """Copas com mata-mata: baixa se nunca baixou ou, com jogo ainda por acontecer, a cada HORAS_LIGA."""
+    ids = {(j.get("league") or {}).get("id"): (j.get("league") or {}).get("season") for j in jogos
+           if any(c in ((j.get("league") or {}).get("name") or "").lower() for c in COPAS)}
+    saida = []
+    for lid, temp in ids.items():
+        nome = f"copa_{lid}"
+        salvo = ler_raw(nome)
+        aberto = salvo is None or salvo.get("_parcial") or any(_status(m) not in config.STATUS_ENCERRADO for m in salvo.get("data") or [])
+        if aberto and (_idade(nome) or timedelta(days=999)) >= timedelta(hours=HORAS_LIGA):
+            saida.append((nome, "matches", {"leagueId": lid, "season": temp or config.SEASON}))
+    return saida
 
 
 def cmd_extras(api: ClienteHighlightly) -> int:
@@ -104,7 +123,7 @@ def cmd_extras(api: ClienteHighlightly) -> int:
             print("Extras: cota do dia no fim; o resto fica para a próxima coleta.")
             break
         try:
-            if nome.startswith("liga_"):
+            if nome.startswith(("liga_", "copa_")):
                 _salvar(nome, _todas_as_paginas(api, caminho, params))
             else:
                 _salvar(nome, api.get(caminho, **params))
@@ -205,6 +224,37 @@ def linhas_liga(jogos_fla: list[dict]) -> list[dict]:
                 "fora_id": m["awayTeam"]["id"], "fora": m["awayTeam"]["name"], "fora_logo": m["awayTeam"].get("logo"),
                 "gols_casa": casa if status in config.STATUS_ENCERRADO else None,
                 "gols_fora": fora if status in config.STATUS_ENCERRADO else None,
+            })
+    return linhas
+
+
+ORDEM_FASES = ["Round of 64", "Round of 32", "Round of 16", "Quarter-finals", "Semi-finals", "Final"]
+
+
+def linhas_mata_mata(jogos_fla: list[dict]) -> list[dict]:
+    """Jogos das fases eliminatórias das copas (sem fase de grupos nem preliminares), para o chaveamento."""
+    from .highlightly import _placar, rodada
+    nomes = {(j.get("league") or {}).get("id"): (j.get("league") or {}).get("name") for j in jogos_fla}
+    linhas = []
+    for arq in config.RAW_DIR.glob("copa_*.json"):
+        lid = int(arq.stem.removeprefix("copa_"))
+        for m in (ler_raw(arq.stem) or {}).get("data") or []:
+            fase = m.get("round")
+            if fase not in ORDEM_FASES:
+                continue
+            score = (m.get("state") or {}).get("score") or {}
+            casa, fora = _placar(score.get("current"))
+            pen_casa, pen_fora = _placar(score.get("penalties"))
+            status = _status(m)
+            fim = status in config.STATUS_ENCERRADO
+            linhas.append({
+                "competicao_id": lid, "competicao": nomes.get(lid, (m.get("league") or {}).get("name")),
+                "id_partida": m["id"], "data_utc": m["date"].replace(".000Z", "+00:00").replace("Z", "+00:00"),
+                "fase": rodada(fase), "ordem_fase": ORDEM_FASES.index(fase), "status": status,
+                "casa_id": m["homeTeam"]["id"], "casa": m["homeTeam"]["name"], "casa_logo": m["homeTeam"].get("logo"),
+                "fora_id": m["awayTeam"]["id"], "fora": m["awayTeam"]["name"], "fora_logo": m["awayTeam"].get("logo"),
+                "gols_casa": casa if fim else None, "gols_fora": fora if fim else None,
+                "penaltis_casa": pen_casa if fim else None, "penaltis_fora": pen_fora if fim else None,
             })
     return linhas
 
