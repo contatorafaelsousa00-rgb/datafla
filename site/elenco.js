@@ -13,7 +13,10 @@ const dataCurta = (iso) => (iso ? new Date(`${iso}T12:00:00Z`).toLocaleDateStrin
 const idade = (iso) => { if (!iso) return null; const n = new Date(`${iso}T12:00:00Z`), h = new Date();
   return h.getFullYear() - n.getFullYear() - (h < new Date(h.getFullYear(), n.getMonth(), n.getDate()) ? 1 : 0); };
 const mesesAte = (iso) => (iso ? (new Date(`${iso}T12:00:00Z`) - Date.now()) / (30.44 * 864e5) : null);
-let ordemFicha = { campo: "valor_mercado", desc: true };
+// Ordem padrão: posição (na ordem do campo, de trás para a frente) e, na mesma posição, quem mais jogou
+const ORDEM_POSICAO = ["Goleiro", "Zagueiro", "Lateral-direito", "Lateral-esquerdo", "Volante", "Meio-campista", "Meia-direita",
+  "Meia-esquerda", "Meia-atacante", "Ponta-direita", "Ponta-esquerda", "Segundo atacante", "Centroavante"];
+let ordemFicha = { campo: "posicao_detalhada", desc: false };
 
 function renderFicha(js) {
   const caixa = $("elenco-ficha");
@@ -34,11 +37,17 @@ function renderFicha(js) {
   const LARGURAS = [40, 175, 165, 56, 118, 64, 76, 112, 98, 98, 58, 66];
   const colunas = () => h("colgroup", {}, LARGURAS.map((w) => h("col", { style: `width:${w}px` })));
   const valor = (l, c) => (c === "jogos" || c === "minutos" ? l.t?.[c] ?? 0 : l[c]);
-  const ordenar = (a, b) => { const x = valor(a, ordemFicha.campo), y = valor(b, ordemFicha.campo);
+  const posIdx = (l) => { const i = ORDEM_POSICAO.indexOf(l.posicao_detalhada); return i < 0 ? 99 : i; };
+  const ordenar = (a, b) => {
+    if (ordemFicha.campo === "posicao_detalhada") {
+      const r = posIdx(a) - posIdx(b) || (b.t?.minutos ?? 0) - (a.t?.minutos ?? 0);
+      return ordemFicha.desc ? -r : r;
+    }
+    const x = valor(a, ordemFicha.campo), y = valor(b, ordemFicha.campo);
     const r = x == null ? 1 : y == null ? -1 : typeof x === "string" ? x.localeCompare(y) : x - y; return ordemFicha.desc ? -r : r; };
   const cab = h("thead", {}, h("tr", {}, COLS.map(([c, t], i) => h("th", { class: (i >= 3 && !["nacionalidade", "pe"].includes(c) ? "num " : "") + "ordenavel",
     "aria-sort": ordemFicha.campo === c ? (ordemFicha.desc ? "descending" : "ascending") : null,
-    onclick: () => { ordemFicha = { campo: c, desc: ordemFicha.campo === c ? !ordemFicha.desc : true }; renderFicha(js); } }, t))));
+    onclick: () => { ordemFicha = { campo: c, desc: ordemFicha.campo === c ? !ordemFicha.desc : c !== "posicao_detalhada" }; renderFicha(js); } }, t))));
   const celula = (l) => {
     const variacao = l.valor_anterior ? l.valor_mercado - l.valor_anterior : 0;
     return h("tr", { class: "clicavel" + (l.lesao_atual ? " lesionado" : ""), onclick: () => (l.t ? abrirJogador(l.jogador_id) : null) },
@@ -69,10 +78,10 @@ function renderFicha(js) {
         h("div", { class: "tabela-rolagem" }, h("table", { class: "tabela tabela-ficha" }, colunas(), cab.cloneNode(true), h("tbody", {}, doGrupo.map(celula)))));
     }),
     h("p", { class: "sutil" }, "Valor: valor de mercado (seta = subiu ou caiu na última avaliação). Chegada: data em que chegou ao clube. Jogos e minutos: temporada 2026, com os filtros atuais. Fonte da ficha: perfil dos jogadores na Highlightly (dados do Transfermarkt), atualizado uma vez por semana. "
-      + "Contrato em vermelho: vence em até 6 meses. Clique no cabeçalho para ordenar e num jogador para ver o perfil."));
+      + "Contrato em vermelho: vence em até 6 meses. Ordem: por posição e, na mesma posição, por minutos; clique no cabeçalho para ordenar por outra coluna e num jogador para ver o perfil."));
   // o clone do cabeçalho perde os cliques: religa em cada tabela
   caixa.querySelectorAll(".tabela-ficha thead th").forEach((th, i) => th.addEventListener("click", () => {
-    const c = COLS[i][0]; ordemFicha = { campo: c, desc: ordemFicha.campo === c ? !ordemFicha.desc : true }; renderFicha(js); }));
+    const c = COLS[i][0]; ordemFicha = { campo: c, desc: ordemFicha.campo === c ? !ordemFicha.desc : c !== "posicao_detalhada" }; renderFicha(js); }));
 }
 
 export function renderElenco(js) {
