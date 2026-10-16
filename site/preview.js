@@ -5,6 +5,7 @@ import { bola, D, data, h, num, pct, vazio } from "./comum.js";
 import { campinho } from "./graficos.js";
 import { abrirJogador, agregarJogadores } from "./jogadores.js";
 
+const naNo = (comp) => (/^(Libertadores|Copa|Recopa|Supercopa|Taça)/.test(comp) ? `na ${comp}` : `no ${comp}`);
 const POS_ESCALACAO = { G: "Goleiro", D: "Defensor", M: "Meio-campo", F: "Atacante" };
 
 // Suspenso num jogo? Pela regra de 3 amarelos ou expulsão no jogo anterior DA MESMA competição.
@@ -73,40 +74,62 @@ export function desfalques(p) {
   return { suspensos, pendurados, lesionados, ausentes, voltam, ultimo };
 }
 
-// Provável escalação do Flamengo: a do último jogo, trocando quem está fora por quem mais jogou na mesma posição
-// e devolvendo ao time quem volta de suspensão (no lugar do menos usado da posição dele na temporada)
-function provavelFlamengo(fora, voltam = []) {
+// Provável escalação do Flamengo: a formação e as vagas do último jogo. Em cada posição (detalhada, do perfil:
+// lateral-direito, zagueiro, volante...) entra quem mais jogou NA COMPETIÇÃO deste jogo, fora os desfalques
+// (assim um time poupado no último jogo não vira o provável). Quem volta de suspensão retoma a vaga.
+function provavelFlamengo(p, fora, voltam = []) {
   const recentes = D.encerrados.filter((x) => x.detalhe).sort((a, b) => b.data_utc.localeCompare(a.data_utc));
   const base = recentes.find((x) => (D.escalacoesPorPartida.get(x.id_partida) ?? []).some((e) => e.eh_flamengo && e.titular));
   if (!base) return null;
   const xi = (D.escalacoesPorPartida.get(base.id_partida) ?? []).filter((e) => e.eh_flamengo && e.titular);
-  const minutos = agregarJogadores(recentes.slice(0, 8));
-  const usados = new Set(xi.map((e) => e.jogador_id));
+  const posDet = new Map((D.bruto.perfis ?? []).filter((x) => /flamengo/i.test(x.clube_atual ?? "")).map((x) => [x.jogador_id, x.posicao_detalhada]));
+  const naComp = agregarJogadores(recentes.filter((x) => x.competicao === p.competicao));
+  const minComp = new Map(naComp.map((a) => [a.id, a.minutos]));
+  const temporada = agregarJogadores(recentes);
+  const minTemp = new Map(temporada.map((a) => [a.id, a.minutos]));
+  const numero = new Map(temporada.map((a) => [a.id, a.numero]));
+  const vagas = xi.map((e) => ({ numero: e.numero, nome: e.jogador, id: e.jogador_id, ordem: e.ordem, linha: e.linha, posicao: e.posicao }));
+  const usados = new Set(vagas.filter((v) => !fora.has(v.id)).map((v) => v.id));
   const trocas = [];
-  const linhas = [];
-  for (const e of xi) {
-    let j = { numero: e.numero, nome: e.jogador, id: e.jogador_id };
-    if (fora.has(e.jogador_id)) {
-      const sub = minutos.filter((a) => a.posicao === POS_ESCALACAO[e.posicao] && !usados.has(a.id) && !fora.has(a.id))
-        .sort((a, b) => b.minutos - a.minutos)[0];
-      if (sub) { usados.add(sub.id); trocas.push([e.jogador, sub.jogador]); j = { numero: sub.numero, nome: sub.jogador, id: sub.id, duvida: true }; }
+  const trocar = (vaga, novo, motivo, duvida) => {
+    trocas.push(motivo ? [vaga.nome, novo.jogador, motivo] : [vaga.nome, novo.jogador]);
+    usados.delete(vaga.id); usados.add(novo.id);
+    Object.assign(vaga, { id: novo.id, nome: novo.jogador, numero: numero.get(novo.id) ?? novo.numero, duvida });
+  };
+  // 1) quem volta de suspensão entra no lugar do menos usado da posição dele (se jogou mais que ele na temporada)
+  for (const r of voltam) {
+    if (usados.has(r.id) || fora.has(r.id)) continue;
+    const pos = recentes.map((x) => (D.escalacoesPorPartida.get(x.id_partida) ?? []).find((e) => e.jogador_id === r.id && e.titular)).find(Boolean)?.posicao;
+    const sai = vagas.filter((v) => v.posicao === pos).sort((a, b) => (minTemp.get(a.id) ?? 0) - (minTemp.get(b.id) ?? 0))[0];
+    if (!sai || (minTemp.get(sai.id) ?? 0) >= (minTemp.get(r.id) ?? 0)) continue;
+    trocar(sai, { id: r.id, jogador: r.nome }, "volta de suspensão", false);
+  }
+  // 2) por posição detalhada: os k mais usados na competição ficam com as k vagas da posição
+  const grupos = new Map();
+  for (const v of vagas) { const g = posDet.get(v.id); if (g) (grupos.get(g) ?? grupos.set(g, []).get(g)).push(v); }
+  for (const [g, vs] of grupos) {
+    const top = naComp.filter((a) => posDet.get(a.id) === g && !fora.has(a.id) && a.minutos > 0)
+      .sort((a, b) => b.minutos - a.minutos).slice(0, vs.length);
+    const ficam = new Set(top.map((a) => a.id));
+    const livres = top.filter((a) => !vs.some((v) => v.id === a.id) && !usados.has(a.id));
+    for (const v of vs) {
+      if (ficam.has(v.id) && !fora.has(v.id)) continue;
+      const novo = livres.shift();
+      if (!novo) continue;
+      if (fora.has(v.id)) trocar(v, novo, null, true);
+      else if ((minComp.get(novo.id) ?? 0) > (minComp.get(v.id) ?? 0)) trocar(v, novo, `mais minutos ${naNo(p.competicao)}`, false);
     }
-    (linhas[e.linha] ??= []).push({ ...j, ordem: e.ordem, posicao: e.posicao });
   }
-  const temporada = new Map(agregarJogadores(recentes).map((a) => [a.id, a.minutos]));
-  for (const v of voltam) {
-    if (usados.has(v.id) || fora.has(v.id)) continue;
-    // posição dele = a da última partida em que foi titular
-    const pos = recentes.map((x) => (D.escalacoesPorPartida.get(x.id_partida) ?? []).find((e) => e.jogador_id === v.id && e.titular)).find(Boolean)?.posicao;
-    const naPosicao = linhas.flat().filter((j) => j && j.posicao === pos).sort((a, b) => (temporada.get(a.id) ?? 0) - (temporada.get(b.id) ?? 0));
-    const sai = naPosicao[0];
-    if (!sai || (temporada.get(sai.id) ?? 0) >= (temporada.get(v.id) ?? 0)) continue;
-    const num = (D.jogadoresPorPartida.get(recentes.find((x) => (D.jogadoresPorPartida.get(x.id_partida) ?? []).some((j) => j.jogador_id === v.id))?.id_partida) ?? [])
-      .find((j) => j.jogador_id === v.id)?.numero;
-    trocas.push([sai.nome, v.nome, "volta de suspensão"]);
-    usados.delete(sai.id); usados.add(v.id);
-    Object.assign(sai, { numero: num ?? sai.numero, nome: v.nome, id: v.id, duvida: false, volta: true });
+  // 3) desfalque sem substituto da mesma posição detalhada: o mais usado da mesma linha nos últimos 8 jogos
+  const recentes8 = agregarJogadores(recentes.slice(0, 8));
+  for (const v of vagas) {
+    if (!fora.has(v.id)) continue;
+    const sub = recentes8.filter((a) => a.posicao === POS_ESCALACAO[v.posicao] && !usados.has(a.id) && !fora.has(a.id))
+      .sort((a, b) => b.minutos - a.minutos)[0];
+    if (sub) trocar(v, sub, null, true);
   }
+  const linhas = [];
+  for (const v of vagas) (linhas[v.linha] ??= []).push(v);
   return { base, formacao: xi[0]?.formacao, trocas,
     linhas: linhas.filter(Boolean).map((l) => l.sort((a, b) => a.ordem - b.ordem)) };
 }
@@ -133,7 +156,7 @@ export function secoesPreview(p) {
   const { suspensos, pendurados, lesionados, ausentes, voltam } = desfalques(p);
   const fora = new Set([...suspensos, ...lesionados, ...ausentes].map((x) => x.id));
   const penduradosIds = new Set(pendurados.map((x) => x.id));
-  const fla = provavelFlamengo(fora, voltam), adv = provavelAdversario(p);
+  const fla = provavelFlamengo(p, fora, voltam), adv = provavelAdversario(p);
   const campo = h("div", { class: "grafico" });
 
   // árbitro, momento, campanha na competição
@@ -152,7 +175,7 @@ export function secoesPreview(p) {
   const elementos = [
     h("div", { class: "bloco" }, h("h3", {}, "Prováveis escalações"),
       h("p", { class: "sutil" }, [
-        fla ? `Flamengo: a do último jogo (${data(fla.base.data_utc)}, ${fla.base.adversario})` + (fla.trocas.length
+        fla ? `Flamengo: formação do último jogo (${data(fla.base.data_utc)}, ${fla.base.adversario}), com o mais usado de cada posição ${naNo(p.competicao)}` + (fla.trocas.length
           ? `, trocando ${fla.trocas.map(([s, e, m]) => `${s} por ${e}${m ? ` (${m})` : ""}`).join(", ")}`
             + (fla.trocas.some((t) => !t[2]) ? " (círculo tracejado = substituto provável)" : "") : "")
           + (penduradosIds.size ? "; dois cartões amarelos = pendurado" : "") : "Flamengo: sem escalação recente",
