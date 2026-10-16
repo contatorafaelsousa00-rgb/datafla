@@ -29,6 +29,9 @@ export function renderJogos(js) {
 
 export function abrirJogo(id) {
   estado.jogo = id;
+  const url = new URL(location); // link direto para o jogo: ?aba=jogos&jogo=<id>
+  url.searchParams.set("jogo", id);
+  history.replaceState(null, "", url);
   render();
   $("detalhe-jogo").scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -86,11 +89,14 @@ export function renderDetalheJogo(js) {
   const p = js.find((x) => x.id_partida === estado.jogo);
   caixa.hidden = !p;
   if (!p) return;
-  const [casa, fora] = p.mando === "Casa" ? ["Flamengo", p.adversario] : [p.adversario, "Flamengo"];
-  const [gc, gf] = p.mando === "Casa" ? [p.gols_pro, p.gols_contra] : [p.gols_contra, p.gols_pro];
+  // Tudo na ordem mandante × visitante, com o xG embaixo do nome de cada time (sem par solto, que confunde)
+  const flaPrimeiro = p.mando !== "Fora";
+  const fla = { nome: "Flamengo", gols: p.gols_pro, xg: p.xg_pro }, adv = { nome: p.adversario, gols: p.gols_contra, xg: p.xg_contra };
+  const [esq, dir] = flaPrimeiro ? [fla, adv] : [adv, fla];
+  const lado = (t, classe) => h("div", { class: `time-placar ${classe}` }, h("h2", {}, t.nome),
+    t.xg != null ? h("span", { class: "sutil" }, `xG ${num(t.xg, 2)}`) : null);
   const cabecalho = [
-    h("div", { class: "placar" }, h("h2", {}, casa), h("span", { class: "gols" }, `${gc} × ${gf}`), h("h2", {}, fora),
-      p.xg_pro != null ? h("span", { class: "sutil" }, `xG ${num(p.mando === "Casa" ? p.xg_pro : p.xg_contra, 2)} × ${num(p.mando === "Casa" ? p.xg_contra : p.xg_pro, 2)}`) : null),
+    h("div", { class: "placar" }, lado(esq, "esq"), h("span", { class: "gols" }, `${esq.gols} × ${dir.gols}`), lado(dir, "dir")),
     h("p", { class: "sutil" }, [p.competicao, p.rodada, dataLonga(p.data_utc), p.estadio, p.arbitro ? `Árbitro: ${p.arbitro}` : null,
       p.temperatura != null ? `${num(p.temperatura, 0)} °C` : null, p.formacao ? `Formação ${p.formacao}` : null].filter(Boolean).join(" · ")),
   ];
@@ -111,7 +117,10 @@ export function renderDetalheJogo(js) {
   const cabJog = (t) => h("thead", {}, h("tr", {}, h("th", { class: "num" }, "Nº"), h("th", {}, t), h("th", { class: "num" }, "Min."),
     temXg ? h("th", { class: "num" }, "xG") : null, h("th", { class: "num" }, "Nota")));
   const linhasStats = STATS_JOGO.filter(([k]) => st.fla[k] != null || st.adv[k] != null)
-    .map(([k, rot, f = (v) => num(v)]) => ({ rotulo: rot, a: st.fla[k] ?? null, b: st.adv[k] ?? null, texto: f }));
+    .map(([k, rot, f = (v) => num(v)]) => {
+      const [a, b] = flaPrimeiro ? [st.fla[k], st.adv[k]] : [st.adv[k], st.fla[k]];
+      return { rotulo: rot, a: a ?? null, b: b ?? null, texto: f };
+    });
   const eventos = D.eventosPorPartida.get(p.id_partida) ?? [];
   const chutes = D.finalizacoesPorPartida.get(p.id_partida) ?? [];
   const marcas = marcasLinhaTempo(p);
@@ -125,7 +134,8 @@ export function renderDetalheJogo(js) {
       h("p", { class: "sutil" }, "Flamengo em cima, adversário embaixo. Ponto cheio: defendida; vazio: para fora ou bloqueada; com anel: gol."),
       tempo) : null,
     h("div", { class: "detalhe-grade" },
-      h("div", {}, h("h3", {}, "Comparativo"), linhasStats.length ? grafStats : vazio("Sem estatísticas na fonte.")),
+      h("div", {}, h("h3", {}, "Comparativo"), h("p", { class: "sutil" }, `${esq.nome} à esquerda · ${dir.nome} à direita`),
+        linhasStats.length ? grafStats : vazio("Sem estatísticas na fonte.")),
       h("div", {}, h("h3", {}, "Flamengo em campo"),
         titulares.length ? h("table", { class: "tabela" }, cabJog("Titulares"), h("tbody", {}, titulares.map(linhaJog))) : vazio("Sem escalação na fonte."),
         entraram.length ? h("table", { class: "tabela", style: "margin-top:10px" }, cabJog("Entraram"), h("tbody", {}, entraram.map(linhaJog))) : null),
@@ -142,7 +152,9 @@ export function renderDetalheJogo(js) {
       h("div", {}, h("h3", {}, `Finalizações do ${p.adversario}`), golAdv)) : null,
   );
   if (marcas.length) linhaTempo(tempo, marcas, { duracao: p.duracao ?? 90 });
-  if (linhasStats.length) barrasEspelhadas(grafStats, linhasStats, { nomeA: "Flamengo", nomeB: p.adversario });
+  if (linhasStats.length) barrasEspelhadas(grafStats, linhasStats, flaPrimeiro
+    ? { nomeA: "Flamengo", nomeB: p.adversario }
+    : { nomeA: p.adversario, nomeB: "Flamengo", corA: "var(--serie-2)", corB: "var(--serie-1)" });
   if (chutes.length) {
     mapaGol(golFla, chutes.filter((c) => c.eh_flamengo));
     mapaGol(golAdv, chutes.filter((c) => !c.eh_flamengo), { cor: "var(--serie-2)" });
