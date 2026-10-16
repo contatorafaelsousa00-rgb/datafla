@@ -65,7 +65,7 @@ export function desfalques(p) {
       return { id: a.id, nome: a.jogador, seguidos, cumpridas, ultimoJogo };
     });
   const ausentes = candidatos.filter((a) => a.seguidos >= 2).sort((a, b) => b.seguidos - a.seguidos)
-    .map((a) => ({ ...a, motivo: `fora dos últimos ${a.seguidos} jogos sem suspensão` + (a.ultimoJogo ? ` (último: ${data(a.ultimoJogo.data_utc)})` : "") }));
+    .map((a) => ({ ...a, motivo: `fora dos últimos ${a.seguidos} jogos` + (a.ultimoJogo ? ` (jogou até ${data(a.ultimoJogo.data_utc)})` : "") }));
   // Voltam de suspensão: faltaram por suspensão e não estão suspensos para este jogo
   const suspensosIds = new Set(suspensos.map((x) => x.id));
   const voltam = candidatos.filter((a) => a.cumpridas.length && a.seguidos === 0 && !suspensosIds.has(a.id))
@@ -139,9 +139,11 @@ export function secoesPreview(p) {
       h("div", {}, h("h3", {}, "Desfalques do Flamengo"),
         h("p", { class: "sutil" }, "Estimativa pelos cartões na competição (3 amarelos = suspensão), pelo perfil dos jogadores e por quem ficou fora dos últimos jogos."),
         h("h4", {}, "Suspensos"), listaNomes(suspensos, "Nenhum pela conta dos cartões."),
-        h("h4", {}, "Lesionados"), listaNomes(lesionados, "Nenhum informado pela fonte."),
-        h("h4", {}, "Ausentes"), h("p", { class: "sutil" }, "Titulares frequentes fora dos relacionados (nem no banco) nos últimos jogos, descontadas as suspensões. A fonte não diz o motivo: lesão, seleção ou opção do técnico."),
-        listaNomes(ausentes, "Nenhum titular frequente fora dos últimos jogos."),
+        // lesão informada no perfil + titulares que sumiram dos relacionados (a fonte não traz lesões recentes)
+        h("h4", {}, "Lesionados ou fora dos últimos jogos"),
+        listaNomes([...lesionados, ...ausentes], "Nenhum titular frequente fora."),
+        ausentes.length ? h("p", { class: "sutil" }, "\"Fora dos últimos jogos\" = titular frequente que não foi relacionado (nem no banco), "
+          + "descontadas as suspensões. Provável lesão, mas a fonte não confirma o motivo.") : null,
         voltam.length ? [h("h4", {}, "Voltam de suspensão"), listaNomes(voltam, "")] : null,
         h("h4", {}, "Pendurados"), listaNomes(pendurados, "Ninguém com 2 amarelos.")),
       h("div", {}, h("h3", {}, "Momento"),

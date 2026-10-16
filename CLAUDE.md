@@ -138,7 +138,7 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   quem já saiu; lesionados do perfil), prováveis escalações no campinho (Flamengo = último jogo trocando desfalques pelo
   mais usado na posição, tracejado; adversário = escalação do último jogo dele, `/lineups` do id em `forma_<adv>`, 1 req),
   momento (últimos 5), campanha na competição com o mesmo mando, histórico do árbitro. A fonte NÃO traz lesões recentes (ex.: Arrascaeta
-  fora desde 20/09; perfil só tem lesões até jun/2026; /injuries da API-Football é só 2022–2024): "Ausentes" = titulares
+  fora desde 20/09; perfil só tem lesões até jun/2026; /injuries da API-Football é só 2022–2024): seção única "Lesionados ou fora dos últimos jogos" (lesão do perfil + titulares
   frequentes (900+ min) fora dos relacionados (box-score inclui o banco) em 2+ jogos seguidos, motivo não informado.
   Ausências explicadas por suspensão (vermelho ou 3º/6º… amarelo no jogo anterior da MESMA competição) não contam;
   quem as cumpriu aparece em "Voltam de suspensão" (ex.: Jorginho, expulso vs Del Valle e vs Santos).
