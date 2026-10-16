@@ -144,3 +144,11 @@ def test_armazenamento(tmp_path):
     armazenar.salvar_csv(t, tmp_path / "csv")
     assert (tmp_path / "csv" / "partidas.csv").exists()
     print(validar.relatorio_markdown(validar.validar(t)))
+
+
+def test_nome_time_minusculas_nas_particulas():
+    from coleta.exportar import nome_time
+    assert nome_time("Vasco DA Gama") == "Vasco da Gama"
+    assert nome_time("Estudiantes de La Plata") == "Estudiantes de La Plata"
+    assert nome_time("DE Graafschap") == "DE Graafschap"  # só entre palavras
+    assert nome_time(None) is None

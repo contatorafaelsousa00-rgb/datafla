@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -33,8 +34,21 @@ def nome_competicao(nome: str | None) -> str | None:
     return next((curto for trecho, curto in COMPETICOES if trecho in baixo), nome)
 
 
+# Campos com nome de time. A fonte às vezes manda partícula em maiúsculas ("Vasco DA Gama").
+CAMPOS_TIME = ("adversario", "time", "casa", "fora", "oponente")
+
+
+def nome_time(nome):
+    if not isinstance(nome, str):
+        return nome
+    return re.sub(r"(?<=\s)(DA|DE|DO|DAS|DOS)(?=\s)", lambda m: m.group(1).lower(), nome)
+
+
 def _traduzir(linhas: list[dict]) -> list[dict]:
     for l in linhas:
+        for c in CAMPOS_TIME:
+            if c in l:
+                l[c] = nome_time(l[c])
         if "competicao" in l:
             l["competicao"] = nome_competicao(l["competicao"])
         if l.get("posicao") in POSICOES:
@@ -91,6 +105,8 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
             _traduzir(linhas)
     for item in validacao.get("checagens", []) + validacao.get("completude", []):
         item["competicao"] = nome_competicao(item["competicao"])
+        if "adversario" in item:
+            item["adversario"] = nome_time(item["adversario"])
 
     agora = datetime.now(timezone.utc).isoformat(timespec="seconds")
     for nome in COMPACTAR:
