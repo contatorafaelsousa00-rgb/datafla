@@ -72,11 +72,15 @@ export const textoConfronto = (p, pro, contra, fmt = (v) => v ?? "–") => {
   const [a, b] = mandanteVisitante(p, pro, contra);
   return `${a.nome} ${fmt(a.valor)} × ${fmt(b.valor)} ${b.nome}`;
 };
+// Escudo do time (o do Flamengo vem da fonte, como o dos adversários; a marca do datafla continua própria)
+export const logoFla = () => D?.bruto.partidas.find((x) => x.flamengo_logo)?.flamengo_logo ?? "logos/teams/108861.png";
+export const escudoImg = (src, tamanho = 18) => (src ? h("img", { src, alt: "", loading: "lazy", width: tamanho, height: tamanho, class: "escudo-time" }) : null);
+
 // Célula com os dois times e o placar no meio; o lado do Flamengo em destaque
 export function confronto(p, pro = p.gols_pro, contra = p.gols_contra, fmt = (v) => v ?? "–") {
   const [a, b] = mandanteVisitante(p, pro, contra);
   const time = (t, lado) => h("span", { class: `confronto-time ${lado}` + (t.fla ? " fla" : "") },
-    !t.fla && p.adversario_logo ? h("img", { src: p.adversario_logo, alt: "", loading: "lazy", width: 18, height: 18 }) : null, t.nome);
+    escudoImg(t.fla ? logoFla() : p.adversario_logo), t.nome);
   return h("span", { class: "confronto" }, time(a, "casa"), h("b", { class: "confronto-placar" }, `${fmt(a.valor)} × ${fmt(b.valor)}`), time(b, "fora"));
 }
 export const media = (lista) => (lista.length ? lista.reduce((s, v) => s + v, 0) / lista.length : null);

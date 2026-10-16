@@ -16,7 +16,9 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
 - **Identidade visual: direção B "Analítico"** (escolhida em 15/10/2026): marca "datafla." em minúsculas com ponto vermelho,
   logo de barras crescentes (a última vermelha, também favicon); Space Grotesk (títulos), JetBrains Mono (números),
   Inter (texto); escuro #0E0F11 / cartões #17191C / vermelho #FF3341 (claro: #E01E2D) / cinzas frios #8A9099.
-  Logos são desenhos próprios: nunca usar escudo ou marca do Flamengo. Propostas em `site/.propostas/` (fora do deploy).
+  Logos são desenhos próprios: nunca usar escudo ou marca do Flamengo NA IDENTIDADE do datafla (logo, favicon, capa).
+  Como símbolo do time nas listas e placares, o escudo do Flamengo aparece igual ao dos adversários (vem da fonte;
+  `comum.js`: `logoFla`, `escudoImg`) — pedido do Rafael em 16/10/2026. Propostas em `site/.propostas/` (fora do deploy).
 - **API-Football** (api-sports.io, `v3.football.api-sports.io`, header `x-apisports-key`): hoje só para temporadas
   2022–2024 e fotos do elenco (fonte original, antes da Highlightly; plano grátis, 100 req/dia). Escolhida por cobrir as 6 competições com minutagem por jogador.
   Ponto fraco: xG não é documentado; o código captura `expected_goals` de `/fixtures` quando existir.

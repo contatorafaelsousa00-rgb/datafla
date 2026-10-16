@@ -1,6 +1,6 @@
 // Aba Jogos: lista e relatório de cada jogo.
 import { barrasEspelhadas, campinho, conteudoDica, dica, linhaTempo, mapaGol, serie } from "./graficos.js";
-import { $, bola, confronto, D, data, dataLonga, escudo, estado, h, mandanteVisitante, NOME_RES, notaTag, num, ORDEM_POS, pct, preencher, resultado, tagComp, vazio } from "./comum.js";
+import { $, bola, confronto, D, data, dataLonga, escudo, escudoImg, estado, h, logoFla, mandanteVisitante, NOME_RES, notaTag, num, ORDEM_POS, pct, preencher, resultado, tagComp, vazio } from "./comum.js";
 import { abrirJogadorNaPartida } from "./jogadores.js";
 import { render } from "./app.js";
 import { CLIMA, futurosFiltrados, horaBR } from "./temporada.js";
@@ -72,15 +72,18 @@ function renderDetalheProximo(j, detalhe) {
   const contar = (l, r) => l.filter((c) => c.resultado === r).length;
   const plural = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
   // c vem do ponto de vista de "time" (Flamengo nos confrontos, o adversário na forma); mostra mandante × visitante
-  const linhaJogo = (c, time) => {
-    const [casaJ, foraJ] = c.mando === "Casa" ? [[time, c.gols_pro], [c.oponente, c.gols_contra]] : [[c.oponente, c.gols_contra], [time, c.gols_pro]];
+  const linhaJogo = (c, time, logoTime) => {
+    const [casaJ, foraJ] = c.mando === "Casa" ? [[time, c.gols_pro, logoTime], [c.oponente, c.gols_contra, c.oponente_logo]]
+      : [[c.oponente, c.gols_contra, c.oponente_logo], [time, c.gols_pro, logoTime]];
     return h("li", {}, bola(c.resultado),
-      h("span", { class: "cresce" }, `${casaJ[0]} `, h("b", {}, `${casaJ[1]} × ${foraJ[1]}`), ` ${foraJ[0]}`),
+      h("span", { class: "cresce confronto" }, h("span", { class: "confronto-time" }, escudoImg(casaJ[2]), casaJ[0]),
+        h("b", { class: "confronto-placar" }, `${casaJ[1]} × ${foraJ[1]}`), h("span", { class: "confronto-time" }, escudoImg(foraJ[2]), foraJ[0])),
       h("span", { class: "sutil" }, `${data(c.data_utc)}/${c.data_utc.slice(2, 4)} · ${c.competicao}`));
   };
 
   preencher(caixa,
-    h("div", { class: "placar" }, h("h2", {}, casa), h("span", { class: "gols" }, horaBR(p.data_utc)), h("h2", {}, fora)),
+    h("div", { class: "placar" }, h("h2", {}, escudoImg(casa === "Flamengo" ? logoFla() : p.adversario_logo, 26), casa),
+      h("span", { class: "gols" }, horaBR(p.data_utc)), h("h2", {}, escudoImg(fora === "Flamengo" ? logoFla() : p.adversario_logo, 26), fora)),
     h("p", { class: "sutil" }, [`${dataLonga(p.data_utc)} · ${horaBR(p.data_utc)} (${faltam(p.data_utc)})`, p.competicao, p.rodada,
       p.estadio ? `${p.estadio}${p.cidade ? `, ${p.cidade}` : ""}` : null, p.arbitro ? `Árbitro: ${p.arbitro}` : null, clima ? `Previsão do tempo: ${clima}` : null]
       .filter(Boolean).join(" · ")),
@@ -94,13 +97,13 @@ function renderDetalheProximo(j, detalhe) {
           ? [h("p", { class: "sutil" }, `Últimos ${confrontos.length}: ${plural(contar(confrontos, "V"), "vitória", "vitórias")}, `
               + `${plural(contar(confrontos, "E"), "empate", "empates")} e ${plural(contar(confrontos, "D"), "derrota", "derrotas")} do Flamengo`
               + ` · gols ${confrontos.reduce((t, c) => t + c.gols_pro, 0)} × ${confrontos.reduce((t, c) => t + c.gols_contra, 0)}`),
-             h("ul", { class: "lista-simples" }, confrontos.map((c) => linhaJogo(c, "Flamengo")))]
+             h("ul", { class: "lista-simples" }, confrontos.map((c) => linhaJogo(c, "Flamengo", logoFla())))]
           : vazio("Ainda sem confrontos baixados para este adversário.")),
       h("div", {}, h("h3", {}, `Forma recente do ${p.adversario}`),
         forma.length
           ? [h("p", { class: "forma" }, forma.slice().reverse().map((c) => bola(c.resultado)),
                h("span", { class: "sutil" }, ` ${contar(forma, "V")}V ${contar(forma, "E")}E ${contar(forma, "D")}D nos últimos ${forma.length} (mais recente à direita)`)),
-             h("ul", { class: "lista-simples" }, forma.map((c) => linhaJogo(c, p.adversario)))]
+             h("ul", { class: "lista-simples" }, forma.map((c) => linhaJogo(c, p.adversario, p.adversario_logo)))]
           : vazio("Ainda sem os últimos jogos deste adversário."))),
   );
 }
@@ -248,7 +251,7 @@ export function renderDetalheJogo(js) {
   const flaPrimeiro = p.mando !== "Fora";
   const fla = { nome: "Flamengo", gols: p.gols_pro, xg: p.xg_pro }, adv = { nome: p.adversario, gols: p.gols_contra, xg: p.xg_contra };
   const [esq, dir] = flaPrimeiro ? [fla, adv] : [adv, fla];
-  const lado = (t, classe) => h("div", { class: `time-placar ${classe}` }, h("h2", {}, t.nome),
+  const lado = (t, classe) => h("div", { class: `time-placar ${classe}` }, h("h2", {}, escudoImg(t.nome === "Flamengo" ? logoFla() : p.adversario_logo, 26), t.nome),
     t.xg != null ? h("span", { class: "sutil" }, `xG ${num(t.xg, 2)}`) : null);
   const cabecalho = [
     h("div", { class: "placar" }, lado(esq, "esq"), h("span", { class: "gols" }, `${esq.gols} × ${dir.gols}`), lado(dir, "dir")),

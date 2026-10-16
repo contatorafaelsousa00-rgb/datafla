@@ -571,3 +571,8 @@ body.sem-filtros .filtros { display: none; }
 .abas-ficha { margin-top: 12px; }
 .abas-ficha button:disabled { opacity: .45; cursor: not-allowed; }
 .camisa.adv { background: var(--superficie-2); color: var(--texto); border: 2px solid var(--serie-2); }
+
+/* escudos dos times nas listas e cabeçalhos */
+.escudo-time { object-fit: contain; flex: none; vertical-align: middle; }
+.time-placar h2, .placar > h2 { display: inline-flex; align-items: center; gap: 8px; }
+.time-placar.esq h2 { justify-content: flex-end; }
