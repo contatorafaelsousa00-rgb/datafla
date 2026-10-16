@@ -42,11 +42,11 @@ service cloud.firestore {
 
     function soContadores() {
       return request.resource.data.keys().hasOnly([
-          'visitas', 'unicos', 'celular', 'computador',
+          'visitas', 'unicos', 'celular', 'computador', 'dono',
           'aba_temporada', 'aba_jogos', 'aba_jogadores', 'aba_elenco', 'aba_estilo', 'aba_classificacao', 'aba_opiniao',
           'origem_direto', 'origem_google', 'origem_whatsapp', 'origem_instagram', 'origem_facebook',
           'origem_x', 'origem_outros'])
-        && mais1('visitas') && mais1('unicos') && mais1('celular') && mais1('computador')
+        && mais1('visitas') && mais1('unicos') && mais1('celular') && mais1('computador') && mais1('dono')
         && mais1('aba_temporada') && mais1('aba_jogos') && mais1('aba_jogadores') && mais1('aba_elenco')
         && mais1('aba_estilo') && mais1('aba_classificacao') && mais1('aba_opiniao')
         && mais1('origem_direto') && mais1('origem_google') && mais1('origem_whatsapp')

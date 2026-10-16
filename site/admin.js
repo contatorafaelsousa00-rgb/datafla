@@ -103,7 +103,7 @@ async function mostrarPainel(usuario) {
     }
     return aviso("Erro", `Não foi possível ler os dados (${e?.code ?? e.message}).`);
   }
-  try { localStorage.setItem("datafla-admin", "1"); } catch {} // este navegador deixa de contar acessos
+  try { localStorage.setItem("datafla-admin", "1"); } catch {} // este navegador passa a contar como acesso seu, à parte
 
   const visto = Number(localStorage.getItem("datafla-admin-visto") || 0);
   preencher(corpo(),
@@ -138,8 +138,12 @@ function secaoAcessos(docs) {
   const reais = docs.filter((d) => d.dia >= "2026-01-01");
   return h("section", { class: "admin-secao" },
     h("h3", { class: "admin-titulo" }, "Acessos"),
-    h("div", { class: "kpis" }, kpi("Hoje", periodo(1)), kpi("7 dias", periodo(7)), kpi("30 dias", periodo(30)), kpi("Desde o início", reais)),
-    h("article", { class: "cartao" }, h("h2", {}, "Visitas por dia"), h("p", { class: "sutil" }, "Últimos 30 dias. Seus próprios acessos não contam neste navegador."),
+    h("div", { class: "kpis" }, kpi("Hoje", periodo(1)), kpi("7 dias", periodo(7)), kpi("30 dias", periodo(30)), kpi("Desde o início", reais),
+      h("div", { class: "kpi" }, h("div", { class: "rotulo" }, "Seus acessos (30 dias)"), h("div", { class: "valor" }, num(somaCampo(periodo(30), "dono"))),
+        h("div", { class: "extra" }, `hoje ${num(somaCampo(periodo(1), "dono"))} · não entram nos números ao lado`))),
+    h("p", { class: "sutil" }, "Seus aparelhos não entram nos números do público: este navegador já está marcado. Para marcar o celular ou outro navegador, "
+      + "abra uma vez nele datafla.web.app/?eu=1 (?eu=0 desfaz). Acessos de antes da marcação não têm como ser separados."),
+    h("article", { class: "cartao" }, h("h2", {}, "Visitas por dia"), h("p", { class: "sutil" }, "Últimos 30 dias, só do público (sem os seus acessos)."),
       h("div", { id: "adm-dias" })),
     h("div", { class: "grade-2" },
       h("article", { class: "cartao" }, h("h2", {}, "Abas mais vistas"), h("p", { class: "sutil" }, "Últimos 30 dias; cada aba conta uma vez por visita."), h("div", { id: "adm-abas" })),
