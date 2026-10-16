@@ -611,3 +611,4 @@ body.sem-filtros .filtros { display: none; }
 .prob-mini { display: flex; width: 120px; height: 7px; border-radius: 4px; overflow: hidden; background: var(--grade); }
 .prob-mini b.v { background: var(--bom); } .prob-mini b.e { background: var(--neutro); } .prob-mini b.d { background: var(--marca); }
 .campo-cartao { fill: #f5c518; stroke: rgba(0, 0, 0, .55); stroke-width: .8; }
+.comparar-exportar { margin-top: 12px; gap: 10px; }

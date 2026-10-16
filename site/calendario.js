@@ -4,6 +4,7 @@
 import { $, D, data, estado, h, num, pct, preencher, vazio } from "./comum.js";
 import { horaBR } from "./temporada.js";
 import { modeloLiga, probabilidades } from "./classificacao.js";
+import { exportarImagem } from "./imagem.js";
 
 const escudo = (src) => (src ? h("img", { src, alt: "", width: 18, height: 18, loading: "lazy", class: "escudo-time" }) : null);
 
@@ -43,6 +44,22 @@ function coluna(modelo, id, outro) {
       h("span", { class: "cal-prob" }, barra(j), h("small", {}, `${pct(j.v, 0)} vitória`))))) : vazio("Sem jogos restantes."));
 }
 
+// Dados da imagem para compartilhar (imagem.js)
+function dadosImagem(modelo, a, b, resumo) {
+  const times = [a, b].map((id) => {
+    const t = modelo.times.get(id), linha = modelo.atual.find((l) => l.id === id);
+    const js = jogosDoTime(modelo, id), esperados = js.reduce((s, j) => s + j.pontos, 0);
+    return { id, nome: t.nome, logo: t.logo, pos: modelo.atual.indexOf(linha) + 1, pontos: linha.pontos, esperados,
+      projecao: linha.pontos + esperados, posMedia: js.length ? js.reduce((s, j) => s + j.posAdv, 0) / js.length : null,
+      jogos: js.map((j) => ({ rodada: j.m.rodada, data_utc: j.m.data_utc, adiado: j.m.status === "PST", casa: j.casa,
+        adv: { nome: j.adv.nome, logo: j.adv.logo }, posAdv: j.posAdv, v: j.v, e: j.e, d: j.d, direto: j.adv.id === (id === a ? b : a) })) };
+  });
+  const atualizado = new Date(D.bruto.meta.coletado_em ?? D.bruto.meta.gerado_em)
+    .toLocaleDateString("pt-BR", { timeZone: "America/Sao_Paulo" });
+  return { competicao: modelo.competicao, resumo, atualizado, times,
+    metodo: "Chances pelo modelo do datafla (gols marcados e sofridos em casa e fora); pontos esperados = 3 × vitória + empate; posição = tabela atual." };
+}
+
 export function renderComparar() {
   const caixa = $("comparar-calendario");
   const modelo = modeloLiga();
@@ -59,6 +76,15 @@ export function renderComparar() {
   const ea = ja.reduce((s, j) => s + j.pontos, 0), eb = jb.reduce((s, j) => s + j.pontos, 0);
   const la = modelo.atual.find((l) => l.id === a), lb = modelo.atual.find((l) => l.id === b);
   const fa = la.pontos + ea, fb = lb.pontos + eb;
+  const resumo = `Nos jogos que faltam, o modelo espera ${num(ea, 1)} pontos para o ${la.nome} e ${num(eb, 1)} para o ${lb.nome}: `
+    + (Math.abs(ea - eb) < 0.5 ? "calendários equivalentes. " : `calendário mais fácil para o ${ea > eb ? la.nome : lb.nome} (+${num(Math.abs(ea - eb), 1)}). `)
+    + `Projeção: ${la.nome} ~${num(fa, 0)} × ~${num(fb, 0)} ${lb.nome}.`;
+  const botao = (modo, rotulo, classe) => h("button", { type: "button", class: classe, onclick: async (e) => {
+    const el = e.currentTarget, antes = el.textContent;
+    el.disabled = true; el.textContent = "Gerando…";
+    try { await exportarImagem(dadosImagem(modelo, a, b, resumo), modo); }
+    finally { el.disabled = false; el.textContent = antes; }
+  } }, rotulo);
   preencher(caixa,
     h("article", { class: "cartao" },
       h("h2", {}, "Comparar calendário"),
@@ -68,6 +94,8 @@ export function renderComparar() {
       a !== b ? h("p", { class: "comparar-resumo" },
         `Nos jogos que faltam, o modelo espera ${num(ea, 1)} pontos para o ${la.nome} e ${num(eb, 1)} para o ${lb.nome}: `,
         h("b", {}, Math.abs(ea - eb) < 0.5 ? "calendários equivalentes. " : `calendário mais fácil para o ${ea > eb ? la.nome : lb.nome} (+${num(Math.abs(ea - eb), 1)}). `),
-        `Somando à pontuação atual, a projeção é ${la.nome} ~${num(fa, 0)} × ~${num(fb, 0)} ${lb.nome}.`) : null),
+        `Somando à pontuação atual, a projeção é ${la.nome} ~${num(fa, 0)} × ~${num(fb, 0)} ${lb.nome}.`) : null,
+      a !== b ? h("div", { class: "acoes comparar-exportar" }, h("span", { class: "sutil" }, "Exportar imagem:"),
+        botao("simplificada", "Simplificada", "botao-primario"), botao("detalhada", "Detalhada", "botao-secundario")) : null),
     h("div", { class: "grade-2" }, coluna(modelo, a, b), coluna(modelo, b, a)));
 }
