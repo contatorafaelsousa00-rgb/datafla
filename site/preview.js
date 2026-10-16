@@ -7,6 +7,23 @@ import { abrirJogador, agregarJogadores } from "./jogadores.js";
 
 const POS_ESCALACAO = { G: "Goleiro", D: "Defensor", M: "Meio-campo", F: "Atacante" };
 
+// Suspenso num jogo? Pela regra de 3 amarelos ou expulsão no jogo anterior DA MESMA competição.
+// Devolve o motivo (texto) ou null.
+function motivoSuspensao(idJogador, partida) {
+  const daComp = D.encerrados.filter((x) => x.competicao === partida.competicao && x.detalhe && x.data_utc < partida.data_utc)
+    .sort((a, b) => a.data_utc.localeCompare(b.data_utc));
+  const anterior = daComp.at(-1);
+  if (!anterior) return null;
+  const j = (D.jogadoresPorPartida.get(anterior.id_partida) ?? []).find((x) => x.jogador_id === idJogador);
+  if (!j) return null;
+  if (j.vermelhos) return `expulso contra o ${anterior.adversario} (${data(anterior.data_utc)})`;
+  if (j.amarelos) {
+    const total = daComp.reduce((s, x) => s + ((D.jogadoresPorPartida.get(x.id_partida) ?? []).find((y) => y.jogador_id === idJogador)?.amarelos || 0), 0);
+    if (total % 3 === 0) return `${total}º amarelo contra o ${anterior.adversario}`;
+  }
+  return null;
+}
+
 export function desfalques(p) {
   const jogosComp = D.encerrados.filter((x) => x.competicao === p.competicao && x.detalhe).sort((a, b) => a.data_utc.localeCompare(b.data_utc));
   const ultimo = jogosComp.at(-1);
@@ -35,17 +52,25 @@ export function desfalques(p) {
   const recentes = D.encerrados.filter((x) => x.detalhe).sort((a, b) => b.data_utc.localeCompare(a.data_utc));
   const ids = recentes.map((x) => new Set((D.jogadoresPorPartida.get(x.id_partida) ?? []).map((j) => j.jogador_id)));
   const jaListados = new Set([...suspensos, ...lesionados].map((x) => x.id));
-  const ausentes = agregarJogadores(recentes).filter((a) => a.minutos >= 900 && !saiu.has(a.id) && !jaListados.has(a.id))
+  const candidatos = agregarJogadores(recentes).filter((a) => a.minutos >= 900 && !saiu.has(a.id) && !jaListados.has(a.id))
     .map((a) => {
+      // ausências seguidas desde o jogo mais recente; as explicadas por suspensão não contam
       let seguidos = 0;
-      while (seguidos < ids.length && !ids[seguidos].has(a.id)) seguidos++;
+      const cumpridas = [];
+      for (let i = 0; i < ids.length && !ids[i].has(a.id); i++) {
+        const motivo = motivoSuspensao(a.id, recentes[i]);
+        if (motivo) cumpridas.push([recentes[i], motivo]); else seguidos++;
+      }
       const ultimoJogo = recentes.find((x, i) => ids[i].has(a.id));
-      return { id: a.id, nome: a.jogador, seguidos, ultimoJogo };
-    })
-    .filter((a) => a.seguidos >= 2)
-    .sort((a, b) => b.seguidos - a.seguidos)
-    .map((a) => ({ ...a, motivo: `fora dos últimos ${a.seguidos} jogos` + (a.ultimoJogo ? ` (último: ${data(a.ultimoJogo.data_utc)})` : "") }));
-  return { suspensos, pendurados, lesionados, ausentes, ultimo };
+      return { id: a.id, nome: a.jogador, seguidos, cumpridas, ultimoJogo };
+    });
+  const ausentes = candidatos.filter((a) => a.seguidos >= 2).sort((a, b) => b.seguidos - a.seguidos)
+    .map((a) => ({ ...a, motivo: `fora dos últimos ${a.seguidos} jogos sem suspensão` + (a.ultimoJogo ? ` (último: ${data(a.ultimoJogo.data_utc)})` : "") }));
+  // Voltam de suspensão: faltaram por suspensão e não estão suspensos para este jogo
+  const suspensosIds = new Set(suspensos.map((x) => x.id));
+  const voltam = candidatos.filter((a) => a.cumpridas.length && a.seguidos === 0 && !suspensosIds.has(a.id))
+    .map((a) => ({ id: a.id, nome: a.nome, motivo: `cumpriu suspensão (${a.cumpridas.map(([, m]) => m).join("; ")})` }));
+  return { suspensos, pendurados, lesionados, ausentes, voltam, ultimo };
 }
 
 // Provável escalação do Flamengo: a do último jogo, trocando quem está fora por quem mais jogou na mesma posição
@@ -90,7 +115,7 @@ const listaNomes = (itens, vazioTexto) => (itens.length
 
 // Elementos do pré-jogo + função que desenha o campinho depois que eles estão na tela (o desenho mede a largura)
 export function secoesPreview(p) {
-  const { suspensos, pendurados, lesionados, ausentes } = desfalques(p);
+  const { suspensos, pendurados, lesionados, ausentes, voltam } = desfalques(p);
   const fora = new Set([...suspensos, ...lesionados, ...ausentes].map((x) => x.id));
   const penduradosIds = new Set(pendurados.map((x) => x.id));
   const fla = provavelFlamengo(fora), adv = provavelAdversario(p);
@@ -115,8 +140,9 @@ export function secoesPreview(p) {
         h("p", { class: "sutil" }, "Estimativa pelos cartões na competição (3 amarelos = suspensão), pelo perfil dos jogadores e por quem ficou fora dos últimos jogos."),
         h("h4", {}, "Suspensos"), listaNomes(suspensos, "Nenhum pela conta dos cartões."),
         h("h4", {}, "Lesionados"), listaNomes(lesionados, "Nenhum informado pela fonte."),
-        h("h4", {}, "Ausentes"), h("p", { class: "sutil" }, "Titulares frequentes fora dos relacionados (nem no banco) nos últimos jogos. A fonte não diz o motivo: lesão, seleção ou opção do técnico."),
+        h("h4", {}, "Ausentes"), h("p", { class: "sutil" }, "Titulares frequentes fora dos relacionados (nem no banco) nos últimos jogos, descontadas as suspensões. A fonte não diz o motivo: lesão, seleção ou opção do técnico."),
         listaNomes(ausentes, "Nenhum titular frequente fora dos últimos jogos."),
+        voltam.length ? [h("h4", {}, "Voltam de suspensão"), listaNomes(voltam, "")] : null,
         h("h4", {}, "Pendurados"), listaNomes(pendurados, "Ninguém com 2 amarelos.")),
       h("div", {}, h("h3", {}, "Momento"),
         h("p", {}, h("b", {}, "Flamengo: "), h("span", { class: "forma" }, ultimos5.map((x) => bola(x.resultado))), h("span", { class: "sutil" }, " últimos 5, mais recente à direita")),
