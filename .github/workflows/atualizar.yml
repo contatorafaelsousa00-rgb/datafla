@@ -69,6 +69,8 @@ jobs:
 
       - name: Coletar e processar
         if: steps.plano.outputs.coletar == 'true'
+        env:
+          FLA_MOTIVO: ${{ steps.plano.outputs.motivo }}
         run: python -m coleta.coletar tudo --fonte highlightly
 
       - name: Gerar dados do site
@@ -82,7 +84,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # As respostas da Highlightly ficam no Git: a próxima execução não baixa de novo os jogos
           # já coletados (100 requisições por dia, 2 por jogo) e o site nunca sai com dados parciais.
-          git add data/*/raw-highlightly site/fotos site/logos
+          git add data/*/raw-highlightly data/*/atualizacoes.json site/fotos site/logos
           git diff --cached --quiet || git commit -m "Atualiza dados ($(date -u +%Y-%m-%d\ %H:%M) UTC)"
           git pull --rebase --autostash
           git push

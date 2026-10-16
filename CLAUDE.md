@@ -119,6 +119,9 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   demanda com o SDK do Firebase (gstatic 10.14.1). Login Google (Firebase Authentication; o provedor Google precisa estar
   ativado no console). Regras: `admin()` = e-mail do dono verificado; lê/apaga `opinioes`, lê `acessos`.
   Mostra acessos (30 dias, abas, origem, dispositivo), opiniões (selo "nova" desde a última visita; apagar) e situação da coleta.
+  Seção Atualizações: histórico de cada coleta (`data/<ano>/atualizacoes.json`, gravado por `coletar tudo` com motivo,
+  origem, jogos novos/recoletados, pendentes e cota; versionado e publicado em `dados/atualizacoes-<ano>.json`) e as
+  últimas execuções do workflow pela API pública do GitHub ("nada a coletar" / "coletou e publicou" / falhou).
   Contagem (`acessos.js`): `acessos/<dia>` só com contadores (+1 por regra), sem cookies/dado pessoal; não conta localhost,
   demo nem o navegador onde o admin entrou. Doc de teste `acessos/2000-01-01` ficou no banco (ignorado; apagar pelo console).
   Não feito por decisão: e-mail a cada opinião (exige plano Blaze + Cloud Functions; o selo "nova" cobre) e App Check

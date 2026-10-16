@@ -2,7 +2,7 @@
 // Carregada só quando alguém abre a entrada escondida no canto do topo (ou o link #admin).
 // Login com a conta Google pelo Firebase Authentication. Esconder a entrada não é a proteção:
 // quem protege os dados são as regras do Firestore, que só deixam a conta do dono ler (firestore.rules).
-import { $, D, dataLonga, ENCERRADO, h, num, pct } from "./comum.js";
+import { $, D, data, dataLonga, ENCERRADO, h, num, pct } from "./comum.js";
 import { horaBR } from "./temporada.js";
 import { barrasHorizontais, colunas, conteudoDica } from "./graficos.js";
 import { ABAS_CONTADAS, hojeBR } from "./acessos.js";
@@ -89,6 +89,7 @@ async function mostrarPainel(usuario) {
   aviso("Administração", "Carregando dados…");
   const { F, db } = fb;
   let acessos, opinioes;
+  const [historico, execucoes] = await Promise.all([buscarHistorico(), buscarExecucoes()]);
   try {
     [acessos, opinioes] = await Promise.all([
       F.getDocs(F.collection(db, "acessos")),
@@ -110,6 +111,7 @@ async function mostrarPainel(usuario) {
       h("div", { class: "acoes" }, botao("Atualizar", () => mostrarPainel(usuario)), botao("Sair", sair), botao("Fechar", fechar))),
     secaoAcessos(acessos.docs.map((d) => ({ dia: d.id, ...d.data() }))),
     secaoOpinioes(opinioes.docs, visto),
+    secaoAtualizacoes(historico, execucoes),
     secaoDados(),
   );
   desenharAcessos(acessos.docs.map((d) => ({ dia: d.id, ...d.data() })));
@@ -190,6 +192,69 @@ function secaoOpinioes(docs, visto) {
     h("article", { class: "cartao" },
       h("p", { class: "sutil" }, itens.length ? `${itens.length} mensagens: ${contagem}.` : "Nenhuma mensagem ainda."),
       itens.length ? lista : null));
+}
+
+// ---------- atualizações ----------
+// Histórico gravado pela coleta (data/<ano>/atualizacoes.json, publicado em dados/atualizacoes-<ano>.json)
+// e as execuções do workflow pela API pública do GitHub (o repositório é público; 60 consultas/hora por IP).
+const URL_EXECUCOES = "https://api.github.com/repos/contatorafaelsousa00-rgb/datafla/actions/workflows/atualizar.yml/runs?per_page=20";
+const GATILHO = { workflow_dispatch: "disparo externo / manual", schedule: "agenda do GitHub", push: "publicação" };
+
+async function buscarHistorico() {
+  try {
+    const r = await fetch(`dados/atualizacoes-${D.bruto.meta.temporada}.json`, { cache: "no-store" });
+    return r.ok ? (await r.json()).reverse() : [];
+  } catch { return []; }
+}
+
+async function buscarExecucoes() {
+  try {
+    const r = await fetch(URL_EXECUCOES);
+    return r.ok ? (await r.json()).workflow_runs : null;
+  } catch { return null; }
+}
+
+const quandoBR = (iso) => `${dataLonga(iso)} · ${horaBR(iso)}`;
+const listaJogos = (js) => js.map((j) => j.adversario + (j.data_utc ? ` (${data(j.data_utc)})` : "")).join(", ");
+
+function secaoAtualizacoes(historico, execucoes) {
+  const coletas = historico.length
+    ? h("table", { class: "tabela admin-tabela" },
+        h("thead", {}, h("tr", {}, ["Quando", "Por quê", "Jogos novos", "Recoletados", "Pendentes", "Cota"].map((t) => h("th", {}, t)))),
+        h("tbody", {}, historico.slice(0, 30).map((a) => h("tr", { class: a.erro ? "linha-erro" : "" },
+          h("td", {}, quandoBR(a.quando), h("div", { class: "sutil" }, a.origem)),
+          h("td", {}, a.motivo, a.erro ? h("div", { class: "erro" }, `Erro: ${a.erro}`) : null),
+          h("td", {}, a.novos.length ? `${a.novos.length}: ${listaJogos(a.novos)}` : "–"),
+          h("td", {}, a.recoletados.length ? `${a.recoletados.length}: ${listaJogos(a.recoletados)}` : "–"),
+          h("td", { class: "num" }, `${a.pendentes} de ${a.encerrados}`),
+          h("td", { class: "num" }, `${a.requisicoes} usadas${a.cota_restante != null ? ` · restam ${a.cota_restante}` : ""}`)))))
+    : h("p", { class: "vazio" }, "Nenhuma coleta registrada ainda. A próxima coleta aparece aqui.");
+
+  // Execução que coletou = houve registro no histórico entre o início e o fim dela
+  const s19 = (iso) => (iso ?? "").slice(0, 19); // "2026-10-16T00:05:10" (UTC nos dois lados)
+  const coletou = (r) => historico.some((a) => s19(a.quando) >= s19(r.run_started_at) && s19(a.quando) <= s19(r.updated_at));
+  const execs = execucoes === null
+    ? h("p", { class: "vazio" }, "Não foi possível consultar o GitHub agora.")
+    : h("table", { class: "tabela admin-tabela" },
+        h("thead", {}, h("tr", {}, ["Quando", "Gatilho", "Resultado", ""].map((t) => h("th", {}, t)))),
+        h("tbody", {}, execucoes.map((r) => {
+          const res = r.status !== "completed" ? "em andamento"
+            : r.conclusion !== "success" ? `falhou (${r.conclusion})`
+            : r.event === "push" ? "publicou" : coletou(r) ? "coletou e publicou" : "nada a coletar";
+          return h("tr", { class: r.conclusion && r.conclusion !== "success" ? "linha-erro" : "" },
+            h("td", {}, quandoBR(r.created_at)), h("td", {}, GATILHO[r.event] ?? r.event),
+            h("td", {}, res), h("td", {}, h("a", { href: r.html_url, target: "_blank", rel: "noopener" }, "detalhes")));
+        })));
+
+  const falhas = (execucoes ?? []).filter((r) => r.conclusion && r.conclusion !== "success").length;
+  return h("section", { class: "admin-secao" },
+    h("h3", { class: "admin-titulo" }, "Atualizações", falhas ? h("span", { class: "selo-nova" }, `${falhas} falha${falhas > 1 ? "s" : ""}`) : null),
+    h("article", { class: "cartao" }, h("h2", {}, "Coletas"),
+      h("p", { class: "sutil" }, "O que cada coleta trouxe: jogos baixados pela primeira vez, jogos baixados de novo (correções da fonte nas primeiras 48 h) e a cota da Highlightly."),
+      h("div", { class: "rolagem" }, coletas)),
+    h("article", { class: "cartao" }, h("h2", {}, "Execuções recentes"),
+      h("p", { class: "sutil" }, "Cada disparo do agendamento no GitHub. A maioria termina em \"nada a coletar\": só confere se um jogo acabou."),
+      h("div", { class: "rolagem" }, execs)));
 }
 
 // ---------- dados ----------

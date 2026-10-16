@@ -12,6 +12,7 @@ da API-Football (para o validador) com colunas a mais.\n"""
 
 from __future__ import annotations
 
+import json
 import os
 import re
 import time
@@ -232,7 +233,56 @@ def cmd_planejar(forcar: bool = False) -> int:
     if saida:  # no GitHub Actions, os próximos passos leem steps.<id>.outputs.coletar
         with open(saida, "a", encoding="utf-8") as f:
             f.write(f"coletar={'true' if coletar else 'false'}\n")
+            f.write(f"motivo={motivo}\n")
     return 0
+
+
+# ---------- histórico das atualizações (lido pela tela de admin) ----------
+ARQ_HISTORICO = "atualizacoes.json"  # em data/<ano>/, versionado junto com as respostas brutas
+MAX_HISTORICO = 300
+ORIGENS = {"workflow_dispatch": "disparo externo / manual", "schedule": "agenda do GitHub", "push": "publicação"}
+
+
+def coletas_salvas() -> dict:
+    """{id da partida: hora da coleta} das partidas já baixadas."""
+    salvas = {}
+    for arq in config.RAW_DIR.glob("partida_*.json"):
+        dados = ler_raw(arq.stem) or {}
+        salvas[arq.stem.removeprefix("partida_")] = dados.get("_coletado_em")
+    return salvas
+
+
+def _descrever(jogo: dict) -> dict:
+    rival = jogo["awayTeam"]["name"] if jogo["homeTeam"]["id"] == config.TEAM_ID else jogo["homeTeam"]["name"]
+    return {"adversario": rival, "data_utc": jogo.get("date"), "competicao": (jogo.get("league") or {}).get("name")}
+
+
+def registrar_atualizacao(antes: dict, api: ClienteHighlightly | None, erro: str | None = None) -> dict:
+    """Acrescenta ao histórico o que esta coleta mudou: jogos novos, recoletados, pendentes e cota."""
+    depois = coletas_salvas()
+    jogos = {str(j["id"]): j for j in (ler_raw(ARQ_JOGOS) or {}).get("data", [])}
+    descrever = lambda ids: [_descrever(jogos[i]) if i in jogos else {"adversario": f"jogo {i}"} for i in sorted(ids)]
+    novos = [i for i in depois if i not in antes]
+    recoletados = [i for i in depois if i in antes and depois[i] != antes[i]]
+    s = situacao_coleta()
+    item = {
+        "quando": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "origem": ORIGENS.get(os.environ.get("GITHUB_EVENT_NAME", ""), "local"),
+        "motivo": os.environ.get("FLA_MOTIVO") or "coleta manual",
+        "novos": descrever(novos),
+        "recoletados": descrever(recoletados),
+        "encerrados": s["encerrados"],
+        "pendentes": s["pendentes"],
+        "requisicoes": getattr(api, "chamadas", 0),
+        "cota_restante": getattr(api, "restantes_hoje", None),
+        "erro": erro,
+    }
+    caminho = config.PASTA_TEMPORADA / ARQ_HISTORICO
+    historico = json.loads(caminho.read_text(encoding="utf-8")) if caminho.exists() else []
+    historico = (historico + [item])[-MAX_HISTORICO:]
+    caminho.parent.mkdir(parents=True, exist_ok=True)
+    caminho.write_text(json.dumps(historico, ensure_ascii=False, indent=1), encoding="utf-8")
+    return item
 
 
 def cmd_detalhes(api: ClienteHighlightly):

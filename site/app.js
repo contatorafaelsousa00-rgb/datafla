@@ -140,7 +140,6 @@ function montarAdmin() {
     $("dica").hidden = true;
     if (location.hash === "#admin") history.replaceState(null, "", location.pathname + location.search);
   });
-  if (location.hash === "#admin") abrirAdmin();
 }
 
 export function render() {
@@ -209,6 +208,7 @@ async function iniciar() {
   if (aba && document.getElementById(`aba-${aba}`)) marcarAba(aba);
   registrarVisita(estado.aba);
   await carregarTemporada(ano);
+  if (location.hash === "#admin") abrirAdmin(); // depois dos dados: o admin mostra a situação da coleta
   // A barra de filtros fica fixa logo abaixo do topo, que muda de altura no celular.
   const alturaTopo = () => document.documentElement.style.setProperty("--altura-topo", `${document.querySelector(".topo").offsetHeight}px`);
   alturaTopo();

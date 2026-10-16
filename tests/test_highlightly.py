@@ -168,7 +168,7 @@ def test_planejar_escreve_saida_do_github(tmp_path, monkeypatch):
     saida = tmp_path / "saida.txt"
     monkeypatch.setenv("GITHUB_OUTPUT", str(saida))
     assert hl.cmd_planejar(forcar=True) == 0
-    assert saida.read_text(encoding="utf-8") == "coletar=true\n"
+    assert saida.read_text(encoding="utf-8") == "coletar=true\nmotivo=coleta forçada\n"
 
 
 def test_planejar_e_situacao_escrevem_resumo_do_github(tmp_path, monkeypatch):
@@ -200,3 +200,19 @@ def test_titulares_a_mais_sem_minutos_voltam_para_o_banco():
     normais = [{"titular": True, "minutos": 0}] + [{"titular": True, "minutos": 90} for _ in range(10)]
     hl._corrigir_titulares(normais)
     assert normais[0]["titular"]  # com 11 titulares nada muda (expulso no início, por exemplo)
+
+
+def test_historico_registra_jogos_novos_e_recoletados(tmp_path, monkeypatch):
+    import json
+    jogos = [_jogo(1, "2026-10-10T20:00:00.000Z", "Finished"), _jogo(2, "2026-10-12T20:00:00.000Z", "Finished")]
+    _cenario(tmp_path, monkeypatch, jogos, partidas=[(1, "2026-10-11T00:00:00+00:00"), (2, "2026-10-13T00:00:00+00:00")])
+    monkeypatch.setattr(config, "PASTA_TEMPORADA", tmp_path)
+    monkeypatch.setenv("GITHUB_EVENT_NAME", "workflow_dispatch")
+    monkeypatch.setenv("FLA_MOTIVO", "jogo contra Fluminense já terminou")
+    antes = {"1": "2026-10-10T23:00:00+00:00"}  # 1 foi recoletado; 2 é novo
+    item = hl.registrar_atualizacao(antes, None)
+    assert [j["adversario"] for j in item["novos"]] == ["Fluminense"]
+    assert len(item["recoletados"]) == 1 and item["pendentes"] == 0
+    assert item["origem"] == "disparo externo / manual" and item["motivo"].startswith("jogo contra")
+    salvo = json.loads((tmp_path / hl.ARQ_HISTORICO).read_text(encoding="utf-8"))
+    assert salvo == [item]

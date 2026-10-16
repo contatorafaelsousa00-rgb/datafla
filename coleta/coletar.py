@@ -167,6 +167,10 @@ def cmd_processar():
     # "Atualizado em" do painel = última coleta (não a hora do deploy, que roda processar de novo)
     coletado = jogos.get("_coletado_em") if isinstance(jogos, dict) else None
     site = exportar.exportar(tabelas, resultado, demo=os.environ.get("FLA_DEMO") == "1", coletado_em=coletado)
+    # Histórico das coletas, só para a tela de admin (arquivo separado: não pesa no painel)
+    historico = config.PASTA_TEMPORADA / highlightly.ARQ_HISTORICO
+    if historico.exists():
+        (site.parent / f"atualizacoes-{config.SEASON}.json").write_text(historico.read_text(encoding="utf-8"), encoding="utf-8")
     problemas = sum(c["status"] != validar.OK for c in resultado["checagens"])
     print(f"{len(partidas)} jogos processados -> {config.DB_PATH}")
     print(f"Validação: {problemas} apontamentos -> {config.RELATORIO_DIR / 'relatorio.md'}")
@@ -279,9 +283,17 @@ def main(argv=None):
                 return fotos.cmd_fotos(forcar=True)
             # Jogos encerrados têm prioridade na cota; o próximo jogo vem depois.
             antes = highlightly.situacao_coleta()["baixados"]
+            salvas = highlightly.coletas_salvas()
             try:
-                return (highlightly.cmd_jogos(api) or highlightly.cmd_detalhes(api)
-                        or highlightly.cmd_proximo(api) or fotos.cmd_fotos() or cmd_processar())
+                try:
+                    codigo = (highlightly.cmd_jogos(api) or highlightly.cmd_detalhes(api)
+                              or highlightly.cmd_proximo(api) or fotos.cmd_fotos())
+                except ErroAPI as e:
+                    highlightly.registrar_atualizacao(salvas, api, str(e))
+                    raise
+                # o histórico entra antes de processar, para o site publicado já levar esta coleta
+                highlightly.registrar_atualizacao(salvas, api)
+                return codigo or cmd_processar()
             finally:
                 s = highlightly.situacao_coleta()
                 highlightly.resumo_github(
