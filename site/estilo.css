@@ -645,3 +645,8 @@ html:has(dialog[open]) { overflow: hidden; } /* com jogo/perfil aberto, só a te
 :root[data-theme="light"] .campo-jogador.fla circle { fill: var(--marca); stroke: var(--marca); }
 :root[data-theme="light"] .campo-nome { fill: #2c3036; }
 :root[data-theme="light"] .campo-jogador.duvida circle { stroke: #fff; }
+/* simulador no celular: nomes longos encolhem com reticências em vez de empurrar a linha para fora da tela */
+.lista-palpites li { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) 110px; }
+.palpite-time { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.palpite-time img { flex: none; }
+@media (max-width: 760px) { .lista-palpites li { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 6px; padding: 5px 4px; } }
