@@ -2016,12 +2016,12 @@
     "logo": "https://highlightly.net/soccer/images/countries/World.png"
    },
    "state": {
-    "clock": null,
+    "clock": 90,
     "score": {
-     "current": null,
+     "current": "0 - 0",
      "penalties": null
     },
-    "description": "Not started"
+    "description": "Finished"
    },
    "awayTeam": {
     "id": 108861,
@@ -2347,5 +2347,5 @@
    }
   }
  ],
- "_coletado_em": "2026-10-15T23:01:46.419968+00:00"
+ "_coletado_em": "2026-10-16T02:45:22.383299+00:00"
 }

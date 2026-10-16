@@ -1,0 +1,1116 @@
+{
+ "match": {
+  "venue": {
+   "city": "Brasilia",
+   "name": "Mane Garrincha",
+   "country": "Brazil",
+   "capacity": "72788"
+  },
+  "referee": {
+   "name": "Klein, Rafael Rodrigo",
+   "nationality": "Brazil"
+  },
+  "forecast": {
+   "status": "cloudy",
+   "temperature": "24.26°C"
+  },
+  "events": [
+   {
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    },
+    "time": "26",
+    "type": "Goal",
+    "assist": "Gustavo Henrique",
+    "player": "Gabriel Paulista",
+    "playerId": 147469,
+    "substituted": null,
+    "assistingPlayerId": 1608866
+   },
+   {
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    },
+    "time": "43",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "Breno Bidon",
+    "playerId": 58554727,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "45+6",
+    "type": "Red Card",
+    "assist": null,
+    "player": "J. Carrascal",
+    "playerId": 965188,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    },
+    "time": "55",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "M. Depay",
+    "playerId": 107541,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "58",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Pedro",
+    "playerId": 1661835,
+    "substituted": "Lucas Paqueta",
+    "assistingPlayerId": 265160
+   },
+   {
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    },
+    "time": "61",
+    "type": "Substitution",
+    "assist": null,
+    "player": "A. Carrillo",
+    "playerId": 390740,
+    "substituted": "R. Garro",
+    "assistingPlayerId": 932988
+   },
+   {
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    },
+    "time": "64",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "Gabriel Paulista",
+    "playerId": 147469,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "69",
+    "type": "Substitution",
+    "assist": null,
+    "player": "G. de Arrascaeta",
+    "playerId": 420686,
+    "substituted": "Bruno Henrique",
+    "assistingPlayerId": 1639134
+   },
+   {
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    },
+    "time": "77",
+    "type": "Substitution",
+    "assist": null,
+    "player": "M. Depay",
+    "playerId": 107541,
+    "substituted": "Kaio Cesar",
+    "assistingPlayerId": 61250189
+   },
+   {
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    },
+    "time": "77",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Andre",
+    "playerId": 87693473,
+    "substituted": "M. Pereira",
+    "assistingPlayerId": 140385
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "81",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Jorginho",
+    "playerId": 368683,
+    "substituted": "N. de la Cruz",
+    "assistingPlayerId": 965349
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "81",
+    "type": "Substitution",
+    "assist": null,
+    "player": "G. Plata",
+    "playerId": 2635563,
+    "substituted": "Everton",
+    "assistingPlayerId": 388808
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "81",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Alex Sandro",
+    "playerId": 138614,
+    "substituted": "Ayrton Lucas",
+    "assistingPlayerId": 285285
+   },
+   {
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    },
+    "time": "83",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Gabriel Paulista",
+    "playerId": 147469,
+    "substituted": "Andre Ramalho",
+    "assistingPlayerId": 174839
+   },
+   {
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    },
+    "time": "83",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Breno Bidon",
+    "playerId": 58554727,
+    "substituted": "Charles Rigon",
+    "assistingPlayerId": 1542051
+   },
+   {
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    },
+    "time": "90+3",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "M. Pereira",
+    "playerId": 140385,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    },
+    "time": "90+10",
+    "type": "Goal",
+    "assist": null,
+    "player": "Yuri Alberto",
+    "playerId": 1611281,
+    "substituted": null,
+    "assistingPlayerId": null
+   }
+  ],
+  "predictions": {
+   "live": [
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-02-01T19:02:04.475Z",
+     "probabilities": {
+      "away": "17.88%",
+      "draw": "26.60%",
+      "home": "55.51%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-02-01T19:11:49.933Z",
+     "probabilities": {
+      "away": "18.64%",
+      "draw": "27.91%",
+      "home": "53.45%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-02-01T19:22:32.013Z",
+     "probabilities": {
+      "away": "16.95%",
+      "draw": "29.54%",
+      "home": "53.51%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-02-01T19:31:40.933Z",
+     "probabilities": {
+      "away": "28.97%",
+      "draw": "33.15%",
+      "home": "37.87%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Corinthians is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-02-01T19:41:31.736Z",
+     "probabilities": {
+      "away": "38.37%",
+      "draw": "32.61%",
+      "home": "29.02%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Corinthians is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-02-01T19:51:38.136Z",
+     "probabilities": {
+      "away": "44.73%",
+      "draw": "32.86%",
+      "home": "22.41%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Corinthians is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-02-01T20:02:06.963Z",
+     "probabilities": {
+      "away": "46.57%",
+      "draw": "32.18%",
+      "home": "21.25%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Corinthians is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-02-01T20:11:56.461Z",
+     "probabilities": {
+      "away": "46.01%",
+      "draw": "32.73%",
+      "home": "21.26%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Corinthians is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-02-01T20:21:43.093Z",
+     "probabilities": {
+      "away": "58.28%",
+      "draw": "28.86%",
+      "home": "12.86%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Corinthians is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-02-01T20:31:46.766Z",
+     "probabilities": {
+      "away": "65.15%",
+      "draw": "26.44%",
+      "home": "8.41%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Corinthians is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-02-01T20:41:55.213Z",
+     "probabilities": {
+      "away": "69.88%",
+      "draw": "24.00%",
+      "home": "6.11%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Corinthians is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-02-01T20:51:45.250Z",
+     "probabilities": {
+      "away": "71.76%",
+      "draw": "23.84%",
+      "home": "4.39%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Corinthians is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-02-01T21:11:08.490Z",
+     "probabilities": {
+      "away": "89.04%",
+      "draw": "10.27%",
+      "home": "0.69%"
+     }
+    }
+   ],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-01-25T04:10:48.234Z",
+     "probabilities": {
+      "away": "19.69%",
+      "draw": "28.24%",
+      "home": "52.07%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-01-26T03:37:02.023Z",
+     "probabilities": {
+      "away": "19.77%",
+      "draw": "28.24%",
+      "home": "51.98%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-01-27T03:35:28.085Z",
+     "probabilities": {
+      "away": "19.84%",
+      "draw": "28.32%",
+      "home": "51.84%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-01-28T03:36:47.605Z",
+     "probabilities": {
+      "away": "19.84%",
+      "draw": "28.32%",
+      "home": "51.84%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-01-29T03:31:31.757Z",
+     "probabilities": {
+      "away": "19.82%",
+      "draw": "28.32%",
+      "home": "51.86%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-01-30T03:32:30.370Z",
+     "probabilities": {
+      "away": "19.80%",
+      "draw": "28.36%",
+      "home": "51.84%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-01-31T03:27:05.940Z",
+     "probabilities": {
+      "away": "19.24%",
+      "draw": "28.50%",
+      "home": "52.26%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Corinthians.",
+     "generatedAt": "2026-02-01T02:40:34.834Z",
+     "probabilities": {
+      "away": "19.69%",
+      "draw": "28.18%",
+      "home": "52.13%"
+     }
+    }
+   ]
+  },
+  "statistics": [
+   {
+    "statistics": [
+     {
+      "value": 0.84,
+      "displayName": "Expected Goals"
+     },
+     {
+      "value": 1,
+      "displayName": "Big Chances Created"
+     },
+     {
+      "value": 57,
+      "displayName": "Attacks"
+     },
+     {
+      "value": 23,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 0.68,
+      "displayName": "Expected Assists"
+     },
+     {
+      "value": 9,
+      "displayName": "Successful Crosses"
+     },
+     {
+      "value": 18,
+      "displayName": "Crosses"
+     },
+     {
+      "value": 211,
+      "displayName": "Passes Own Half"
+     },
+     {
+      "value": 246,
+      "displayName": "Passes Opposition Half"
+     },
+     {
+      "value": 18,
+      "displayName": "Successful Long Passes"
+     },
+     {
+      "value": 39,
+      "displayName": "Long Passes"
+     },
+     {
+      "value": 24,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 13,
+      "displayName": "Key Passes"
+     },
+     {
+      "value": 65,
+      "displayName": "Passes Into Final Third"
+     },
+     {
+      "value": 69,
+      "displayName": "Backward Passes"
+     },
+     {
+      "value": 5,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 8,
+      "displayName": "Interceptions"
+     },
+     {
+      "value": 9,
+      "displayName": "Successful Tackles"
+     },
+     {
+      "value": 11,
+      "displayName": "Tackles"
+     },
+     {
+      "value": 13,
+      "displayName": "Clearances"
+     },
+     {
+      "value": 12,
+      "displayName": "Successful Aerial Duels"
+     },
+     {
+      "value": 28,
+      "displayName": "Aerial Duels"
+     },
+     {
+      "value": 3,
+      "displayName": "Successful Dribbles"
+     },
+     {
+      "value": 12,
+      "displayName": "Dribbles"
+     },
+     {
+      "value": 0.21,
+      "displayName": "Shots accuracy"
+     },
+     {
+      "value": 79,
+      "displayName": "Failed passes"
+     },
+     {
+      "value": 0.58,
+      "displayName": "Possession"
+     },
+     {
+      "value": 3,
+      "displayName": "Shots on target"
+     },
+     {
+      "value": 4,
+      "displayName": "Corners"
+     },
+     {
+      "value": 1,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 360,
+      "displayName": "Successful passes"
+     },
+     {
+      "value": 1,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 7,
+      "displayName": "Shots off target"
+     },
+     {
+      "value": 4,
+      "displayName": "Blocked shots"
+     },
+     {
+      "value": 12,
+      "displayName": "Shots within penalty area"
+     },
+     {
+      "value": 439,
+      "displayName": "Total passes"
+     },
+     {
+      "value": 2,
+      "displayName": "Goalkeeper saves"
+     },
+     {
+      "value": 12,
+      "displayName": "Fouls"
+     },
+     {
+      "value": 0,
+      "displayName": "Yellow cards"
+     }
+    ],
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    }
+   },
+   {
+    "statistics": [
+     {
+      "value": 1.66,
+      "displayName": "Expected Goals"
+     },
+     {
+      "value": 4,
+      "displayName": "Big Chances Created"
+     },
+     {
+      "value": 41,
+      "displayName": "Attacks"
+     },
+     {
+      "value": 12,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 0.99,
+      "displayName": "Expected Assists"
+     },
+     {
+      "value": 0,
+      "displayName": "Successful Crosses"
+     },
+     {
+      "value": 10,
+      "displayName": "Crosses"
+     },
+     {
+      "value": 165,
+      "displayName": "Passes Own Half"
+     },
+     {
+      "value": 161,
+      "displayName": "Passes Opposition Half"
+     },
+     {
+      "value": 25,
+      "displayName": "Successful Long Passes"
+     },
+     {
+      "value": 62,
+      "displayName": "Long Passes"
+     },
+     {
+      "value": 12,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 9,
+      "displayName": "Key Passes"
+     },
+     {
+      "value": 43,
+      "displayName": "Passes Into Final Third"
+     },
+     {
+      "value": 46,
+      "displayName": "Backward Passes"
+     },
+     {
+      "value": 7,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 14,
+      "displayName": "Interceptions"
+     },
+     {
+      "value": 10,
+      "displayName": "Successful Tackles"
+     },
+     {
+      "value": 18,
+      "displayName": "Tackles"
+     },
+     {
+      "value": 23,
+      "displayName": "Clearances"
+     },
+     {
+      "value": 16,
+      "displayName": "Successful Aerial Duels"
+     },
+     {
+      "value": 28,
+      "displayName": "Aerial Duels"
+     },
+     {
+      "value": 6,
+      "displayName": "Successful Dribbles"
+     },
+     {
+      "value": 12,
+      "displayName": "Dribbles"
+     },
+     {
+      "value": 0.44,
+      "displayName": "Shots accuracy"
+     },
+     {
+      "value": 69,
+      "displayName": "Failed passes"
+     },
+     {
+      "value": 0.42,
+      "displayName": "Possession"
+     },
+     {
+      "value": 4,
+      "displayName": "Shots on target"
+     },
+     {
+      "value": 4,
+      "displayName": "Corners"
+     },
+     {
+      "value": 4,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 247,
+      "displayName": "Successful passes"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 3,
+      "displayName": "Shots off target"
+     },
+     {
+      "value": 2,
+      "displayName": "Blocked shots"
+     },
+     {
+      "value": 6,
+      "displayName": "Shots within penalty area"
+     },
+     {
+      "value": 316,
+      "displayName": "Total passes"
+     },
+     {
+      "value": 2,
+      "displayName": "Goalkeeper saves"
+     },
+     {
+      "value": 25,
+      "displayName": "Fouls"
+     },
+     {
+      "value": 4,
+      "displayName": "Yellow cards"
+     }
+    ],
+    "team": {
+     "id": 112265,
+     "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+     "name": "Corinthians"
+    }
+   }
+  ],
+  "id": 1286482163,
+  "round": "Final",
+  "date": "2026-02-01T19:00:00.000Z",
+  "country": {
+   "code": "BR",
+   "name": "Brazil",
+   "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+  },
+  "state": {
+   "clock": 90,
+   "score": {
+    "current": "0 - 2",
+    "penalties": null
+   },
+   "description": "Finished"
+  },
+  "awayTeam": {
+   "id": 112265,
+   "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+   "name": "Corinthians",
+   "topPlayers": [
+    {
+     "name": "Kaio César",
+     "position": "Attacker",
+     "statistics": [
+      {
+       "name": "Total Shots",
+       "value": 0
+      },
+      {
+       "name": "Shots On Target",
+       "value": 0
+      },
+      {
+       "name": "Offsides",
+       "value": 0
+      }
+     ]
+    },
+    {
+     "name": "Raniele",
+     "position": "Midfielder",
+     "statistics": [
+      {
+       "name": "Yellow Cards",
+       "value": 0
+      },
+      {
+       "name": "Red Cards",
+       "value": 0
+      },
+      {
+       "name": "Total Shots",
+       "value": 0
+      }
+     ]
+    },
+    {
+     "name": "Gustavo Henrique",
+     "position": "Defender",
+     "statistics": [
+      {
+       "name": "Total Shots",
+       "value": 0
+      },
+      {
+       "name": "Offsides",
+       "value": 0
+      },
+      {
+       "name": "Passes Completed",
+       "value": "25/30"
+      }
+     ]
+    }
+   ],
+   "shots": [
+    {
+     "time": "18'",
+     "outcome": "Saved",
+     "goalTarget": "Low Centre",
+     "playerName": "Breno Bidon"
+    },
+    {
+     "time": "26'",
+     "outcome": "Goal",
+     "goalTarget": "Low Centre",
+     "playerName": "Gabriel Paulista"
+    },
+    {
+     "time": "37'",
+     "outcome": "Saved",
+     "goalTarget": "High Centre",
+     "playerName": "Memphis Depay"
+    },
+    {
+     "time": "45 + 5'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Yuri Alberto"
+    },
+    {
+     "time": "45 + 5'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Left",
+     "playerName": "André Carrillo"
+    },
+    {
+     "time": "59'",
+     "outcome": "Missed",
+     "goalTarget": "Close Right And High",
+     "playerName": "Yuri Alberto"
+    },
+    {
+     "time": "63'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "André"
+    },
+    {
+     "time": "90 + 2'",
+     "outcome": "Post",
+     "goalTarget": null,
+     "playerName": "Yuri Alberto"
+    },
+    {
+     "time": "90 + 7'",
+     "outcome": "Goal",
+     "goalTarget": "Low Left",
+     "playerName": "Yuri Alberto"
+    }
+   ]
+  },
+  "homeTeam": {
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo",
+   "topPlayers": [
+    {
+     "name": "Pedro",
+     "position": "Attacker",
+     "statistics": [
+      {
+       "name": "Total Shots",
+       "value": 3
+      },
+      {
+       "name": "Shots On Target",
+       "value": 2
+      },
+      {
+       "name": "Offsides",
+       "value": 1
+      }
+     ]
+    },
+    {
+     "name": "Giorgian de Arrascaeta",
+     "position": "Midfielder",
+     "statistics": [
+      {
+       "name": "Yellow Cards",
+       "value": 0
+      },
+      {
+       "name": "Red Cards",
+       "value": 0
+      },
+      {
+       "name": "Total Shots",
+       "value": 0
+      }
+     ]
+    },
+    {
+     "name": "Léo Ortiz",
+     "position": "Defender",
+     "statistics": [
+      {
+       "name": "Total Shots",
+       "value": 2
+      },
+      {
+       "name": "Offsides",
+       "value": 0
+      },
+      {
+       "name": "Passes Completed",
+       "value": "55/61"
+      }
+     ]
+    }
+   ],
+   "shots": [
+    {
+     "time": "8'",
+     "outcome": "Missed",
+     "goalTarget": "High Right",
+     "playerName": "Gonzalo Plata"
+    },
+    {
+     "time": "11'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Guillermo Varela"
+    },
+    {
+     "time": "14'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Erick Pulgar"
+    },
+    {
+     "time": "15'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Right",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "15'",
+     "outcome": "Saved",
+     "goalTarget": "Low Centre",
+     "playerName": "Jorge Carrascal"
+    },
+    {
+     "time": "16'",
+     "outcome": "Saved",
+     "goalTarget": "Low Centre",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "45'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Erick Pulgar"
+    },
+    {
+     "time": "45'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Jorginho"
+    },
+    {
+     "time": "49'",
+     "outcome": "Post",
+     "goalTarget": null,
+     "playerName": "Erick Pulgar"
+    },
+    {
+     "time": "53'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Pedro"
+    },
+    {
+     "time": "70'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Erick Pulgar"
+    },
+    {
+     "time": "84'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Léo Ortiz"
+    },
+    {
+     "time": "90 + 4'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Léo Ortiz"
+    },
+    {
+     "time": "90 + 4'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Lucas Paquetá"
+    }
+   ]
+  },
+  "league": {
+   "id": 538616,
+   "logo": "https://highlightly.net/soccer/images/leagues/538616.png",
+   "name": "Supercopa do Brasil",
+   "season": 2026
+  },
+  "news": []
+ },
+ "boxscore": [],
+ "_coletado_em": "2026-10-16T02:45:47.409063+00:00"
+}
