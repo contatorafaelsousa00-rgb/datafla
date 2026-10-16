@@ -135,6 +135,14 @@ export function secoesPreview(p) {
   const timeAdv = adv?.linhas && { nome: p.adversario, fla: false, formacao: adv.formacao, linhas: adv.linhas };
 
   const elementos = [
+    h("div", { class: "bloco" }, h("h3", {}, "Prováveis escalações"),
+      h("p", { class: "sutil" }, [
+        fla ? `Flamengo: a do último jogo (${data(fla.base.data_utc)}, ${fla.base.adversario})` + (fla.trocas.length
+          ? `, trocando ${fla.trocas.map(([s, e]) => `${s} por ${e}`).join(", ")} (círculo tracejado)` : "")
+          + (penduradosIds.size ? "; dois cartões amarelos = pendurado" : "") : "Flamengo: sem escalação recente",
+        adv?.linhas ? `${p.adversario}: a do último jogo (${data(adv.ultimo.data_utc)}, contra ${adv.ultimo.oponente})`
+          : `${p.adversario}: escalação do último jogo ainda não baixada`].join(" · ")),
+      timeFla && timeAdv ? campo : timeFla ? campo : vazio("Sem escalações para estimar.")),
     h("div", { class: "detalhe-grade" },
       h("div", {}, h("h3", {}, "Desfalques do Flamengo"),
         h("p", { class: "sutil" }, "Estimativa pelos cartões na competição (3 amarelos = suspensão), pelo perfil dos jogadores e por quem ficou fora dos últimos jogos."),
@@ -144,8 +152,7 @@ export function secoesPreview(p) {
         listaNomes([...lesionados, ...ausentes], "Nenhum titular frequente fora."),
         ausentes.length ? h("p", { class: "sutil" }, "\"Fora dos últimos jogos\" = titular frequente que não foi relacionado (nem no banco), "
           + "descontadas as suspensões. Provável lesão, mas a fonte não confirma o motivo.") : null,
-        voltam.length ? [h("h4", {}, "Voltam de suspensão"), listaNomes(voltam, "")] : null,
-        h("h4", {}, "Pendurados"), listaNomes(pendurados, "Ninguém com 2 amarelos.")),
+        voltam.length ? [h("h4", {}, "Voltam de suspensão"), listaNomes(voltam, "")] : null),
       h("div", {}, h("h3", {}, "Momento"),
         h("p", {}, h("b", {}, "Flamengo: "), h("span", { class: "forma" }, ultimos5.map((x) => bola(x.resultado))), h("span", { class: "sutil" }, " últimos 5, mais recente à direita")),
         naComp.length ? h("p", {}, h("b", {}, `${p.competicao}, ${p.mando === "Fora" ? "fora de casa" : "em casa"}: `),
@@ -154,14 +161,6 @@ export function secoesPreview(p) {
           ? `${comArbitro.length} jogo${comArbitro.length > 1 ? "s" : ""} do Flamengo em 2026 (${conta(comArbitro, "V")}V ${conta(comArbitro, "E")}E ${conta(comArbitro, "D")}D)`
             + (cartoes.length ? ` · ${num(cartoes.reduce((a, b) => a + b, 0) / cartoes.length, 1)} amarelos por jogo para o Flamengo` : "")
           : "primeiro jogo dele com o Flamengo em 2026.") : null)),
-    h("div", { class: "bloco" }, h("h3", {}, "Prováveis escalações"),
-      h("p", { class: "sutil" }, [
-        fla ? `Flamengo: a do último jogo (${data(fla.base.data_utc)}, ${fla.base.adversario})` + (fla.trocas.length
-          ? `, trocando ${fla.trocas.map(([s, e]) => `${s} por ${e}`).join(", ")} (círculo tracejado)` : "")
-          + (penduradosIds.size ? "; dois cartões amarelos = pendurado" : "") : "Flamengo: sem escalação recente",
-        adv?.linhas ? `${p.adversario}: a do último jogo (${data(adv.ultimo.data_utc)}, contra ${adv.ultimo.oponente})`
-          : `${p.adversario}: escalação do último jogo ainda não baixada`].join(" · ")),
-      timeFla && timeAdv ? campo : timeFla ? campo : vazio("Sem escalações para estimar.")),
   ];
   const desenhar = () => {
     if (!timeFla) return;
@@ -169,5 +168,9 @@ export function secoesPreview(p) {
     const [a, b] = casaPrimeiro ? [timeFla, timeAdv ?? vazioAdv] : [timeAdv ?? vazioAdv, timeFla];
     campinho(campo, a, b, { aoClicar: (id, ehFla) => { if (ehFla && id != null) abrirJogador(id); } });
   };
-  return { elementos, desenhar };
+  // pendurados vão no fim da tela (lista longa)
+  const final = h("div", { class: "bloco" }, h("h3", {}, "Pendurados"),
+    h("p", { class: "sutil" }, "Com o próximo amarelo na competição, cumprem suspensão (conta de 3 em 3)."),
+    listaNomes(pendurados, "Ninguém com 2 amarelos."));
+  return { elementos, final, desenhar };
 }

@@ -109,6 +109,7 @@ function renderDetalheProximo(j, detalhe) {
                h("span", { class: "sutil" }, ` ${contar(forma, "V")}V ${contar(forma, "E")}E ${contar(forma, "D")}D nos últimos ${forma.length} (mais recente à direita)`)),
              h("ul", { class: "lista-simples" }, forma.map((c) => linhaJogo(c, p.adversario, p.adversario_logo)))]
           : vazio("Ainda sem os últimos jogos deste adversário."))),
+    pre.final,
   );
   pre.desenhar();
 }
