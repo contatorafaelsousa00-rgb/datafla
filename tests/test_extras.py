@@ -65,3 +65,10 @@ def test_perfil_do_jogador_vira_ficha(tmp_path, monkeypatch):
     assert (f["posicao_detalhada"], f["grupo"], f["posicao_secundaria"]) == ("Centroavante", "Atacantes", "Meia-esquerda, Zagueiro")
     assert (f["valor_mercado"], f["valor_anterior"]) == (20000000, 17000000)  # o mais recente primeiro
     assert f["lesao_atual"] == "Fratura"
+
+
+def test_correcao_manual_de_wo(tmp_path, monkeypatch):
+    from coleta import correcoes
+    tabelas = {"calendario": [{"id_partida": 5, "status": "ABD", "gols_pro": 0, "gols_contra": 0}], "partidas": []}
+    assert correcoes.aplicar(tabelas, {5: {"status": "WO", "gols_pro": 3, "gols_contra": 0, "nota": "W.O."}}) == 1
+    assert tabelas["calendario"][0] == {"id_partida": 5, "status": "WO", "gols_pro": 3, "gols_contra": 0, "nota": "W.O."}

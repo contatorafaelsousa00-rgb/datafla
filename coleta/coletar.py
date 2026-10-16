@@ -25,7 +25,7 @@ import os
 import sys
 from datetime import datetime, timedelta, timezone
 
-from . import alteracoes, armazenar, config, exportar, extras, fotos, highlightly, imagens, inspecionar, normalizar, sumulas, validar
+from . import alteracoes, armazenar, config, correcoes, exportar, extras, fotos, highlightly, imagens, inspecionar, normalizar, sumulas, validar
 from .api import ClienteAPI, ErroAPI, ler_raw, salvar_raw
 
 ARQ_JOGOS = "jogos"
@@ -151,6 +151,7 @@ def cmd_processar():
         tabelas["calendario"] = highlightly.linhas_calendario(jogos["data"]) if jogos else []
     else:
         tabelas["calendario"] = normalizar.linhas_calendario(jogos["response"], config.TEAM_ID) if jogos else []
+    correcoes.aplicar(tabelas)  # resultados que a fonte não registra (W.O.), de data/<ano>/correcoes.json
     tabelas["elenco"] = normalizar.linhas_elenco(elenco["response"], config.TEAM_ID) if elenco else []
     if _hl() and jogos:
         tabelas.update(highlightly.linhas_proximos(jogos["data"]))

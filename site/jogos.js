@@ -138,7 +138,7 @@ export function renderJogos(js) {
       onclick: () => abrirJogo(p.id_partida), onkeydown: (e) => { if (e.key === "Enter") abrirJogo(p.id_partida); },
     },
       h("td", {}, dataLonga(p.data_utc)), h("td", {}, tagComp(p.competicao)),
-      h("td", {}, confronto(p), p.penaltis_pro != null
+      h("td", {}, confronto(p), p.status === "WO" ? h("span", { class: "selo-wo", title: p.nota ?? "Vitória por W.O." }, "W.O.") : null, p.penaltis_pro != null
         ? h("span", { class: "sutil" }, ` (pên. ${mandanteVisitante(p, p.penaltis_pro, p.penaltis_contra).map((t) => t.valor).join("–")})`) : null),
       h("td", { class: "num" }, bola(p.resultado)),
       D.tem.xg ? h("td", { class: "num" }, p.xg_pro != null
@@ -271,7 +271,8 @@ export function renderDetalheJogo(js) {
       p.temperatura != null ? `${num(p.temperatura, 0)} °C` : null, p.formacao ? `Formação ${p.formacao}` : null].filter(Boolean).join(" · ")),
   ];
   if (!p.detalhe) {
-    preencher(caixa, ...cabecalho, vazio("Os detalhes deste jogo ainda não foram baixados; entram na próxima coleta."));
+    preencher(caixa, ...cabecalho, vazio(p.status === "WO" ? (p.nota ?? "Vitória por W.O.: o jogo não foi disputado.")
+      : "Os detalhes deste jogo ainda não foram baixados; entram na próxima coleta."));
     return;
   }
   const abas = h("div", { class: "segmentado abas-jogo", role: "group", "aria-label": "Parte do relatório" },

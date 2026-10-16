@@ -8,7 +8,7 @@ export const CORES_COMP = {
 };
 export const ORDEM_COMP = Object.keys(CORES_COMP);
 export const ORDEM_POS = ["Goleiro", "Defensor", "Meio-campo", "Atacante"];
-export const ENCERRADO = new Set(["FT", "AET", "PEN"]);
+export const ENCERRADO = new Set(["FT", "AET", "PEN", "WO"]); // WO: vitória por W.O. (correção manual)
 export const MIN_MINUTOS = 450; // amostra mínima para comparar jogadores por 90 minutos
 export const corComp = (c) => CORES_COMP[c] ?? "var(--s7)"; // fora da lista (ex.: amistosos): cinza da identidade
 export let LOGOS = new Map(); // competição -> símbolo da fonte (a cor fica nos gráficos)

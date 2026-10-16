@@ -101,6 +101,7 @@
       <button role="tab" data-aba="temporada" aria-selected="true">Temporada</button>
       <button role="tab" data-aba="jogos" aria-selected="false">Jogos</button>
       <button role="tab" data-aba="jogadores" aria-selected="false">Jogadores</button>
+      <button role="tab" data-aba="numeros" aria-selected="false">Números</button>
       <button role="tab" data-aba="elenco" aria-selected="false">Elenco</button>
       <button role="tab" data-aba="estilo" aria-selected="false">Estilo de jogo</button>
       <button role="tab" data-aba="classificacao" aria-selected="false">Classificação</button>
@@ -282,6 +283,11 @@
     </section>
 
     <!-- SUA OPINIÃO: elogios, críticas e sugestões (gravadas no Firestore; só o dono lê, pelo console) -->
+    <!-- NÚMEROS: dados consolidados (montado por numeros.js) -->
+    <section id="aba-numeros" class="aba" hidden>
+      <div id="numeros-corpo"></div>
+    </section>
+
     <!-- CLASSIFICAÇÃO: tabela do Brasileirão e simulador (montado por classificacao.js) -->
     <section id="aba-classificacao" class="aba" hidden>
       <div id="classificacao-comp" class="segmentado seletor-comp" role="group" aria-label="Competição" hidden></div>

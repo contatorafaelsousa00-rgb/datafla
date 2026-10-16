@@ -156,6 +156,15 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   a cada 20 h enquanto houver jogo aberto) → tabela `mata_mata` (só fases eliminatórias, com pênaltis). `copas.js`:
   confrontos ida+volta somados, ordem do chaveamento de trás para frente, coluna da Final "a definir" até a fonte criar o jogo.
 - Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
+- Aba **Números** (16/10/2026, `numeros.js`; conferida com a planilha do Rafael "Dados Flamengo temporada 2026.xlsx"):
+  artilharia (pênaltis entre parênteses), assistências, G+A, mais utilizados, sem sofrer gol (por goleiro), saiu na
+  frente/atrás, viradas (e sofridas), pênaltis a favor/contra, expulsões, amarelos, 2+ gols num jogo, maiores vitórias,
+  sequências. Decisões do Rafael: amistosos FORA por padrão (chave "Incluir amistosos"); prorrogação conta pelo resultado
+  final; W.O. = vitória 3 × 0 (correção manual em `data/<ano>/correcoes.json`, `coleta/correcoes.py`, status "WO",
+  fora de "sem sofrer gol"). Gol contra a favor = placar − gols dos jogadores (Santos 05/04: lance diz gol contra, box-score
+  dá ao Pedro, planilha também). Jogo sem box-score (volta da Recopa 27/02) usa gols/assistências dos lances. Expulsão só
+  conta se o jogador estava na relação do jogo. Divergências que restam com a planilha (a fonte registra assim): assistências
+  Pedro 10 (planilha 9), Varela 3 (2), Plata 3 (2); "Wallace" (Carioca) × "Wallace Yan". Regra `aba_numeros` no Firestore.
 - **Publicação**: só depois do Rafael validar no servidor local (`python scripts/servidor_local.py`, porta 8765) — pedido de 16/10/2026.
 - Próximos jogos (16/10/2026): aba Jogos com chave "Próximos jogos | Jogos disputados" (`?lista=`; `?jogo=<id>` abre o
   relatório). `coletar proximo` busca para os 3 próximos jogos (o 1º sempre; os demais só nas próximas 3 semanas), do mais

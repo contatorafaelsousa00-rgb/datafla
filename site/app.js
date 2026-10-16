@@ -10,6 +10,7 @@ import { renderElenco } from "./elenco.js";
 import { renderEstilo } from "./estilo.js";
 import { montarOpiniao, nomeFonte } from "./opiniao.js";
 import { renderClassificacao } from "./classificacao.js";
+import { renderNumeros } from "./numeros.js";
 import { registrarAba, registrarVisita } from "./acessos.js";
 // =====================================================================
 // filtros, abas, carregamento
@@ -161,7 +162,7 @@ function montarAdmin() {
 export function render() {
   const js = filtrados();
   ({ temporada: renderTemporada, jogos: renderJogos, jogadores: renderJogadores, elenco: renderElenco,
-    estilo: renderEstilo, classificacao: renderClassificacao, opiniao: () => {} })[estado.aba](js);
+    estilo: renderEstilo, numeros: renderNumeros, classificacao: renderClassificacao, opiniao: () => {} })[estado.aba](js);
   if ($("modal-jogador").open) renderPerfil(js, agregarJogadores(js));
 }
 

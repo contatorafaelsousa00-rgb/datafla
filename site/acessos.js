@@ -8,7 +8,7 @@ import { DEMO } from "./comum.js";
 const URL_COMMIT = "https://firestore.googleapis.com/v1/projects/datafla/databases/(default)/documents:commit"
   + "?key=AIzaSyBK83GdLEgnJPrn7NEtOSV2nTpySaAplYo";
 const caminho = (dia) => `projects/datafla/databases/(default)/documents/acessos/${dia}`;
-export const ABAS_CONTADAS = ["temporada", "jogos", "jogadores", "elenco", "estilo", "classificacao", "opiniao"];
+export const ABAS_CONTADAS = ["temporada", "jogos", "jogadores", "elenco", "estilo", "numeros", "classificacao", "opiniao"];
 
 const ler = (chave) => { try { return localStorage.getItem(chave); } catch { return null; } };
 const gravar = (chave, valor) => { try { localStorage.setItem(chave, valor); } catch {} };

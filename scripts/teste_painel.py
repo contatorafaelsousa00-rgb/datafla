@@ -28,6 +28,7 @@ ABAS = {
     "jogadores": ["<table"],
     "elenco": ["<svg"],
     "estilo": ["<svg"],
+    "numeros": ["<table", "chips-jogos"],
     "classificacao": ["<table", "lista-palpites"],
     "opiniao": ["<form"],
 }

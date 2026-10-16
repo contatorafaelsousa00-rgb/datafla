@@ -21,7 +21,7 @@ const LINKS = [
   ["Agendamento (cron-job.org)", "https://console.cron-job.org/jobs"],
 ];
 const NOME_ABA = { temporada: "Temporada", jogos: "Jogos", jogadores: "Jogadores", elenco: "Elenco", estilo: "Estilo de jogo",
-  classificacao: "Classificação", opiniao: "Sua opinião" };
+  numeros: "Números", classificacao: "Classificação", opiniao: "Sua opinião" };
 const NOME_ORIGEM = { direto: "Direto / app", google: "Google", whatsapp: "WhatsApp", instagram: "Instagram", facebook: "Facebook", x: "X (Twitter)", outros: "Outros sites" };
 const NOME_TIPO = { elogio: "Elogio", critica: "Crítica", sugestao: "Sugestão" };
 const PLURAL_TIPO = { elogio: "elogios", critica: "críticas", sugestao: "sugestões" };
