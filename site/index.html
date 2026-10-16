@@ -168,13 +168,11 @@
         <p id="resumo-proximos" class="sutil"></p>
         <div class="tabela-rolagem"><table id="tabela-proximos" class="tabela"></table></div>
       </article>
-      <article id="detalhe-proximo" class="cartao" hidden></article>
       <article id="card-disputados" class="cartao" hidden>
         <h2>Jogos disputados</h2>
-        <p class="sutil">Placar e xG sempre na ordem Flamengo × adversário. Clique num jogo para abrir o relatório da partida.</p>
+        <p class="sutil">Placar e xG sempre na ordem mandante × visitante. Clique num jogo para abrir o relatório da partida.</p>
         <div class="tabela-rolagem"><table id="tabela-jogos" class="tabela"></table></div>
       </article>
-      <article id="detalhe-jogo" class="cartao" hidden></article>
     </section>
 
     <!-- JOGADORES: métricas e perfil -->
@@ -316,6 +314,15 @@
   <!-- Perfil do jogador: abre por cima de qualquer aba (tabela, escalação do jogo, listas do elenco) -->
   <dialog id="modal-jogador" class="modal" aria-label="Perfil do jogador">
     <div id="detalhe-jogador" class="modal-corpo"></div>
+  </dialog>
+
+  <!-- Jogo (disputado ou próximo): abre numa tela própria por cima da lista -->
+  <dialog id="modal-jogo" class="modal modal-jogo" aria-label="Detalhes do jogo">
+    <div class="modal-corpo">
+      <div class="modal-barra"><button id="fechar-jogo" type="button" class="botao-secundario">← Voltar para a lista</button></div>
+      <article id="detalhe-jogo" hidden></article>
+      <article id="detalhe-proximo" hidden></article>
+    </div>
   </dialog>
 
   <!-- Administração: conteúdo montado por admin.js depois do login -->

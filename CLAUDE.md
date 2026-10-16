@@ -103,6 +103,10 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   chave pública do app web; `firestore.rules` só permite criar com campos validados; leitura só pelo console:
   https://console.firebase.google.com/project/datafla/firestore/databases/-default-/data/~2Fopinioes
 - 40 testes (`python -m pytest`) + `python scripts/teste_painel.py` (painel).
+- **Regra de exibição (16/10/2026)**: todo placar ou xG de UM jogo aparece na ordem **mandante × visitante**, com os nomes
+  (`comum.js`: `mandanteVisitante`, `confronto`, `textoConfronto`). Somas da temporada ficam "a favor × contra", rotuladas.
+- Jogo clicado (disputado ou próximo) abre num modal (`#modal-jogo`, botão "Voltar para a lista"), não rola a página;
+  links diretos `?aba=jogos&jogo=<id>` e `?aba=jogos&proximo=<id>`.
 - **Publicação**: só depois do Rafael validar no servidor local (`python scripts/servidor_local.py`, porta 8765) — pedido de 16/10/2026.
 - Próximos jogos (16/10/2026): aba Jogos com chave "Próximos jogos | Jogos disputados" (`?lista=`; `?jogo=<id>` abre o
   relatório). `coletar proximo` busca para os 3 próximos jogos (o 1º sempre; os demais só nas próximas 3 semanas), do mais

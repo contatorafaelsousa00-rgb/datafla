@@ -1,6 +1,6 @@
 // Aba Jogos: lista e relatório de cada jogo.
 import { barrasEspelhadas, conteudoDica, dica, linhaTempo, mapaGol, serie } from "./graficos.js";
-import { $, bola, D, data, dataLonga, escudo, estado, h, NOME_RES, notaTag, num, ORDEM_POS, pct, resultado, tagComp, vazio } from "./comum.js";
+import { $, bola, confronto, D, data, dataLonga, escudo, estado, h, mandanteVisitante, NOME_RES, notaTag, num, ORDEM_POS, pct, resultado, tagComp, vazio } from "./comum.js";
 import { abrirJogador } from "./jogadores.js";
 import { render } from "./app.js";
 import { CLIMA, futurosFiltrados, horaBR } from "./temporada.js";
@@ -27,23 +27,24 @@ function renderProximosJogos() {
       + (semana ? ` · ${semana} nos próximos 7 dias` : "")
     : "";
   if (!futuros.length) { $("tabela-proximos").replaceChildren(h("tbody", {}, h("tr", {}, h("td", { class: "vazio" }, "Nenhum jogo futuro no calendário para este filtro.")))); return; }
-  const aberto = futuros.find((j) => j.id_partida === estado.proximo) ?? futuros[0];
-  const abrir = (id) => { estado.proximo = id; render(); };
+  const aberto = futuros.find((j) => j.id_partida === estado.proximo);
+  const abrir = abrirProximo;
   $("tabela-proximos").replaceChildren(
-    h("thead", {}, h("tr", {}, ["Data", "Hora", "Competição", "Fase", "Mando", "Adversário", "Local", "Chance pré-jogo", ""]
-      .map((t, i) => h("th", { class: i === 7 ? "num" : "" }, t)))),
+    h("thead", {}, h("tr", {}, ["Data", "Hora", "Competição", "Fase", "Jogo (mandante × visitante)", "Local", "Chance do Fla", ""]
+      .map((t, i) => h("th", { class: i === 6 ? "num" : "" }, t)))),
     h("tbody", {}, futuros.map((j) => {
       const p = det.get(j.id_partida);
       return h("tr", { class: "clicavel" + (j === aberto ? " selecionado" : ""), tabindex: 0,
         onclick: () => abrir(j.id_partida), onkeydown: (e) => { if (e.key === "Enter") abrir(j.id_partida); } },
         h("td", {}, `${diaSemana(j.data_utc)}, ${dataLonga(j.data_utc)}`), h("td", { class: "num" }, horaBR(j.data_utc)),
-        h("td", {}, tagComp(j.competicao)), h("td", {}, j.rodada ?? "–"), h("td", {}, j.mando), h("td", {}, escudo(j)),
+        h("td", {}, tagComp(j.competicao)), h("td", {}, j.rodada ?? "–"), h("td", {}, confronto(j, "", "", () => "")),
         h("td", {}, (p?.estadio ?? j.estadio) || "–"),
         h("td", { class: "num" }, p?.prob_vitoria != null
           ? [h("span", { class: "medidor" }, h("b", { style: `width:${p.prob_vitoria * 100}%` })), pct(p.prob_vitoria, 0)] : "–"),
         h("td", { class: "sutil" }, faltam(j.data_utc)));
     })));
-  renderDetalheProximo(aberto, det.get(aberto.id_partida));
+  if (aberto) renderDetalheProximo(aberto, det.get(aberto.id_partida));
+  else $("detalhe-proximo").hidden = true;
 }
 
 // Detalhe de um próximo jogo: previsão, local, árbitro, clima, confronto direto e forma do adversário
@@ -59,9 +60,13 @@ function renderDetalheProximo(j, detalhe) {
     .sort((a, b) => b.data_utc.localeCompare(a.data_utc));
   const contar = (l, r) => l.filter((c) => c.resultado === r).length;
   const plural = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
-  const linhaJogo = (c, quem) => h("li", {}, bola(c.resultado),
-    h("span", { class: "cresce" }, h("b", {}, `${c.gols_pro} × ${c.gols_contra} `), quem(c)),
-    h("span", { class: "sutil" }, `${data(c.data_utc)}/${c.data_utc.slice(2, 4)} · ${c.competicao}`));
+  // c vem do ponto de vista de "time" (Flamengo nos confrontos, o adversário na forma); mostra mandante × visitante
+  const linhaJogo = (c, time) => {
+    const [casaJ, foraJ] = c.mando === "Casa" ? [[time, c.gols_pro], [c.oponente, c.gols_contra]] : [[c.oponente, c.gols_contra], [time, c.gols_pro]];
+    return h("li", {}, bola(c.resultado),
+      h("span", { class: "cresce" }, `${casaJ[0]} `, h("b", {}, `${casaJ[1]} × ${foraJ[1]}`), ` ${foraJ[0]}`),
+      h("span", { class: "sutil" }, `${data(c.data_utc)}/${c.data_utc.slice(2, 4)} · ${c.competicao}`));
+  };
 
   caixa.replaceChildren(
     h("div", { class: "placar" }, h("h2", {}, casa), h("span", { class: "gols" }, horaBR(p.data_utc)), h("h2", {}, fora)),
@@ -77,14 +82,13 @@ function renderDetalheProximo(j, detalhe) {
           ? [h("p", { class: "sutil" }, `Últimos ${confrontos.length}: ${plural(contar(confrontos, "V"), "vitória", "vitórias")}, `
               + `${plural(contar(confrontos, "E"), "empate", "empates")} e ${plural(contar(confrontos, "D"), "derrota", "derrotas")} do Flamengo`
               + ` · gols ${confrontos.reduce((t, c) => t + c.gols_pro, 0)} × ${confrontos.reduce((t, c) => t + c.gols_contra, 0)}`),
-             h("ul", { class: "lista-simples" }, confrontos.map((c) => linhaJogo(c, (x) => h("span", { class: "sutil" }, x.mando === "Casa" ? "em casa" : "fora"))))]
+             h("ul", { class: "lista-simples" }, confrontos.map((c) => linhaJogo(c, "Flamengo")))]
           : vazio("Ainda sem confrontos baixados para este adversário.")),
       h("div", {}, h("h3", {}, `Forma recente do ${p.adversario}`),
         forma.length
           ? [h("p", { class: "forma" }, forma.slice().reverse().map((c) => bola(c.resultado)),
                h("span", { class: "sutil" }, ` ${contar(forma, "V")}V ${contar(forma, "E")}E ${contar(forma, "D")}D nos últimos ${forma.length} (mais recente à direita)`)),
-             h("ul", { class: "lista-simples" }, forma.map((c) => linhaJogo(c, (x) => h("span", {}, `x ${x.oponente} `,
-               h("span", { class: "sutil" }, x.mando === "Casa" ? "(em casa)" : "(fora)")))))]
+             h("ul", { class: "lista-simples" }, forma.map((c) => linhaJogo(c, p.adversario)))]
           : vazio("Ainda sem os últimos jogos deste adversário."))),
   );
 }
@@ -92,41 +96,84 @@ function renderDetalheProximo(j, detalhe) {
 export function renderJogos(js) {
   for (const b of $("lista-jogos").children) b.setAttribute("aria-pressed", String(b.dataset.lista === estado.lista));
   const proximos = estado.lista === "proximos";
+  $("detalhe-jogo").hidden = estado.jogo == null; // só um dos dois aparece no modal
+  $("detalhe-proximo").hidden = estado.proximo == null;
   $("card-proximos").hidden = !proximos;
   $("card-disputados").hidden = proximos;
   if (proximos) {
-    $("detalhe-jogo").hidden = true;
     renderProximosJogos();
     return;
   }
-  $("detalhe-proximo").hidden = true;
   const lista = js.slice().reverse();
-  const cab = ["Data", "Competição", "Adversário", "Mando", "Placar", "Res.", D.tem.xg ? "xG" : null, D.tem.previsao ? "Chance pré-jogo" : null]
-    .filter((t) => t !== null);
+  const cab = ["Data", "Competição", "Jogo (mandante × visitante)", "Res.", D.tem.xg ? "xG (mandante × visitante)" : null,
+    D.tem.previsao ? "Chance do Fla" : null].filter((t) => t !== null);
   $("tabela-jogos").replaceChildren(
-    h("thead", {}, h("tr", {}, cab.map((t, i) => h("th", { class: i >= 4 ? "num" : "" }, t)))),
+    h("thead", {}, h("tr", {}, cab.map((t, i) => h("th", { class: i >= 3 ? "num" : "" }, t)))),
     h("tbody", {}, lista.length ? lista.map((p) => h("tr", {
       class: "clicavel" + (estado.jogo === p.id_partida ? " selecionado" : ""), tabindex: 0,
       onclick: () => abrirJogo(p.id_partida), onkeydown: (e) => { if (e.key === "Enter") abrirJogo(p.id_partida); },
     },
-      h("td", {}, dataLonga(p.data_utc)), h("td", {}, tagComp(p.competicao)), h("td", {}, escudo(p)), h("td", {}, p.mando),
-      h("td", { class: "num" }, `${p.gols_pro} × ${p.gols_contra}` + (p.penaltis_pro != null ? ` (${p.penaltis_pro}–${p.penaltis_contra} pên.)` : "")),
+      h("td", {}, dataLonga(p.data_utc)), h("td", {}, tagComp(p.competicao)),
+      h("td", {}, confronto(p), p.penaltis_pro != null
+        ? h("span", { class: "sutil" }, ` (pên. ${mandanteVisitante(p, p.penaltis_pro, p.penaltis_contra).map((t) => t.valor).join("–")})`) : null),
       h("td", { class: "num" }, bola(p.resultado)),
-      D.tem.xg ? h("td", { class: "num" }, p.xg_pro != null ? `${num(p.xg_pro, 2)} × ${num(p.xg_contra, 2)}` : "–") : null,
+      D.tem.xg ? h("td", { class: "num" }, p.xg_pro != null
+        ? mandanteVisitante(p, p.xg_pro, p.xg_contra).map((t) => num(t.valor, 2)).join(" × ") : "–") : null,
       D.tem.previsao ? h("td", { class: "num" }, p.prob_vitoria != null ? h("span", { class: "medidor" }, h("b", { style: `width:${p.prob_vitoria * 100}%` })) : null,
         p.prob_vitoria != null ? pct(p.prob_vitoria, 0) : "–") : null,
     )) : h("tr", {}, h("td", { colspan: cab.length, class: "vazio" }, "Nenhum jogo no filtro."))));
   renderDetalheJogo(js);
 }
 
+// O jogo (disputado ou próximo) abre numa tela própria por cima da lista, como o perfil do jogador.
+function mostrarModalJogo() {
+  const modal = $("modal-jogo");
+  if (!modal.open) {
+    modal.showModal();
+    modal.append($("dica")); // a dica precisa estar dentro do modal para aparecer por cima dele
+  }
+  modal.querySelector(".modal-corpo").scrollTop = 0;
+}
+
 export function abrirJogo(id) {
   estado.jogo = id;
+  estado.proximo = null;
   estado.lista = "disputados";
   const url = new URL(location); // link direto para o jogo: ?aba=jogos&jogo=<id>
   url.searchParams.set("jogo", id);
+  url.searchParams.delete("proximo");
   history.replaceState(null, "", url);
+  mostrarModalJogo(); // antes de desenhar: os gráficos medem a largura do modal
   render();
-  $("detalhe-jogo").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+export function abrirProximo(id) {
+  estado.proximo = id;
+  estado.jogo = null;
+  estado.lista = "proximos";
+  const url = new URL(location); // link direto: ?aba=jogos&proximo=<id>
+  url.searchParams.set("proximo", id);
+  url.searchParams.delete("jogo");
+  history.replaceState(null, "", url);
+  mostrarModalJogo();
+  render();
+}
+
+export function montarModalJogo() {
+  const modal = $("modal-jogo");
+  $("fechar-jogo").addEventListener("click", () => modal.close());
+  modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
+  modal.addEventListener("close", () => {
+    (document.querySelector("dialog[open]") ?? document.body).append($("dica"));
+    $("dica").hidden = true;
+    estado.jogo = null;
+    estado.proximo = null;
+    const url = new URL(location);
+    url.searchParams.delete("jogo");
+    url.searchParams.delete("proximo");
+    history.replaceState(null, "", url);
+    render();
+  });
 }
 
 export const STATS_JOGO = [["xg", "xG", (v) => num(v, 2)], ["xa", "xA", (v) => num(v, 2)], ["grandes_chances", "Grandes chances"],
@@ -179,7 +226,8 @@ export function marcasLinhaTempo(p) {
 
 export function renderDetalheJogo(js) {
   const caixa = $("detalhe-jogo");
-  const p = js.find((x) => x.id_partida === estado.jogo);
+  // fora do filtro atual o jogo ainda abre (ex.: link direto)
+  const p = js.find((x) => x.id_partida === estado.jogo) ?? D.encerrados.find((x) => x.id_partida === estado.jogo);
   caixa.hidden = !p;
   if (!p) return;
   // Tudo na ordem mandante × visitante, com o xG embaixo do nome de cada time (sem par solto, que confunde)

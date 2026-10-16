@@ -59,6 +59,23 @@ export const tagComp = (c) => h("span", { class: "tag-comp" }, simboloComp(c), c
 export const escudo = (j) => h("span", { class: "time" },
   j.adversario_logo ? h("img", { src: j.adversario_logo, alt: "", loading: "lazy", width: 18, height: 18 }) : null, j.adversario);
 export const vazio = (texto) => h("p", { class: "vazio" }, texto);
+
+// Regra do painel: todo placar ou xG de UM jogo aparece na ordem mandante × visitante, com os nomes.
+// (Somas da temporada continuam "a favor × contra", sempre rotuladas assim.)
+export const mandanteVisitante = (p, pro, contra) => (p.mando === "Fora"
+  ? [{ nome: p.adversario, valor: contra, fla: false }, { nome: "Flamengo", valor: pro, fla: true }]
+  : [{ nome: "Flamengo", valor: pro, fla: true }, { nome: p.adversario, valor: contra, fla: false }]);
+export const textoConfronto = (p, pro, contra, fmt = (v) => v ?? "–") => {
+  const [a, b] = mandanteVisitante(p, pro, contra);
+  return `${a.nome} ${fmt(a.valor)} × ${fmt(b.valor)} ${b.nome}`;
+};
+// Célula com os dois times e o placar no meio; o lado do Flamengo em destaque
+export function confronto(p, pro = p.gols_pro, contra = p.gols_contra, fmt = (v) => v ?? "–") {
+  const [a, b] = mandanteVisitante(p, pro, contra);
+  const time = (t, lado) => h("span", { class: `confronto-time ${lado}` + (t.fla ? " fla" : "") },
+    !t.fla && p.adversario_logo ? h("img", { src: p.adversario_logo, alt: "", loading: "lazy", width: 18, height: 18 }) : null, t.nome);
+  return h("span", { class: "confronto" }, time(a, "casa"), h("b", { class: "confronto-placar" }, `${fmt(a.valor)} × ${fmt(b.valor)}`), time(b, "fora"));
+}
 export const media = (lista) => (lista.length ? lista.reduce((s, v) => s + v, 0) / lista.length : null);
 export const soma = (lista, f) => lista.reduce((s, x) => s + (f(x) ?? 0), 0);
 export const pontosDe = (r) => (r === "V" ? 3 : r === "E" ? 1 : 0);
@@ -149,7 +166,7 @@ export function kpi(rotulo, valor, extra, destaque = false) {
 }
 export const bola = (r) => h("span", { class: `resultado ${r}`, "aria-label": NOME_RES[r] }, r);
 export const dicaJogo = (p, linhasDica = []) => () => conteudoDica(`${dataLonga(p.data_utc)} · ${p.competicao}`,
-  [{ valor: `${p.gols_pro} × ${p.gols_contra}`, nome: `${p.mando === "Casa" ? "x" : "fora, x"} ${p.adversario}` }, ...linhasDica]);
+  [{ valor: textoConfronto(p, p.gols_pro, p.gols_contra), nome: "" }, ...linhasDica]);
 export function mostrar(id, sim) { $(id).hidden = !sim; return sim; }
 export const notaTag = (v) => (v == null ? "–" : h("span", { class: "nota" + (v >= 7.5 ? " alta" : v < 6.3 ? " baixa" : "") }, num(v, 1)));
 

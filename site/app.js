@@ -4,7 +4,7 @@
 
 import { $, contar, D, data, DEMO, ehMes, estado, definirDados, filtrados, h, mes, mesDe, nomeMes, pct, pontos, preparar, simboloComp } from "./comum.js";
 import { renderTemporada } from "./temporada.js";
-import { abrirJogo, renderJogos } from "./jogos.js";
+import { abrirJogo, abrirProximo, montarModalJogo, renderJogos } from "./jogos.js";
 import { agregarJogadores, montarModal, renderJogadores, renderPerfil } from "./jogadores.js";
 import { renderElenco } from "./elenco.js";
 import { renderEstilo } from "./estilo.js";
@@ -212,13 +212,16 @@ async function iniciar() {
   montarModal();
   montarOpiniao();
   montarAdmin();
+  montarModalJogo();
   const aba = params.get("aba");
   if (aba && document.getElementById(`aba-${aba}`)) marcarAba(aba);
   registrarVisita(estado.aba);
   await carregarTemporada(ano);
   const jogo = Number(params.get("jogo"));
   estado.lista = params.get("lista") === "disputados" || jogo ? "disputados" : "proximos";
+  const proximo = Number(params.get("proximo"));
   if (jogo && estado.aba === "jogos") abrirJogo(jogo);
+  else if (proximo && estado.aba === "jogos") abrirProximo(proximo);
   else render();
   if (location.hash === "#admin") abrirAdmin(); // depois dos dados: o admin mostra a situação da coleta
   // A barra de filtros fica fixa logo abaixo do topo, que muda de altura no celular.

@@ -1,6 +1,6 @@
 // Aba Temporada: cartão do próximo jogo, indicadores e gráficos da temporada.
 import { barrasHorizontais, colunasDivergentes, conteudoDica, dica, linhas, serie } from "./graficos.js";
-import { $, assinado, bola, comDetalhe, compOk, contar, corComp, D, data, dataLonga, dicaJogo, ENCERRADO, escudo, estado, filtrados, h, iconeComp, kpi, media, mostrar, movel, NOME_RES, num, pct, pontos, pontosDe, resultado, rotuloMes, soma, tagComp, vazio } from "./comum.js";
+import { $, assinado, bola, comDetalhe, compOk, confronto, contar, corComp, D, data, dataLonga, dicaJogo, ENCERRADO, escudo, estado, filtrados, h, iconeComp, kpi, media, mostrar, movel, NOME_RES, num, pct, pontos, pontosDe, resultado, rotuloMes, soma, tagComp, textoConfronto, vazio } from "./comum.js";
 import { abrirJogo, barraProbabilidade } from "./jogos.js";
 import { trocarAba } from "./app.js";
 
@@ -72,7 +72,7 @@ export function renderTemporada(js) {
     kpi("Aproveitamento", n ? pct(pontos(js) / (3 * n)) : "–", `${pontos(js)} pontos em ${n} jogos`, true),
     kpi("Campanha", `${contar(js, "V")}V ${contar(js, "E")}E ${contar(js, "D")}D`, "vitórias, empates e derrotas"),
     kpi("Gols", `${gp} × ${gc}`, `saldo ${assinado(gp - gc)} · ${num(n ? gp / n : null, 2)} por jogo`),
-    comXg.length ? kpi("xG", `${num(soma(comXg, (p) => p.xg_pro), 1)} × ${num(soma(comXg, (p) => p.xg_contra), 1)}`,
+    comXg.length ? kpi("xG a favor × contra", `${num(soma(comXg, (p) => p.xg_pro), 1)} × ${num(soma(comXg, (p) => p.xg_contra), 1)}`,
       `saldo ${assinado(soma(comXg, (p) => p.xg_pro - p.xg_contra), 1)} em ${comXg.length} jogos`) : null,
     comXp.length ? kpi("Pontos × esperado", `${pontos(comXp)} × ${num(soma(comXp, (p) => p.xp), 1)}`,
       `${assinado(pontos(comXp) - soma(comXp, (p) => p.xp), 1)} sobre a previsão pré-jogo`) : null,
@@ -85,7 +85,7 @@ export function renderTemporada(js) {
     colunasDivergentes($("graf-desempenho"), comXg.map((p) => {
       const saldo = p.xg_pro - p.xg_contra;
       return { valor: saldo, cor: saldo >= 0 ? "var(--serie-1)" : "var(--serie-2)", marcador: p.resultado,
-        dica: dicaJogo(p, [{ valor: `${num(p.xg_pro, 2)} × ${num(p.xg_contra, 2)}`, nome: "xG" },
+        dica: dicaJogo(p, [{ valor: `xG ${textoConfronto(p, p.xg_pro, p.xg_contra, (v) => num(v, 2))}`, nome: "" },
           { valor: assinado(saldo, 2), nome: "saldo de xG" }]) };
     }), { rotuloX: rotuloMes(comXg) });
   }
@@ -138,7 +138,7 @@ export function renderTemporada(js) {
   const surpresas = det.filter((p) => chance(p) != null).sort((a, b) => chance(a) - chance(b)).slice(0, 5);
   if (mostrar("card-surpresas", surpresas.length > 0)) {
     $("surpresas").replaceChildren(h("ul", { class: "lista-simples" }, surpresas.map((p) => h("li", { class: "clicavel", onclick: () => { trocarAba("jogos"); abrirJogo(p.id_partida); } },
-      bola(p.resultado), h("span", { class: "cresce" }, h("b", {}, `${p.gols_pro} × ${p.gols_contra} `), escudo(p),
+      bola(p.resultado), h("span", { class: "cresce" }, confronto(p),
         h("span", { class: "sutil" }, ` · ${data(p.data_utc)} · ${p.competicao}`)),
       h("span", { class: "chance" }, pct(chance(p), 0), h("small", {}, ` de chance de ${NOME_RES[p.resultado]}`))))));
   }

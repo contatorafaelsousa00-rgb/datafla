@@ -154,7 +154,7 @@ export function fecharJogador() {
 export function montarModal() {
   const modal = $("modal-jogador");
   modal.addEventListener("close", () => {
-    document.body.append($("dica"));
+    (document.querySelector("dialog[open]") ?? document.body).append($("dica")); // volta para o jogo, se estiver aberto
     $("dica").hidden = true;
     estado.jogador = null;
     render();
