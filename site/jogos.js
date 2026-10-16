@@ -5,6 +5,7 @@ import { abrirJogadorNaPartida } from "./jogadores.js";
 import { render } from "./app.js";
 import { CLIMA, futurosFiltrados, horaBR } from "./temporada.js";
 import { secoesPreview } from "./preview.js";
+import { tabelaJogadoresPartida } from "./tabela-partida.js";
 import { renderComparar } from "./calendario.js";
 
 // =====================================================================
@@ -249,6 +250,9 @@ export function marcasLinhaTempo(p) {
   return marcas;
 }
 
+// Relatório do jogo em duas abas: Resumo (gráficos) e Jogadores (tabela dos dois times)
+let abaJogo = "resumo";
+
 export function renderDetalheJogo(js) {
   const caixa = $("detalhe-jogo");
   // fora do filtro atual o jogo ainda abre (ex.: link direto)
@@ -268,6 +272,13 @@ export function renderDetalheJogo(js) {
   ];
   if (!p.detalhe) {
     preencher(caixa, ...cabecalho, vazio("Os detalhes deste jogo ainda não foram baixados; entram na próxima coleta."));
+    return;
+  }
+  const abas = h("div", { class: "segmentado abas-jogo", role: "group", "aria-label": "Parte do relatório" },
+    [["resumo", "Resumo"], ["jogadores", "Jogadores"]].map(([a, r]) => h("button", { type: "button", "aria-pressed": String(abaJogo === a),
+      onclick: () => { abaJogo = a; renderDetalheJogo(js); } }, r)));
+  if (abaJogo === "jogadores") {
+    preencher(caixa, ...cabecalho, abas, tabelaJogadoresPartida(p, flaPrimeiro));
     return;
   }
   const st = D.stats.get(p.id_partida) ?? { fla: {}, adv: {} };
@@ -306,6 +317,7 @@ export function renderDetalheJogo(js) {
 
   preencher(caixa,
     ...cabecalho,
+    abas,
     barraProbabilidade(p) ?? "",
     timesCampo ? h("div", { class: "bloco" }, h("h3", {}, "Escalações"),
       h("p", { class: "sutil" }, `${timesCampo[0].nome} ${timesCampo[0].formacao ?? ""} × ${timesCampo[1].formacao ?? ""} ${timesCampo[1].nome}`

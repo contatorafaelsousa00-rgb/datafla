@@ -612,3 +612,14 @@ body.sem-filtros .filtros { display: none; }
 .prob-mini b.v { background: var(--bom); } .prob-mini b.e { background: var(--neutro); } .prob-mini b.d { background: var(--marca); }
 .campo-cartao { fill: #f5c518; stroke: rgba(0, 0, 0, .55); stroke-width: .8; }
 .comparar-exportar { margin-top: 12px; gap: 10px; }
+/* relatório do jogo: aba Jogadores */
+.abas-jogo { margin: 4px 0 14px; width: fit-content; }
+.tabela-partida { font-size: 13px; white-space: nowrap; }
+.tabela-partida th.ordenavel { cursor: pointer; user-select: none; }
+.tabela-partida th.ativo, .tabela-partida td.ativo { color: var(--texto); font-weight: 600; }
+.tabela-partida .fixa { position: sticky; left: 0; background: var(--superficie); z-index: 1; text-align: left; }
+.tabela-partida tr.linha-fla td.fixa { box-shadow: inset 3px 0 0 var(--marca); }
+.tabela-partida td.fixa img { vertical-align: -3px; }
+.legenda-colunas { font-size: 12px; margin-top: 8px; }
+.modal-corpo > *, #detalhe-jogo > * { min-width: 0; } /* grade não estica com a tabela larga: ela rola */
+#lista-jogos { flex-wrap: wrap; max-width: 100%; }

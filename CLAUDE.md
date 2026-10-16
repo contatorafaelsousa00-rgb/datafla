@@ -147,6 +147,8 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   (`classificacao.probabilidades`), pontos esperados e projeção; padrão Flamengo × vizinho na tabela.
   Exportar imagem (`imagem.js`, canvas 1080 px ×2, PNG; celular abre o compartilhar): Simplificada (jogos, CASA/FORA,
   posição do rival) e Detalhada (+ data, chances, pontos esperados, projeção, resumo). Sempre com marca e datafla.web.app.
+- Relatório do jogo disputado com abas Resumo | Jogadores (`tabela-partida.js`, 16/10/2026): box-score dos dois times
+  (só colunas que a fonte trouxe), ordenável, filtro por time, clique abre a ficha. Escanteios/cruzamentos por jogador não existem na fonte.
 - Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
 - **Publicação**: só depois do Rafael validar no servidor local (`python scripts/servidor_local.py`, porta 8765) — pedido de 16/10/2026.
 - Próximos jogos (16/10/2026): aba Jogos com chave "Próximos jogos | Jogos disputados" (`?lista=`; `?jogo=<id>` abre o
