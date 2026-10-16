@@ -29,7 +29,23 @@ export function desfalques(p) {
   const lesionados = (D.bruto.perfis ?? []).filter((x) => x.lesao_atual && /flamengo/i.test(x.clube_atual ?? ""))
     .map((x) => ({ id: x.jogador_id, nome: x.jogador, motivo: x.lesao_atual + (x.lesao_volta ? ` (volta prevista ${data(x.lesao_volta)})` : "") }));
   pendurados.sort((a, b) => a.nome.localeCompare(b.nome));
-  return { suspensos, pendurados, lesionados, ultimo };
+
+  // Ausentes: titulares frequentes que não foram relacionados (nem no banco) nos últimos jogos do Flamengo.
+  // A fonte não informa lesões recentes (ex.: Arrascaeta); o sumiço da lista de relacionados é o sinal disponível.
+  const recentes = D.encerrados.filter((x) => x.detalhe).sort((a, b) => b.data_utc.localeCompare(a.data_utc));
+  const ids = recentes.map((x) => new Set((D.jogadoresPorPartida.get(x.id_partida) ?? []).map((j) => j.jogador_id)));
+  const jaListados = new Set([...suspensos, ...lesionados].map((x) => x.id));
+  const ausentes = agregarJogadores(recentes).filter((a) => a.minutos >= 900 && !saiu.has(a.id) && !jaListados.has(a.id))
+    .map((a) => {
+      let seguidos = 0;
+      while (seguidos < ids.length && !ids[seguidos].has(a.id)) seguidos++;
+      const ultimoJogo = recentes.find((x, i) => ids[i].has(a.id));
+      return { id: a.id, nome: a.jogador, seguidos, ultimoJogo };
+    })
+    .filter((a) => a.seguidos >= 2)
+    .sort((a, b) => b.seguidos - a.seguidos)
+    .map((a) => ({ ...a, motivo: `fora dos últimos ${a.seguidos} jogos` + (a.ultimoJogo ? ` (último: ${data(a.ultimoJogo.data_utc)})` : "") }));
+  return { suspensos, pendurados, lesionados, ausentes, ultimo };
 }
 
 // Provável escalação do Flamengo: a do último jogo, trocando quem está fora por quem mais jogou na mesma posição
@@ -74,8 +90,9 @@ const listaNomes = (itens, vazioTexto) => (itens.length
 
 // Elementos do pré-jogo + função que desenha o campinho depois que eles estão na tela (o desenho mede a largura)
 export function secoesPreview(p) {
-  const { suspensos, pendurados, lesionados } = desfalques(p);
-  const fora = new Set([...suspensos, ...lesionados].map((x) => x.id));
+  const { suspensos, pendurados, lesionados, ausentes } = desfalques(p);
+  const fora = new Set([...suspensos, ...lesionados, ...ausentes].map((x) => x.id));
+  const penduradosIds = new Set(pendurados.map((x) => x.id));
   const fla = provavelFlamengo(fora), adv = provavelAdversario(p);
   const campo = h("div", { class: "grafico" });
 
@@ -88,15 +105,18 @@ export function secoesPreview(p) {
   const pts = (l) => conta(l, "V") * 3 + conta(l, "E");
 
   const casaPrimeiro = p.mando !== "Fora";
-  const timeFla = fla && { nome: "Flamengo", fla: true, formacao: fla.formacao, linhas: fla.linhas };
+  const timeFla = fla && { nome: "Flamengo", fla: true, formacao: fla.formacao,
+    linhas: fla.linhas.map((l) => l.map((j) => ({ ...j, pendurado: penduradosIds.has(j.id) }))) };
   const timeAdv = adv?.linhas && { nome: p.adversario, fla: false, formacao: adv.formacao, linhas: adv.linhas };
 
   const elementos = [
     h("div", { class: "detalhe-grade" },
       h("div", {}, h("h3", {}, "Desfalques do Flamengo"),
-        h("p", { class: "sutil" }, "Estimativa pelos cartões na competição (3 amarelos = suspensão) e pelo perfil dos jogadores."),
+        h("p", { class: "sutil" }, "Estimativa pelos cartões na competição (3 amarelos = suspensão), pelo perfil dos jogadores e por quem ficou fora dos últimos jogos."),
         h("h4", {}, "Suspensos"), listaNomes(suspensos, "Nenhum pela conta dos cartões."),
-        h("h4", {}, "Lesionados"), listaNomes(lesionados, "Nenhum informado."),
+        h("h4", {}, "Lesionados"), listaNomes(lesionados, "Nenhum informado pela fonte."),
+        h("h4", {}, "Ausentes"), h("p", { class: "sutil" }, "Titulares frequentes fora dos relacionados (nem no banco) nos últimos jogos. A fonte não diz o motivo: lesão, seleção ou opção do técnico."),
+        listaNomes(ausentes, "Nenhum titular frequente fora dos últimos jogos."),
         h("h4", {}, "Pendurados"), listaNomes(pendurados, "Ninguém com 2 amarelos.")),
       h("div", {}, h("h3", {}, "Momento"),
         h("p", {}, h("b", {}, "Flamengo: "), h("span", { class: "forma" }, ultimos5.map((x) => bola(x.resultado))), h("span", { class: "sutil" }, " últimos 5, mais recente à direita")),
@@ -109,7 +129,8 @@ export function secoesPreview(p) {
     h("div", { class: "bloco" }, h("h3", {}, "Prováveis escalações"),
       h("p", { class: "sutil" }, [
         fla ? `Flamengo: a do último jogo (${data(fla.base.data_utc)}, ${fla.base.adversario})` + (fla.trocas.length
-          ? `, trocando ${fla.trocas.map(([s, e]) => `${s} por ${e}`).join(", ")} (círculo tracejado)` : "") : "Flamengo: sem escalação recente",
+          ? `, trocando ${fla.trocas.map(([s, e]) => `${s} por ${e}`).join(", ")} (círculo tracejado)` : "")
+          + (penduradosIds.size ? "; dois cartões amarelos = pendurado" : "") : "Flamengo: sem escalação recente",
         adv?.linhas ? `${p.adversario}: a do último jogo (${data(adv.ultimo.data_utc)}, contra ${adv.ultimo.oponente})`
           : `${p.adversario}: escalação do último jogo ainda não baixada`].join(" · ")),
       timeFla && timeAdv ? campo : timeFla ? campo : vazio("Sem escalações para estimar.")),

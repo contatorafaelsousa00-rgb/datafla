@@ -555,10 +555,16 @@ export function campinho(container, casa, fora, { aoClicar } = {}) {
         }
         const g = el("g", { class: "campo-jogador" + (time.fla ? " fla" : "") + (j.duvida ? " duvida" : "") + (aoClicar && j.id != null ? " clicavel" : ""), tabindex: 0 }, s);
         el("circle", { cx: x, cy: y, r: 13 }, g);
+        if (j.pendurado) { // dois cartões amarelos sobrepostos no canto do círculo
+          el("rect", { x: x + 8, y: y - 21, width: 9, height: 13, rx: 2, class: "campo-cartao", transform: `rotate(-12 ${x + 12} ${y - 14})` }, g);
+          el("rect", { x: x + 14, y: y - 20, width: 9, height: 13, rx: 2, class: "campo-cartao", transform: `rotate(12 ${x + 18} ${y - 13})` }, g);
+        }
         texto(g, x, y + 4, j.numero ?? "", { "text-anchor": "middle", class: "campo-numero" });
         const curto = (j.nome ?? "").split(" ").slice(-1)[0];
         texto(g, x, y + 27, curto, { "text-anchor": "middle", class: "campo-nome" });
-        dica(g, () => conteudoDica(j.nome ?? "", [{ valor: `nº ${j.numero ?? "–"}`, nome: time.nome }]));
+        dica(g, () => conteudoDica(j.nome ?? "", [{ valor: `nº ${j.numero ?? "–"}`, nome: time.nome },
+          ...(j.pendurado ? [{ valor: "pendurado", nome: "2 amarelos: o próximo suspende" }] : []),
+          ...(j.duvida ? [{ valor: "provável substituto", nome: "" }] : [])]));
         if (aoClicar && j.id != null) {
           g.addEventListener("click", () => aoClicar(j.id, time.fla));
           g.addEventListener("keydown", (e) => { if (e.key === "Enter") aoClicar(j.id, time.fla); });

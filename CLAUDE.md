@@ -137,7 +137,10 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   (`preview.js`): desfalques do Flamengo (suspensos/pendurados ESTIMADOS pela regra de 3 amarelos na competição, sem
   quem já saiu; lesionados do perfil), prováveis escalações no campinho (Flamengo = último jogo trocando desfalques pelo
   mais usado na posição, tracejado; adversário = escalação do último jogo dele, `/lineups` do id em `forma_<adv>`, 1 req),
-  momento (últimos 5), campanha na competição com o mesmo mando, histórico do árbitro. Aba Jogos → "Comparar calendário"
+  momento (últimos 5), campanha na competição com o mesmo mando, histórico do árbitro. A fonte NÃO traz lesões recentes (ex.: Arrascaeta
+  fora desde 20/09; perfil só tem lesões até jun/2026; /injuries da API-Football é só 2022–2024): "Ausentes" = titulares
+  frequentes (900+ min) fora dos relacionados (box-score inclui o banco) em 2+ jogos seguidos, motivo não informado.
+  Pendurados aparecem no campinho com dois cartões amarelos. Aba Jogos → "Comparar calendário"
   (`calendario.js`): jogos restantes do Brasileirão de 2 times com chance por jogo pelo modelo exato
   (`classificacao.probabilidades`), pontos esperados e projeção; padrão Flamengo × vizinho na tabela.
 - Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
