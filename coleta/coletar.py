@@ -8,7 +8,7 @@
     python -m coleta.coletar jogos      # baixa a lista de jogos do Flamengo na temporada
     python -m coleta.coletar elenco     # baixa o elenco atual (idade, posição, número)
     python -m coleta.coletar detalhes   # baixa os detalhes dos jogos encerrados que faltam
-    python -m coleta.coletar proximo    # detalhe do próximo jogo: previsão, estádio, árbitro (Highlightly)
+    python -m coleta.coletar proximo    # próximos jogos: previsão, estádio, árbitro, confrontos, forma do adversário
     python -m coleta.coletar fotos      # fotos dos jogadores (elenco da API-Football; renovado a cada 7 dias)
     python -m coleta.coletar processar  # gera banco, CSVs e relatório de validação (sem usar a API)
     python -m coleta.coletar tudo       # jogos + elenco + detalhes + processar
@@ -152,7 +152,7 @@ def cmd_processar():
         tabelas["calendario"] = normalizar.linhas_calendario(jogos["response"], config.TEAM_ID) if jogos else []
     tabelas["elenco"] = normalizar.linhas_elenco(elenco["response"], config.TEAM_ID) if elenco else []
     if _hl() and jogos:
-        tabelas["proximo"] = highlightly.linhas_proximo(ler_raw(highlightly.ARQ_PROXIMO), jogos["data"])
+        tabelas.update(highlightly.linhas_proximos(jogos["data"]))
         tabelas["fotos"] = fotos.linhas_fotos(tabelas["jogadores_partida"])
         imagens.logos_locais(tabelas)
     armazenar.salvar_sqlite(tabelas)

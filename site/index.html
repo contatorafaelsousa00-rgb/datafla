@@ -159,9 +159,19 @@
 
     <!-- JOGOS: relatório por partida -->
     <section id="aba-jogos" class="aba" hidden>
-      <article class="cartao">
-        <h2>Jogos</h2>
-        <p class="sutil">Clique num jogo para abrir o relatório da partida.</p>
+      <div id="lista-jogos" class="segmentado" role="radiogroup" aria-label="Lista de jogos">
+        <button data-lista="proximos" aria-pressed="true">Próximos jogos</button>
+        <button data-lista="disputados" aria-pressed="false">Jogos disputados</button>
+      </div>
+      <article id="card-proximos" class="cartao">
+        <h2>Próximos jogos</h2>
+        <p id="resumo-proximos" class="sutil"></p>
+        <div class="tabela-rolagem"><table id="tabela-proximos" class="tabela"></table></div>
+      </article>
+      <article id="detalhe-proximo" class="cartao" hidden></article>
+      <article id="card-disputados" class="cartao" hidden>
+        <h2>Jogos disputados</h2>
+        <p class="sutil">Placar e xG sempre na ordem Flamengo × adversário. Clique num jogo para abrir o relatório da partida.</p>
         <div class="tabela-rolagem"><table id="tabela-jogos" class="tabela"></table></div>
       </article>
       <article id="detalhe-jogo" class="cartao" hidden></article>

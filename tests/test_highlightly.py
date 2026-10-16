@@ -104,15 +104,42 @@ def test_proximo_jogo_ignora_encerrados_e_adiados():
     assert hl.proximo_jogo(jogos[:1], agora) is None
 
 
-def test_linhas_proximo_descarta_detalhe_velho():
-    config.aplicar_fonte("highlightly")
-    p = partida(None, estado="Not started")
-    p["match"]["date"] = "2099-01-01T20:00:00.000Z"
-    lista = [p["match"]]
-    linha = hl.linhas_proximo(p, lista)[0]
-    assert linha["prob_vitoria"] == 0.6 and linha["estadio"] == "Maracana Stadium" and linha["flamengo_logo"] is None
-    outro = {**p["match"], "id": 99}
-    assert hl.linhas_proximo(p, [outro]) == []  # o salvo não é mais o próximo jogo
+def test_proximos_jogos_prioriza_o_mais_proximo_e_respeita_a_janela(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+    agora = datetime(2026, 10, 16, 12, tzinfo=timezone.utc)
+    jogos = [_jogo(3, "2026-10-26T23:00:00.000Z"), _jogo(1, "2026-10-18T21:30:00.000Z"),
+             _jogo(2, "2026-10-23T00:30:00.000Z"), _jogo(4, "2026-12-20T20:00:00.000Z"), _jogo(9, "2026-10-12T20:00:00.000Z", "Finished")]
+    assert [j["id"] for j in hl.proximos_jogos(jogos, agora)] == [1, 2, 3]
+    assert [j["id"] for j in hl.proximos_jogos(jogos[3:], agora)] == [4]  # o primeiro entra mesmo fora da janela
+    _cenario(tmp_path, monkeypatch, jogos)
+    tarefas = hl.tarefas_proximos(jogos, agora)
+    assert tarefas[0] == ("proximo_1", "matches/1", {})  # mais próximo primeiro
+    assert ("h2h_%d" % ADV, "head-2-head", {"teamIdOne": FLA, "teamIdTwo": ADV}) in tarefas
+
+
+def test_linhas_proximos_monta_confrontos_e_forma(tmp_path, monkeypatch):
+    from coleta.api import salvar_raw
+    jogos = [_jogo(1, "2099-10-18T21:30:00.000Z")]
+    _cenario(tmp_path, monkeypatch, jogos)
+    fim = lambda pid, casa, fora, placar: {"id": pid, "date": "2026-04-19T22:30:00.000Z", "state": {"description": "Finished", "score": {"current": placar}},
+                                           "homeTeam": {"id": casa, "name": "A"}, "awayTeam": {"id": fora, "name": "B"}, "league": {"name": "Serie A"}}
+    salvar_raw(f"h2h_{ADV}", {"data": [fim(10, ADV, FLA, "2 - 1")], "_coletado_em": "2099-01-01T00:00:00+00:00"}, tmp_path)
+    salvar_raw(f"forma_{ADV}", {"data": [fim(11, ADV, 77, "0 - 0")], "_coletado_em": "2099-01-01T00:00:00+00:00"}, tmp_path)
+    t = hl.linhas_proximos(jogos)
+    assert t["proximo"] == []  # sem detalhe salvo
+    assert t["confrontos"][0]["resultado"] == "D" and t["confrontos"][0]["mando"] == "Fora"
+    assert t["forma_adversario"][0]["resultado"] == "E" and t["forma_adversario"][0]["adversario_id"] == ADV
+
+
+def test_planejar_renova_previsao_nas_24h_antes_do_jogo(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+    from coleta.api import salvar_raw
+    jogos = [_jogo(1, "2026-10-18T21:30:00.000Z")]
+    _cenario(tmp_path, monkeypatch, jogos, lista_coletada="2026-10-18T08:00:00+00:00")
+    salvar_raw("proximo_1", {"data": {}, "_coletado_em": "2026-10-18T08:00:00+00:00"}, tmp_path)
+    assert hl.planejar(datetime(2026, 10, 18, 12, tzinfo=timezone.utc))[0] is False   # previsão com 4 h
+    coletar, motivo = hl.planejar(datetime(2026, 10, 18, 14, 30, tzinfo=timezone.utc))  # 6h30, jogo em 7 h
+    assert coletar and "24 h" in motivo
 
 
 def _cenario(tmp_path, monkeypatch, jogos, partidas=(), lista_coletada="2026-10-15T12:00:00+00:00"):

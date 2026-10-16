@@ -187,8 +187,9 @@ def _precisa_coletar(jogo: dict, agora: datetime | None = None) -> bool:
 def planejar(agora: datetime | None = None) -> tuple[bool, str]:
     """Decide, sem chamar a API, se vale coletar agora (o workflow é disparado a cada 30 min).
 
-    Coleta só em dois casos: um jogo já deveria ter terminado (início + 2h10) e ainda não foi baixado;
-    ou a última coleta tem 24 h (atualização diária, que também recoleta os jogos das últimas 48 h).
+    Coleta quando: um jogo já deveria ter terminado (início + 2h10) e ainda não foi baixado; o próximo jogo
+    começa em menos de 24 h e a previsão dele tem 6 h ou mais; ou a última coleta tem 24 h (atualização diária,
+    que também recoleta os jogos das últimas 48 h).
     """
     agora = agora or datetime.now(timezone.utc)
     lista = ler_raw(ARQ_JOGOS)
@@ -204,6 +205,10 @@ def planejar(agora: datetime | None = None) -> tuple[bool, str]:
         if ler_raw(f"partida_{jogo['id']}") is None:
             rival = jogo["awayTeam"]["name"] if jogo["homeTeam"]["id"] == config.TEAM_ID else jogo["homeTeam"]["name"]
             return True, f"jogo contra {rival} já terminou e ainda não foi baixado"
+    prox = proximo_jogo(lista["data"], agora)
+    if prox and agora < _data(prox) <= agora + timedelta(hours=24) and _vencido(f"proximo_{prox['id']}", HORAS_PROXIMO, agora):
+        rival = prox["awayTeam"]["name"] if prox["homeTeam"]["id"] == config.TEAM_ID else prox["homeTeam"]["name"]
+        return True, f"jogo contra {rival} em menos de 24 h: renova previsão, árbitro e clima"
     if idade >= timedelta(hours=HORAS_LISTA):
         return True, f"atualização diária (última coleta há {idade.total_seconds() / 3600:.0f} h)"
     return False, "nada a coletar agora"
@@ -317,49 +322,128 @@ def cmd_detalhes(api: ClienteHighlightly):
     return 0
 
 
-ARQ_PROXIMO = "proximo"
-HORAS_PROXIMO = 6  # o detalhe do próximo jogo (previsão, árbitro, clima) é renovado a cada 6 h
+# ---------- próximos jogos ----------
+# Para os próximos jogos a fonte tem: estádio, árbitro, previsão do tempo, chance de vitória/empate/derrota
+# (/matches/{id}), os últimos confrontos diretos (/head-2-head) e os 5 últimos jogos do adversário
+# (/last-five-games). Prioridade para o mais próximo: ele renova a cada 6 h; os seguintes, 1x por dia.
+N_PROXIMOS = 3                 # quantos jogos à frente recebem detalhe
+JANELA_PROXIMOS_DIAS = 21      # além do primeiro, só jogos nas próximas 3 semanas
+HORAS_PROXIMO = 6              # renovação do detalhe do jogo mais próximo
+HORAS_PROXIMOS_DEMAIS = 24     # renovação do detalhe dos seguintes, dos confrontos e da forma do adversário
 
 
 def proximo_jogo(jogos: list[dict], agora: datetime | None = None) -> dict | None:
     """Primeiro jogo ainda não encerrado; vale até 3 h depois do início (jogo em andamento)."""
+    return next(iter(proximos_jogos(jogos, agora, n=1)), None)
+
+
+def proximos_jogos(jogos: list[dict], agora: datetime | None = None, n: int = N_PROXIMOS) -> list[dict]:
+    """Os n próximos jogos não encerrados (o primeiro sempre; os demais só dentro da janela de 3 semanas)."""
     agora = agora or datetime.now(timezone.utc)
-    futuros = [j for j in jogos if _status(j) not in config.STATUS_ENCERRADO | {"ABD", "PST", "CANC"}
-               and _data(j) > agora - timedelta(hours=3)]
-    return min(futuros, key=lambda j: j["date"], default=None)
+    futuros = sorted((j for j in jogos if _status(j) not in config.STATUS_ENCERRADO | {"ABD", "PST", "CANC"}
+                      and _data(j) > agora - timedelta(hours=3)), key=lambda j: j["date"])
+    limite = agora + timedelta(days=JANELA_PROXIMOS_DIAS)
+    return [j for k, j in enumerate(futuros[:n]) if k == 0 or _data(j) <= limite]
+
+
+def _adversario_id(jogo: dict) -> int:
+    return jogo["awayTeam"]["id"] if jogo["homeTeam"]["id"] == config.TEAM_ID else jogo["homeTeam"]["id"]
+
+
+def _vencido(nome: str, horas: float, agora: datetime | None = None) -> bool:
+    salvo = ler_raw(nome)
+    if not salvo or "_coletado_em" not in salvo:
+        return True
+    agora = agora or datetime.now(timezone.utc)
+    return agora - datetime.fromisoformat(salvo["_coletado_em"]) >= timedelta(hours=horas)
+
+
+def tarefas_proximos(jogos: list[dict], agora: datetime | None = None) -> list[tuple[str, str, dict]]:
+    """(arquivo, endpoint, parâmetros) que estão vencidos, do jogo mais próximo para o mais distante."""
+    tarefas = []
+    for ordem, jogo in enumerate(proximos_jogos(jogos, agora)):
+        adv = _adversario_id(jogo)
+        candidatos = [
+            (f"proximo_{jogo['id']}", f"matches/{jogo['id']}", {}, HORAS_PROXIMO if ordem == 0 else HORAS_PROXIMOS_DEMAIS),
+            (f"h2h_{adv}", "head-2-head", {"teamIdOne": config.TEAM_ID, "teamIdTwo": adv}, HORAS_PROXIMOS_DEMAIS),
+            (f"forma_{adv}", "last-five-games", {"teamId": adv}, HORAS_PROXIMOS_DEMAIS),
+        ]
+        tarefas += [(nome, cam, par) for nome, cam, par, horas in candidatos if _vencido(nome, horas, agora)]
+    return tarefas
 
 
 def cmd_proximo(api: ClienteHighlightly):
-    """Baixa o detalhe do próximo jogo (1 requisição): estádio, árbitro, clima e previsão pré-jogo."""
+    """Detalhe, confrontos e forma do adversário dos próximos jogos (até 3 requisições por jogo, só o vencido)."""
     lista = ler_raw(ARQ_JOGOS)
-    jogo = proximo_jogo(lista["data"]) if lista else None
-    if jogo is None:
-        print("Próximo jogo: nenhum no calendário.")
+    tarefas = tarefas_proximos(lista["data"]) if lista else []
+    if not tarefas:
+        print("Próximos jogos: nada a renovar.")
         return 0
-    salvo = ler_raw(ARQ_PROXIMO)
-    if salvo and salvo["match"]["id"] == jogo["id"] and \
-            datetime.now(timezone.utc) - datetime.fromisoformat(salvo["_coletado_em"]) < timedelta(hours=HORAS_PROXIMO):
-        print("Próximo jogo: já atualizado há menos de 6 h.")
-        return 0
-    if api.restantes_hoje is not None and api.restantes_hoje - 1 < _reserva():
-        print("Próximo jogo: sem cota hoje; fica para a próxima coleta.")
-        return 0
-    m = api.get(f"matches/{jogo['id']}")
-    m = m[0] if isinstance(m, list) else m
-    salvar_raw(ARQ_PROXIMO, {"match": m, "_coletado_em": datetime.now(timezone.utc).isoformat()})
-    print(f"Próximo jogo: {m['homeTeam']['name']} x {m['awayTeam']['name']} ({m['date'][:16]}).")
+    feitas = 0
+    for nome, caminho, params in tarefas:
+        if api.restantes_hoje is not None and api.restantes_hoje - 1 < _reserva():
+            print(f"Próximos jogos: sem cota; {len(tarefas) - feitas} consultas ficam para a próxima coleta.")
+            break
+        corpo = api.get(caminho, **params)
+        if nome.startswith("proximo_"):
+            corpo = corpo[0] if isinstance(corpo, list) else corpo
+        salvar_raw(nome, {"data": corpo, "_coletado_em": datetime.now(timezone.utc).isoformat()})
+        feitas += 1
+    print(f"Próximos jogos: {feitas} consultas (detalhe, confrontos diretos, forma do adversário).")
     return 0
 
 
-def linhas_proximo(raw: dict | None, jogos: list[dict], team_id: int | None = None) -> list[dict]:
-    """Detalhe do próximo jogo, se ainda for o próximo (senão o painel usa o calendário)."""
+def _resultado(pro, contra):
+    if pro is None or contra is None:
+        return None
+    return "V" if pro > contra else "E" if pro == contra else "D"
+
+
+def _jogo_resumido(m: dict, ponto_de_vista: int) -> dict | None:
+    """Jogo encerrado do ponto de vista de um time (Flamengo nos confrontos, o adversário na forma)."""
+    if _status(m) not in config.STATUS_ENCERRADO:
+        return None
+    casa, fora = _placar(((m.get("state") or {}).get("score") or {}).get("current"))
+    em_casa = m["homeTeam"]["id"] == ponto_de_vista
+    oponente = m["awayTeam"] if em_casa else m["homeTeam"]
+    pro, contra = (casa, fora) if em_casa else (fora, casa)
+    return {
+        "id_partida": m["id"],
+        "data_utc": m["date"].replace(".000Z", "+00:00").replace("Z", "+00:00"),
+        "competicao": (m.get("league") or {}).get("name"),
+        "mando": "Casa" if em_casa else "Fora",
+        "oponente": oponente.get("name"),
+        "oponente_logo": oponente.get("logo"),
+        "gols_pro": pro,
+        "gols_contra": contra,
+        "resultado": _resultado(pro, contra),
+    }
+
+
+def linhas_proximos(jogos: list[dict], team_id: int | None = None) -> dict[str, list[dict]]:
+    """Tabelas dos próximos jogos: proximo (detalhe), confrontos (Flamengo × adversário) e forma_adversario."""
     team_id = team_id or config.TEAM_ID
-    atual = proximo_jogo(jogos)
-    if not raw or not atual or raw["match"]["id"] != atual["id"]:
-        return []
-    m = {**atual, **raw["match"]}  # data e status mais recentes vêm da lista
-    linha = linha_partida(m, team_id)
-    return [{**linha, "coletado_em": raw["_coletado_em"]}]
+    proximo, confrontos, forma = [], [], []
+    vistos = set()
+    for jogo in proximos_jogos(jogos):
+        salvo = ler_raw(f"proximo_{jogo['id']}")
+        if salvo:
+            m = {**salvo["data"], **jogo}  # data e status mais recentes vêm da lista
+            m.update({k: v for k, v in salvo["data"].items() if k in ("venue", "referee", "forecast", "predictions")})
+            proximo.append({**linha_partida(m, team_id), "coletado_em": salvo["_coletado_em"]})
+        adv = _adversario_id(jogo)
+        if adv in vistos:
+            continue
+        vistos.add(adv)
+        for m in (ler_raw(f"h2h_{adv}") or {}).get("data") or []:
+            linha = _jogo_resumido(m, team_id)
+            if linha:
+                confrontos.append({**linha, "adversario_id": adv})
+        for m in (ler_raw(f"forma_{adv}") or {}).get("data") or []:
+            linha = _jogo_resumido(m, adv)
+            if linha:
+                forma.append({**linha, "adversario_id": adv})
+    return {"proximo": proximo, "confrontos": confrontos, "forma_adversario": forma}
 
 
 def _data_jogo_raw(partida: dict) -> tuple[int, str]:

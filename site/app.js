@@ -117,6 +117,14 @@ function montarControlesFixos() {
   });
   for (const b of document.querySelectorAll(".abas button")) b.addEventListener("click", () => trocarAba(b.dataset.aba));
   for (const b of $("modo-metricas").children) b.addEventListener("click", () => { estado.modo = b.dataset.modo; render(); });
+  for (const b of $("lista-jogos").children) b.addEventListener("click", () => {
+    estado.lista = b.dataset.lista;
+    const url = new URL(location);
+    url.searchParams.set("lista", estado.lista);
+    if (estado.lista === "proximos") url.searchParams.delete("jogo");
+    history.replaceState(null, "", url);
+    render();
+  });
   $("busca-jogador").addEventListener("input", (e) => { estado.busca = e.target.value; render(); });
   $("botao-tema").addEventListener("click", () => {
     const novo = document.documentElement.dataset.theme === "light" ? "dark" : "light";
@@ -209,7 +217,9 @@ async function iniciar() {
   registrarVisita(estado.aba);
   await carregarTemporada(ano);
   const jogo = Number(params.get("jogo"));
+  estado.lista = params.get("lista") === "disputados" || jogo ? "disputados" : "proximos";
   if (jogo && estado.aba === "jogos") abrirJogo(jogo);
+  else render();
   if (location.hash === "#admin") abrirAdmin(); // depois dos dados: o admin mostra a situação da coleta
   // A barra de filtros fica fixa logo abaixo do topo, que muda de altura no celular.
   const alturaTopo = () => document.documentElement.style.setProperty("--altura-topo", `${document.querySelector(".topo").offsetHeight}px`);

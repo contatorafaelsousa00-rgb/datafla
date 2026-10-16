@@ -102,7 +102,14 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   formulário de elogios/críticas/sugestões grava em Firestore (`opinioes`, banco (default) em nam5) via REST com a
   chave pública do app web; `firestore.rules` só permite criar com campos validados; leitura só pelo console:
   https://console.firebase.google.com/project/datafla/firestore/databases/-default-/data/~2Fopinioes
-- 37 testes (`python -m pytest`) + `python scripts/teste_painel.py` (painel).
+- 40 testes (`python -m pytest`) + `python scripts/teste_painel.py` (painel).
+- **Publicação**: só depois do Rafael validar no servidor local (`python scripts/servidor_local.py`, porta 8765) — pedido de 16/10/2026.
+- Próximos jogos (16/10/2026): aba Jogos com chave "Próximos jogos | Jogos disputados" (`?lista=`; `?jogo=<id>` abre o
+  relatório). `coletar proximo` busca para os 3 próximos jogos (o 1º sempre; os demais só nas próximas 3 semanas), do mais
+  próximo para o mais distante: `/matches/{id}` (estádio, árbitro, clima, previsão; 6 h para o 1º, 24 h os demais),
+  `/head-2-head` (últimos 10 confrontos) e `/last-five-games` do adversário (24 h) → raw `proximo_<id>`, `h2h_<adv>`,
+  `forma_<adv>` → tabelas `proximo`, `confrontos`, `forma_adversario`. `planejar` também coleta quando o próximo jogo
+  começa em menos de 24 h e a previsão tem 6 h+. Custo: até 9 req por renovação.
 - Melhorias de 15/10/2026 (análise geral, itens 1–6): no Git só respostas brutas, fotos e logos; JSON do site,
   CSVs e validação são gerados por `processar` (workflow gera no deploy; `meta.coletado_em` = hora da última coleta,
   mostrada em "atualizado em"). Logos (escudos e competições) copiados para `site/logos/<teams|leagues>/`

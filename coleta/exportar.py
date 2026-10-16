@@ -73,6 +73,8 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         "estatisticas": tabelas["estatisticas_time"],
         "finalizacoes": tabelas.get("finalizacoes", []),
         "proximo": tabelas.get("proximo", []),
+        "confrontos": tabelas.get("confrontos", []),
+        "forma_adversario": tabelas.get("forma_adversario", []),
         "fotos": tabelas.get("fotos", []),
         # O painel só lista o que precisa de conferência; as checagens "ok" ficam no relatório local.
         "validacao": {**validacao, "checagens": [c for c in validacao.get("checagens", []) if c["status"] != "ok"]},

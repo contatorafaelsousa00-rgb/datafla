@@ -1,13 +1,105 @@
 // Aba Jogos: lista e relatório de cada jogo.
 import { barrasEspelhadas, conteudoDica, dica, linhaTempo, mapaGol, serie } from "./graficos.js";
-import { $, bola, D, dataLonga, escudo, estado, h, NOME_RES, notaTag, num, ORDEM_POS, pct, resultado, tagComp, vazio } from "./comum.js";
+import { $, bola, D, data, dataLonga, escudo, estado, h, NOME_RES, notaTag, num, ORDEM_POS, pct, resultado, tagComp, vazio } from "./comum.js";
 import { abrirJogador } from "./jogadores.js";
 import { render } from "./app.js";
+import { CLIMA, futurosFiltrados, horaBR } from "./temporada.js";
 
 // =====================================================================
 // JOGOS
 // =====================================================================
+// Próximos jogos (calendário, com os mesmos filtros de competição e mando; o período não se aplica ao futuro)
+const diaSemana = (iso) => new Date(iso).toLocaleDateString("pt-BR", { weekday: "short", timeZone: "America/Sao_Paulo" }).replace(".", "");
+const diaDe = (iso) => new Date(iso).toLocaleDateString("en-CA", { timeZone: "America/Sao_Paulo" });
+function faltam(iso) {
+  const dias = Math.round((new Date(`${diaDe(iso)}T12:00:00Z`) - new Date(`${diaDe(new Date().toISOString())}T12:00:00Z`)) / 864e5);
+  return dias <= 0 ? "hoje" : dias === 1 ? "amanhã" : `em ${dias} dias`;
+}
+
+function renderProximosJogos() {
+  const futuros = futurosFiltrados();
+  const det = new Map((D.bruto.proximo ?? []).map((p) => [p.id_partida, p])); // previsão e estádio do próximo jogo
+  const porComp = {};
+  for (const j of futuros) porComp[j.competicao] = (porComp[j.competicao] ?? 0) + 1;
+  const semana = futuros.filter((j) => new Date(j.data_utc) - Date.now() < 7 * 864e5).length;
+  $("resumo-proximos").textContent = futuros.length
+    ? `${futuros.length} jogo${futuros.length > 1 ? "s" : ""} no calendário (${Object.entries(porComp).map(([c, n]) => `${n} ${c}`).join(", ")})`
+      + (semana ? ` · ${semana} nos próximos 7 dias` : "")
+    : "";
+  if (!futuros.length) { $("tabela-proximos").replaceChildren(h("tbody", {}, h("tr", {}, h("td", { class: "vazio" }, "Nenhum jogo futuro no calendário para este filtro.")))); return; }
+  const aberto = futuros.find((j) => j.id_partida === estado.proximo) ?? futuros[0];
+  const abrir = (id) => { estado.proximo = id; render(); };
+  $("tabela-proximos").replaceChildren(
+    h("thead", {}, h("tr", {}, ["Data", "Hora", "Competição", "Fase", "Mando", "Adversário", "Local", "Chance pré-jogo", ""]
+      .map((t, i) => h("th", { class: i === 7 ? "num" : "" }, t)))),
+    h("tbody", {}, futuros.map((j) => {
+      const p = det.get(j.id_partida);
+      return h("tr", { class: "clicavel" + (j === aberto ? " selecionado" : ""), tabindex: 0,
+        onclick: () => abrir(j.id_partida), onkeydown: (e) => { if (e.key === "Enter") abrir(j.id_partida); } },
+        h("td", {}, `${diaSemana(j.data_utc)}, ${dataLonga(j.data_utc)}`), h("td", { class: "num" }, horaBR(j.data_utc)),
+        h("td", {}, tagComp(j.competicao)), h("td", {}, j.rodada ?? "–"), h("td", {}, j.mando), h("td", {}, escudo(j)),
+        h("td", {}, (p?.estadio ?? j.estadio) || "–"),
+        h("td", { class: "num" }, p?.prob_vitoria != null
+          ? [h("span", { class: "medidor" }, h("b", { style: `width:${p.prob_vitoria * 100}%` })), pct(p.prob_vitoria, 0)] : "–"),
+        h("td", { class: "sutil" }, faltam(j.data_utc)));
+    })));
+  renderDetalheProximo(aberto, det.get(aberto.id_partida));
+}
+
+// Detalhe de um próximo jogo: previsão, local, árbitro, clima, confronto direto e forma do adversário
+function renderDetalheProximo(j, detalhe) {
+  const caixa = $("detalhe-proximo");
+  caixa.hidden = false;
+  const p = { ...j, ...(detalhe ?? {}) };
+  const [casa, fora] = p.mando === "Fora" ? [p.adversario, "Flamengo"] : ["Flamengo", p.adversario];
+  const clima = p.clima ? [CLIMA[p.clima?.toLowerCase()] ?? p.clima, p.temperatura != null ? `${num(p.temperatura, 0)} °C` : null].filter(Boolean).join(", ") : null;
+  const confrontos = (D.bruto.confrontos ?? []).filter((c) => c.adversario_id === p.adversario_id)
+    .sort((a, b) => b.data_utc.localeCompare(a.data_utc));
+  const forma = (D.bruto.forma_adversario ?? []).filter((c) => c.adversario_id === p.adversario_id)
+    .sort((a, b) => b.data_utc.localeCompare(a.data_utc));
+  const contar = (l, r) => l.filter((c) => c.resultado === r).length;
+  const plural = (n, um, varios) => `${n} ${n === 1 ? um : varios}`;
+  const linhaJogo = (c, quem) => h("li", {}, bola(c.resultado),
+    h("span", { class: "cresce" }, h("b", {}, `${c.gols_pro} × ${c.gols_contra} `), quem(c)),
+    h("span", { class: "sutil" }, `${data(c.data_utc)}/${c.data_utc.slice(2, 4)} · ${c.competicao}`));
+
+  caixa.replaceChildren(
+    h("div", { class: "placar" }, h("h2", {}, casa), h("span", { class: "gols" }, horaBR(p.data_utc)), h("h2", {}, fora)),
+    h("p", { class: "sutil" }, [`${dataLonga(p.data_utc)} · ${horaBR(p.data_utc)} (${faltam(p.data_utc)})`, p.competicao, p.rodada,
+      p.estadio ? `${p.estadio}${p.cidade ? `, ${p.cidade}` : ""}` : null, p.arbitro ? `Árbitro: ${p.arbitro}` : null, clima ? `Previsão do tempo: ${clima}` : null]
+      .filter(Boolean).join(" · ")),
+    barraProbabilidade(p) ?? h("p", { class: "sutil" }, detalhe
+      ? "A fonte ainda não publicou a previsão deste jogo."
+      : "Previsão, árbitro e clima chegam nos dias antes do jogo (os 3 próximos jogos são atualizados, o mais próximo primeiro)."),
+    h("div", { class: "detalhe-grade" },
+      h("div", {}, h("h3", {}, `Confronto direto com o ${p.adversario}`),
+        confrontos.length
+          ? [h("p", { class: "sutil" }, `Últimos ${confrontos.length}: ${plural(contar(confrontos, "V"), "vitória", "vitórias")}, `
+              + `${plural(contar(confrontos, "E"), "empate", "empates")} e ${plural(contar(confrontos, "D"), "derrota", "derrotas")} do Flamengo`
+              + ` · gols ${confrontos.reduce((t, c) => t + c.gols_pro, 0)} × ${confrontos.reduce((t, c) => t + c.gols_contra, 0)}`),
+             h("ul", { class: "lista-simples" }, confrontos.map((c) => linhaJogo(c, (x) => h("span", { class: "sutil" }, x.mando === "Casa" ? "em casa" : "fora"))))]
+          : vazio("Ainda sem confrontos baixados para este adversário.")),
+      h("div", {}, h("h3", {}, `Forma recente do ${p.adversario}`),
+        forma.length
+          ? [h("p", { class: "forma" }, forma.slice().reverse().map((c) => bola(c.resultado)),
+               h("span", { class: "sutil" }, ` ${contar(forma, "V")}V ${contar(forma, "E")}E ${contar(forma, "D")}D nos últimos ${forma.length} (mais recente à direita)`)),
+             h("ul", { class: "lista-simples" }, forma.map((c) => linhaJogo(c, (x) => h("span", {}, `x ${x.oponente} `,
+               h("span", { class: "sutil" }, x.mando === "Casa" ? "(em casa)" : "(fora)")))))]
+          : vazio("Ainda sem os últimos jogos deste adversário."))),
+  );
+}
+
 export function renderJogos(js) {
+  for (const b of $("lista-jogos").children) b.setAttribute("aria-pressed", String(b.dataset.lista === estado.lista));
+  const proximos = estado.lista === "proximos";
+  $("card-proximos").hidden = !proximos;
+  $("card-disputados").hidden = proximos;
+  if (proximos) {
+    $("detalhe-jogo").hidden = true;
+    renderProximosJogos();
+    return;
+  }
+  $("detalhe-proximo").hidden = true;
   const lista = js.slice().reverse();
   const cab = ["Data", "Competição", "Adversário", "Mando", "Placar", "Res.", D.tem.xg ? "xG" : null, D.tem.previsao ? "Chance pré-jogo" : null]
     .filter((t) => t !== null);
@@ -29,6 +121,7 @@ export function renderJogos(js) {
 
 export function abrirJogo(id) {
   estado.jogo = id;
+  estado.lista = "disputados";
   const url = new URL(location); // link direto para o jogo: ?aba=jogos&jogo=<id>
   url.searchParams.set("jogo", id);
   history.replaceState(null, "", url);
