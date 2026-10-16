@@ -28,6 +28,7 @@ ABAS = {
     "jogadores": ["<table"],
     "elenco": ["<svg"],
     "estilo": ["<svg"],
+    "classificacao": ["<table", "lista-palpites"],
     "opiniao": ["<form"],
 }
 ERROS = re.compile(r"Uncaught|SyntaxError|ReferenceError|TypeError|Failed to load module", re.I)

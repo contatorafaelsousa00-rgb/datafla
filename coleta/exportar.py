@@ -44,7 +44,7 @@ def _traduzir(linhas: list[dict]) -> list[dict]:
 
 # Tabelas grandes vão em colunas + linhas (os nomes dos campos não se repetem a cada linha): o JSON
 # cai a menos da metade. O site volta a montar os objetos ao carregar (comum.js, expandir).
-COMPACTAR = ("jogadores", "eventos", "estatisticas", "finalizacoes")
+COMPACTAR = ("jogadores", "eventos", "estatisticas", "finalizacoes", "escalacoes", "carreira", "liga")
 
 
 def compactar(linhas: list[dict]) -> dict:
@@ -75,6 +75,10 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         "proximo": tabelas.get("proximo", []),
         "confrontos": tabelas.get("confrontos", []),
         "forma_adversario": tabelas.get("forma_adversario", []),
+        "escalacoes": tabelas.get("escalacoes", []),
+        "classificacao": tabelas.get("classificacao", []),
+        "carreira": tabelas.get("carreira", []),
+        "liga": tabelas.get("liga", []),
         "fotos": tabelas.get("fotos", []),
         # O painel só lista o que precisa de conferência; as checagens "ok" ficam no relatório local.
         "validacao": {**validacao, "checagens": [c for c in validacao.get("checagens", []) if c["status"] != "ok"]},

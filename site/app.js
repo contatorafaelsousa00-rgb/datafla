@@ -9,6 +9,7 @@ import { agregarJogadores, montarModal, renderJogadores, renderPerfil } from "./
 import { renderElenco } from "./elenco.js";
 import { renderEstilo } from "./estilo.js";
 import { montarOpiniao, nomeFonte } from "./opiniao.js";
+import { renderClassificacao } from "./classificacao.js";
 import { registrarAba, registrarVisita } from "./acessos.js";
 // =====================================================================
 // filtros, abas, carregamento
@@ -91,7 +92,7 @@ function montarTemporadas(atual) {
 
 function marcarAba(aba) {
   estado.aba = aba;
-  document.body.classList.toggle("sem-filtros", aba === "opiniao");
+  document.body.classList.toggle("sem-filtros", aba === "opiniao" || aba === "classificacao"); // filtros do Flamengo não se aplicam
   for (const x of document.querySelectorAll(".abas button")) x.setAttribute("aria-selected", x.dataset.aba === aba);
   for (const s of document.querySelectorAll(".aba")) s.hidden = s.id !== `aba-${aba}`;
 }
@@ -153,7 +154,7 @@ function montarAdmin() {
 export function render() {
   const js = filtrados();
   ({ temporada: renderTemporada, jogos: renderJogos, jogadores: renderJogadores, elenco: renderElenco,
-    estilo: renderEstilo, opiniao: () => {} })[estado.aba](js);
+    estilo: renderEstilo, classificacao: renderClassificacao, opiniao: () => {} })[estado.aba](js);
   if ($("modal-jogador").open) renderPerfil(js, agregarJogadores(js));
 }
 

@@ -9,7 +9,7 @@ import { render } from "./app.js";
 export const SOMAS = ["minutos", "gols", "assistencias", "finalizacoes", "finalizacoes_alvo", "passes", "passes_certos", "passes_chave",
   "desarmes", "interceptacoes", "duelos", "duelos_ganhos", "dribles_tentados", "dribles_certos", "faltas_cometidas",
   "faltas_sofridas", "amarelos", "vermelhos", "defesas", "gols_sofridos"];
-export const OPCIONAIS = ["xg", "xa", "xgot", "xg_evitado"]; // null = a fonte não tem (diferente de 0)
+export const OPCIONAIS = ["xg", "xa", "xgot", "xg_evitado", "xgot_enfrentado"]; // null = a fonte não tem (diferente de 0)
 
 export function agregarJogadores(js) {
   const ag = new Map();
@@ -61,13 +61,14 @@ export const COL = {
   faltas_cometidas: { titulo: "Faltas", tipo: "soma" },
   defesas: { titulo: "Defesas", tipo: "soma" }, gols_sofridos: { titulo: "Gols sofridos", tipo: "soma" },
   xg_evitado: { titulo: "Gols evitados (xG)", tipo: "soma", casas: 2 },
+  xgot_enfrentado: { titulo: "xGOT enfrentado", tipo: "soma", casas: 1 },
 };
 export const GRUPOS = {
   geral: { nome: "Geral", ordem: "minutos", cols: ["jogos", "titular", "minutos", "pctMin", "gols", "assistencias", "xg", "xa", "nota", "amarelos", "vermelhos"] },
   ataque: { nome: "Ataque", ordem: "gols", cols: ["minutos", "gols", "xg", "gMenosXg", "finalizacoes", "finalizacoes_alvo", "precisaoFin", "xgot"] },
   criacao: { nome: "Criação", ordem: "assistencias", cols: ["minutos", "assistencias", "xa", "aMenosXa", "passes_chave", "passes", "passesPct", "dribles_certos", "driblesPct", "faltas_sofridas"] },
   defesa: { nome: "Defesa", ordem: "desarmes", cols: ["minutos", "desarmes", "interceptacoes", "duelos_ganhos", "duelosPct", "faltas_cometidas", "amarelos"] },
-  goleiros: { nome: "Goleiros", ordem: "xg_evitado", cols: ["jogos", "minutos", "defesas", "gols_sofridos", "xg_evitado", "passesPct", "nota"], filtro: (a) => a.posicao === "Goleiro" },
+  goleiros: { nome: "Goleiros", ordem: "xg_evitado", cols: ["jogos", "minutos", "defesas", "gols_sofridos", "xgot_enfrentado", "xg_evitado", "passesPct", "nota"], filtro: (a) => a.posicao === "Goleiro" },
 };
 
 export function valorCol(a, campo) {
@@ -233,6 +234,7 @@ export function renderPerfil(js, todos) {
         temNota ? h("h3", {}, "Nota por jogo") : null, temNota ? h("p", { class: "sutil" }, "Linha tracejada: média da temporada.") : null,
         temNota ? grafNota : null,
         h("h3", { style: "margin-top:12px" }, "Minutos por jogo"), grafMin)),
+    secaoCarreira(a),
   );
   if (temNota) serie(grafNota, participacoes.map(([p, j]) => ({
     valor: j?.minutos > 0 ? j.nota : null, cor: corComp(p.competicao),
@@ -241,6 +243,28 @@ export function renderPerfil(js, todos) {
   colunas(grafMin, participacoes.map(([p, j]) => ({ valor: j?.minutos ?? 0, cor: corComp(p.competicao),
     dica: dicaJogo(p, [{ valor: situacao(j, p) }]) })),
   { max: Math.max(90, ...participacoes.map(([, j]) => j?.minutos ?? 0)), rotuloX: rotuloMes(jogosDet), altura: 150 });
+}
+
+// Carreira (fonte: /players/{id}/statistics): por temporada e competição, inclusive em outros clubes
+let carreiraCompleta = false;
+function secaoCarreira(a) {
+  // "25/26" e "2026" são a mesma temporada para a ordem (a europeia termina no ano do 2º número)
+  const ano = (t) => { const m = /^(\d{2})\/(\d{2})$/.exec(String(t)); return m ? 2000 + Number(m[2]) : Number(t) || 0; };
+  const linhas = (D.carreiraPorJogador.get(a.id) ?? []).slice()
+    .sort((x, y) => ano(y.temporada) - ano(x.temporada) || (y.minutos ?? 0) - (x.minutos ?? 0));
+  if (!linhas.length) return h("div", {}, h("h3", {}, "Carreira"), vazio("A carreira deste jogador chega nas próximas coletas."));
+  const totais = linhas.reduce((t, l) => ({ jogos: t.jogos + (l.jogos ?? 0), gols: t.gols + (l.gols ?? 0), assistencias: t.assistencias + (l.assistencias ?? 0) }),
+    { jogos: 0, gols: 0, assistencias: 0 });
+  const mostrar = carreiraCompleta ? linhas : linhas.slice(0, 8);
+  return h("div", {}, h("h3", {}, "Carreira"),
+    h("p", { class: "sutil" }, `${linhas.length} temporadas/competições na fonte: ${num(totais.jogos)} jogos, ${num(totais.gols)} gols, ${num(totais.assistencias)} assistências.`),
+    h("div", { class: "tabela-rolagem" }, h("table", { class: "tabela" },
+      h("thead", {}, h("tr", {}, ["Temporada", "Competição", "Clube", "J", "Min.", "G", "A"].map((t, i) => h("th", { class: i >= 3 ? "num" : "" }, t)))),
+      h("tbody", {}, mostrar.map((l) => h("tr", {}, h("td", {}, l.temporada), h("td", {}, l.competicao), h("td", {}, l.clube),
+        h("td", { class: "num" }, l.jogos ?? "–"), h("td", { class: "num" }, num(l.minutos)), h("td", { class: "num" }, l.gols ?? "–"),
+        h("td", { class: "num" }, l.assistencias ?? "–")))))),
+    linhas.length > 8 ? h("button", { type: "button", class: "botao-texto", onclick: () => { carreiraCompleta = !carreiraCompleta; render(); } },
+      carreiraCompleta ? "Mostrar menos" : `Mostrar as ${linhas.length} linhas`) : null);
 }
 
 export function situacao(j, p) {

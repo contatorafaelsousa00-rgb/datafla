@@ -1,0 +1,1109 @@
+{
+ "data": {
+  "groups": [
+   {
+    "name": "Group A",
+    "standings": [
+     {
+      "away": {
+       "wins": 2,
+       "draws": 1,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 6,
+       "receivedGoals": 1
+      },
+      "home": {
+       "wins": 3,
+       "draws": 0,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 8,
+       "receivedGoals": 1
+      },
+      "team": {
+       "id": 108861,
+       "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+       "name": "Flamengo"
+      },
+      "total": {
+       "wins": 5,
+       "draws": 1,
+       "games": 6,
+       "loses": 0,
+       "scoredGoals": 14,
+       "receivedGoals": 2
+      },
+      "points": 16,
+      "position": 1
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 2,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 2,
+       "receivedGoals": 3
+      },
+      "home": {
+       "wins": 2,
+       "draws": 1,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 4,
+       "receivedGoals": 2
+      },
+      "team": {
+       "id": 383734,
+       "logo": "https://highlightly.net/soccer/images/teams/383734.png",
+       "name": "Estudiantes de La Plata"
+      },
+      "total": {
+       "wins": 2,
+       "draws": 3,
+       "games": 6,
+       "loses": 1,
+       "scoredGoals": 6,
+       "receivedGoals": 5
+      },
+      "points": 9,
+      "position": 2
+     },
+     {
+      "away": {
+       "wins": 1,
+       "draws": 0,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 4,
+       "receivedGoals": 7
+      },
+      "home": {
+       "wins": 1,
+       "draws": 1,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 2,
+       "receivedGoals": 4
+      },
+      "team": {
+       "id": 960712,
+       "logo": "https://highlightly.net/soccer/images/teams/960712.png",
+       "name": "Independiente Medellin"
+      },
+      "total": {
+       "wins": 2,
+       "draws": 1,
+       "games": 6,
+       "loses": 3,
+       "scoredGoals": 6,
+       "receivedGoals": 11
+      },
+      "points": 7,
+      "position": 3
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 0,
+       "games": 3,
+       "loses": 3,
+       "scoredGoals": 1,
+       "receivedGoals": 6
+      },
+      "home": {
+       "wins": 0,
+       "draws": 1,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 3,
+       "receivedGoals": 6
+      },
+      "team": {
+       "id": 8521847,
+       "logo": "https://highlightly.net/soccer/images/teams/8521847.png",
+       "name": "Cusco"
+      },
+      "total": {
+       "wins": 0,
+       "draws": 1,
+       "games": 6,
+       "loses": 5,
+       "scoredGoals": 4,
+       "receivedGoals": 12
+      },
+      "points": 1,
+      "position": 4
+     }
+    ]
+   },
+   {
+    "name": "Group B",
+    "standings": [
+     {
+      "away": {
+       "wins": 1,
+       "draws": 0,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 2,
+       "receivedGoals": 4
+      },
+      "home": {
+       "wins": 2,
+       "draws": 1,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 6,
+       "receivedGoals": 2
+      },
+      "team": {
+       "id": 1983614,
+       "logo": "https://highlightly.net/soccer/images/teams/1983614.png",
+       "name": "Coquimbo Unido"
+      },
+      "total": {
+       "wins": 3,
+       "draws": 1,
+       "games": 6,
+       "loses": 2,
+       "scoredGoals": 8,
+       "receivedGoals": 6
+      },
+      "points": 10,
+      "position": 1
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 1,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 1,
+       "receivedGoals": 6
+      },
+      "home": {
+       "wins": 2,
+       "draws": 1,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 6,
+       "receivedGoals": 0
+      },
+      "team": {
+       "id": 972626,
+       "logo": "https://highlightly.net/soccer/images/teams/972626.png",
+       "name": "Deportes Tolima"
+      },
+      "total": {
+       "wins": 2,
+       "draws": 2,
+       "games": 6,
+       "loses": 2,
+       "scoredGoals": 7,
+       "receivedGoals": 6
+      },
+      "points": 8,
+      "position": 2
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 1,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 3,
+       "receivedGoals": 8
+      },
+      "home": {
+       "wins": 2,
+       "draws": 1,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 4,
+       "receivedGoals": 1
+      },
+      "team": {
+       "id": 2005740,
+       "logo": "https://highlightly.net/soccer/images/teams/2005740.png",
+       "name": "Club Nacional"
+      },
+      "total": {
+       "wins": 2,
+       "draws": 2,
+       "games": 6,
+       "loses": 2,
+       "scoredGoals": 7,
+       "receivedGoals": 9
+      },
+      "points": 8,
+      "position": 3
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 2,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 1,
+       "receivedGoals": 2
+      },
+      "home": {
+       "wins": 1,
+       "draws": 1,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 4,
+       "receivedGoals": 4
+      },
+      "team": {
+       "id": 2162324,
+       "logo": "https://highlightly.net/soccer/images/teams/2162324.png",
+       "name": "Universitario"
+      },
+      "total": {
+       "wins": 1,
+       "draws": 3,
+       "games": 6,
+       "loses": 2,
+       "scoredGoals": 5,
+       "receivedGoals": 6
+      },
+      "points": 6,
+      "position": 4
+     }
+    ]
+   },
+   {
+    "name": "Group C",
+    "standings": [
+     {
+      "away": {
+       "wins": 3,
+       "draws": 0,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 9,
+       "receivedGoals": 4
+      },
+      "home": {
+       "wins": 2,
+       "draws": 1,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 6,
+       "receivedGoals": 2
+      },
+      "team": {
+       "id": 403307,
+       "logo": "https://highlightly.net/soccer/images/teams/403307.png",
+       "name": "Independ. Rivadavia"
+      },
+      "total": {
+       "wins": 5,
+       "draws": 1,
+       "games": 6,
+       "loses": 0,
+       "scoredGoals": 15,
+       "receivedGoals": 6
+      },
+      "points": 16,
+      "position": 1
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 2,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 1,
+       "receivedGoals": 3
+      },
+      "home": {
+       "wins": 2,
+       "draws": 0,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 6,
+       "receivedGoals": 4
+      },
+      "team": {
+       "id": 106308,
+       "logo": "https://highlightly.net/soccer/images/teams/106308.png",
+       "name": "Fluminense"
+      },
+      "total": {
+       "wins": 2,
+       "draws": 2,
+       "games": 6,
+       "loses": 2,
+       "scoredGoals": 7,
+       "receivedGoals": 7
+      },
+      "points": 8,
+      "position": 2
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 1,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 2,
+       "receivedGoals": 4
+      },
+      "home": {
+       "wins": 1,
+       "draws": 1,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 4,
+       "receivedGoals": 4
+      },
+      "team": {
+       "id": 3151186,
+       "logo": "https://highlightly.net/soccer/images/teams/3151186.png",
+       "name": "Bolívar"
+      },
+      "total": {
+       "wins": 1,
+       "draws": 2,
+       "games": 6,
+       "loses": 3,
+       "scoredGoals": 6,
+       "receivedGoals": 8
+      },
+      "points": 5,
+      "position": 3
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 1,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 3,
+       "receivedGoals": 8
+      },
+      "home": {
+       "wins": 0,
+       "draws": 2,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 3,
+       "receivedGoals": 5
+      },
+      "team": {
+       "id": 2394647,
+       "logo": "https://highlightly.net/soccer/images/teams/2394647.png",
+       "name": "Real Esppor Club"
+      },
+      "total": {
+       "wins": 0,
+       "draws": 3,
+       "games": 6,
+       "loses": 3,
+       "scoredGoals": 6,
+       "receivedGoals": 13
+      },
+      "points": 3,
+      "position": 4
+     }
+    ]
+   },
+   {
+    "name": "Group D",
+    "standings": [
+     {
+      "away": {
+       "wins": 3,
+       "draws": 0,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 5,
+       "receivedGoals": 2
+      },
+      "home": {
+       "wins": 1,
+       "draws": 1,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 3,
+       "receivedGoals": 2
+      },
+      "team": {
+       "id": 2548678,
+       "logo": "https://highlightly.net/soccer/images/teams/2548678.png",
+       "name": "Universidad Católica"
+      },
+      "total": {
+       "wins": 4,
+       "draws": 1,
+       "games": 6,
+       "loses": 1,
+       "scoredGoals": 8,
+       "receivedGoals": 4
+      },
+      "points": 13,
+      "position": 1
+     },
+     {
+      "away": {
+       "wins": 1,
+       "draws": 2,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 2,
+       "receivedGoals": 1
+      },
+      "home": {
+       "wins": 2,
+       "draws": 0,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 6,
+       "receivedGoals": 2
+      },
+      "team": {
+       "id": 115669,
+       "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+       "name": "Cruzeiro"
+      },
+      "total": {
+       "wins": 3,
+       "draws": 2,
+       "games": 6,
+       "loses": 1,
+       "scoredGoals": 8,
+       "receivedGoals": 3
+      },
+      "points": 11,
+      "position": 2
+     },
+     {
+      "away": {
+       "wins": 1,
+       "draws": 0,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 2,
+       "receivedGoals": 3
+      },
+      "home": {
+       "wins": 1,
+       "draws": 1,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 4,
+       "receivedGoals": 2
+      },
+      "team": {
+       "id": 384585,
+       "logo": "https://highlightly.net/soccer/images/teams/384585.png",
+       "name": "Boca Juniors"
+      },
+      "total": {
+       "wins": 2,
+       "draws": 1,
+       "games": 6,
+       "loses": 3,
+       "scoredGoals": 6,
+       "receivedGoals": 5
+      },
+      "points": 7,
+      "position": 3
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 0,
+       "games": 3,
+       "loses": 3,
+       "scoredGoals": 0,
+       "receivedGoals": 9
+      },
+      "home": {
+       "wins": 1,
+       "draws": 0,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 2,
+       "receivedGoals": 3
+      },
+      "team": {
+       "id": 981136,
+       "logo": "https://highlightly.net/soccer/images/teams/981136.png",
+       "name": "Barcelona SC"
+      },
+      "total": {
+       "wins": 1,
+       "draws": 0,
+       "games": 6,
+       "loses": 5,
+       "scoredGoals": 2,
+       "receivedGoals": 12
+      },
+      "points": 3,
+      "position": 4
+     }
+    ]
+   },
+   {
+    "name": "Group E",
+    "standings": [
+     {
+      "away": {
+       "wins": 1,
+       "draws": 2,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 4,
+       "receivedGoals": 2
+      },
+      "home": {
+       "wins": 2,
+       "draws": 0,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 4,
+       "receivedGoals": 2
+      },
+      "team": {
+       "id": 112265,
+       "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+       "name": "Corinthians"
+      },
+      "total": {
+       "wins": 3,
+       "draws": 2,
+       "games": 6,
+       "loses": 1,
+       "scoredGoals": 8,
+       "receivedGoals": 4
+      },
+      "points": 11,
+      "position": 1
+     },
+     {
+      "away": {
+       "wins": 2,
+       "draws": 0,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 5,
+       "receivedGoals": 3
+      },
+      "home": {
+       "wins": 1,
+       "draws": 1,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 3,
+       "receivedGoals": 4
+      },
+      "team": {
+       "id": 906248,
+       "logo": "https://highlightly.net/soccer/images/teams/906248.png",
+       "name": "Platense"
+      },
+      "total": {
+       "wins": 3,
+       "draws": 1,
+       "games": 6,
+       "loses": 2,
+       "scoredGoals": 8,
+       "receivedGoals": 7
+      },
+      "points": 10,
+      "position": 2
+     },
+     {
+      "away": {
+       "wins": 1,
+       "draws": 0,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 2,
+       "receivedGoals": 4
+      },
+      "home": {
+       "wins": 1,
+       "draws": 2,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 4,
+       "receivedGoals": 3
+      },
+      "team": {
+       "id": 970073,
+       "logo": "https://highlightly.net/soccer/images/teams/970073.png",
+       "name": "Santa Fe"
+      },
+      "total": {
+       "wins": 2,
+       "draws": 2,
+       "games": 6,
+       "loses": 2,
+       "scoredGoals": 6,
+       "receivedGoals": 7
+      },
+      "points": 8,
+      "position": 3
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 2,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 2,
+       "receivedGoals": 4
+      },
+      "home": {
+       "wins": 0,
+       "draws": 1,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 2,
+       "receivedGoals": 4
+      },
+      "team": {
+       "id": 1998932,
+       "logo": "https://highlightly.net/soccer/images/teams/1998932.png",
+       "name": "Peñarol Montevideo"
+      },
+      "total": {
+       "wins": 0,
+       "draws": 3,
+       "games": 6,
+       "loses": 3,
+       "scoredGoals": 4,
+       "receivedGoals": 8
+      },
+      "points": 3,
+      "position": 4
+     }
+    ]
+   },
+   {
+    "name": "Group F",
+    "standings": [
+     {
+      "away": {
+       "wins": 2,
+       "draws": 0,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 2,
+       "receivedGoals": 1
+      },
+      "home": {
+       "wins": 2,
+       "draws": 1,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 4,
+       "receivedGoals": 1
+      },
+      "team": {
+       "id": 1001560,
+       "logo": "https://highlightly.net/soccer/images/teams/1001560.png",
+       "name": "Cerro Porteño"
+      },
+      "total": {
+       "wins": 4,
+       "draws": 1,
+       "games": 6,
+       "loses": 1,
+       "scoredGoals": 6,
+       "receivedGoals": 2
+      },
+      "points": 13,
+      "position": 1
+     },
+     {
+      "away": {
+       "wins": 1,
+       "draws": 2,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 4,
+       "receivedGoals": 2
+      },
+      "home": {
+       "wins": 2,
+       "draws": 0,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 6,
+       "receivedGoals": 3
+      },
+      "team": {
+       "id": 103755,
+       "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+       "name": "Palmeiras"
+      },
+      "total": {
+       "wins": 3,
+       "draws": 2,
+       "games": 6,
+       "loses": 1,
+       "scoredGoals": 10,
+       "receivedGoals": 5
+      },
+      "points": 11,
+      "position": 2
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 0,
+       "games": 3,
+       "loses": 3,
+       "scoredGoals": 3,
+       "receivedGoals": 7
+      },
+      "home": {
+       "wins": 2,
+       "draws": 0,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 3,
+       "receivedGoals": 2
+      },
+      "team": {
+       "id": 2167430,
+       "logo": "https://highlightly.net/soccer/images/teams/2167430.png",
+       "name": "Sporting Cristal"
+      },
+      "total": {
+       "wins": 2,
+       "draws": 0,
+       "games": 6,
+       "loses": 4,
+       "scoredGoals": 6,
+       "receivedGoals": 9
+      },
+      "points": 6,
+      "position": 3
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 0,
+       "games": 3,
+       "loses": 3,
+       "scoredGoals": 1,
+       "receivedGoals": 7
+      },
+      "home": {
+       "wins": 1,
+       "draws": 1,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 4,
+       "receivedGoals": 4
+      },
+      "team": {
+       "id": 966669,
+       "logo": "https://highlightly.net/soccer/images/teams/966669.png",
+       "name": "Junior"
+      },
+      "total": {
+       "wins": 1,
+       "draws": 1,
+       "games": 6,
+       "loses": 4,
+       "scoredGoals": 5,
+       "receivedGoals": 11
+      },
+      "points": 4,
+      "position": 4
+     }
+    ]
+   },
+   {
+    "name": "Group G",
+    "standings": [
+     {
+      "away": {
+       "wins": 1,
+       "draws": 0,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 1,
+       "receivedGoals": 3
+      },
+      "home": {
+       "wins": 3,
+       "draws": 0,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 7,
+       "receivedGoals": 2
+      },
+      "team": {
+       "id": 986242,
+       "logo": "https://highlightly.net/soccer/images/teams/986242.png",
+       "name": "LDU Quito"
+      },
+      "total": {
+       "wins": 4,
+       "draws": 0,
+       "games": 6,
+       "loses": 2,
+       "scoredGoals": 8,
+       "receivedGoals": 5
+      },
+      "points": 12,
+      "position": 1
+     },
+     {
+      "away": {
+       "wins": 1,
+       "draws": 0,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 2,
+       "receivedGoals": 4
+      },
+      "home": {
+       "wins": 3,
+       "draws": 0,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 5,
+       "receivedGoals": 0
+      },
+      "team": {
+       "id": 6679432,
+       "logo": "https://highlightly.net/soccer/images/teams/6679432.png",
+       "name": "Mirassol"
+      },
+      "total": {
+       "wins": 4,
+       "draws": 0,
+       "games": 6,
+       "loses": 2,
+       "scoredGoals": 7,
+       "receivedGoals": 4
+      },
+      "points": 12,
+      "position": 2
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 0,
+       "games": 3,
+       "loses": 3,
+       "scoredGoals": 0,
+       "receivedGoals": 7
+      },
+      "home": {
+       "wins": 3,
+       "draws": 0,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 3,
+       "receivedGoals": 0
+      },
+      "team": {
+       "id": 380330,
+       "logo": "https://highlightly.net/soccer/images/teams/380330.png",
+       "name": "Lanús"
+      },
+      "total": {
+       "wins": 3,
+       "draws": 0,
+       "games": 6,
+       "loses": 3,
+       "scoredGoals": 3,
+       "receivedGoals": 7
+      },
+      "points": 9,
+      "position": 3
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 0,
+       "games": 3,
+       "loses": 3,
+       "scoredGoals": 2,
+       "receivedGoals": 6
+      },
+      "home": {
+       "wins": 1,
+       "draws": 0,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 5,
+       "receivedGoals": 3
+      },
+      "team": {
+       "id": 3149484,
+       "logo": "https://highlightly.net/soccer/images/teams/3149484.png",
+       "name": "Always Ready"
+      },
+      "total": {
+       "wins": 1,
+       "draws": 0,
+       "games": 6,
+       "loses": 5,
+       "scoredGoals": 7,
+       "receivedGoals": 9
+      },
+      "points": 3,
+      "position": 4
+     }
+    ]
+   },
+   {
+    "name": "Group H",
+    "standings": [
+     {
+      "away": {
+       "wins": 1,
+       "draws": 1,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 3,
+       "receivedGoals": 4
+      },
+      "home": {
+       "wins": 3,
+       "draws": 0,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 8,
+       "receivedGoals": 2
+      },
+      "team": {
+       "id": 981987,
+       "logo": "https://highlightly.net/soccer/images/teams/981987.png",
+       "name": "Independiente del Valle"
+      },
+      "total": {
+       "wins": 4,
+       "draws": 1,
+       "games": 6,
+       "loses": 1,
+       "scoredGoals": 11,
+       "receivedGoals": 6
+      },
+      "points": 13,
+      "position": 1
+     },
+     {
+      "away": {
+       "wins": 2,
+       "draws": 0,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 4,
+       "receivedGoals": 1
+      },
+      "home": {
+       "wins": 2,
+       "draws": 1,
+       "games": 3,
+       "loses": 0,
+       "scoredGoals": 5,
+       "receivedGoals": 0
+      },
+      "team": {
+       "id": 372671,
+       "logo": "https://highlightly.net/soccer/images/teams/372671.png",
+       "name": "Rosario Central"
+      },
+      "total": {
+       "wins": 4,
+       "draws": 1,
+       "games": 6,
+       "loses": 1,
+       "scoredGoals": 9,
+       "receivedGoals": 1
+      },
+      "points": 13,
+      "position": 2
+     },
+     {
+      "away": {
+       "wins": 1,
+       "draws": 0,
+       "games": 3,
+       "loses": 2,
+       "scoredGoals": 2,
+       "receivedGoals": 7
+      },
+      "home": {
+       "wins": 2,
+       "draws": 0,
+       "games": 3,
+       "loses": 1,
+       "scoredGoals": 5,
+       "receivedGoals": 4
+      },
+      "team": {
+       "id": 2417624,
+       "logo": "https://highlightly.net/soccer/images/teams/2417624.png",
+       "name": "UCV"
+      },
+      "total": {
+       "wins": 3,
+       "draws": 0,
+       "games": 6,
+       "loses": 3,
+       "scoredGoals": 7,
+       "receivedGoals": 11
+      },
+      "points": 9,
+      "position": 3
+     },
+     {
+      "away": {
+       "wins": 0,
+       "draws": 0,
+       "games": 3,
+       "loses": 3,
+       "scoredGoals": 2,
+       "receivedGoals": 8
+      },
+      "home": {
+       "wins": 0,
+       "draws": 0,
+       "games": 3,
+       "loses": 3,
+       "scoredGoals": 2,
+       "receivedGoals": 5
+      },
+      "team": {
+       "id": 1004113,
+       "logo": "https://highlightly.net/soccer/images/teams/1004113.png",
+       "name": "Libertad Asunción"
+      },
+      "total": {
+       "wins": 0,
+       "draws": 0,
+       "games": 6,
+       "loses": 6,
+       "scoredGoals": 4,
+       "receivedGoals": 13
+      },
+      "points": 0,
+      "position": 4
+     }
+    ]
+   }
+  ],
+  "league": {
+   "id": 11847,
+   "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+   "name": "CONMEBOL Libertadores",
+   "season": 2026
+  }
+ },
+ "_coletado_em": "2026-10-16T12:43:35.519437+00:00"
+}

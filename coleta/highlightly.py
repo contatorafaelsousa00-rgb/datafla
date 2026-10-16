@@ -75,6 +75,7 @@ ESTATISTICAS_TIME = {
     "Corners": "escanteios",
     "Offsides": "impedimentos",
     "Throw-Ins": "laterais",
+    "Attacks": "ataques",
     "Goal Kicks": "tiros_de_meta",
     "Goalkeeper saves": "defesas",
     "Yellow cards": "amarelos",
@@ -702,6 +703,7 @@ def linhas_jogadores(m: dict, box: list, team_id: int) -> list[dict]:
                 "xa": numero(st.get("expectedAssists")),
                 "xgot": numero(st.get("expectedGoalsOnTarget")),
                 "xg_evitado": numero(st.get("expectedGoalsPrevented")),
+                "xgot_enfrentado": numero(st.get("expectedGoalsOnTargetConceded")),  # goleiro: qualidade dos chutes no alvo que enfrentou
                 "passes": numero(st.get("passesTotal")),
                 "passes_certos": numero(st.get("passesSuccessful")),
                 "passes_chave": numero(st.get("passesKey")),

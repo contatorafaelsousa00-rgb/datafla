@@ -138,6 +138,8 @@ export function preparar(bruto) {
     jogadoresPorPartida: agrupar(bruto.jogadores, "id_partida"),
     eventosPorPartida: agrupar(bruto.eventos, "id_partida"),
     finalizacoesPorPartida: agrupar(bruto.finalizacoes ?? [], "id_partida"),
+    escalacoesPorPartida: agrupar(bruto.escalacoes ?? [], "id_partida"),
+    carreiraPorJogador: agrupar(bruto.carreira ?? [], "jogador_id"),
     fotos: new Map((bruto.fotos ?? []).map((f) => [f.jogador_id, f.foto])),
     competicoes: ORDEM_COMP.filter((c) => comps.has(c)).concat([...comps].filter((c) => !ORDEM_COMP.includes(c))),
     tem: {

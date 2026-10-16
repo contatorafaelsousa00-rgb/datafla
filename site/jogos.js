@@ -1,5 +1,5 @@
 // Aba Jogos: lista e relatório de cada jogo.
-import { barrasEspelhadas, conteudoDica, dica, linhaTempo, mapaGol, serie } from "./graficos.js";
+import { barrasEspelhadas, campinho, conteudoDica, dica, linhaTempo, mapaGol, serie } from "./graficos.js";
 import { $, bola, confronto, D, data, dataLonga, escudo, estado, h, mandanteVisitante, NOME_RES, notaTag, num, ORDEM_POS, pct, preencher, resultado, tagComp, vazio } from "./comum.js";
 import { abrirJogador } from "./jogadores.js";
 import { render } from "./app.js";
@@ -47,6 +47,17 @@ function renderProximosJogos() {
   else $("detalhe-proximo").hidden = true;
 }
 
+// Posição dos dois times na tabela da competição do jogo (quando a competição tem tabela)
+function posicoesNaTabela(p) {
+  const tab = (D.bruto.classificacao ?? []).filter((c) => c.competicao === p.competicao);
+  const fla = tab.find((c) => c.eh_flamengo), adv = tab.find((c) => c.time_id === p.adversario_id);
+  if (!fla || !adv || fla.grupo !== adv.grupo) return null;
+  const t = (c) => `${c.time} ${c.posicao}º (${c.pontos} pts)`;
+  const variosGrupos = new Set(tab.map((c) => c.grupo)).size > 1; // fase de grupos: mostra o grupo
+  return h("p", { class: "sutil" }, `Na tabela${variosGrupos ? ` (${fla.grupo})` : ""}: `,
+    h("b", {}, p.mando === "Fora" ? `${t(adv)} × ${t(fla)}` : `${t(fla)} × ${t(adv)}`));
+}
+
 // Detalhe de um próximo jogo: previsão, local, árbitro, clima, confronto direto e forma do adversário
 function renderDetalheProximo(j, detalhe) {
   const caixa = $("detalhe-proximo");
@@ -73,6 +84,7 @@ function renderDetalheProximo(j, detalhe) {
     h("p", { class: "sutil" }, [`${dataLonga(p.data_utc)} · ${horaBR(p.data_utc)} (${faltam(p.data_utc)})`, p.competicao, p.rodada,
       p.estadio ? `${p.estadio}${p.cidade ? `, ${p.cidade}` : ""}` : null, p.arbitro ? `Árbitro: ${p.arbitro}` : null, clima ? `Previsão do tempo: ${clima}` : null]
       .filter(Boolean).join(" · ")),
+    posicoesNaTabela(p),
     barraProbabilidade(p) ?? h("p", { class: "sutil" }, detalhe
       ? "A fonte ainda não publicou a previsão deste jogo."
       : "Previsão, árbitro e clima chegam nos dias antes do jogo (os 3 próximos jogos são atualizados, o mais próximo primeiro)."),
@@ -178,7 +190,7 @@ export function montarModalJogo() {
   });
 }
 
-export const STATS_JOGO = [["xg", "xG", (v) => num(v, 2)], ["xa", "xA", (v) => num(v, 2)], ["grandes_chances", "Grandes chances"],
+export const STATS_JOGO = [["xg", "xG", (v) => num(v, 2)], ["xa", "xA", (v) => num(v, 2)], ["grandes_chances", "Grandes chances"], ["ataques", "Ataques"],
   ["finalizacoes", "Finalizações"], ["finalizacoes_alvo", "No alvo"], ["finalizacoes_dentro_area", "Dentro da área"],
   ["posse", "Posse", (v) => pct(v, 0)], ["passes", "Passes"], ["passes_pct", "Passes certos", (v) => pct(v, 0)],
   ["passes_ultimo_terco", "Passes no último terço"], ["cruzamentos", "Cruzamentos"], ["desarmes", "Desarmes"],
@@ -269,10 +281,24 @@ export function renderDetalheJogo(js) {
   const marcas = marcasLinhaTempo(p);
   const grafStats = h("div", { class: "grafico" }), tempo = h("div", { class: "grafico" });
   const golFla = h("div"), golAdv = h("div");
+  // escalação no campinho (mandante à esquerda, ou embaixo no celular)
+  const escalacao = D.escalacoesPorPartida.get(p.id_partida) ?? [];
+  const montarTime = (fla) => {
+    const js = escalacao.filter((x) => x.eh_flamengo === fla && x.titular);
+    const linhas = [];
+    for (const x of js) (linhas[x.linha] ??= []).push(x);
+    return { nome: fla ? "Flamengo" : p.adversario, fla, formacao: js[0]?.formacao ?? (fla ? p.formacao : p.formacao_adversario),
+      linhas: linhas.filter(Boolean).map((l) => l.sort((a, b) => a.ordem - b.ordem).map((x) => ({ numero: x.numero, nome: x.jogador, id: x.jogador_id }))) };
+  };
+  const timesCampo = escalacao.length ? (flaPrimeiro ? [montarTime(true), montarTime(false)] : [montarTime(false), montarTime(true)]) : null;
+  const campo = h("div", { class: "grafico" });
 
   preencher(caixa,
     ...cabecalho,
     barraProbabilidade(p) ?? "",
+    timesCampo ? h("div", { class: "bloco" }, h("h3", {}, "Escalações"),
+      h("p", { class: "sutil" }, `${timesCampo[0].nome} ${timesCampo[0].formacao ?? ""} × ${timesCampo[1].formacao ?? ""} ${timesCampo[1].nome}`
+        + " · Clique num jogador do Flamengo para ver o perfil."), campo) : null,
     marcas.length ? h("div", { class: "bloco" }, h("h3", {}, "Linha do tempo"),
       h("p", { class: "sutil" }, "Flamengo em cima, adversário embaixo. Ponto cheio: defendida; vazio: para fora ou bloqueada; com anel: gol."),
       tempo) : null,
@@ -294,6 +320,7 @@ export function renderDetalheJogo(js) {
       h("div", {}, h("h3", {}, "Finalizações do Flamengo"), golFla),
       h("div", {}, h("h3", {}, `Finalizações do ${p.adversario}`), golAdv)) : null,
   );
+  if (timesCampo) campinho(campo, timesCampo[0], timesCampo[1], { aoClicar: (id) => { if (id != null) abrirJogador(id); } });
   if (marcas.length) linhaTempo(tempo, marcas, { duracao: p.duracao ?? 90 });
   if (linhasStats.length) barrasEspelhadas(grafStats, linhasStats, flaPrimeiro
     ? { nomeA: "Flamengo", nomeB: p.adversario }

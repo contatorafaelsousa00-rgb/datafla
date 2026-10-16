@@ -529,3 +529,40 @@ body.sem-filtros .filtros { display: none; }
 .selo-nova { font: 600 11px var(--fonte-titulo); color: #fff; background: var(--marca); padding: 2px 8px; border-radius: 999px;
   text-transform: none; letter-spacing: 0; }
 @media (max-width: 760px) { .modal-barra { top: -16px; margin: -16px -16px 0; padding: 10px 16px; } }
+/* campinho das escalações */
+.campinho { display: block; max-width: 100%; }
+.campo-gramado { fill: color-mix(in srgb, var(--bom) 9%, var(--superficie-2)); stroke: var(--borda-forte); }
+.campo-linha { stroke: var(--borda-forte); stroke-width: 1.2; }
+.campo-jogador circle { fill: var(--superficie); stroke: var(--serie-2); stroke-width: 2; }
+.campo-jogador.fla circle { fill: var(--marca); stroke: var(--marca); }
+.campo-jogador.clicavel { cursor: pointer; }
+.campo-jogador.clicavel:hover circle, .campo-jogador:focus-visible circle { stroke: var(--texto); }
+.campo-numero { font: 600 11px var(--fonte-numero); fill: var(--texto); pointer-events: none; }
+.campo-jogador.fla .campo-numero { fill: #fff; }
+.campo-nome { font: 500 10.5px var(--fonte); fill: var(--texto-2); pointer-events: none; }
+.tabela tr.destaque-fla td { background: color-mix(in srgb, var(--marca) 14%, transparent); font-weight: 600; }
+.tabela tr.destaque-adv td { background: color-mix(in srgb, var(--serie-2) 14%, transparent); }
+
+/* classificação e simulador */
+#classificacao-corpo { display: grid; gap: 16px; }
+.tabela-classificacao td, .tabela-classificacao th { padding-left: 8px; padding-right: 8px; }
+.tabela-classificacao .movimento { font-size: 11px; width: 28px; }
+.tabela-classificacao tr.zona-g4 td:first-child { box-shadow: inset 3px 0 0 var(--bom); }
+.tabela-classificacao tr.zona-g6 td:first-child { box-shadow: inset 3px 0 0 color-mix(in srgb, var(--bom) 45%, transparent); }
+.tabela-classificacao tr.zona-z4 td:first-child { box-shadow: inset 3px 0 0 var(--marca); }
+.chance-celula { width: 78px; min-width: 78px;
+  background: linear-gradient(270deg, color-mix(in srgb, var(--marca) 24%, transparent) calc(var(--v, 0) * 100%), transparent 0); }
+.rodadas { display: grid; gap: 14px; margin-top: 12px; }
+.rodada h3 { font: 600 13px var(--fonte-titulo); margin-bottom: 6px; }
+.lista-palpites { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.lista-palpites li { display: grid; grid-template-columns: 1fr auto 1fr 110px; align-items: center; gap: 10px; padding: 5px 8px; border-radius: 8px; }
+.lista-palpites li.jogo-fla { background: color-mix(in srgb, var(--marca) 10%, transparent); }
+.palpite-time { display: inline-flex; align-items: center; gap: 6px; }
+.palpite-time.casa { justify-content: flex-end; text-align: right; }
+.palpite .button, .palpite button { padding: 4px 9px; font-size: 12px; }
+.palpite-data { font-size: 12px; text-align: right; }
+@media (max-width: 760px) {
+  .lista-palpites li { grid-template-columns: 1fr auto 1fr; }
+  .palpite-data { grid-column: 1 / -1; text-align: center; }
+  .palpite button { padding: 4px 6px; }
+}

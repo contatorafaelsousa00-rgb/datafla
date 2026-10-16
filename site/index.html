@@ -103,6 +103,7 @@
       <button role="tab" data-aba="jogadores" aria-selected="false">Jogadores</button>
       <button role="tab" data-aba="elenco" aria-selected="false">Elenco</button>
       <button role="tab" data-aba="estilo" aria-selected="false">Estilo de jogo</button>
+      <button role="tab" data-aba="classificacao" aria-selected="false">Classificação</button>
       <button role="tab" data-aba="opiniao" aria-selected="false">Sua opinião</button>
     </nav>
 
@@ -235,6 +236,11 @@
 
     <!-- ESTILO: como o time joga -->
     <section id="aba-estilo" class="aba" hidden>
+      <article id="card-formacoes" class="cartao" hidden>
+        <h2>Formações</h2>
+        <p class="sutil">Desenho tático do Flamengo em cada jogo (escalação da fonte) e o desempenho com cada um.</p>
+        <div class="tabela-rolagem"><table id="tabela-formacoes" class="tabela"></table></div>
+      </article>
       <article class="cartao">
         <h2>Flamengo × adversários</h2>
         <p id="nota-estilo" class="sutil"></p>
@@ -267,6 +273,11 @@
     </section>
 
     <!-- SUA OPINIÃO: elogios, críticas e sugestões (gravadas no Firestore; só o dono lê, pelo console) -->
+    <!-- CLASSIFICAÇÃO: tabela do Brasileirão e simulador (montado por classificacao.js) -->
+    <section id="aba-classificacao" class="aba" hidden>
+      <div id="classificacao-corpo"></div>
+    </section>
+
     <section id="aba-opiniao" class="aba" hidden>
       <article class="cartao opiniao">
         <h2>Elogios, críticas e sugestões</h2>

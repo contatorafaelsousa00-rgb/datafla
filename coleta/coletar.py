@@ -9,6 +9,7 @@
     python -m coleta.coletar elenco     # baixa o elenco atual (idade, posição, número)
     python -m coleta.coletar detalhes   # baixa os detalhes dos jogos encerrados que faltam
     python -m coleta.coletar proximo    # próximos jogos: previsão, estádio, árbitro, confrontos, forma do adversário
+    python -m coleta.coletar extras     # escalações, classificação e carreira dos jogadores (aos poucos, pela cota)
     python -m coleta.coletar fotos      # fotos dos jogadores (elenco da API-Football; renovado a cada 7 dias)
     python -m coleta.coletar processar  # gera banco, CSVs e relatório de validação (sem usar a API)
     python -m coleta.coletar tudo       # jogos + elenco + detalhes + processar
@@ -24,7 +25,7 @@ import os
 import sys
 from datetime import datetime, timedelta, timezone
 
-from . import alteracoes, armazenar, config, exportar, fotos, highlightly, imagens, inspecionar, normalizar, sumulas, validar
+from . import alteracoes, armazenar, config, exportar, extras, fotos, highlightly, imagens, inspecionar, normalizar, sumulas, validar
 from .api import ClienteAPI, ErroAPI, ler_raw, salvar_raw
 
 ARQ_JOGOS = "jogos"
@@ -153,6 +154,12 @@ def cmd_processar():
     tabelas["elenco"] = normalizar.linhas_elenco(elenco["response"], config.TEAM_ID) if elenco else []
     if _hl() and jogos:
         tabelas.update(highlightly.linhas_proximos(jogos["data"]))
+        tabelas["escalacoes"], formacoes = extras.linhas_escalacoes([p["id_partida"] for p in tabelas["partidas"]])
+        for p in tabelas["partidas"]:
+            p["formacao"], p["formacao_adversario"] = formacoes.get(p["id_partida"], (None, None))
+        tabelas["classificacao"] = extras.linhas_classificacao(jogos["data"])
+        tabelas["carreira"] = extras.linhas_carreira()
+        tabelas["liga"] = extras.linhas_liga(jogos["data"])
         tabelas["fotos"] = fotos.linhas_fotos(tabelas["jogadores_partida"])
         imagens.logos_locais(tabelas)
     armazenar.salvar_sqlite(tabelas)
@@ -236,7 +243,7 @@ def cmd_inspecionar():
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("comando", choices=[
-        "status", "planejar", "jogos", "elenco", "detalhes", "proximo", "fotos", "processar", "tudo", "modelo-sumula", "sumulas", "inspecionar"])
+        "status", "planejar", "jogos", "elenco", "detalhes", "proximo", "extras", "fotos", "processar", "tudo", "modelo-sumula", "sumulas", "inspecionar"])
     parser.add_argument("id_partida", nargs="?", type=int)
     parser.add_argument("-t", "--temporada", type=int, help=f"ano da temporada (padrão: {config.SEASON})")
     parser.add_argument("--forcar", action="store_true", help="planejar: coleta mesmo sem novidade")
@@ -279,6 +286,8 @@ def main(argv=None):
                 return highlightly.cmd_detalhes(api)
             if args.comando == "proximo":
                 return highlightly.cmd_proximo(api)
+            if args.comando == "extras":
+                return extras.cmd_extras(api)
             if args.comando == "fotos":
                 return fotos.cmd_fotos(forcar=True)
             # Jogos encerrados têm prioridade na cota; o próximo jogo vem depois.
@@ -287,7 +296,7 @@ def main(argv=None):
             try:
                 try:
                     codigo = (highlightly.cmd_jogos(api) or highlightly.cmd_detalhes(api)
-                              or highlightly.cmd_proximo(api) or fotos.cmd_fotos())
+                              or highlightly.cmd_proximo(api) or extras.cmd_extras(api) or fotos.cmd_fotos())
                 except ErroAPI as e:
                     highlightly.registrar_atualizacao(salvas, api, str(e))
                     raise

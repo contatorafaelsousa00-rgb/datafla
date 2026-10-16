@@ -1,6 +1,6 @@
 // Aba Estilo de jogo: médias contra os adversários e padrões por momento do jogo.
 import { barrasEspelhadas, colunasAgrupadas, linhas, serie } from "./graficos.js";
-import { $, bola, comDetalhe, D, data, filtrados, h, media, mostrar, movel, num, pct, vazio } from "./comum.js";
+import { $, bola, comDetalhe, D, data, filtrados, h, media, mostrar, movel, num, pct, preencher, vazio } from "./comum.js";
 
 // =====================================================================
 // ESTILO DE JOGO
@@ -17,7 +17,28 @@ export const STATS_ESTILO = [["posse", "Posse", (v) => pct(v, 0)], ["passes", "P
 export const FAIXAS = ["1–15", "16–30", "31–45", "46–60", "61–75", "76–90", "90+"];
 export const faixaDe = (min, acrescimo) => (min > 90 || (min === 90 && acrescimo) ? 6 : Math.min(5, Math.max(0, Math.ceil(min / 15) - 1)));
 
+function renderFormacoes(js) {
+  const comFormacao = js.filter((p) => p.formacao);
+  if (!mostrar("card-formacoes", comFormacao.length > 0)) return;
+  const grupos = new Map();
+  for (const p of comFormacao) { if (!grupos.has(p.formacao)) grupos.set(p.formacao, []); grupos.get(p.formacao).push(p); }
+  const linhas = [...grupos].sort((a, b) => b[1].length - a[1].length);
+  const conta = (l, r) => l.filter((p) => p.resultado === r).length;
+  const pts = (l) => l.reduce((t, p) => t + (p.resultado === "V" ? 3 : p.resultado === "E" ? 1 : 0), 0);
+  const comXg = (l) => l.filter((p) => p.xg_pro != null);
+  preencher($("tabela-formacoes"),
+    h("thead", {}, h("tr", {}, ["Formação", "Jogos", "V-E-D", "Aproveit.", "Gols por jogo", "xG por jogo", "Último uso"]
+      .map((t, i) => h("th", { class: i ? "num" : "" }, t)))),
+    h("tbody", {}, linhas.map(([f, l]) => h("tr", {},
+      h("td", {}, h("b", {}, f)), h("td", { class: "num" }, l.length), h("td", { class: "num" }, `${conta(l, "V")}-${conta(l, "E")}-${conta(l, "D")}`),
+      h("td", { class: "num" }, pct(pts(l) / (3 * l.length), 0)),
+      h("td", { class: "num" }, `${num(media(l.map((p) => p.gols_pro)), 1)} × ${num(media(l.map((p) => p.gols_contra)), 1)}`),
+      h("td", { class: "num" }, comXg(l).length ? `${num(media(comXg(l).map((p) => p.xg_pro)), 2)} × ${num(media(comXg(l).map((p) => p.xg_contra)), 2)}` : "–"),
+      h("td", { class: "num" }, data(l.reduce((a, p) => (p.data_utc > a ? p.data_utc : a), "")))))));
+}
+
 export function renderEstilo(js) {
+  renderFormacoes(js);
   const det = comDetalhe(js);
   // Médias por jogo, Flamengo × adversários
   const medias = STATS_ESTILO.map(([k, rot, f]) => {

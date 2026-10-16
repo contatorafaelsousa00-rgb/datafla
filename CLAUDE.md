@@ -114,6 +114,15 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   box-score sem gols/assistências → `_completar_gols_pelos_lances` (ids dos lances). Painel: `preencher()` em comum.js
   evita "null" escrito na tela; lance sem nome mostra "jogador não informado". Restam limitações da fonte nos jogos
   antigos do Carioca (box-score incompleto) e Atlético-MG 26/04 (um gol sem lance).
+- Dados complementares (16/10/2026, `coleta/extras.py`, `coletar extras`, roda no `tudo` depois dos próximos jogos):
+  `/lineups` (escalação por linha + formação; 1 vez por jogo, até 25 por coleta), `/standings` (tabelas; diária se a
+  competição ainda tem jogo), `/players/{id}/statistics` (carreira; semanal, 12 por coleta, por minutos), e
+  `/matches?leagueId=61205` (380 jogos do Brasileirão em 4 páginas, a cada 20 h). A API NÃO tem mapa de calor, coordenadas
+  nem posição média; vídeos vêm vazios no plano grátis; odds fora do plano. Painel: campinho (`graficos.campinho`,
+  mandante à esquerda/em cima), aba **Classificação** (`classificacao.js`: tabela calculada dos jogos = igual à oficial;
+  simulador de palpites salvo no navegador; chances por 4.000 simulações Poisson com força casa/fora encolhida para a
+  média, semente fixa), Formações (Estilo de jogo), Carreira (perfil), xGOT enfrentado (goleiros), Ataques (comparativo),
+  posição na tabela no próximo jogo. Regras do Firestore ganharam `aba_classificacao` (publicar regras junto com o site).
 - **Publicação**: só depois do Rafael validar no servidor local (`python scripts/servidor_local.py`, porta 8765) — pedido de 16/10/2026.
 - Próximos jogos (16/10/2026): aba Jogos com chave "Próximos jogos | Jogos disputados" (`?lista=`; `?jogo=<id>` abre o
   relatório). `coletar proximo` busca para os 3 próximos jogos (o 1º sempre; os demais só nas próximas 3 semanas), do mais

@@ -513,3 +513,59 @@ export function linhaTempo(container, marcas, { duracao = 90 } = {}) {
     if (k.dica) dica(g, k.dica);
   }
 }
+
+// ---------- campinho (escalações) ----------
+// casa/fora: { nome, formacao, fla, linhas: [[{ numero, nome, id }], ...] } — linha 0 = goleiro; em cada linha,
+// da esquerda para a direita do próprio time. Horizontal no computador (casa à esquerda, atacando para a direita);
+// vertical no celular (casa em cima, atacando para baixo) — sempre mandante primeiro, como no resto do painel.
+export function campinho(container, casa, fora, { aoClicar } = {}) {
+  container.replaceChildren();
+  const largura = Math.max(300, container.clientWidth || 700);
+  const vertical = largura < 620;
+  const W = largura, H = vertical ? Math.round(largura * 1.45) : Math.round(Math.min(420, largura * 0.55));
+  const s = el("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}`, role: "img", class: "campinho" }, container);
+  rotular(s, container, `${casa.nome} ${casa.formacao ?? ""} contra ${fora.nome} ${fora.formacao ?? ""}`);
+  const m = 6;
+  // gramado e marcações
+  el("rect", { x: m, y: m, width: W - 2 * m, height: H - 2 * m, rx: 10, class: "campo-gramado" }, s);
+  const linha = (x1, y1, x2, y2) => el("line", { x1, y1, x2, y2, class: "campo-linha" }, s);
+  const area = (x, y, w, h) => el("rect", { x, y, width: w, height: h, class: "campo-linha", fill: "none" }, s);
+  if (vertical) {
+    linha(m, H / 2, W - m, H / 2);
+    area(W * 0.22, m, W * 0.56, H * 0.14); area(W * 0.22, H - m - H * 0.14, W * 0.56, H * 0.14);
+  } else {
+    linha(W / 2, m, W / 2, H - m);
+    area(m, H * 0.22, W * 0.12, H * 0.56); area(W - m - W * 0.12, H * 0.22, W * 0.12, H * 0.56);
+  }
+  el("circle", { cx: W / 2, cy: H / 2, r: Math.min(W, H) * 0.09, class: "campo-linha", fill: "none" }, s);
+
+  const desenhar = (time, ehCasa) => {
+    const n = time.linhas.length;
+    time.linhas.forEach((jogadores, i) => {
+      const prof = i === 0 ? 0.04 : 0.2 + (i - 1) * (0.62 / Math.max(1, n - 2));   // 0 = própria meta, 0.82 = perto do meio
+      jogadores.forEach((j, k) => {
+        const lat = (k + 1) / (jogadores.length + 1);                               // esquerda → direita do time
+        let x, y;
+        if (vertical) {
+          y = ehCasa ? m + prof * (H / 2 - 2 * m) + 16 : H - m - prof * (H / 2 - 2 * m) - 30;
+          x = ehCasa ? W - m - lat * (W - 2 * m) : m + lat * (W - 2 * m);  // quem ataca para baixo tem a esquerda à direita da tela
+        } else {
+          x = ehCasa ? m + prof * (W / 2 - 2 * m) + 16 : W - m - prof * (W / 2 - 2 * m) - 16;
+          y = ehCasa ? m + lat * (H - 2 * m) : H - m - lat * (H - 2 * m);
+        }
+        const g = el("g", { class: "campo-jogador" + (time.fla ? " fla" : "") + (time.fla && aoClicar ? " clicavel" : ""), tabindex: 0 }, s);
+        el("circle", { cx: x, cy: y, r: 13 }, g);
+        texto(g, x, y + 4, j.numero ?? "", { "text-anchor": "middle", class: "campo-numero" });
+        const curto = (j.nome ?? "").split(" ").slice(-1)[0];
+        texto(g, x, y + 27, curto, { "text-anchor": "middle", class: "campo-nome" });
+        dica(g, () => conteudoDica(j.nome ?? "", [{ valor: `nº ${j.numero ?? "–"}`, nome: time.nome }]));
+        if (time.fla && aoClicar) {
+          g.addEventListener("click", () => aoClicar(j.id));
+          g.addEventListener("keydown", (e) => { if (e.key === "Enter") aoClicar(j.id); });
+        }
+      });
+    });
+  };
+  desenhar(casa, true);
+  desenhar(fora, false);
+}
