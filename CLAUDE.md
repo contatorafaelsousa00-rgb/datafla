@@ -107,7 +107,7 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
 - 40 testes (`python -m pytest`) + `python scripts/teste_painel.py` (painel).
 - **Regra de exibição (16/10/2026)**: todo placar ou xG de UM jogo aparece na ordem **mandante × visitante**, com os nomes
   (`comum.js`: `mandanteVisitante`, `confronto`, `textoConfronto`). Somas da temporada ficam "a favor × contra", rotuladas.
-- Jogo clicado (disputado ou próximo) abre num modal (`#modal-jogo`, botão "Voltar para a lista"), não rola a página;
+- Jogo clicado (disputado ou próximo) abre numa tela inteira (`#modal-jogo` em tela cheia, conteúdo até 1400 px, botão "Voltar para a lista"), não rola a página;
   links diretos `?aba=jogos&jogo=<id>` e `?aba=jogos&proximo=<id>`.
 - Correções da fonte (auditoria de 16/10/2026, `coleta/highlightly.py`): placar com lados trocados (Madureira 22/02 e
   03/03, Lausanne 08/07) → `placar()` usa os lances de gol quando dão exatamente o placar invertido (campanha 31V 14E 14D →
