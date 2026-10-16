@@ -512,8 +512,6 @@ body.sem-filtros .filtros { display: none; }
 .admin-tabela td { vertical-align: top; }
 .admin-tabela .sutil { font-size: 11.5px; }
 .linha-erro td { color: var(--marca); }
-.modal-admin { width: min(1120px, calc(100vw - 32px)); }
-.modal-admin .modal-corpo { display: grid; gap: 16px; }
 .admin-topo { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
 .admin-topo h2, .admin-aviso h2 { font: 600 22px var(--fonte-titulo); }
 .admin-aviso { display: grid; gap: 12px; padding: 12px 0; }
@@ -694,3 +692,49 @@ html:has(dialog[open]) { overflow: hidden; } /* com jogo/perfil aberto, só a te
 .chip-jogo .resultado { width: 20px; height: 20px; font-size: 11px; }
 .bloco-penalti h3 { font-size: 13px; margin: 10px 0 4px; }
 @media (max-width: 760px) { .tabela-ranking td, .tabela-ranking th { padding-left: 5px; padding-right: 5px; } .tabela-ranking .link-jogador { gap: 5px; } }
+/* ---------- tela de administração (#admin) ---------- */
+body.modo-admin main, body.modo-admin .rodape, body.modo-admin #aviso-demo { display: none; }
+.tela-admin { max-width: 1400px; margin: 0 auto; padding: 20px 16px 48px; }
+.admin-cabecalho { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap;
+  padding-bottom: 16px; margin-bottom: 18px; border-bottom: 1px solid var(--grade); }
+.admin-cabecalho h1 { font: 600 26px var(--fonte-titulo); margin: 0; }
+.admin-layout { display: grid; grid-template-columns: 210px 1fr; gap: 24px; align-items: start; }
+.admin-menu { position: sticky; top: 16px; display: grid; gap: 2px; }
+.admin-menu button { display: flex; align-items: center; justify-content: space-between; gap: 8px; text-align: left; border: 0; background: none;
+  color: var(--texto-2); font: 500 14px var(--fonte); padding: 9px 12px; border-radius: 8px; cursor: pointer; }
+.admin-menu button:hover { background: var(--superficie-2); color: var(--texto); }
+.admin-menu button[aria-current="page"] { background: var(--marca-suave); color: var(--texto); font-weight: 600; box-shadow: inset 3px 0 0 var(--marca); }
+.admin-conteudo { display: grid; gap: 16px; min-width: 0; }
+.admin-grade-status { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 12px; }
+.admin-status { display: grid; gap: 4px; text-align: left; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--borda);
+  background: var(--superficie); color: var(--texto); font: inherit; cursor: pointer; border-left-width: 4px; }
+.admin-status:hover { border-color: var(--borda-forte); }
+.admin-status .rotulo { font: 600 11.5px var(--fonte-titulo); text-transform: uppercase; letter-spacing: .06em; color: var(--mudo); }
+.admin-status b { font: 600 20px var(--fonte-titulo); }
+.admin-status .sutil { font-size: 12px; }
+.admin-status.ok { border-left-color: var(--bom); }
+.admin-status.erro { border-left-color: var(--critico); }
+.admin-status.alerta { border-left-color: var(--alerta); }
+.admin-status.neutro { border-left-color: var(--neutro); }
+.admin-pendencias { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
+.admin-pendencias li { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; background: var(--superficie-2);
+  border-left: 4px solid var(--neutro); }
+.admin-pendencias li.erro { border-left-color: var(--critico); }
+.admin-pendencias li.alerta { border-left-color: var(--alerta); }
+.admin-pendencias li.info { border-left-color: var(--serie-2); }
+.admin-opiniao-acoes { margin-left: auto; display: flex; gap: 12px; }
+.admin-opiniao-acoes .botao-texto { margin-left: 0; }
+.botao-texto.perigo:hover { color: var(--critico); }
+.admin-conteudo .busca { flex: 1 1 220px; min-width: 0; }
+.admin-regras { flex-wrap: wrap; margin: 6px 0 4px; }
+.nivel-erro { color: var(--critico); font-weight: 600; } .nivel-alerta { color: var(--alerta); font-weight: 600; }
+.admin-tabela details summary { cursor: pointer; color: var(--texto-2); }
+@media (max-width: 860px) {
+  .admin-layout { grid-template-columns: 1fr; gap: 14px; }
+  .admin-menu { position: static; display: flex; overflow-x: auto; gap: 4px; padding-bottom: 4px; }
+  .admin-menu button { white-space: nowrap; }
+  .admin-menu button[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--marca); }
+}
+.admin-conteudo .segmentado { flex-wrap: wrap; max-width: 100%; }
+.admin-opiniao-acoes { flex-wrap: wrap; }
+.admin-situacao td.num { white-space: normal; text-align: right; }

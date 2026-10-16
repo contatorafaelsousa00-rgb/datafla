@@ -144,19 +144,16 @@ function montarControlesFixos() {
 }
 
 // ---------- admin (entrada escondida no canto do topo, ou o link #admin) ----------
-function abrirAdmin() {
-  import("./admin.js").then((m) => m.abrirAdmin()).catch(() => alert("Não foi possível abrir a administração."));
+// Tela própria na rota #admin (ou #admin/<seção>): o botão voltar do navegador sai dela.
+function rotaAdmin() {
+  const m = location.hash.match(/^#admin(?:\/(\w+))?/);
+  if (m) import("./admin.js").then((a) => a.abrirAdmin(m[1])).catch(() => alert("Não foi possível abrir a administração."));
+  else if (document.body.classList.contains("modo-admin")) import("./admin.js").then((a) => a.fecharAdmin());
 }
 
 function montarAdmin() {
-  const modal = $("modal-admin");
-  $("entrada-admin").addEventListener("click", abrirAdmin);
-  modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
-  modal.addEventListener("close", () => {
-    document.body.append($("dica"));
-    $("dica").hidden = true;
-    if (location.hash === "#admin") history.replaceState(null, "", location.pathname + location.search);
-  });
+  $("entrada-admin").addEventListener("click", () => { location.hash = "#admin"; });
+  window.addEventListener("hashchange", rotaAdmin);
 }
 
 export function render() {
@@ -234,7 +231,7 @@ async function iniciar() {
   if (jogo && estado.aba === "jogos") abrirJogo(jogo);
   else if (proximo && estado.aba === "jogos") abrirProximo(proximo);
   else render();
-  if (location.hash === "#admin") abrirAdmin(); // depois dos dados: o admin mostra a situação da coleta
+  rotaAdmin(); // depois dos dados: o admin mostra a situação da coleta
   // A barra de filtros fica fixa logo abaixo do topo, que muda de altura no celular.
   const alturaTopo = () => document.documentElement.style.setProperty("--altura-topo", `${document.querySelector(".topo").offsetHeight}px`);
   alturaTopo();

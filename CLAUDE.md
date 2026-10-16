@@ -187,7 +187,11 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
 - **Admin** (15/10/2026): entrada quase invisível no canto superior direito do topo (ou `#admin`); `admin.js` carregado sob
   demanda com o SDK do Firebase (gstatic 10.14.1). Login Google (Firebase Authentication; o provedor Google precisa estar
   ativado no console). Regras: `admin()` = e-mail do dono verificado; lê/apaga `opinioes`, lê `acessos`.
-  Mostra acessos (30 dias, abas, origem, dispositivo), opiniões (selo "nova" desde a última visita; apagar) e situação da coleta.
+  Tela própria (16/10/2026, antes era modal): rota `#admin/<seção>` (voltar do navegador sai), menu lateral (abas no celular):
+  Visão geral (cartões de situação + pendências: coleta atrasada, falha no workflow, jogos pendentes, cota baixa, opiniões novas),
+  Acessos (30 dias + comparação com a semana anterior), Opiniões (filtro por tipo/novas, busca, marcar como lida por mensagem
+  ou todas — guardado em localStorage `datafla-admin-lidas`, apagar), Coleta (situação, histórico, execuções, atalhos) e
+  Qualidade dos dados (apontamentos da validação por regra, com link para o jogo). Testada com Firebase falso (tests/front/test_admin.py).
   Seção Atualizações: histórico de cada coleta (`data/<ano>/atualizacoes.json`, gravado por `coletar tudo` com motivo,
   origem, jogos novos/recoletados, pendentes e cota; versionado e publicado em `dados/atualizacoes-<ano>.json`) e as
   últimas execuções do workflow pela API pública do GitHub ("nada a coletar" / "coletou e publicou" / falhou).

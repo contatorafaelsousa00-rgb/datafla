@@ -1,4 +1,9 @@
-// Tela de admin (um único usuário): acessos, opiniões e situação dos dados.
+// Tela de admin (um único usuário): uma tela própria (#admin), com menu lateral e seções.
+//   Visão geral  — o que pede atenção agora (coleta atrasada, falha no workflow, opiniões novas, cota) + números-chave
+//   Acessos      — visitas do público por dia, abas, origem, dispositivo; comparação com a semana anterior
+//   Opiniões     — filtro por tipo/novas, busca, marcar como lida (por mensagem ou todas), apagar
+//   Coleta       — situação dos dados, histórico de cada coleta e execuções do workflow
+//   Qualidade    — apontamentos da validação, agrupados por regra, com link para o jogo
 // Carregada só quando alguém abre a entrada escondida no canto do topo (ou o link #admin).
 // Login com a conta Google pelo Firebase Authentication. Esconder a entrada não é a proteção:
 // quem protege os dados são as regras do Firestore, que só deixam a conta do dono ler (firestore.rules).
@@ -14,19 +19,25 @@ const CONFIG = {
   projectId: "datafla",
   appId: "1:922676088917:web:836b40fa801dfcd7a9c4dc",
 };
+const REPO = "https://github.com/contatorafaelsousa00-rgb/datafla";
 const LINKS = [
-  ["Execuções da coleta (GitHub Actions)", "https://github.com/contatorafaelsousa00-rgb/datafla/actions/workflows/atualizar.yml"],
+  ["Rodar a coleta agora (GitHub → Run workflow)", `${REPO}/actions/workflows/atualizar.yml`],
   ["Opiniões no console do Firestore", "https://console.firebase.google.com/project/datafla/firestore/databases/-default-/data/~2Fopinioes"],
   ["Hospedagem (Firebase Hosting)", "https://console.firebase.google.com/project/datafla/hosting/sites"],
   ["Agendamento (cron-job.org)", "https://console.cron-job.org/jobs"],
+  ["Repositório no GitHub", REPO],
 ];
 const NOME_ABA = { temporada: "Temporada", jogos: "Jogos", jogadores: "Jogadores", elenco: "Elenco", estilo: "Estilo de jogo",
   numeros: "Números", classificacao: "Classificação", opiniao: "Sua opinião" };
 const NOME_ORIGEM = { direto: "Direto / app", google: "Google", whatsapp: "WhatsApp", instagram: "Instagram", facebook: "Facebook", x: "X (Twitter)", outros: "Outros sites" };
 const NOME_TIPO = { elogio: "Elogio", critica: "Crítica", sugestao: "Sugestão" };
-const PLURAL_TIPO = { elogio: "elogios", critica: "críticas", sugestao: "sugestões" };
+const PLURAL_TIPO = { elogio: "Elogios", critica: "Críticas", sugestao: "Sugestões" };
+const NOME_REGRA = { minutos: "Minutos somados", finalizacoes: "Finalizações (jogadores × time)", substituicoes_vs_eventos: "Substituições × lances",
+  escalacao: "Escalação", titulares: "Titulares", gols: "Gols (jogadores × placar)" };
+const SECOES = [["geral", "Visão geral"], ["acessos", "Acessos"], ["opinioes", "Opiniões"], ["coleta", "Coleta"], ["qualidade", "Qualidade dos dados"]];
 
 let fb; // SDK do Firebase, carregado na primeira abertura
+const st = { secao: "geral", usuario: null, acessos: [], opinioes: [], historico: [], execucoes: null, filtroOp: "todas", busca: "", regra: "" };
 
 async function carregarSdk() {
   if (fb) return fb;
@@ -36,13 +47,19 @@ async function carregarSdk() {
   return fb;
 }
 
+const tela = () => $("tela-admin");
 const corpo = () => $("corpo-admin");
-const aviso = (titulo, ...texto) => corpo().replaceChildren(h("div", { class: "admin-aviso" }, h("h2", {}, titulo), ...texto.map((t) => h("p", { class: "sutil" }, t))));
+const aviso = (titulo, ...texto) => corpo().replaceChildren(h("div", { class: "admin-aviso cartao" }, h("h2", {}, titulo),
+  ...texto.map((t) => h("p", { class: "sutil" }, t)), h("div", { class: "acoes" }, botao("← Voltar ao site", voltarAoSite))));
 const botao = (texto, onclick, classe = "botao-secundario") => h("button", { type: "button", class: classe, onclick }, texto);
 
-export async function abrirAdmin() {
-  const modal = $("modal-admin");
-  if (!modal.open) { modal.showModal(); modal.append($("dica")); }
+// ---------- abrir / fechar (a rota é o hash: #admin ou #admin/<seção>) ----------
+export async function abrirAdmin(secao) {
+  if (secao && SECOES.some(([s]) => s === secao)) st.secao = secao;
+  tela().hidden = false;
+  document.body.classList.add("modo-admin");
+  window.scrollTo(0, 0);
+  if (st.usuario && fb?.auth.currentUser) return desenhar(); // só trocou de seção
   aviso("Administração", "Carregando…");
   try {
     await carregarSdk();
@@ -53,21 +70,29 @@ export async function abrirAdmin() {
   // Espera o Firebase recuperar a sessão salva (com limite: sem resposta, mostra o login).
   await Promise.race([fb.auth.authStateReady(), new Promise((ok) => setTimeout(ok, 5000))]);
   const usuario = fb.auth.currentUser;
-  return usuario ? mostrarPainel(usuario) : mostrarLogin();
+  return usuario ? carregarPainel(usuario) : mostrarLogin();
 }
 
+export function fecharAdmin() {
+  tela().hidden = true;
+  document.body.classList.remove("modo-admin");
+}
+
+function voltarAoSite() { history.pushState(null, "", location.pathname + location.search); fecharAdmin(); }
+function irPara(secao) { history.replaceState(null, "", `#admin/${secao}`); st.secao = secao; desenhar(); window.scrollTo(0, 0); }
+
 function mostrarLogin(erro) {
-  corpo().replaceChildren(h("div", { class: "admin-aviso" },
+  corpo().replaceChildren(h("div", { class: "admin-aviso cartao" },
     h("h2", {}, "Administração"),
     h("p", { class: "sutil" }, "Entre com a conta Google do administrador."),
     erro ? h("p", { class: "erro" }, erro) : null,
-    h("div", { class: "acoes" }, botao("Entrar com Google", entrar, "botao-primario"), botao("Fechar", fechar))));
+    h("div", { class: "acoes" }, botao("Entrar com Google", entrar, "botao-primario"), botao("← Voltar ao site", voltarAoSite))));
 }
 
 async function entrar() {
   try {
     await fb.A.signInWithPopup(fb.auth, new fb.A.GoogleAuthProvider());
-    await mostrarPainel(fb.auth.currentUser);
+    await carregarPainel(fb.auth.currentUser);
   } catch (e) {
     const codigo = e?.code ?? "";
     if (codigo === "auth/popup-closed-by-user" || codigo === "auth/cancelled-popup-request") return mostrarLogin();
@@ -80,17 +105,16 @@ async function entrar() {
 
 async function sair() {
   await fb.A.signOut(fb.auth);
+  st.usuario = null;
   mostrarLogin();
 }
 
-function fechar() { $("modal-admin").close(); }
-
-// ---------------------------------------------------------------------
-async function mostrarPainel(usuario) {
+// ---------- carga dos dados ----------
+async function carregarPainel(usuario) {
   aviso("Administração", "Carregando dados…");
   const { F, db } = fb;
-  let acessos, opinioes;
   const [historico, execucoes] = await Promise.all([buscarHistorico(), buscarExecucoes()]);
+  let acessos, opinioes;
   try {
     [acessos, opinioes] = await Promise.all([
       F.getDocs(F.collection(db, "acessos")),
@@ -104,102 +128,204 @@ async function mostrarPainel(usuario) {
     return aviso("Erro", `Não foi possível ler os dados (${e?.code ?? e.message}).`);
   }
   try { localStorage.setItem("datafla-admin", "1"); } catch {} // este navegador passa a contar como acesso seu, à parte
+  Object.assign(st, {
+    usuario, historico, execucoes,
+    acessos: acessos.docs.map((d) => ({ dia: d.id, ...d.data() })),
+    opinioes: opinioes.docs.map((d) => ({ id: d.id, ref: d.ref, ...d.data() })),
+  });
+  desenhar();
+}
 
-  const visto = Number(localStorage.getItem("datafla-admin-visto") || 0);
+// ---------- opiniões lidas (guardado neste navegador; o admin é um só) ----------
+// Versões antigas marcavam "visto" a cada abertura: o que chegou antes disso conta como lido.
+const lerJSON = (k, padrao) => { try { return JSON.parse(localStorage.getItem(k)) ?? padrao; } catch { return padrao; } };
+const lidas = new Set(lerJSON("datafla-admin-lidas", []));
+const vistoAntigo = Number(lerJSON("datafla-admin-visto", 0)) || 0;
+const quando = (o) => o.criado_em?.toDate?.() ?? null;
+const ehNova = (o) => !lidas.has(o.id) && (quando(o)?.getTime() ?? 0) > vistoAntigo;
+function marcarLidas(ids) {
+  for (const id of ids) lidas.add(id);
+  try { localStorage.setItem("datafla-admin-lidas", JSON.stringify([...lidas])); } catch {}
+  desenhar();
+}
+
+// ---------- estrutura da tela ----------
+function contadores() {
+  const novas = st.opinioes.filter(ehNova).length;
+  const falhas = (st.execucoes ?? []).filter((r) => r.conclusion && r.conclusion !== "success").length;
+  const apontamentos = (D.bruto.validacao?.checagens ?? []).length;
+  return { novas, falhas, apontamentos };
+}
+
+function desenhar() {
+  const c = contadores();
+  const selo = { opinioes: c.novas, coleta: c.falhas, qualidade: null };
+  const menu = h("nav", { class: "admin-menu", "aria-label": "Seções da administração" },
+    SECOES.map(([s, nome]) => h("button", { type: "button", "aria-current": st.secao === s ? "page" : null, onclick: () => irPara(s) },
+      h("span", {}, nome), selo[s] ? h("span", { class: "selo-nova" }, selo[s]) : null)));
+  const conteudo = { geral: secaoGeral, acessos: secaoAcessos, opinioes: secaoOpinioes, coleta: secaoColeta, qualidade: secaoQualidade }[st.secao]();
   preencher(corpo(),
-    h("div", { class: "admin-topo" },
-      h("div", {}, h("h2", {}, "Administração"), h("p", { class: "sutil" }, usuario.email)),
-      h("div", { class: "acoes" }, botao("Atualizar", () => mostrarPainel(usuario)), botao("Sair", sair), botao("Fechar", fechar))),
-    secaoAcessos(acessos.docs.map((d) => ({ dia: d.id, ...d.data() }))),
-    secaoOpinioes(opinioes.docs, visto),
-    secaoAtualizacoes(historico, execucoes),
-    secaoDados(),
-  );
-  desenharAcessos(acessos.docs.map((d) => ({ dia: d.id, ...d.data() })));
-  try { localStorage.setItem("datafla-admin-visto", String(Date.now())); } catch {}
+    h("div", { class: "admin-cabecalho" },
+      h("div", {}, h("h1", {}, "Administração"), h("p", { class: "sutil" }, st.usuario.email)),
+      h("div", { class: "acoes" }, botao("Atualizar", () => carregarPainel(st.usuario)), botao("Sair", sair), botao("← Voltar ao site", voltarAoSite, "botao-primario"))),
+    h("div", { class: "admin-layout" }, menu, h("div", { class: "admin-conteudo" }, conteudo.elementos)));
+  conteudo.desenhar?.();
+}
+
+// ---------- visão geral ----------
+function ultimosDias(n, fim = 0) {
+  const dias = [];
+  const base = new Date(`${hojeBR()}T12:00:00Z`);
+  for (let i = n - 1 + fim; i >= fim; i--) dias.push(new Date(base - i * 864e5).toISOString().slice(0, 10));
+  return dias;
+}
+const somaCampo = (lista, campo) => lista.reduce((t, d) => t + (d[campo] ?? 0), 0);
+const periodo = (n, fim = 0) => { const porDia = new Map(st.acessos.map((d) => [d.dia, d])); return ultimosDias(n, fim).map((dia) => porDia.get(dia) ?? {}); };
+const variacao = (atual, antes) => (antes ? `${atual >= antes ? "+" : ""}${pct((atual - antes) / antes, 0)} vs 7 dias anteriores` : "sem base de comparação");
+
+function situacaoColeta() {
+  const b = D.bruto;
+  const coletado = new Date(b.meta.coletado_em ?? b.meta.gerado_em);
+  const horas = (Date.now() - coletado) / 36e5;
+  const encerrados = (b.calendario ?? []).filter((j) => ENCERRADO.has(j.status));
+  const baixados = new Set(b.partidas.map((p) => p.id_partida));
+  const pendentes = encerrados.filter((j) => !baixados.has(j.id_partida) && j.status !== "WO");
+  const proximo = (b.calendario ?? []).filter((j) => !ENCERRADO.has(j.status) && j.data_utc > new Date().toISOString())
+    .sort((x, y) => x.data_utc.localeCompare(y.data_utc))[0];
+  const posJogo = proximo ? new Date(new Date(proximo.data_utc).getTime() + 130 * 60e3) : null; // início + 2h10
+  const ultimaExec = (st.execucoes ?? [])[0];
+  const cota = st.historico.find((a) => a.cota_restante != null)?.cota_restante;
+  return { coletado, horas, encerrados, baixados, pendentes, proximo, posJogo, ultimaExec, cota };
+}
+
+const cartaoStatus = (nivel, rotulo, valor, extra, secao) => h("button", { type: "button", class: `admin-status ${nivel}`, onclick: secao ? () => irPara(secao) : null },
+  h("span", { class: "rotulo" }, rotulo), h("b", {}, valor), h("span", { class: "sutil" }, extra));
+
+function secaoGeral() {
+  const s = situacaoColeta();
+  const c = contadores();
+  const v7 = somaCampo(periodo(7), "visitas"), v7a = somaCampo(periodo(7, 7), "visitas");
+  const resultadoExec = (r) => (!r ? "sem dados do GitHub" : r.status !== "completed" ? "em andamento"
+    : r.conclusion !== "success" ? `falhou (${r.conclusion})` : "ok");
+  // pendências: o que pede ação, do mais grave para o menos
+  const pend = [];
+  if (s.horas > 30) pend.push(["erro", `A última coleta foi há ${num(s.horas, 0)} h (o normal é até 24 h).`, "coleta"]);
+  if (c.falhas) pend.push(["erro", `${c.falhas} execução${c.falhas > 1 ? "ões" : ""} do workflow com falha nas últimas 20.`, "coleta"]);
+  if (s.pendentes.length) pend.push(["alerta", `${s.pendentes.length} jogo(s) encerrado(s) ainda sem detalhes: ${s.pendentes.slice(0, 3).map((j) => j.adversario).join(", ")}.`, "coleta"]);
+  if (s.cota != null && s.cota < 15) pend.push(["alerta", `Cota da Highlightly baixa na última coleta: restavam ${s.cota} de 100.`, "coleta"]);
+  if (c.novas) pend.push(["info", `${c.novas} opinião(ões) nova(s) para ler.`, "opinioes"]);
+  const erros = (D.bruto.validacao?.checagens ?? []).filter((x) => x.status === "erro").length;
+  if (erros) pend.push(["info", `${erros} apontamento(s) de erro na validação dos dados (limitações da fonte, em geral).`, "qualidade"]);
+
+  return { elementos: [
+    h("div", { class: "admin-grade-status" },
+      cartaoStatus(s.horas > 30 ? "erro" : "ok", "Última coleta", `há ${s.horas < 1 ? "menos de 1 h" : `${num(s.horas, 0)} h`}`,
+        `${dataLonga(s.coletado.toISOString())} · ${horaBR(s.coletado.toISOString())}`, "coleta"),
+      cartaoStatus(c.falhas ? "alerta" : "ok", "Workflow", `última: ${resultadoExec(s.ultimaExec)}`,
+        (s.ultimaExec ? quandoBR(s.ultimaExec.created_at) : "") + (c.falhas ? ` · ${c.falhas} falha${c.falhas > 1 ? "s" : ""} nas últimas 20` : ""), "coleta"),
+      cartaoStatus("neutro", "Próxima coleta pós-jogo", s.posJogo ? `${data(s.posJogo.toISOString())} · ${horaBR(s.posJogo.toISOString())}` : "–",
+        s.proximo ? `${s.proximo.adversario} (início + 2h10)` : "sem jogo marcado", "coleta"),
+      cartaoStatus(c.novas ? "alerta" : "ok", "Opiniões novas", num(c.novas), `${st.opinioes.length} no total`, "opinioes"),
+      cartaoStatus("neutro", "Visitas em 7 dias", num(v7), variacao(v7, v7a), "acessos"),
+      cartaoStatus(s.cota != null && s.cota < 15 ? "alerta" : "neutro", "Cota da API (última coleta)", s.cota != null ? `${s.cota} restantes` : "–", "de 100 por dia", "coleta")),
+    h("article", { class: "cartao" }, h("h2", {}, "Pendências"),
+      pend.length
+        ? h("ul", { class: "admin-pendencias" }, pend.map(([nivel, texto, secao]) => h("li", { class: nivel },
+            h("span", { class: "cresce" }, texto), botao("Ver", () => irPara(secao), "botao-texto"))))
+        : h("p", { class: "sutil" }, "Nada pendente: coleta em dia, workflow sem falhas e nenhuma opinião nova.")),
+    h("div", { class: "grade-2" },
+      h("article", { class: "cartao" }, h("h2", {}, "Últimas opiniões"),
+        st.opinioes.length ? listaOpinioes(st.opinioes.slice(0, 3), false) : h("p", { class: "vazio" }, "Nenhuma mensagem ainda.")),
+      h("article", { class: "cartao" }, h("h2", {}, "Atalhos"),
+        h("ul", { class: "lista-simples" }, LINKS.map(([t, url]) => h("li", {}, h("a", { href: url, target: "_blank", rel: "noopener" }, t + " ↗")))))),
+  ] };
 }
 
 // ---------- acessos ----------
-function ultimosDias(n) {
-  const dias = [];
-  const base = new Date(`${hojeBR()}T12:00:00Z`);
-  for (let i = n - 1; i >= 0; i--) dias.push(new Date(base - i * 864e5).toISOString().slice(0, 10));
-  return dias;
-}
-
-function somaCampo(lista, campo) { return lista.reduce((t, d) => t + (d[campo] ?? 0), 0); }
-
-function secaoAcessos(docs) {
-  const porDia = new Map(docs.map((d) => [d.dia, d]));
-  const periodo = (n) => ultimosDias(n).map((dia) => porDia.get(dia) ?? {});
-  const kpi = (rotulo, lista) => h("div", { class: "kpi" }, h("div", { class: "rotulo" }, rotulo),
+function secaoAcessos() {
+  const kpi = (rotulo, lista, extra) => h("div", { class: "kpi" }, h("div", { class: "rotulo" }, rotulo),
     h("div", { class: "valor" }, num(somaCampo(lista, "visitas"))),
-    h("div", { class: "extra" }, `${num(somaCampo(lista, "unicos"))} visitantes únicos`));
-  const reais = docs.filter((d) => d.dia >= "2026-01-01");
-  return h("section", { class: "admin-secao" },
-    h("h3", { class: "admin-titulo" }, "Acessos"),
-    h("div", { class: "kpis" }, kpi("Hoje", periodo(1)), kpi("7 dias", periodo(7)), kpi("30 dias", periodo(30)), kpi("Desde o início", reais),
-      h("div", { class: "kpi" }, h("div", { class: "rotulo" }, "Seus acessos (30 dias)"), h("div", { class: "valor" }, num(somaCampo(periodo(30), "dono"))),
-        h("div", { class: "extra" }, `hoje ${num(somaCampo(periodo(1), "dono"))} · não entram nos números ao lado`))),
-    h("p", { class: "sutil" }, "Seus aparelhos não entram nos números do público: este navegador já está marcado. Para marcar o celular ou outro navegador, "
-      + "abra uma vez nele datafla.web.app/?eu=1 (?eu=0 desfaz). Acessos de antes da marcação não têm como ser separados."),
-    h("article", { class: "cartao" }, h("h2", {}, "Visitas por dia"), h("p", { class: "sutil" }, "Últimos 30 dias, só do público (sem os seus acessos)."),
-      h("div", { id: "adm-dias" })),
-    h("div", { class: "grade-2" },
-      h("article", { class: "cartao" }, h("h2", {}, "Abas mais vistas"), h("p", { class: "sutil" }, "Últimos 30 dias; cada aba conta uma vez por visita."), h("div", { id: "adm-abas" })),
-      h("article", { class: "cartao" }, h("h2", {}, "De onde vêm"), h("p", { class: "sutil" }, "Últimos 30 dias. Links abertos no WhatsApp costumam aparecer como diretos."), h("div", { id: "adm-origem" }))),
-    h("article", { class: "cartao" }, h("h2", {}, "Dispositivo"), h("div", { id: "adm-dispositivo" })));
-}
-
-function desenharAcessos(docs) {
-  const porDia = new Map(docs.map((d) => [d.dia, d]));
-  const dias = ultimosDias(30);
-  const lista = dias.map((dia) => porDia.get(dia) ?? {});
-  colunas($("adm-dias"), dias.map((dia, i) => ({
-    valor: lista[i].visitas ?? 0, cor: "var(--serie-1)",
-    dica: () => conteudoDica(dataLonga(`${dia}T12:00:00Z`), [{ valor: num(lista[i].visitas ?? 0), nome: "visitas" }, { valor: num(lista[i].unicos ?? 0), nome: "únicos" }]),
-  })), { rotuloX: (i) => (i % 5 === 0 || i === dias.length - 1 ? dias[i].slice(8) + "/" + dias[i].slice(5, 7) : null) });
-
-  const barras = (id, pares) => {
-    const total = pares.reduce((t, [, v]) => t + v, 0);
-    if (!total) { $(id).replaceChildren(h("p", { class: "vazio" }, "Nenhum acesso registrado ainda.")); return; }
-    barrasHorizontais($(id), pares.sort((a, b) => b[1] - a[1]).map(([rotulo, v]) => ({
-      rotulo, valor: v, cor: "var(--serie-1)", texto: `${num(v)} · ${pct(v / total, 0)}` })), { larguraRotulo: 120 });
+    h("div", { class: "extra" }, extra ?? `${num(somaCampo(lista, "unicos"))} visitantes únicos`));
+  const reais = st.acessos.filter((d) => d.dia >= "2026-01-01");
+  const v7 = somaCampo(periodo(7), "visitas"), v7a = somaCampo(periodo(7, 7), "visitas");
+  return {
+    elementos: [
+      h("div", { class: "kpis" }, kpi("Hoje", periodo(1)), kpi("7 dias", periodo(7), variacao(v7, v7a)), kpi("30 dias", periodo(30)), kpi("Desde o início", reais),
+        h("div", { class: "kpi" }, h("div", { class: "rotulo" }, "Seus acessos (30 dias)"), h("div", { class: "valor" }, num(somaCampo(periodo(30), "dono"))),
+          h("div", { class: "extra" }, `hoje ${num(somaCampo(periodo(1), "dono"))} · fora dos números ao lado`))),
+      h("article", { class: "cartao" }, h("h2", {}, "Visitas por dia"), h("p", { class: "sutil" }, "Últimos 30 dias, só do público (sem os seus acessos)."),
+        h("div", { id: "adm-dias" })),
+      h("div", { class: "grade-2" },
+        h("article", { class: "cartao" }, h("h2", {}, "Abas mais vistas"), h("p", { class: "sutil" }, "Últimos 30 dias; cada aba conta uma vez por visita."), h("div", { id: "adm-abas" })),
+        h("article", { class: "cartao" }, h("h2", {}, "De onde vêm"), h("p", { class: "sutil" }, "Últimos 30 dias. Links abertos no WhatsApp costumam aparecer como diretos."), h("div", { id: "adm-origem" }))),
+      h("article", { class: "cartao" }, h("h2", {}, "Dispositivo"), h("div", { id: "adm-dispositivo" })),
+      h("p", { class: "sutil" }, "Seus aparelhos não entram nos números do público: este navegador já está marcado. Para marcar o celular ou outro navegador, "
+        + "abra uma vez nele datafla.web.app/?eu=1 (?eu=0 desfaz). Acessos de antes da marcação não têm como ser separados."),
+    ],
+    desenhar: () => {
+      const dias = ultimosDias(30), lista = periodo(30);
+      colunas($("adm-dias"), dias.map((dia, i) => ({
+        valor: lista[i].visitas ?? 0, cor: "var(--serie-1)",
+        dica: () => conteudoDica(dataLonga(`${dia}T12:00:00Z`), [{ valor: num(lista[i].visitas ?? 0), nome: "visitas" }, { valor: num(lista[i].unicos ?? 0), nome: "únicos" }]),
+      })), { rotuloX: (i) => (i % 5 === 0 || i === dias.length - 1 ? dias[i].slice(8) + "/" + dias[i].slice(5, 7) : null) });
+      const barras = (id, pares) => {
+        const total = pares.reduce((t, [, v]) => t + v, 0);
+        if (!total) { $(id).replaceChildren(h("p", { class: "vazio" }, "Nenhum acesso registrado ainda.")); return; }
+        barrasHorizontais($(id), pares.sort((a, b) => b[1] - a[1]).map(([rotulo, v]) => ({
+          rotulo, valor: v, cor: "var(--serie-1)", texto: `${num(v)} · ${pct(v / total, 0)}` })), { larguraRotulo: 120 });
+      };
+      barras("adm-abas", ABAS_CONTADAS.map((a) => [NOME_ABA[a] ?? a, somaCampo(lista, `aba_${a}`)]));
+      barras("adm-origem", Object.keys(NOME_ORIGEM).map((o) => [NOME_ORIGEM[o], somaCampo(lista, `origem_${o}`)]).filter(([, v]) => v));
+      barras("adm-dispositivo", [["Celular", somaCampo(lista, "celular")], ["Computador", somaCampo(lista, "computador")]]);
+    },
   };
-  barras("adm-abas", ABAS_CONTADAS.map((a) => [NOME_ABA[a], somaCampo(lista, `aba_${a}`)]));
-  barras("adm-origem", Object.keys(NOME_ORIGEM).map((o) => [NOME_ORIGEM[o], somaCampo(lista, `origem_${o}`)]).filter(([, v]) => v));
-  barras("adm-dispositivo", [["Celular", somaCampo(lista, "celular")], ["Computador", somaCampo(lista, "computador")]]);
 }
 
 // ---------- opiniões ----------
-function secaoOpinioes(docs, visto) {
-  const itens = docs.map((d) => ({ ref: d.ref, ...d.data() }));
-  const quando = (o) => o.criado_em?.toDate?.() ?? null;
-  const novas = itens.filter((o) => (quando(o)?.getTime() ?? 0) > visto).length;
-  const contagem = Object.keys(NOME_TIPO).map((t) => `${itens.filter((o) => o.tipo === t).length} ${PLURAL_TIPO[t]}`).join(" · ");
-  const lista = h("ul", { class: "admin-opinioes" }, itens.map((o) => {
-    const d = quando(o);
-    const li = h("li", { class: "admin-opiniao" + ((d?.getTime() ?? 0) > visto ? " nova" : "") },
+function listaOpinioes(itens, comAcoes = true) {
+  return h("ul", { class: "admin-opinioes" }, itens.map((o) => {
+    const d = quando(o), nova = ehNova(o);
+    return h("li", { class: "admin-opiniao" + (nova ? " nova" : "") },
       h("div", { class: "admin-opiniao-topo" },
         h("span", { class: `tipo-op ${o.tipo}` }, NOME_TIPO[o.tipo] ?? o.tipo),
         h("span", { class: "sutil" }, d ? `${dataLonga(d.toISOString())} · ${horaBR(d.toISOString())}` : ""),
-        (d?.getTime() ?? 0) > visto ? h("span", { class: "selo-nova" }, "nova") : null,
-        botao("Apagar", async () => {
-          if (!confirm("Apagar esta mensagem? Não dá para desfazer.")) return;
-          try { await fb.F.deleteDoc(o.ref); li.remove(); } catch (e) { alert(`Não foi possível apagar (${e?.code ?? e.message}).`); }
-        }, "botao-texto")),
+        nova ? h("span", { class: "selo-nova" }, "nova") : null,
+        comAcoes ? h("span", { class: "admin-opiniao-acoes" },
+          nova ? botao("Marcar como lida", () => marcarLidas([o.id]), "botao-texto") : null,
+          o.contato ? botao("Copiar contato", () => navigator.clipboard?.writeText(o.contato), "botao-texto") : null,
+          botao("Apagar", async () => {
+            if (!confirm("Apagar esta mensagem? Não dá para desfazer.")) return;
+            try { await fb.F.deleteDoc(o.ref); st.opinioes = st.opinioes.filter((x) => x.id !== o.id); desenhar(); }
+            catch (e) { alert(`Não foi possível apagar (${e?.code ?? e.message}).`); }
+          }, "botao-texto perigo")) : null),
       h("p", { class: "admin-opiniao-texto" }, o.mensagem),
       o.nome || o.contato ? h("p", { class: "sutil" }, [o.nome, o.contato].filter(Boolean).join(" · ")) : null);
-    return li;
   }));
-  return h("section", { class: "admin-secao" },
-    h("h3", { class: "admin-titulo" }, "Opiniões", novas ? h("span", { class: "selo-nova" }, `${novas} nova${novas > 1 ? "s" : ""}`) : null),
-    h("article", { class: "cartao" },
-      h("p", { class: "sutil" }, itens.length ? `${itens.length} mensagens: ${contagem}.` : "Nenhuma mensagem ainda."),
-      itens.length ? lista : null));
 }
 
-// ---------- atualizações ----------
+function secaoOpinioes() {
+  const todas = st.opinioes;
+  const filtros = [["todas", "Todas", todas.length], ["novas", "Novas", todas.filter(ehNova).length],
+    ...Object.keys(NOME_TIPO).map((t) => [t, PLURAL_TIPO[t], todas.filter((o) => o.tipo === t).length])];
+  const termo = st.busca.trim().toLowerCase();
+  const visiveis = todas.filter((o) => (st.filtroOp === "todas" || (st.filtroOp === "novas" ? ehNova(o) : o.tipo === st.filtroOp))
+    && (!termo || [o.mensagem, o.nome, o.contato].some((x) => (x ?? "").toLowerCase().includes(termo))));
+  const novasVisiveis = visiveis.filter(ehNova);
+  const busca = h("input", { type: "search", class: "busca", placeholder: "Buscar no texto, nome ou contato", value: st.busca,
+    oninput: (e) => { st.busca = e.target.value; const pos = e.target.selectionStart; desenhar();
+      const campo = document.querySelector(".admin-conteudo .busca"); campo.focus(); campo.setSelectionRange(pos, pos); } });
+  return { elementos: [
+    h("article", { class: "cartao" },
+      h("div", { class: "acoes" },
+        h("div", { class: "segmentado" }, filtros.map(([k, nome, n]) => h("button", { type: "button", "aria-pressed": String(st.filtroOp === k),
+          onclick: () => { st.filtroOp = k; desenhar(); } }, `${nome} (${n})`))),
+        busca,
+        novasVisiveis.length ? botao(`Marcar ${novasVisiveis.length} como lida${novasVisiveis.length > 1 ? "s" : ""}`, () => marcarLidas(novasVisiveis.map((o) => o.id))) : null),
+      visiveis.length ? listaOpinioes(visiveis) : h("p", { class: "vazio" }, todas.length ? "Nenhuma mensagem neste filtro." : "Nenhuma mensagem ainda.")),
+  ] };
+}
+
+// ---------- coleta ----------
 // Histórico gravado pela coleta (data/<ano>/atualizacoes.json, publicado em dados/atualizacoes-<ano>.json)
 // e as execuções do workflow pela API pública do GitHub (o repositório é público; 60 consultas/hora por IP).
 const URL_EXECUCOES = "https://api.github.com/repos/contatorafaelsousa00-rgb/datafla/actions/workflows/atualizar.yml/runs?per_page=20";
@@ -222,68 +348,85 @@ async function buscarExecucoes() {
 const quandoBR = (iso) => `${dataLonga(iso)} · ${horaBR(iso)}`;
 const listaJogos = (js) => js.map((j) => j.adversario + (j.data_utc ? ` (${data(j.data_utc)})` : "")).join(", ");
 
-function secaoAtualizacoes(historico, execucoes) {
+function secaoColeta() {
+  const s = situacaoColeta();
+  const linha = (rotulo, valor) => h("tr", {}, h("td", {}, rotulo), h("td", { class: "num" }, valor));
+  const historico = st.historico;
   const coletas = historico.length
     ? h("table", { class: "tabela admin-tabela" },
         h("thead", {}, h("tr", {}, ["Quando", "Por quê", "Jogos novos", "Recoletados", "Pendentes", "Cota"].map((t) => h("th", {}, t)))),
         h("tbody", {}, historico.slice(0, 30).map((a) => h("tr", { class: a.erro ? "linha-erro" : "" },
           h("td", {}, quandoBR(a.quando), h("div", { class: "sutil" }, a.origem)),
           h("td", {}, a.motivo, a.erro ? h("div", { class: "erro" }, `Erro: ${a.erro}`) : null),
-          h("td", {}, a.novos.length ? `${a.novos.length}: ${listaJogos(a.novos)}` : "–"),
-          h("td", {}, a.recoletados.length ? `${a.recoletados.length}: ${listaJogos(a.recoletados)}` : "–"),
+          h("td", {}, a.novos.length ? h("details", {}, h("summary", {}, `${a.novos.length} jogo${a.novos.length > 1 ? "s" : ""}`), listaJogos(a.novos)) : "–"),
+          h("td", {}, a.recoletados.length ? h("details", {}, h("summary", {}, `${a.recoletados.length} jogo${a.recoletados.length > 1 ? "s" : ""}`), listaJogos(a.recoletados)) : "–"),
           h("td", { class: "num" }, `${a.pendentes} de ${a.encerrados}`),
           h("td", { class: "num" }, `${a.requisicoes} usadas${a.cota_restante != null ? ` · restam ${a.cota_restante}` : ""}`)))))
     : h("p", { class: "vazio" }, "Nenhuma coleta registrada ainda. A próxima coleta aparece aqui.");
 
   // Execução que coletou = houve registro no histórico entre o início e o fim dela
-  const s19 = (iso) => (iso ?? "").slice(0, 19); // "2026-10-16T00:05:10" (UTC nos dois lados)
+  const s19 = (iso) => (iso ?? "").slice(0, 19);
   const coletou = (r) => historico.some((a) => s19(a.quando) >= s19(r.run_started_at) && s19(a.quando) <= s19(r.updated_at));
-  const execs = execucoes === null
+  const execs = st.execucoes === null
     ? h("p", { class: "vazio" }, "Não foi possível consultar o GitHub agora.")
     : h("table", { class: "tabela admin-tabela" },
         h("thead", {}, h("tr", {}, ["Quando", "Gatilho", "Resultado", ""].map((t) => h("th", {}, t)))),
-        h("tbody", {}, execucoes.map((r) => {
+        h("tbody", {}, st.execucoes.map((r) => {
           const res = r.status !== "completed" ? "em andamento"
             : r.conclusion !== "success" ? `falhou (${r.conclusion})`
             : r.event === "push" ? "publicou" : coletou(r) ? "coletou e publicou" : "nada a coletar";
           return h("tr", { class: r.conclusion && r.conclusion !== "success" ? "linha-erro" : "" },
             h("td", {}, quandoBR(r.created_at)), h("td", {}, GATILHO[r.event] ?? r.event),
-            h("td", {}, res), h("td", {}, h("a", { href: r.html_url, target: "_blank", rel: "noopener" }, "detalhes")));
+            h("td", {}, res), h("td", {}, h("a", { href: r.html_url, target: "_blank", rel: "noopener" }, "detalhes ↗")));
         })));
 
-  const falhas = (execucoes ?? []).filter((r) => r.conclusion && r.conclusion !== "success").length;
-  return h("section", { class: "admin-secao" },
-    h("h3", { class: "admin-titulo" }, "Atualizações", falhas ? h("span", { class: "selo-nova" }, `${falhas} falha${falhas > 1 ? "s" : ""}`) : null),
+  return { elementos: [
+    h("div", { class: "grade-2" },
+      h("article", { class: "cartao" }, h("h2", {}, "Situação"),
+        h("table", { class: "tabela admin-situacao" }, h("tbody", {},
+          linha("Última coleta", `${quandoBR(s.coletado.toISOString())} (há ${s.horas < 1 ? "menos de 1 h" : `${num(s.horas, 0)} h`})`),
+          linha("Jogos encerrados no calendário", num(s.encerrados.length)),
+          linha("Com detalhes baixados", num(s.baixados.size)),
+          linha("Pendentes", s.pendentes.length ? `${s.pendentes.length} (${s.pendentes.slice(0, 3).map((j) => j.adversario).join(", ")}${s.pendentes.length > 3 ? "…" : ""})` : "nenhum"),
+          linha("Próximo jogo", s.proximo ? `${s.proximo.adversario} · ${quandoBR(s.proximo.data_utc)}` : "–"),
+          linha("Coleta pós-jogo prevista", s.posJogo ? quandoBR(s.posJogo.toISOString()) : "–"),
+          linha("Cota na última coleta", s.cota != null ? `${s.cota} de 100 restantes` : "–"))),
+        s.horas > 30 ? h("p", { class: "erro" }, "A última coleta tem mais de 30 h: confira as execuções abaixo.") : null),
+      h("article", { class: "cartao" }, h("h2", {}, "Ações"),
+        h("p", { class: "sutil" }, "A coleta roda sozinha (cron-job.org a cada 30 min decide se há algo a baixar). Para forçar agora: GitHub → Actions → "
+          + "Atualizar dados → Run workflow, marcando \"forçar\"."),
+        h("ul", { class: "lista-simples" }, LINKS.map(([t, url]) => h("li", {}, h("a", { href: url, target: "_blank", rel: "noopener" }, t + " ↗")))))),
     h("article", { class: "cartao" }, h("h2", {}, "Coletas"),
       h("p", { class: "sutil" }, "O que cada coleta trouxe: jogos baixados pela primeira vez, jogos baixados de novo (correções da fonte nas primeiras 48 h) e a cota da Highlightly."),
       h("div", { class: "rolagem" }, coletas)),
-    h("article", { class: "cartao" }, h("h2", {}, "Execuções recentes"),
-      h("p", { class: "sutil" }, "Cada disparo do agendamento no GitHub. A maioria termina em \"nada a coletar\": só confere se um jogo acabou."),
-      h("div", { class: "rolagem" }, execs)));
+    h("article", { class: "cartao" }, h("h2", {}, "Execuções recentes do workflow"),
+      h("p", { class: "sutil" }, "Cada disparo do agendamento. A maioria termina em \"nada a coletar\": só confere se um jogo acabou."),
+      h("div", { class: "rolagem" }, execs)),
+  ] };
 }
 
-// ---------- dados ----------
-function secaoDados() {
-  const b = D.bruto;
-  const encerrados = (b.calendario ?? []).filter((j) => ENCERRADO.has(j.status));
-  const baixados = new Set(b.partidas.map((p) => p.id_partida));
-  const pendentes = encerrados.filter((j) => !baixados.has(j.id_partida));
-  const coletado = new Date(b.meta.coletado_em ?? b.meta.gerado_em);
-  const horas = (Date.now() - coletado) / 36e5;
-  const proximo = b.proximo?.[0];
-  const linha = (rotulo, valor) => h("tr", {}, h("td", {}, rotulo), h("td", { class: "num" }, valor));
-  return h("section", { class: "admin-secao" },
-    h("h3", { class: "admin-titulo" }, "Dados"),
-    h("div", { class: "grade-2" },
-      h("article", { class: "cartao" }, h("h2", {}, "Situação da coleta"),
-        h("table", { class: "tabela" }, h("tbody", {},
-          linha("Última coleta", `${dataLonga(coletado.toISOString())} · ${horaBR(coletado.toISOString())} (há ${horas < 1 ? "menos de 1 h" : `${num(horas, 0)} h`})`),
-          linha("Jogos encerrados no calendário", num(encerrados.length)),
-          linha("Com detalhes baixados", num(baixados.size)),
-          linha("Pendentes", pendentes.length ? `${pendentes.length} (${pendentes.slice(0, 3).map((j) => j.adversario).join(", ")}${pendentes.length > 3 ? "…" : ""})` : "nenhum"),
-          linha("Próximo jogo", proximo ? `${proximo.adversario} · ${dataLonga(proximo.data_utc)} ${horaBR(proximo.data_utc)}` : "–"),
-          linha("Apontamentos da validação", num((b.validacao?.checagens ?? []).length)))),
-        horas > 30 ? h("p", { class: "erro" }, "A última coleta tem mais de 30 h: confira as execuções no GitHub.") : null),
-      h("article", { class: "cartao" }, h("h2", {}, "Atalhos"),
-        h("ul", { class: "lista-simples" }, LINKS.map(([t, url]) => h("li", {}, h("a", { href: url, target: "_blank", rel: "noopener" }, t)))))));
+// ---------- qualidade dos dados ----------
+function secaoQualidade() {
+  const todos = D.bruto.validacao?.checagens ?? [];
+  const porRegra = new Map();
+  for (const c of todos) porRegra.set(c.regra, (porRegra.get(c.regra) ?? 0) + 1);
+  const lista = todos.filter((c) => !st.regra || c.regra === st.regra).sort((a, b) => b.data_utc.localeCompare(a.data_utc));
+  return { elementos: [
+    h("article", { class: "cartao" },
+      h("h2", {}, "Apontamentos da validação"),
+      h("p", { class: "sutil" }, "Checagens de coerência feitas a cada coleta (data/<ano>/validacao/). Quase todos são limitações da fonte "
+        + "(acréscimos, box-score incompleto em jogos antigos do Carioca); um apontamento novo num jogo recente merece olhar."),
+      h("div", { class: "segmentado admin-regras" },
+        h("button", { type: "button", "aria-pressed": String(!st.regra), onclick: () => { st.regra = ""; desenhar(); } }, `Todos (${todos.length})`),
+        [...porRegra].sort((a, b) => b[1] - a[1]).map(([r, n]) => h("button", { type: "button", "aria-pressed": String(st.regra === r),
+          onclick: () => { st.regra = r; desenhar(); } }, `${NOME_REGRA[r] ?? r} (${n})`))),
+      lista.length ? h("div", { class: "rolagem" }, h("table", { class: "tabela admin-tabela" },
+        h("thead", {}, h("tr", {}, ["Jogo", "Time", "Regra", "Nível", "Detalhe"].map((t) => h("th", {}, t)))),
+        h("tbody", {}, lista.map((c) => h("tr", {},
+          h("td", {}, h("a", { href: `?aba=jogos&jogo=${c.id_partida}`, target: "_blank", rel: "noopener" }, `${c.adversario} (${data(c.data_utc)})`),
+            h("div", { class: "sutil" }, c.competicao)),
+          h("td", {}, c.time ?? "–"), h("td", {}, NOME_REGRA[c.regra] ?? c.regra),
+          h("td", {}, h("span", { class: `nivel-${c.status}` }, c.status === "erro" ? "erro" : "alerta")),
+          h("td", {}, c.detalhe)))))) : h("p", { class: "vazio" }, "Nenhum apontamento.")),
+  ] };
 }

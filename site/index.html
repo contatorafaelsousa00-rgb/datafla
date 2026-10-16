@@ -55,6 +55,11 @@
     Dados fictícios, gerados só para testar o painel. Não representam jogos nem jogadores reais.
   </div>
 
+  <!-- Administração: tela própria (#admin), montada por admin.js depois do login; esconde o painel enquanto aberta -->
+  <section id="tela-admin" class="tela-admin" aria-label="Administração" hidden>
+    <div id="corpo-admin"></div>
+  </section>
+
   <main>
     <!-- Barra de filtros: fixa abaixo do topo; no celular vira um botão que abre o painel -->
     <section id="filtros" class="filtros" aria-label="Filtros">
@@ -352,10 +357,6 @@
     </div>
   </dialog>
 
-  <!-- Administração: conteúdo montado por admin.js depois do login -->
-  <dialog id="modal-admin" class="modal modal-admin" aria-label="Administração">
-    <div id="corpo-admin" class="modal-corpo"></div>
-  </dialog>
 
   <div id="dica" class="dica" role="tooltip" hidden></div>
   <script type="module" src="app.js"></script>
