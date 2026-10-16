@@ -148,7 +148,7 @@ function provavelAdversario(p) {
 
 const listaNomes = (itens, vazioTexto) => (itens.length
   ? h("ul", { class: "lista-simples" }, itens.map((x) => h("li", { class: "clicavel", onclick: () => abrirJogador(x.id) },
-      h("span", { class: "cresce" }, x.nome), h("span", { class: "sutil" }, x.motivo))))
+      h("span", { class: "nome-lista" }, x.nome), h("span", { class: "sutil motivo" }, x.motivo))))
   : h("p", { class: "sutil" }, vazioTexto));
 
 // Elementos do pré-jogo + função que desenha o campinho depois que eles estão na tela (o desenho mede a largura)

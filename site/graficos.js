@@ -134,7 +134,8 @@ export function barrasHorizontais(container, itens, { max, larguraRotulo = 120 }
   const maxV = max ?? Math.max(...itens.map((i) => i.valor), 1);
   const inicio = larguraRotulo + (comIcone ? icone + 8 : 0);
   larguraRotulo = inicio;
-  const util = largura - larguraRotulo - 56;
+  // espaço à direita para o texto do valor (ex.: "450 min · 5 j")
+  const util = largura - larguraRotulo - Math.max(56, ...itens.map((i) => String(i.texto ?? "").length * 7.4 + 12));
   itens.forEach((it, k) => {
     const y = k * linha;
     if (comIcone) {
@@ -277,6 +278,7 @@ export function colunas(container, itens, { altura = 200, max, rotuloX } = {}) {
 // ---------- mapa de calor ----------
 // linhas: [{rotulo, extra}], colunas: [{cor, dica}], valor(li, ci) -> {estado: 'fora'|'banco'|'jogou', minutos}
 export function mapaCalor(container, linhasM, colunasM, valor, { celula = 14, larguraRotulo = 150, nivel, dicaCelula } = {}) {
+  larguraRotulo = Math.max(larguraRotulo, ...linhasM.map((l) => String(l.rotulo ?? "").length * 6.6 + 14)); // nomes longos não cortam
   container.replaceChildren();
   const larguraTotal = larguraRotulo + colunasM.length * (celula + 2) + 60;
   const altura = 14 + linhasM.length * (celula + 2) + 4;

@@ -262,8 +262,10 @@ input[type="search"]:focus { outline: none; border-color: var(--marca); }
 .prob-titulo .sutil { text-transform: none; letter-spacing: 0; font-weight: 400; margin: 0; }
 .prob-barra { display: flex; gap: 3px; height: 26px; border-radius: 8px; overflow: hidden; }
 .prob-parte { display: grid; place-items: center; min-width: 0; color: #fff; font-size: 12px; font-weight: 600;
-  white-space: nowrap; overflow: hidden; opacity: .55; }
-.prob-parte.acertou { opacity: 1; box-shadow: inset 0 -3px 0 rgba(255, 255, 255, .85); }
+  white-space: nowrap; overflow: hidden; }
+/* jogo encerrado: o que aconteceu fica cheio, os outros ficam riscados de leve (sem transparência, que apagava no tema claro) */
+.prob-barra.com-resultado .prob-parte:not(.acertou) { background-image: repeating-linear-gradient(135deg, rgba(255,255,255,.22) 0 4px, transparent 4px 8px); }
+.prob-parte.acertou { box-shadow: inset 0 -4px 0 var(--texto); }
 .nota { display: inline-block; min-width: 34px; padding: 1px 6px; border-radius: 6px; text-align: center;
   background: var(--superficie-2); font-variant-numeric: tabular-nums; }
 .nota.alta { background: color-mix(in srgb, var(--bom) 22%, transparent); color: var(--bom-texto); font-weight: 600; }
@@ -299,6 +301,9 @@ input[type="search"]:focus { outline: none; border-color: var(--marca); }
 .lista-simples li.clicavel:hover { background: var(--superficie-2); }
 .lista-simples .chance { font: 600 20px/1 var(--fonte-numero); font-variant-numeric: tabular-nums; white-space: nowrap; text-align: right; }
 .lista-simples .chance small { font: 400 12px var(--fonte); color: var(--texto-2); }
+.lista-simples .nome-lista { flex: 1 0 auto; }
+.lista-simples .motivo { flex: 0 1 auto; text-align: right; }
+@media (max-width: 600px) { .lista-simples li .cresce { flex-basis: calc(100% - 44px); } }
 .delta { min-width: 52px; text-align: center; padding: 3px 6px; border-radius: 6px; font: 600 14px var(--fonte-numero); }
 .delta.sobe { background: color-mix(in srgb, var(--bom) 22%, transparent); color: var(--bom-texto); }
 .delta.desce { background: var(--marca-suave); color: var(--marca); }
@@ -632,3 +637,11 @@ body.sem-filtros .filtros { display: none; }
   backdrop-filter: blur(8px); }
 .modal-jogo .tabela-partida .fixa { background: var(--pagina); }
 html:has(dialog[open]) { overflow: hidden; } /* com jogo/perfil aberto, só a tela da frente rola (a barra lateral é a dela) */
+/* tema claro: barra da tela do jogo clara (o topo escuro deixava o botão "Voltar" invisível) e gramado mais marcado */
+:root[data-theme="light"] .modal-jogo .modal-barra { background: rgba(242, 243, 245, .92); }
+:root[data-theme="light"] .campo-gramado { fill: #dcebe0; stroke: #9fbfa8; }
+:root[data-theme="light"] .campo-linha { stroke: #9fbfa8; }
+:root[data-theme="light"] .campo-jogador circle { fill: #fff; stroke: #4a4f57; }
+:root[data-theme="light"] .campo-jogador.fla circle { fill: var(--marca); stroke: var(--marca); }
+:root[data-theme="light"] .campo-nome { fill: #2c3036; }
+:root[data-theme="light"] .campo-jogador.duvida circle { stroke: #fff; }

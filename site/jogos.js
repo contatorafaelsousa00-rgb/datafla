@@ -216,11 +216,11 @@ export const NOME_CHUTE = { Saved: "defendida", Missed: "para fora", Blocked: "b
 export function barraProbabilidade(p) {
   if (p.prob_vitoria == null) return null;
   const partes = [["V", p.prob_vitoria, "Vitória", "var(--serie-1)"], ["E", p.prob_empate, "Empate", "var(--neutro)"],
-    ["D", p.prob_derrota, "Derrota", "var(--eixo)"]];
+    ["D", p.prob_derrota, "Derrota", "var(--serie-2)"]];
   return h("div", { class: "prob" },
     h("div", { class: "prob-titulo" }, h("span", {}, "Previsão pré-jogo"),
       h("span", { class: "sutil" }, p.resultado ? `resultado: ${NOME_RES[p.resultado]}` : "chance do Flamengo")),
-    h("div", { class: "prob-barra" }, partes.map(([k, v, nome, cor]) => h("div", {
+    h("div", { class: "prob-barra" + (p.resultado ? " com-resultado" : "") }, partes.map(([k, v, nome, cor]) => h("div", {
       class: "prob-parte" + (p.resultado === k ? " acertou" : ""), style: `flex:${Math.max(v, 0.04)};background:${cor}`,
       title: `${nome}: ${pct(v, 0)}` }, v >= 0.35 ? `${nome} ${pct(v, 0)}` : pct(v, 0)))));
 }
