@@ -294,3 +294,16 @@ def test_previsao_pre_jogo_ignora_as_geradas_depois_do_inicio():
     m = {"date": "2026-01-15T00:30:00.000Z", "predictions": {"prematch": [
         prev("2026-01-14T03:00:00.000Z", 45), prev("2026-01-15T00:00:00.000Z", 49), prev("2026-01-15T03:00:00.000Z", 41)]}}
     assert hl._probabilidades(m, "homeTeam")[0] == 0.49  # a das 03:00 (depois do jogo) fica de fora
+
+
+def test_proximos_pedem_a_escalacao_do_ultimo_jogo_do_adversario(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+    from coleta.api import salvar_raw
+    jogos = [_jogo(1, "2026-10-18T21:30:00.000Z")]
+    _cenario(tmp_path, monkeypatch, jogos)
+    salvar_raw(f"forma_{ADV}", {"data": [{"id": 50, "date": "2026-10-01T20:00:00.000Z"}, {"id": 51, "date": "2026-10-11T20:00:00.000Z"}],
+                                "_coletado_em": "2026-10-16T00:00:00+00:00"}, tmp_path)
+    tarefas = hl.tarefas_proximos(jogos, datetime(2026, 10, 16, 12, tzinfo=timezone.utc))
+    assert ("escalacao_51", "lineups/51", {}) in tarefas      # o mais recente
+    salvar_raw("escalacao_51", {"data": {}, "_coletado_em": "x"}, tmp_path)
+    assert ("escalacao_51", "lineups/51", {}) not in hl.tarefas_proximos(jogos, datetime(2026, 10, 16, 12, tzinfo=timezone.utc))

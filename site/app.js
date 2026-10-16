@@ -227,7 +227,7 @@ async function iniciar() {
   await carregarTemporada(ano);
   estado.subElenco = params.get("sub") === "ficha" ? "ficha" : "desempenho";
   const jogo = Number(params.get("jogo"));
-  estado.lista = params.get("lista") === "disputados" || jogo ? "disputados" : "proximos";
+  estado.lista = jogo ? "disputados" : ["disputados", "comparar"].includes(params.get("lista")) ? params.get("lista") : "proximos";
   const proximo = Number(params.get("proximo"));
   if (jogo && estado.aba === "jogos") abrirJogo(jogo);
   else if (proximo && estado.aba === "jogos") abrirProximo(proximo);

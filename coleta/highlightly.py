@@ -370,6 +370,11 @@ def tarefas_proximos(jogos: list[dict], agora: datetime | None = None) -> list[t
             (f"forma_{adv}", "last-five-games", {"teamId": adv}, HORAS_PROXIMOS_DEMAIS),
         ]
         tarefas += [(nome, cam, par) for nome, cam, par, horas in candidatos if _vencido(nome, horas, agora)]
+        # Provável escalação do adversário = a do último jogo dele (id vem da forma recente); 1 vez por jogo
+        if ordem < 2:
+            ultimo = max(((ler_raw(f"forma_{adv}") or {}).get("data") or []), key=lambda m: m.get("date") or "", default=None)
+            if ultimo and ler_raw(f"escalacao_{ultimo['id']}") is None:
+                tarefas.append((f"escalacao_{ultimo['id']}", f"lineups/{ultimo['id']}", {}))
     return tarefas
 
 

@@ -133,6 +133,14 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   SoccersAPI (broadcast). Alternativa grátis: cadastro manual pelo admin (não feito; aguardando decisão).
 - CSS: regra global `[hidden] { display: none !important; }` — regras com `display: grid` anulavam o atributo hidden
   (causa do bug "clico no Bahia e aparece o Estudiantes": o relatório anterior ficava visível no modal).
+- Pré-jogo e comparador (16/10/2026): banner "Próximo jogo" (Temporada) abre a tela do jogo. Tela do próximo jogo
+  (`preview.js`): desfalques do Flamengo (suspensos/pendurados ESTIMADOS pela regra de 3 amarelos na competição, sem
+  quem já saiu; lesionados do perfil), prováveis escalações no campinho (Flamengo = último jogo trocando desfalques pelo
+  mais usado na posição, tracejado; adversário = escalação do último jogo dele, `/lineups` do id em `forma_<adv>`, 1 req),
+  momento (últimos 5), campanha na competição com o mesmo mando, histórico do árbitro. Aba Jogos → "Comparar calendário"
+  (`calendario.js`): jogos restantes do Brasileirão de 2 times com chance por jogo pelo modelo exato
+  (`classificacao.probabilidades`), pontos esperados e projeção; padrão Flamengo × vizinho na tabela.
+- Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
 - **Publicação**: só depois do Rafael validar no servidor local (`python scripts/servidor_local.py`, porta 8765) — pedido de 16/10/2026.
 - Próximos jogos (16/10/2026): aba Jogos com chave "Próximos jogos | Jogos disputados" (`?lista=`; `?jogo=<id>` abre o
   relatório). `coletar proximo` busca para os 3 próximos jogos (o 1º sempre; os demais só nas próximas 3 semanas), do mais

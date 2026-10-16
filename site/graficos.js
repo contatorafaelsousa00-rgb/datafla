@@ -553,7 +553,7 @@ export function campinho(container, casa, fora, { aoClicar } = {}) {
           x = ehCasa ? m + prof * (W / 2 - 2 * m) + 16 : W - m - prof * (W / 2 - 2 * m) - 16;
           y = ehCasa ? m + lat * (H - 2 * m) : H - m - lat * (H - 2 * m);
         }
-        const g = el("g", { class: "campo-jogador" + (time.fla ? " fla" : "") + (aoClicar && j.id != null ? " clicavel" : ""), tabindex: 0 }, s);
+        const g = el("g", { class: "campo-jogador" + (time.fla ? " fla" : "") + (j.duvida ? " duvida" : "") + (aoClicar && j.id != null ? " clicavel" : ""), tabindex: 0 }, s);
         el("circle", { cx: x, cy: y, r: 13 }, g);
         texto(g, x, y + 4, j.numero ?? "", { "text-anchor": "middle", class: "campo-numero" });
         const curto = (j.nome ?? "").split(" ").slice(-1)[0];

@@ -93,6 +93,39 @@ function simular(times, encerrados, restantes) {
 }
 
 // ---------- tela ----------
+// ---------- modelo do campeonato (também usado pelo comparador de calendários da aba Jogos) ----------
+export function modeloLiga() {
+  const liga = D.bruto.liga ?? [];
+  if (!liga.length) return null;
+  const times = new Map();
+  for (const m of liga) {
+    times.set(m.casa_id, { id: m.casa_id, nome: m.casa, logo: m.casa_logo });
+    times.set(m.fora_id, { id: m.fora_id, nome: m.fora, logo: m.fora_logo });
+  }
+  const encerrados = liga.filter((m) => m.gols_casa != null);
+  const restantes = liga.filter((m) => m.gols_casa == null && m.status !== "CANC")
+    .sort((a, b) => a.data_utc.localeCompare(b.data_utc));
+  const atual = tabela(times, encerrados);
+  const idFla = liga.find((m) => m.casa === "Flamengo")?.casa_id ?? liga.find((m) => m.fora === "Flamengo")?.fora_id;
+  return { times, encerrados, restantes, atual, idFla, competicao: liga[0].competicao, ...forcas(times, encerrados) };
+}
+
+// Probabilidades de um jogo pelo modelo (Poisson com força de ataque/defesa em casa e fora), de forma exata
+export function probabilidades(modelo, m) {
+  const { f, media } = modelo;
+  const lc = media.casa * f.get(m.casa_id).ataqueCasa * f.get(m.fora_id).defesaFora;
+  const lf = media.fora * f.get(m.fora_id).ataqueFora * f.get(m.casa_id).defesaCasa;
+  const pmf = (l) => { const p = [Math.exp(-l)]; for (let k = 1; k <= 10; k++) p.push(p[k - 1] * l / k); return p; };
+  const pc = pmf(lc), pf = pmf(lf);
+  let casa = 0, empate = 0, fora = 0;
+  for (let i = 0; i <= 10; i++) for (let j = 0; j <= 10; j++) {
+    const p = pc[i] * pf[j];
+    if (i > j) casa += p; else if (i === j) empate += p; else fora += p;
+  }
+  const t = casa + empate + fora;
+  return { casa: casa / t, empate: empate / t, fora: fora / t, golsCasa: lc, golsFora: lf };
+}
+
 const logo = (src) => (src ? h("img", { src, alt: "", width: 18, height: 18, loading: "lazy" }) : null);
 const chance = (v) => h("td", { class: "num chance-celula", style: v > 0.005 ? `--v:${v}` : "" },
   v >= 0.995 ? ">99%" : v > 0 && v < 0.005 ? "<1%" : v === 0 ? "–" : pct(v, 0));

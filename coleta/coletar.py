@@ -154,7 +154,7 @@ def cmd_processar():
     tabelas["elenco"] = normalizar.linhas_elenco(elenco["response"], config.TEAM_ID) if elenco else []
     if _hl() and jogos:
         tabelas.update(highlightly.linhas_proximos(jogos["data"]))
-        tabelas["escalacoes"], formacoes = extras.linhas_escalacoes([p["id_partida"] for p in tabelas["partidas"]])
+        tabelas["escalacoes"], formacoes = extras.linhas_escalacoes()
         for p in tabelas["partidas"]:
             p["formacao"], p["formacao_adversario"] = formacoes.get(p["id_partida"], (None, None))
         tabelas["classificacao"] = extras.linhas_classificacao(jogos["data"])

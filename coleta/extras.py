@@ -134,10 +134,13 @@ def _jogador_escalacao(p: dict, **extra) -> dict:
             "posicao": POSICOES.get(p.get("position"), p.get("position")), **extra}
 
 
-def linhas_escalacoes(ids_partidas, team_id: int | None = None) -> tuple[list[dict], dict]:
-    """Escalações (titulares por linha do campo + banco) e {jogo: (formação do Flamengo, do adversário)}."""
+def linhas_escalacoes(ids_partidas=None, team_id: int | None = None) -> tuple[list[dict], dict]:
+    """Escalações (titulares por linha do campo + banco) e {jogo: (formação do Flamengo, do adversário)}.
+    Sem lista de ids, usa todas as salvas (inclui o último jogo dos próximos adversários: provável escalação)."""
     team_id = team_id or config.TEAM_ID
     linhas, formacoes = [], {}
+    if ids_partidas is None:
+        ids_partidas = sorted(int(a.stem.removeprefix("escalacao_")) for a in config.RAW_DIR.glob("escalacao_*.json"))
     for pid in ids_partidas:
         dados = (ler_raw(f"escalacao_{pid}") or {}).get("data")
         if not dados:

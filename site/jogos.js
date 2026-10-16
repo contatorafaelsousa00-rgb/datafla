@@ -4,6 +4,8 @@ import { $, bola, confronto, D, data, dataLonga, escudo, escudoImg, estado, h, l
 import { abrirJogadorNaPartida } from "./jogadores.js";
 import { render } from "./app.js";
 import { CLIMA, futurosFiltrados, horaBR } from "./temporada.js";
+import { secoesPreview } from "./preview.js";
+import { renderComparar } from "./calendario.js";
 
 // =====================================================================
 // JOGOS
@@ -63,6 +65,7 @@ function renderDetalheProximo(j, detalhe) {
   const caixa = $("detalhe-proximo");
   caixa.hidden = false;
   const p = { ...j, ...(detalhe ?? {}) };
+  const pre = secoesPreview(p); // desfalques, prováveis escalações, árbitro, momento
   const [casa, fora] = p.mando === "Fora" ? [p.adversario, "Flamengo"] : ["Flamengo", p.adversario];
   const clima = p.clima ? [CLIMA[p.clima?.toLowerCase()] ?? p.clima, p.temperatura != null ? `${num(p.temperatura, 0)} °C` : null].filter(Boolean).join(", ") : null;
   const confrontos = (D.bruto.confrontos ?? []).filter((c) => c.adversario_id === p.adversario_id)
@@ -91,6 +94,7 @@ function renderDetalheProximo(j, detalhe) {
     barraProbabilidade(p) ?? h("p", { class: "sutil" }, detalhe
       ? "A fonte ainda não publicou a previsão deste jogo."
       : "Previsão, árbitro e clima chegam nos dias antes do jogo (os 3 próximos jogos são atualizados, o mais próximo primeiro)."),
+    ...pre.elementos,
     h("div", { class: "detalhe-grade" },
       h("div", {}, h("h3", {}, `Confronto direto com o ${p.adversario}`),
         confrontos.length
@@ -106,15 +110,18 @@ function renderDetalheProximo(j, detalhe) {
              h("ul", { class: "lista-simples" }, forma.map((c) => linhaJogo(c, p.adversario, p.adversario_logo)))]
           : vazio("Ainda sem os últimos jogos deste adversário."))),
   );
+  pre.desenhar();
 }
 
 export function renderJogos(js) {
   for (const b of $("lista-jogos").children) b.setAttribute("aria-pressed", String(b.dataset.lista === estado.lista));
-  const proximos = estado.lista === "proximos";
+  const proximos = estado.lista === "proximos", comparar = estado.lista === "comparar";
   $("detalhe-jogo").hidden = estado.jogo == null; // só um dos dois aparece no modal
   $("detalhe-proximo").hidden = estado.proximo == null;
   $("card-proximos").hidden = !proximos;
-  $("card-disputados").hidden = proximos;
+  $("card-disputados").hidden = proximos || comparar;
+  $("comparar-calendario").hidden = !comparar;
+  if (comparar) return renderComparar();
   if (proximos) {
     renderProximosJogos();
     return;
