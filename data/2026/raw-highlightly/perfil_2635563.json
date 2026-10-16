@@ -1,0 +1,526 @@
+{
+ "data": [
+  {
+   "id": 2635563,
+   "logo": null,
+   "name": "G. Plata",
+   "fullName": "Gonzalo Jordy Plata Jiménez",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "30/08/2024",
+     "contractExpiry": "30/06/2029",
+     "latestContractExtension": null
+    },
+    "foot": "left",
+    "height": "1,78 m",
+    "fullName": "Gonzalo Plata",
+    "position": {
+     "main": "Right Winger",
+     "secondary": "Left Winger, Centre-Forward"
+    },
+    "birthDate": "01/11/2000",
+    "deathDate": null,
+    "birthPlace": "Guayaquil",
+    "citizenship": "Ecuador"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Al-Wasl SC",
+      "rumourDate": "05/09/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Leeds United",
+      "rumourDate": "09/06/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Real Betis Balompié",
+      "rumourDate": "06/06/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "ACF Fiorentina",
+      "rumourDate": "19/08/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "RCD Espanyol Barcelona",
+      "rumourDate": "19/08/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Cádiz CF",
+      "rumourDate": "13/08/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Vitória Guimarães SC",
+      "rumourDate": "05/08/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Beşiktaş JK",
+      "rumourDate": "03/03/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "03/12/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Leicester City",
+      "rumourDate": "07/12/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "RB Leipzig",
+      "rumourDate": "22/06/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona Atlètic",
+      "rumourDate": "10/12/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Dynamo Kyiv",
+      "rumourDate": "29/08/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Dynamo Moscow",
+      "rumourDate": "25/08/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Real Sociedad",
+      "rumourDate": "18/08/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Krasnodar",
+      "rumourDate": "24/07/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Stade Rennais FC",
+      "rumourDate": "08/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "24/08/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sport Club Corinthians Paulista",
+      "rumourDate": "04/08/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Sadd SC",
+      "rumourDate": "23/07/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AFC Bournemouth",
+      "rumourDate": "26/06/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "13/06/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AFC Bournemouth",
+      "rumourDate": "06/06/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Burnley FC",
+      "rumourDate": "06/06/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Real Valladolid CF",
+      "rumourDate": "11/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Real Sociedad",
+      "rumourDate": "22/06/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bayer 04 Leverkusen",
+      "rumourDate": "20/06/2022",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€3.80M",
+     "from": "Al-Sadd",
+     "type": "transfer",
+     "season": "24/25",
+     "marketValue": "€6.00M",
+     "transferDate": "Aug 30, 2024"
+    },
+    {
+     "to": "Al-Sadd",
+     "fee": "€12.00M",
+     "from": "Real Valladolid",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": "€5.00M",
+     "transferDate": "Jul 23, 2023"
+    },
+    {
+     "to": "Real Valladolid",
+     "fee": "€9.00M",
+     "from": "Sporting",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": "€6.00M",
+     "transferDate": "Jul 11, 2022"
+    },
+    {
+     "to": "Sporting",
+     "fee": null,
+     "from": "Real Valladolid",
+     "type": "end of loan",
+     "season": "21/22",
+     "marketValue": "€6.00M",
+     "transferDate": "Jun 30, 2022"
+    },
+    {
+     "to": "Real Valladolid",
+     "fee": null,
+     "from": "Sporting",
+     "type": "loan",
+     "season": "21/22",
+     "marketValue": "€5.00M",
+     "transferDate": "Aug 31, 2021"
+    },
+    {
+     "to": "Sporting",
+     "fee": null,
+     "from": "Sporting CP U23",
+     "type": "transfer",
+     "season": "19/20",
+     "marketValue": "€350.00K",
+     "transferDate": "Jul 1, 2019"
+    },
+    {
+     "to": "Sporting CP U23",
+     "fee": "€4.10M",
+     "from": "Independiente",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": "€350.00K",
+     "transferDate": "Jan 31, 2019"
+    },
+    {
+     "to": "Independiente",
+     "fee": null,
+     "from": "IDV U20",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2018"
+    },
+    {
+     "to": "IDV U20",
+     "fee": null,
+     "from": "Independiente B",
+     "type": "transfer",
+     "season": "16/17",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2017"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "05/09/2025"
+    },
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "28/03/2025"
+    },
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 23,
+     "club": "Al-Sadd SC",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "02/05/2024"
+    },
+    {
+     "age": 23,
+     "club": "Al-Sadd SC",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "27/11/2023"
+    },
+    {
+     "age": 22,
+     "club": "Real Valladolid CF",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "13/06/2023"
+    },
+    {
+     "age": 22,
+     "club": "Real Valladolid CF",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "07/11/2022"
+    },
+    {
+     "age": 21,
+     "club": "Real Valladolid CF",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "29/06/2022"
+    },
+    {
+     "age": 21,
+     "club": "Real Valladolid CF",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "27/12/2021"
+    },
+    {
+     "age": 20,
+     "club": "Sporting CP",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "16/07/2021"
+    },
+    {
+     "age": 20,
+     "club": "Sporting CP",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "21/05/2021"
+    },
+    {
+     "age": 20,
+     "club": "Sporting CP",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "28/01/2021"
+    },
+    {
+     "age": 19,
+     "club": "Sporting CP",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "17/08/2020"
+    },
+    {
+     "age": 19,
+     "club": "Sporting CP",
+     "value": 900000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 19,
+     "club": "Sporting CP",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "30/12/2019"
+    },
+    {
+     "age": 18,
+     "club": "Sporting CP",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "09/07/2019"
+    },
+    {
+     "age": 18,
+     "club": "Independiente del Valle",
+     "value": 350000,
+     "currency": "€",
+     "recordedDate": "30/12/2018"
+    },
+    {
+     "age": 17,
+     "club": "Independiente del Valle",
+     "value": 50000,
+     "currency": "€",
+     "recordedDate": "20/07/2018"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Muscle injury",
+     "season": "2027",
+     "toDate": "07.10.2026",
+     "fromDate": "21.09.2026",
+     "missedGames": null,
+     "absentDurationInDays": 17
+    },
+    {
+     "reason": "Fitness",
+     "season": "2027",
+     "toDate": "12.09.2026",
+     "fromDate": "29.08.2026",
+     "missedGames": 3,
+     "absentDurationInDays": 15
+    },
+    {
+     "reason": "Tendonitis",
+     "season": "2027",
+     "toDate": "08.08.2026",
+     "fromDate": "25.07.2026",
+     "missedGames": 2,
+     "absentDurationInDays": 15
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2026",
+     "toDate": "22.05.2026",
+     "fromDate": "11.05.2026",
+     "missedGames": 3,
+     "absentDurationInDays": 12
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2026",
+     "toDate": "26.07.2025",
+     "fromDate": "17.07.2025",
+     "missedGames": 2,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2025",
+     "toDate": "15.06.2025",
+     "fromDate": "02.05.2025",
+     "missedGames": 11,
+     "absentDurationInDays": 45
+    },
+    {
+     "reason": "Bone edema",
+     "season": "2025",
+     "toDate": "26.04.2025",
+     "fromDate": "20.04.2025",
+     "missedGames": 1,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Muscle fatigue",
+     "season": "2025",
+     "toDate": "05.04.2025",
+     "fromDate": "30.03.2025",
+     "missedGames": 1,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Torn muscle fiber in the adductor area",
+     "season": "2023",
+     "toDate": "30.03.2023",
+     "fromDate": "18.03.2023",
+     "missedGames": 2,
+     "absentDurationInDays": 13
+    },
+    {
+     "reason": "Hip problems",
+     "season": "2023",
+     "toDate": "18.10.2022",
+     "fromDate": "06.10.2022",
+     "missedGames": 2,
+     "absentDurationInDays": 13
+    },
+    {
+     "reason": "Ankle problems",
+     "season": "2023",
+     "toDate": "01.09.2022",
+     "fromDate": "15.08.2022",
+     "missedGames": 2,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Ankle sprain",
+     "season": "2022",
+     "toDate": "25.07.2022",
+     "fromDate": "13.06.2022",
+     "missedGames": null,
+     "absentDurationInDays": 43
+    },
+    {
+     "reason": "Corona virus",
+     "season": "2022",
+     "toDate": "24.02.2022",
+     "fromDate": "17.02.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 8
+    },
+    {
+     "reason": "Flu",
+     "season": "2022",
+     "toDate": "05.11.2021",
+     "fromDate": "01.11.2021",
+     "missedGames": 1,
+     "absentDurationInDays": 5
+    },
+    {
+     "reason": "Corona virus",
+     "season": "2021",
+     "toDate": "02.12.2020",
+     "fromDate": "22.11.2020",
+     "missedGames": 2,
+     "absentDurationInDays": 11
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:58:58.805625+00:00"
+}

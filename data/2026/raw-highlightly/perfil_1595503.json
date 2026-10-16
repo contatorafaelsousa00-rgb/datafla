@@ -1,0 +1,401 @@
+{
+ "data": [
+  {
+   "id": 1595503,
+   "logo": null,
+   "name": "Vitão",
+   "fullName": "Vitor Eduardo da Silva Matos",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "09/01/2026",
+     "contractExpiry": "31/12/2029",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,85 m",
+    "fullName": "Vitor Eduardo da Silva Matos",
+    "position": {
+     "main": "Centre-Back",
+     "secondary": null
+    },
+    "birthDate": "02/02/2000",
+    "deathDate": null,
+    "birthPlace": "Jacarezinho",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Cruzeiro Esporte Clube",
+      "rumourDate": "21/12/2025",
+      "transferProbability": "91.45%"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "14/12/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SL Benfica",
+      "rumourDate": "11/12/2025",
+      "transferProbability": "5.12%"
+     },
+     {
+      "club": "Sociedade Esportiva Palmeiras",
+      "rumourDate": "02/12/2025",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "27/12/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Cruzeiro Esporte Clube",
+      "rumourDate": "21/12/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SL Benfica",
+      "rumourDate": "11/12/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sociedade Esportiva Palmeiras",
+      "rumourDate": "02/12/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "19/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "19/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sevilla FC",
+      "rumourDate": "19/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Porto",
+      "rumourDate": "08/06/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Real Betis Balompié",
+      "rumourDate": "19/02/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Udinese Calcio",
+      "rumourDate": "29/08/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "West Ham United",
+      "rumourDate": "24/06/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "PAOK Thessaloniki",
+      "rumourDate": "23/03/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AS Roma",
+      "rumourDate": "06/08/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "03/03/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bayer 04 Leverkusen",
+      "rumourDate": "19/02/2019",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/brasileirao-overtakes-serie-a-to-become-worlds-second-biggest-spending-league-in-2026/view/news/476200",
+     "date": "Mar 4, 2026",
+     "title": "Brasileirão overtakes Serie A to become world's second-biggest spending league in 2026"
+    },
+    {
+     "url": "https://www.transfermarkt.com/kvaratskhelia-to-tete-at-least-93-first-division-players-use-special-transfer-window/view/news/402681",
+     "date": "Apr 8, 2022",
+     "title": "Kvaratskhelia to Tetê: At least 93 first division players use special transfer window"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€10.20M",
+     "from": "Internacional",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": "€10.00M",
+     "transferDate": "Jan 9, 2026"
+    },
+    {
+     "to": "Internacional",
+     "fee": null,
+     "from": "Shakhtar D.",
+     "type": "transfer",
+     "season": "24/25",
+     "marketValue": "€8.00M",
+     "transferDate": "Jul 1, 2024"
+    },
+    {
+     "to": "Shakhtar D.",
+     "fee": null,
+     "from": "Internacional",
+     "type": "end of loan",
+     "season": "23/24",
+     "marketValue": "€8.00M",
+     "transferDate": "Jun 30, 2024"
+    },
+    {
+     "to": "Internacional",
+     "fee": null,
+     "from": "Shakhtar D.",
+     "type": "loan",
+     "season": "21/22",
+     "marketValue": "€3.00M",
+     "transferDate": "Apr 8, 2022"
+    },
+    {
+     "to": "Shakhtar D.",
+     "fee": "€4.00M",
+     "from": "Palmeiras",
+     "type": "transfer",
+     "season": "19/20",
+     "marketValue": null,
+     "transferDate": "Sep 1, 2019"
+    },
+    {
+     "to": "Palmeiras",
+     "fee": null,
+     "from": "Palmeiras U20",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2019"
+    },
+    {
+     "to": "Palmeiras U20",
+     "fee": null,
+     "from": "Palmeiras U17",
+     "type": "transfer",
+     "season": "17/18",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2018"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 11000000,
+     "currency": "€",
+     "recordedDate": "12/03/2026"
+    },
+    {
+     "age": 25,
+     "club": "Sport Club Internacional",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 25,
+     "club": "Sport Club Internacional",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 25,
+     "club": "Sport Club Internacional",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "28/03/2025"
+    },
+    {
+     "age": 24,
+     "club": "Sport Club Internacional",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 24,
+     "club": "Sport Club Internacional",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 24,
+     "club": "Sport Club Internacional",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 23,
+     "club": "Sport Club Internacional",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    },
+    {
+     "age": 23,
+     "club": "Sport Club Internacional",
+     "value": 7500000,
+     "currency": "€",
+     "recordedDate": "25/07/2023"
+    },
+    {
+     "age": 23,
+     "club": "Sport Club Internacional",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "07/04/2023"
+    },
+    {
+     "age": 22,
+     "club": "Sport Club Internacional",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "14/11/2022"
+    },
+    {
+     "age": 22,
+     "club": "Sport Club Internacional",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "19/08/2022"
+    },
+    {
+     "age": 21,
+     "club": "Shakhtar Donetsk",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "20/12/2021"
+    },
+    {
+     "age": 21,
+     "club": "Shakhtar Donetsk",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "07/06/2021"
+    },
+    {
+     "age": 20,
+     "club": "Shakhtar Donetsk",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "14/01/2021"
+    },
+    {
+     "age": 20,
+     "club": "Shakhtar Donetsk",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "04/09/2020"
+    },
+    {
+     "age": 20,
+     "club": "Shakhtar Donetsk",
+     "value": 3200000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 19,
+     "club": "Shakhtar Donetsk",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "08/01/2020"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Hamstring injury",
+     "season": "2027",
+     "toDate": "09.09.2026",
+     "fromDate": "08.08.2026",
+     "missedGames": 8,
+     "absentDurationInDays": 33
+    },
+    {
+     "reason": "Knee injury",
+     "season": "2026",
+     "toDate": "01.11.2025",
+     "fromDate": "23.10.2025",
+     "missedGames": 1,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "03.08.2024",
+     "fromDate": "16.07.2024",
+     "missedGames": 3,
+     "absentDurationInDays": 19
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2024",
+     "toDate": "25.09.2023",
+     "fromDate": "28.08.2023",
+     "missedGames": 4,
+     "absentDurationInDays": 29
+    },
+    {
+     "reason": "Inflammation of ligaments in the knee",
+     "season": "2023",
+     "toDate": "24.05.2023",
+     "fromDate": "15.05.2023",
+     "missedGames": 2,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Unknown",
+     "season": "2022",
+     "toDate": "14.10.2021",
+     "fromDate": "02.10.2021",
+     "missedGames": 1,
+     "absentDurationInDays": 13
+    },
+    {
+     "reason": "Unknown",
+     "season": "2021",
+     "toDate": "01.01.2021",
+     "fromDate": "09.12.2020",
+     "missedGames": 1,
+     "absentDurationInDays": 24
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:58:55.934765+00:00"
+}

@@ -1,0 +1,617 @@
+{
+ "data": [
+  {
+   "id": 420686,
+   "logo": null,
+   "name": "G. de Arrascaeta",
+   "fullName": "Giorgian Daniel de Arrascaeta Benedetti",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "12/01/2019",
+     "contractExpiry": "31/12/2028",
+     "latestContractExtension": "08/11/2025"
+    },
+    "foot": "right",
+    "height": "1,77 m",
+    "fullName": "Giorgian de Arrascaeta",
+    "position": {
+     "main": "Attacking Midfield",
+     "secondary": "Left Winger, Right Winger"
+    },
+    "birthDate": "01/06/1994",
+    "deathDate": null,
+    "birthPlace": "Nuevo Berlín",
+    "citizenship": "Uruguay, Italy"
+   },
+   "rumours": {
+    "current": [],
+    "historical": [
+     {
+      "club": "CD Cruz Azul",
+      "rumourDate": "30/06/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CA Boca Juniors",
+      "rumourDate": "21/02/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CA River Plate",
+      "rumourDate": "06/12/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Borussia Dortmund",
+      "rumourDate": "25/12/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Aston Villa",
+      "rumourDate": "18/05/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Inter Milan",
+      "rumourDate": "26/04/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "08/01/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Wolverhampton Wanderers",
+      "rumourDate": "25/06/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AS Monaco",
+      "rumourDate": "25/06/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Borussia Dortmund",
+      "rumourDate": "10/11/2016",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sport Club Internacional",
+      "rumourDate": "05/01/2015",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SL Benfica",
+      "rumourDate": "03/01/2015",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "12/05/2014",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "27/07/2013",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/flamengo-vs-palmeiras-what-to-look-out-for-in-all-brazilian-copa-libertadores-final/view/news/463401",
+     "date": "Nov 28, 2025",
+     "title": "Flamengo vs Palmeiras - What to look out for in all-Brazilian Copa Libertadores final"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-brazil-vitor-roque-and-endrick-continue-meteoric-rise-gabriel-barbosa-drops/view/news/425450",
+     "date": "Jul 25, 2023",
+     "title": "Market values Brazil: Vitor Roque and Endrick continue meteoric rise - Gabriel Barbosa drops"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-serie-a-gabigol-back-at-the-top-youngsters-around-kayky-on-the-up/view/news/386062",
+     "date": "May 28, 2021",
+     "title": "Market values Série A: Gabigol back at the top - Youngsters around Kayky on the up"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-brazil-veron-amp-gabriel-barbosa-on-top-palmeiras-close-in-on-flamengo/view/news/370232",
+     "date": "Sep 9, 2020",
+     "title": "Market values Brazil: Veron & Gabriel Barbosa on top - Palmeiras close in on Flamengo"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€15.00M",
+     "from": "Cruzeiro",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": "€9.00M",
+     "transferDate": "Jan 12, 2019"
+    },
+    {
+     "to": "Cruzeiro",
+     "fee": "€4.00M",
+     "from": "Defensor SC",
+     "type": "transfer",
+     "season": "14/15",
+     "marketValue": "€2.00M",
+     "transferDate": "Jan 19, 2015"
+    },
+    {
+     "to": "Defensor SC",
+     "fee": null,
+     "from": "Defensor SC U19",
+     "type": "transfer",
+     "season": "12/13",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2012"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 14000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 14000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 16000000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 17000000,
+     "currency": "€",
+     "recordedDate": "25/07/2023"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 19000000,
+     "currency": "€",
+     "recordedDate": "07/04/2023"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 19000000,
+     "currency": "€",
+     "recordedDate": "14/11/2022"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "19/08/2022"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 17000000,
+     "currency": "€",
+     "recordedDate": "06/04/2022"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 16000000,
+     "currency": "€",
+     "recordedDate": "17/12/2021"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "28/05/2021"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "09/02/2021"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "09/09/2020"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 19000000,
+     "currency": "€",
+     "recordedDate": "27/11/2019"
+    },
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 13000000,
+     "currency": "€",
+     "recordedDate": "18/02/2019"
+    },
+    {
+     "age": 23,
+     "club": "Cruzeiro Esporte Clube",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "23/05/2018"
+    },
+    {
+     "age": 23,
+     "club": "Cruzeiro Esporte Clube",
+     "value": 7500000,
+     "currency": "€",
+     "recordedDate": "07/12/2017"
+    },
+    {
+     "age": 22,
+     "club": "Cruzeiro Esporte Clube",
+     "value": 7500000,
+     "currency": "€",
+     "recordedDate": "28/11/2016"
+    },
+    {
+     "age": 21,
+     "club": "Cruzeiro Esporte Clube",
+     "value": 5500000,
+     "currency": "€",
+     "recordedDate": "27/05/2016"
+    },
+    {
+     "age": 21,
+     "club": "Cruzeiro Esporte Clube",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "15/12/2015"
+    },
+    {
+     "age": 20,
+     "club": "Cruzeiro Esporte Clube",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "31/05/2015"
+    },
+    {
+     "age": 20,
+     "club": "Cruzeiro Esporte Clube",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "20/01/2015"
+    },
+    {
+     "age": 20,
+     "club": "Defensor Sporting Club",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "15/08/2014"
+    },
+    {
+     "age": 19,
+     "club": "Defensor Sporting Club",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "17/04/2014"
+    },
+    {
+     "age": 19,
+     "club": "Defensor Sporting Club",
+     "value": 1250000,
+     "currency": "€",
+     "recordedDate": "26/08/2013"
+    },
+    {
+     "age": 19,
+     "club": "Defensor Sporting Club",
+     "value": 900000,
+     "currency": "€",
+     "recordedDate": "11/06/2013"
+    },
+    {
+     "age": 18,
+     "club": "Defensor Sporting Club",
+     "value": 225000,
+     "currency": "€",
+     "recordedDate": "22/02/2013"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Concussion",
+     "season": "2016",
+     "toDate": "20.05.2016",
+     "fromDate": "06.05.2016",
+     "missedGames": 2,
+     "absentDurationInDays": 15
+    },
+    {
+     "reason": "Rest",
+     "season": "2022",
+     "toDate": "11.12.2021",
+     "fromDate": "02.12.2021",
+     "missedGames": 3,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2022",
+     "toDate": "19.11.2021",
+     "fromDate": "09.10.2021",
+     "missedGames": 17,
+     "absentDurationInDays": 42
+    },
+    {
+     "reason": "Fitness",
+     "season": "2022",
+     "toDate": "28.09.2021",
+     "fromDate": "25.09.2021",
+     "missedGames": 1,
+     "absentDurationInDays": 4
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2022",
+     "toDate": "24.09.2021",
+     "fromDate": "13.09.2021",
+     "missedGames": 3,
+     "absentDurationInDays": 12
+    },
+    {
+     "reason": "Muscle fatigue",
+     "season": "2022",
+     "toDate": "24.08.2021",
+     "fromDate": "20.08.2021",
+     "missedGames": 1,
+     "absentDurationInDays": 5
+    },
+    {
+     "reason": "Corona virus",
+     "season": "2021",
+     "toDate": "11.06.2021",
+     "fromDate": "01.06.2021",
+     "missedGames": 3,
+     "absentDurationInDays": 11
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2021",
+     "toDate": "09.11.2020",
+     "fromDate": "10.10.2020",
+     "missedGames": 11,
+     "absentDurationInDays": 31
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2021",
+     "toDate": "16.09.2020",
+     "fromDate": "11.09.2020",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2020",
+     "toDate": "12.11.2019",
+     "fromDate": "06.11.2019",
+     "missedGames": 2,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Meniscus injury",
+     "season": "2020",
+     "toDate": "21.10.2019",
+     "fromDate": "04.10.2019",
+     "missedGames": 7,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2020",
+     "toDate": "31.07.2019",
+     "fromDate": "19.07.2019",
+     "missedGames": 3,
+     "absentDurationInDays": 13
+    },
+    {
+     "reason": "Rest",
+     "season": "2019",
+     "toDate": "25.10.2018",
+     "fromDate": "23.10.2018",
+     "missedGames": 1,
+     "absentDurationInDays": 3
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2019",
+     "toDate": "29.09.2018",
+     "fromDate": "04.09.2018",
+     "missedGames": 6,
+     "absentDurationInDays": 26
+    },
+    {
+     "reason": "Stress reaction of the bone",
+     "season": "2018",
+     "toDate": "21.08.2017",
+     "fromDate": "28.07.2017",
+     "missedGames": 6,
+     "absentDurationInDays": 25
+    },
+    {
+     "reason": "Knee injury",
+     "season": "2017",
+     "toDate": "22.07.2017",
+     "fromDate": "29.05.2017",
+     "missedGames": 16,
+     "absentDurationInDays": 55
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2026",
+     "toDate": "25.06.2026",
+     "fromDate": "02.06.2026",
+     "missedGames": 2,
+     "absentDurationInDays": 24
+    },
+    {
+     "reason": "Broken collarbone",
+     "season": "2026",
+     "toDate": "01.06.2026",
+     "fromDate": "01.05.2026",
+     "missedGames": 9,
+     "absentDurationInDays": 32
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "05.04.2025",
+     "fromDate": "23.03.2025",
+     "missedGames": 3,
+     "absentDurationInDays": 14
+    },
+    {
+     "reason": "Arthroscopy",
+     "season": "2025",
+     "toDate": "24.01.2025",
+     "fromDate": "11.11.2024",
+     "missedGames": 12,
+     "absentDurationInDays": 75
+    },
+    {
+     "reason": "Adductor injury",
+     "season": "2025",
+     "toDate": "12.09.2024",
+     "fromDate": "19.08.2024",
+     "missedGames": 7,
+     "absentDurationInDays": 25
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2024",
+     "toDate": "10.05.2024",
+     "fromDate": "29.04.2024",
+     "missedGames": 3,
+     "absentDurationInDays": 12
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2024",
+     "toDate": "22.09.2023",
+     "fromDate": "27.08.2023",
+     "missedGames": 6,
+     "absentDurationInDays": 27
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2023",
+     "toDate": "28.05.2023",
+     "fromDate": "20.05.2023",
+     "missedGames": 3,
+     "absentDurationInDays": 9
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2023",
+     "toDate": "03.05.2023",
+     "fromDate": "20.03.2023",
+     "missedGames": 11,
+     "absentDurationInDays": 45
+    },
+    {
+     "reason": "Knock",
+     "season": "2023",
+     "toDate": "05.09.2022",
+     "fromDate": "02.09.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 4
+    },
+    {
+     "reason": "Back problems",
+     "season": "2023",
+     "toDate": "12.07.2022",
+     "fromDate": "08.07.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 5
+    },
+    {
+     "reason": "Knock",
+     "season": "2022",
+     "toDate": "07.06.2022",
+     "fromDate": "31.05.2022",
+     "missedGames": 3,
+     "absentDurationInDays": 8
+    },
+    {
+     "reason": "Rest",
+     "season": "2022",
+     "toDate": "26.05.2022",
+     "fromDate": "23.05.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 4
+    },
+    {
+     "reason": "Ankle injury",
+     "season": "2022",
+     "toDate": "07.04.2022",
+     "fromDate": "31.03.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 8
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:59:07.696143+00:00"
+}

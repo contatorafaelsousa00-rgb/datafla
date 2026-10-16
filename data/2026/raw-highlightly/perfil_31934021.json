@@ -1,0 +1,239 @@
+{
+ "data": [
+  {
+   "id": 31934021,
+   "logo": null,
+   "name": "A. Valencia",
+   "fullName": "Anthony Lenín Valencia Bajaña",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "01/09/2026",
+     "contractExpiry": "31/12/2031",
+     "latestContractExtension": null
+    },
+    "foot": "left",
+    "height": "1,73 m",
+    "fullName": "Anthony Valencia",
+    "position": {
+     "main": "Right Winger",
+     "secondary": null
+    },
+    "birthDate": "21/07/2003",
+    "deathDate": null,
+    "birthPlace": "Guayaquil",
+    "citizenship": "Ecuador"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "29/08/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "31/08/2026",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€5.00M",
+     "from": "Royal Antwerp",
+     "type": "transfer",
+     "season": "26/27",
+     "marketValue": "€1.80M",
+     "transferDate": "Sep 1, 2026"
+    },
+    {
+     "to": "Royal Antwerp",
+     "fee": "€1.50M",
+     "from": "Independiente",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": "€800.00K",
+     "transferDate": "Jul 1, 2022"
+    },
+    {
+     "to": "Independiente",
+     "fee": null,
+     "from": "Independiente B",
+     "type": "transfer",
+     "season": "21/22",
+     "marketValue": "€150.00K",
+     "transferDate": "Jan 1, 2022"
+    },
+    {
+     "to": "Independiente B",
+     "fee": null,
+     "from": "Ind. Jrs.",
+     "type": "end of loan",
+     "season": "21/22",
+     "marketValue": "€150.00K",
+     "transferDate": "Dec 31, 2021"
+    },
+    {
+     "to": "Ind. Jrs.",
+     "fee": null,
+     "from": "Independiente B",
+     "type": "loan",
+     "season": "20/21",
+     "marketValue": null,
+     "transferDate": "Aug 1, 2020"
+    },
+    {
+     "to": "Independiente B",
+     "fee": null,
+     "from": "IDV U20",
+     "type": "transfer",
+     "season": "19/20",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2020"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 22,
+     "club": "Royal Antwerp FC",
+     "value": 1800000,
+     "currency": "€",
+     "recordedDate": "04/06/2026"
+    },
+    {
+     "age": 22,
+     "club": "Royal Antwerp FC",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 21,
+     "club": "Royal Antwerp FC",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "12/06/2025"
+    },
+    {
+     "age": 21,
+     "club": "Royal Antwerp FC",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "11/12/2024"
+    },
+    {
+     "age": 20,
+     "club": "Royal Antwerp FC",
+     "value": 800000,
+     "currency": "€",
+     "recordedDate": "04/06/2024"
+    },
+    {
+     "age": 20,
+     "club": "Royal Antwerp FC",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "19/12/2023"
+    },
+    {
+     "age": 19,
+     "club": "Royal Antwerp FC",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "09/06/2023"
+    },
+    {
+     "age": 19,
+     "club": "Royal Antwerp FC",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "04/11/2022"
+    },
+    {
+     "age": 19,
+     "club": "Royal Antwerp FC",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "07/09/2022"
+    },
+    {
+     "age": 18,
+     "club": "Independiente del Valle",
+     "value": 800000,
+     "currency": "€",
+     "recordedDate": "20/06/2022"
+    },
+    {
+     "age": 18,
+     "club": "Independiente Juniors",
+     "value": 150000,
+     "currency": "€",
+     "recordedDate": "30/12/2021"
+    },
+    {
+     "age": 17,
+     "club": "Independiente Juniors",
+     "value": 50000,
+     "currency": "€",
+     "recordedDate": "30/12/2020"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Cruciate ligament tear",
+     "season": "2025",
+     "toDate": "13.10.2025",
+     "fromDate": "27.02.2025",
+     "missedGames": 24,
+     "absentDurationInDays": 229
+    },
+    {
+     "reason": "Minor knock",
+     "season": "2024",
+     "toDate": "31.05.2024",
+     "fromDate": "08.05.2024",
+     "missedGames": 4,
+     "absentDurationInDays": 24
+    },
+    {
+     "reason": "Fracture of fibula shaft",
+     "season": "2024",
+     "toDate": "02.04.2024",
+     "fromDate": "25.10.2023",
+     "missedGames": 29,
+     "absentDurationInDays": 161
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2023",
+     "toDate": "30.06.2023",
+     "fromDate": "16.02.2023",
+     "missedGames": 17,
+     "absentDurationInDays": 135
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2023",
+     "toDate": "27.01.2023",
+     "fromDate": "01.01.2023",
+     "missedGames": 5,
+     "absentDurationInDays": 27
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2023",
+     "toDate": "23.08.2022",
+     "fromDate": "17.08.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 7
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:58:57.874717+00:00"
+}

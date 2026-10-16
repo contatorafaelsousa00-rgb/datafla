@@ -28,8 +28,11 @@ function renderFicha(js) {
   const lesionados = linhas.filter((l) => l.lesao_atual);
   const kpi = (r, v, e) => h("div", { class: "kpi" }, h("div", { class: "rotulo" }, r), h("div", { class: "valor" }, v), e ? h("div", { class: "extra" }, e) : null);
   const COLS = [["numero", "Nº"], ["jogador", "Jogador"], ["posicao_detalhada", "Posição"], ["idade", "Idade"], ["nacionalidade", "Nacionalidade"],
-    ["altura", "Altura"], ["pe", "Pé"], ["valor_mercado", "Valor de mercado"], ["contrato_ate", "Contrato até"], ["no_clube_desde", "No clube desde"],
-    ["jogos", "Jogos 2026"], ["minutos", "Min. 2026"]];
+    ["altura", "Altura"], ["pe", "Pé"], ["valor_mercado", "Valor"], ["contrato_ate", "Contrato até"], ["no_clube_desde", "Chegada"],
+    ["jogos", "Jogos"], ["minutos", "Min."]];
+  // larguras fixas: as tabelas de todos os grupos ficam com as colunas alinhadas
+  const LARGURAS = [40, 175, 165, 56, 118, 64, 76, 112, 98, 98, 58, 66];
+  const colunas = () => h("colgroup", {}, LARGURAS.map((w) => h("col", { style: `width:${w}px` })));
   const valor = (l, c) => (c === "jogos" || c === "minutos" ? l.t?.[c] ?? 0 : l[c]);
   const ordenar = (a, b) => { const x = valor(a, ordemFicha.campo), y = valor(b, ordemFicha.campo);
     const r = x == null ? 1 : y == null ? -1 : typeof x === "string" ? x.localeCompare(y) : x - y; return ordemFicha.desc ? -r : r; };
@@ -42,7 +45,7 @@ function renderFicha(js) {
       h("td", { class: "num" }, l.numero ?? ""),
       h("td", {}, h("b", {}, l.jogador), /u-?\s?(17|20|23)/i.test(l.clube_atual ?? "") ? h("span", { class: "sutil" }, " (base)") : null, l.lesao_atual ? h("span", { class: "selo-lesao", title: `Lesionado: ${l.lesao_atual}` },
         ` lesionado${l.lesao_volta ? ` até ${dataCurta(l.lesao_volta)}` : ""}`) : null),
-      h("td", {}, l.posicao_detalhada ?? "–", l.posicao_secundaria ? h("span", { class: "sutil" }, ` / ${l.posicao_secundaria}`) : null),
+      h("td", { class: "quebra" }, l.posicao_detalhada ?? "–", l.posicao_secundaria ? h("small", { class: "sutil pos-secundaria" }, `também ${l.posicao_secundaria}`) : null),
       h("td", { class: "num" }, l.idade ?? "–"), h("td", {}, l.nacionalidade ?? "–"),
       h("td", { class: "num" }, l.altura ? `${num(l.altura, 2)} m` : "–"), h("td", {}, l.pe ?? "–"),
       h("td", { class: "num", title: l.valor_data ? `Atualizado em ${dataCurta(l.valor_data)}; máximo da carreira ${euros(l.valor_maximo)}` : null },
@@ -63,9 +66,9 @@ function renderFicha(js) {
       if (!doGrupo.length) return null;
       return h("article", { class: "cartao" }, h("h2", {}, g ?? "Sem posição na fonte",
           h("span", { class: "sutil" }, ` · ${doGrupo.length} ${doGrupo.length === 1 ? "jogador" : "jogadores"} · ${euros(doGrupo.reduce((s, l) => s + (l.valor_mercado ?? 0), 0))}`)),
-        h("div", { class: "tabela-rolagem" }, h("table", { class: "tabela tabela-ficha" }, cab.cloneNode(true), h("tbody", {}, doGrupo.map(celula)))));
+        h("div", { class: "tabela-rolagem" }, h("table", { class: "tabela tabela-ficha" }, colunas(), cab.cloneNode(true), h("tbody", {}, doGrupo.map(celula)))));
     }),
-    h("p", { class: "sutil" }, "Fonte: perfil dos jogadores na Highlightly (dados do Transfermarkt), atualizado uma vez por semana. "
+    h("p", { class: "sutil" }, "Valor: valor de mercado (seta = subiu ou caiu na última avaliação). Chegada: data em que chegou ao clube. Jogos e minutos: temporada 2026, com os filtros atuais. Fonte da ficha: perfil dos jogadores na Highlightly (dados do Transfermarkt), atualizado uma vez por semana. "
       + "Contrato em vermelho: vence em até 6 meses. Clique no cabeçalho para ordenar e num jogador para ver o perfil."));
   // o clone do cabeçalho perde os cliques: religa em cada tabela
   caixa.querySelectorAll(".tabela-ficha thead th").forEach((th, i) => th.addEventListener("click", () => {

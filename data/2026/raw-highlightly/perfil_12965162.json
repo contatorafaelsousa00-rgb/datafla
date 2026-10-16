@@ -1,0 +1,260 @@
+{
+ "data": [
+  {
+   "id": 12965162,
+   "logo": null,
+   "name": "Andrew",
+   "fullName": "Andrew da Silva Ventura",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "15/01/2026",
+     "contractExpiry": "31/12/2029",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,89 m",
+    "fullName": "Andrew da Silva Ventura",
+    "position": {
+     "main": "Goalkeeper",
+     "secondary": null
+    },
+    "birthDate": "01/07/2001",
+    "deathDate": null,
+    "birthPlace": "Duque de Caxias",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "SC Braga",
+      "rumourDate": "01/08/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Wolverhampton Wanderers",
+      "rumourDate": "31/07/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "SC Braga",
+      "rumourDate": "01/08/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Wolverhampton Wanderers",
+      "rumourDate": "31/07/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Red Bull Bragantino",
+      "rumourDate": "03/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Esporte Clube Bahia",
+      "rumourDate": "03/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Botafogo de Futebol e Regatas",
+      "rumourDate": "03/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "02/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Porto",
+      "rumourDate": "02/01/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Paris Saint-Germain",
+      "rumourDate": "02/01/2023",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€1.50M",
+     "from": "Gil Vicente",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": "€7.00M",
+     "transferDate": "Jan 15, 2026"
+    },
+    {
+     "to": "Gil Vicente",
+     "fee": null,
+     "from": "Botafogo",
+     "type": "transfer",
+     "season": "21/22",
+     "marketValue": "€50.00K",
+     "transferDate": "Jul 20, 2021"
+    },
+    {
+     "to": "Botafogo",
+     "fee": null,
+     "from": "Botafogo U20",
+     "type": "transfer",
+     "season": "20/21",
+     "marketValue": "€50.00K",
+     "transferDate": "Jan 1, 2021"
+    },
+    {
+     "to": "Botafogo U20",
+     "fee": null,
+     "from": "Maranhão",
+     "type": "end of loan",
+     "season": "20/21",
+     "marketValue": "€50.00K",
+     "transferDate": "Aug 21, 2020"
+    },
+    {
+     "to": "Maranhão",
+     "fee": null,
+     "from": "Botafogo U20",
+     "type": "loan",
+     "season": "20/21",
+     "marketValue": "€50.00K",
+     "transferDate": "Jul 29, 2020"
+    },
+    {
+     "to": "Botafogo",
+     "fee": null,
+     "from": "Botafogo U17",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": null,
+     "transferDate": "Aug 1, 2018"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 24,
+     "club": "Gil Vicente FC",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "18/12/2025"
+    },
+    {
+     "age": 24,
+     "club": "Gil Vicente FC",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "30/09/2025"
+    },
+    {
+     "age": 23,
+     "club": "Gil Vicente FC",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "30/05/2025"
+    },
+    {
+     "age": 23,
+     "club": "Gil Vicente FC",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "19/12/2024"
+    },
+    {
+     "age": 22,
+     "club": "Gil Vicente FC",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "06/06/2024"
+    },
+    {
+     "age": 22,
+     "club": "Gil Vicente FC",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "27/12/2023"
+    },
+    {
+     "age": 21,
+     "club": "Gil Vicente FC",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "16/06/2023"
+    },
+    {
+     "age": 21,
+     "club": "Gil Vicente FC",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "01/11/2022"
+    },
+    {
+     "age": 21,
+     "club": "Gil Vicente FC",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "16/09/2022"
+    },
+    {
+     "age": 20,
+     "club": "Gil Vicente FC",
+     "value": 400000,
+     "currency": "€",
+     "recordedDate": "31/05/2022"
+    },
+    {
+     "age": 20,
+     "club": "Gil Vicente FC",
+     "value": 400000,
+     "currency": "€",
+     "recordedDate": "10/03/2022"
+    },
+    {
+     "age": 20,
+     "club": "Gil Vicente FC",
+     "value": 250000,
+     "currency": "€",
+     "recordedDate": "27/12/2021"
+    },
+    {
+     "age": 20,
+     "club": "Gil Vicente FC",
+     "value": 250000,
+     "currency": "€",
+     "recordedDate": "12/08/2021"
+    },
+    {
+     "age": 17,
+     "club": "Botafogo de Futebol e Regatas",
+     "value": 50000,
+     "currency": "€",
+     "recordedDate": "18/02/2019"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Unknown",
+     "season": "2023",
+     "toDate": "14.11.2022",
+     "fromDate": "13.10.2022",
+     "missedGames": 6,
+     "absentDurationInDays": 33
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:58:54.957496+00:00"
+}

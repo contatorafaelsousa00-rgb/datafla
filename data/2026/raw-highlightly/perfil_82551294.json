@@ -1,0 +1,48 @@
+{
+ "data": [
+  {
+   "id": 82551294,
+   "logo": null,
+   "name": "Johnny Góes",
+   "fullName": "Johnny Monteiro Góes",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo U20",
+     "joinedAt": "01/01/2025",
+     "contractExpiry": "-",
+     "latestContractExtension": null
+    },
+    "foot": "left",
+    "height": "1,87 m",
+    "fullName": "Johnny Monteiro Góes",
+    "position": {
+     "main": "Centre-Back",
+     "secondary": "Left-Back"
+    },
+    "birthDate": "27/03/2007",
+    "deathDate": null,
+    "birthPlace": null,
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [],
+    "historical": []
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "transfer",
+     "season": "24/25",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2025"
+    }
+   ],
+   "marketValue": [],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:58:59.745840+00:00"
+}

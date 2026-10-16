@@ -1,0 +1,123 @@
+{
+ "data": [
+  {
+   "id": 90210708,
+   "logo": null,
+   "name": "J. Freitas",
+   "fullName": null,
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "01/09/2026",
+     "contractExpiry": "31/12/2031",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,77 m",
+    "fullName": "Joaquín Freitas",
+    "position": {
+     "main": "Centre-Forward",
+     "secondary": null
+    },
+    "birthDate": "02/12/2006",
+    "deathDate": null,
+    "birthPlace": "San Fernando",
+    "citizenship": "Argentina"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Defensa y Justicia",
+      "rumourDate": "18/01/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "31/08/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Defensa y Justicia",
+      "rumourDate": "18/01/2026",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€8.00M",
+     "from": "River Plate",
+     "type": "transfer",
+     "season": "26/27",
+     "marketValue": "€1.00M",
+     "transferDate": "Sep 1, 2026"
+    },
+    {
+     "to": "River Plate",
+     "fee": null,
+     "from": "River Plate II",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2026"
+    },
+    {
+     "to": "River Plate II",
+     "fee": null,
+     "from": "River Plate U20",
+     "type": "transfer",
+     "season": "24/25",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2025"
+    },
+    {
+     "to": "River Plate U20",
+     "fee": "€100.00K",
+     "from": "Acassuso",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2024"
+    },
+    {
+     "to": "Acassuso",
+     "fee": null,
+     "from": "Acassuso II",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2023"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 19,
+     "club": "CR Flamengo",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "28/09/2026"
+    },
+    {
+     "age": 19,
+     "club": "CA River Plate",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "22/05/2026"
+    },
+    {
+     "age": 19,
+     "club": "CA River Plate",
+     "value": 500000,
+     "currency": "€",
+     "recordedDate": "18/03/2026"
+    }
+   ],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:59:00.662435+00:00"
+}

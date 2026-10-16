@@ -1,0 +1,585 @@
+{
+ "data": [
+  {
+   "id": 207844,
+   "logo": null,
+   "name": "G. Varela",
+   "fullName": "Guillermo Varela Olivera",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "12/01/2023",
+     "contractExpiry": "31/12/2027",
+     "latestContractExtension": "15/08/2025"
+    },
+    "foot": "right",
+    "height": "1,74 m",
+    "fullName": "Guillermo Varela",
+    "position": {
+     "main": "Right-Back",
+     "secondary": "Left-Back, Right Midfield"
+    },
+    "birthDate": "24/03/1993",
+    "deathDate": null,
+    "birthPlace": "Montevideo",
+    "citizenship": "Uruguay, Italy"
+   },
+   "rumours": {
+    "current": [],
+    "historical": [
+     {
+      "club": "Torino FC",
+      "rumourDate": "24/01/2014",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CA Boca Juniors",
+      "rumourDate": "05/08/2013",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester United",
+      "rumourDate": "08/06/2013",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CA River Plate",
+      "rumourDate": "05/12/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Dynamo Moscow",
+      "rumourDate": "15/10/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Torino FC",
+      "rumourDate": "16/08/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Copenhagen",
+      "rumourDate": "13/12/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "US Sassuolo",
+      "rumourDate": "11/08/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "ACF Fiorentina",
+      "rumourDate": "07/08/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SL Benfica",
+      "rumourDate": "12/07/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "UC Sampdoria",
+      "rumourDate": "03/07/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Inter Milan",
+      "rumourDate": "24/01/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CA Peñarol",
+      "rumourDate": "12/08/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Eintracht Frankfurt",
+      "rumourDate": "03/05/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Eintracht Frankfurt",
+      "rumourDate": "23/07/2016",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SV Werder Bremen",
+      "rumourDate": "19/07/2016",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Genoa CFC",
+      "rumourDate": "29/01/2016",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "13/12/2015",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Dynamo Moscow",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": "€2.00M",
+     "transferDate": "Jan 12, 2023"
+    },
+    {
+     "to": "Dynamo Moscow",
+     "fee": null,
+     "from": "Flamengo",
+     "type": "end of loan",
+     "season": "22/23",
+     "marketValue": "€2.00M",
+     "transferDate": "Jan 11, 2023"
+    },
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Dynamo Moscow",
+     "type": "loan",
+     "season": "22/23",
+     "marketValue": "€2.50M",
+     "transferDate": "Jul 30, 2022"
+    },
+    {
+     "to": "Dynamo Moscow",
+     "fee": "€1.00M",
+     "from": "Copenhagen",
+     "type": "transfer",
+     "season": "21/22",
+     "marketValue": "€2.00M",
+     "transferDate": "Jul 17, 2021"
+    },
+    {
+     "to": "Copenhagen",
+     "fee": null,
+     "from": "Dynamo Moscow",
+     "type": "end of loan",
+     "season": "20/21",
+     "marketValue": "€2.00M",
+     "transferDate": "Jun 30, 2021"
+    },
+    {
+     "to": "Dynamo Moscow",
+     "fee": null,
+     "from": "Copenhagen",
+     "type": "loan",
+     "season": "20/21",
+     "marketValue": "€1.50M",
+     "transferDate": "Oct 17, 2020"
+    },
+    {
+     "to": "Copenhagen",
+     "fee": "€1.75M",
+     "from": "Peñarol",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": "€2.00M",
+     "transferDate": "Jan 1, 2019"
+    },
+    {
+     "to": "Peñarol",
+     "fee": null,
+     "from": "Man Utd",
+     "type": "transfer",
+     "season": "17/18",
+     "marketValue": "€750.00K",
+     "transferDate": "Aug 12, 2017"
+    },
+    {
+     "to": "Man Utd",
+     "fee": null,
+     "from": "Frankfurt",
+     "type": "end of loan",
+     "season": "16/17",
+     "marketValue": "€750.00K",
+     "transferDate": "Jun 30, 2017"
+    },
+    {
+     "to": "Frankfurt",
+     "fee": null,
+     "from": "Man Utd",
+     "type": "loan",
+     "season": "16/17",
+     "marketValue": "€750.00K",
+     "transferDate": "Jul 23, 2016"
+    },
+    {
+     "to": "Man Utd",
+     "fee": null,
+     "from": "Man Utd U21",
+     "type": "transfer",
+     "season": "15/16",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2015"
+    },
+    {
+     "to": "Man Utd U21",
+     "fee": null,
+     "from": "RM Castilla",
+     "type": "end of loan",
+     "season": "14/15",
+     "marketValue": null,
+     "transferDate": "Jun 30, 2015"
+    },
+    {
+     "to": "RM Castilla",
+     "fee": null,
+     "from": "Man Utd U21",
+     "type": "loan",
+     "season": "14/15",
+     "marketValue": "€1.50M",
+     "transferDate": "Sep 1, 2014"
+    },
+    {
+     "to": "Man Utd U21",
+     "fee": "€2.40M",
+     "from": "Peñarol",
+     "type": "transfer",
+     "season": "13/14",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2013"
+    },
+    {
+     "to": "Peñarol",
+     "fee": null,
+     "from": "CA Peñarol U19",
+     "type": "transfer",
+     "season": "12/13",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2012"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 33,
+     "club": "CR Flamengo",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 32,
+     "club": "CR Flamengo",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 32,
+     "club": "CR Flamengo",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 1700000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 1700000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 1700000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "25/07/2023"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "07/04/2023"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "14/11/2022"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "19/08/2022"
+    },
+    {
+     "age": 29,
+     "club": "Dynamo Moscow",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "02/06/2022"
+    },
+    {
+     "age": 28,
+     "club": "Dynamo Moscow",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "29/12/2021"
+    },
+    {
+     "age": 28,
+     "club": "Dynamo Moscow",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "02/06/2021"
+    },
+    {
+     "age": 27,
+     "club": "Dynamo Moscow",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "29/12/2020"
+    },
+    {
+     "age": 27,
+     "club": "FC Copenhagen",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "31/07/2020"
+    },
+    {
+     "age": 27,
+     "club": "FC Copenhagen",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 26,
+     "club": "FC Copenhagen",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "22/12/2019"
+    },
+    {
+     "age": 26,
+     "club": "FC Copenhagen",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "08/06/2019"
+    },
+    {
+     "age": 24,
+     "club": "CA Peñarol",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "05/02/2018"
+    },
+    {
+     "age": 24,
+     "club": "Eintracht Frankfurt",
+     "value": 750000,
+     "currency": "€",
+     "recordedDate": "19/06/2017"
+    },
+    {
+     "age": 23,
+     "club": "Eintracht Frankfurt",
+     "value": 750000,
+     "currency": "€",
+     "recordedDate": "07/02/2017"
+    },
+    {
+     "age": 23,
+     "club": "Manchester United",
+     "value": 750000,
+     "currency": "€",
+     "recordedDate": "22/07/2016"
+    },
+    {
+     "age": 22,
+     "club": "Manchester United",
+     "value": 500000,
+     "currency": "€",
+     "recordedDate": "24/02/2016"
+    },
+    {
+     "age": 20,
+     "club": "Manchester United U21",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "18/09/2013"
+    },
+    {
+     "age": 20,
+     "club": "Manchester United U21",
+     "value": 1750000,
+     "currency": "€",
+     "recordedDate": "22/07/2013"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Fitness",
+     "season": "2017",
+     "toDate": "23.02.2017",
+     "fromDate": "16.01.2017",
+     "missedGames": 6,
+     "absentDurationInDays": 39
+    },
+    {
+     "reason": "Torn ankle ligaments",
+     "season": "2017",
+     "toDate": "16.01.2017",
+     "fromDate": "12.09.2016",
+     "missedGames": 15,
+     "absentDurationInDays": 127
+    },
+    {
+     "reason": "Ankle injury",
+     "season": "2026",
+     "toDate": "17.02.2026",
+     "fromDate": "05.02.2026",
+     "missedGames": 3,
+     "absentDurationInDays": 13
+    },
+    {
+     "reason": "Inflammation of pubic bone",
+     "season": "2026",
+     "toDate": "17.09.2025",
+     "fromDate": "06.09.2025",
+     "missedGames": 2,
+     "absentDurationInDays": 12
+    },
+    {
+     "reason": "Hip flexor problems",
+     "season": "2025",
+     "toDate": "14.08.2024",
+     "fromDate": "08.08.2024",
+     "missedGames": 1,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Knee injury",
+     "season": "2024",
+     "toDate": "18.10.2023",
+     "fromDate": "18.08.2023",
+     "missedGames": 13,
+     "absentDurationInDays": 62
+    },
+    {
+     "reason": "Unknown",
+     "season": "2023",
+     "toDate": "16.05.2023",
+     "fromDate": "25.04.2023",
+     "missedGames": 6,
+     "absentDurationInDays": 22
+    },
+    {
+     "reason": "Unknown",
+     "season": "2023",
+     "toDate": "08.11.2022",
+     "fromDate": "20.10.2022",
+     "missedGames": 6,
+     "absentDurationInDays": 20
+    },
+    {
+     "reason": "Fitness",
+     "season": "2020",
+     "toDate": "02.11.2019",
+     "fromDate": "30.10.2019",
+     "missedGames": 1,
+     "absentDurationInDays": 4
+    },
+    {
+     "reason": "Ankle injury",
+     "season": "2019",
+     "toDate": "31.12.2018",
+     "fromDate": "05.09.2018",
+     "missedGames": 14,
+     "absentDurationInDays": 118
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2018",
+     "toDate": "13.06.2018",
+     "fromDate": "08.06.2018",
+     "missedGames": null,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Rest",
+     "season": "2018",
+     "toDate": "30.04.2018",
+     "fromDate": "28.04.2018",
+     "missedGames": 1,
+     "absentDurationInDays": 3
+    },
+    {
+     "reason": "Knock",
+     "season": "2018",
+     "toDate": "08.12.2017",
+     "fromDate": "23.11.2017",
+     "missedGames": 3,
+     "absentDurationInDays": 16
+    },
+    {
+     "reason": "Inflamed wound",
+     "season": "2017",
+     "toDate": "28.05.2017",
+     "fromDate": "23.05.2017",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Ankle problems",
+     "season": "2017",
+     "toDate": "13.04.2017",
+     "fromDate": "27.03.2017",
+     "missedGames": 3,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Remove screws/nails",
+     "season": "2017",
+     "toDate": "23.03.2017",
+     "fromDate": "09.03.2017",
+     "missedGames": 2,
+     "absentDurationInDays": 15
+    },
+    {
+     "reason": "Ankle problems",
+     "season": "2017",
+     "toDate": "09.03.2017",
+     "fromDate": "02.03.2017",
+     "missedGames": 1,
+     "absentDurationInDays": 8
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:58:56.879679+00:00"
+}

@@ -1,0 +1,721 @@
+{
+ "data": [
+  {
+   "id": 368683,
+   "logo": null,
+   "name": "Jorginho",
+   "fullName": "Jorge Luiz Frello Filho",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "06/06/2025",
+     "contractExpiry": "30/06/2028",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,80 m",
+    "fullName": "Jorge Luiz Frello Filho",
+    "position": {
+     "main": "Defensive Midfield",
+     "secondary": "Central Midfield"
+    },
+    "birthDate": "20/12/1991",
+    "deathDate": null,
+    "birthPlace": "Imbituba",
+    "citizenship": "Italy, Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "AS Monaco",
+      "rumourDate": "16/07/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Torino FC",
+      "rumourDate": "23/06/2015",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Palermo FC",
+      "rumourDate": "29/05/2015",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Hellas Verona",
+      "rumourDate": "29/05/2015",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Liverpool FC",
+      "rumourDate": "16/01/2014",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "ACF Fiorentina",
+      "rumourDate": "16/01/2014",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Atlético de Madrid",
+      "rumourDate": "10/01/2014",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Zenit St. Petersburg",
+      "rumourDate": "24/12/2013",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sevilla FC",
+      "rumourDate": "03/11/2013",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Everton FC",
+      "rumourDate": "03/08/2013",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AC Milan",
+      "rumourDate": "21/07/2013",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Inter Milan",
+      "rumourDate": "15/01/2013",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Newcastle United",
+      "rumourDate": "29/12/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "03/11/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AC Milan",
+      "rumourDate": "03/11/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Juventus FC",
+      "rumourDate": "29/05/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "09/04/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Paris Saint-Germain",
+      "rumourDate": "28/09/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AS Roma",
+      "rumourDate": "20/08/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bayern Munich",
+      "rumourDate": "28/05/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Chelsea FC",
+      "rumourDate": "14/07/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester City",
+      "rumourDate": "13/07/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester United",
+      "rumourDate": "02/05/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Liverpool FC",
+      "rumourDate": "22/03/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Arsenal FC",
+      "rumourDate": "30/10/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AFC Bournemouth",
+      "rumourDate": "09/08/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Real Madrid",
+      "rumourDate": "20/03/2016",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AS Monaco",
+      "rumourDate": "16/07/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "07/06/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "NEOM SC",
+      "rumourDate": "24/04/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sociedade Esportiva Palmeiras",
+      "rumourDate": "10/01/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Juventus FC",
+      "rumourDate": "09/05/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "07/04/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Beşiktaş JK",
+      "rumourDate": "22/01/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "16/01/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fenerbahce",
+      "rumourDate": "04/09/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Nassr FC",
+      "rumourDate": "17/07/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Ahli SFC",
+      "rumourDate": "17/07/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SS Lazio",
+      "rumourDate": "27/06/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Arsenal FC",
+      "rumourDate": "31/01/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "12/01/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Unknown",
+      "rumourDate": "12/01/2023",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/azpilicueta-jorginho-lukaku-amp-co-the-last-chelsea-xi-to-beat-arsenal-revealed/view/news/486597",
+     "date": "Sep 6, 2026",
+     "title": "Azpilicueta, Jorginho, Lukaku & Co. - the last Chelsea XI to beat Arsenal revealed"
+    },
+    {
+     "url": "https://www.transfermarkt.com/better-than-eden-hazard-cole-palmer-hat-trick-helps-chelsea-beat-sorry-wolves/view/news/475163",
+     "date": "Feb 7, 2026",
+     "title": "Better than Eden Hazard? Cole Palmer hat-trick helps Chelsea beat sorry Wolves"
+    },
+    {
+     "url": "https://www.transfermarkt.com/you-genuinely-cant-win-the-premier-league-with-kids-why-chelsea-need-more-experience/view/news/473475",
+     "date": "Jan 14, 2026",
+     "title": "You genuinely can't win the Premier League with kids - Why Chelsea need more experience"
+    },
+    {
+     "url": "https://www.transfermarkt.com/kane-jorginho-amp-co-which-players-have-scored-the-most-champions-league-penalties-/view/news/460582",
+     "date": "Sep 17, 2025",
+     "title": "Kane, Jorginho & Co. - Which players have scored the most Champions League penalties?"
+    },
+    {
+     "url": "https://www.transfermarkt.com/premier-league-players-out-of-contract-ranked-by-total-market-value-from-each-club/view/news/454176",
+     "date": "May 22, 2025",
+     "title": "Premier League players out of contract: Ranked by total market value from each club"
+    },
+    {
+     "url": "https://www.transfermarkt.com/just-one-win-in-last-11-games-vs-arsenal-are-mikel-artetas-side-chelseas-new-bogey-team-/view/news/451309",
+     "date": "Mar 15, 2025",
+     "title": "Just one win in last 11 games vs Arsenal - Are Mikel Arteta's side Chelsea's new bogey team?"
+    },
+    {
+     "url": "https://www.transfermarkt.com/best-midfielder-in-la-liga-arsenal-virtually-complete-summer-deal-to-sign-martin-zubimendi/view/news/441919",
+     "date": "Jan 14, 2025",
+     "title": "'Best midfielder in La Liga' - Arsenal 'virtually complete' summer deal to sign Martín Zubimendi"
+    },
+    {
+     "url": "https://www.transfermarkt.com/potentially-without-euro-437m-worth-of-talent-how-arsenal-could-line-up-for-the-north-london-derby/view/news/443751",
+     "date": "Sep 12, 2024",
+     "title": "Potentially without €437m worth of talent - How Arsenal could line up for the North London derby"
+    },
+    {
+     "url": "https://www.transfermarkt.com/10-goals-in-last-15-pl-games-kai-havertz-proves-again-why-arsenal-dont-need-a-new-striker/view/news/442420",
+     "date": "Aug 19, 2024",
+     "title": "10 goals in last 15 PL games - Kai Havertz proves again why Arsenal don't need a new striker"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Arsenal",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": "€6.00M",
+     "transferDate": "Jun 6, 2025"
+    },
+    {
+     "to": "Arsenal",
+     "fee": "€11.30M",
+     "from": "Chelsea",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": "€35.00M",
+     "transferDate": "Jan 31, 2023"
+    },
+    {
+     "to": "Chelsea",
+     "fee": "€57.00M",
+     "from": "Napoli",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": "€50.00M",
+     "transferDate": "Jul 14, 2018"
+    },
+    {
+     "to": "Napoli",
+     "fee": "€9.50M",
+     "from": "Hellas Verona",
+     "type": "transfer",
+     "season": "13/14",
+     "marketValue": "€10.00M",
+     "transferDate": "Jan 18, 2014"
+    },
+    {
+     "to": "Hellas Verona",
+     "fee": null,
+     "from": "Sambonifacese",
+     "type": "end of loan",
+     "season": "10/11",
+     "marketValue": null,
+     "transferDate": "Jun 30, 2011"
+    },
+    {
+     "to": "Sambonifacese",
+     "fee": null,
+     "from": "Hellas Verona",
+     "type": "loan",
+     "season": "10/11",
+     "marketValue": null,
+     "transferDate": "Jul 2, 2010"
+    },
+    {
+     "to": "Hellas Verona",
+     "fee": null,
+     "from": "Verona U20",
+     "type": "transfer",
+     "season": "10/11",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2010"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 34,
+     "club": "CR Flamengo",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "28/09/2026"
+    },
+    {
+     "age": 34,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 33,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 33,
+     "club": "Arsenal FC",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "30/05/2025"
+    },
+    {
+     "age": 33,
+     "club": "Arsenal FC",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "18/03/2025"
+    },
+    {
+     "age": 32,
+     "club": "Arsenal FC",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "16/12/2024"
+    },
+    {
+     "age": 32,
+     "club": "Arsenal FC",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "27/05/2024"
+    },
+    {
+     "age": 31,
+     "club": "Arsenal FC",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "19/12/2023"
+    },
+    {
+     "age": 31,
+     "club": "Arsenal FC",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "09/10/2023"
+    },
+    {
+     "age": 31,
+     "club": "Arsenal FC",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "20/06/2023"
+    },
+    {
+     "age": 30,
+     "club": "Chelsea FC",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "03/11/2022"
+    },
+    {
+     "age": 30,
+     "club": "Chelsea FC",
+     "value": 40000000,
+     "currency": "€",
+     "recordedDate": "15/06/2022"
+    },
+    {
+     "age": 30,
+     "club": "Chelsea FC",
+     "value": 45000000,
+     "currency": "€",
+     "recordedDate": "23/12/2021"
+    },
+    {
+     "age": 29,
+     "club": "Chelsea FC",
+     "value": 45000000,
+     "currency": "€",
+     "recordedDate": "15/07/2021"
+    },
+    {
+     "age": 29,
+     "club": "Chelsea FC",
+     "value": 40000000,
+     "currency": "€",
+     "recordedDate": "25/05/2021"
+    },
+    {
+     "age": 29,
+     "club": "Chelsea FC",
+     "value": 45000000,
+     "currency": "€",
+     "recordedDate": "18/03/2021"
+    },
+    {
+     "age": 28,
+     "club": "Chelsea FC",
+     "value": 50000000,
+     "currency": "€",
+     "recordedDate": "13/10/2020"
+    },
+    {
+     "age": 28,
+     "club": "Chelsea FC",
+     "value": 52000000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 27,
+     "club": "Chelsea FC",
+     "value": 65000000,
+     "currency": "€",
+     "recordedDate": "10/12/2019"
+    },
+    {
+     "age": 27,
+     "club": "Chelsea FC",
+     "value": 65000000,
+     "currency": "€",
+     "recordedDate": "13/06/2019"
+    },
+    {
+     "age": 26,
+     "club": "Chelsea FC",
+     "value": 65000000,
+     "currency": "€",
+     "recordedDate": "19/12/2018"
+    },
+    {
+     "age": 26,
+     "club": "Chelsea FC",
+     "value": 60000000,
+     "currency": "€",
+     "recordedDate": "17/10/2018"
+    },
+    {
+     "age": 26,
+     "club": "SSC Napoli",
+     "value": 50000000,
+     "currency": "€",
+     "recordedDate": "07/06/2018"
+    },
+    {
+     "age": 26,
+     "club": "SSC Napoli",
+     "value": 40000000,
+     "currency": "€",
+     "recordedDate": "24/03/2018"
+    },
+    {
+     "age": 26,
+     "club": "SSC Napoli",
+     "value": 28000000,
+     "currency": "€",
+     "recordedDate": "29/12/2017"
+    },
+    {
+     "age": 25,
+     "club": "SSC Napoli",
+     "value": 22000000,
+     "currency": "€",
+     "recordedDate": "08/06/2017"
+    },
+    {
+     "age": 25,
+     "club": "SSC Napoli",
+     "value": 19000000,
+     "currency": "€",
+     "recordedDate": "02/01/2017"
+    },
+    {
+     "age": 24,
+     "club": "SSC Napoli",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "15/07/2016"
+    },
+    {
+     "age": 24,
+     "club": "SSC Napoli",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "01/04/2016"
+    },
+    {
+     "age": 24,
+     "club": "SSC Napoli",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "04/01/2016"
+    },
+    {
+     "age": 23,
+     "club": "SSC Napoli",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "05/11/2015"
+    },
+    {
+     "age": 23,
+     "club": "SSC Napoli",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "01/07/2015"
+    },
+    {
+     "age": 23,
+     "club": "SSC Napoli",
+     "value": 11000000,
+     "currency": "€",
+     "recordedDate": "07/01/2015"
+    },
+    {
+     "age": 22,
+     "club": "SSC Napoli",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "01/07/2014"
+    },
+    {
+     "age": 22,
+     "club": "Hellas Verona",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "07/01/2014"
+    },
+    {
+     "age": 21,
+     "club": "Hellas Verona",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "11/11/2013"
+    },
+    {
+     "age": 21,
+     "club": "Hellas Verona",
+     "value": 5500000,
+     "currency": "€",
+     "recordedDate": "25/06/2013"
+    },
+    {
+     "age": 21,
+     "club": "Hellas Verona",
+     "value": 2600000,
+     "currency": "€",
+     "recordedDate": "25/12/2012"
+    },
+    {
+     "age": 20,
+     "club": "Hellas Verona",
+     "value": 1400000,
+     "currency": "€",
+     "recordedDate": "14/06/2012"
+    },
+    {
+     "age": 20,
+     "club": "Hellas Verona",
+     "value": 175000,
+     "currency": "€",
+     "recordedDate": "01/01/2012"
+    },
+    {
+     "age": 19,
+     "club": "Hellas Verona",
+     "value": 100000,
+     "currency": "€",
+     "recordedDate": "11/07/2011"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Foot injury",
+     "season": "2026",
+     "toDate": "21.07.2026",
+     "fromDate": "24.05.2026",
+     "missedGames": 2,
+     "absentDurationInDays": 59
+    },
+    {
+     "reason": "Calf injury",
+     "season": "2026",
+     "toDate": "21.04.2026",
+     "fromDate": "06.04.2026",
+     "missedGames": 4,
+     "absentDurationInDays": 16
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2026",
+     "toDate": "24.02.2026",
+     "fromDate": "07.02.2026",
+     "missedGames": 5,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Thigh problems",
+     "season": "2026",
+     "toDate": "18.11.2025",
+     "fromDate": "30.10.2025",
+     "missedGames": 4,
+     "absentDurationInDays": 20
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2026",
+     "toDate": "24.09.2025",
+     "fromDate": "26.08.2025",
+     "missedGames": 4,
+     "absentDurationInDays": 30
+    },
+    {
+     "reason": "Chest injury",
+     "season": "2025",
+     "toDate": "06.05.2025",
+     "fromDate": "13.04.2025",
+     "missedGames": 5,
+     "absentDurationInDays": 24
+    },
+    {
+     "reason": "Unknown",
+     "season": "2022",
+     "toDate": "08.05.2022",
+     "fromDate": "01.05.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 8
+    },
+    {
+     "reason": "Muscle fatigue",
+     "season": "2015",
+     "toDate": "06.10.2014",
+     "fromDate": "29.09.2014",
+     "missedGames": 2,
+     "absentDurationInDays": 8
+    },
+    {
+     "reason": "Fever",
+     "season": "2014",
+     "toDate": "16.12.2013",
+     "fromDate": "13.12.2013",
+     "missedGames": 1,
+     "absentDurationInDays": 4
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:59:05.754945+00:00"
+}

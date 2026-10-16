@@ -1,0 +1,204 @@
+{
+ "data": [
+  {
+   "id": 53557448,
+   "logo": null,
+   "name": "Evertton Araújo",
+   "fullName": "Evertton Gustavo Fernandes Araújo",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "01/01/2024",
+     "contractExpiry": "31/12/2028",
+     "latestContractExtension": "06/12/2024"
+    },
+    "foot": "right",
+    "height": "1,84 m",
+    "fullName": "Evertton Gustavo Fernandes Araújo",
+    "position": {
+     "main": "Defensive Midfield",
+     "secondary": "Central Midfield"
+    },
+    "birthDate": "28/02/2003",
+    "deathDate": null,
+    "birthPlace": "Volta Redonda",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "AS Monaco",
+      "rumourDate": "06/07/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "AS Monaco",
+      "rumourDate": "06/07/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "16/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AC Milan",
+      "rumourDate": "02/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Eintracht Frankfurt",
+      "rumourDate": "15/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bayer 04 Leverkusen",
+      "rumourDate": "21/05/2025",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/brazil-market-values-neymar-down-despite-world-cup-call-up-lucas-paqueta-drops-by-euro-3m/view/news/479850",
+     "date": "May 26, 2026",
+     "title": "Brazil market values: Neymar down despite World Cup call up - Lucas Paquetá drops by €3m"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€130.00K",
+     "from": "V. Redonda U20",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": "€200.00K",
+     "transferDate": "Jan 1, 2024"
+    },
+    {
+     "to": "V. Redonda U20",
+     "fee": null,
+     "from": "Flamengo U20",
+     "type": "end of loan",
+     "season": "23/24",
+     "marketValue": "€200.00K",
+     "transferDate": "Dec 31, 2023"
+    },
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "V. Redonda U20",
+     "type": "loan",
+     "season": "22/23",
+     "marketValue": null,
+     "transferDate": "Feb 23, 2023"
+    },
+    {
+     "to": "V. Redonda U20",
+     "fee": null,
+     "from": "Flamengo U20",
+     "type": "end of loan",
+     "season": "22/23",
+     "marketValue": null,
+     "transferDate": "Dec 31, 2022"
+    },
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "V. Redonda U20",
+     "type": "loan",
+     "season": "21/22",
+     "marketValue": null,
+     "transferDate": "Apr 12, 2022"
+    },
+    {
+     "to": "V. Redonda U20",
+     "fee": null,
+     "from": "Botafogo U17",
+     "type": "transfer",
+     "season": "19/20",
+     "marketValue": null,
+     "transferDate": "Aug 1, 2019"
+    },
+    {
+     "to": "Botafogo U17",
+     "fee": null,
+     "from": "Cruzeiro U17",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2019"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 23,
+     "club": "CR Flamengo",
+     "value": 14000000,
+     "currency": "€",
+     "recordedDate": "28/09/2026"
+    },
+    {
+     "age": 23,
+     "club": "CR Flamengo",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 22,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 22,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 21,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 21,
+     "club": "CR Flamengo",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "27/09/2024"
+    },
+    {
+     "age": 21,
+     "club": "CR Flamengo",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 21,
+     "club": "CR Flamengo",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 20,
+     "club": "CR Flamengo U20",
+     "value": 200000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    }
+   ],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:59:09.602826+00:00"
+}

@@ -1,0 +1,747 @@
+{
+ "data": [
+  {
+   "id": 965349,
+   "logo": null,
+   "name": "N. de la Cruz",
+   "fullName": "Diego Nicolás de la Cruz Arcosa",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "01/01/2024",
+     "contractExpiry": "30/06/2028",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,67 m",
+    "fullName": "Nicolás de la Cruz",
+    "position": {
+     "main": "Central Midfield",
+     "secondary": "Attacking Midfield, Left Midfield"
+    },
+    "birthDate": "01/06/1997",
+    "deathDate": null,
+    "birthPlace": "Montevideo",
+    "citizenship": "Uruguay, Argentina"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "CA Peñarol",
+      "rumourDate": "28/07/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "VfB Stuttgart",
+      "rumourDate": "31/01/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Inter Milan",
+      "rumourDate": "21/07/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Liverpool FC",
+      "rumourDate": "07/02/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "07/02/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CA Peñarol",
+      "rumourDate": "28/07/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CA River Plate",
+      "rumourDate": "26/11/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "15/12/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Duhail SC",
+      "rumourDate": "26/07/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SS Lazio",
+      "rumourDate": "24/07/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sociedade Esportiva Palmeiras",
+      "rumourDate": "11/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fenerbahce",
+      "rumourDate": "15/04/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Clube Atlético Mineiro",
+      "rumourDate": "24/05/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Real Sociedad",
+      "rumourDate": "16/05/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester United",
+      "rumourDate": "26/06/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AS Roma",
+      "rumourDate": "14/06/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sporting CP",
+      "rumourDate": "28/06/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Borussia Dortmund",
+      "rumourDate": "06/05/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Everton FC",
+      "rumourDate": "05/05/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester City",
+      "rumourDate": "03/12/2019",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/brazil-market-values-kaio-jorge-hits-new-heights-neymar-falls-after-national-team-snub/view/news/460011",
+     "date": "Sep 5, 2025",
+     "title": "Brazil market values: Kaio Jorge hits new heights, Neymar falls after national team snub"
+    },
+    {
+     "url": "https://www.transfermarkt.com/estevao-franco-mastantuono-amp-co-the-most-valuable-players-in-the-2025-copa-libertadores/view/news/452078",
+     "date": "Apr 1, 2025",
+     "title": "Estêvão, Franco Mastantuono & Co. - The most valuable players in the 2025 Copa Libertadores"
+    },
+    {
+     "url": "https://www.transfermarkt.com/new-market-values-in-argentine-primera-division-man-citys-echeverri-on-the-rise/view/news/434859",
+     "date": "Mar 11, 2024",
+     "title": "New market values in Argentine Primera División: Man City’s Echeverri on the rise"
+    },
+    {
+     "url": "https://www.transfermarkt.com/argentina-market-values-top-talent-claudio-echeverri-up-by-200-facundo-garces-drops/view/news/431495",
+     "date": "Dec 19, 2023",
+     "title": "Argentina market values: Top talent Claudio Echeverri up by 200% - Facundo Garcés drops"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-argentina-mateo-retegui-doubles-market-value-linked-with-move-to-europe/view/news/420165",
+     "date": "Apr 5, 2023",
+     "title": "Market values Argentina: Mateo Retegui doubles market value - Linked with move to Europe"
+    },
+    {
+     "url": "https://www.transfermarkt.com/argentina-market-values-boca-talent-langoni-in-the-top-20-godin-drops/view/news/412973",
+     "date": "Oct 26, 2022",
+     "title": "Argentina market values: Boca talent Langoni in the top 20 - Godín drops"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-argentina-copetti-retegui-and-premier-league-target-buonanotte-on-the-up/view/news/410892",
+     "date": "Sep 6, 2022",
+     "title": "Market values Argentina: Copetti, Retegui and Premier League target Buonanotte on the up"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-argentina-fernandez-moves-up-to-2nd-alcarez-makes-jump-into-top-10/view/news/404839",
+     "date": "May 24, 2022",
+     "title": "Market values Argentina: Fernández moves up to 2nd - Alcarez makes jump into top 10"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-argentina-man-city-signing-alvarez-now-sole-leader-de-la-cruz-drops/view/news/399901",
+     "date": "Feb 8, 2022",
+     "title": "Market values Argentina: Man City signing Álvarez now sole leader - De la Cruz drops"
+    },
+    {
+     "url": "https://www.transfermarkt.com/before-superclasico-against-boca-15-covid-cases-at-river-plate-all-goalkeepers-affected/view/news/385241",
+     "date": "May 16, 2021",
+     "title": "Before Superclásico against Boca: 15 Covid cases at River Plate - All goalkeepers affected"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-argentina-top-talent-almada-and-river-striker-borre-among-biggest-winners/view/news/380018",
+     "date": "Feb 9, 2021",
+     "title": "Market values Argentina: Top talent Almada and River striker Borré among biggest winners"
+    },
+    {
+     "url": "https://www.transfermarkt.com/jorge-moreira-wants-to-stay-with-portland-timbers-refuses-return-to-river-plate/view/news/363430",
+     "date": "Jun 21, 2020",
+     "title": "Jorge Moreira wants to stay with Portland Timbers - Refuses return to River Plate"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€14.50M",
+     "from": "River Plate",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": "€14.00M",
+     "transferDate": "Jan 1, 2024"
+    },
+    {
+     "to": "River Plate",
+     "fee": "€12.50M",
+     "from": "Liverpool FC",
+     "type": "transfer",
+     "season": "17/18",
+     "marketValue": "€1.50M",
+     "transferDate": "Aug 15, 2017"
+    },
+    {
+     "to": "Liverpool FC",
+     "fee": null,
+     "from": "Liverpool U19",
+     "type": "transfer",
+     "season": "15/16",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2015"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "28/09/2026"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "05/09/2025"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "19/07/2024"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 16000000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 14000000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 26,
+     "club": "CA River Plate",
+     "value": 14000000,
+     "currency": "€",
+     "recordedDate": "19/12/2023"
+    },
+    {
+     "age": 26,
+     "club": "CA River Plate",
+     "value": 11000000,
+     "currency": "€",
+     "recordedDate": "04/07/2023"
+    },
+    {
+     "age": 25,
+     "club": "CA River Plate",
+     "value": 11000000,
+     "currency": "€",
+     "recordedDate": "05/04/2023"
+    },
+    {
+     "age": 25,
+     "club": "CA River Plate",
+     "value": 13000000,
+     "currency": "€",
+     "recordedDate": "26/10/2022"
+    },
+    {
+     "age": 24,
+     "club": "CA River Plate",
+     "value": 13000000,
+     "currency": "€",
+     "recordedDate": "24/05/2022"
+    },
+    {
+     "age": 24,
+     "club": "CA River Plate",
+     "value": 16000000,
+     "currency": "€",
+     "recordedDate": "08/02/2022"
+    },
+    {
+     "age": 24,
+     "club": "CA River Plate",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "20/10/2021"
+    },
+    {
+     "age": 24,
+     "club": "CA River Plate",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "11/06/2021"
+    },
+    {
+     "age": 23,
+     "club": "CA River Plate",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "08/02/2021"
+    },
+    {
+     "age": 22,
+     "club": "CA River Plate",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 22,
+     "club": "CA River Plate",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "05/12/2019"
+    },
+    {
+     "age": 22,
+     "club": "CA River Plate",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "06/08/2019"
+    },
+    {
+     "age": 21,
+     "club": "CA River Plate",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "18/12/2018"
+    },
+    {
+     "age": 20,
+     "club": "CA River Plate",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "08/05/2018"
+    },
+    {
+     "age": 20,
+     "club": "CA River Plate",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "09/10/2017"
+    },
+    {
+     "age": 19,
+     "club": "Liverpool FC Montevideo",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "22/02/2017"
+    },
+    {
+     "age": 19,
+     "club": "Liverpool FC Montevideo",
+     "value": 650000,
+     "currency": "€",
+     "recordedDate": "09/09/2016"
+    },
+    {
+     "age": 18,
+     "club": "Liverpool FC Montevideo",
+     "value": 350000,
+     "currency": "€",
+     "recordedDate": "25/02/2016"
+    },
+    {
+     "age": 18,
+     "club": "Liverpool FC Montevideo",
+     "value": 75000,
+     "currency": "€",
+     "recordedDate": "14/08/2015"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Hamstring strain",
+     "season": "2020",
+     "toDate": "30.09.2019",
+     "fromDate": "19.09.2019",
+     "missedGames": 2,
+     "absentDurationInDays": 12
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2019",
+     "toDate": "14.11.2018",
+     "fromDate": "28.10.2018",
+     "missedGames": 3,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2018",
+     "toDate": "13.08.2018",
+     "fromDate": "04.04.2018",
+     "missedGames": 15,
+     "absentDurationInDays": 132
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2018",
+     "toDate": "20.09.2017",
+     "fromDate": "16.09.2017",
+     "missedGames": 1,
+     "absentDurationInDays": 5
+    },
+    {
+     "reason": "Knock",
+     "season": "2017",
+     "toDate": "10.07.2017",
+     "fromDate": "14.06.2017",
+     "missedGames": 4,
+     "absentDurationInDays": 27
+    },
+    {
+     "reason": "Knock",
+     "season": "2017",
+     "toDate": "12.04.2017",
+     "fromDate": "07.04.2017",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2017",
+     "toDate": "14.03.2017",
+     "fromDate": "02.03.2017",
+     "missedGames": 2,
+     "absentDurationInDays": 13
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2017",
+     "toDate": "05.12.2016",
+     "fromDate": "18.11.2016",
+     "missedGames": 3,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Adductor injury",
+     "season": "2017",
+     "toDate": "07.09.2016",
+     "fromDate": "02.09.2016",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Meniscus injury",
+     "season": "2016",
+     "toDate": "25.04.2016",
+     "fromDate": "16.02.2016",
+     "missedGames": 7,
+     "absentDurationInDays": 70
+    },
+    {
+     "reason": "Edema in the knee",
+     "season": "2023",
+     "toDate": "29.03.2023",
+     "fromDate": "17.03.2023",
+     "missedGames": 3,
+     "absentDurationInDays": 13
+    },
+    {
+     "reason": "Knee surgery",
+     "season": "2023",
+     "toDate": "24.02.2023",
+     "fromDate": "01.01.2023",
+     "missedGames": 5,
+     "absentDurationInDays": 55
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2023",
+     "toDate": "02.11.2022",
+     "fromDate": "22.10.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 12
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2023",
+     "toDate": "04.10.2022",
+     "fromDate": "28.09.2022",
+     "missedGames": 2,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Knock",
+     "season": "2022",
+     "toDate": "05.07.2022",
+     "fromDate": "26.06.2022",
+     "missedGames": 2,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2022",
+     "toDate": "26.04.2022",
+     "fromDate": "24.04.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 3
+    },
+    {
+     "reason": "Flu",
+     "season": "2022",
+     "toDate": "07.03.2022",
+     "fromDate": "02.03.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2022",
+     "toDate": "23.02.2022",
+     "fromDate": "15.02.2022",
+     "missedGames": 2,
+     "absentDurationInDays": 9
+    },
+    {
+     "reason": "Foot injury",
+     "season": "2022",
+     "toDate": "05.02.2022",
+     "fromDate": "19.10.2021",
+     "missedGames": 14,
+     "absentDurationInDays": 110
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2022",
+     "toDate": "02.09.2021",
+     "fromDate": "24.08.2021",
+     "missedGames": 2,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2022",
+     "toDate": "16.08.2021",
+     "fromDate": "13.08.2021",
+     "missedGames": 1,
+     "absentDurationInDays": 4
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2022",
+     "toDate": "08.07.2021",
+     "fromDate": "01.07.2021",
+     "missedGames": 1,
+     "absentDurationInDays": 8
+    },
+    {
+     "reason": "Corona virus",
+     "season": "2021",
+     "toDate": "24.05.2021",
+     "fromDate": "15.05.2021",
+     "missedGames": 2,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2021",
+     "toDate": "19.04.2021",
+     "fromDate": "13.04.2021",
+     "missedGames": 1,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Ankle problems",
+     "season": "2020",
+     "toDate": "04.12.2019",
+     "fromDate": "25.11.2019",
+     "missedGames": 1,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2027",
+     "toDate": "05.09.2026",
+     "fromDate": "15.08.2026",
+     "missedGames": 5,
+     "absentDurationInDays": 22
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2026",
+     "toDate": "31.01.2026",
+     "fromDate": "10.01.2026",
+     "missedGames": 6,
+     "absentDurationInDays": 22
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2026",
+     "toDate": "21.11.2025",
+     "fromDate": "10.11.2025",
+     "missedGames": 4,
+     "absentDurationInDays": 12
+    },
+    {
+     "reason": "Virus",
+     "season": "2026",
+     "toDate": "28.10.2025",
+     "fromDate": "23.10.2025",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Muscle fatigue",
+     "season": "2026",
+     "toDate": "21.10.2025",
+     "fromDate": "14.10.2025",
+     "missedGames": 2,
+     "absentDurationInDays": 8
+    },
+    {
+     "reason": "Knock",
+     "season": "2026",
+     "toDate": "16.08.2025",
+     "fromDate": "17.07.2025",
+     "missedGames": 8,
+     "absentDurationInDays": 31
+    },
+    {
+     "reason": "Knee injury",
+     "season": "2025",
+     "toDate": "28.06.2025",
+     "fromDate": "19.05.2025",
+     "missedGames": 9,
+     "absentDurationInDays": 41
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "25.11.2024",
+     "fromDate": "21.10.2024",
+     "missedGames": 9,
+     "absentDurationInDays": 36
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "17.09.2024",
+     "fromDate": "30.08.2024",
+     "missedGames": 6,
+     "absentDurationInDays": 19
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2025",
+     "toDate": "10.08.2024",
+     "fromDate": "01.08.2024",
+     "missedGames": 2,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Tendonitis",
+     "season": "2024",
+     "toDate": "02.11.2023",
+     "fromDate": "23.10.2023",
+     "missedGames": 2,
+     "absentDurationInDays": 11
+    },
+    {
+     "reason": "Rest",
+     "season": "2024",
+     "toDate": "27.09.2023",
+     "fromDate": "23.09.2023",
+     "missedGames": 1,
+     "absentDurationInDays": 5
+    },
+    {
+     "reason": "Fever",
+     "season": "2024",
+     "toDate": "22.08.2023",
+     "fromDate": "19.08.2023",
+     "missedGames": 1,
+     "absentDurationInDays": 4
+    },
+    {
+     "reason": "Strain",
+     "season": "2023",
+     "toDate": "24.05.2023",
+     "fromDate": "19.05.2023",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2023",
+     "toDate": "15.04.2023",
+     "fromDate": "01.04.2023",
+     "missedGames": 3,
+     "absentDurationInDays": 15
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:59:03.633424+00:00"
+}

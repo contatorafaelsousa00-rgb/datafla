@@ -1,0 +1,439 @@
+{
+ "data": [
+  {
+   "id": 285285,
+   "logo": null,
+   "name": "Ayrton Lucas",
+   "fullName": "Ayrton Lucas Dantas de Medeiros",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "01/01/2023",
+     "contractExpiry": "31/12/2027",
+     "latestContractExtension": null
+    },
+    "foot": "left",
+    "height": "1,80 m",
+    "fullName": "Ayrton Lucas Dantas de Medeiros",
+    "position": {
+     "main": "Left-Back",
+     "secondary": "Left Midfield"
+    },
+    "birthDate": "19/06/1997",
+    "deathDate": null,
+    "birthPlace": "Carnaúba dos Dantas",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Santos FC",
+      "rumourDate": "27/05/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Santos FC",
+      "rumourDate": "27/05/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Nassr FC",
+      "rumourDate": "22/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SL Benfica",
+      "rumourDate": "17/05/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "29/03/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "24/06/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Olympique Lyon",
+      "rumourDate": "18/06/2019",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€7.00M",
+     "from": "Spartak Moscow",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": "€6.00M",
+     "transferDate": "Jan 1, 2023"
+    },
+    {
+     "to": "Spartak Moscow",
+     "fee": null,
+     "from": "Flamengo",
+     "type": "end of loan",
+     "season": "22/23",
+     "marketValue": "€6.00M",
+     "transferDate": "Dec 31, 2022"
+    },
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Spartak Moscow",
+     "type": "loan",
+     "season": "21/22",
+     "marketValue": "€4.50M",
+     "transferDate": "Apr 1, 2022"
+    },
+    {
+     "to": "Spartak Moscow",
+     "fee": "€7.00M",
+     "from": "Fluminense",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": "€1.50M",
+     "transferDate": "Jan 1, 2019"
+    },
+    {
+     "to": "Fluminense",
+     "fee": null,
+     "from": "Londrina-PR",
+     "type": "end of loan",
+     "season": "17/18",
+     "marketValue": "€500.00K",
+     "transferDate": "Nov 30, 2017"
+    },
+    {
+     "to": "Londrina-PR",
+     "fee": null,
+     "from": "Fluminense",
+     "type": "loan",
+     "season": "16/17",
+     "marketValue": "€250.00K",
+     "transferDate": "Jun 5, 2017"
+    },
+    {
+     "to": "Fluminense",
+     "fee": null,
+     "from": "Madureira",
+     "type": "transfer",
+     "season": "16/17",
+     "marketValue": "€250.00K",
+     "transferDate": "Jan 1, 2017"
+    },
+    {
+     "to": "Madureira",
+     "fee": null,
+     "from": "Fluminense U20",
+     "type": "end of loan",
+     "season": "16/17",
+     "marketValue": "€250.00K",
+     "transferDate": "Oct 31, 2016"
+    },
+    {
+     "to": "Fluminense U20",
+     "fee": null,
+     "from": "Madureira",
+     "type": "loan",
+     "season": "15/16",
+     "marketValue": "€250.00K",
+     "transferDate": "Apr 29, 2016"
+    },
+    {
+     "to": "Madureira",
+     "fee": null,
+     "from": "Fluminense U20",
+     "type": "end of loan",
+     "season": "15/16",
+     "marketValue": "€250.00K",
+     "transferDate": "Feb 22, 2016"
+    },
+    {
+     "to": "Fluminense U20",
+     "fee": null,
+     "from": "Madureira",
+     "type": "loan",
+     "season": "14/15",
+     "marketValue": null,
+     "transferDate": "Oct 22, 2014"
+    },
+    {
+     "to": "Madureira",
+     "fee": null,
+     "from": "ABC FC",
+     "type": "transfer",
+     "season": "14/15",
+     "marketValue": null,
+     "transferDate": "Oct 17, 2014"
+    },
+    {
+     "to": "ABC U20",
+     "fee": null,
+     "from": "ABC U20",
+     "type": "transfer",
+     "season": "13/14",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2014"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "12/03/2026"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "05/09/2025"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "25/07/2023"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "07/04/2023"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "14/11/2022"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "19/08/2022"
+    },
+    {
+     "age": 24,
+     "club": "Spartak Moscow",
+     "value": 4500000,
+     "currency": "€",
+     "recordedDate": "29/12/2021"
+    },
+    {
+     "age": 24,
+     "club": "Spartak Moscow",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "15/09/2021"
+    },
+    {
+     "age": 23,
+     "club": "Spartak Moscow",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "02/06/2021"
+    },
+    {
+     "age": 23,
+     "club": "Spartak Moscow",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "29/12/2020"
+    },
+    {
+     "age": 23,
+     "club": "Spartak Moscow",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "19/10/2020"
+    },
+    {
+     "age": 23,
+     "club": "Spartak Moscow",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "29/07/2020"
+    },
+    {
+     "age": 22,
+     "club": "Spartak Moscow",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 22,
+     "club": "Spartak Moscow",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "23/12/2019"
+    },
+    {
+     "age": 21,
+     "club": "Spartak Moscow",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "14/06/2019"
+    },
+    {
+     "age": 21,
+     "club": "Spartak Moscow",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "12/02/2019"
+    },
+    {
+     "age": 20,
+     "club": "Fluminense Football Club",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "23/05/2018"
+    },
+    {
+     "age": 20,
+     "club": "Londrina Esporte Clube (PR)",
+     "value": 500000,
+     "currency": "€",
+     "recordedDate": "30/10/2017"
+    },
+    {
+     "age": 18,
+     "club": "Fluminense FC U20",
+     "value": 250000,
+     "currency": "€",
+     "recordedDate": "27/05/2016"
+    },
+    {
+     "age": 18,
+     "club": "Fluminense FC U20",
+     "value": 250000,
+     "currency": "€",
+     "recordedDate": "15/12/2015"
+    },
+    {
+     "age": 17,
+     "club": "Fluminense FC U20",
+     "value": 50000,
+     "currency": "€",
+     "recordedDate": "31/05/2015"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Inflammation of pubic bone",
+     "season": "2026",
+     "toDate": "27.01.2026",
+     "fromDate": "10.01.2026",
+     "missedGames": 5,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Shin injury",
+     "season": "2026",
+     "toDate": "30.07.2025",
+     "fromDate": "13.07.2025",
+     "missedGames": 4,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2024",
+     "toDate": "20.06.2024",
+     "fromDate": "29.05.2024",
+     "missedGames": 3,
+     "absentDurationInDays": 23
+    },
+    {
+     "reason": "Metatarsal bruise",
+     "season": "2022",
+     "toDate": "31.03.2022",
+     "fromDate": "19.03.2022",
+     "missedGames": null,
+     "absentDurationInDays": 13
+    },
+    {
+     "reason": "Cold",
+     "season": "2021",
+     "toDate": "15.11.2020",
+     "fromDate": "09.11.2020",
+     "missedGames": null,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Leg injury",
+     "season": "2018",
+     "toDate": "08.06.2018",
+     "fromDate": "16.05.2018",
+     "missedGames": 5,
+     "absentDurationInDays": 24
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:59:06.732514+00:00"
+}

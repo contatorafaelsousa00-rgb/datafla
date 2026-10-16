@@ -588,3 +588,7 @@ body.sem-filtros .filtros { display: none; }
 .tabela-ficha .alerta-contrato { color: var(--marca); font-weight: 600; }
 .selo-lesao { font-size: 11.5px; color: var(--alerta); font-weight: 600; }
 .delta.sobe { color: var(--bom); } .delta.desce { color: var(--marca); }
+.tabela-ficha { table-layout: fixed; min-width: 1126px; }
+.tabela-ficha td.quebra { white-space: normal; }
+.tabela-ficha td:nth-child(2) { white-space: normal; }
+.pos-secundaria { display: block; font-size: 11.5px; line-height: 1.3; margin-top: 2px; }

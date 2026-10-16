@@ -1,0 +1,380 @@
+{
+ "data": [
+  {
+   "id": 3580472,
+   "logo": null,
+   "name": "Luiz Araújo",
+   "fullName": "Luiz de Araújo Guimarães Neto",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "01/07/2023",
+     "contractExpiry": "31/12/2027",
+     "latestContractExtension": null
+    },
+    "foot": "left",
+    "height": "1,75 m",
+    "fullName": "Luiz de Araújo Guimarães Neto",
+    "position": {
+     "main": "Right Winger",
+     "secondary": "Left Winger, Attacking Midfield"
+    },
+    "birthDate": "02/06/1996",
+    "deathDate": null,
+    "birthPlace": "Taquaritinga",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Besiktas JK",
+      "rumourDate": "10/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Sadd SC",
+      "rumourDate": "10/06/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Beşiktaş JK",
+      "rumourDate": "10/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Sadd SC",
+      "rumourDate": "10/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Atlanta United FC",
+      "rumourDate": "10/05/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Clube Atlético Mineiro",
+      "rumourDate": "08/05/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CD Cruz Azul",
+      "rumourDate": "29/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Cruzeiro Esporte Clube",
+      "rumourDate": "09/05/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "20/05/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "01/08/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Atlanta United FC",
+      "rumourDate": "06/08/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AC Milan",
+      "rumourDate": "23/05/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "LOSC Lille",
+      "rumourDate": "03/06/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "LOSC Lille",
+      "rumourDate": "21/01/2017",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/gareth-bale-chicharito-amp-co-the-top-25-selling-jerseys-in-major-league-soccer/view/news/411206",
+     "date": "Sep 12, 2022",
+     "title": "Gareth Bale, Chicharito & Co.: The top 25 selling jerseys in Major League Soccer"
+    },
+    {
+     "url": "https://www.transfermarkt.com/atlanta-united-hopeful-to-sign-luis-araujo-from-lille-among-club-record-signings/view/news/390566",
+     "date": "Aug 6, 2021",
+     "title": "Atlanta United hopeful to sign Luis Araújo from Lille - Among club record signings"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€9.00M",
+     "from": "Atlanta",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": "€6.00M",
+     "transferDate": "Jul 1, 2023"
+    },
+    {
+     "to": "Atlanta",
+     "fee": "€11.50M",
+     "from": "Lille",
+     "type": "transfer",
+     "season": "21/22",
+     "marketValue": "€10.00M",
+     "transferDate": "Aug 6, 2021"
+    },
+    {
+     "to": "Lille",
+     "fee": "€10.50M",
+     "from": "São Paulo",
+     "type": "transfer",
+     "season": "17/18",
+     "marketValue": "€500.00K",
+     "transferDate": "Jul 1, 2017"
+    },
+    {
+     "to": "São Paulo",
+     "fee": null,
+     "from": "Novorizontino",
+     "type": "end of loan",
+     "season": "15/16",
+     "marketValue": null,
+     "transferDate": "Apr 25, 2016"
+    },
+    {
+     "to": "Novorizontino",
+     "fee": null,
+     "from": "São Paulo",
+     "type": "loan",
+     "season": "15/16",
+     "marketValue": null,
+     "transferDate": "Feb 26, 2016"
+    },
+    {
+     "to": "São Paulo U20",
+     "fee": null,
+     "from": "São Paulo U17",
+     "type": "transfer",
+     "season": "13/14",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2014"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "05/09/2025"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "28/03/2025"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 4500000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    },
+    {
+     "age": 26,
+     "club": "Atlanta United FC",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "08/11/2022"
+    },
+    {
+     "age": 26,
+     "club": "Atlanta United FC",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "18/08/2022"
+    },
+    {
+     "age": 25,
+     "club": "Atlanta United FC",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "09/11/2021"
+    },
+    {
+     "age": 25,
+     "club": "LOSC Lille",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "04/06/2021"
+    },
+    {
+     "age": 24,
+     "club": "LOSC Lille",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "15/10/2020"
+    },
+    {
+     "age": 23,
+     "club": "LOSC Lille",
+     "value": 5500000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 23,
+     "club": "LOSC Lille",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "19/12/2019"
+    },
+    {
+     "age": 23,
+     "club": "LOSC Lille",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "03/06/2019"
+    },
+    {
+     "age": 22,
+     "club": "LOSC Lille",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "17/12/2018"
+    },
+    {
+     "age": 22,
+     "club": "LOSC Lille",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "04/06/2018"
+    },
+    {
+     "age": 21,
+     "club": "LOSC Lille",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "24/01/2018"
+    },
+    {
+     "age": 21,
+     "club": "LOSC Lille",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "12/10/2017"
+    },
+    {
+     "age": 20,
+     "club": "São Paulo Futebol Clube",
+     "value": 500000,
+     "currency": "€",
+     "recordedDate": "28/11/2016"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Knee injury",
+     "season": "2027",
+     "toDate": "15.08.2026",
+     "fromDate": "21.07.2026",
+     "missedGames": 5,
+     "absentDurationInDays": 26
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2026",
+     "toDate": "14.02.2026",
+     "fromDate": "26.01.2026",
+     "missedGames": 4,
+     "absentDurationInDays": 20
+    },
+    {
+     "reason": "Muscle fatigue",
+     "season": "2026",
+     "toDate": "08.08.2025",
+     "fromDate": "28.07.2025",
+     "missedGames": 2,
+     "absentDurationInDays": 12
+    },
+    {
+     "reason": "Knee injury",
+     "season": "2025",
+     "toDate": "03.12.2024",
+     "fromDate": "15.09.2024",
+     "missedGames": 16,
+     "absentDurationInDays": 80
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2022",
+     "toDate": "13.04.2022",
+     "fromDate": "28.02.2022",
+     "missedGames": 5,
+     "absentDurationInDays": 45
+    },
+    {
+     "reason": "Corona virus",
+     "season": "2021",
+     "toDate": "15.01.2021",
+     "fromDate": "31.12.2020",
+     "missedGames": 2,
+     "absentDurationInDays": 16
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:58:54.023413+00:00"
+}
