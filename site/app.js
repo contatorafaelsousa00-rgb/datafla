@@ -118,6 +118,13 @@ function montarControlesFixos() {
   });
   for (const b of document.querySelectorAll(".abas button")) b.addEventListener("click", () => trocarAba(b.dataset.aba));
   for (const b of $("modo-metricas").children) b.addEventListener("click", () => { estado.modo = b.dataset.modo; render(); });
+  for (const b of $("subaba-elenco").children) b.addEventListener("click", () => {
+    estado.subElenco = b.dataset.sub;
+    const url = new URL(location);
+    url.searchParams.set("sub", estado.subElenco);
+    history.replaceState(null, "", url);
+    render();
+  });
   for (const b of $("lista-jogos").children) b.addEventListener("click", () => {
     estado.lista = b.dataset.lista;
     const url = new URL(location);
@@ -218,6 +225,7 @@ async function iniciar() {
   if (aba && document.getElementById(`aba-${aba}`)) marcarAba(aba);
   registrarVisita(estado.aba);
   await carregarTemporada(ano);
+  estado.subElenco = params.get("sub") === "ficha" ? "ficha" : "desempenho";
   const jogo = Number(params.get("jogo"));
   estado.lista = params.get("lista") === "disputados" || jogo ? "disputados" : "proximos";
   const proximo = Number(params.get("proximo"));

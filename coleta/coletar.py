@@ -160,6 +160,7 @@ def cmd_processar():
         tabelas["classificacao"] = extras.linhas_classificacao(jogos["data"])
         tabelas["carreira"] = extras.linhas_carreira()
         tabelas["liga"] = extras.linhas_liga(jogos["data"])
+        tabelas["perfis"] = extras.linhas_perfis()
         tabelas["fotos"] = fotos.linhas_fotos(tabelas["jogadores_partida"])
         imagens.logos_locais(tabelas)
     armazenar.salvar_sqlite(tabelas)

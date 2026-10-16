@@ -1,0 +1,609 @@
+{
+ "data": [
+  {
+   "id": 265160,
+   "logo": null,
+   "name": "Lucas Paquetá",
+   "fullName": "Lucas Tolentino Coelho de Lima",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "28/01/2026",
+     "contractExpiry": "31/12/2030",
+     "latestContractExtension": null
+    },
+    "foot": "left",
+    "height": "1,83 m",
+    "fullName": "Lucas Paquetá",
+    "position": {
+     "main": "Attacking Midfield",
+     "secondary": "Central Midfield, Left Midfield"
+    },
+    "birthDate": "27/08/1997",
+    "deathDate": null,
+    "birthPlace": "Rio de Janeiro",
+    "citizenship": "Brazil, Portugal"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Aston Villa",
+      "rumourDate": "31/08/2025",
+      "transferProbability": "28.66%"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Chelsea FC",
+      "rumourDate": "17/07/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SS Lazio",
+      "rumourDate": "21/06/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Juventus FC",
+      "rumourDate": "06/06/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Valencia CF",
+      "rumourDate": "19/08/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Olympique Lyon",
+      "rumourDate": "30/09/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "ACF Fiorentina",
+      "rumourDate": "14/08/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Paris Saint-Germain",
+      "rumourDate": "10/06/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Valencia CF",
+      "rumourDate": "01/06/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SL Benfica",
+      "rumourDate": "16/05/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Juventus FC",
+      "rumourDate": "29/01/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bayern Munich",
+      "rumourDate": "27/01/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AS Roma",
+      "rumourDate": "23/01/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "11/01/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AC Milan",
+      "rumourDate": "04/01/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester United",
+      "rumourDate": "07/10/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "10/09/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Paris Saint-Germain",
+      "rumourDate": "05/09/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Borussia Dortmund",
+      "rumourDate": "03/08/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Liverpool FC",
+      "rumourDate": "27/07/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "28/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Aston Villa",
+      "rumourDate": "31/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Tottenham Hotspur",
+      "rumourDate": "26/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fenerbahce",
+      "rumourDate": "04/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Botafogo de Futebol e Regatas",
+      "rumourDate": "04/11/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Nassr FC",
+      "rumourDate": "04/07/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester City",
+      "rumourDate": "12/04/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Newcastle United",
+      "rumourDate": "02/03/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Arsenal FC",
+      "rumourDate": "27/02/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Arsenal FC",
+      "rumourDate": "27/02/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "West Ham United",
+      "rumourDate": "30/08/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester City",
+      "rumourDate": "01/08/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Arsenal FC",
+      "rumourDate": "29/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Newcastle United",
+      "rumourDate": "11/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Paris Saint-Germain",
+      "rumourDate": "17/01/2022",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/brazil-market-values-paqueta-drops-again-many-upgrades-at-athletico-paranaense/view/news/487641",
+     "date": "Sep 28, 2026",
+     "title": "Brazil market values: Paqueta drops again - Many upgrades at Athletico Paranaense"
+    },
+    {
+     "url": "https://www.transfermarkt.com/brazil-market-values-neymar-down-despite-world-cup-call-up-lucas-paqueta-drops-by-euro-3m/view/news/479850",
+     "date": "May 26, 2026",
+     "title": "Brazil market values: Neymar down despite World Cup call up - Lucas Paquetá drops by €3m"
+    },
+    {
+     "url": "https://www.transfermarkt.com/brazil-market-values-vitor-roque-now-2nd-wonderkids-andre-and-gabriel-mec-assessed/view/news/476476",
+     "date": "Mar 12, 2026",
+     "title": "Brazil market values: Vitor Roque now 2nd - Wonderkids André and Gabriel Mec assessed"
+    },
+    {
+     "url": "https://www.transfermarkt.com/brasileirao-overtakes-serie-a-to-become-worlds-second-biggest-spending-league-in-2026/view/news/476200",
+     "date": "Mar 4, 2026",
+     "title": "Brasileirão overtakes Serie A to become world's second-biggest spending league in 2026"
+    },
+    {
+     "url": "https://www.transfermarkt.com/paqueta-lookman-guendouzi-amp-co-the-25-most-expensive-transfers-of-the-winter-window/view/news/474879",
+     "date": "Feb 3, 2026",
+     "title": "Paquetá, Lookman, Guendouzi & Co. - The 25 most expensive transfers of the winter window"
+    },
+    {
+     "url": "https://www.transfermarkt.com/fenerbahce-9th-tottenham-5th-which-clubs-spent-most-in-january-transfer-window-/view/news/474893",
+     "date": "Feb 3, 2026",
+     "title": "Fenerbahce 9th, Tottenham 5th - Which clubs spent most in January transfer window?"
+    },
+    {
+     "url": "https://www.transfermarkt.com/premier-league-brazilian-serie-a-amp-co-which-leagues-spent-the-most-money-this-winter-/view/news/474862",
+     "date": "Feb 3, 2026",
+     "title": "Premier League, Brazilian Serie A & Co. - Which leagues spent the most money this winter?"
+    },
+    {
+     "url": "https://www.transfermarkt.com/-euro-647m-spent-and-counting-could-this-january-transfer-window-break-records-/view/news/474509",
+     "date": "Jan 29, 2026",
+     "title": "€647m spent and counting - could this January transfer window break records?"
+    },
+    {
+     "url": "https://www.transfermarkt.com/flamengo-look-to-entice-paqueta-away-from-west-ham-with-record-transfer-fee-for-a-brazilian-club/view/news/473485",
+     "date": "Jan 12, 2026",
+     "title": "Flamengo look to entice Paquetá away from West Ham with record transfer fee for a Brazilian club"
+    },
+    {
+     "url": "https://www.transfermarkt.com/isak-finally-ends-goal-drought-as-liverpool-ease-slot-pressure-with-west-ham-win/view/news/463575",
+     "date": "Nov 30, 2025",
+     "title": "Isak finally ends goal drought as Liverpool ease Slot pressure with West Ham win"
+    },
+    {
+     "url": "https://www.transfermarkt.com/fewest-premier-league-points-in-2025-amp-an-ageing-squad-whats-gone-wrong-at-west-ham-/view/news/462267",
+     "date": "Oct 31, 2025",
+     "title": "Fewest Premier League points in 2025 & an ageing squad - What's gone wrong at West Ham?"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€42.00M",
+     "from": "West Ham",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": "€35.00M",
+     "transferDate": "Jan 28, 2026"
+    },
+    {
+     "to": "West Ham",
+     "fee": "€42.95M",
+     "from": "Lyon",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": "€35.00M",
+     "transferDate": "Aug 29, 2022"
+    },
+    {
+     "to": "Lyon",
+     "fee": "€23.00M",
+     "from": "AC Milan",
+     "type": "transfer",
+     "season": "20/21",
+     "marketValue": "€20.00M",
+     "transferDate": "Sep 30, 2020"
+    },
+    {
+     "to": "AC Milan",
+     "fee": "€38.40M",
+     "from": "Flamengo",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": "€15.00M",
+     "transferDate": "Jan 3, 2019"
+    },
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Flamengo U20",
+     "type": "transfer",
+     "season": "16/17",
+     "marketValue": null,
+     "transferDate": "Mar 2, 2016"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 27000000,
+     "currency": "€",
+     "recordedDate": "28/09/2026"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 32000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 28,
+     "club": "West Ham United",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "09/12/2025"
+    },
+    {
+     "age": 28,
+     "club": "West Ham United",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "17/10/2025"
+    },
+    {
+     "age": 27,
+     "club": "West Ham United",
+     "value": 28000000,
+     "currency": "€",
+     "recordedDate": "30/05/2025"
+    },
+    {
+     "age": 27,
+     "club": "West Ham United",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "18/03/2025"
+    },
+    {
+     "age": 27,
+     "club": "West Ham United",
+     "value": 40000000,
+     "currency": "€",
+     "recordedDate": "16/12/2024"
+    },
+    {
+     "age": 27,
+     "club": "West Ham United",
+     "value": 55000000,
+     "currency": "€",
+     "recordedDate": "01/10/2024"
+    },
+    {
+     "age": 26,
+     "club": "West Ham United",
+     "value": 65000000,
+     "currency": "€",
+     "recordedDate": "27/05/2024"
+    },
+    {
+     "age": 26,
+     "club": "West Ham United",
+     "value": 65000000,
+     "currency": "€",
+     "recordedDate": "19/12/2023"
+    },
+    {
+     "age": 26,
+     "club": "West Ham United",
+     "value": 65000000,
+     "currency": "€",
+     "recordedDate": "09/10/2023"
+    },
+    {
+     "age": 25,
+     "club": "West Ham United",
+     "value": 45000000,
+     "currency": "€",
+     "recordedDate": "20/06/2023"
+    },
+    {
+     "age": 25,
+     "club": "West Ham United",
+     "value": 45000000,
+     "currency": "€",
+     "recordedDate": "03/11/2022"
+    },
+    {
+     "age": 25,
+     "club": "West Ham United",
+     "value": 45000000,
+     "currency": "€",
+     "recordedDate": "15/09/2022"
+    },
+    {
+     "age": 24,
+     "club": "Olympique Lyon",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "30/05/2022"
+    },
+    {
+     "age": 24,
+     "club": "Olympique Lyon",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "16/12/2021"
+    },
+    {
+     "age": 23,
+     "club": "Olympique Lyon",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "16/07/2021"
+    },
+    {
+     "age": 23,
+     "club": "Olympique Lyon",
+     "value": 30000000,
+     "currency": "€",
+     "recordedDate": "04/06/2021"
+    },
+    {
+     "age": 23,
+     "club": "Olympique Lyon",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "07/01/2021"
+    },
+    {
+     "age": 23,
+     "club": "Olympique Lyon",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "15/10/2020"
+    },
+    {
+     "age": 22,
+     "club": "AC Milan",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "25/08/2020"
+    },
+    {
+     "age": 22,
+     "club": "AC Milan",
+     "value": 22500000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 22,
+     "club": "AC Milan",
+     "value": 28000000,
+     "currency": "€",
+     "recordedDate": "03/03/2020"
+    },
+    {
+     "age": 22,
+     "club": "AC Milan",
+     "value": 33000000,
+     "currency": "€",
+     "recordedDate": "12/12/2019"
+    },
+    {
+     "age": 21,
+     "club": "AC Milan",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "06/06/2019"
+    },
+    {
+     "age": 21,
+     "club": "AC Milan",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "01/03/2019"
+    },
+    {
+     "age": 20,
+     "club": "CR Flamengo",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "23/05/2018"
+    },
+    {
+     "age": 20,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "07/12/2017"
+    },
+    {
+     "age": 20,
+     "club": "CR Flamengo",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "30/10/2017"
+    },
+    {
+     "age": 19,
+     "club": "CR Flamengo",
+     "value": 100000,
+     "currency": "€",
+     "recordedDate": "28/11/2016"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Hamstring injury",
+     "season": "2026",
+     "toDate": "08.08.2026",
+     "fromDate": "30.06.2026",
+     "missedGames": 3,
+     "absentDurationInDays": 40
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2026",
+     "toDate": "16.05.2026",
+     "fromDate": "20.04.2026",
+     "missedGames": 7,
+     "absentDurationInDays": 27
+    },
+    {
+     "reason": "Ankle injury",
+     "season": "2025",
+     "toDate": "10.03.2025",
+     "fromDate": "21.02.2025",
+     "missedGames": 2,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Hip injury",
+     "season": "2025",
+     "toDate": "14.02.2025",
+     "fromDate": "30.01.2025",
+     "missedGames": 1,
+     "absentDurationInDays": 16
+    },
+    {
+     "reason": "Calf injury",
+     "season": "2024",
+     "toDate": "21.02.2024",
+     "fromDate": "07.01.2024",
+     "missedGames": 6,
+     "absentDurationInDays": 46
+    },
+    {
+     "reason": "Foot injury",
+     "season": "2023",
+     "toDate": "13.04.2023",
+     "fromDate": "07.04.2023",
+     "missedGames": 1,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Shoulder injury",
+     "season": "2023",
+     "toDate": "21.02.2023",
+     "fromDate": "11.02.2023",
+     "missedGames": 1,
+     "absentDurationInDays": 11
+    },
+    {
+     "reason": "Shoulder injury",
+     "season": "2023",
+     "toDate": "05.11.2022",
+     "fromDate": "17.10.2022",
+     "missedGames": 5,
+     "absentDurationInDays": 20
+    },
+    {
+     "reason": "Thigh problems",
+     "season": "2020",
+     "toDate": "28.09.2019",
+     "fromDate": "22.09.2019",
+     "missedGames": 1,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Ankle sprain",
+     "season": "2019",
+     "toDate": "17.04.2019",
+     "fromDate": "02.04.2019",
+     "missedGames": 2,
+     "absentDurationInDays": 16
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:52:46.433213+00:00"
+}

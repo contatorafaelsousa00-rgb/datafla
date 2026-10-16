@@ -1,0 +1,454 @@
+{
+ "data": [
+  {
+   "id": 1639134,
+   "logo": null,
+   "name": "Bruno Henrique",
+   "fullName": "Bruno Henrique Pinto",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "23/01/2019",
+     "contractExpiry": "31/12/2027",
+     "latestContractExtension": "04/05/2026"
+    },
+    "foot": "right",
+    "height": "1,84 m",
+    "fullName": "Bruno Henrique Pinto",
+    "position": {
+     "main": "Centre-Forward",
+     "secondary": "Left Winger, Second Striker"
+    },
+    "birthDate": "30/12/1990",
+    "deathDate": null,
+    "birthPlace": "Belo Horizonte",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [],
+    "historical": [
+     {
+      "club": "Fenerbahce",
+      "rumourDate": "06/06/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SL Benfica",
+      "rumourDate": "14/07/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Tianjin Tianhai (-2019)",
+      "rumourDate": "13/05/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Cruzeiro Esporte Clube",
+      "rumourDate": "28/11/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Santos FC",
+      "rumourDate": "23/01/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Grêmio Foot-Ball Porto Alegrense",
+      "rumourDate": "06/01/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "VfL Wolfsburg",
+      "rumourDate": "29/01/2016",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/most-valuable-squad-flamengo-win-league-title-vasco-da-gama-relegated/view/news/381027",
+     "date": "Feb 26, 2021",
+     "title": "Most valuable squad: Flamengo win league title - Vasco da Gama relegated"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-brazil-career-high-for-gabriel-barbosa-reinier-with-euro-10m-plus/view/news/349268",
+     "date": "Nov 27, 2019",
+     "title": "Market values Brazil: Career high for Gabriel Barbosa - Reinier with €10m plus"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€5.50M",
+     "from": "Santos",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": "€4.00M",
+     "transferDate": "Jan 23, 2019"
+    },
+    {
+     "to": "Santos",
+     "fee": "€4.00M",
+     "from": "Wolfsburg",
+     "type": "transfer",
+     "season": "16/17",
+     "marketValue": "€2.00M",
+     "transferDate": "Jan 23, 2017"
+    },
+    {
+     "to": "Wolfsburg",
+     "fee": "€4.50M",
+     "from": "Goiás",
+     "type": "transfer",
+     "season": "15/16",
+     "marketValue": "€2.00M",
+     "transferDate": "Jan 31, 2016"
+    },
+    {
+     "to": "Goiás",
+     "fee": null,
+     "from": "Uberlândia",
+     "type": "transfer",
+     "season": "14/15",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2015"
+    },
+    {
+     "to": "Uberlândia",
+     "fee": null,
+     "from": "Itumbiara-GO",
+     "type": "end of loan",
+     "season": "14/15",
+     "marketValue": null,
+     "transferDate": "Dec 31, 2014"
+    },
+    {
+     "to": "Itumbiara-GO",
+     "fee": null,
+     "from": "Uberlândia",
+     "type": "loan",
+     "season": "13/14",
+     "marketValue": null,
+     "transferDate": "Jun 24, 2014"
+    },
+    {
+     "to": "Uberlândia",
+     "fee": null,
+     "from": "Cruzeiro",
+     "type": "transfer",
+     "season": "13/14",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2013"
+    },
+    {
+     "to": "Cruzeiro",
+     "fee": null,
+     "from": "Uberlândia",
+     "type": "end of loan",
+     "season": "12/13",
+     "marketValue": null,
+     "transferDate": "Jun 30, 2013"
+    },
+    {
+     "to": "Uberlândia",
+     "fee": null,
+     "from": "Cruzeiro",
+     "type": "loan",
+     "season": "11/12",
+     "marketValue": null,
+     "transferDate": "Jan 31, 2012"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 35,
+     "club": "CR Flamengo",
+     "value": 750000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 34,
+     "club": "CR Flamengo",
+     "value": 800000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 34,
+     "club": "CR Flamengo",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 33,
+     "club": "CR Flamengo",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 33,
+     "club": "CR Flamengo",
+     "value": 1800000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 33,
+     "club": "CR Flamengo",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 32,
+     "club": "CR Flamengo",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    },
+    {
+     "age": 32,
+     "club": "CR Flamengo",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "25/07/2023"
+    },
+    {
+     "age": 32,
+     "club": "CR Flamengo",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "07/04/2023"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "14/11/2022"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "19/08/2022"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "06/04/2022"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "17/12/2021"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 4500000,
+     "currency": "€",
+     "recordedDate": "28/05/2021"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 5500000,
+     "currency": "€",
+     "recordedDate": "09/02/2021"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 5200000,
+     "currency": "€",
+     "recordedDate": "09/09/2020"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 5200000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 6500000,
+     "currency": "€",
+     "recordedDate": "27/11/2019"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 4500000,
+     "currency": "€",
+     "recordedDate": "18/02/2019"
+    },
+    {
+     "age": 27,
+     "club": "Santos FC",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "23/05/2018"
+    },
+    {
+     "age": 26,
+     "club": "Santos FC",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "07/12/2017"
+    },
+    {
+     "age": 26,
+     "club": "Santos FC",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "23/01/2017"
+    },
+    {
+     "age": 25,
+     "club": "VfL Wolfsburg",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "22/07/2016"
+    },
+    {
+     "age": 24,
+     "club": "Goiás EC",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "15/12/2015"
+    },
+    {
+     "age": 24,
+     "club": "Goiás EC",
+     "value": 1250000,
+     "currency": "€",
+     "recordedDate": "11/09/2015"
+    },
+    {
+     "age": 24,
+     "club": "Goiás EC",
+     "value": 750000,
+     "currency": "€",
+     "recordedDate": "31/05/2015"
+    },
+    {
+     "age": 24,
+     "club": "Goiás EC",
+     "value": 100000,
+     "currency": "€",
+     "recordedDate": "01/02/2015"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Inflammation of pubic bone",
+     "season": "2026",
+     "toDate": "04.04.2026",
+     "fromDate": "27.02.2026",
+     "missedGames": 7,
+     "absentDurationInDays": 37
+    },
+    {
+     "reason": "Muscle fatigue",
+     "season": "2026",
+     "toDate": "08.08.2025",
+     "fromDate": "04.08.2025",
+     "missedGames": 1,
+     "absentDurationInDays": 5
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "28.03.2025",
+     "fromDate": "09.03.2025",
+     "missedGames": 2,
+     "absentDurationInDays": 20
+    },
+    {
+     "reason": "Injury to the ankle",
+     "season": "2025",
+     "toDate": "02.08.2024",
+     "fromDate": "06.07.2024",
+     "missedGames": 5,
+     "absentDurationInDays": 28
+    },
+    {
+     "reason": "Sprain",
+     "season": "2024",
+     "toDate": "01.06.2024",
+     "fromDate": "10.05.2024",
+     "missedGames": 3,
+     "absentDurationInDays": 23
+    },
+    {
+     "reason": "Cruciate ligament tear",
+     "season": "2022",
+     "toDate": "06.04.2023",
+     "fromDate": "17.06.2022",
+     "missedGames": 61,
+     "absentDurationInDays": 294
+    },
+    {
+     "reason": "Infection",
+     "season": "2017",
+     "toDate": "18.12.2016",
+     "fromDate": "14.12.2016",
+     "missedGames": 1,
+     "absentDurationInDays": 5
+    },
+    {
+     "reason": "Foot bruise",
+     "season": "2017",
+     "toDate": "24.11.2016",
+     "fromDate": "22.11.2016",
+     "missedGames": null,
+     "absentDurationInDays": 3
+    },
+    {
+     "reason": "Cruciate ligament strain",
+     "season": "2017",
+     "toDate": "20.11.2016",
+     "fromDate": "27.10.2016",
+     "missedGames": 3,
+     "absentDurationInDays": 25
+    },
+    {
+     "reason": "Bone edema",
+     "season": "2016",
+     "toDate": "08.08.2016",
+     "fromDate": "21.04.2016",
+     "missedGames": 4,
+     "absentDurationInDays": 110
+    },
+    {
+     "reason": "Concussion",
+     "season": "2016",
+     "toDate": "14.04.2016",
+     "fromDate": "14.04.2016",
+     "missedGames": null,
+     "absentDurationInDays": 1
+    },
+    {
+     "reason": "Bronchitis",
+     "season": "2016",
+     "toDate": "29.02.2016",
+     "fromDate": "22.02.2016",
+     "missedGames": 1,
+     "absentDurationInDays": 8
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:52:48.403923+00:00"
+}

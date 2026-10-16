@@ -125,6 +125,14 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   simulador de palpites salvo no navegador; chances por 4.000 simulações Poisson com força casa/fora encolhida para a
   média, semente fixa), Formações (Estilo de jogo), Carreira (perfil), xGOT enfrentado (goleiros), Ataques (comparativo),
   posição na tabela no próximo jogo. Regras do Firestore ganharam `aba_classificacao` (publicar regras junto com o site).
+- Ficha do elenco (16/10/2026): `/players/{id}` (perfil com dados do Transfermarkt: nascimento, altura, pé, nacionalidade,
+  posição detalhada, contrato, chegada, valor de mercado com histórico, lesões, rumores) → raw `perfil_<id>`, tabela `perfis`
+  (`extras.linhas_perfis`), semanal, 15 por coleta (relacionados nas escalações primeiro). Aba Elenco tem subabas
+  Desempenho | Ficha do elenco (`?sub=ficha`), agrupada por posição; só quem tem clube atual Flamengo (base marcada).
+- Transmissão (TV/streaming): nenhuma das fontes atuais tem. Pagas com canais por jogo: Sportmonks (TV stations por fixture),
+  SoccersAPI (broadcast). Alternativa grátis: cadastro manual pelo admin (não feito; aguardando decisão).
+- CSS: regra global `[hidden] { display: none !important; }` — regras com `display: grid` anulavam o atributo hidden
+  (causa do bug "clico no Bahia e aparece o Estudiantes": o relatório anterior ficava visível no modal).
 - **Publicação**: só depois do Rafael validar no servidor local (`python scripts/servidor_local.py`, porta 8765) — pedido de 16/10/2026.
 - Próximos jogos (16/10/2026): aba Jogos com chave "Próximos jogos | Jogos disputados" (`?lista=`; `?jogo=<id>` abre o
   relatório). `coletar proximo` busca para os 3 próximos jogos (o 1º sempre; os demais só nas próximas 3 semanas), do mais

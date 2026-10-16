@@ -6,6 +6,8 @@ esgotá-la; o que faltar vem nas próximas coletas (a carga inicial leva uns 2 d
     escalacao_<jogo>   /lineups/{jogo}                 formação e titulares por linha do campo (1 vez por jogo)
     tabela_<liga>      /standings?leagueId=&season=    classificação (1 vez por dia enquanto houver jogo na competição)
     carreira_<jogador> /players/{id}/statistics        jogos, gols etc. por temporada e competição (1 vez por semana)
+    perfil_<jogador>   /players/{id}                   nascimento, altura, pé, nacionalidade, posição, contrato, valor de
+                                                        mercado, lesões (1 vez por semana, 15 por coleta) — ficha do elenco
     liga_<liga>        /matches?leagueId=&season=      todos os jogos do campeonato de pontos corridos (4 páginas, 1 vez
                                                         por dia): tabela e simulador da aba Classificação
 """
@@ -22,6 +24,8 @@ from .highlightly import ARQ_JOGOS, ClienteHighlightly, ErroAPI, POSICOES, _rese
 
 MAX_ESCALACOES = int(os.environ.get("FLA_MAX_ESCALACOES", "25"))  # por coleta (carga inicial em partes)
 MAX_CARREIRAS = int(os.environ.get("FLA_MAX_CARREIRAS", "12"))
+MAX_PERFIS = int(os.environ.get("FLA_MAX_PERFIS", "15"))
+DIAS_PERFIL = 7
 HORAS_TABELA = 24
 HORAS_LIGA = 20
 POR_PAGINA = 100
@@ -66,6 +70,17 @@ def tarefas(jogos: list[dict]) -> list[tuple[str, str, dict]]:
             if bloco["team"]["id"] == config.TEAM_ID:
                 for p in bloco.get("players", []):
                     minutos[p["id"]] += numero(p.get("minutesPlayed")) or 0
+    vencido = lambda nome, dias: (_idade(nome) or timedelta(days=999)) >= timedelta(days=dias)
+    # Ficha do elenco: quem jogou ou foi relacionado (banco nas escalações), dos mais recentes para os mais antigos
+    relacionados = []
+    for j in encerrados:
+        esc = (ler_raw(f"escalacao_{j['id']}") or {}).get("data") or {}
+        for lado in ("homeTeam", "awayTeam"):
+            t = esc.get(lado) or {}
+            if t.get("id") == config.TEAM_ID:
+                relacionados += [p.get("id") for linha in t.get("initialLineup") or [] for p in linha] + [p.get("id") for p in t.get("substitutes") or []]
+    candidatos = list(dict.fromkeys([i for i in relacionados if i] + [pid for pid, _ in sorted(minutos.items(), key=lambda x: -x[1])]))
+    perfis = [(f"perfil_{pid}", f"players/{pid}", {}) for pid in candidatos if vencido(f"perfil_{pid}", DIAS_PERFIL)][:MAX_PERFIS]
     carreiras = [(f"carreira_{pid}", f"players/{pid}/statistics", {}) for pid, m in sorted(minutos.items(), key=lambda x: -x[1])
                  if m > 0 and ((_idade(f"carreira_{pid}") or timedelta(days=999)) >= timedelta(days=DIAS_CARREIRA))][:MAX_CARREIRAS]
     # Campeonato de pontos corridos (Brasileirão): todos os jogos, para a tabela e o simulador
@@ -73,7 +88,7 @@ def tarefas(jogos: list[dict]) -> list[tuple[str, str, dict]]:
                       if ((j.get("league") or {}).get("name") or "").lower() == "serie a"}
     liga = [(f"liga_{lid}", "matches", {"leagueId": lid, "season": temp or config.SEASON}) for lid, temp in ligas_corridas.items()
             if (_idade(f"liga_{lid}") or timedelta(days=999)) >= timedelta(hours=HORAS_LIGA)]
-    return escalacoes[:5] + liga + escalacoes[5:] + tabelas + carreiras
+    return escalacoes[:5] + liga + perfis[:5] + escalacoes[5:] + tabelas + perfis[5:] + carreiras
 
 
 def cmd_extras(api: ClienteHighlightly) -> int:
@@ -187,6 +202,71 @@ def linhas_liga(jogos_fla: list[dict]) -> list[dict]:
                 "gols_casa": casa if status in config.STATUS_ENCERRADO else None,
                 "gols_fora": fora if status in config.STATUS_ENCERRADO else None,
             })
+    return linhas
+
+
+POSICAO_DETALHADA = {
+    "Goalkeeper": ("Goleiro", "Goleiros"), "Centre-Back": ("Zagueiro", "Defensores"), "Left-Back": ("Lateral-esquerdo", "Defensores"),
+    "Right-Back": ("Lateral-direito", "Defensores"), "Defensive Midfield": ("Volante", "Meio-campo"),
+    "Central Midfield": ("Meio-campista", "Meio-campo"), "Attacking Midfield": ("Meia-atacante", "Meio-campo"),
+    "Left Midfield": ("Meia-esquerda", "Meio-campo"), "Right Midfield": ("Meia-direita", "Meio-campo"),
+    "Left Winger": ("Ponta-esquerda", "Atacantes"), "Right Winger": ("Ponta-direita", "Atacantes"),
+    "Centre-Forward": ("Centroavante", "Atacantes"), "Second Striker": ("Segundo atacante", "Atacantes"),
+}
+PAISES = {"Brazil": "Brasil", "Uruguay": "Uruguai", "Argentina": "Argentina", "Chile": "Chile", "Colombia": "Colômbia",
+          "Ecuador": "Equador", "Paraguay": "Paraguai", "Peru": "Peru", "Venezuela": "Venezuela", "Portugal": "Portugal",
+          "Spain": "Espanha", "Italy": "Itália", "France": "França", "Germany": "Alemanha", "England": "Inglaterra"}
+PES = {"right": "Direito", "left": "Esquerdo", "both": "Ambos"}
+
+
+def _data_br(texto: str | None) -> str | None:
+    """'31/12/2027' ou '12.12.2025' → '2027-12-31'."""
+    if not texto:
+        return None
+    for fmt in ("%d/%m/%Y", "%d.%m.%Y", "%b %d, %Y"):
+        try:
+            return datetime.strptime(texto.strip(), fmt).date().isoformat()
+        except ValueError:
+            continue
+    return None
+
+
+def linhas_perfis() -> list[dict]:
+    """Ficha de cada jogador (perfil da fonte, com dados do Transfermarkt): contrato, valor de mercado, idade etc."""
+    hoje = _agora().date().isoformat()
+    linhas = []
+    for arq in config.RAW_DIR.glob("perfil_*.json"):
+        dados = (ler_raw(arq.stem) or {}).get("data")
+        dados = dados[0] if isinstance(dados, list) and dados else dados
+        if not dados:
+            continue
+        perfil = dados.get("profile") or {}
+        clube = perfil.get("club") or {}
+        valores = sorted(dados.get("marketValue") or [], key=lambda v: _data_br(v.get("recordedDate")) or "", reverse=True)
+        lesoes = dados.get("injuries") or []
+        atual = next((l for l in lesoes if (_data_br(l.get("toDate")) or "9999") >= hoje and (_data_br(l.get("fromDate")) or "") <= hoje), None)
+        pos = (perfil.get("position") or {})
+        detalhada, grupo = POSICAO_DETALHADA.get(pos.get("main"), (pos.get("main"), None))
+        altura = (perfil.get("height") or "").replace(" m", "").replace(",", ".")
+        linhas.append({
+            "jogador_id": dados["id"], "jogador": dados.get("name"), "nome_completo": perfil.get("fullName") or dados.get("fullName"),
+            "nascimento": _data_br(perfil.get("birthDate")), "naturalidade": perfil.get("birthPlace"),
+            "nacionalidade": PAISES.get(perfil.get("citizenship"), perfil.get("citizenship")),
+            "altura": float(altura) if altura.replace(".", "", 1).isdigit() else None,
+            "pe": PES.get(perfil.get("foot"), perfil.get("foot")),
+            "posicao_detalhada": detalhada, "grupo": grupo,
+            "posicao_secundaria": ", ".join(POSICAO_DETALHADA.get(x.strip(), (x.strip(), None))[0]
+                                            for x in (pos.get("secondary") or "").split(",") if x.strip()) or None,
+            "clube_atual": clube.get("current"), "no_clube_desde": _data_br(clube.get("joinedAt")),
+            "contrato_ate": _data_br(clube.get("contractExpiry")), "renovado_em": _data_br(clube.get("latestContractExtension")),
+            "valor_mercado": valores[0].get("value") if valores else None,
+            "valor_data": _data_br(valores[0].get("recordedDate")) if valores else None,
+            "valor_anterior": valores[1].get("value") if len(valores) > 1 else None,
+            "valor_maximo": max((v.get("value") or 0 for v in valores), default=None),
+            "lesao_atual": atual.get("reason") if atual else None,
+            "lesao_volta": _data_br(atual.get("toDate")) if atual else None,
+            "atualizado_em": (ler_raw(arq.stem) or {}).get("_coletado_em"),
+        })
     return linhas
 
 

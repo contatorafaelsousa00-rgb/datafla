@@ -1,0 +1,577 @@
+{
+ "data": [
+  {
+   "id": 252280,
+   "logo": null,
+   "name": "Emerson Royal",
+   "fullName": "Emerson Aparecido Leite de Souza Júnior",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "26/07/2025",
+     "contractExpiry": "31/12/2028",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,83 m",
+    "fullName": "Emerson Royal",
+    "position": {
+     "main": "Right-Back",
+     "secondary": "Right Midfield, Centre-Back"
+    },
+    "birthDate": "14/01/1999",
+    "deathDate": null,
+    "birthPlace": "São Paulo",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Aston Villa",
+      "rumourDate": "21/07/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "UC Sampdoria",
+      "rumourDate": "02/01/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Juventus FC",
+      "rumourDate": "02/01/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Chelsea FC",
+      "rumourDate": "16/11/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Arsenal FC",
+      "rumourDate": "16/11/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Atlético de Madrid",
+      "rumourDate": "01/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Tottenham Hotspur",
+      "rumourDate": "31/08/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Inter Milan",
+      "rumourDate": "11/06/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Inter Milan",
+      "rumourDate": "11/06/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "20/05/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Villarreal CF",
+      "rumourDate": "16/05/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bayern Munich",
+      "rumourDate": "04/05/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Tottenham Hotspur",
+      "rumourDate": "19/04/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Paris Saint-Germain",
+      "rumourDate": "26/03/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AC Milan",
+      "rumourDate": "03/11/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Borussia Dortmund",
+      "rumourDate": "05/07/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bayer 04 Leverkusen",
+      "rumourDate": "26/05/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Juventus FC",
+      "rumourDate": "25/05/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "05/02/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Eintracht Frankfurt",
+      "rumourDate": "27/01/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "ACF Fiorentina",
+      "rumourDate": "24/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Valencia CF",
+      "rumourDate": "24/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "27/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Real Betis Balompié",
+      "rumourDate": "27/06/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Beşiktaş JK",
+      "rumourDate": "24/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Spartak Moscow",
+      "rumourDate": "09/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "23/01/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fulham FC",
+      "rumourDate": "22/01/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AC Milan",
+      "rumourDate": "11/08/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "24/07/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Borussia Dortmund",
+      "rumourDate": "12/07/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Juventus FC",
+      "rumourDate": "21/05/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Nassr FC",
+      "rumourDate": "19/05/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bayern Munich",
+      "rumourDate": "19/05/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Inter Milan",
+      "rumourDate": "25/11/2022",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/fabinho-the-habit-of-winning-missing-liverpool-father-figure-klopp-and-tributes-to-diogo-jota/view/news/458916",
+     "date": "Aug 19, 2025",
+     "title": "Fabinho: The habit of winning, missing Liverpool, 'father figure' Klopp, and tributes to Diogo Jota"
+    },
+    {
+     "url": "https://www.transfermarkt.com/could-brazil-miss-out-on-world-cup-for-the-very-first-time-why-its-going-wrong-for-the-selecao/view/news/430498",
+     "date": "Nov 19, 2024",
+     "title": "Could Brazil miss out on World Cup for the very first time? Why it’s going wrong for the Seleção"
+    },
+    {
+     "url": "https://www.transfermarkt.com/third-youngest-squad-in-the-pl-postecoglou-aiming-for-top-four-with-new-look-spurs-side/view/news/441066",
+     "date": "Jul 23, 2024",
+     "title": "Third youngest squad in the PL - Postecoglou aiming for top four with new-look Spurs side"
+    },
+    {
+     "url": "https://www.transfermarkt.com/aston-villa-vs-tottenham-how-ange-postecoglous-point-haul-compares-to-top-six-rivals/view/news/434781",
+     "date": "Mar 9, 2024",
+     "title": "Aston Villa vs Tottenham: How Ange Postecoglou's point haul compares to top six rivals"
+    },
+    {
+     "url": "https://www.transfermarkt.com/three-defeats-in-a-row-is-ange-postecoglous-tottenham-honeymoon-over-/view/news/430512",
+     "date": "Dec 1, 2023",
+     "title": "Three defeats in a row - Is Ange Postecoglou's Tottenham honeymoon over?"
+    },
+    {
+     "url": "https://www.transfermarkt.com/tottenham-and-barca-agree-emerson-transfer-betis-to-benefit-from-deal/view/news/391967",
+     "date": "Aug 30, 2021",
+     "title": "Tottenham and Barça agree Emerson transfer - Betis to benefit from deal"
+    },
+    {
+     "url": "https://www.transfermarkt.com/sergino-dest-on-bayer-leverkusens-list-only-second-choice-at-bayern-munich-/view/news/366801",
+     "date": "Jul 29, 2020",
+     "title": "Sergiño Dest on Bayer Leverkusen's list - Only second choice at Bayern Munich?"
+    },
+    {
+     "url": "https://www.transfermarkt.com/bayer-leverkusen-interested-in-real-betis-emerson-barcelona-hold-transfer-rights/view/news/359746",
+     "date": "May 3, 2020",
+     "title": "Bayer Leverkusen interested in Real Betis' Emerson - Barcelona hold transfer rights"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€9.00M",
+     "from": "AC Milan",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": "€9.00M",
+     "transferDate": "Jul 26, 2025"
+    },
+    {
+     "to": "AC Milan",
+     "fee": "€16.00M",
+     "from": "Tottenham",
+     "type": "transfer",
+     "season": "24/25",
+     "marketValue": "€18.00M",
+     "transferDate": "Aug 12, 2024"
+    },
+    {
+     "to": "Tottenham",
+     "fee": "€25.00M",
+     "from": "Barcelona",
+     "type": "transfer",
+     "season": "21/22",
+     "marketValue": "€25.00M",
+     "transferDate": "Aug 31, 2021"
+    },
+    {
+     "to": "Barcelona",
+     "fee": "€14.00M",
+     "from": "Real Betis",
+     "type": "transfer",
+     "season": "21/22",
+     "marketValue": "€25.00M",
+     "transferDate": "Jul 1, 2021"
+    },
+    {
+     "to": "Real Betis",
+     "fee": "€6.00M",
+     "from": "Barcelona",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": "€50.00K",
+     "transferDate": "Feb 1, 2019"
+    },
+    {
+     "to": "Barcelona",
+     "fee": "€12.00M",
+     "from": "Atlético-MG",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": "€50.00K",
+     "transferDate": "Jan 31, 2019"
+    },
+    {
+     "to": "Atlético-MG",
+     "fee": "€1.18M",
+     "from": "Ponte Preta",
+     "type": "transfer",
+     "season": "17/18",
+     "marketValue": "€50.00K",
+     "transferDate": "Apr 14, 2018"
+    },
+    {
+     "to": "Ponte Preta",
+     "fee": null,
+     "from": "Ponte Preta U17",
+     "type": "transfer",
+     "season": "15/16",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2016"
+    },
+    {
+     "to": "Ponte Preta U17",
+     "fee": null,
+     "from": "São Paulo U17",
+     "type": "transfer",
+     "season": "13/14",
+     "marketValue": null,
+     "transferDate": "Jan 27, 2014"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "12/03/2026"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 26,
+     "club": "AC Milan",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "17/06/2025"
+    },
+    {
+     "age": 26,
+     "club": "AC Milan",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "25/03/2025"
+    },
+    {
+     "age": 25,
+     "club": "AC Milan",
+     "value": 14000000,
+     "currency": "€",
+     "recordedDate": "18/12/2024"
+    },
+    {
+     "age": 25,
+     "club": "Tottenham Hotspur",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "27/05/2024"
+    },
+    {
+     "age": 24,
+     "club": "Tottenham Hotspur",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "19/12/2023"
+    },
+    {
+     "age": 24,
+     "club": "Tottenham Hotspur",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "20/06/2023"
+    },
+    {
+     "age": 24,
+     "club": "Tottenham Hotspur",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "16/03/2023"
+    },
+    {
+     "age": 23,
+     "club": "Tottenham Hotspur",
+     "value": 30000000,
+     "currency": "€",
+     "recordedDate": "03/11/2022"
+    },
+    {
+     "age": 23,
+     "club": "Tottenham Hotspur",
+     "value": 30000000,
+     "currency": "€",
+     "recordedDate": "15/09/2022"
+    },
+    {
+     "age": 23,
+     "club": "Tottenham Hotspur",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "15/06/2022"
+    },
+    {
+     "age": 22,
+     "club": "Tottenham Hotspur",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "23/12/2021"
+    },
+    {
+     "age": 22,
+     "club": "Real Betis Balompié",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "10/06/2021"
+    },
+    {
+     "age": 22,
+     "club": "Real Betis Balompié",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "19/03/2021"
+    },
+    {
+     "age": 21,
+     "club": "Real Betis Balompié",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "05/01/2021"
+    },
+    {
+     "age": 21,
+     "club": "Real Betis Balompié",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "08/10/2020"
+    },
+    {
+     "age": 21,
+     "club": "Real Betis Balompié",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "23/07/2020"
+    },
+    {
+     "age": 21,
+     "club": "Real Betis Balompié",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 21,
+     "club": "Real Betis Balompié",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "05/03/2020"
+    },
+    {
+     "age": 20,
+     "club": "Real Betis Balompié",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "20/12/2019"
+    },
+    {
+     "age": 20,
+     "club": "Real Betis Balompié",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "10/09/2019"
+    },
+    {
+     "age": 20,
+     "club": "Real Betis Balompié",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "11/06/2019"
+    },
+    {
+     "age": 20,
+     "club": "Real Betis Balompié",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "28/02/2019"
+    },
+    {
+     "age": 19,
+     "club": "Clube Atlético Mineiro",
+     "value": 50000,
+     "currency": "€",
+     "recordedDate": "23/05/2018"
+    },
+    {
+     "age": 18,
+     "club": "Associação Atlética Ponte Preta",
+     "value": 50000,
+     "currency": "€",
+     "recordedDate": "07/12/2017"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Calf injury",
+     "season": "2025",
+     "toDate": "13.05.2025",
+     "fromDate": "22.01.2025",
+     "missedGames": 22,
+     "absentDurationInDays": 112
+    },
+    {
+     "reason": "Unknown",
+     "season": "2025",
+     "toDate": "28.11.2024",
+     "fromDate": "24.11.2024",
+     "missedGames": null,
+     "absentDurationInDays": 5
+    },
+    {
+     "reason": "Fitness",
+     "season": "2025",
+     "toDate": "18.08.2024",
+     "fromDate": "16.08.2024",
+     "missedGames": 1,
+     "absentDurationInDays": 3
+    },
+    {
+     "reason": "Knee surgery",
+     "season": "2023",
+     "toDate": "01.05.2023",
+     "fromDate": "25.03.2023",
+     "missedGames": 6,
+     "absentDurationInDays": 38
+    },
+    {
+     "reason": "Unknown",
+     "season": "2022",
+     "toDate": "13.12.2021",
+     "fromDate": "03.12.2021",
+     "missedGames": 2,
+     "absentDurationInDays": 11
+    },
+    {
+     "reason": "Knee bruise",
+     "season": "2021",
+     "toDate": "31.10.2020",
+     "fromDate": "04.10.2020",
+     "missedGames": 4,
+     "absentDurationInDays": 28
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:52:42.563898+00:00"
+}

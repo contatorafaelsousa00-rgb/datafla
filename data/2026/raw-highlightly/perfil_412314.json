@@ -1,0 +1,673 @@
+{
+ "data": [
+  {
+   "id": 412314,
+   "logo": null,
+   "name": "E. Pulgar",
+   "fullName": "Erick Antonio Pulgar Farfán",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "29/07/2022",
+     "contractExpiry": "31/12/2029",
+     "latestContractExtension": "02/09/2026"
+    },
+    "foot": "right",
+    "height": "1,88 m",
+    "fullName": "Erick Pulgar",
+    "position": {
+     "main": "Defensive Midfield",
+     "secondary": "Central Midfield, Centre-Back"
+    },
+    "birthDate": "15/01/1994",
+    "deathDate": null,
+    "birthPlace": "Antofagasta",
+    "citizenship": "Chile"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "AS Monaco",
+      "rumourDate": "15/08/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "ACF Fiorentina",
+      "rumourDate": "09/08/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "10/07/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Arsenal FC",
+      "rumourDate": "02/07/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sevilla FC",
+      "rumourDate": "28/06/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Villarreal CF",
+      "rumourDate": "26/06/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bologna FC 1909",
+      "rumourDate": "11/01/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AS Roma",
+      "rumourDate": "30/12/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Borussia Dortmund",
+      "rumourDate": "19/07/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "UC Sampdoria",
+      "rumourDate": "10/07/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "US Sassuolo",
+      "rumourDate": "16/06/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bologna FC 1909",
+      "rumourDate": "05/08/2015",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "29/07/2015",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "03/02/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Olympique Marseille",
+      "rumourDate": "30/01/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bologna FC 1909",
+      "rumourDate": "29/01/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Udinese Calcio",
+      "rumourDate": "27/01/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Real Betis Balompié",
+      "rumourDate": "27/12/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Atlético de Madrid",
+      "rumourDate": "11/07/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Celta de Vigo",
+      "rumourDate": "01/07/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Valencia CF",
+      "rumourDate": "29/01/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Cagliari Calcio",
+      "rumourDate": "28/01/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "US Sassuolo",
+      "rumourDate": "20/01/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Leeds United",
+      "rumourDate": "21/09/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "West Ham United",
+      "rumourDate": "21/09/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Torino FC",
+      "rumourDate": "28/08/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sevilla FC",
+      "rumourDate": "02/08/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "24/12/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AS Monaco",
+      "rumourDate": "15/08/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "NEOM SC",
+      "rumourDate": "15/08/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Panathinaikos",
+      "rumourDate": "24/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Santos FC",
+      "rumourDate": "09/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Stade Rennais FC",
+      "rumourDate": "22/12/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Porto",
+      "rumourDate": "24/05/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Wolverhampton Wanderers",
+      "rumourDate": "28/01/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sevilla FC",
+      "rumourDate": "24/01/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Valencia CF",
+      "rumourDate": "11/01/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CA River Plate",
+      "rumourDate": "09/11/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "28/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "UC Sampdoria",
+      "rumourDate": "26/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Villarreal CF",
+      "rumourDate": "16/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CSKA Moscow",
+      "rumourDate": "12/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "RCD Espanyol Barcelona",
+      "rumourDate": "01/07/2022",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/chiles-golden-generation-coming-to-an-end-quot-goalgetter-quot-vidal-the-only-shining-light/view/news/374818",
+     "date": "Nov 19, 2020",
+     "title": "Chile's golden generation coming to an end - \"Goalgetter\" Vidal the only shining light"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€2.80M",
+     "from": "Fiorentina",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": "€6.50M",
+     "transferDate": "Jul 29, 2022"
+    },
+    {
+     "to": "Fiorentina",
+     "fee": null,
+     "from": "Galatasaray",
+     "type": "end of loan",
+     "season": "21/22",
+     "marketValue": "€6.50M",
+     "transferDate": "Jun 30, 2022"
+    },
+    {
+     "to": "Galatasaray",
+     "fee": null,
+     "from": "Fiorentina",
+     "type": "loan",
+     "season": "21/22",
+     "marketValue": "€8.50M",
+     "transferDate": "Jan 31, 2022"
+    },
+    {
+     "to": "Fiorentina",
+     "fee": "€12.30M",
+     "from": "Bologna",
+     "type": "transfer",
+     "season": "19/20",
+     "marketValue": "€10.00M",
+     "transferDate": "Aug 9, 2019"
+    },
+    {
+     "to": "Bologna",
+     "fee": "€2.28M",
+     "from": "U. Católica",
+     "type": "transfer",
+     "season": "15/16",
+     "marketValue": "€2.00M",
+     "transferDate": "Aug 7, 2015"
+    },
+    {
+     "to": "U. Católica",
+     "fee": "€295.00K",
+     "from": "Antofagasta",
+     "type": "transfer",
+     "season": "14/15",
+     "marketValue": null,
+     "transferDate": "Jul 4, 2014"
+    },
+    {
+     "to": "Antofagasta",
+     "fee": null,
+     "from": "Antofagasta U21",
+     "type": "transfer",
+     "season": "13/14",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2013"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 32,
+     "club": "CR Flamengo",
+     "value": 4500000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "25/07/2023"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "07/04/2023"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "14/11/2022"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 6500000,
+     "currency": "€",
+     "recordedDate": "19/08/2022"
+    },
+    {
+     "age": 28,
+     "club": "Galatasaray",
+     "value": 6500000,
+     "currency": "€",
+     "recordedDate": "01/06/2022"
+    },
+    {
+     "age": 28,
+     "club": "Galatasaray",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "31/03/2022"
+    },
+    {
+     "age": 27,
+     "club": "ACF Fiorentina",
+     "value": 8500000,
+     "currency": "€",
+     "recordedDate": "28/12/2021"
+    },
+    {
+     "age": 27,
+     "club": "ACF Fiorentina",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "03/06/2021"
+    },
+    {
+     "age": 27,
+     "club": "ACF Fiorentina",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "23/03/2021"
+    },
+    {
+     "age": 26,
+     "club": "ACF Fiorentina",
+     "value": 12500000,
+     "currency": "€",
+     "recordedDate": "29/12/2020"
+    },
+    {
+     "age": 26,
+     "club": "ACF Fiorentina",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "25/08/2020"
+    },
+    {
+     "age": 26,
+     "club": "ACF Fiorentina",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 25,
+     "club": "ACF Fiorentina",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "12/12/2019"
+    },
+    {
+     "age": 25,
+     "club": "ACF Fiorentina",
+     "value": 14000000,
+     "currency": "€",
+     "recordedDate": "08/10/2019"
+    },
+    {
+     "age": 25,
+     "club": "Bologna FC 1909",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "06/06/2019"
+    },
+    {
+     "age": 24,
+     "club": "Bologna FC 1909",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "20/12/2018"
+    },
+    {
+     "age": 24,
+     "club": "Bologna FC 1909",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "07/06/2018"
+    },
+    {
+     "age": 23,
+     "club": "Bologna FC 1909",
+     "value": 4500000,
+     "currency": "€",
+     "recordedDate": "29/12/2017"
+    },
+    {
+     "age": 23,
+     "club": "Bologna FC 1909",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "08/06/2017"
+    },
+    {
+     "age": 22,
+     "club": "Bologna FC 1909",
+     "value": 1800000,
+     "currency": "€",
+     "recordedDate": "02/01/2017"
+    },
+    {
+     "age": 22,
+     "club": "Bologna FC 1909",
+     "value": 1800000,
+     "currency": "€",
+     "recordedDate": "15/07/2016"
+    },
+    {
+     "age": 21,
+     "club": "Bologna FC 1909",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "04/01/2016"
+    },
+    {
+     "age": 21,
+     "club": "Bologna FC 1909",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "07/08/2015"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Muscle fatigue",
+     "season": "2018",
+     "toDate": "27.04.2018",
+     "fromDate": "16.04.2018",
+     "missedGames": 2,
+     "absentDurationInDays": 12
+    },
+    {
+     "reason": "Unknown",
+     "season": "2018",
+     "toDate": "08.09.2017",
+     "fromDate": "24.08.2017",
+     "missedGames": 3,
+     "absentDurationInDays": 16
+    },
+    {
+     "reason": "Shoulder injury",
+     "season": "2026",
+     "toDate": "22.05.2026",
+     "fromDate": "06.04.2026",
+     "missedGames": 13,
+     "absentDurationInDays": 47
+    },
+    {
+     "reason": "Metatarsal fracture",
+     "season": "2025",
+     "toDate": "14.10.2025",
+     "fromDate": "29.06.2025",
+     "missedGames": 21,
+     "absentDurationInDays": 108
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "31.05.2025",
+     "fromDate": "11.05.2025",
+     "missedGames": 5,
+     "absentDurationInDays": 21
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2025",
+     "toDate": "19.11.2024",
+     "fromDate": "11.11.2024",
+     "missedGames": 1,
+     "absentDurationInDays": 9
+    },
+    {
+     "reason": "Stomach problems",
+     "season": "2025",
+     "toDate": "27.07.2024",
+     "fromDate": "21.07.2024",
+     "missedGames": 1,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Injury to the ankle",
+     "season": "2024",
+     "toDate": "01.06.2024",
+     "fromDate": "29.04.2024",
+     "missedGames": 6,
+     "absentDurationInDays": 34
+    },
+    {
+     "reason": "Hamstring muscle injury",
+     "season": "2024",
+     "toDate": "16.08.2023",
+     "fromDate": "12.07.2023",
+     "missedGames": 8,
+     "absentDurationInDays": 36
+    },
+    {
+     "reason": "Metatarsal fracture",
+     "season": "2023",
+     "toDate": "04.05.2023",
+     "fromDate": "25.02.2023",
+     "missedGames": 13,
+     "absentDurationInDays": 69
+    },
+    {
+     "reason": "Bruise on ankle",
+     "season": "2023",
+     "toDate": "22.09.2022",
+     "fromDate": "19.09.2022",
+     "missedGames": null,
+     "absentDurationInDays": 4
+    },
+    {
+     "reason": "Corona virus",
+     "season": "2022",
+     "toDate": "28.03.2022",
+     "fromDate": "23.03.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Bruise",
+     "season": "2022",
+     "toDate": "21.12.2021",
+     "fromDate": "15.12.2021",
+     "missedGames": 1,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Ankle sprain",
+     "season": "2022",
+     "toDate": "05.12.2021",
+     "fromDate": "22.10.2021",
+     "missedGames": 9,
+     "absentDurationInDays": 45
+    },
+    {
+     "reason": "Muscle fatigue",
+     "season": "2022",
+     "toDate": "26.09.2021",
+     "fromDate": "18.09.2021",
+     "missedGames": 1,
+     "absentDurationInDays": 9
+    },
+    {
+     "reason": "Thigh problems",
+     "season": "2021",
+     "toDate": "30.06.2021",
+     "fromDate": "22.06.2021",
+     "missedGames": 1,
+     "absentDurationInDays": 9
+    },
+    {
+     "reason": "Fitness",
+     "season": "2021",
+     "toDate": "14.10.2020",
+     "fromDate": "08.09.2020",
+     "missedGames": 4,
+     "absentDurationInDays": 37
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:52:44.451077+00:00"
+}

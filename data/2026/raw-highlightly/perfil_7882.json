@@ -1,0 +1,704 @@
+{
+ "data": [
+  {
+   "id": 7882,
+   "logo": null,
+   "name": "Saúl",
+   "fullName": "Saúl Ñíguez Esclapez",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "23/07/2025",
+     "contractExpiry": "31/12/2028",
+     "latestContractExtension": null
+    },
+    "foot": "left",
+    "height": "1,84 m",
+    "fullName": "Saúl Ñíguez",
+    "position": {
+     "main": "Central Midfield",
+     "secondary": "Left Midfield, Defensive Midfield"
+    },
+    "birthDate": "21/11/1994",
+    "deathDate": null,
+    "birthPlace": "Elche",
+    "citizenship": "Spain"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "CF América",
+      "rumourDate": "13/09/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Liverpool FC",
+      "rumourDate": "14/07/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bayern Munich",
+      "rumourDate": "07/06/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester City",
+      "rumourDate": "11/04/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Arsenal FC",
+      "rumourDate": "12/04/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Tottenham Hotspur",
+      "rumourDate": "11/05/2016",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Everton FC",
+      "rumourDate": "16/05/2014",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Liverpool FC",
+      "rumourDate": "26/01/2014",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Arsenal FC",
+      "rumourDate": "26/01/2014",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Chelsea FC",
+      "rumourDate": "12/01/2014",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Bayern Munich",
+      "rumourDate": "08/08/2013",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "11/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Trabzonspor",
+      "rumourDate": "11/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Rayo Vallecano",
+      "rumourDate": "15/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Elche CF",
+      "rumourDate": "05/06/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Atlético de Madrid",
+      "rumourDate": "29/06/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sevilla FC",
+      "rumourDate": "17/07/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "23/07/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Nassr FC",
+      "rumourDate": "19/06/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fenerbahce",
+      "rumourDate": "23/02/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Valencia CF",
+      "rumourDate": "27/01/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Juventus FC",
+      "rumourDate": "27/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AS Roma",
+      "rumourDate": "15/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Chelsea FC",
+      "rumourDate": "01/09/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester United",
+      "rumourDate": "24/08/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "12/08/2021",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/sterling-kimmich-martial-amp-co-the-most-valuable-u21-xi-from-10-years-ago/view/news/483660",
+     "date": "Jul 29, 2026",
+     "title": "Sterling, Kimmich, Martial & Co. - The most valuable U21 XI from 10 years ago"
+    },
+    {
+     "url": "https://www.transfermarkt.com/henry-griezmann-amp-co-atletico-x-arsenal-combined-xi-on-all-time-most-ucl-games/view/news/478664",
+     "date": "Apr 29, 2026",
+     "title": "Henry, Griezmann & Co. - Atlético x Arsenal combined XI on all-time most UCL games"
+    },
+    {
+     "url": "https://www.transfermarkt.com/72-drop-in-eight-years-why-are-there-now-so-few-spanish-players-in-the-premier-league-/view/news/443620",
+     "date": "Sep 9, 2024",
+     "title": "72% drop in eight years - Why are there now so few Spanish players in the Premier League?"
+    },
+    {
+     "url": "https://www.transfermarkt.com/who-is-celta-star-gabri-veiga-the-goalscoring-no-10-wanted-by-chelsea-barca-and-liverpool/view/news/422685",
+     "date": "Jun 28, 2023",
+     "title": "Who is Celta star Gabri Veiga? The goalscoring No.10 wanted by Chelsea, Barca and Liverpool"
+    },
+    {
+     "url": "https://www.transfermarkt.com/de-paul-headed-to-atletico-record-fee-for-udinese-confirmed-after-niguez-sale-/view/news/387416",
+     "date": "Jun 16, 2021",
+     "title": "De Paul headed to Atlético: Record fee for Udinese - Confirmed after Ñíguez sale?"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-laliga-euro-10m-plus-for-militao-minus-for-saul-fati-loses-u19-top-spot/view/news/386878",
+     "date": "Jun 10, 2021",
+     "title": "Market values LaLiga:  €10m plus for Militão, minus for Saúl - Fati loses U19 top spot"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-laliga-messi-no-longer-in-1st-place-after-10-years-pedri-the-main-winner/view/news/377099",
+     "date": "Jan 5, 2021",
+     "title": "Market values LaLiga: Messi no longer in 1st place after 10 years - Pedri the main winner"
+    },
+    {
+     "url": "https://www.transfermarkt.com/liverpool-eliminated-from-champions-league-titleholders-fall-to-atletico/view/news/356756",
+     "date": "Mar 11, 2020",
+     "title": "Liverpool eliminated from Champions League - Titleholders fall to Atlético"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Atlético",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": "€3.00M",
+     "transferDate": "Jul 23, 2025"
+    },
+    {
+     "to": "Atlético",
+     "fee": null,
+     "from": "Sevilla FC",
+     "type": "end of loan",
+     "season": "24/25",
+     "marketValue": "€3.00M",
+     "transferDate": "Jun 30, 2025"
+    },
+    {
+     "to": "Sevilla FC",
+     "fee": null,
+     "from": "Atlético",
+     "type": "loan",
+     "season": "24/25",
+     "marketValue": "€7.50M",
+     "transferDate": "Jul 15, 2024"
+    },
+    {
+     "to": "Atlético",
+     "fee": null,
+     "from": "Chelsea",
+     "type": "end of loan",
+     "season": "21/22",
+     "marketValue": "€25.00M",
+     "transferDate": "Jun 30, 2022"
+    },
+    {
+     "to": "Chelsea",
+     "fee": "€5.00M",
+     "from": "Atlético",
+     "type": "loan",
+     "season": "21/22",
+     "marketValue": "€40.00M",
+     "transferDate": "Aug 31, 2021"
+    },
+    {
+     "to": "Atlético",
+     "fee": null,
+     "from": "Rayo Vallecano",
+     "type": "end of loan",
+     "season": "13/14",
+     "marketValue": "€7.50M",
+     "transferDate": "Jun 30, 2014"
+    },
+    {
+     "to": "Rayo Vallecano",
+     "fee": null,
+     "from": "Atlético",
+     "type": "loan",
+     "season": "13/14",
+     "marketValue": "€2.00M",
+     "transferDate": "Jul 23, 2013"
+    },
+    {
+     "to": "Atlético",
+     "fee": null,
+     "from": "Atl. Madrileño",
+     "type": "transfer",
+     "season": "13/14",
+     "marketValue": "€2.00M",
+     "transferDate": "Jul 1, 2013"
+    },
+    {
+     "to": "Atl. Madrileño",
+     "fee": null,
+     "from": "Atl. Madrid U17",
+     "type": "transfer",
+     "season": "10/11",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2010"
+    },
+    {
+     "to": "Atl. Madrid U17",
+     "fee": null,
+     "from": "Atlético Yth.",
+     "type": "transfer",
+     "season": "09/10",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2009"
+    },
+    {
+     "to": "Atlético Yth.",
+     "fee": null,
+     "from": "R.Madrid Yth.",
+     "type": "transfer",
+     "season": "08/09",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2008"
+    },
+    {
+     "to": "R.Madrid Yth.",
+     "fee": null,
+     "from": "Elche CF Youth",
+     "type": "transfer",
+     "season": "06/07",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2006"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "12/03/2026"
+    },
+    {
+     "age": 31,
+     "club": "CR Flamengo",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 30,
+     "club": "Sevilla FC",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "09/06/2025"
+    },
+    {
+     "age": 30,
+     "club": "Sevilla FC",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "27/12/2024"
+    },
+    {
+     "age": 29,
+     "club": "Sevilla FC",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "11/10/2024"
+    },
+    {
+     "age": 29,
+     "club": "Atlético de Madrid",
+     "value": 7500000,
+     "currency": "€",
+     "recordedDate": "07/06/2024"
+    },
+    {
+     "age": 29,
+     "club": "Atlético de Madrid",
+     "value": 7500000,
+     "currency": "€",
+     "recordedDate": "21/03/2024"
+    },
+    {
+     "age": 29,
+     "club": "Atlético de Madrid",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "22/12/2023"
+    },
+    {
+     "age": 28,
+     "club": "Atlético de Madrid",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "13/10/2023"
+    },
+    {
+     "age": 28,
+     "club": "Atlético de Madrid",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "13/06/2023"
+    },
+    {
+     "age": 28,
+     "club": "Atlético de Madrid",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "23/03/2023"
+    },
+    {
+     "age": 27,
+     "club": "Atlético de Madrid",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "07/11/2022"
+    },
+    {
+     "age": 27,
+     "club": "Atlético de Madrid",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "23/09/2022"
+    },
+    {
+     "age": 27,
+     "club": "Chelsea FC",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "15/06/2022"
+    },
+    {
+     "age": 27,
+     "club": "Chelsea FC",
+     "value": 28000000,
+     "currency": "€",
+     "recordedDate": "29/03/2022"
+    },
+    {
+     "age": 27,
+     "club": "Chelsea FC",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "23/12/2021"
+    },
+    {
+     "age": 26,
+     "club": "Atlético de Madrid",
+     "value": 40000000,
+     "currency": "€",
+     "recordedDate": "10/06/2021"
+    },
+    {
+     "age": 26,
+     "club": "Atlético de Madrid",
+     "value": 55000000,
+     "currency": "€",
+     "recordedDate": "19/03/2021"
+    },
+    {
+     "age": 26,
+     "club": "Atlético de Madrid",
+     "value": 60000000,
+     "currency": "€",
+     "recordedDate": "05/01/2021"
+    },
+    {
+     "age": 25,
+     "club": "Atlético de Madrid",
+     "value": 70000000,
+     "currency": "€",
+     "recordedDate": "08/10/2020"
+    },
+    {
+     "age": 25,
+     "club": "Atlético de Madrid",
+     "value": 72000000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 25,
+     "club": "Atlético de Madrid",
+     "value": 90000000,
+     "currency": "€",
+     "recordedDate": "20/12/2019"
+    },
+    {
+     "age": 24,
+     "club": "Atlético de Madrid",
+     "value": 90000000,
+     "currency": "€",
+     "recordedDate": "11/06/2019"
+    },
+    {
+     "age": 24,
+     "club": "Atlético de Madrid",
+     "value": 90000000,
+     "currency": "€",
+     "recordedDate": "21/12/2018"
+    },
+    {
+     "age": 23,
+     "club": "Atlético de Madrid",
+     "value": 90000000,
+     "currency": "€",
+     "recordedDate": "31/10/2018"
+    },
+    {
+     "age": 23,
+     "club": "Atlético de Madrid",
+     "value": 70000000,
+     "currency": "€",
+     "recordedDate": "30/05/2018"
+    },
+    {
+     "age": 23,
+     "club": "Atlético de Madrid",
+     "value": 70000000,
+     "currency": "€",
+     "recordedDate": "01/01/2018"
+    },
+    {
+     "age": 22,
+     "club": "Atlético de Madrid",
+     "value": 40000000,
+     "currency": "€",
+     "recordedDate": "05/06/2017"
+    },
+    {
+     "age": 22,
+     "club": "Atlético de Madrid",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "24/01/2017"
+    },
+    {
+     "age": 21,
+     "club": "Atlético de Madrid",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "15/07/2016"
+    },
+    {
+     "age": 21,
+     "club": "Atlético de Madrid",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "07/04/2016"
+    },
+    {
+     "age": 21,
+     "club": "Atlético de Madrid",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "22/02/2016"
+    },
+    {
+     "age": 20,
+     "club": "Atlético de Madrid",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "01/07/2015"
+    },
+    {
+     "age": 20,
+     "club": "Atlético de Madrid",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "23/01/2015"
+    },
+    {
+     "age": 19,
+     "club": "Atlético de Madrid",
+     "value": 7500000,
+     "currency": "€",
+     "recordedDate": "20/07/2014"
+    },
+    {
+     "age": 19,
+     "club": "Rayo Vallecano",
+     "value": 7500000,
+     "currency": "€",
+     "recordedDate": "20/02/2014"
+    },
+    {
+     "age": 19,
+     "club": "Rayo Vallecano",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "23/01/2014"
+    },
+    {
+     "age": 18,
+     "club": "Rayo Vallecano",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "25/07/2013"
+    },
+    {
+     "age": 18,
+     "club": "Atlético Madrileño",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "12/06/2013"
+    },
+    {
+     "age": 18,
+     "club": "Atlético Madrileño",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "10/01/2013"
+    },
+    {
+     "age": 17,
+     "club": "Atlético Madrileño",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "07/08/2012"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Heel injury",
+     "season": "2026",
+     "toDate": "15.04.2026",
+     "fromDate": "10.01.2026",
+     "missedGames": 24,
+     "absentDurationInDays": 96
+    },
+    {
+     "reason": "Ankle injury",
+     "season": "2026",
+     "toDate": "18.10.2025",
+     "fromDate": "03.10.2025",
+     "missedGames": 2,
+     "absentDurationInDays": 16
+    },
+    {
+     "reason": "Hip injury",
+     "season": "2025",
+     "toDate": "20.11.2024",
+     "fromDate": "25.09.2024",
+     "missedGames": 7,
+     "absentDurationInDays": 57
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2021",
+     "toDate": "02.11.2020",
+     "fromDate": "15.10.2020",
+     "missedGames": null,
+     "absentDurationInDays": 19
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2019",
+     "toDate": "08.02.2019",
+     "fromDate": "28.01.2019",
+     "missedGames": null,
+     "absentDurationInDays": 12
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2019",
+     "toDate": "25.01.2019",
+     "fromDate": "17.01.2019",
+     "missedGames": null,
+     "absentDurationInDays": 9
+    },
+    {
+     "reason": "Ankle sprain",
+     "season": "2017",
+     "toDate": "19.10.2016",
+     "fromDate": "03.10.2016",
+     "missedGames": 4,
+     "absentDurationInDays": 17
+    },
+    {
+     "reason": "Ankle sprain",
+     "season": "2016",
+     "toDate": "02.04.2016",
+     "fromDate": "24.03.2016",
+     "missedGames": 1,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Ill",
+     "season": "2015",
+     "toDate": "01.04.2015",
+     "fromDate": "26.02.2015",
+     "missedGames": 7,
+     "absentDurationInDays": 35
+    },
+    {
+     "reason": "Knee injury",
+     "season": "2015",
+     "toDate": "16.02.2015",
+     "fromDate": "09.02.2015",
+     "missedGames": null,
+     "absentDurationInDays": 8
+    },
+    {
+     "reason": "Abdominal muscle strain",
+     "season": "2014",
+     "toDate": "20.05.2014",
+     "fromDate": "14.05.2014",
+     "missedGames": 1,
+     "absentDurationInDays": 7
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:52:43.499346+00:00"
+}

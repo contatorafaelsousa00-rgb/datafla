@@ -1,0 +1,80 @@
+{
+ "data": [
+  {
+   "id": 72329887,
+   "logo": null,
+   "name": "João Victor Cunha",
+   "fullName": "João Victor de Souza Cunha",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo U20",
+     "joinedAt": "01/01/2024",
+     "contractExpiry": "31/12/2029",
+     "latestContractExtension": "09/09/2024"
+    },
+    "foot": "right",
+    "height": "1,87 m",
+    "fullName": "João Victor de Souza Cunha",
+    "position": {
+     "main": "Centre-Back",
+     "secondary": null
+    },
+    "birthDate": "01/01/2007",
+    "deathDate": null,
+    "birthPlace": "São Paulo",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Orlando City SC",
+      "rumourDate": "15/07/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Parma Calcio 1913",
+      "rumourDate": "29/08/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Orlando City SC",
+      "rumourDate": "15/07/2026",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2024"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 19,
+     "club": "CR Flamengo U20",
+     "value": 800000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 18,
+     "club": "CR Flamengo U20",
+     "value": 800000,
+     "currency": "€",
+     "recordedDate": "25/09/2025"
+    }
+   ],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:52:49.330963+00:00"
+}

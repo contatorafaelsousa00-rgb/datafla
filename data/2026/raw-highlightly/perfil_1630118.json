@@ -1,0 +1,482 @@
+{
+ "data": [
+  {
+   "id": 1630118,
+   "logo": null,
+   "name": "Léo Pereira",
+   "fullName": "Leonardo Pereira",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "31/01/2020",
+     "contractExpiry": "31/12/2027",
+     "latestContractExtension": "24/02/2023"
+    },
+    "foot": "left",
+    "height": "1,89 m",
+    "fullName": "Leonardo Pereira",
+    "position": {
+     "main": "Centre-Back",
+     "secondary": null
+    },
+    "birthDate": "31/01/1996",
+    "deathDate": null,
+    "birthPlace": "Curitiba",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Beşiktaş JK",
+      "rumourDate": "14/07/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "AS Monaco",
+      "rumourDate": "29/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fenerbahce",
+      "rumourDate": "08/12/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "08/12/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Qadsiah FC",
+      "rumourDate": "08/12/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Olympiacos Piraeus",
+      "rumourDate": "08/12/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Porto",
+      "rumourDate": "23/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Krasnodar",
+      "rumourDate": "05/08/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SC Braga",
+      "rumourDate": "21/06/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Porto",
+      "rumourDate": "10/05/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "VfL Wolfsburg",
+      "rumourDate": "07/05/2019",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€7.00M",
+     "from": "Athletico-PR",
+     "type": "transfer",
+     "season": "19/20",
+     "marketValue": "€2.50M",
+     "transferDate": "Jan 31, 2020"
+    },
+    {
+     "to": "Athletico-PR",
+     "fee": null,
+     "from": "Orlando",
+     "type": "end of loan",
+     "season": "17/18",
+     "marketValue": "€750.00K",
+     "transferDate": "Dec 31, 2017"
+    },
+    {
+     "to": "Orlando",
+     "fee": null,
+     "from": "Athletico-PR",
+     "type": "loan",
+     "season": "16/17",
+     "marketValue": "€1.20M",
+     "transferDate": "Mar 13, 2017"
+    },
+    {
+     "to": "Athletico-PR",
+     "fee": null,
+     "from": "Náutico",
+     "type": "end of loan",
+     "season": "16/17",
+     "marketValue": "€1.20M",
+     "transferDate": "Dec 31, 2016"
+    },
+    {
+     "to": "Náutico",
+     "fee": null,
+     "from": "Athletico-PR",
+     "type": "loan",
+     "season": "15/16",
+     "marketValue": "€2.00M",
+     "transferDate": "May 25, 2016"
+    },
+    {
+     "to": "Athletico-PR",
+     "fee": null,
+     "from": "Guaratinguetá",
+     "type": "end of loan",
+     "season": "15/16",
+     "marketValue": "€3.00M",
+     "transferDate": "Oct 21, 2015"
+    },
+    {
+     "to": "Guaratinguetá",
+     "fee": null,
+     "from": "Athletico-PR",
+     "type": "loan",
+     "season": "15/16",
+     "marketValue": "€3.00M",
+     "transferDate": "Jul 22, 2015"
+    },
+    {
+     "to": "Athletico-PR",
+     "fee": null,
+     "from": "Athletico U17",
+     "type": "transfer",
+     "season": "13/14",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2014"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "05/09/2025"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "27/09/2024"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 5500000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "25/07/2023"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "07/04/2023"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "14/11/2022"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "19/08/2022"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "06/04/2022"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "17/12/2021"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "28/05/2021"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "09/02/2021"
+    },
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "09/09/2020"
+    },
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "20/02/2020"
+    },
+    {
+     "age": 23,
+     "club": "Club Athletico Paranaense",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "27/11/2019"
+    },
+    {
+     "age": 23,
+     "club": "Club Athletico Paranaense",
+     "value": 1750000,
+     "currency": "€",
+     "recordedDate": "18/02/2019"
+    },
+    {
+     "age": 22,
+     "club": "Atlético Paranaense",
+     "value": 700000,
+     "currency": "€",
+     "recordedDate": "23/05/2018"
+    },
+    {
+     "age": 21,
+     "club": "Orlando City SC",
+     "value": 750000,
+     "currency": "€",
+     "recordedDate": "05/12/2017"
+    },
+    {
+     "age": 21,
+     "club": "Orlando City SC",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "24/05/2017"
+    },
+    {
+     "age": 20,
+     "club": "Clube Náutico Capibaribe",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "28/11/2016"
+    },
+    {
+     "age": 20,
+     "club": "Clube Náutico Capibaribe",
+     "value": 1400000,
+     "currency": "€",
+     "recordedDate": "23/07/2016"
+    },
+    {
+     "age": 20,
+     "club": "Clube Náutico Capibaribe",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "27/05/2016"
+    },
+    {
+     "age": 19,
+     "club": "Atlético Paranaense",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "15/12/2015"
+    },
+    {
+     "age": 19,
+     "club": "Atlético Paranaense",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "31/05/2015"
+    },
+    {
+     "age": 19,
+     "club": "Atlético Paranaense",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "01/02/2015"
+    },
+    {
+     "age": 18,
+     "club": "Atlético Paranaense",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "07/08/2014"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Cut",
+     "season": "2026",
+     "toDate": "02.05.2026",
+     "fromDate": "27.04.2026",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Rest",
+     "season": "2026",
+     "toDate": "04.04.2026",
+     "fromDate": "02.04.2026",
+     "missedGames": 1,
+     "absentDurationInDays": 3
+    },
+    {
+     "reason": "Thigh problems",
+     "season": "2025",
+     "toDate": "07.12.2024",
+     "fromDate": "02.12.2024",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2025",
+     "toDate": "11.09.2024",
+     "fromDate": "29.08.2024",
+     "missedGames": 1,
+     "absentDurationInDays": 14
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2023",
+     "toDate": "29.05.2024",
+     "fromDate": "19.05.2024",
+     "missedGames": 2,
+     "absentDurationInDays": 11
+    },
+    {
+     "reason": "Bruised ribs",
+     "season": "2024",
+     "toDate": "31.10.2023",
+     "fromDate": "26.10.2023",
+     "missedGames": null,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2024",
+     "toDate": "22.09.2023",
+     "fromDate": "19.09.2023",
+     "missedGames": 1,
+     "absentDurationInDays": 4
+    },
+    {
+     "reason": "Thigh problems",
+     "season": "2024",
+     "toDate": "10.08.2023",
+     "fromDate": "02.08.2023",
+     "missedGames": 2,
+     "absentDurationInDays": 9
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2024",
+     "toDate": "11.07.2023",
+     "fromDate": "02.07.2023",
+     "missedGames": 2,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Knee problems",
+     "season": "2024",
+     "toDate": "01.06.2023",
+     "fromDate": "28.05.2023",
+     "missedGames": null,
+     "absentDurationInDays": 5
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2024",
+     "toDate": "22.02.2020",
+     "fromDate": "12.02.2020",
+     "missedGames": 2,
+     "absentDurationInDays": 11
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:52:40.619033+00:00"
+}

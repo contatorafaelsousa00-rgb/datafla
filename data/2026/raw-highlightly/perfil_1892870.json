@@ -1,0 +1,440 @@
+{
+ "data": [
+  {
+   "id": 1892870,
+   "logo": null,
+   "name": "A. Rossi",
+   "fullName": "Agustín Daniel Rossi",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "01/07/2023",
+     "contractExpiry": "31/12/2027",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,93 m",
+    "fullName": "Agustín Rossi",
+    "position": {
+     "main": "Goalkeeper",
+     "secondary": null
+    },
+    "birthDate": "21/08/1995",
+    "deathDate": null,
+    "birthPlace": "San Martín",
+    "citizenship": "Argentina, Italy"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Besiktas JK",
+      "rumourDate": "31/05/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "UC Sampdoria",
+      "rumourDate": "09/07/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CA Boca Juniors",
+      "rumourDate": "30/01/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CA River Plate",
+      "rumourDate": "09/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Beşiktaş JK",
+      "rumourDate": "31/05/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Udinese Calcio",
+      "rumourDate": "27/06/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Nassr FC",
+      "rumourDate": "25/01/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "10/01/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Inter Milan",
+      "rumourDate": "22/12/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Girona FC",
+      "rumourDate": "17/08/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "18/01/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Basel 1893",
+      "rumourDate": "19/11/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Club Brugge KV",
+      "rumourDate": "19/11/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Udinese Calcio",
+      "rumourDate": "09/07/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "RSC Anderlecht",
+      "rumourDate": "22/05/2021",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Parma Calcio 1913",
+      "rumourDate": "09/07/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Montpellier HSC",
+      "rumourDate": "04/07/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Deportes Antofagasta",
+      "rumourDate": "12/02/2019",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Boca Juniors",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": "€6.00M",
+     "transferDate": "Jul 1, 2023"
+    },
+    {
+     "to": "Boca Juniors",
+     "fee": null,
+     "from": "Al-Nassr",
+     "type": "end of loan",
+     "season": "22/23",
+     "marketValue": "€6.00M",
+     "transferDate": "Jun 30, 2023"
+    },
+    {
+     "to": "Al-Nassr",
+     "fee": "€1.20M",
+     "from": "Boca Juniors",
+     "type": "loan",
+     "season": "22/23",
+     "marketValue": "€7.00M",
+     "transferDate": "Jan 24, 2023"
+    },
+    {
+     "to": "Boca Juniors",
+     "fee": null,
+     "from": "Lanús",
+     "type": "end of loan",
+     "season": "19/20",
+     "marketValue": "€1.60M",
+     "transferDate": "Jun 30, 2020"
+    },
+    {
+     "to": "Lanús",
+     "fee": null,
+     "from": "Boca Juniors",
+     "type": "loan",
+     "season": "19/20",
+     "marketValue": "€2.50M",
+     "transferDate": "Jul 1, 2019"
+    },
+    {
+     "to": "Boca Juniors",
+     "fee": null,
+     "from": "Antofagasta",
+     "type": "end of loan",
+     "season": "18/19",
+     "marketValue": "€2.50M",
+     "transferDate": "May 30, 2019"
+    },
+    {
+     "to": "Antofagasta",
+     "fee": null,
+     "from": "Boca Juniors",
+     "type": "loan",
+     "season": "18/19",
+     "marketValue": "€2.70M",
+     "transferDate": "Feb 22, 2019"
+    },
+    {
+     "to": "Boca Juniors",
+     "fee": "€1.30M",
+     "from": "Estudiantes LP",
+     "type": "transfer",
+     "season": "16/17",
+     "marketValue": "€750.00K",
+     "transferDate": "Feb 1, 2017"
+    },
+    {
+     "to": "Estudiantes LP",
+     "fee": null,
+     "from": "Defensa",
+     "type": "end of loan",
+     "season": "16/17",
+     "marketValue": "€750.00K",
+     "transferDate": "Jan 31, 2017"
+    },
+    {
+     "to": "Defensa",
+     "fee": null,
+     "from": "Estudiantes LP",
+     "type": "loan",
+     "season": "16/17",
+     "marketValue": "€700.00K",
+     "transferDate": "Jul 25, 2016"
+    },
+    {
+     "to": "Estudiantes LP",
+     "fee": "€600.00K",
+     "from": "Chacarita Jrs.",
+     "type": "transfer",
+     "season": "14/15",
+     "marketValue": null,
+     "transferDate": "Jan 10, 2015"
+    },
+    {
+     "to": "Chacarita Jrs.",
+     "fee": null,
+     "from": "Chacarita II",
+     "type": "transfer",
+     "season": "13/14",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2013"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 10000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "05/09/2025"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    },
+    {
+     "age": 27,
+     "club": "Al-Nassr FC",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "12/06/2023"
+    },
+    {
+     "age": 27,
+     "club": "CA Boca Juniors",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "26/10/2022"
+    },
+    {
+     "age": 27,
+     "club": "CA Boca Juniors",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "06/09/2022"
+    },
+    {
+     "age": 26,
+     "club": "CA Boca Juniors",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "24/05/2022"
+    },
+    {
+     "age": 26,
+     "club": "CA Boca Juniors",
+     "value": 3200000,
+     "currency": "€",
+     "recordedDate": "20/10/2021"
+    },
+    {
+     "age": 25,
+     "club": "CA Boca Juniors",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "08/02/2021"
+    },
+    {
+     "age": 24,
+     "club": "CA Lanús",
+     "value": 1600000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 24,
+     "club": "CA Lanús",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "05/12/2019"
+    },
+    {
+     "age": 23,
+     "club": "CA Lanús",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "06/08/2019"
+    },
+    {
+     "age": 23,
+     "club": "Deportes Antofagasta",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "22/05/2019"
+    },
+    {
+     "age": 23,
+     "club": "CA Boca Juniors",
+     "value": 2750000,
+     "currency": "€",
+     "recordedDate": "18/12/2018"
+    },
+    {
+     "age": 22,
+     "club": "CA Boca Juniors",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "08/05/2018"
+    },
+    {
+     "age": 22,
+     "club": "CA Boca Juniors",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "09/10/2017"
+    },
+    {
+     "age": 21,
+     "club": "CA Boca Juniors",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "13/02/2017"
+    },
+    {
+     "age": 20,
+     "club": "Defensa y Justicia",
+     "value": 750000,
+     "currency": "€",
+     "recordedDate": "08/08/2016"
+    },
+    {
+     "age": 20,
+     "club": "Club Estudiantes de La Plata",
+     "value": 700000,
+     "currency": "€",
+     "recordedDate": "06/02/2016"
+    },
+    {
+     "age": 19,
+     "club": "Club Estudiantes de La Plata",
+     "value": 750000,
+     "currency": "€",
+     "recordedDate": "14/07/2015"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Shoulder injury",
+     "season": "2025",
+     "toDate": "07.12.2024",
+     "fromDate": "02.12.2024",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Torn muscle bundle",
+     "season": "2022",
+     "toDate": "02.05.2022",
+     "fromDate": "13.04.2022",
+     "missedGames": 5,
+     "absentDurationInDays": 20
+    },
+    {
+     "reason": "Quarantine",
+     "season": "2022",
+     "toDate": "29.07.2021",
+     "fromDate": "22.07.2021",
+     "missedGames": 2,
+     "absentDurationInDays": 8
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:52:38.653157+00:00"
+}

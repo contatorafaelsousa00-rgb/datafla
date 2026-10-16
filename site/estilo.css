@@ -66,6 +66,9 @@ h3 { font-size: 14px; font-weight: 600; }
 button { font-family: inherit; }
 :focus-visible { outline: 2px solid var(--marca); outline-offset: 2px; }
 
+/* Elemento com o atributo hidden nunca aparece, mesmo com display definido por outra regra (ex.: display: grid) */
+[hidden] { display: none !important; }
+
 /* ---------- topo ---------- */
 .topo { position: sticky; top: 0; z-index: 20; background: var(--topo); color: #fff;
   backdrop-filter: saturate(160%) blur(12px); -webkit-backdrop-filter: saturate(160%) blur(12px);
@@ -576,3 +579,12 @@ body.sem-filtros .filtros { display: none; }
 .escudo-time { object-fit: contain; flex: none; vertical-align: middle; }
 .time-placar h2, .placar > h2 { display: inline-flex; align-items: center; gap: 8px; }
 .time-placar.esq h2 { justify-content: flex-end; }
+
+/* ficha do elenco */
+#subaba-elenco { justify-self: start; width: fit-content; }
+#elenco-ficha, .elenco-desempenho { display: grid; gap: 16px; }
+.tabela-ficha th.ordenavel { cursor: pointer; white-space: nowrap; }
+.tabela-ficha td { white-space: nowrap; }
+.tabela-ficha .alerta-contrato { color: var(--marca); font-weight: 600; }
+.selo-lesao { font-size: 11.5px; color: var(--alerta); font-weight: 600; }
+.delta.sobe { color: var(--bom); } .delta.desce { color: var(--marca); }

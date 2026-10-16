@@ -50,3 +50,18 @@ def test_liga_e_classificacao(tmp_path, monkeypatch):
         "_coletado_em": "x"}, tmp_path)
     c = extras.linhas_classificacao([_jogo(1, "Finished")])[0]
     assert (c["posicao"], c["pontos"], c["eh_flamengo"], c["gols_pro"]) == (1, 64, True, 58)
+
+
+def test_perfil_do_jogador_vira_ficha(tmp_path, monkeypatch):
+    _ambiente(tmp_path, monkeypatch)
+    salvar_raw("perfil_5", {"data": [{"id": 5, "name": "Pedro", "profile": {
+        "club": {"current": "CR Flamengo", "joinedAt": "01/01/2021", "contractExpiry": "31/12/2027"},
+        "foot": "right", "height": "1,85 m", "position": {"main": "Centre-Forward", "secondary": "Left Midfield, Centre-Back"},
+        "birthDate": "20/06/1997", "citizenship": "Brazil"},
+        "marketValue": [{"value": 17000000, "recordedDate": "12/03/2026"}, {"value": 20000000, "recordedDate": "26/05/2026"}],
+        "injuries": [{"reason": "Fratura", "fromDate": "01.01.2000", "toDate": "01.01.2099"}]}], "_coletado_em": "x"}, tmp_path)
+    f = extras.linhas_perfis()[0]
+    assert (f["nascimento"], f["contrato_ate"], f["altura"], f["pe"], f["nacionalidade"]) == ("1997-06-20", "2027-12-31", 1.85, "Direito", "Brasil")
+    assert (f["posicao_detalhada"], f["grupo"], f["posicao_secundaria"]) == ("Centroavante", "Atacantes", "Meia-esquerda, Zagueiro")
+    assert (f["valor_mercado"], f["valor_anterior"]) == (20000000, 17000000)  # o mais recente primeiro
+    assert f["lesao_atual"] == "Fratura"

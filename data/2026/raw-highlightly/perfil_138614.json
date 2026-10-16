@@ -1,0 +1,891 @@
+{
+ "data": [
+  {
+   "id": 138614,
+   "logo": null,
+   "name": "Alex Sandro",
+   "fullName": "Alex Sandro Lobo Silva",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "26/08/2024",
+     "contractExpiry": "31/12/2027",
+     "latestContractExtension": "19/07/2026"
+    },
+    "foot": "left",
+    "height": "1,80 m",
+    "fullName": "Alex Sandro Lobo Silva",
+    "position": {
+     "main": "Left-Back",
+     "secondary": "Left Midfield, Centre-Back"
+    },
+    "birthDate": "26/01/1991",
+    "deathDate": null,
+    "birthPlace": "Catanduva",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [],
+    "historical": [
+     {
+      "club": "Manchester City",
+      "rumourDate": "21/08/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Tottenham Hotspur",
+      "rumourDate": "12/05/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester United",
+      "rumourDate": "11/05/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "20/06/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Paris Saint-Germain",
+      "rumourDate": "08/05/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Real Madrid",
+      "rumourDate": "12/01/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Arsenal FC",
+      "rumourDate": "05/03/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Juventus FC",
+      "rumourDate": "20/08/2015",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Atlético de Madrid",
+      "rumourDate": "18/07/2015",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Real Madrid",
+      "rumourDate": "30/03/2015",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester City",
+      "rumourDate": "30/03/2015",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Chelsea FC",
+      "rumourDate": "02/04/2014",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Manchester United",
+      "rumourDate": "02/04/2014",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SL Benfica",
+      "rumourDate": "13/07/2011",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "18/02/2011",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fenerbahce",
+      "rumourDate": "20/06/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "24/08/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Botafogo de Futebol e Regatas",
+      "rumourDate": "06/08/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Grêmio Foot-Ball Porto Alegrense",
+      "rumourDate": "22/07/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Porto",
+      "rumourDate": "15/07/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Porto",
+      "rumourDate": "11/05/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "São Paulo Futebol Clube",
+      "rumourDate": "09/05/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sport Club Internacional",
+      "rumourDate": "13/02/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "10/01/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Club Athletico Paranaense",
+      "rumourDate": "20/11/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fenerbahce",
+      "rumourDate": "21/06/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray U19",
+      "rumourDate": "08/06/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "07/06/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Juventus FC",
+      "rumourDate": "16/05/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Chelsea FC",
+      "rumourDate": "15/04/2021",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/serie-a-power-struggle-how-inters-transfer-success-has-shifted-power-away-from-juventus/view/news/430547",
+     "date": "Nov 24, 2023",
+     "title": "Serie A power struggle - how Inter's transfer success has shifted power away from Juventus"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-italy-vlahovic-after-euro-15m-upgrade-1st-downgrade-for-insigne/view/news/401371",
+     "date": "Mar 15, 2022",
+     "title": "Market values Italy: Vlahović after €15m upgrade 1st - Downgrade for Insigne"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-italy-martinez-now-2nd-hakimi-back-to-bvb-level/view/news/386396",
+     "date": "Jun 3, 2021",
+     "title": "Market values Italy: Martínez now 2nd - Hakimi back to BVB level"
+    },
+    {
+     "url": "https://www.transfermarkt.com/market-values-italy-lukaku-now-1st-ahead-of-dybala-atalanta-up-by-euro-70m/view/news/368920",
+     "date": "Aug 25, 2020",
+     "title": "Market values Italy: Lukaku now 1st ahead of Dybala - Atalanta up by €70m"
+    },
+    {
+     "url": "https://www.transfermarkt.com/ronaldo-first-to-score-50-goals-in-england-spain-amp-italy-juventus-on-verge-of-title/view/news/365981",
+     "date": "Jul 21, 2020",
+     "title": "Ronaldo first to score 50 goals in England, Spain & Italy - Juventus on verge of title"
+    },
+    {
+     "url": "https://www.transfermarkt.com/despite-cristiano-ronaldo-penalty-miss-juventus-advance-to-coppa-italia-final/view/news/362719",
+     "date": "Jun 12, 2020",
+     "title": "Despite Cristiano Ronaldo penalty miss - Juventus advance to Coppa Italia final"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Juventus",
+     "type": "transfer",
+     "season": "24/25",
+     "marketValue": "€2.00M",
+     "transferDate": "Aug 26, 2024"
+    },
+    {
+     "to": "Juventus",
+     "fee": "€28.00M",
+     "from": "Porto",
+     "type": "transfer",
+     "season": "15/16",
+     "marketValue": "€20.00M",
+     "transferDate": "Aug 20, 2015"
+    },
+    {
+     "to": "Porto",
+     "fee": "€9.60M",
+     "from": "CD Maldonado",
+     "type": "transfer",
+     "season": "11/12",
+     "marketValue": "€1.80M",
+     "transferDate": "Jul 1, 2011"
+    },
+    {
+     "to": "CD Maldonado",
+     "fee": null,
+     "from": "Santos",
+     "type": "end of loan",
+     "season": "10/11",
+     "marketValue": "€1.80M",
+     "transferDate": "Jun 30, 2011"
+    },
+    {
+     "to": "Santos",
+     "fee": null,
+     "from": "CD Maldonado",
+     "type": "loan",
+     "season": "09/10",
+     "marketValue": "€500.00K",
+     "transferDate": "Mar 1, 2010"
+    },
+    {
+     "to": "CD Maldonado",
+     "fee": "€2.20M",
+     "from": "Athletico-PR",
+     "type": "transfer",
+     "season": "09/10",
+     "marketValue": "€500.00K",
+     "transferDate": "Feb 1, 2010"
+    },
+    {
+     "to": "Athletico-PR",
+     "fee": null,
+     "from": "Athletico U20",
+     "type": "transfer",
+     "season": "08/09",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2008"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 35,
+     "club": "CR Flamengo",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 34,
+     "club": "CR Flamengo",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 34,
+     "club": "CR Flamengo",
+     "value": 1800000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 33,
+     "club": "CR Flamengo",
+     "value": 1800000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 33,
+     "club": "Juventus FC",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "05/06/2024"
+    },
+    {
+     "age": 32,
+     "club": "Juventus FC",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "20/12/2023"
+    },
+    {
+     "age": 32,
+     "club": "Juventus FC",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "15/06/2023"
+    },
+    {
+     "age": 31,
+     "club": "Juventus FC",
+     "value": 4500000,
+     "currency": "€",
+     "recordedDate": "11/11/2022"
+    },
+    {
+     "age": 31,
+     "club": "Juventus FC",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "07/06/2022"
+    },
+    {
+     "age": 31,
+     "club": "Juventus FC",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "15/03/2022"
+    },
+    {
+     "age": 30,
+     "club": "Juventus FC",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "28/12/2021"
+    },
+    {
+     "age": 30,
+     "club": "Juventus FC",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "03/06/2021"
+    },
+    {
+     "age": 29,
+     "club": "Juventus FC",
+     "value": 28000000,
+     "currency": "€",
+     "recordedDate": "29/12/2020"
+    },
+    {
+     "age": 29,
+     "club": "Juventus FC",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "25/08/2020"
+    },
+    {
+     "age": 29,
+     "club": "Juventus FC",
+     "value": 40000000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 28,
+     "club": "Juventus FC",
+     "value": 50000000,
+     "currency": "€",
+     "recordedDate": "12/12/2019"
+    },
+    {
+     "age": 28,
+     "club": "Juventus FC",
+     "value": 45000000,
+     "currency": "€",
+     "recordedDate": "06/06/2019"
+    },
+    {
+     "age": 27,
+     "club": "Juventus FC",
+     "value": 50000000,
+     "currency": "€",
+     "recordedDate": "20/12/2018"
+    },
+    {
+     "age": 27,
+     "club": "Juventus FC",
+     "value": 45000000,
+     "currency": "€",
+     "recordedDate": "07/06/2018"
+    },
+    {
+     "age": 27,
+     "club": "Juventus FC",
+     "value": 50000000,
+     "currency": "€",
+     "recordedDate": "24/03/2018"
+    },
+    {
+     "age": 26,
+     "club": "Juventus FC",
+     "value": 40000000,
+     "currency": "€",
+     "recordedDate": "29/12/2017"
+    },
+    {
+     "age": 26,
+     "club": "Juventus FC",
+     "value": 35000000,
+     "currency": "€",
+     "recordedDate": "08/06/2017"
+    },
+    {
+     "age": 25,
+     "club": "Juventus FC",
+     "value": 30000000,
+     "currency": "€",
+     "recordedDate": "02/01/2017"
+    },
+    {
+     "age": 25,
+     "club": "Juventus FC",
+     "value": 28000000,
+     "currency": "€",
+     "recordedDate": "14/10/2016"
+    },
+    {
+     "age": 25,
+     "club": "Juventus FC",
+     "value": 26000000,
+     "currency": "€",
+     "recordedDate": "15/07/2016"
+    },
+    {
+     "age": 25,
+     "club": "Juventus FC",
+     "value": 26000000,
+     "currency": "€",
+     "recordedDate": "01/04/2016"
+    },
+    {
+     "age": 24,
+     "club": "Juventus FC",
+     "value": 24000000,
+     "currency": "€",
+     "recordedDate": "04/01/2016"
+    },
+    {
+     "age": 24,
+     "club": "Juventus FC",
+     "value": 24000000,
+     "currency": "€",
+     "recordedDate": "23/09/2015"
+    },
+    {
+     "age": 24,
+     "club": "FC Porto",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "01/07/2015"
+    },
+    {
+     "age": 24,
+     "club": "FC Porto",
+     "value": 18000000,
+     "currency": "€",
+     "recordedDate": "17/02/2015"
+    },
+    {
+     "age": 23,
+     "club": "FC Porto",
+     "value": 16000000,
+     "currency": "€",
+     "recordedDate": "25/07/2014"
+    },
+    {
+     "age": 22,
+     "club": "FC Porto",
+     "value": 16000000,
+     "currency": "€",
+     "recordedDate": "02/07/2013"
+    },
+    {
+     "age": 22,
+     "club": "FC Porto",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "27/03/2013"
+    },
+    {
+     "age": 21,
+     "club": "FC Porto",
+     "value": 8500000,
+     "currency": "€",
+     "recordedDate": "07/07/2012"
+    },
+    {
+     "age": 21,
+     "club": "FC Porto",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "02/02/2012"
+    },
+    {
+     "age": 20,
+     "club": "FC Porto",
+     "value": 6800000,
+     "currency": "€",
+     "recordedDate": "21/09/2011"
+    },
+    {
+     "age": 20,
+     "club": "Santos FC",
+     "value": 1800000,
+     "currency": "€",
+     "recordedDate": "30/05/2011"
+    },
+    {
+     "age": 20,
+     "club": "Santos FC",
+     "value": 1800000,
+     "currency": "€",
+     "recordedDate": "21/02/2011"
+    },
+    {
+     "age": 19,
+     "club": "Santos FC",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "06/06/2010"
+    },
+    {
+     "age": 19,
+     "club": "Santos FC",
+     "value": 400000,
+     "currency": "€",
+     "recordedDate": "15/04/2010"
+    },
+    {
+     "age": 18,
+     "club": "Atlético Paranaense",
+     "value": 500000,
+     "currency": "€",
+     "recordedDate": "08/12/2009"
+    },
+    {
+     "age": 18,
+     "club": "Atlético Paranaense",
+     "value": 200000,
+     "currency": "€",
+     "recordedDate": "06/09/2009"
+    },
+    {
+     "age": 17,
+     "club": "Atlético Paranaense",
+     "value": 50000,
+     "currency": "€",
+     "recordedDate": "20/07/2008"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Hamstring injury",
+     "season": "2018",
+     "toDate": "01.04.2018",
+     "fromDate": "20.03.2018",
+     "missedGames": 3,
+     "absentDurationInDays": 13
+    },
+    {
+     "reason": "Flu",
+     "season": "2018",
+     "toDate": "11.09.2017",
+     "fromDate": "09.09.2017",
+     "missedGames": 1,
+     "absentDurationInDays": 3
+    },
+    {
+     "reason": "Muscle injury",
+     "season": "2017",
+     "toDate": "17.01.2017",
+     "fromDate": "02.01.2017",
+     "missedGames": 2,
+     "absentDurationInDays": 16
+    },
+    {
+     "reason": "Stress reaction of the bone",
+     "season": "2016",
+     "toDate": "26.02.2016",
+     "fromDate": "17.02.2016",
+     "missedGames": 2,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Thigh problems",
+     "season": "2013",
+     "toDate": "20.11.2012",
+     "fromDate": "08.10.2012",
+     "missedGames": 10,
+     "absentDurationInDays": 44
+    },
+    {
+     "reason": "Adductor injury",
+     "season": "2012",
+     "toDate": "31.01.2012",
+     "fromDate": "17.01.2012",
+     "missedGames": 3,
+     "absentDurationInDays": 15
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2012",
+     "toDate": "09.12.2011",
+     "fromDate": "20.11.2011",
+     "missedGames": 3,
+     "absentDurationInDays": 20
+    },
+    {
+     "reason": "Muscle tear",
+     "season": "2012",
+     "toDate": "13.10.2011",
+     "fromDate": "02.08.2011",
+     "missedGames": 15,
+     "absentDurationInDays": 73
+    },
+    {
+     "reason": "Hamstring muscle injury",
+     "season": "2023",
+     "toDate": "29.03.2023",
+     "fromDate": "09.03.2023",
+     "missedGames": 4,
+     "absentDurationInDays": 21
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2023",
+     "toDate": "07.12.2022",
+     "fromDate": "29.11.2022",
+     "missedGames": 2,
+     "absentDurationInDays": 9
+    },
+    {
+     "reason": "Thigh problems",
+     "season": "2023",
+     "toDate": "02.10.2022",
+     "fromDate": "14.09.2022",
+     "missedGames": 4,
+     "absentDurationInDays": 19
+    },
+    {
+     "reason": "Calf problems",
+     "season": "2022",
+     "toDate": "21.03.2022",
+     "fromDate": "15.03.2022",
+     "missedGames": 2,
+     "absentDurationInDays": 7
+    },
+    {
+     "reason": "Calf injury",
+     "season": "2022",
+     "toDate": "10.03.2022",
+     "fromDate": "23.02.2022",
+     "missedGames": 3,
+     "absentDurationInDays": 16
+    },
+    {
+     "reason": "Corona virus",
+     "season": "2022",
+     "toDate": "08.02.2022",
+     "fromDate": "31.01.2022",
+     "missedGames": 2,
+     "absentDurationInDays": 9
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2022",
+     "toDate": "11.01.2022",
+     "fromDate": "06.01.2022",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Knee surgery",
+     "season": "2021",
+     "toDate": "01.04.2021",
+     "fromDate": "14.03.2021",
+     "missedGames": 1,
+     "absentDurationInDays": 19
+    },
+    {
+     "reason": "Corona virus",
+     "season": "2021",
+     "toDate": "26.01.2021",
+     "fromDate": "04.01.2021",
+     "missedGames": 6,
+     "absentDurationInDays": 23
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2021",
+     "toDate": "17.11.2020",
+     "fromDate": "18.09.2020",
+     "missedGames": 12,
+     "absentDurationInDays": 61
+    },
+    {
+     "reason": "Inner ligament injury",
+     "season": "2020",
+     "toDate": "05.07.2020",
+     "fromDate": "18.06.2020",
+     "missedGames": 4,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Adductor pain",
+     "season": "2020",
+     "toDate": "29.11.2019",
+     "fromDate": "17.11.2019",
+     "missedGames": 3,
+     "absentDurationInDays": 13
+    },
+    {
+     "reason": "Bruise",
+     "season": "2019",
+     "toDate": "02.06.2019",
+     "fromDate": "23.05.2019",
+     "missedGames": 1,
+     "absentDurationInDays": 11
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2019",
+     "toDate": "11.05.2019",
+     "fromDate": "02.05.2019",
+     "missedGames": 1,
+     "absentDurationInDays": 10
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2019",
+     "toDate": "08.12.2018",
+     "fromDate": "28.11.2018",
+     "missedGames": 2,
+     "absentDurationInDays": 11
+    },
+    {
+     "reason": "Tendonitis",
+     "season": "2027",
+     "toDate": "12.09.2026",
+     "fromDate": "08.08.2026",
+     "missedGames": 9,
+     "absentDurationInDays": 36
+    },
+    {
+     "reason": "Thigh problems",
+     "season": "2026",
+     "toDate": "11.04.2026",
+     "fromDate": "23.03.2026",
+     "missedGames": 5,
+     "absentDurationInDays": 20
+    },
+    {
+     "reason": "Calf injury",
+     "season": "2026",
+     "toDate": "20.09.2025",
+     "fromDate": "26.08.2025",
+     "missedGames": 5,
+     "absentDurationInDays": 26
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2026",
+     "toDate": "30.07.2025",
+     "fromDate": "13.07.2025",
+     "missedGames": 4,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "03.05.2025",
+     "fromDate": "17.04.2025",
+     "missedGames": 4,
+     "absentDurationInDays": 17
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "07.03.2025",
+     "fromDate": "09.02.2025",
+     "missedGames": 4,
+     "absentDurationInDays": 27
+    },
+    {
+     "reason": "Calf problems",
+     "season": "2025",
+     "toDate": "07.12.2024",
+     "fromDate": "02.12.2024",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2025",
+     "toDate": "02.11.2024",
+     "fromDate": "21.10.2024",
+     "missedGames": 2,
+     "absentDurationInDays": 13
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "16.10.2024",
+     "fromDate": "03.10.2024",
+     "missedGames": 2,
+     "absentDurationInDays": 14
+    },
+    {
+     "reason": "Fitness",
+     "season": "2025",
+     "toDate": "14.09.2024",
+     "fromDate": "24.08.2024",
+     "missedGames": 6,
+     "absentDurationInDays": 22
+    },
+    {
+     "reason": "Leg injury",
+     "season": "2024",
+     "toDate": "13.05.2024",
+     "fromDate": "03.05.2024",
+     "missedGames": null,
+     "absentDurationInDays": 11
+    },
+    {
+     "reason": "Muscle fatigue",
+     "season": "2024",
+     "toDate": "02.04.2024",
+     "fromDate": "30.03.2024",
+     "missedGames": null,
+     "absentDurationInDays": 4
+    },
+    {
+     "reason": "Unknown",
+     "season": "2024",
+     "toDate": "08.01.2024",
+     "fromDate": "28.12.2023",
+     "missedGames": null,
+     "absentDurationInDays": 12
+    },
+    {
+     "reason": "Hamstring muscle injury",
+     "season": "2024",
+     "toDate": "22.11.2023",
+     "fromDate": "18.09.2023",
+     "missedGames": 3,
+     "absentDurationInDays": 66
+    },
+    {
+     "reason": "Muscle fatigue",
+     "season": "2023",
+     "toDate": "17.04.2023",
+     "fromDate": "12.04.2023",
+     "missedGames": 2,
+     "absentDurationInDays": 6
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:52:39.630012+00:00"
+}

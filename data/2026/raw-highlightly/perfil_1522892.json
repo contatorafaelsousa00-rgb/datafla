@@ -1,0 +1,380 @@
+{
+ "data": [
+  {
+   "id": 1522892,
+   "logo": null,
+   "name": "Léo Ortiz",
+   "fullName": "Leonardo Rech Ortiz",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "06/03/2024",
+     "contractExpiry": "31/12/2028",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,85 m",
+    "fullName": "Leonardo Rech Ortiz",
+    "position": {
+     "main": "Centre-Back",
+     "secondary": "Defensive Midfield"
+    },
+    "birthDate": "03/01/1996",
+    "deathDate": null,
+    "birthPlace": "Porto Alegre",
+    "citizenship": "Brazil, Italy"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Zenit St. Petersburg",
+      "rumourDate": "25/06/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Zenit St. Petersburg",
+      "rumourDate": "25/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "20/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "RB Leipzig",
+      "rumourDate": "01/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "AS Roma",
+      "rumourDate": "07/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Olympiacos Piraeus",
+      "rumourDate": "01/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Juventus FC",
+      "rumourDate": "16/10/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "13/12/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Galatasaray",
+      "rumourDate": "19/08/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fenerbahce",
+      "rumourDate": "16/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Trabzonspor",
+      "rumourDate": "29/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Porto",
+      "rumourDate": "10/06/2022",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€7.00M",
+     "from": "RB Bragantino",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": "€7.00M",
+     "transferDate": "Mar 6, 2024"
+    },
+    {
+     "to": "RB Bragantino",
+     "fee": null,
+     "from": "Internacional",
+     "type": "transfer",
+     "season": "18/19",
+     "marketValue": "€200.00K",
+     "transferDate": "May 1, 2019"
+    },
+    {
+     "to": "Internacional",
+     "fee": null,
+     "from": "Red Bull",
+     "type": "end of loan",
+     "season": "18/19",
+     "marketValue": "€200.00K",
+     "transferDate": "Apr 30, 2019"
+    },
+    {
+     "to": "Red Bull",
+     "fee": null,
+     "from": "Internacional",
+     "type": "loan",
+     "season": "18/19",
+     "marketValue": "€200.00K",
+     "transferDate": "Jan 1, 2019"
+    },
+    {
+     "to": "Internacional",
+     "fee": null,
+     "from": "Sport Recife",
+     "type": "end of loan",
+     "season": "18/19",
+     "marketValue": "€200.00K",
+     "transferDate": "Dec 31, 2018"
+    },
+    {
+     "to": "Sport Recife",
+     "fee": null,
+     "from": "Internacional",
+     "type": "loan",
+     "season": "17/18",
+     "marketValue": "€200.00K",
+     "transferDate": "Jan 1, 2018"
+    },
+    {
+     "to": "Internacional",
+     "fee": null,
+     "from": "Inter U20",
+     "type": "transfer",
+     "season": "16/17",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2017"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 30,
+     "club": "CR Flamengo",
+     "value": 14000000,
+     "currency": "€",
+     "recordedDate": "12/03/2026"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "05/09/2025"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 13000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "28/03/2025"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 11000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 9000000,
+     "currency": "€",
+     "recordedDate": "27/09/2024"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 27,
+     "club": "Red Bull Bragantino",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    },
+    {
+     "age": 27,
+     "club": "Red Bull Bragantino",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "25/07/2023"
+    },
+    {
+     "age": 27,
+     "club": "Red Bull Bragantino",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "07/04/2023"
+    },
+    {
+     "age": 26,
+     "club": "Red Bull Bragantino",
+     "value": 7500000,
+     "currency": "€",
+     "recordedDate": "14/11/2022"
+    },
+    {
+     "age": 26,
+     "club": "Red Bull Bragantino",
+     "value": 7500000,
+     "currency": "€",
+     "recordedDate": "19/08/2022"
+    },
+    {
+     "age": 26,
+     "club": "Red Bull Bragantino",
+     "value": 7500000,
+     "currency": "€",
+     "recordedDate": "06/04/2022"
+    },
+    {
+     "age": 25,
+     "club": "Red Bull Bragantino",
+     "value": 7500000,
+     "currency": "€",
+     "recordedDate": "17/12/2021"
+    },
+    {
+     "age": 25,
+     "club": "Red Bull Bragantino",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "10/09/2021"
+    },
+    {
+     "age": 25,
+     "club": "Red Bull Bragantino",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "28/05/2021"
+    },
+    {
+     "age": 25,
+     "club": "Red Bull Bragantino",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "09/02/2021"
+    },
+    {
+     "age": 24,
+     "club": "Red Bull Bragantino",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "09/09/2020"
+    },
+    {
+     "age": 24,
+     "club": "Red Bull Bragantino",
+     "value": 650000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 24,
+     "club": "Red Bull Bragantino",
+     "value": 800000,
+     "currency": "€",
+     "recordedDate": "20/02/2020"
+    },
+    {
+     "age": 22,
+     "club": "Sport Club do Recife",
+     "value": 200000,
+     "currency": "€",
+     "recordedDate": "23/05/2018"
+    },
+    {
+     "age": 21,
+     "club": "Sport Club Internacional",
+     "value": 200000,
+     "currency": "€",
+     "recordedDate": "07/12/2017"
+    },
+    {
+     "age": 21,
+     "club": "Sport Club Internacional",
+     "value": 200000,
+     "currency": "€",
+     "recordedDate": "30/10/2017"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Thigh problems",
+     "season": "2026",
+     "toDate": "28.07.2026",
+     "fromDate": "31.05.2026",
+     "missedGames": 2,
+     "absentDurationInDays": 59
+    },
+    {
+     "reason": "Ankle sprain",
+     "season": "2026",
+     "toDate": "28.11.2025",
+     "fromDate": "30.10.2025",
+     "missedGames": 7,
+     "absentDurationInDays": 30
+    },
+    {
+     "reason": "Ankle problems",
+     "season": "2026",
+     "toDate": "27.10.2025",
+     "fromDate": "23.10.2025",
+     "missedGames": 1,
+     "absentDurationInDays": 5
+    },
+    {
+     "reason": "Cruciate ligament tear",
+     "season": "2023",
+     "toDate": "14.07.2023",
+     "fromDate": "03.10.2022",
+     "missedGames": 45,
+     "absentDurationInDays": 285
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:52:41.579578+00:00"
+}

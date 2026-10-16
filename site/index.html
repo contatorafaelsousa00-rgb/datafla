@@ -202,6 +202,12 @@
 
     <!-- ELENCO: momento e rotação -->
     <section id="aba-elenco" class="aba" hidden>
+      <div id="subaba-elenco" class="segmentado" role="radiogroup" aria-label="Visão do elenco">
+        <button data-sub="desempenho" aria-pressed="true">Desempenho</button>
+        <button data-sub="ficha" aria-pressed="false">Ficha do elenco</button>
+      </div>
+      <div id="elenco-ficha" hidden></div>
+      <div id="elenco-desempenho" class="elenco-desempenho">
       <div class="grade-2">
         <article class="cartao">
           <h2>Em alta</h2>
@@ -232,6 +238,7 @@
         <div id="legenda-minutagem" class="legenda"></div>
         <div id="mapa-minutagem" class="mapa-rolagem"></div>
       </article>
+      </div>
     </section>
 
     <!-- ESTILO: como o time joga -->

@@ -1,0 +1,379 @@
+{
+ "data": [
+  {
+   "id": 20436850,
+   "logo": null,
+   "name": "Samuel Lino",
+   "fullName": "Samuel Dias Lino",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo",
+     "joinedAt": "29/07/2025",
+     "contractExpiry": "31/12/2029",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,77 m",
+    "fullName": "Samuel Dias Lino",
+    "position": {
+     "main": "Left Winger",
+     "secondary": "Left Midfield"
+    },
+    "birthDate": "23/12/1999",
+    "deathDate": null,
+    "birthPlace": "Santo André",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "AS Roma",
+      "rumourDate": "06/10/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Atlético de Madrid",
+      "rumourDate": "03/02/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "26/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SSC Napoli",
+      "rumourDate": "21/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Wolverhampton Wanderers",
+      "rumourDate": "14/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Nottingham Forest",
+      "rumourDate": "14/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Aston Villa",
+      "rumourDate": "09/10/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Newcastle United",
+      "rumourDate": "14/12/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Porto",
+      "rumourDate": "10/08/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sporting CP",
+      "rumourDate": "10/08/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SC Braga",
+      "rumourDate": "01/07/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "RB Leipzig",
+      "rumourDate": "25/06/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Valencia CF",
+      "rumourDate": "28/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Cádiz CF",
+      "rumourDate": "16/07/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sporting CP",
+      "rumourDate": "04/06/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SC Braga",
+      "rumourDate": "31/05/2022",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fenerbahce",
+      "rumourDate": "13/05/2022",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/brazil-market-values-kaio-jorge-hits-new-heights-neymar-falls-after-national-team-snub/view/news/460011",
+     "date": "Sep 5, 2025",
+     "title": "Brazil market values: Kaio Jorge hits new heights, Neymar falls after national team snub"
+    },
+    {
+     "url": "https://www.transfermarkt.com/fabinho-the-habit-of-winning-missing-liverpool-father-figure-klopp-and-tributes-to-diogo-jota/view/news/458916",
+     "date": "Aug 19, 2025",
+     "title": "Fabinho: The habit of winning, missing Liverpool, 'father figure' Klopp, and tributes to Diogo Jota"
+    },
+    {
+     "url": "https://www.transfermarkt.com/more-champions-league-qfs-than-klopp-simeones-atletico-keep-exceeding-expectation/view/news/435939",
+     "date": "Apr 10, 2024",
+     "title": "More Champions League QFs than Klopp - Simeone's Atlético keep exceeding expectation"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": "€22.00M",
+     "from": "Atlético",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": "€22.00M",
+     "transferDate": "Jul 29, 2025"
+    },
+    {
+     "to": "Atlético",
+     "fee": null,
+     "from": "Valencia",
+     "type": "end of loan",
+     "season": "22/23",
+     "marketValue": "€16.00M",
+     "transferDate": "Jun 30, 2023"
+    },
+    {
+     "to": "Valencia",
+     "fee": null,
+     "from": "Atlético",
+     "type": "loan",
+     "season": "22/23",
+     "marketValue": "€7.00M",
+     "transferDate": "Jul 28, 2022"
+    },
+    {
+     "to": "Atlético",
+     "fee": "€6.50M",
+     "from": "Gil Vicente",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": "€7.00M",
+     "transferDate": "Jul 8, 2022"
+    },
+    {
+     "to": "Gil Vicente",
+     "fee": null,
+     "from": "São Bernardo",
+     "type": "transfer",
+     "season": "19/20",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2019"
+    },
+    {
+     "to": "São Bernardo",
+     "fee": null,
+     "from": "Flamengo U20",
+     "type": "end of loan",
+     "season": "17/18",
+     "marketValue": null,
+     "transferDate": "May 1, 2018"
+    },
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "São Bernardo",
+     "type": "loan",
+     "season": "17/18",
+     "marketValue": null,
+     "transferDate": "Feb 1, 2018"
+    },
+    {
+     "to": "São Bernardo",
+     "fee": null,
+     "from": "São Bern. U20",
+     "type": "transfer",
+     "season": "17/18",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2018"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "28/09/2026"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 15000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 17000000,
+     "currency": "€",
+     "recordedDate": "12/03/2026"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 25,
+     "club": "Atlético de Madrid",
+     "value": 22000000,
+     "currency": "€",
+     "recordedDate": "09/06/2025"
+    },
+    {
+     "age": 25,
+     "club": "Atlético de Madrid",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "27/12/2024"
+    },
+    {
+     "age": 24,
+     "club": "Atlético de Madrid",
+     "value": 30000000,
+     "currency": "€",
+     "recordedDate": "07/06/2024"
+    },
+    {
+     "age": 23,
+     "club": "Atlético de Madrid",
+     "value": 25000000,
+     "currency": "€",
+     "recordedDate": "22/12/2023"
+    },
+    {
+     "age": 23,
+     "club": "Atlético de Madrid",
+     "value": 20000000,
+     "currency": "€",
+     "recordedDate": "13/10/2023"
+    },
+    {
+     "age": 23,
+     "club": "Valencia CF",
+     "value": 16000000,
+     "currency": "€",
+     "recordedDate": "13/06/2023"
+    },
+    {
+     "age": 22,
+     "club": "Valencia CF",
+     "value": 16000000,
+     "currency": "€",
+     "recordedDate": "07/11/2022"
+    },
+    {
+     "age": 22,
+     "club": "Valencia CF",
+     "value": 12000000,
+     "currency": "€",
+     "recordedDate": "23/09/2022"
+    },
+    {
+     "age": 22,
+     "club": "Gil Vicente FC",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "31/05/2022"
+    },
+    {
+     "age": 22,
+     "club": "Gil Vicente FC",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "10/03/2022"
+    },
+    {
+     "age": 22,
+     "club": "Gil Vicente FC",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "27/12/2021"
+    },
+    {
+     "age": 21,
+     "club": "Gil Vicente FC",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "21/05/2021"
+    },
+    {
+     "age": 21,
+     "club": "Gil Vicente FC",
+     "value": 1300000,
+     "currency": "€",
+     "recordedDate": "28/01/2021"
+    },
+    {
+     "age": 20,
+     "club": "Gil Vicente FC",
+     "value": 800000,
+     "currency": "€",
+     "recordedDate": "22/10/2020"
+    },
+    {
+     "age": 20,
+     "club": "Gil Vicente FC",
+     "value": 400000,
+     "currency": "€",
+     "recordedDate": "17/08/2020"
+    },
+    {
+     "age": 20,
+     "club": "Gil Vicente FC",
+     "value": 300000,
+     "currency": "€",
+     "recordedDate": "30/12/2019"
+    },
+    {
+     "age": 19,
+     "club": "Gil Vicente FC",
+     "value": 300000,
+     "currency": "€",
+     "recordedDate": "11/10/2019"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Knee injury",
+     "season": "2024",
+     "toDate": "05.11.2023",
+     "fromDate": "22.10.2023",
+     "missedGames": 3,
+     "absentDurationInDays": 15
+    },
+    {
+     "reason": "Corona virus",
+     "season": "2021",
+     "toDate": "18.11.2020",
+     "fromDate": "05.11.2020",
+     "missedGames": 1,
+     "absentDurationInDays": 14
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-16T13:52:45.451326+00:00"
+}
