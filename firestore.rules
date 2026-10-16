@@ -1,13 +1,27 @@
 rules_version = '2';
 
-// Mensagens da aba "Sua opinião": qualquer visitante pode ENVIAR, ninguém lê, altera ou apaga pelo site.
-// O dono lê pelo console do Firebase (que não passa por estas regras).
+// opinioes: qualquer visitante pode ENVIAR; só o admin lê e apaga (tela de admin do site ou console).
+// acessos:  contadores por dia (sem dado pessoal); o site só pode somar 1 a contadores conhecidos.
+// Admin = a conta Google do dono, entrando pela tela de admin (Firebase Authentication, provedor Google).
 service cloud.firestore {
   match /databases/{database}/documents {
 
+    function admin() {
+      return request.auth != null
+        && request.auth.token.email == 'contatorafaelsousa00@gmail.com'
+        && request.auth.token.email_verified == true;
+    }
+
     match /opinioes/{id} {
       allow create: if valida(request.resource.data);
-      allow read, update, delete: if false;
+      allow read, delete: if admin();
+      allow update: if false;
+    }
+
+    match /acessos/{dia} {
+      allow read: if admin();
+      allow create, update: if dia.matches('^20[0-9]{2}-[0-1][0-9]-[0-3][0-9]$') && soContadores();
+      allow delete: if false;
     }
 
     // Todo o resto do banco fica fechado
@@ -15,6 +29,31 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
+    // ---------- acessos ----------
+    function antes() {
+      return resource == null ? {} : resource.data;
+    }
+
+    // Cada campo alterado sobe exatamente 1 (o site usa o "increment" do Firestore).
+    function mais1(campo) {
+      return !(campo in request.resource.data.diff(antes()).affectedKeys())
+        || request.resource.data[campo] == antes().get(campo, 0) + 1;
+    }
+
+    function soContadores() {
+      return request.resource.data.keys().hasOnly([
+          'visitas', 'unicos', 'celular', 'computador',
+          'aba_temporada', 'aba_jogos', 'aba_jogadores', 'aba_elenco', 'aba_estilo', 'aba_opiniao',
+          'origem_direto', 'origem_google', 'origem_whatsapp', 'origem_instagram', 'origem_facebook',
+          'origem_x', 'origem_outros'])
+        && mais1('visitas') && mais1('unicos') && mais1('celular') && mais1('computador')
+        && mais1('aba_temporada') && mais1('aba_jogos') && mais1('aba_jogadores') && mais1('aba_elenco')
+        && mais1('aba_estilo') && mais1('aba_opiniao')
+        && mais1('origem_direto') && mais1('origem_google') && mais1('origem_whatsapp')
+        && mais1('origem_instagram') && mais1('origem_facebook') && mais1('origem_x') && mais1('origem_outros');
+    }
+
+    // ---------- opiniões ----------
     function texto(campo, minimo, maximo) {
       return campo is string && campo.size() >= minimo && campo.size() <= maximo;
     }

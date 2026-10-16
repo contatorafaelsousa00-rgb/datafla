@@ -42,6 +42,23 @@ def _traduzir(linhas: list[dict]) -> list[dict]:
     return linhas
 
 
+# Tabelas grandes vão em colunas + linhas (os nomes dos campos não se repetem a cada linha): o JSON
+# cai a menos da metade. O site volta a montar os objetos ao carregar (comum.js, expandir).
+COMPACTAR = ("jogadores", "eventos", "estatisticas", "finalizacoes")
+
+
+def compactar(linhas: list[dict]) -> dict:
+    colunas = list(dict.fromkeys(k for l in linhas for k in l))
+    return {"colunas": colunas, "linhas": [[l.get(c) for c in colunas] for l in linhas]}
+
+
+def expandir(tabela):
+    """Inverso de `compactar` (para testes e análises do JSON exportado)."""
+    if isinstance(tabela, dict) and "colunas" in tabela:
+        return [dict(zip(tabela["colunas"], l)) for l in tabela["linhas"]]
+    return tabela
+
+
 def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | None = None,
              demo: bool = False, coletado_em: str | None = None) -> Path:
     destino = destino or SITE_DADOS
@@ -67,6 +84,8 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         item["competicao"] = nome_competicao(item["competicao"])
 
     agora = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    for nome in COMPACTAR:
+        conteudo[nome] = compactar(conteudo[nome])
     conteudo["meta"] = {
         "gerado_em": agora,
         "coletado_em": coletado_em or agora,

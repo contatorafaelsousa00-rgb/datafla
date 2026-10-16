@@ -61,7 +61,8 @@ def test_fluxo_completo(tmp_path, monkeypatch):
     indice = json.loads((tmp_path / "site" / "temporadas.json").read_text(encoding="utf-8"))
     assert indice[0]["temporada"] == config.SEASON and indice[0]["jogos"] == 24
     assert dados["partidas"][0]["competicao"] == "Brasileirão"
-    assert all(j["eh_flamengo"] for j in dados["jogadores"])
+    jogadores = exportar.expandir(dados["jogadores"])
+    assert jogadores and all(j["eh_flamengo"] for j in jogadores)
 
 
 def test_detalhes_um_por_vez_no_plano_gratis(tmp_path, monkeypatch):

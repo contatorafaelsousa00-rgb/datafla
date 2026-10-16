@@ -102,11 +102,24 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   formulário de elogios/críticas/sugestões grava em Firestore (`opinioes`, banco (default) em nam5) via REST com a
   chave pública do app web; `firestore.rules` só permite criar com campos validados; leitura só pelo console:
   https://console.firebase.google.com/project/datafla/firestore/databases/-default-/data/~2Fopinioes
-- 35 testes (`python -m pytest`).
+- 37 testes (`python -m pytest`) + `python scripts/teste_painel.py` (painel).
 - Melhorias de 15/10/2026 (análise geral, itens 1–6): no Git só respostas brutas, fotos e logos; JSON do site,
   CSVs e validação são gerados por `processar` (workflow gera no deploy; `meta.coletado_em` = hora da última coleta,
   mostrada em "atualizado em"). Logos (escudos e competições) copiados para `site/logos/<teams|leagues>/`
   (`coleta/imagens.py`). Resumo no GitHub (`$GITHUB_STEP_SUMMARY`). Tags `og:` + `site/capa.png`
   (de `scripts/capa.html`). Gráficos SVG com `aria-label` = título do cartão + resumo gerado dos dados.
-  Sugestões ainda abertas: separar `app.js` por aba, enxugar `jogadores` no JSON, teste de fumaça do painel,
-  medir visitas, aviso de opinião nova por e-mail, App Check se vier spam, investigar divergências da fonte.
+- Itens 7–13 e admin (15/10/2026): `app.js` dividido em módulos por aba (`comum.js` base com `D` via `definirDados`,
+  `temporada/jogos/jogadores/elenco/estilo/opiniao.js`; `app.js` = filtros, abas, carregamento). Tabelas grandes do JSON
+  em `{colunas, linhas}` (`exportar.compactar`; o site expande em `preparar`): 1,29 MB → 0,5 MB. Teste de fumaça
+  `scripts/teste_painel.py` (Chrome/Edge sem janela, todas as abas) roda no workflow antes do deploy.
+  Divergências da fonte: `shotsTotal` do jogador não conta chutes bloqueados → somados da lista de chutes (casados por nome,
+  `finalizacoes_bloqueadas`); mais de 11 titulares → os de 0 min viram reservas. Validação: 73 → 21 apontamentos (restam
+  amistosos sem jogadores, acréscimos acima da tolerância, lista de chutes × total do time em ~6 times).
+- **Admin** (15/10/2026): entrada quase invisível no canto superior direito do topo (ou `#admin`); `admin.js` carregado sob
+  demanda com o SDK do Firebase (gstatic 10.14.1). Login Google (Firebase Authentication; o provedor Google precisa estar
+  ativado no console). Regras: `admin()` = e-mail do dono verificado; lê/apaga `opinioes`, lê `acessos`.
+  Mostra acessos (30 dias, abas, origem, dispositivo), opiniões (selo "nova" desde a última visita; apagar) e situação da coleta.
+  Contagem (`acessos.js`): `acessos/<dia>` só com contadores (+1 por regra), sem cookies/dado pessoal; não conta localhost,
+  demo nem o navegador onde o admin entrou. Doc de teste `acessos/2000-01-01` ficou no banco (ignorado; apagar pelo console).
+  Não feito por decisão: e-mail a cada opinião (exige plano Blaze + Cloud Functions; o selo "nova" cobre) e App Check
+  (exige registrar reCAPTCHA no console e carregar o SDK em toda visita; ligar só se aparecer spam).

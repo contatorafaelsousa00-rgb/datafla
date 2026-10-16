@@ -15,6 +15,7 @@ from __future__ import annotations
 import os
 import re
 import time
+from collections import Counter
 from datetime import datetime, timedelta, timezone
 
 import requests
@@ -436,15 +437,57 @@ def linha_partida(m: dict, team_id: int) -> dict:
     }
 
 
+def _dono_do_chute(nome: str | None, jogadores: list[dict]) -> dict | None:
+    """Jogador do box-score que deu o chute (a lista de chutes usa outro formato de nome, ex.: "Leo Pereira")."""
+    from .fotos import _norm, _sobrenome
+    n = _norm(nome)
+    if not n:
+        return None
+    for criterio in (
+        lambda p: n in (_norm(p.get("name")), _norm(p.get("fullName"))),
+        lambda p: _sobrenome(nome) in (_sobrenome(p.get("name")), _sobrenome(p.get("fullName"))),
+        lambda p: all(x in _norm(p.get("fullName")).split() for x in n.split()),
+    ):
+        achados = [p for p in jogadores if criterio(p)]
+        if len(achados) == 1:
+            return achados[0]
+    return None
+
+
+def _bloqueadas_por_jogador(m: dict, time_id: int, jogadores: list[dict]) -> Counter:
+    """O shotsTotal do jogador na fonte não conta chutes bloqueados (o total do time conta).
+    Eles vêm da lista de chutes da partida, casados pelo nome."""
+    lado = "homeTeam" if m["homeTeam"]["id"] == time_id else "awayTeam"
+    contagem = Counter()
+    for chute in m[lado].get("shots") or []:
+        if chute.get("outcome") == "Blocked":
+            dono = _dono_do_chute(chute.get("playerName"), jogadores)
+            if dono:
+                contagem[dono["id"]] += 1
+    return contagem
+
+
+def _corrigir_titulares(linhas: list[dict]) -> None:
+    """A fonte às vezes marca mais de 11 titulares; os que não jogaram nenhum minuto voltam a ser reservas."""
+    titulares = [l for l in linhas if l["titular"]]
+    if len(titulares) <= 11:
+        return
+    for l in titulares:
+        if not l["minutos"]:
+            l["titular"], l["minutos"] = False, None
+
+
 def linhas_jogadores(m: dict, box: list, team_id: int) -> list[dict]:
     linhas = []
     for bloco in box or []:
         time_id = bloco["team"]["id"]
+        do_time = []
+        bloqueadas = _bloqueadas_por_jogador(m, time_id, bloco.get("players", []))
         for p in bloco.get("players", []):
             st = p.get("statistics") or {}
             minutos = numero(p.get("minutesPlayed"))
             reserva = bool(p.get("isSubstitute"))
-            linhas.append({
+            do_time.append({
                 "id_partida": m["id"],
                 "time_id": time_id,
                 "eh_flamengo": time_id == team_id,
@@ -462,7 +505,9 @@ def linhas_jogadores(m: dict, box: list, team_id: int) -> list[dict]:
                 "assistencias": numero(st.get("assists")),
                 "gols_sofridos": numero(st.get("goalsConceded")),
                 "defesas": numero(st.get("goalsSaved")),
-                "finalizacoes": numero(st.get("shotsTotal")),
+                "finalizacoes": (None if numero(st.get("shotsTotal")) is None
+                                 else numero(st.get("shotsTotal")) + bloqueadas[p["id"]]),
+                "finalizacoes_bloqueadas": bloqueadas[p["id"]],
                 "finalizacoes_alvo": numero(st.get("shotsOnTarget")),
                 "xg": numero(st.get("expectedGoals")),
                 "xa": numero(st.get("expectedAssists")),
@@ -485,6 +530,8 @@ def linhas_jogadores(m: dict, box: list, team_id: int) -> list[dict]:
                 "penaltis_marcados": numero(st.get("penaltiesScored")),
                 "penaltis_perdidos": numero(st.get("penaltiesMissed")),
             })
+        _corrigir_titulares(do_time)
+        linhas += do_time
     return linhas
 
 

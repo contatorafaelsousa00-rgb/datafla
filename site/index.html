@@ -44,6 +44,10 @@
         <svg class="lua" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
         <span class="texto-tema">Tema</span>
       </button>
+      <!-- Entrada da administração: quase invisível no canto; a proteção real são as regras do Firestore -->
+      <button id="entrada-admin" class="entrada-admin" type="button" aria-label="Administração" title="Administração">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+      </button>
     </div>
   </header>
 
@@ -302,6 +306,11 @@
   <!-- Perfil do jogador: abre por cima de qualquer aba (tabela, escalação do jogo, listas do elenco) -->
   <dialog id="modal-jogador" class="modal" aria-label="Perfil do jogador">
     <div id="detalhe-jogador" class="modal-corpo"></div>
+  </dialog>
+
+  <!-- Administração: conteúdo montado por admin.js depois do login -->
+  <dialog id="modal-admin" class="modal modal-admin" aria-label="Administração">
+    <div id="corpo-admin" class="modal-corpo"></div>
   </dialog>
 
   <div id="dica" class="dica" role="tooltip" hidden></div>

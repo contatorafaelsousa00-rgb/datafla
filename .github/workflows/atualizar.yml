@@ -87,6 +87,11 @@ jobs:
           git pull --rebase --autostash
           git push
 
+      - name: Testar o painel
+        # abre cada aba num Chrome sem janela; erro de JavaScript ou aba vazia barra a publicação
+        if: env.TEM_FIREBASE == 'true' && (github.event_name == 'push' || steps.plano.outputs.coletar == 'true')
+        run: python scripts/teste_painel.py
+
       - name: Publicar no Firebase
         if: env.TEM_FIREBASE == 'true' && (github.event_name == 'push' || steps.plano.outputs.coletar == 'true')
         uses: FirebaseExtended/action-hosting-deploy@v0

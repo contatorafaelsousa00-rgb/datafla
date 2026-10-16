@@ -481,3 +481,34 @@ body.sem-filtros .filtros { display: none; }
   cursor: pointer; transition: background .15s; }
 .botao-primario:hover { background: var(--marca-forte); }
 .botao-primario:disabled { opacity: .6; cursor: wait; }
+
+/* ---------- administração ---------- */
+/* Entrada quase invisível no canto superior direito do topo; aparece ao passar o mouse ou com Tab. */
+.entrada-admin { position: absolute; top: 0; right: 0; width: 26px; height: 26px; padding: 6px; border: 0; background: none;
+  color: rgba(255, 255, 255, .5); opacity: .06; cursor: pointer; transition: opacity .2s; }
+.entrada-admin:hover, .entrada-admin:focus-visible { opacity: 1; }
+.entrada-admin svg { width: 14px; height: 14px; display: block; }
+.modal-admin { width: min(1120px, calc(100vw - 32px)); }
+.modal-admin .modal-corpo { display: grid; gap: 16px; }
+.admin-topo { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+.admin-topo h2, .admin-aviso h2 { font: 600 22px var(--fonte-titulo); }
+.admin-aviso { display: grid; gap: 12px; padding: 12px 0; }
+.admin-secao { display: grid; gap: 12px; }
+.admin-titulo { display: flex; align-items: center; gap: 10px; font: 600 13px var(--fonte-titulo); text-transform: uppercase;
+  letter-spacing: .08em; color: var(--mudo); border-top: 1px solid var(--borda); padding-top: 16px; }
+.botao-secundario { border: 1px solid var(--borda-forte); border-radius: 10px; padding: 9px 16px; background: none; color: var(--texto);
+  font: 600 13px var(--fonte-titulo); cursor: pointer; }
+.botao-secundario:hover { border-color: var(--texto-2); }
+.botao-texto { margin-left: auto; border: 0; background: none; color: var(--mudo); font: 500 12px var(--fonte); cursor: pointer; }
+.botao-texto:hover { color: var(--marca); }
+.admin-opinioes { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+.admin-opiniao { border: 1px solid var(--borda); border-radius: 10px; padding: 12px 14px; }
+.admin-opiniao.nova { border-color: var(--marca); }
+.admin-opiniao-topo { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 12px; }
+.admin-opiniao-texto { margin: 8px 0 4px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.tipo-op { font: 600 11px var(--fonte-titulo); text-transform: uppercase; letter-spacing: .06em; padding: 2px 8px; border-radius: 999px;
+  background: var(--grade); color: var(--texto); }
+.tipo-op.elogio { background: color-mix(in srgb, var(--bom) 22%, transparent); }
+.tipo-op.critica { background: color-mix(in srgb, var(--marca) 25%, transparent); }
+.selo-nova { font: 600 11px var(--fonte-titulo); color: #fff; background: var(--marca); padding: 2px 8px; border-radius: 999px;
+  text-transform: none; letter-spacing: 0; }

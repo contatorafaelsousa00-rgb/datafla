@@ -159,7 +159,13 @@ Cache: dados, JS, CSS e HTML saem com `no-cache` (o navegador revalida e só bai
 
 **Elogios, críticas e sugestões** (aba "Sua opinião"): gravados no Firestore do projeto, coleção `opinioes`.
 As regras (`firestore.rules`, publicadas com `firebase deploy --only firestore:rules`) só permitem criar
-mensagens válidas; ninguém lê pelo site. Para ler: console do Firebase → Firestore Database → `opinioes`.
+mensagens válidas; só o admin lê.
+
+**Administração**: cadeado quase invisível no canto superior direito (ou `https://datafla.web.app/#admin`).
+Login com a conta Google do dono (Firebase Authentication, provedor Google ativado no console); mostra
+acessos dos últimos 30 dias (visitas, únicos, abas, origem, dispositivo), opiniões (com apagar) e a
+situação da coleta. Os acessos são só contadores por dia (`acessos/<aaaa-mm-dd>`), sem cookies nem dado
+pessoal; o navegador onde o admin entrou deixa de ser contado.
 
 ## O que já foi confirmado nos dados reais (15/10/2026)
 
@@ -174,7 +180,8 @@ mensagens válidas; ninguém lê pelo site. Para ler: console do Firebase → Fi
 ## Testes
 
 ```bash
-python -m pytest
+python -m pytest                  # coleta, normalização, validação (sem rede)
+python scripts/teste_painel.py    # abre cada aba do painel num Chrome/Edge sem janela (precisa de site/dados)
 ```
 
 Os testes usam partidas inventadas no formato de cada fonte, sem acesso à rede.

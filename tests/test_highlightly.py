@@ -181,3 +181,22 @@ def test_planejar_e_situacao_escrevem_resumo_do_github(tmp_path, monkeypatch):
     monkeypatch.setattr(hl, "planejar", lambda: (False, "nada a coletar agora"))
     hl.cmd_planejar()
     assert resumo.read_text(encoding="utf-8") == "**Pular:** nada a coletar agora.\n"
+
+
+def test_chutes_bloqueados_entram_nas_finalizacoes_do_jogador():
+    m = {"homeTeam": {"id": FLA, "shots": [{"outcome": "Blocked", "playerName": "Leo Pereira"},
+                                            {"outcome": "Blocked", "playerName": "Leo Pereira"},
+                                            {"outcome": "Saved", "playerName": "Leo Pereira"},
+                                            {"outcome": "Blocked", "playerName": "Ninguém"}]},
+         "awayTeam": {"id": ADV, "shots": []}}
+    jogadores = [{"id": 1, "name": "L. Pereira", "fullName": "Leonardo Pereira"}, {"id": 2, "name": "Pedro", "fullName": "Pedro Guilherme"}]
+    assert hl._bloqueadas_por_jogador(m, FLA, jogadores) == {1: 2}  # sem dono conhecido: não é atribuído
+
+
+def test_titulares_a_mais_sem_minutos_voltam_para_o_banco():
+    linhas = [{"titular": True, "minutos": 90} for _ in range(11)] + [{"titular": True, "minutos": 0}]
+    hl._corrigir_titulares(linhas)
+    assert sum(l["titular"] for l in linhas) == 11 and linhas[-1]["minutos"] is None
+    normais = [{"titular": True, "minutos": 0}] + [{"titular": True, "minutos": 90} for _ in range(10)]
+    hl._corrigir_titulares(normais)
+    assert normais[0]["titular"]  # com 11 titulares nada muda (expulso no início, por exemplo)
