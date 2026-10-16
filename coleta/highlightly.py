@@ -551,7 +551,11 @@ def _probabilidades(m: dict, nos: str):
     pre = ((m.get("predictions") or {}).get("prematch") or [])
     if not pre:
         return None, None, None
-    pr = pre[-1].get("probabilities") or {}
+    # A fonte continua gerando "pré-jogo" depois do início (em 39 de 57 jogos a última é de até 23 h depois) e esses
+    # números já puxam para o resultado: vale a última gerada ANTES do apito inicial.
+    inicio = (m.get("date") or "").replace(".000Z", "Z")
+    antes = [x for x in pre if (x.get("generatedAt") or "").replace(".000Z", "Z") <= inicio] if inicio else pre
+    pr = (antes or pre[:1])[-1].get("probabilities") or {}
     casa, fora = numero(pr.get("home")), numero(pr.get("away"))
     vit, der = (casa, fora) if nos == "homeTeam" else (fora, casa)
     return vit, numero(pr.get("draw")), der

@@ -287,3 +287,10 @@ def test_nome_do_arbitro_sem_virgula():
     assert hl.nome_arbitro("Benitez, Juan Gabriel") == "Juan Gabriel Benitez"
     assert hl.nome_arbitro("Pereira Sampaio, Wilton") == "Wilton Pereira Sampaio"
     assert hl.nome_arbitro("Anderson Daronco") == "Anderson Daronco" and hl.nome_arbitro(None) is None
+
+
+def test_previsao_pre_jogo_ignora_as_geradas_depois_do_inicio():
+    prev = lambda quando, casa: {"generatedAt": quando, "probabilities": {"home": f"{casa}%", "draw": "30%", "away": f"{70 - casa}%"}}
+    m = {"date": "2026-01-15T00:30:00.000Z", "predictions": {"prematch": [
+        prev("2026-01-14T03:00:00.000Z", 45), prev("2026-01-15T00:00:00.000Z", 49), prev("2026-01-15T03:00:00.000Z", 41)]}}
+    assert hl._probabilidades(m, "homeTeam")[0] == 0.49  # a das 03:00 (depois do jogo) fica de fora
