@@ -631,3 +631,4 @@ body.sem-filtros .filtros { display: none; }
 .modal-jogo .modal-barra { top: -20px; margin: -20px calc(-1 * var(--lado)) 0; padding: 12px var(--lado); background: var(--topo);
   backdrop-filter: blur(8px); }
 .modal-jogo .tabela-partida .fixa { background: var(--pagina); }
+html:has(dialog[open]) { overflow: hidden; } /* com jogo/perfil aberto, só a tela da frente rola (a barra lateral é a dela) */
