@@ -50,7 +50,7 @@ Dono: Rafael. Responda em português, de forma breve e direta (ele pede detalhes
     `config.aplicar_temporada(ano)` troca todos os caminhos; CLI aceita `--temporada`. Padrão = ano atual.
     Elenco (`/players/squads`) só existe para a temporada atual.
   - Configuração pelo arquivo `.env` na raiz (modelo `.env.exemplo`, fora do Git; variável do terminal tem prioridade) ou variável de ambiente: `API_FOOTBALL_KEY`, `FLA_TEAM_ID` (127), `FLA_SEASON` (padrão: ano atual), `FLA_DATA_DIR` (pasta base), `FLA_SITE_DADOS`.
-- `site/` — HTML/CSS/JS puro, gráficos SVG próprios (`graficos.js`), sem build. Seletor de temporada (`?t=2025`). Abas: Temporada, Jogos, Jogadores, Elenco, Estilo de jogo, Sua opinião (detalhes em "Estado atual").
+- `site/` — HTML/CSS/JS puro, gráficos SVG próprios (`graficos.js`), sem build. Seletor de temporada (`?t=2025`). Abas: Temporada, Jogos, Jogadores, Números, Elenco, Estilo de jogo, Classificação, Sua opinião (detalhes em "Estado atual").
   Cores de competição em famílias da identidade (15/10/2026, pedido do Rafael, troca a paleta azul/laranja anterior):
   nacionais em vermelho (Brasileirão --s1, Copa do Brasil --s3), continentais em dourado (Libertadores --s2, Recopa --s6),
   demais em cinzas (Carioca --s4, Supercopa --s5, amistosos --s7). Distinção depende mais de luminosidade que de matiz.
@@ -68,7 +68,7 @@ manda buscar estatísticas de jogador após o apito final; não há prazo public
 (um post antigo fala em atualização a cada 5 min no endpoint de jogadores). Concorrentes: TheStatsAPI
 diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para medir na prática.
 
-## Estado atual (15/10/2026)
+## Estado atual (atualizado em 16/10/2026)
 
 - 2024 coletado pela API-Football (75 jogos) e 2026 pela Highlightly: 41 de 58 jogos encerrados; os 17 restantes
   (mais antigos, incluindo Carioca/Supercopa/Recopa) chegam na próxima coleta, quando a cota diária renovar.
@@ -181,8 +181,9 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   `temporada/jogos/jogadores/elenco/estilo/opiniao.js`; `app.js` = filtros, abas, carregamento). Tabelas grandes do JSON
   em `{colunas, linhas}` (`exportar.compactar`; o site expande em `preparar`): 1,29 MB → 0,5 MB. Teste de fumaça
   `scripts/teste_painel.py` (Chrome/Edge sem janela, todas as abas) roda no workflow antes do deploy.
-  Divergências da fonte: `shotsTotal` do jogador não conta chutes bloqueados → somados da lista de chutes (casados por nome,
-  `finalizacoes_bloqueadas`); mais de 11 titulares → os de 0 min viram reservas. Validação: 73 → 21 apontamentos (restam
+  Divergências da fonte: `shotsTotal` do jogador em geral não conta chutes bloqueados → somados da lista de chutes (casados por nome,
+  `finalizacoes_bloqueadas`), MAS só quando cabem (soma dos jogadores + bloqueados <= chutes da lista): em alguns jogos
+  (vários desde set/2026, ex.: Estudiantes 16/10) a fonte já os conta e somar dobrava (27 × 21) — corrigido em 16/10/2026; mais de 11 titulares → os de 0 min viram reservas. Validação: 73 → 21 apontamentos (restam
   amistosos sem jogadores, acréscimos acima da tolerância, lista de chutes × total do time em ~6 times).
 - **Admin** (15/10/2026): entrada quase invisível no canto superior direito do topo (ou `#admin`); `admin.js` carregado sob
   demanda com o SDK do Firebase (gstatic 10.14.1). Login Google (Firebase Authentication; o provedor Google precisa estar
@@ -199,3 +200,13 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   demo nem o navegador onde o admin entrou. Doc de teste `acessos/2000-01-01` ficou no banco (ignorado; apagar pelo console).
   Não feito por decisão: e-mail a cada opinião (exige plano Blaze + Cloud Functions; o selo "nova" cobre) e App Check
   (exige registrar reCAPTCHA no console e carregar o SDK em toda visita; ligar só se aparecer spam).
+
+## Como trabalhar neste repositório (16/10/2026)
+
+- Publicação: só depois do Rafael validar no servidor local (ou quando ele pede "push"/"commit e push"). Mudança em
+  `firestore.rules` precisa de `firebase deploy --only firestore:rules --project datafla` além do push (o workflow só publica o Hosting).
+- O Rafael às vezes roda outra sessão do Claude em paralelo na mesma pasta: antes de commitar, conferir `git status`/`git diff`
+  e commitar só os próprios trechos (montar o índice a partir do HEAD se um arquivo tiver mudanças das duas sessões); cuidado
+  com nomes de classe CSS repetidos entre sessões (ex.: `.chave` × `.chaveamento`).
+- Cota da Highlightly: 100 req/dia, dividida com a coleta automática. Conferir `restantes_hoje` antes de chamar a API à mão.
+- Antes do push: `python -m coleta.coletar processar`, `python scripts/teste_painel.py` e `python -m pytest -q` (inclui tests/front).
