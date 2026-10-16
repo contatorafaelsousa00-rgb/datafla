@@ -14,6 +14,7 @@ ABAS = {
     "jogadores": "#aba-jogadores table",
     "elenco": "#aba-elenco svg",
     "estilo": "#aba-estilo svg",
+    "numeros": "#aba-numeros table",
     "classificacao": "#aba-classificacao table",
     "opiniao": "#aba-opiniao form",
 }
