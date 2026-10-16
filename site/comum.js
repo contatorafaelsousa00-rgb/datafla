@@ -26,6 +26,7 @@ export const $ = (id) => document.getElementById(id);
 // Filtros: comp ("" = todas), periodo ("temporada" | "10" | "5" | "AAAA-MM"), mando ("" | "Casa" | "Fora")
 export const estado = { comp: "", periodo: "temporada", mando: "", aba: "temporada", jogador: null, jogo: null,
   lista: "proximos", proximo: null, // aba Jogos: qual lista aparece e qual próximo jogo está aberto
+  partidaJogador: null, vistaJogador: "temporada", // ficha do jogador: aberta a partir de um jogo, "partida" ou "temporada"
   ordem: { campo: "minutos", desc: true }, busca: "", grupo: "geral", modo: "total" };
 export let D; // dados preparados
 
@@ -139,6 +140,7 @@ export function preparar(bruto) {
     eventosPorPartida: agrupar(bruto.eventos, "id_partida"),
     finalizacoesPorPartida: agrupar(bruto.finalizacoes ?? [], "id_partida"),
     escalacoesPorPartida: agrupar(bruto.escalacoes ?? [], "id_partida"),
+    adversariosPorPartida: agrupar(bruto.adversarios ?? [], "id_partida"),
     carreiraPorJogador: agrupar(bruto.carreira ?? [], "jogador_id"),
     fotos: new Map((bruto.fotos ?? []).map((f) => [f.jogador_id, f.foto])),
     competicoes: ORDEM_COMP.filter((c) => comps.has(c)).concat([...comps].filter((c) => !ORDEM_COMP.includes(c))),

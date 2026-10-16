@@ -1,6 +1,6 @@
 // Aba Jogadores: tabela por grupo de métricas, perfil (modal) e dispersões.
 import { colunas, conteudoDica, dica, dispersao, serie } from "./graficos.js";
-import { $, assinado, comDetalhe, corComp, D, dicaJogo, estado, filtrados, h, MIN_MINUTOS, mostrar, notaTag, num, pct, preencher, rotuloMes, soma, vazio } from "./comum.js";
+import { $, assinado, comDetalhe, corComp, D, dataLonga, dicaJogo, estado, filtrados, h, MIN_MINUTOS, mostrar, notaTag, num, pct, preencher, rotuloMes, soma, textoConfronto, vazio } from "./comum.js";
 import { render } from "./app.js";
 
 // =====================================================================
@@ -138,6 +138,8 @@ export function renderJogadores(js) {
 // O perfil abre num modal, sem trocar de aba nem rolar a página.
 export function abrirJogador(id) {
   estado.jogador = id;
+  estado.partidaJogador = null; // perfil da temporada
+  estado.vistaJogador = "temporada";
   const modal = $("modal-jogador");
   if (!modal.open) {
     modal.showModal();
@@ -145,6 +147,21 @@ export function abrirJogador(id) {
   }
   modal.querySelector(".modal-corpo").scrollTop = 0;
   render(); // desenha o perfil (largura já conhecida) e destaca o jogador na aba de jogadores
+}
+
+// Ficha do jogador numa partida (clique no campinho ou na escalação); jogadores do Flamengo também têm a temporada
+export function abrirJogadorNaPartida(id, idPartida, ehFlamengo = true) {
+  estado.partidaJogador = idPartida;
+  estado.vistaJogador = "partida";
+  estado.jogadorAdversario = !ehFlamengo;
+  estado.jogador = id;
+  const modal = $("modal-jogador");
+  if (!modal.open) {
+    modal.showModal();
+    modal.append($("dica"));
+  }
+  modal.querySelector(".modal-corpo").scrollTop = 0;
+  render();
 }
 
 export function fecharJogador() {
@@ -158,6 +175,8 @@ export function montarModal() {
     (document.querySelector("dialog[open]") ?? document.body).append($("dica")); // volta para o jogo, se estiver aberto
     $("dica").hidden = true;
     estado.jogador = null;
+    estado.partidaJogador = null;
+    estado.vistaJogador = "temporada";
     render();
   });
   // Clique no fundo escurecido fecha (o conteúdo fica num filho, então o alvo é o próprio <dialog>)
@@ -181,6 +200,7 @@ export const PERFIL = {
 };
 
 export function renderPerfil(js, todos) {
+  if (estado.partidaJogador != null && estado.vistaJogador === "partida") return renderNaPartida(todos);
   const caixa = $("detalhe-jogador");
   const a = todos.find((x) => x.id === estado.jogador);
   if (!a) {
@@ -221,6 +241,7 @@ export function renderPerfil(js, todos) {
       h("div", { class: "cresce" }, h("h2", {}, a.jogador),
         h("p", { class: "sutil" }, [a.posicao, `${a.jogos} jogos, ${a.titular} como titular`, `${num(a.minutos)} minutos`].join(" · "))),
       h("button", { class: "fechar", onclick: fecharJogador, "aria-label": "Fechar perfil", autofocus: true }, "×")),
+    abasFicha(),
     h("div", { class: "mini-kpis" }, ...[["Gols", a.gols], ["Assistências", a.assistencias], ["xG", num(a.xg, 1)], ["xA", num(a.xa, 1)],
       ["Nota média", num(a.nota, 2)], ["% dos minutos", pct(a.pctMin, 0)]]
       .filter(([, v]) => v !== "–").map(([r, v]) => h("div", {}, h("b", {}, v), h("span", {}, r)))),
@@ -243,6 +264,83 @@ export function renderPerfil(js, todos) {
   colunas(grafMin, participacoes.map(([p, j]) => ({ valor: j?.minutos ?? 0, cor: corComp(p.competicao),
     dica: dicaJogo(p, [{ valor: situacao(j, p) }]) })),
   { max: Math.max(90, ...participacoes.map(([, j]) => j?.minutos ?? 0)), rotuloX: rotuloMes(jogosDet), altura: 150 });
+}
+
+// ---------- ficha do jogador na partida ----------
+function abasFicha() {
+  if (estado.partidaJogador == null) return null;
+  const aba = (v, rotulo, desligada) => h("button", { type: "button", "aria-pressed": String(estado.vistaJogador === v), disabled: desligada || null,
+    title: desligada ? "A temporada completa está disponível só para jogadores do Flamengo" : null,
+    onclick: () => { estado.vistaJogador = v; $("modal-jogador").querySelector(".modal-corpo").scrollTop = 0; render(); } }, rotulo);
+  return h("div", { class: "segmentado abas-ficha" }, aba("partida", "Nesta partida"), aba("temporada", "Na temporada", estado.jogadorAdversario));
+}
+
+const NOME_POS = { G: "Goleiro", D: "Defensor", M: "Meio-campo", F: "Atacante" };
+
+function renderNaPartida(todos) {
+  const caixa = $("detalhe-jogador");
+  const idp = estado.partidaJogador;
+  const p = D.encerrados.find((x) => x.id_partida === idp);
+  const lista = estado.jogadorAdversario ? D.adversariosPorPartida.get(idp) : D.jogadoresPorPartida.get(idp);
+  const j = (lista ?? []).find((x) => x.jogador_id === estado.jogador);
+  const fechar = h("button", { class: "fechar", onclick: fecharJogador, "aria-label": "Fechar", autofocus: true }, "×");
+  if (!p || !j) {
+    preencher(caixa, h("div", { class: "perfil-topo" }, h("p", { class: "cresce sutil" }, "A fonte não tem os números deste jogador neste jogo."), fechar));
+    return;
+  }
+  const time = estado.jogadorAdversario ? p.adversario : "Flamengo";
+  const temporada = estado.jogadorAdversario ? null : todos.find((x) => x.id === j.jogador_id);
+  const eventos = (D.eventosPorPartida.get(idp) ?? []).filter((e) => e.jogador_id === j.jogador_id || e.assist_id === j.jogador_id);
+  const entrou = eventos.find((e) => e.tipo === "subst" && e.assist_id === j.jogador_id);
+  const saiu = eventos.find((e) => e.tipo === "subst" && e.jogador_id === j.jogador_id);
+  const minuto = (e) => `${e.minuto}${e.acrescimo ? "+" + e.acrescimo : ""}'`;
+  const participacao = !j.minutos ? "não entrou" : [j.titular ? "titular" : entrou ? `entrou aos ${minuto(entrou)}` : "entrou no 2º tempo",
+    saiu ? `saiu aos ${minuto(saiu)}` : null, `${j.minutos} min`].filter(Boolean).join(", ");
+  const foto = !estado.jogadorAdversario && D.fotos.get(j.jogador_id);
+  const pctTexto = (a, b) => (b ? ` (${pct(a / b, 0)})` : "");
+  // média por jogo na temporada (só Flamengo), para comparar
+  const media = (c) => (temporada && temporada.jogos && temporada[c] != null ? temporada[c] / temporada.jogos : null);
+  const linha = (rotulo, valor, c, casas = 0) => h("tr", {}, h("td", {}, rotulo), h("td", { class: "num" }, h("b", {}, valor ?? "–")),
+    temporada ? h("td", { class: "num sutil" }, c && media(c) != null ? num(media(c), casas || 1) : "") : null);
+  // xG/xGOT vazios na fonte quando o jogador não finalizou: isso é zero, não "sem dado"
+  const v = (c, casas = 0) => (j[c] == null ? (["xg", "xgot"].includes(c) && j.finalizacoes === 0 ? num(0, casas) : null) : num(j[c], casas));
+  const secao = (titulo, linhas) => h("div", {}, h("h3", {}, titulo),
+    h("table", { class: "tabela" }, h("thead", {}, h("tr", {}, h("th", {}, ""), h("th", { class: "num" }, "No jogo"),
+      temporada ? h("th", { class: "num" }, "Média/jogo na temporada") : null)), h("tbody", {}, linhas)));
+  const goleiro = j.posicao === "Goleiro" || j.posicao === "G";
+  preencher(caixa,
+    h("div", { class: "perfil-topo" },
+      foto ? h("div", { class: "foto-jogador" }, h("img", { src: foto, alt: `Foto de ${j.jogador}`, width: 88, height: 88 }),
+        h("span", { class: "foto-numero" }, j.numero ?? "")) : h("div", { class: "camisa" + (estado.jogadorAdversario ? " adv" : "") }, j.numero ?? "–"),
+      h("div", { class: "cresce" }, h("h2", {}, j.jogador),
+        h("p", { class: "sutil" }, [time, NOME_POS[j.posicao] ?? j.posicao, participacao].filter(Boolean).join(" · ")),
+        h("p", { class: "sutil" }, `${textoConfronto(p, p.gols_pro, p.gols_contra)} · ${dataLonga(p.data_utc)} · ${p.competicao}`)),
+      fechar),
+    abasFicha(),
+    h("div", { class: "mini-kpis" }, ...[["Nota", j.nota != null ? num(j.nota, 1) : null], ["Minutos", j.minutos], ["Gols", j.gols], ["Assistências", j.assistencias],
+      ["xG", v("xg", 2)], ["xA", v("xa", 2)]].filter(([, x]) => x != null && x !== "–").map(([r, x]) => h("div", {}, h("b", {}, x), h("span", {}, r)))),
+    eventos.length ? h("ul", { class: "lista-eventos" }, eventos.map((e) => h("li", {}, h("span", { class: "min" }, minuto(e)),
+      h("span", {}, e.tipo === "Goal" ? (e.jogador_id === j.jogador_id ? (e.detalhe === "Own Goal" ? "Gol contra" : e.detalhe === "Penalty" ? "Gol de pênalti" : "Gol")
+        : `Assistência para ${e.jogador}`) : e.tipo === "Card" ? (e.detalhe === "Yellow Card" ? "Cartão amarelo" : "Cartão vermelho")
+        : e.tipo === "subst" ? (e.assist_id === j.jogador_id ? `Entrou no lugar de ${e.jogador ?? "outro jogador"}` : e.assist ? `Saiu para a entrada de ${e.assist}` : "Substituído")
+        : e.tipo === "Shootout" ? `Pênalti na disputa (${e.detalhe === "Scored" ? "convertido" : "perdido"})` : e.tipo)))) : null,
+    h("div", { class: "detalhe-grade" },
+      goleiro ? secao("Goleiro", [linha("Defesas", v("defesas"), "defesas"), linha("Gols sofridos", v("gols_sofridos"), "gols_sofridos"),
+        linha("xGOT enfrentado", v("xgot_enfrentado", 2), "xgot_enfrentado", 2), linha("Gols evitados (xG)", v("xg_evitado", 2), "xg_evitado", 2)]) : null,
+      secao("Ataque", [
+        linha("Finalizações", j.finalizacoes != null ? `${j.finalizacoes}` + (j.finalizacoes_alvo != null ? ` (${j.finalizacoes_alvo} no alvo)` : "") : null, "finalizacoes"),
+        linha("Bloqueadas", v("finalizacoes_bloqueadas")), linha("xG", v("xg", 2), "xg", 2), linha("xGOT", v("xgot", 2), "xgot", 2),
+        linha("Dribles certos", j.dribles_tentados ? `${j.dribles_certos ?? 0} de ${j.dribles_tentados}` : v("dribles_certos"), "dribles_certos"),
+        linha("Faltas sofridas", v("faltas_sofridas"), "faltas_sofridas"), linha("Impedimentos", v("impedimentos"))]),
+      secao("Criação", [
+        linha("Passes certos", j.passes ? `${j.passes_certos ?? 0} de ${j.passes}${pctTexto(j.passes_certos ?? 0, j.passes)}` : null, "passes_certos"),
+        linha("Passes decisivos", v("passes_chave"), "passes_chave"), linha("xA", v("xa", 2), "xa", 2), linha("Assistências", v("assistencias"), "assistencias")]),
+      secao("Defesa", [
+        linha("Desarmes", v("desarmes"), "desarmes"), linha("Interceptações", v("interceptacoes"), "interceptacoes"),
+        linha("Duelos ganhos", j.duelos ? `${j.duelos_ganhos ?? 0} de ${j.duelos}${pctTexto(j.duelos_ganhos ?? 0, j.duelos)}` : null, "duelos_ganhos"),
+        linha("Faltas cometidas", v("faltas_cometidas"), "faltas_cometidas"),
+        linha("Cartões", (j.amarelos || j.vermelhos) ? [j.amarelos ? `${j.amarelos} amarelo` : null, j.vermelhos ? `${j.vermelhos} vermelho` : null].filter(Boolean).join(", ") : "0")])),
+  );
 }
 
 // Carreira (fonte: /players/{id}/statistics): por temporada e competição, inclusive em outros clubes

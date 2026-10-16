@@ -566,3 +566,8 @@ body.sem-filtros .filtros { display: none; }
   .palpite-data { grid-column: 1 / -1; text-align: center; }
   .palpite button { padding: 4px 6px; }
 }
+
+/* ficha do jogador na partida */
+.abas-ficha { margin-top: 12px; }
+.abas-ficha button:disabled { opacity: .45; cursor: not-allowed; }
+.camisa.adv { background: var(--superficie-2); color: var(--texto); border: 2px solid var(--serie-2); }

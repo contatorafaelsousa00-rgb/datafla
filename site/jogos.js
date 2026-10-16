@@ -1,7 +1,7 @@
 // Aba Jogos: lista e relatório de cada jogo.
 import { barrasEspelhadas, campinho, conteudoDica, dica, linhaTempo, mapaGol, serie } from "./graficos.js";
 import { $, bola, confronto, D, data, dataLonga, escudo, estado, h, mandanteVisitante, NOME_RES, notaTag, num, ORDEM_POS, pct, preencher, resultado, tagComp, vazio } from "./comum.js";
-import { abrirJogador } from "./jogadores.js";
+import { abrirJogadorNaPartida } from "./jogadores.js";
 import { render } from "./app.js";
 import { CLIMA, futurosFiltrados, horaBR } from "./temporada.js";
 
@@ -264,7 +264,7 @@ export function renderDetalheJogo(js) {
   const titulares = jogadores.filter((j) => j.titular).sort((a, b) => ORDEM_POS.indexOf(a.posicao) - ORDEM_POS.indexOf(b.posicao));
   const entraram = jogadores.filter((j) => !j.titular && j.minutos > 0).sort((a, b) => b.minutos - a.minutos);
   const temXg = jogadores.some((j) => j.xg != null);
-  const linhaJog = (j) => h("tr", { class: "clicavel", onclick: () => abrirJogador(j.jogador_id) },
+  const linhaJog = (j) => h("tr", { class: "clicavel", onclick: () => abrirJogadorNaPartida(j.jogador_id, p.id_partida, true) },
     h("td", { class: "num" }, j.numero ?? ""),
     h("td", {}, j.jogador, j.gols ? h("span", { class: "marca-gol", title: `${j.gols} gol(s)` }, "●".repeat(j.gols)) : null),
     h("td", { class: "num" }, `${j.minutos ?? "–"}'`), temXg ? h("td", { class: "num" }, j.xg != null ? num(j.xg, 2) : "–") : null,
@@ -298,7 +298,7 @@ export function renderDetalheJogo(js) {
     barraProbabilidade(p) ?? "",
     timesCampo ? h("div", { class: "bloco" }, h("h3", {}, "Escalações"),
       h("p", { class: "sutil" }, `${timesCampo[0].nome} ${timesCampo[0].formacao ?? ""} × ${timesCampo[1].formacao ?? ""} ${timesCampo[1].nome}`
-        + " · Clique num jogador do Flamengo para ver o perfil."), campo) : null,
+        + " · Clique num jogador para ver os números dele no jogo."), campo) : null,
     marcas.length ? h("div", { class: "bloco" }, h("h3", {}, "Linha do tempo"),
       h("p", { class: "sutil" }, "Flamengo em cima, adversário embaixo. Ponto cheio: defendida; vazio: para fora ou bloqueada; com anel: gol."),
       tempo) : null,
@@ -320,7 +320,7 @@ export function renderDetalheJogo(js) {
       h("div", {}, h("h3", {}, "Finalizações do Flamengo"), golFla),
       h("div", {}, h("h3", {}, `Finalizações do ${p.adversario}`), golAdv)) : null,
   );
-  if (timesCampo) campinho(campo, timesCampo[0], timesCampo[1], { aoClicar: (id) => { if (id != null) abrirJogador(id); } });
+  if (timesCampo) campinho(campo, timesCampo[0], timesCampo[1], { aoClicar: (id, fla) => abrirJogadorNaPartida(id, p.id_partida, fla) });
   if (marcas.length) linhaTempo(tempo, marcas, { duracao: p.duracao ?? 90 });
   if (linhasStats.length) barrasEspelhadas(grafStats, linhasStats, flaPrimeiro
     ? { nomeA: "Flamengo", nomeB: p.adversario }

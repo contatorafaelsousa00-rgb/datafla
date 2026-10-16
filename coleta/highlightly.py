@@ -716,7 +716,9 @@ def linhas_jogadores(m: dict, box: list, team_id: int) -> list[dict]:
                 "faltas_cometidas": numero(st.get("fouledOthers")),
                 "faltas_sofridas": numero(st.get("fouledByOthers")),
                 "amarelos": numero(st.get("cardsYellow")),
-                "vermelhos": (numero(st.get("cardsRed")) or 0) + (numero(st.get("cardsSecondYellow")) or 0),
+                # Só cardsRed: na fonte, cardsSecondYellow vem 1 para quem levou UM amarelo (215 casos sem expulsão nos
+                # lances); a expulsão por dois amarelos já vem como cardsRed = 1 e como lance "Red Card".
+                "vermelhos": numero(st.get("cardsRed")) or 0,
                 "impedimentos": numero(p.get("offsides")),
                 "penaltis_marcados": numero(st.get("penaltiesScored")),
                 "penaltis_perdidos": numero(st.get("penaltiesMissed")),

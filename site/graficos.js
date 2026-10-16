@@ -553,15 +553,15 @@ export function campinho(container, casa, fora, { aoClicar } = {}) {
           x = ehCasa ? m + prof * (W / 2 - 2 * m) + 16 : W - m - prof * (W / 2 - 2 * m) - 16;
           y = ehCasa ? m + lat * (H - 2 * m) : H - m - lat * (H - 2 * m);
         }
-        const g = el("g", { class: "campo-jogador" + (time.fla ? " fla" : "") + (time.fla && aoClicar ? " clicavel" : ""), tabindex: 0 }, s);
+        const g = el("g", { class: "campo-jogador" + (time.fla ? " fla" : "") + (aoClicar && j.id != null ? " clicavel" : ""), tabindex: 0 }, s);
         el("circle", { cx: x, cy: y, r: 13 }, g);
         texto(g, x, y + 4, j.numero ?? "", { "text-anchor": "middle", class: "campo-numero" });
         const curto = (j.nome ?? "").split(" ").slice(-1)[0];
         texto(g, x, y + 27, curto, { "text-anchor": "middle", class: "campo-nome" });
         dica(g, () => conteudoDica(j.nome ?? "", [{ valor: `nº ${j.numero ?? "–"}`, nome: time.nome }]));
-        if (time.fla && aoClicar) {
-          g.addEventListener("click", () => aoClicar(j.id));
-          g.addEventListener("keydown", (e) => { if (e.key === "Enter") aoClicar(j.id); });
+        if (aoClicar && j.id != null) {
+          g.addEventListener("click", () => aoClicar(j.id, time.fla));
+          g.addEventListener("keydown", (e) => { if (e.key === "Enter") aoClicar(j.id, time.fla); });
         }
       });
     });

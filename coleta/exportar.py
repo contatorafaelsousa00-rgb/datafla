@@ -44,7 +44,7 @@ def _traduzir(linhas: list[dict]) -> list[dict]:
 
 # Tabelas grandes vão em colunas + linhas (os nomes dos campos não se repetem a cada linha): o JSON
 # cai a menos da metade. O site volta a montar os objetos ao carregar (comum.js, expandir).
-COMPACTAR = ("jogadores", "eventos", "estatisticas", "finalizacoes", "escalacoes", "carreira", "liga")
+COMPACTAR = ("jogadores", "adversarios", "eventos", "estatisticas", "finalizacoes", "escalacoes", "carreira", "liga")
 
 
 def compactar(linhas: list[dict]) -> dict:
@@ -69,6 +69,8 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         "elenco": tabelas.get("elenco", []),
         # Só os jogadores do Flamengo vão para o site; o adversário aparece nas estatísticas de time.
         "jogadores": [j for j in tabelas["jogadores_partida"] if j["eh_flamengo"]],
+        # Adversários: só para a ficha do jogador na partida (clique no campinho); a temporada é só do Flamengo
+        "adversarios": [j for j in tabelas["jogadores_partida"] if not j["eh_flamengo"]],
         "eventos": tabelas["eventos"],
         "estatisticas": tabelas["estatisticas_time"],
         "finalizacoes": tabelas.get("finalizacoes", []),
