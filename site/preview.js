@@ -74,7 +74,8 @@ export function desfalques(p) {
 }
 
 // Provável escalação do Flamengo: a do último jogo, trocando quem está fora por quem mais jogou na mesma posição
-function provavelFlamengo(fora) {
+// e devolvendo ao time quem volta de suspensão (no lugar do menos usado da posição dele na temporada)
+function provavelFlamengo(fora, voltam = []) {
   const recentes = D.encerrados.filter((x) => x.detalhe).sort((a, b) => b.data_utc.localeCompare(a.data_utc));
   const base = recentes.find((x) => (D.escalacoesPorPartida.get(x.id_partida) ?? []).some((e) => e.eh_flamengo && e.titular));
   if (!base) return null;
@@ -90,7 +91,21 @@ function provavelFlamengo(fora) {
         .sort((a, b) => b.minutos - a.minutos)[0];
       if (sub) { usados.add(sub.id); trocas.push([e.jogador, sub.jogador]); j = { numero: sub.numero, nome: sub.jogador, id: sub.id, duvida: true }; }
     }
-    (linhas[e.linha] ??= []).push({ ...j, ordem: e.ordem });
+    (linhas[e.linha] ??= []).push({ ...j, ordem: e.ordem, posicao: e.posicao });
+  }
+  const temporada = new Map(agregarJogadores(recentes).map((a) => [a.id, a.minutos]));
+  for (const v of voltam) {
+    if (usados.has(v.id) || fora.has(v.id)) continue;
+    // posição dele = a da última partida em que foi titular
+    const pos = recentes.map((x) => (D.escalacoesPorPartida.get(x.id_partida) ?? []).find((e) => e.jogador_id === v.id && e.titular)).find(Boolean)?.posicao;
+    const naPosicao = linhas.flat().filter((j) => j && j.posicao === pos).sort((a, b) => (temporada.get(a.id) ?? 0) - (temporada.get(b.id) ?? 0));
+    const sai = naPosicao[0];
+    if (!sai || (temporada.get(sai.id) ?? 0) >= (temporada.get(v.id) ?? 0)) continue;
+    const num = (D.jogadoresPorPartida.get(recentes.find((x) => (D.jogadoresPorPartida.get(x.id_partida) ?? []).some((j) => j.jogador_id === v.id))?.id_partida) ?? [])
+      .find((j) => j.jogador_id === v.id)?.numero;
+    trocas.push([sai.nome, v.nome, "volta de suspensão"]);
+    usados.delete(sai.id); usados.add(v.id);
+    Object.assign(sai, { numero: num ?? sai.numero, nome: v.nome, id: v.id, duvida: false, volta: true });
   }
   return { base, formacao: xi[0]?.formacao, trocas,
     linhas: linhas.filter(Boolean).map((l) => l.sort((a, b) => a.ordem - b.ordem)) };
@@ -118,7 +133,7 @@ export function secoesPreview(p) {
   const { suspensos, pendurados, lesionados, ausentes, voltam } = desfalques(p);
   const fora = new Set([...suspensos, ...lesionados, ...ausentes].map((x) => x.id));
   const penduradosIds = new Set(pendurados.map((x) => x.id));
-  const fla = provavelFlamengo(fora), adv = provavelAdversario(p);
+  const fla = provavelFlamengo(fora, voltam), adv = provavelAdversario(p);
   const campo = h("div", { class: "grafico" });
 
   // árbitro, momento, campanha na competição
@@ -138,7 +153,8 @@ export function secoesPreview(p) {
     h("div", { class: "bloco" }, h("h3", {}, "Prováveis escalações"),
       h("p", { class: "sutil" }, [
         fla ? `Flamengo: a do último jogo (${data(fla.base.data_utc)}, ${fla.base.adversario})` + (fla.trocas.length
-          ? `, trocando ${fla.trocas.map(([s, e]) => `${s} por ${e}`).join(", ")} (círculo tracejado)` : "")
+          ? `, trocando ${fla.trocas.map(([s, e, m]) => `${s} por ${e}${m ? ` (${m})` : ""}`).join(", ")}`
+            + (fla.trocas.some((t) => !t[2]) ? " (círculo tracejado = substituto provável)" : "") : "")
           + (penduradosIds.size ? "; dois cartões amarelos = pendurado" : "") : "Flamengo: sem escalação recente",
         adv?.linhas ? `${p.adversario}: a do último jogo (${data(adv.ultimo.data_utc)}, contra ${adv.ultimo.oponente})`
           : `${p.adversario}: escalação do último jogo ainda não baixada`].join(" · ")),
