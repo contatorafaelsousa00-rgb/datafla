@@ -477,6 +477,35 @@ def _placar(texto):
     return (int(m.group(1)), int(m.group(2))) if m else (None, None)
 
 
+def _eh_disputa(m: dict, ev: dict) -> bool:
+    """Cobrança da disputa de pênaltis (não é gol do jogo): a fonte manda como "Penalty" no minuto 120+."""
+    tem_disputa = ((m.get("state") or {}).get("score") or {}).get("penalties")
+    return bool(tem_disputa) and ev.get("type") in ("Penalty", "Missed Penalty") and (_minuto(ev.get("time"))[0] or 0) >= 120
+
+
+def _gols_pelos_lances(m: dict) -> tuple[int, int] | None:
+    """(casa, fora) contando os lances de gol (gol contra vem no time que se beneficiou); None sem lances de gol."""
+    gols = {m["homeTeam"]["id"]: 0, m["awayTeam"]["id"]: 0}
+    achou = False
+    for ev in m.get("events") or []:
+        if ev.get("type") in ("Goal", "Own Goal", "Penalty") and not _eh_disputa(m, ev):
+            tid = (ev.get("team") or {}).get("id")
+            if tid in gols:
+                gols[tid] += 1
+                achou = True
+    return (gols[m["homeTeam"]["id"]], gols[m["awayTeam"]["id"]]) if achou else None
+
+
+def placar(m: dict) -> tuple[int | None, int | None]:
+    """Placar (casa, fora). A fonte às vezes manda o placar com os lados trocados (ex.: "Madureira 3 - 0 Flamengo"
+    com os 3 gols do Flamengo nos lances): quando os lances dão exatamente o placar invertido, vale o dos lances."""
+    casa, fora = _placar(((m.get("state") or {}).get("score") or {}).get("current"))
+    pelos_lances = _gols_pelos_lances(m)
+    if casa is not None and casa != fora and pelos_lances == (fora, casa):
+        return fora, casa
+    return casa, fora
+
+
 def _minuto(texto):
     """'90+5' -> (90, 5); "17'" -> (17, None)."""
     m = re.match(r"\s*(\d+)(?:\s*\+\s*(\d+))?", str(texto or ""))
@@ -529,7 +558,7 @@ def _probabilidades(m: dict, nos: str):
 
 def linha_partida(m: dict, team_id: int) -> dict:
     nos, eles = _lados(m, team_id)
-    casa, fora = _placar(((m.get("state") or {}).get("score") or {}).get("current"))
+    casa, fora = placar(m)
     pen_casa, pen_fora = _placar(((m.get("state") or {}).get("score") or {}).get("penalties"))
     pro, contra = (casa, fora) if nos == "homeTeam" else (fora, casa)
     pen_pro, pen_contra = (pen_casa, pen_fora) if nos == "homeTeam" else (pen_fora, pen_casa)
@@ -601,14 +630,39 @@ def _bloqueadas_por_jogador(m: dict, time_id: int, jogadores: list[dict]) -> Cou
     return contagem
 
 
-def _corrigir_titulares(linhas: list[dict]) -> None:
-    """A fonte às vezes marca mais de 11 titulares; os que não jogaram nenhum minuto voltam a ser reservas."""
-    titulares = [l for l in linhas if l["titular"]]
-    if len(titulares) <= 11:
+def _completar_gols_pelos_lances(m: dict, time_id: int, linhas: list[dict]) -> None:
+    """Alguns box-scores vêm sem gols/assistências (ex.: Madureira 3 x 0 em 22/02). Se os lances têm mais gols do
+    que o box-score e todos os autores estão no box-score (mesmo id), os números dos jogadores vêm dos lances."""
+    lances = [ev for ev in m.get("events") or [] if ev.get("type") in ("Goal", "Penalty")
+              and (ev.get("team") or {}).get("id") == time_id and not _eh_disputa(m, ev)]
+    por_id = {l["jogador_id"]: l for l in linhas}
+    for campo, chave in (("gols", "playerId"), ("assistencias", "assistingPlayerId")):
+        autores = [ev.get(chave) for ev in lances if ev.get(chave)]
+        if sum(l[campo] or 0 for l in linhas) >= len(autores) or not all(a in por_id for a in autores):
+            continue
+        for l in linhas:
+            l[campo] = max(l[campo] or 0, autores.count(l["jogador_id"]))
+
+
+def _corrigir_titulares(linhas: list[dict], entraram: set | None = None, sairam: set | None = None) -> None:
+    """A fonte às vezes marca mais de 11 titulares (em jogos do time alternativo, todos os relacionados).
+    Volta para o banco, nesta ordem: quem entrou numa substituição; quem não jogou; e, se ainda sobrar,
+    quem jogou menos entre os que não saíram numa substituição (quem saiu começou jogando)."""
+    entraram, sairam = entraram or set(), sairam or set()
+    titulares = lambda: [l for l in linhas if l["titular"]]
+    if len(titulares()) <= 11:
         return
-    for l in titulares:
-        if not l["minutos"]:
+    for l in titulares():
+        if l["jogador_id"] in entraram:
+            l["titular"] = False
+    for l in titulares():
+        if len(titulares()) > 11 and not l["minutos"]:
             l["titular"], l["minutos"] = False, None
+    sobra = len(titulares()) - 11
+    if sobra > 0:
+        candidatos = sorted((l for l in titulares() if l["jogador_id"] not in sairam), key=lambda l: l["minutos"] or 0)
+        for l in candidatos[:sobra]:
+            l["titular"] = False
 
 
 def linhas_jogadores(m: dict, box: list, team_id: int) -> list[dict]:
@@ -617,6 +671,7 @@ def linhas_jogadores(m: dict, box: list, team_id: int) -> list[dict]:
         time_id = bloco["team"]["id"]
         do_time = []
         bloqueadas = _bloqueadas_por_jogador(m, time_id, bloco.get("players", []))
+        subs = [ev for ev in m.get("events") or [] if ev.get("type") == "Substitution" and (ev.get("team") or {}).get("id") == time_id]
         for p in bloco.get("players", []):
             st = p.get("statistics") or {}
             minutos = numero(p.get("minutesPlayed"))
@@ -664,7 +719,8 @@ def linhas_jogadores(m: dict, box: list, team_id: int) -> list[dict]:
                 "penaltis_marcados": numero(st.get("penaltiesScored")),
                 "penaltis_perdidos": numero(st.get("penaltiesMissed")),
             })
-        _corrigir_titulares(do_time)
+        _corrigir_titulares(do_time, {ev.get("assistingPlayerId") for ev in subs}, {ev.get("playerId") for ev in subs})
+        _completar_gols_pelos_lances(m, time_id, do_time)
         linhas += do_time
     return linhas
 
@@ -688,6 +744,8 @@ def linhas_eventos(m: dict, team_id: int) -> list[dict]:
     linhas = []
     for ordem, ev in enumerate(m.get("events") or []):
         tipo, detalhe = TIPOS_EVENTO.get(ev.get("type"), (ev.get("type"), None))
+        if _eh_disputa(m, ev):  # cobrança da disputa: fica nos lances, mas não conta como gol nem entra na linha do tempo
+            tipo, detalhe = "Shootout", "Scored" if ev.get("type") == "Penalty" else "Missed"
         minuto, extra = _minuto(ev.get("time"))
         sub = tipo == "subst"
         linhas.append({
@@ -766,7 +824,8 @@ def linhas_calendario(jogos: list[dict], team_id: int | None = None) -> list[dic
     team_id = team_id or config.TEAM_ID
     linhas = []
     for j in jogos:
-        p = linha_partida(j, team_id)
+        baixado = (ler_raw(f"partida_{j['id']}") or {}).get("match") or {}
+        p = linha_partida({**j, "events": baixado.get("events") or j.get("events")}, team_id)  # lances corrigem placar trocado
         linhas.append({k: p[k] for k in ("id_partida", "data_utc", "status", "competicao_id", "competicao", "competicao_logo",
                                           "rodada", "mando", "adversario_id", "adversario", "adversario_logo",
                                           "gols_pro", "gols_contra", "estadio")})

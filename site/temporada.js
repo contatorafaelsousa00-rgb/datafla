@@ -1,6 +1,6 @@
 // Aba Temporada: cartão do próximo jogo, indicadores e gráficos da temporada.
 import { barrasHorizontais, colunasDivergentes, conteudoDica, dica, linhas, serie } from "./graficos.js";
-import { $, assinado, bola, comDetalhe, compOk, confronto, contar, corComp, D, data, dataLonga, dicaJogo, ENCERRADO, escudo, estado, filtrados, h, iconeComp, kpi, media, mostrar, movel, NOME_RES, num, pct, pontos, pontosDe, resultado, rotuloMes, soma, tagComp, textoConfronto, vazio } from "./comum.js";
+import { $, assinado, bola, comDetalhe, compOk, confronto, contar, corComp, D, data, dataLonga, dicaJogo, ENCERRADO, escudo, estado, filtrados, h, iconeComp, kpi, media, mostrar, movel, NOME_RES, num, pct, pontos, pontosDe, preencher, resultado, rotuloMes, soma, tagComp, textoConfronto, vazio } from "./comum.js";
 import { abrirJogo, barraProbabilidade } from "./jogos.js";
 import { trocarAba } from "./app.js";
 
@@ -44,7 +44,7 @@ export function renderProximo() {
   const cont = h("span", { class: "proximo-contagem" }, contagem(p.data_utc));
   const local = p.estadio ? `${p.estadio}${p.cidade ? `, ${p.cidade}` : ""}` : null;
   const clima = p.clima ? `${CLIMA[p.clima] ?? p.clima}${p.temperatura != null ? `, ${num(p.temperatura, 0)} °C` : ""}` : null;
-  $("card-proximo").replaceChildren(
+  preencher($("card-proximo"),
     h("div", { class: "proximo-topo" }, h("span", { class: "proximo-rotulo" }, "Próximo jogo"), cont),
     h("div", { class: "proximo-confronto" }, lado(casa),
       h("div", { class: "proximo-meio" }, h("b", {}, horaBR(p.data_utc)), h("span", {}, diaBR(p.data_utc))), lado(fora)),
@@ -68,7 +68,7 @@ export function renderTemporada(js) {
   const gp = soma(js, (p) => p.gols_pro), gc = soma(js, (p) => p.gols_contra);
   const ult5 = js.slice(-5);
 
-  $("kpis").replaceChildren(
+  preencher($("kpis"),
     kpi("Aproveitamento", n ? pct(pontos(js) / (3 * n)) : "–", `${pontos(js)} pontos em ${n} jogos`, true),
     kpi("Campanha", `${contar(js, "V")}V ${contar(js, "E")}E ${contar(js, "D")}D`, "vitórias, empates e derrotas"),
     kpi("Gols", `${gp} × ${gc}`, `saldo ${assinado(gp - gc)} · ${num(n ? gp / n : null, 2)} por jogo`),

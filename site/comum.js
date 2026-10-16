@@ -59,6 +59,8 @@ export const tagComp = (c) => h("span", { class: "tag-comp" }, simboloComp(c), c
 export const escudo = (j) => h("span", { class: "time" },
   j.adversario_logo ? h("img", { src: j.adversario_logo, alt: "", loading: "lazy", width: 18, height: 18 }) : null, j.adversario);
 export const vazio = (texto) => h("p", { class: "vazio" }, texto);
+// replaceChildren escreve "null" na tela quando recebe null; aqui itens vazios (null, false) são ignorados
+export const preencher = (el, ...filhos) => el.replaceChildren(...filhos.flat().filter((f) => f !== null && f !== undefined && f !== false));
 
 // Regra do painel: todo placar ou xG de UM jogo aparece na ordem mandante × visitante, com os nomes.
 // (Somas da temporada continuam "a favor × contra", sempre rotuladas assim.)

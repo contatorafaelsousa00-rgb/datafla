@@ -107,6 +107,13 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   (`comum.js`: `mandanteVisitante`, `confronto`, `textoConfronto`). Somas da temporada ficam "a favor × contra", rotuladas.
 - Jogo clicado (disputado ou próximo) abre num modal (`#modal-jogo`, botão "Voltar para a lista"), não rola a página;
   links diretos `?aba=jogos&jogo=<id>` e `?aba=jogos&proximo=<id>`.
+- Correções da fonte (auditoria de 16/10/2026, `coleta/highlightly.py`): placar com lados trocados (Madureira 22/02 e
+  03/03, Lausanne 08/07) → `placar()` usa os lances de gol quando dão exatamente o placar invertido (campanha 31V 14E 14D →
+  34V 14E 11D); cobranças da disputa de pênaltis viram tipo `Shootout` (não contam como gol nem entram na linha do tempo);
+  mais de 11 titulares (Carioca de janeiro, time alternativo) → `_corrigir_titulares` usa substituições + minutos;
+  box-score sem gols/assistências → `_completar_gols_pelos_lances` (ids dos lances). Painel: `preencher()` em comum.js
+  evita "null" escrito na tela; lance sem nome mostra "jogador não informado". Restam limitações da fonte nos jogos
+  antigos do Carioca (box-score incompleto) e Atlético-MG 26/04 (um gol sem lance).
 - **Publicação**: só depois do Rafael validar no servidor local (`python scripts/servidor_local.py`, porta 8765) — pedido de 16/10/2026.
 - Próximos jogos (16/10/2026): aba Jogos com chave "Próximos jogos | Jogos disputados" (`?lista=`; `?jogo=<id>` abre o
   relatório). `coletar proximo` busca para os 3 próximos jogos (o 1º sempre; os demais só nas próximas 3 semanas), do mais

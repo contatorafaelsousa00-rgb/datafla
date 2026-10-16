@@ -1,6 +1,6 @@
 // Aba Jogadores: tabela por grupo de métricas, perfil (modal) e dispersões.
 import { colunas, conteudoDica, dica, dispersao, serie } from "./graficos.js";
-import { $, assinado, comDetalhe, corComp, D, dicaJogo, estado, filtrados, h, MIN_MINUTOS, mostrar, notaTag, num, pct, rotuloMes, soma, vazio } from "./comum.js";
+import { $, assinado, comDetalhe, corComp, D, dicaJogo, estado, filtrados, h, MIN_MINUTOS, mostrar, notaTag, num, pct, preencher, rotuloMes, soma, vazio } from "./comum.js";
 import { render } from "./app.js";
 
 // =====================================================================
@@ -183,7 +183,7 @@ export function renderPerfil(js, todos) {
   const caixa = $("detalhe-jogador");
   const a = todos.find((x) => x.id === estado.jogador);
   if (!a) {
-    caixa.replaceChildren(h("div", { class: "perfil-topo" }, h("p", { class: "cresce sutil" },
+    preencher(caixa, h("div", { class: "perfil-topo" }, h("p", { class: "cresce sutil" },
       "Esse jogador não entrou em campo nos jogos do filtro atual."),
       h("button", { class: "fechar", onclick: fecharJogador, "aria-label": "Fechar perfil" }, "×")));
     return;
@@ -210,7 +210,7 @@ export function renderPerfil(js, todos) {
   const participacoes = jogosDet.map((p) => [p, (D.jogadoresPorPartida.get(p.id_partida) ?? []).find((j) => j.jogador_id === a.id)]);
   const temNota = participacoes.some(([, j]) => j?.nota != null);
   const grafNota = h("div", { class: "grafico" }), grafMin = h("div", { class: "grafico" });
-  caixa.replaceChildren(
+  preencher(caixa,
     h("div", { class: "perfil-topo" },
       D.fotos.get(a.id)
         ? h("div", { class: "foto-jogador" }, h("img", { src: D.fotos.get(a.id), alt: `Foto de ${a.jogador}`, width: 88, height: 88,

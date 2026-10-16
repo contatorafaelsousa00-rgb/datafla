@@ -221,13 +221,38 @@ def test_chutes_bloqueados_entram_nas_finalizacoes_do_jogador():
 
 
 def test_titulares_a_mais_sem_minutos_voltam_para_o_banco():
-    linhas = [{"titular": True, "minutos": 90} for _ in range(11)] + [{"titular": True, "minutos": 0}]
+    linhas = [{"jogador_id": k, "titular": True, "minutos": 90} for k in range(11)] + [{"jogador_id": 99, "titular": True, "minutos": 0}]
     hl._corrigir_titulares(linhas)
     assert sum(l["titular"] for l in linhas) == 11 and linhas[-1]["minutos"] is None
-    normais = [{"titular": True, "minutos": 0}] + [{"titular": True, "minutos": 90} for _ in range(10)]
+    normais = [{"jogador_id": 0, "titular": True, "minutos": 0}] + [{"jogador_id": k, "titular": True, "minutos": 90} for k in range(1, 11)]
     hl._corrigir_titulares(normais)
     assert normais[0]["titular"]  # com 11 titulares nada muda (expulso no início, por exemplo)
 
+
+def test_titulares_a_mais_usa_substituicoes_e_minutos():
+    # time alternativo: a fonte marca todos como titulares (caso real do Carioca de janeiro)
+    linhas = [{"jogador_id": k, "titular": True, "minutos": 90} for k in range(9)]
+    linhas += [{"jogador_id": 20, "titular": True, "minutos": 61},   # saiu (começou jogando)
+               {"jogador_id": 21, "titular": True, "minutos": 82},
+               {"jogador_id": 30, "titular": True, "minutos": 47},   # entrou numa substituição
+               {"jogador_id": 31, "titular": True, "minutos": 17},   # entrou (sem lance de substituição)
+               {"jogador_id": 32, "titular": True, "minutos": 0}]    # não jogou
+    hl._corrigir_titulares(linhas, entraram={30}, sairam={20})
+    titulares = {l["jogador_id"] for l in linhas if l["titular"]}
+    assert titulares == set(range(9)) | {20, 21}
+
+
+def test_placar_trocado_pela_fonte_e_corrigido_pelos_lances():
+    gol = lambda tid, tipo="Goal", t="10'": {"type": tipo, "team": {"id": tid}, "time": t}
+    m = {"homeTeam": {"id": ADV}, "awayTeam": {"id": FLA},
+         "state": {"score": {"current": "3 - 0", "penalties": None}}, "events": [gol(FLA), gol(FLA), gol(FLA, "Penalty")]}
+    assert hl.placar(m) == (0, 3)
+    m["events"] = [gol(ADV), gol(ADV), gol(FLA, "Own Goal")]  # gol contra conta para quem se beneficiou
+    assert hl.placar(m) == (3, 0)
+    final = {"homeTeam": {"id": FLA}, "awayTeam": {"id": ADV}, "state": {"score": {"current": "0 - 0", "penalties": "5 - 4"}},
+             "events": [gol(FLA, "Penalty", "120+1'"), gol(ADV, "Missed Penalty", "120+2'")]}
+    assert hl.placar(final) == (0, 0)
+    assert [e["tipo"] for e in hl.linhas_eventos({**final, "id": 1, "events": [{**e, "team": {"id": FLA, "name": "x"}} for e in final["events"]]}, FLA)] == ["Shootout", "Shootout"]
 
 def test_historico_registra_jogos_novos_e_recoletados(tmp_path, monkeypatch):
     import json
@@ -243,3 +268,16 @@ def test_historico_registra_jogos_novos_e_recoletados(tmp_path, monkeypatch):
     assert item["origem"] == "disparo externo / manual" and item["motivo"].startswith("jogo contra")
     salvo = json.loads((tmp_path / hl.ARQ_HISTORICO).read_text(encoding="utf-8"))
     assert salvo == [item]
+
+
+def test_gols_e_assistencias_vem_dos_lances_quando_o_box_score_falha():
+    m = {"state": {"score": {"penalties": None}}, "events": [
+        {"type": "Goal", "team": {"id": FLA}, "playerId": 1, "assistingPlayerId": 2, "time": "10'"},
+        {"type": "Penalty", "team": {"id": FLA}, "playerId": 1, "time": "50'"},
+        {"type": "Goal", "team": {"id": ADV}, "playerId": 9, "time": "60'"}]}
+    linhas = [{"jogador_id": 1, "gols": 0, "assistencias": 0}, {"jogador_id": 2, "gols": 0, "assistencias": 0}]
+    hl._completar_gols_pelos_lances(m, FLA, linhas)
+    assert [(l["gols"], l["assistencias"]) for l in linhas] == [(2, 0), (0, 1)]
+    certo = [{"jogador_id": 1, "gols": 2, "assistencias": 0}, {"jogador_id": 2, "gols": 0, "assistencias": 1}]
+    hl._completar_gols_pelos_lances(m, FLA, certo)  # box-score completo: nada muda
+    assert [(l["gols"], l["assistencias"]) for l in certo] == [(2, 0), (0, 1)]

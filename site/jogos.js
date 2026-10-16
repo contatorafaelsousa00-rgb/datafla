@@ -1,6 +1,6 @@
 // Aba Jogos: lista e relatório de cada jogo.
 import { barrasEspelhadas, conteudoDica, dica, linhaTempo, mapaGol, serie } from "./graficos.js";
-import { $, bola, confronto, D, data, dataLonga, escudo, estado, h, mandanteVisitante, NOME_RES, notaTag, num, ORDEM_POS, pct, resultado, tagComp, vazio } from "./comum.js";
+import { $, bola, confronto, D, data, dataLonga, escudo, estado, h, mandanteVisitante, NOME_RES, notaTag, num, ORDEM_POS, pct, preencher, resultado, tagComp, vazio } from "./comum.js";
 import { abrirJogador } from "./jogadores.js";
 import { render } from "./app.js";
 import { CLIMA, futurosFiltrados, horaBR } from "./temporada.js";
@@ -68,7 +68,7 @@ function renderDetalheProximo(j, detalhe) {
       h("span", { class: "sutil" }, `${data(c.data_utc)}/${c.data_utc.slice(2, 4)} · ${c.competicao}`));
   };
 
-  caixa.replaceChildren(
+  preencher(caixa,
     h("div", { class: "placar" }, h("h2", {}, casa), h("span", { class: "gols" }, horaBR(p.data_utc)), h("h2", {}, fora)),
     h("p", { class: "sutil" }, [`${dataLonga(p.data_utc)} · ${horaBR(p.data_utc)} (${faltam(p.data_utc)})`, p.competicao, p.rodada,
       p.estadio ? `${p.estadio}${p.cidade ? `, ${p.cidade}` : ""}` : null, p.arbitro ? `Árbitro: ${p.arbitro}` : null, clima ? `Previsão do tempo: ${clima}` : null]
@@ -141,6 +141,7 @@ export function abrirJogo(id) {
   estado.lista = "disputados";
   const url = new URL(location); // link direto para o jogo: ?aba=jogos&jogo=<id>
   url.searchParams.set("jogo", id);
+  url.searchParams.set("lista", "disputados"); // URL coerente com o que está na tela
   url.searchParams.delete("proximo");
   history.replaceState(null, "", url);
   mostrarModalJogo(); // antes de desenhar: os gráficos medem a largura do modal
@@ -153,6 +154,7 @@ export function abrirProximo(id) {
   estado.lista = "proximos";
   const url = new URL(location); // link direto: ?aba=jogos&proximo=<id>
   url.searchParams.set("proximo", id);
+  url.searchParams.set("lista", "proximos");
   url.searchParams.delete("jogo");
   history.replaceState(null, "", url);
   mostrarModalJogo();
@@ -183,7 +185,7 @@ export const STATS_JOGO = [["xg", "xG", (v) => num(v, 2)], ["xa", "xA", (v) => n
   ["interceptacoes", "Interceptações"], ["duelos_aereos_ganhos", "Duelos aéreos ganhos"], ["dribles_certos", "Dribles certos"],
   ["defesas", "Defesas do goleiro"], ["escanteios", "Escanteios"], ["faltas", "Faltas"], ["impedimentos", "Impedimentos"],
   ["amarelos", "Amarelos"], ["vermelhos", "Vermelhos"]];
-export const NOME_EVENTO = { Goal: "Gol", Card: "Cartão", subst: "Substituição", Var: "VAR" };
+export const NOME_EVENTO = { Goal: "Gol", Card: "Cartão", subst: "Substituição", Var: "VAR", Shootout: "Pênalti na disputa" };
 export const NOME_CARTAO = { "Yellow Card": "Amarelo", "Second Yellow card": "Segundo amarelo", "Red Card": "Vermelho" };
 export const NOME_CHUTE = { Saved: "defendida", Missed: "para fora", Blocked: "bloqueada", Post: "na trave", Goal: "gol" };
 
@@ -242,7 +244,7 @@ export function renderDetalheJogo(js) {
       p.temperatura != null ? `${num(p.temperatura, 0)} °C` : null, p.formacao ? `Formação ${p.formacao}` : null].filter(Boolean).join(" · ")),
   ];
   if (!p.detalhe) {
-    caixa.replaceChildren(...cabecalho, vazio("Os detalhes deste jogo ainda não foram baixados; entram na próxima coleta."));
+    preencher(caixa, ...cabecalho, vazio("Os detalhes deste jogo ainda não foram baixados; entram na próxima coleta."));
     return;
   }
   const st = D.stats.get(p.id_partida) ?? { fla: {}, adv: {} };
@@ -268,7 +270,7 @@ export function renderDetalheJogo(js) {
   const grafStats = h("div", { class: "grafico" }), tempo = h("div", { class: "grafico" });
   const golFla = h("div"), golAdv = h("div");
 
-  caixa.replaceChildren(
+  preencher(caixa,
     ...cabecalho,
     barraProbabilidade(p) ?? "",
     marcas.length ? h("div", { class: "bloco" }, h("h3", {}, "Linha do tempo"),
@@ -285,8 +287,8 @@ export function renderDetalheJogo(js) {
             h("span", { class: "min" }, `${e.minuto}${e.acrescimo ? "+" + e.acrescimo : ""}'`),
             h("span", { class: `ev ev-${e.tipo === "Card" ? (e.detalhe === "Yellow Card" ? "amarelo" : "vermelho") : e.tipo}` }),
             h("span", {}, `${e.tipo === "Card" ? NOME_CARTAO[e.detalhe] ?? "Cartão" : NOME_EVENTO[e.tipo] ?? e.tipo}: `,
-              e.jogador ?? "", e.tipo === "subst" && e.assist ? ` ⇄ ${e.assist}` : "",
-              e.tipo === "Goal" && e.assist ? ` (assist. ${e.assist})` : "", e.eh_flamengo ? "" : ` · ${p.adversario}`))))
+              e.jogador || h("span", { class: "sutil" }, "jogador não informado"), e.tipo === "subst" && e.assist ? ` ⇄ ${e.assist}` : "",
+              e.tipo === "Goal" && e.assist ? ` (assist. ${e.assist})` : "", e.tipo === "Shootout" ? (e.detalhe === "Scored" ? " · convertido" : " · perdido") : "", e.eh_flamengo ? "" : ` · ${p.adversario}`))))
         : vazio("Sem lances na fonte."))),
     chutes.length ? h("div", { class: "detalhe-grade" },
       h("div", {}, h("h3", {}, "Finalizações do Flamengo"), golFla),

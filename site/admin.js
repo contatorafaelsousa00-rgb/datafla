@@ -2,7 +2,7 @@
 // Carregada só quando alguém abre a entrada escondida no canto do topo (ou o link #admin).
 // Login com a conta Google pelo Firebase Authentication. Esconder a entrada não é a proteção:
 // quem protege os dados são as regras do Firestore, que só deixam a conta do dono ler (firestore.rules).
-import { $, D, data, dataLonga, ENCERRADO, h, num, pct } from "./comum.js";
+import { $, D, data, dataLonga, ENCERRADO, h, num, pct, preencher } from "./comum.js";
 import { horaBR } from "./temporada.js";
 import { barrasHorizontais, colunas, conteudoDica } from "./graficos.js";
 import { ABAS_CONTADAS, hojeBR } from "./acessos.js";
@@ -105,7 +105,7 @@ async function mostrarPainel(usuario) {
   try { localStorage.setItem("datafla-admin", "1"); } catch {} // este navegador deixa de contar acessos
 
   const visto = Number(localStorage.getItem("datafla-admin-visto") || 0);
-  corpo().replaceChildren(
+  preencher(corpo(),
     h("div", { class: "admin-topo" },
       h("div", {}, h("h2", {}, "Administração"), h("p", { class: "sutil" }, usuario.email)),
       h("div", { class: "acoes" }, botao("Atualizar", () => mostrarPainel(usuario)), botao("Sair", sair), botao("Fechar", fechar))),
