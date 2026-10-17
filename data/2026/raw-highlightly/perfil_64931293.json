@@ -1,0 +1,59 @@
+{
+ "data": [
+  {
+   "id": 64931293,
+   "logo": null,
+   "name": "Daniel Sales",
+   "fullName": "Daniel dos Santos Sales",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo U20",
+     "joinedAt": "01/01/2023",
+     "contractExpiry": "31/12/2028",
+     "latestContractExtension": "31/12/2024"
+    },
+    "foot": "right",
+    "height": "1,77 m",
+    "fullName": "Daniel dos Santos Sales",
+    "position": {
+     "main": "Right-Back",
+     "secondary": "Left-Back"
+    },
+    "birthDate": "23/06/2006",
+    "deathDate": null,
+    "birthPlace": "Jaciara",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Göztepe",
+      "rumourDate": "14/07/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Porto",
+      "rumourDate": "11/07/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": []
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2023"
+    }
+   ],
+   "marketValue": [],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-17T03:01:37.103908+00:00"
+}

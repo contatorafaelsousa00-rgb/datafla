@@ -1,1 +1,399 @@
-{"data": {"venue": {"city": "Salvador", "name": "Arena Fonte Nova", "country": "Brazil", "capacity": "48000"}, "referee": {"name": "Pereira Sampaio, Wilton", "nationality": "Brazil"}, "forecast": {"status": "cloudy", "temperature": "27.13°C"}, "events": [], "predictions": {"live": [], "prematch": [{"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-11T15:52:27.735Z", "probabilities": {"away": "40.24%", "draw": "26.93%", "home": "32.83%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-11T20:13:16.691Z", "probabilities": {"away": "40.24%", "draw": "26.93%", "home": "32.83%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-12T09:08:40.877Z", "probabilities": {"away": "45.82%", "draw": "25.68%", "home": "28.50%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-12T12:31:06.666Z", "probabilities": {"away": "45.90%", "draw": "25.66%", "home": "28.43%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-12T16:00:26.829Z", "probabilities": {"away": "45.89%", "draw": "25.70%", "home": "28.41%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-12T19:43:55.186Z", "probabilities": {"away": "45.89%", "draw": "25.71%", "home": "28.40%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-13T09:20:49.934Z", "probabilities": {"away": "45.64%", "draw": "25.64%", "home": "28.73%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-13T12:54:44.203Z", "probabilities": {"away": "45.56%", "draw": "25.63%", "home": "28.80%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-13T16:36:46.765Z", "probabilities": {"away": "45.56%", "draw": "25.64%", "home": "28.80%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-13T20:31:03.439Z", "probabilities": {"away": "45.61%", "draw": "25.59%", "home": "28.80%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-14T09:41:21.307Z", "probabilities": {"away": "45.68%", "draw": "25.60%", "home": "28.71%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-14T13:27:20.808Z", "probabilities": {"away": "45.63%", "draw": "25.63%", "home": "28.74%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-14T17:19:55.314Z", "probabilities": {"away": "45.68%", "draw": "25.61%", "home": "28.71%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-14T21:17:57.909Z", "probabilities": {"away": "45.71%", "draw": "25.62%", "home": "28.67%"}}, {"type": "prematch", "modelType": "three-way", "description": "Flamengo is most likely to win the game against Bahia.", "generatedAt": "2026-10-15T10:28:15.817Z", "probabilities": {"away": "45.67%", "draw": "25.62%", "home": "28.71%"}}]}, "statistics": [{"statistics": [], "team": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia"}}, {"statistics": [], "team": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo"}}], "id": 1270043396, "round": "Regular Season - 31", "date": "2026-10-18T21:30:00.000Z", "country": {"code": "BR", "name": "Brazil", "logo": "https://highlightly.net/soccer/images/countries/BR.svg"}, "state": {"clock": null, "score": {"current": null, "penalties": null}, "description": "Not started"}, "awayTeam": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo", "topPlayers": [{"position": "Attacker", "name": "Pedro", "statistics": [{"name": "Goals", "value": 16}, {"name": "Assists", "value": 6}, {"name": "Appearances", "value": 30}]}, {"position": "Midfielder", "name": "Samuel Lino", "statistics": [{"name": "Goals", "value": 9}, {"name": "Assists", "value": 7}, {"name": "Appearances", "value": 29}]}, {"position": "Defender", "name": "Leo Pereira", "statistics": [{"name": "Tackles", "value": 0.6}, {"name": "Yellow:Red", "value": "6 : 0"}, {"name": "Appearances", "value": 25}]}], "shots": []}, "homeTeam": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia", "topPlayers": [{"position": "Attacker", "name": "Erick Pulga", "statistics": [{"name": "Goals", "value": 3}, {"name": "Assists", "value": 2}, {"name": "Appearances", "value": 29}]}, {"position": "Midfielder", "name": "Jean Lucas", "statistics": [{"name": "Goals", "value": 4}, {"name": "Assists", "value": 3}, {"name": "Appearances", "value": 26}]}, {"position": "Defender", "name": "David Duarte", "statistics": [{"name": "Tackles", "value": 0.7}, {"name": "Yellow:Red", "value": "4 : 0"}, {"name": "Appearances", "value": 23}]}], "shots": []}, "league": {"id": 61205, "logo": "https://highlightly.net/soccer/images/leagues/61205.png", "name": "Serie A", "season": 2026}, "news": []}, "_coletado_em": "2026-10-16T02:46:00.130751+00:00"}
+{
+ "data": {
+  "venue": {
+   "city": "Salvador",
+   "name": "Arena Fonte Nova",
+   "country": "Brazil",
+   "capacity": "48000"
+  },
+  "referee": {
+   "name": "Pereira Sampaio, Wilton",
+   "nationality": "Brazil"
+  },
+  "forecast": {
+   "status": "cloudy",
+   "temperature": "26.88°C"
+  },
+  "events": [],
+  "predictions": {
+   "live": [],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-11T15:52:27.735Z",
+     "probabilities": {
+      "away": "40.24%",
+      "draw": "26.93%",
+      "home": "32.83%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-11T20:13:16.691Z",
+     "probabilities": {
+      "away": "40.24%",
+      "draw": "26.93%",
+      "home": "32.83%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-12T09:08:40.877Z",
+     "probabilities": {
+      "away": "45.82%",
+      "draw": "25.68%",
+      "home": "28.50%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-12T12:31:06.666Z",
+     "probabilities": {
+      "away": "45.90%",
+      "draw": "25.66%",
+      "home": "28.43%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-12T16:00:26.829Z",
+     "probabilities": {
+      "away": "45.89%",
+      "draw": "25.70%",
+      "home": "28.41%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-12T19:43:55.186Z",
+     "probabilities": {
+      "away": "45.89%",
+      "draw": "25.71%",
+      "home": "28.40%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-13T09:20:49.934Z",
+     "probabilities": {
+      "away": "45.64%",
+      "draw": "25.64%",
+      "home": "28.73%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-13T12:54:44.203Z",
+     "probabilities": {
+      "away": "45.56%",
+      "draw": "25.63%",
+      "home": "28.80%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-13T16:36:46.765Z",
+     "probabilities": {
+      "away": "45.56%",
+      "draw": "25.64%",
+      "home": "28.80%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-13T20:31:03.439Z",
+     "probabilities": {
+      "away": "45.61%",
+      "draw": "25.59%",
+      "home": "28.80%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-14T09:41:21.307Z",
+     "probabilities": {
+      "away": "45.68%",
+      "draw": "25.60%",
+      "home": "28.71%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-14T13:27:20.808Z",
+     "probabilities": {
+      "away": "45.63%",
+      "draw": "25.63%",
+      "home": "28.74%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-14T17:19:55.314Z",
+     "probabilities": {
+      "away": "45.68%",
+      "draw": "25.61%",
+      "home": "28.71%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-14T21:17:57.909Z",
+     "probabilities": {
+      "away": "45.71%",
+      "draw": "25.62%",
+      "home": "28.67%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-15T10:28:15.817Z",
+     "probabilities": {
+      "away": "45.67%",
+      "draw": "25.62%",
+      "home": "28.71%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-16T09:00:20.117Z",
+     "probabilities": {
+      "away": "45.67%",
+      "draw": "25.62%",
+      "home": "28.71%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-16T13:13:49.254Z",
+     "probabilities": {
+      "away": "45.64%",
+      "draw": "25.63%",
+      "home": "28.73%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-16T17:43:52.347Z",
+     "probabilities": {
+      "away": "45.65%",
+      "draw": "25.65%",
+      "home": "28.70%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-16T22:25:45.713Z",
+     "probabilities": {
+      "away": "45.65%",
+      "draw": "25.64%",
+      "home": "28.71%"
+     }
+    }
+   ]
+  },
+  "statistics": [
+   {
+    "statistics": [],
+    "team": {
+     "id": 101202,
+     "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+     "name": "Bahia"
+    }
+   },
+   {
+    "statistics": [],
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    }
+   }
+  ],
+  "id": 1270043396,
+  "round": "Regular Season - 31",
+  "date": "2026-10-18T21:30:00.000Z",
+  "country": {
+   "code": "BR",
+   "name": "Brazil",
+   "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+  },
+  "state": {
+   "clock": null,
+   "score": {
+    "current": null,
+    "penalties": null
+   },
+   "description": "Not started"
+  },
+  "awayTeam": {
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo",
+   "topPlayers": [
+    {
+     "position": "Attacker",
+     "name": "Pedro",
+     "statistics": [
+      {
+       "name": "Goals",
+       "value": 16
+      },
+      {
+       "name": "Assists",
+       "value": 6
+      },
+      {
+       "name": "Appearances",
+       "value": 30
+      }
+     ]
+    },
+    {
+     "position": "Midfielder",
+     "name": "Samuel Lino",
+     "statistics": [
+      {
+       "name": "Goals",
+       "value": 9
+      },
+      {
+       "name": "Assists",
+       "value": 7
+      },
+      {
+       "name": "Appearances",
+       "value": 29
+      }
+     ]
+    },
+    {
+     "position": "Defender",
+     "name": "Leo Pereira",
+     "statistics": [
+      {
+       "name": "Tackles",
+       "value": 0.6
+      },
+      {
+       "name": "Yellow:Red",
+       "value": "6 : 0"
+      },
+      {
+       "name": "Appearances",
+       "value": 25
+      }
+     ]
+    }
+   ],
+   "shots": []
+  },
+  "homeTeam": {
+   "id": 101202,
+   "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+   "name": "Bahia",
+   "topPlayers": [
+    {
+     "position": "Attacker",
+     "name": "Erick Pulga",
+     "statistics": [
+      {
+       "name": "Goals",
+       "value": 3
+      },
+      {
+       "name": "Assists",
+       "value": 2
+      },
+      {
+       "name": "Appearances",
+       "value": 29
+      }
+     ]
+    },
+    {
+     "position": "Midfielder",
+     "name": "Jean Lucas",
+     "statistics": [
+      {
+       "name": "Goals",
+       "value": 4
+      },
+      {
+       "name": "Assists",
+       "value": 3
+      },
+      {
+       "name": "Appearances",
+       "value": 26
+      }
+     ]
+    },
+    {
+     "position": "Defender",
+     "name": "David Duarte",
+     "statistics": [
+      {
+       "name": "Tackles",
+       "value": 0.7
+      },
+      {
+       "name": "Yellow:Red",
+       "value": "4 : 0"
+      },
+      {
+       "name": "Appearances",
+       "value": 23
+      }
+     ]
+    }
+   ],
+   "shots": []
+  },
+  "league": {
+   "id": 61205,
+   "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+   "name": "Serie A",
+   "season": 2026
+  },
+  "news": []
+ },
+ "_coletado_em": "2026-10-17T03:01:00.592986+00:00"
+}

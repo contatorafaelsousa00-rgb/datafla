@@ -1,0 +1,319 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "5-3-2",
+   "substitutes": [
+    {
+     "name": "R. Briones",
+     "number": 16,
+     "position": "Midfielder",
+     "id": 29771630
+    },
+    {
+     "name": "J. Espinoza",
+     "number": 4,
+     "position": "Defender",
+     "id": 2661162
+    },
+    {
+     "name": "J. Méndez",
+     "number": 32,
+     "position": "Midfielder",
+     "id": 415695
+    },
+    {
+     "name": "Y. Ochoa",
+     "number": 8,
+     "position": "Midfielder",
+     "id": 57147909
+    },
+    {
+     "name": "M. Perelló",
+     "number": 11,
+     "position": "Forward",
+     "id": 50127021
+    },
+    {
+     "name": "E. Quintero",
+     "number": 56,
+     "position": "Midfielder",
+     "id": 105290934
+    },
+    {
+     "name": "D. Reasco",
+     "number": 99,
+     "position": "Forward",
+     "id": 2653434
+    },
+    {
+     "name": "Andy René Velasco García",
+     "number": 33,
+     "position": "Defender",
+     "id": 50202530
+    },
+    {
+     "name": "Juan Viacava",
+     "number": 23,
+     "position": "Defender",
+     "id": null
+    },
+    {
+     "name": "G. Cortéz",
+     "number": 15,
+     "position": "Defender",
+     "id": 2638783
+    },
+    {
+     "name": "M. Peralta",
+     "number": 70,
+     "position": "Goalkeeper",
+     "id": 103481616
+    },
+    {
+     "name": "Y. Vásquez",
+     "number": 52,
+     "position": "Forward",
+     "id": 72313465
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "A. Quintana",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 2130989
+     }
+    ],
+    [
+     {
+      "name": "L. Loor",
+      "number": 19,
+      "position": "Defender",
+      "id": 57045352
+     },
+     {
+      "name": "R. Schunke",
+      "number": 5,
+      "position": "Defender",
+      "id": 2633953
+     },
+     {
+      "name": "M. Carabajal",
+      "number": 14,
+      "position": "Defender",
+      "id": 836710
+     },
+     {
+      "name": "Daykol Alejandro Romero Padilla",
+      "number": 13,
+      "position": "Defender",
+      "id": 44786168
+     },
+     {
+      "name": "A. Rodríguez",
+      "number": 17,
+      "position": "Defender",
+      "id": 26881841
+     }
+    ],
+    [
+     {
+      "name": "Emerson Ivan Pata Rodríguez",
+      "number": 31,
+      "position": "Midfielder",
+      "id": 56992383
+     },
+     {
+      "name": "J. Alcívar",
+      "number": 6,
+      "position": "Midfielder",
+      "id": 2651824
+     },
+     {
+      "name": "H. Quintana",
+      "number": 28,
+      "position": "Midfielder",
+      "id": 11393802
+     }
+    ],
+    [
+     {
+      "name": "J. Sornoza",
+      "number": 10,
+      "position": "Forward",
+      "id": 1650726
+     },
+     {
+      "name": "C. González",
+      "number": 9,
+      "position": "Forward",
+      "id": 405552
+     }
+    ]
+   ],
+   "id": 981987,
+   "logo": "https://highlightly.net/soccer/images/teams/981987.png",
+   "name": "Independiente del Valle"
+  },
+  "awayTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "N. de la Cruz",
+     "number": 18,
+     "position": "Midfielder",
+     "id": 965349
+    },
+    {
+     "name": "Lucas Paquetá",
+     "number": 20,
+     "position": "Midfielder",
+     "id": 265160
+    },
+    {
+     "name": "Pedro",
+     "number": 9,
+     "position": "Forward",
+     "id": 1661835
+    },
+    {
+     "name": "Saúl",
+     "number": 8,
+     "position": "Midfielder",
+     "id": 7882
+    },
+    {
+     "name": "A. Valencia",
+     "number": 14,
+     "position": "Forward",
+     "id": 31934021
+    },
+    {
+     "name": "G. Varela",
+     "number": 2,
+     "position": "Defender",
+     "id": 207844
+    },
+    {
+     "name": "Vitão",
+     "number": 44,
+     "position": "Defender",
+     "id": 1595503
+    },
+    {
+     "name": "Andrew",
+     "number": 42,
+     "position": "Goalkeeper",
+     "id": 12965162
+    },
+    {
+     "name": "G. Plata",
+     "number": 19,
+     "position": "Forward",
+     "id": 2635563
+    },
+    {
+     "name": "J. Freitas",
+     "number": 30,
+     "position": "Forward",
+     "id": 90210708
+    },
+    {
+     "name": "Luiz Araújo",
+     "number": 7,
+     "position": "Forward",
+     "id": 3580472
+    },
+    {
+     "name": "Danilo",
+     "number": 13,
+     "position": "Defender",
+     "id": 99652
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "A. Rossi",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 1892870
+     }
+    ],
+    [
+     {
+      "name": "Ayrton Lucas",
+      "number": 6,
+      "position": "Defender",
+      "id": 285285
+     },
+     {
+      "name": "Léo Pereira",
+      "number": 4,
+      "position": "Defender",
+      "id": 1630118
+     },
+     {
+      "name": "Léo Ortiz",
+      "number": 3,
+      "position": "Defender",
+      "id": 1522892
+     },
+     {
+      "name": "Emerson Royal",
+      "number": 22,
+      "position": "Defender",
+      "id": 252280
+     }
+    ],
+    [
+     {
+      "name": "Jorginho",
+      "number": 21,
+      "position": "Midfielder",
+      "id": 368683
+     },
+     {
+      "name": "E. Pulgar",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 412314
+     }
+    ],
+    [
+     {
+      "name": "Samuel Lino",
+      "number": 16,
+      "position": "Midfielder",
+      "id": 20436850
+     },
+     {
+      "name": "G. de Arrascaeta",
+      "number": 10,
+      "position": "Midfielder",
+      "id": 420686
+     },
+     {
+      "name": "J. Carrascal",
+      "number": 15,
+      "position": "Midfielder",
+      "id": 965188
+     }
+    ],
+    [
+     {
+      "name": "Bruno Henrique",
+      "number": 27,
+      "position": "Forward",
+      "id": 1639134
+     }
+    ]
+   ],
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo"
+  }
+ },
+ "_coletado_em": "2026-10-17T03:01:24.099985+00:00"
+}

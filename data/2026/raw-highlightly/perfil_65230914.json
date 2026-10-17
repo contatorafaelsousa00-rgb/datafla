@@ -1,0 +1,153 @@
+{
+ "data": [
+  {
+   "id": 65230914,
+   "logo": null,
+   "name": "Wallace",
+   "fullName": "Wallace Yan de Souza Barreto",
+   "profile": {
+    "club": {
+     "current": "Red Bull Bragantino",
+     "joinedAt": "02/09/2026",
+     "contractExpiry": "31/08/2031",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,82 m",
+    "fullName": "Wallace Yan de Souza Barreto",
+    "position": {
+     "main": "Centre-Forward",
+     "secondary": "Attacking Midfield, Second Striker"
+    },
+    "birthDate": "08/02/2005",
+    "deathDate": null,
+    "birthPlace": "Rio de Janeiro",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Red Bull Bragantino",
+      "rumourDate": "15/01/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Red Bull Bragantino",
+      "rumourDate": "15/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Wolverhampton Wanderers",
+      "rumourDate": "07/07/2025",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "RB Bragantino",
+     "fee": "€6.00M",
+     "from": "Flamengo",
+     "type": "transfer",
+     "season": "26/27",
+     "marketValue": "€5.00M",
+     "transferDate": "Sep 2, 2026"
+    },
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Flamengo U20",
+     "type": "transfer",
+     "season": "24/25",
+     "marketValue": null,
+     "transferDate": "Jan 30, 2025"
+    },
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Ferroviária U20",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2023"
+    },
+    {
+     "to": "Ferroviária U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "end of loan",
+     "season": "22/23",
+     "marketValue": null,
+     "transferDate": "Dec 31, 2022"
+    },
+    {
+     "to": "Flamengo U17",
+     "fee": null,
+     "from": "Ferroviária U20",
+     "type": "loan",
+     "season": "22/23",
+     "marketValue": null,
+     "transferDate": "Aug 1, 2022"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 21,
+     "club": "Red Bull Bragantino",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "28/09/2026"
+    },
+    {
+     "age": 21,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 20,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 20,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "05/09/2025"
+    },
+    {
+     "age": 20,
+     "club": "CR Flamengo",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 20,
+     "club": "CR Flamengo",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "28/03/2025"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Muscular problems",
+     "season": "2026",
+     "toDate": "01.03.2026",
+     "fromDate": "11.02.2026",
+     "missedGames": 4,
+     "absentDurationInDays": 19
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-17T03:01:34.309059+00:00"
+}

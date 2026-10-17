@@ -101,5 +101,23 @@
   "requisicoes": 39,
   "cota_restante": 61,
   "erro": null
+ },
+ {
+  "quando": "2026-10-17T03:02:42+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "atualização diária (última coleta há 24 h)",
+  "novos": [],
+  "recoletados": [
+   {
+    "adversario": "Estudiantes de La Plata",
+    "data_utc": "2026-10-16T00:30:00.000Z",
+    "competicao": "CONMEBOL Libertadores"
+   }
+  ],
+  "encerrados": 59,
+  "pendentes": 0,
+  "requisicoes": 67,
+  "cota_restante": 33,
+  "erro": null
  }
 ]

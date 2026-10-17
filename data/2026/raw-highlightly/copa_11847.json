@@ -3399,8 +3399,1843 @@
     "name": "CONMEBOL Libertadores",
     "season": 2026
    }
+  },
+  {
+   "id": 1306501938,
+   "round": "Group Stage - 2",
+   "date": "2026-04-15T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2548678,
+    "logo": "https://highlightly.net/soccer/images/teams/2548678.png",
+    "name": "Universidad Católica"
+   },
+   "homeTeam": {
+    "id": 115669,
+    "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+    "name": "Cruzeiro"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306511299,
+   "round": "Group Stage - 2",
+   "date": "2026-04-15T02:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1983614,
+    "logo": "https://highlightly.net/soccer/images/teams/1983614.png",
+    "name": "Coquimbo Unido"
+   },
+   "homeTeam": {
+    "id": 2162324,
+    "logo": "https://highlightly.net/soccer/images/teams/2162324.png",
+    "name": "Universitario"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306507044,
+   "round": "Group Stage - 2",
+   "date": "2026-04-15T02:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6679432,
+    "logo": "https://highlightly.net/soccer/images/teams/6679432.png",
+    "name": "Mirassol"
+   },
+   "homeTeam": {
+    "id": 986242,
+    "logo": "https://highlightly.net/soccer/images/teams/986242.png",
+    "name": "LDU Quito"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306499385,
+   "round": "Group Stage - 2",
+   "date": "2026-04-15T00:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2394647,
+    "logo": "https://highlightly.net/soccer/images/teams/2394647.png",
+    "name": "Real Esppor Club"
+   },
+   "homeTeam": {
+    "id": 3151186,
+    "logo": "https://highlightly.net/soccer/images/teams/3151186.png",
+    "name": "Bolívar"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306498534,
+   "round": "Group Stage - 2",
+   "date": "2026-04-15T00:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 981136,
+    "logo": "https://highlightly.net/soccer/images/teams/981136.png",
+    "name": "Barcelona SC"
+   },
+   "homeTeam": {
+    "id": 384585,
+    "logo": "https://highlightly.net/soccer/images/teams/384585.png",
+    "name": "Boca Juniors"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306508746,
+   "round": "Group Stage - 2",
+   "date": "2026-04-14T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 972626,
+    "logo": "https://highlightly.net/soccer/images/teams/972626.png",
+    "name": "Deportes Tolima"
+   },
+   "homeTeam": {
+    "id": 2005740,
+    "logo": "https://highlightly.net/soccer/images/teams/2005740.png",
+    "name": "Club Nacional"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306502789,
+   "round": "Group Stage - 2",
+   "date": "2026-04-14T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 8521847,
+    "logo": "https://highlightly.net/soccer/images/teams/8521847.png",
+    "name": "Cusco"
+   },
+   "homeTeam": {
+    "id": 383734,
+    "logo": "https://highlightly.net/soccer/images/teams/383734.png",
+    "name": "Estudiantes de La Plata"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306500236,
+   "round": "Group Stage - 2",
+   "date": "2026-04-14T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 966669,
+    "logo": "https://highlightly.net/soccer/images/teams/966669.png",
+    "name": "Junior"
+   },
+   "homeTeam": {
+    "id": 1001560,
+    "logo": "https://highlightly.net/soccer/images/teams/1001560.png",
+    "name": "Cerro Porteño"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306495130,
+   "round": "Group Stage - 1",
+   "date": "2026-04-10T02:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1998932,
+    "logo": "https://highlightly.net/soccer/images/teams/1998932.png",
+    "name": "Peñarol Montevideo"
+   },
+   "homeTeam": {
+    "id": 970073,
+    "logo": "https://highlightly.net/soccer/images/teams/970073.png",
+    "name": "Santa Fe"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306493428,
+   "round": "Group Stage - 1",
+   "date": "2026-04-10T00:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 112265,
+    "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+    "name": "Corinthians"
+   },
+   "homeTeam": {
+    "id": 906248,
+    "logo": "https://highlightly.net/soccer/images/teams/906248.png",
+    "name": "Platense"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306497683,
+   "round": "Group Stage - 1",
+   "date": "2026-04-09T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1004113,
+    "logo": "https://highlightly.net/soccer/images/teams/1004113.png",
+    "name": "Libertad Asunción"
+   },
+   "homeTeam": {
+    "id": 2417624,
+    "logo": "https://highlightly.net/soccer/images/teams/2417624.png",
+    "name": "UCV"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306494279,
+   "round": "Group Stage - 1",
+   "date": "2026-04-09T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 981987,
+    "logo": "https://highlightly.net/soccer/images/teams/981987.png",
+    "name": "Independiente del Valle"
+   },
+   "homeTeam": {
+    "id": 372671,
+    "logo": "https://highlightly.net/soccer/images/teams/372671.png",
+    "name": "Rosario Central"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306495981,
+   "round": "Group Stage - 1",
+   "date": "2026-04-09T02:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1001560,
+    "logo": "https://highlightly.net/soccer/images/teams/1001560.png",
+    "name": "Cerro Porteño"
+   },
+   "homeTeam": {
+    "id": 2167430,
+    "logo": "https://highlightly.net/soccer/images/teams/2167430.png",
+    "name": "Sporting Cristal"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306490875,
+   "round": "Group Stage - 1",
+   "date": "2026-04-09T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "homeTeam": {
+    "id": 966669,
+    "logo": "https://highlightly.net/soccer/images/teams/966669.png",
+    "name": "Junior"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306487471,
+   "round": "Group Stage - 1",
+   "date": "2026-04-09T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 8521847,
+    "logo": "https://highlightly.net/soccer/images/teams/8521847.png",
+    "name": "Cusco"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306489173,
+   "round": "Group Stage - 1",
+   "date": "2026-04-09T00:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 383734,
+    "logo": "https://highlightly.net/soccer/images/teams/383734.png",
+    "name": "Estudiantes de La Plata"
+   },
+   "homeTeam": {
+    "id": 960712,
+    "logo": "https://highlightly.net/soccer/images/teams/960712.png",
+    "name": "Independiente Medellin"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306492577,
+   "round": "Group Stage - 1",
+   "date": "2026-04-08T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 380330,
+    "logo": "https://highlightly.net/soccer/images/teams/380330.png",
+    "name": "Lanús"
+   },
+   "homeTeam": {
+    "id": 6679432,
+    "logo": "https://highlightly.net/soccer/images/teams/6679432.png",
+    "name": "Mirassol"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306486620,
+   "round": "Group Stage - 1",
+   "date": "2026-04-08T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2005740,
+    "logo": "https://highlightly.net/soccer/images/teams/2005740.png",
+    "name": "Club Nacional"
+   },
+   "homeTeam": {
+    "id": 1983614,
+    "logo": "https://highlightly.net/soccer/images/teams/1983614.png",
+    "name": "Coquimbo Unido"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306488322,
+   "round": "Group Stage - 1",
+   "date": "2026-04-08T02:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2162324,
+    "logo": "https://highlightly.net/soccer/images/teams/2162324.png",
+    "name": "Universitario"
+   },
+   "homeTeam": {
+    "id": 972626,
+    "logo": "https://highlightly.net/soccer/images/teams/972626.png",
+    "name": "Deportes Tolima"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306496832,
+   "round": "Group Stage - 1",
+   "date": "2026-04-08T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 384585,
+    "logo": "https://highlightly.net/soccer/images/teams/384585.png",
+    "name": "Boca Juniors"
+   },
+   "homeTeam": {
+    "id": 2548678,
+    "logo": "https://highlightly.net/soccer/images/teams/2548678.png",
+    "name": "Universidad Católica"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306485769,
+   "round": "Group Stage - 1",
+   "date": "2026-04-08T00:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 115669,
+    "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+    "name": "Cruzeiro"
+   },
+   "homeTeam": {
+    "id": 981136,
+    "logo": "https://highlightly.net/soccer/images/teams/981136.png",
+    "name": "Barcelona SC"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306484918,
+   "round": "Group Stage - 1",
+   "date": "2026-04-08T00:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 986242,
+    "logo": "https://highlightly.net/soccer/images/teams/986242.png",
+    "name": "LDU Quito"
+   },
+   "homeTeam": {
+    "id": 3149484,
+    "logo": "https://highlightly.net/soccer/images/teams/3149484.png",
+    "name": "Always Ready"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306491726,
+   "round": "Group Stage - 1",
+   "date": "2026-04-07T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 106308,
+    "logo": "https://highlightly.net/soccer/images/teams/106308.png",
+    "name": "Fluminense"
+   },
+   "homeTeam": {
+    "id": 2394647,
+    "logo": "https://highlightly.net/soccer/images/teams/2394647.png",
+    "name": "Real Esppor Club"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1306490024,
+   "round": "Group Stage - 1",
+   "date": "2026-04-07T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 3151186,
+    "logo": "https://highlightly.net/soccer/images/teams/3151186.png",
+    "name": "Bolívar"
+   },
+   "homeTeam": {
+    "id": 403307,
+    "logo": "https://highlightly.net/soccer/images/teams/403307.png",
+    "name": "Independ. Rivadavia"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300576425,
+   "round": "Final",
+   "date": "2026-03-13T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2003187,
+    "logo": "https://highlightly.net/soccer/images/teams/2003187.png",
+    "name": "Juventud"
+   },
+   "homeTeam": {
+    "id": 960712,
+    "logo": "https://highlightly.net/soccer/images/teams/960712.png",
+    "name": "Independiente Medellin"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300577276,
+   "round": "Final",
+   "date": "2026-03-12T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 972626,
+    "logo": "https://highlightly.net/soccer/images/teams/972626.png",
+    "name": "Deportes Tolima"
+   },
+   "homeTeam": {
+    "id": 1975104,
+    "logo": "https://highlightly.net/soccer/images/teams/1975104.png",
+    "name": "O'Higgins"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1299166318,
+   "round": "Final",
+   "date": "2026-03-11T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 2",
+     "penalties": "3 - 2"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 2167430,
+    "logo": "https://highlightly.net/soccer/images/teams/2167430.png",
+    "name": "Sporting Cristal"
+   },
+   "homeTeam": {
+    "id": 2392094,
+    "logo": "https://highlightly.net/soccer/images/teams/2392094.png",
+    "name": "Carabobo FC"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300227515,
+   "round": "Final",
+   "date": "2026-03-11T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 981136,
+    "logo": "https://highlightly.net/soccer/images/teams/981136.png",
+    "name": "Barcelona SC"
+   },
+   "homeTeam": {
+    "id": 102904,
+    "logo": "https://highlightly.net/soccer/images/teams/102904.png",
+    "name": "Botafogo"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300575574,
+   "round": "Final",
+   "date": "2026-03-06T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 960712,
+    "logo": "https://highlightly.net/soccer/images/teams/960712.png",
+    "name": "Independiente Medellin"
+   },
+   "homeTeam": {
+    "id": 2003187,
+    "logo": "https://highlightly.net/soccer/images/teams/2003187.png",
+    "name": "Juventud"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300574723,
+   "round": "Final",
+   "date": "2026-03-05T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1975104,
+    "logo": "https://highlightly.net/soccer/images/teams/1975104.png",
+    "name": "O'Higgins"
+   },
+   "homeTeam": {
+    "id": 972626,
+    "logo": "https://highlightly.net/soccer/images/teams/972626.png",
+    "name": "Deportes Tolima"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1299165467,
+   "round": "Final",
+   "date": "2026-03-04T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2392094,
+    "logo": "https://highlightly.net/soccer/images/teams/2392094.png",
+    "name": "Carabobo FC"
+   },
+   "homeTeam": {
+    "id": 2167430,
+    "logo": "https://highlightly.net/soccer/images/teams/2167430.png",
+    "name": "Sporting Cristal"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300226664,
+   "round": "Final",
+   "date": "2026-03-04T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 102904,
+    "logo": "https://highlightly.net/soccer/images/teams/102904.png",
+    "name": "Botafogo"
+   },
+   "homeTeam": {
+    "id": 981136,
+    "logo": "https://highlightly.net/soccer/images/teams/981136.png",
+    "name": "Barcelona SC"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1294816857,
+   "round": "Qualification Round 2",
+   "date": "2026-02-27T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 1",
+     "penalties": "3 - 0"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 2389541,
+    "logo": "https://highlightly.net/soccer/images/teams/2389541.png",
+    "name": "Deportivo Táchira"
+   },
+   "homeTeam": {
+    "id": 972626,
+    "logo": "https://highlightly.net/soccer/images/teams/972626.png",
+    "name": "Deportes Tolima"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1295655092,
+   "round": "Qualification Round 2",
+   "date": "2026-02-26T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2003187,
+    "logo": "https://highlightly.net/soccer/images/teams/2003187.png",
+    "name": "Juventud"
+   },
+   "homeTeam": {
+    "id": 999858,
+    "logo": "https://highlightly.net/soccer/images/teams/999858.png",
+    "name": "Club Guaraní"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1274603054,
+   "round": "Qualification Round 2",
+   "date": "2026-02-26T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 3154590,
+    "logo": "https://highlightly.net/soccer/images/teams/3154590.png",
+    "name": "Nacional Potosí"
+   },
+   "homeTeam": {
+    "id": 102904,
+    "logo": "https://highlightly.net/soccer/images/teams/102904.png",
+    "name": "Botafogo"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1274602203,
+   "round": "Qualification Round 2",
+   "date": "2026-02-26T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 1",
+     "penalties": "4 - 5"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 981136,
+    "logo": "https://highlightly.net/soccer/images/teams/981136.png",
+    "name": "Barcelona SC"
+   },
+   "homeTeam": {
+    "id": 390542,
+    "logo": "https://highlightly.net/soccer/images/teams/390542.png",
+    "name": "Argentinos Juniors"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1271828794,
+   "round": "Qualification Round 2",
+   "date": "2026-02-25T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "2 - 1",
+     "penalties": "3 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 1975104,
+    "logo": "https://highlightly.net/soccer/images/teams/1975104.png",
+    "name": "O'Higgins"
+   },
+   "homeTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1295437236,
+   "round": "Qualification Round 2",
+   "date": "2026-02-25T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "5 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 1821924,
+    "logo": "https://highlightly.net/soccer/images/teams/1821924.png",
+    "name": "2 de Mayo"
+   },
+   "homeTeam": {
+    "id": 2167430,
+    "logo": "https://highlightly.net/soccer/images/teams/2167430.png",
+    "name": "Sporting Cristal"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1271830496,
+   "round": "Qualification Round 2",
+   "date": "2026-02-25T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2007442,
+    "logo": "https://highlightly.net/soccer/images/teams/2007442.png",
+    "name": "Liverpool Montevideo"
+   },
+   "homeTeam": {
+    "id": 960712,
+    "logo": "https://highlightly.net/soccer/images/teams/960712.png",
+    "name": "Independiente Medellin"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1271829645,
+   "round": "Qualification Round 2",
+   "date": "2026-02-24T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2392094,
+    "logo": "https://highlightly.net/soccer/images/teams/2392094.png",
+    "name": "Carabobo FC"
+   },
+   "homeTeam": {
+    "id": 1981912,
+    "logo": "https://highlightly.net/soccer/images/teams/1981912.png",
+    "name": "Huachipato"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1294816006,
+   "round": "Qualification Round 2",
+   "date": "2026-02-20T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 972626,
+    "logo": "https://highlightly.net/soccer/images/teams/972626.png",
+    "name": "Deportes Tolima"
+   },
+   "homeTeam": {
+    "id": 2389541,
+    "logo": "https://highlightly.net/soccer/images/teams/2389541.png",
+    "name": "Deportivo Táchira"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1295654241,
+   "round": "Qualification Round 2",
+   "date": "2026-02-19T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 999858,
+    "logo": "https://highlightly.net/soccer/images/teams/999858.png",
+    "name": "Club Guaraní"
+   },
+   "homeTeam": {
+    "id": 2003187,
+    "logo": "https://highlightly.net/soccer/images/teams/2003187.png",
+    "name": "Juventud"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1274601352,
+   "round": "Qualification Round 2",
+   "date": "2026-02-19T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 102904,
+    "logo": "https://highlightly.net/soccer/images/teams/102904.png",
+    "name": "Botafogo"
+   },
+   "homeTeam": {
+    "id": 3154590,
+    "logo": "https://highlightly.net/soccer/images/teams/3154590.png",
+    "name": "Nacional Potosí"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1274600501,
+   "round": "Qualification Round 2",
+   "date": "2026-02-19T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 390542,
+    "logo": "https://highlightly.net/soccer/images/teams/390542.png",
+    "name": "Argentinos Juniors"
+   },
+   "homeTeam": {
+    "id": 981136,
+    "logo": "https://highlightly.net/soccer/images/teams/981136.png",
+    "name": "Barcelona SC"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1271827943,
+   "round": "Qualification Round 2",
+   "date": "2026-02-18T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "homeTeam": {
+    "id": 1975104,
+    "logo": "https://highlightly.net/soccer/images/teams/1975104.png",
+    "name": "O'Higgins"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1295436385,
+   "round": "Qualification Round 2",
+   "date": "2026-02-18T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2167430,
+    "logo": "https://highlightly.net/soccer/images/teams/2167430.png",
+    "name": "Sporting Cristal"
+   },
+   "homeTeam": {
+    "id": 1821924,
+    "logo": "https://highlightly.net/soccer/images/teams/1821924.png",
+    "name": "2 de Mayo"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1271827092,
+   "round": "Qualification Round 2",
+   "date": "2026-02-18T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 960712,
+    "logo": "https://highlightly.net/soccer/images/teams/960712.png",
+    "name": "Independiente Medellin"
+   },
+   "homeTeam": {
+    "id": 2007442,
+    "logo": "https://highlightly.net/soccer/images/teams/2007442.png",
+    "name": "Liverpool Montevideo"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1271826241,
+   "round": "Qualification Round 2",
+   "date": "2026-02-17T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1981912,
+    "logo": "https://highlightly.net/soccer/images/teams/1981912.png",
+    "name": "Huachipato"
+   },
+   "homeTeam": {
+    "id": 2392094,
+    "logo": "https://highlightly.net/soccer/images/teams/2392094.png",
+    "name": "Carabobo FC"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1271825390,
+   "round": "Qualification Round 1",
+   "date": "2026-02-13T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "3 - 4",
+     "penalties": "3 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 2003187,
+    "logo": "https://highlightly.net/soccer/images/teams/2003187.png",
+    "name": "Juventud"
+   },
+   "homeTeam": {
+    "id": 985391,
+    "logo": "https://highlightly.net/soccer/images/teams/985391.png",
+    "name": "Universidad Católica"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1271824539,
+   "round": "Qualification Round 1",
+   "date": "2026-02-12T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1821924,
+    "logo": "https://highlightly.net/soccer/images/teams/1821924.png",
+    "name": "2 de Mayo"
+   },
+   "homeTeam": {
+    "id": 2173387,
+    "logo": "https://highlightly.net/soccer/images/teams/2173387.png",
+    "name": "Alianza Lima"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1275865087,
+   "round": "Qualification Round 1",
+   "date": "2026-02-11T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 0",
+     "penalties": "5 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 3158845,
+    "logo": "https://highlightly.net/soccer/images/teams/3158845.png",
+    "name": "The Strongest"
+   },
+   "homeTeam": {
+    "id": 2389541,
+    "logo": "https://highlightly.net/soccer/images/teams/2389541.png",
+    "name": "Deportivo Táchira"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1271823688,
+   "round": "Qualification Round 1",
+   "date": "2026-02-06T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 985391,
+    "logo": "https://highlightly.net/soccer/images/teams/985391.png",
+    "name": "Universidad Católica"
+   },
+   "homeTeam": {
+    "id": 2003187,
+    "logo": "https://highlightly.net/soccer/images/teams/2003187.png",
+    "name": "Juventud"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1271822837,
+   "round": "Qualification Round 1",
+   "date": "2026-02-05T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2173387,
+    "logo": "https://highlightly.net/soccer/images/teams/2173387.png",
+    "name": "Alianza Lima"
+   },
+   "homeTeam": {
+    "id": 1821924,
+    "logo": "https://highlightly.net/soccer/images/teams/1821924.png",
+    "name": "2 de Mayo"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1275864236,
+   "round": "Qualification Round 1",
+   "date": "2026-02-04T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 2389541,
+    "logo": "https://highlightly.net/soccer/images/teams/2389541.png",
+    "name": "Deportivo Táchira"
+   },
+   "homeTeam": {
+    "id": 3158845,
+    "logo": "https://highlightly.net/soccer/images/teams/3158845.png",
+    "name": "The Strongest"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
   }
  ],
- "_coletado_em": "2026-10-15T00:00:00+00:00",
- "_parcial": true
+ "_coletado_em": "2026-10-17T03:02:16.098649+00:00"
 }

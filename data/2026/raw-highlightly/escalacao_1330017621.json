@@ -1,0 +1,21 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "Unknown",
+   "substitutes": [],
+   "initialLineup": [],
+   "id": 863698,
+   "logo": "https://highlightly.net/soccer/images/teams/863698.png",
+   "name": "Lausanne"
+  },
+  "awayTeam": {
+   "formation": "Unknown",
+   "substitutes": [],
+   "initialLineup": [],
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo"
+  }
+ },
+ "_coletado_em": "2026-10-17T03:01:58.511014+00:00"
+}

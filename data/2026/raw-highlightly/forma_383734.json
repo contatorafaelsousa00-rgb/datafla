@@ -1,0 +1,175 @@
+{
+ "data": [
+  {
+   "id": 1396113089,
+   "round": "Semi-finals",
+   "date": "2026-10-16T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 383734,
+    "logo": "https://highlightly.net/soccer/images/teams/383734.png",
+    "name": "Estudiantes de La Plata"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1270687603,
+   "round": "Clausura - 12",
+   "date": "2026-10-10T20:00:00.000Z",
+   "country": {
+    "code": "AR",
+    "name": "Argentina",
+    "logo": "https://highlightly.net/soccer/images/countries/AR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 383734,
+    "logo": "https://highlightly.net/soccer/images/teams/383734.png",
+    "name": "Estudiantes de La Plata"
+   },
+   "homeTeam": {
+    "id": 907099,
+    "logo": "https://highlightly.net/soccer/images/teams/907099.png",
+    "name": "Central Cordoba de Santiago"
+   },
+   "league": {
+    "id": 109712,
+    "logo": "https://highlightly.net/soccer/images/leagues/109712.png",
+    "name": "Liga Profesional Argentina",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1270678242,
+   "round": "Clausura - 11",
+   "date": "2026-10-05T22:00:00.000Z",
+   "country": {
+    "code": "AR",
+    "name": "Argentina",
+    "logo": "https://highlightly.net/soccer/images/countries/AR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 907950,
+    "logo": "https://highlightly.net/soccer/images/teams/907950.png",
+    "name": "Gimnasia M."
+   },
+   "homeTeam": {
+    "id": 383734,
+    "logo": "https://highlightly.net/soccer/images/teams/383734.png",
+    "name": "Estudiantes de La Plata"
+   },
+   "league": {
+    "id": 109712,
+    "logo": "https://highlightly.net/soccer/images/leagues/109712.png",
+    "name": "Liga Profesional Argentina",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1393315852,
+   "round": "Quarter-finals",
+   "date": "2026-10-02T00:15:00.000Z",
+   "country": {
+    "code": "AR",
+    "name": "Argentina",
+    "logo": "https://highlightly.net/soccer/images/countries/AR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 383734,
+    "logo": "https://highlightly.net/soccer/images/teams/383734.png",
+    "name": "Estudiantes de La Plata"
+   },
+   "homeTeam": {
+    "id": 906248,
+    "logo": "https://highlightly.net/soccer/images/teams/906248.png",
+    "name": "Platense"
+   },
+   "league": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/leagues/111414.png",
+    "name": "Copa Argentina",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1397210879,
+   "round": "Final",
+   "date": "2026-09-26T19:00:00.000Z",
+   "country": {
+    "code": "AR",
+    "name": "Argentina",
+    "logo": "https://highlightly.net/soccer/images/countries/AR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 372671,
+    "logo": "https://highlightly.net/soccer/images/teams/372671.png",
+    "name": "Rosario Central"
+   },
+   "homeTeam": {
+    "id": 383734,
+    "logo": "https://highlightly.net/soccer/images/teams/383734.png",
+    "name": "Estudiantes de La Plata"
+   },
+   "league": {
+    "id": 1003262,
+    "logo": null,
+    "name": "Super Copa International",
+    "season": 2026
+   }
+  }
+ ],
+ "_coletado_em": "2026-10-17T03:01:08.276146+00:00"
+}

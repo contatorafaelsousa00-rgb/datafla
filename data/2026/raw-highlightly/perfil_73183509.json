@@ -1,0 +1,65 @@
+{
+ "data": [
+  {
+   "id": 73183509,
+   "logo": null,
+   "name": "Guilherme",
+   "fullName": "Guilherme Henrique Bernardineli Gomes",
+   "profile": {
+    "club": {
+     "current": "Gil Vicente FC",
+     "joinedAt": "04/09/2026",
+     "contractExpiry": "30/06/2030",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,80 m",
+    "fullName": "Guilherme Gomes",
+    "position": {
+     "main": "Attacking Midfield",
+     "secondary": "Central Midfield"
+    },
+    "birthDate": "02/02/2006",
+    "deathDate": null,
+    "birthPlace": "Mandaguari",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [],
+    "historical": []
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Gil Vicente",
+     "fee": "€400.00K",
+     "from": "Flamengo U20",
+     "type": "transfer",
+     "season": "26/27",
+     "marketValue": null,
+     "transferDate": "Sep 4, 2026"
+    },
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2024"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 20,
+     "club": "Gil Vicente FC",
+     "value": 300000,
+     "currency": "€",
+     "recordedDate": "29/09/2026"
+    }
+   ],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-17T03:01:38.724644+00:00"
+}

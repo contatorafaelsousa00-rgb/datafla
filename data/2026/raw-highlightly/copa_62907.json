@@ -1,0 +1,5241 @@
+{
+ "data": [
+  {
+   "id": 1394107282,
+   "round": "Semi-finals",
+   "date": "2026-11-08T20:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": null,
+    "score": {
+     "current": null,
+     "penalties": null
+    },
+    "description": "Not started"
+   },
+   "awayTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "homeTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1394143024,
+   "round": "Semi-finals",
+   "date": "2026-11-07T21:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": null,
+    "score": {
+     "current": null,
+     "penalties": null
+    },
+    "description": "Not started"
+   },
+   "awayTeam": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+    "name": "Gremio"
+   },
+   "homeTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1394142173,
+   "round": "Semi-finals",
+   "date": "2026-11-01T21:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": null,
+    "score": {
+     "current": null,
+     "penalties": null
+    },
+    "description": "Not started"
+   },
+   "awayTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "homeTeam": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+    "name": "Gremio"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1394106431,
+   "round": "Semi-finals",
+   "date": "2026-11-01T19:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": null,
+    "score": {
+     "current": null,
+     "penalties": null
+    },
+    "description": "Not started"
+   },
+   "awayTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "homeTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1381236758,
+   "round": "Quarter-finals",
+   "date": "2026-09-03T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 102053,
+    "logo": "https://highlightly.net/soccer/images/teams/102053.png",
+    "name": "Internacional"
+   },
+   "homeTeam": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+    "name": "Gremio"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1381238460,
+   "round": "Quarter-finals",
+   "date": "2026-09-03T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "homeTeam": {
+    "id": 116520,
+    "logo": "https://highlightly.net/soccer/images/teams/116520.png",
+    "name": "Vitoria"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1381237609,
+   "round": "Quarter-finals",
+   "date": "2026-09-03T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "homeTeam": {
+    "id": 109712,
+    "logo": "https://highlightly.net/soccer/images/teams/109712.png",
+    "name": "Santos"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1381235907,
+   "round": "Quarter-finals",
+   "date": "2026-09-02T00:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 115669,
+    "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+    "name": "Cruzeiro"
+   },
+   "homeTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1381233354,
+   "round": "Quarter-finals",
+   "date": "2026-08-27T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+    "name": "Gremio"
+   },
+   "homeTeam": {
+    "id": 102053,
+    "logo": "https://highlightly.net/soccer/images/teams/102053.png",
+    "name": "Internacional"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1381235056,
+   "round": "Quarter-finals",
+   "date": "2026-08-27T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 116520,
+    "logo": "https://highlightly.net/soccer/images/teams/116520.png",
+    "name": "Vitoria"
+   },
+   "homeTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1381234205,
+   "round": "Quarter-finals",
+   "date": "2026-08-27T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 109712,
+    "logo": "https://highlightly.net/soccer/images/teams/109712.png",
+    "name": "Santos"
+   },
+   "homeTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1381232503,
+   "round": "Quarter-finals",
+   "date": "2026-08-26T00:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "homeTeam": {
+    "id": 115669,
+    "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+    "name": "Cruzeiro"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316376942,
+   "round": "Round of 16",
+   "date": "2026-08-06T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "4 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 114818,
+    "logo": "https://highlightly.net/soccer/images/teams/114818.png",
+    "name": "Athletico Paranaense"
+   },
+   "homeTeam": {
+    "id": 116520,
+    "logo": "https://highlightly.net/soccer/images/teams/116520.png",
+    "name": "Vitoria"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316370985,
+   "round": "Round of 16",
+   "date": "2026-08-06T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 102053,
+    "logo": "https://highlightly.net/soccer/images/teams/102053.png",
+    "name": "Internacional"
+   },
+   "homeTeam": {
+    "id": 112265,
+    "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+    "name": "Corinthians"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316373538,
+   "round": "Round of 16",
+   "date": "2026-08-06T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "homeTeam": {
+    "id": 131838,
+    "logo": "https://highlightly.net/soccer/images/teams/131838.png",
+    "name": "Fortaleza"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316372687,
+   "round": "Round of 16",
+   "date": "2026-08-06T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "homeTeam": {
+    "id": 106308,
+    "logo": "https://highlightly.net/soccer/images/teams/106308.png",
+    "name": "Fluminense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316374389,
+   "round": "Round of 16",
+   "date": "2026-08-05T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6679432,
+    "logo": "https://highlightly.net/soccer/images/teams/6679432.png",
+    "name": "Mirassol"
+   },
+   "homeTeam": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+    "name": "Gremio"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316371836,
+   "round": "Round of 16",
+   "date": "2026-08-05T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113116,
+    "logo": "https://highlightly.net/soccer/images/teams/113116.png",
+    "name": "Chapecoense"
+   },
+   "homeTeam": {
+    "id": 115669,
+    "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+    "name": "Cruzeiro"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316376091,
+   "round": "Round of 16",
+   "date": "2026-08-05T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 109712,
+    "logo": "https://highlightly.net/soccer/images/teams/109712.png",
+    "name": "Santos"
+   },
+   "homeTeam": {
+    "id": 1020282,
+    "logo": "https://highlightly.net/soccer/images/teams/1020282.png",
+    "name": "Remo"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316375240,
+   "round": "Round of 16",
+   "date": "2026-08-04T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "homeTeam": {
+    "id": 130136,
+    "logo": "https://highlightly.net/soccer/images/teams/130136.png",
+    "name": "Juventude"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316364177,
+   "round": "Round of 16",
+   "date": "2026-08-04T00:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 116520,
+    "logo": "https://highlightly.net/soccer/images/teams/116520.png",
+    "name": "Vitoria"
+   },
+   "homeTeam": {
+    "id": 114818,
+    "logo": "https://highlightly.net/soccer/images/teams/114818.png",
+    "name": "Athletico Paranaense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316366730,
+   "round": "Round of 16",
+   "date": "2026-08-02T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 112265,
+    "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+    "name": "Corinthians"
+   },
+   "homeTeam": {
+    "id": 102053,
+    "logo": "https://highlightly.net/soccer/images/teams/102053.png",
+    "name": "Internacional"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316365879,
+   "round": "Round of 16",
+   "date": "2026-08-02T21:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 115669,
+    "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+    "name": "Cruzeiro"
+   },
+   "homeTeam": {
+    "id": 113116,
+    "logo": "https://highlightly.net/soccer/images/teams/113116.png",
+    "name": "Chapecoense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316367581,
+   "round": "Round of 16",
+   "date": "2026-08-02T21:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+    "name": "Gremio"
+   },
+   "homeTeam": {
+    "id": 6679432,
+    "logo": "https://highlightly.net/soccer/images/teams/6679432.png",
+    "name": "Mirassol"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316368432,
+   "round": "Round of 16",
+   "date": "2026-08-02T19:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 131838,
+    "logo": "https://highlightly.net/soccer/images/teams/131838.png",
+    "name": "Fortaleza"
+   },
+   "homeTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316369283,
+   "round": "Round of 16",
+   "date": "2026-08-02T00:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1020282,
+    "logo": "https://highlightly.net/soccer/images/teams/1020282.png",
+    "name": "Remo"
+   },
+   "homeTeam": {
+    "id": 109712,
+    "logo": "https://highlightly.net/soccer/images/teams/109712.png",
+    "name": "Santos"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316365028,
+   "round": "Round of 16",
+   "date": "2026-08-01T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 130136,
+    "logo": "https://highlightly.net/soccer/images/teams/130136.png",
+    "name": "Juventude"
+   },
+   "homeTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1316370134,
+   "round": "Round of 16",
+   "date": "2026-08-01T20:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 106308,
+    "logo": "https://highlightly.net/soccer/images/teams/106308.png",
+    "name": "Fluminense"
+   },
+   "homeTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1307994592,
+   "round": "Round of 32",
+   "date": "2026-05-15T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 116520,
+    "logo": "https://highlightly.net/soccer/images/teams/116520.png",
+    "name": "Vitoria"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308002251,
+   "round": "Round of 32",
+   "date": "2026-05-14T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 131838,
+    "logo": "https://highlightly.net/soccer/images/teams/131838.png",
+    "name": "Fortaleza"
+   },
+   "homeTeam": {
+    "id": 125030,
+    "logo": "https://highlightly.net/soccer/images/teams/125030.png",
+    "name": "CRB"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308003953,
+   "round": "Round of 32",
+   "date": "2026-05-14T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 15549405,
+    "logo": null,
+    "name": "Barra"
+   },
+   "homeTeam": {
+    "id": 112265,
+    "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+    "name": "Corinthians"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308007357,
+   "round": "Round of 32",
+   "date": "2026-05-14T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "1 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 114818,
+    "logo": "https://highlightly.net/soccer/images/teams/114818.png",
+    "name": "Athletico Paranaense"
+   },
+   "homeTeam": {
+    "id": 123328,
+    "logo": "https://highlightly.net/soccer/images/teams/123328.png",
+    "name": "Atlético Goianiense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308004804,
+   "round": "Round of 32",
+   "date": "2026-05-14T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+    "name": "Gremio"
+   },
+   "homeTeam": {
+    "id": 6614756,
+    "logo": "https://highlightly.net/soccer/images/teams/6614756.png",
+    "name": "Confiança"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308005655,
+   "round": "Round of 32",
+   "date": "2026-05-14T21:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 102904,
+    "logo": "https://highlightly.net/soccer/images/teams/102904.png",
+    "name": "Botafogo"
+   },
+   "homeTeam": {
+    "id": 113116,
+    "logo": "https://highlightly.net/soccer/images/teams/113116.png",
+    "name": "Chapecoense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308006506,
+   "round": "Round of 32",
+   "date": "2026-05-14T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "2 - 1",
+     "penalties": "2 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "homeTeam": {
+    "id": 110563,
+    "logo": "https://highlightly.net/soccer/images/teams/110563.png",
+    "name": "Ceará"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1307998847,
+   "round": "Round of 32",
+   "date": "2026-05-14T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 4",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "homeTeam": {
+    "id": 6664965,
+    "logo": null,
+    "name": "Jacuipense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1307996294,
+   "round": "Round of 32",
+   "date": "2026-05-14T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "homeTeam": {
+    "id": 1020282,
+    "logo": "https://highlightly.net/soccer/images/teams/1020282.png",
+    "name": "Remo"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1307997145,
+   "round": "Round of 32",
+   "date": "2026-05-13T23:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 676478,
+    "logo": "https://highlightly.net/soccer/images/teams/676478.png",
+    "name": "RB Bragantino"
+   },
+   "homeTeam": {
+    "id": 6679432,
+    "logo": "https://highlightly.net/soccer/images/teams/6679432.png",
+    "name": "Mirassol"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308003102,
+   "round": "Round of 32",
+   "date": "2026-05-13T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 109712,
+    "logo": "https://highlightly.net/soccer/images/teams/109712.png",
+    "name": "Santos"
+   },
+   "homeTeam": {
+    "id": 125881,
+    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+    "name": "Coritiba"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1307997996,
+   "round": "Round of 32",
+   "date": "2026-05-13T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108010,
+    "logo": "https://highlightly.net/soccer/images/teams/108010.png",
+    "name": "São Paulo FC"
+   },
+   "homeTeam": {
+    "id": 130136,
+    "logo": "https://highlightly.net/soccer/images/teams/130136.png",
+    "name": "Juventude"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1307995443,
+   "round": "Round of 32",
+   "date": "2026-05-13T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 127583,
+    "logo": "https://highlightly.net/soccer/images/teams/127583.png",
+    "name": "Paysandu SC"
+   },
+   "homeTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308001400,
+   "round": "Round of 32",
+   "date": "2026-05-13T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 129285,
+    "logo": "https://highlightly.net/soccer/images/teams/129285.png",
+    "name": "Goiás"
+   },
+   "homeTeam": {
+    "id": 115669,
+    "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+    "name": "Cruzeiro"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308000549,
+   "round": "Round of 32",
+   "date": "2026-05-13T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1041557,
+    "logo": "https://highlightly.net/soccer/images/teams/1041557.png",
+    "name": "Operário-PR"
+   },
+   "homeTeam": {
+    "id": 106308,
+    "logo": "https://highlightly.net/soccer/images/teams/106308.png",
+    "name": "Fluminense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1307999698,
+   "round": "Round of 32",
+   "date": "2026-05-12T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 11893509,
+    "logo": "https://highlightly.net/soccer/images/teams/11893509.png",
+    "name": "Athletic Club"
+   },
+   "homeTeam": {
+    "id": 102053,
+    "logo": "https://highlightly.net/soccer/images/teams/102053.png",
+    "name": "Internacional"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308020122,
+   "round": "Round of 32",
+   "date": "2026-04-24T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 123328,
+    "logo": "https://highlightly.net/soccer/images/teams/123328.png",
+    "name": "Atlético Goianiense"
+   },
+   "homeTeam": {
+    "id": 114818,
+    "logo": "https://highlightly.net/soccer/images/teams/114818.png",
+    "name": "Athletico Paranaense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308011612,
+   "round": "Round of 32",
+   "date": "2026-04-24T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 106308,
+    "logo": "https://highlightly.net/soccer/images/teams/106308.png",
+    "name": "Fluminense"
+   },
+   "homeTeam": {
+    "id": 1041557,
+    "logo": "https://highlightly.net/soccer/images/teams/1041557.png",
+    "name": "Operário-PR"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308010761,
+   "round": "Round of 32",
+   "date": "2026-04-23T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6664965,
+    "logo": null,
+    "name": "Jacuipense"
+   },
+   "homeTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308019271,
+   "round": "Round of 32",
+   "date": "2026-04-23T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 110563,
+    "logo": "https://highlightly.net/soccer/images/teams/110563.png",
+    "name": "Ceará"
+   },
+   "homeTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308015867,
+   "round": "Round of 32",
+   "date": "2026-04-23T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6679432,
+    "logo": "https://highlightly.net/soccer/images/teams/6679432.png",
+    "name": "Mirassol"
+   },
+   "homeTeam": {
+    "id": 676478,
+    "logo": "https://highlightly.net/soccer/images/teams/676478.png",
+    "name": "RB Bragantino"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308015016,
+   "round": "Round of 32",
+   "date": "2026-04-23T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 116520,
+    "logo": "https://highlightly.net/soccer/images/teams/116520.png",
+    "name": "Vitoria"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308020973,
+   "round": "Round of 32",
+   "date": "2026-04-22T23:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 102053,
+    "logo": "https://highlightly.net/soccer/images/teams/102053.png",
+    "name": "Internacional"
+   },
+   "homeTeam": {
+    "id": 11893509,
+    "logo": "https://highlightly.net/soccer/images/teams/11893509.png",
+    "name": "Athletic Club"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308014165,
+   "round": "Round of 32",
+   "date": "2026-04-22T23:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 125030,
+    "logo": "https://highlightly.net/soccer/images/teams/125030.png",
+    "name": "CRB"
+   },
+   "homeTeam": {
+    "id": 131838,
+    "logo": "https://highlightly.net/soccer/images/teams/131838.png",
+    "name": "Fortaleza"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308009059,
+   "round": "Round of 32",
+   "date": "2026-04-22T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 125881,
+    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+    "name": "Coritiba"
+   },
+   "homeTeam": {
+    "id": 109712,
+    "logo": "https://highlightly.net/soccer/images/teams/109712.png",
+    "name": "Santos"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308018420,
+   "round": "Round of 32",
+   "date": "2026-04-22T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1020282,
+    "logo": "https://highlightly.net/soccer/images/teams/1020282.png",
+    "name": "Remo"
+   },
+   "homeTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308013314,
+   "round": "Round of 32",
+   "date": "2026-04-22T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 115669,
+    "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+    "name": "Cruzeiro"
+   },
+   "homeTeam": {
+    "id": 129285,
+    "logo": "https://highlightly.net/soccer/images/teams/129285.png",
+    "name": "Goiás"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308017569,
+   "round": "Round of 32",
+   "date": "2026-04-22T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 112265,
+    "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+    "name": "Corinthians"
+   },
+   "homeTeam": {
+    "id": 15549405,
+    "logo": null,
+    "name": "Barra"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308009910,
+   "round": "Round of 32",
+   "date": "2026-04-22T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "homeTeam": {
+    "id": 127583,
+    "logo": "https://highlightly.net/soccer/images/teams/127583.png",
+    "name": "Paysandu SC"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308012463,
+   "round": "Round of 32",
+   "date": "2026-04-21T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6614756,
+    "logo": "https://highlightly.net/soccer/images/teams/6614756.png",
+    "name": "Confiança"
+   },
+   "homeTeam": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+    "name": "Gremio"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308008208,
+   "round": "Round of 32",
+   "date": "2026-04-21T22:15:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 130136,
+    "logo": "https://highlightly.net/soccer/images/teams/130136.png",
+    "name": "Juventude"
+   },
+   "homeTeam": {
+    "id": 108010,
+    "logo": "https://highlightly.net/soccer/images/teams/108010.png",
+    "name": "São Paulo FC"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1308016718,
+   "round": "Round of 32",
+   "date": "2026-04-21T20:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113116,
+    "logo": "https://highlightly.net/soccer/images/teams/113116.png",
+    "name": "Chapecoense"
+   },
+   "homeTeam": {
+    "id": 102904,
+    "logo": "https://highlightly.net/soccer/images/teams/102904.png",
+    "name": "Botafogo"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304517406,
+   "round": "Round of 64",
+   "date": "2026-03-19T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "1 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 15549405,
+    "logo": null,
+    "name": "Barra"
+   },
+   "homeTeam": {
+    "id": 6650498,
+    "logo": "https://highlightly.net/soccer/images/teams/6650498.png",
+    "name": "Volta Redonda"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304512300,
+   "round": "Round of 64",
+   "date": "2026-03-19T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 129285,
+    "logo": "https://highlightly.net/soccer/images/teams/129285.png",
+    "name": "Goiás"
+   },
+   "homeTeam": {
+    "id": 6666667,
+    "logo": null,
+    "name": "Maringá"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304510598,
+   "round": "Round of 64",
+   "date": "2026-03-19T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6705813,
+    "logo": "https://highlightly.net/soccer/images/teams/6705813.png",
+    "name": "Águia de Marabá"
+   },
+   "homeTeam": {
+    "id": 130136,
+    "logo": "https://highlightly.net/soccer/images/teams/130136.png",
+    "name": "Juventude"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304509747,
+   "round": "Round of 64",
+   "date": "2026-03-19T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "5 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 6667518,
+    "logo": "https://highlightly.net/soccer/images/teams/6667518.png",
+    "name": "Novorizontino"
+   },
+   "homeTeam": {
+    "id": 6664965,
+    "logo": null,
+    "name": "Jacuipense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304508896,
+   "round": "Round of 64",
+   "date": "2026-03-19T00:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 117371,
+    "logo": "https://highlightly.net/soccer/images/teams/117371.png",
+    "name": "Figueirense"
+   },
+   "homeTeam": {
+    "id": 125030,
+    "logo": "https://highlightly.net/soccer/images/teams/125030.png",
+    "name": "CRB"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304508045,
+   "round": "Round of 64",
+   "date": "2026-03-18T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 119073,
+    "logo": "https://highlightly.net/soccer/images/teams/119073.png",
+    "name": "Ponte Preta"
+   },
+   "homeTeam": {
+    "id": 123328,
+    "logo": "https://highlightly.net/soccer/images/teams/123328.png",
+    "name": "Atlético Goianiense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304516555,
+   "round": "Round of 64",
+   "date": "2026-03-18T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "3 - 5"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 6614756,
+    "logo": "https://highlightly.net/soccer/images/teams/6614756.png",
+    "name": "Confiança"
+   },
+   "homeTeam": {
+    "id": 121626,
+    "logo": "https://highlightly.net/soccer/images/teams/121626.png",
+    "name": "Vila Nova"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304515704,
+   "round": "Round of 64",
+   "date": "2026-03-18T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 11893509,
+    "logo": "https://highlightly.net/soccer/images/teams/11893509.png",
+    "name": "Athletic Club"
+   },
+   "homeTeam": {
+    "id": 105457,
+    "logo": "https://highlightly.net/soccer/images/teams/105457.png",
+    "name": "Sport Recife"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304514002,
+   "round": "Round of 64",
+   "date": "2026-03-18T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 127583,
+    "logo": "https://highlightly.net/soccer/images/teams/127583.png",
+    "name": "Paysandu SC"
+   },
+   "homeTeam": {
+    "id": 1033898,
+    "logo": "https://highlightly.net/soccer/images/teams/1033898.png",
+    "name": "Portuguesa"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304511449,
+   "round": "Round of 64",
+   "date": "2026-03-18T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1041557,
+    "logo": "https://highlightly.net/soccer/images/teams/1041557.png",
+    "name": "Operário-PR"
+   },
+   "homeTeam": {
+    "id": 126732,
+    "logo": "https://highlightly.net/soccer/images/teams/126732.png",
+    "name": "Londrina"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304514853,
+   "round": "Round of 64",
+   "date": "2026-03-17T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "2 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 110563,
+    "logo": "https://highlightly.net/soccer/images/teams/110563.png",
+    "name": "Ceará"
+   },
+   "homeTeam": {
+    "id": 6693899,
+    "logo": "https://highlightly.net/soccer/images/teams/6693899.png",
+    "name": "São Bernardo"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1304513151,
+   "round": "Round of 64",
+   "date": "2026-03-17T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 131838,
+    "logo": "https://highlightly.net/soccer/images/teams/131838.png",
+    "name": "Fortaleza"
+   },
+   "homeTeam": {
+    "id": 6623266,
+    "logo": "https://highlightly.net/soccer/images/teams/6623266.png",
+    "name": "Nova Iguaçu"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1302103970,
+   "round": "Round of 128",
+   "date": "2026-03-13T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "1 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 130136,
+    "logo": "https://highlightly.net/soccer/images/teams/130136.png",
+    "name": "Juventude"
+   },
+   "homeTeam": {
+    "id": 13285745,
+    "logo": "https://highlightly.net/soccer/images/teams/13285745.png",
+    "name": "Tuna Luso"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1302103119,
+   "round": "Round of 128",
+   "date": "2026-03-13T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "5 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 6682836,
+    "logo": "https://highlightly.net/soccer/images/teams/6682836.png",
+    "name": "Anápolis"
+   },
+   "homeTeam": {
+    "id": 105457,
+    "logo": "https://highlightly.net/soccer/images/teams/105457.png",
+    "name": "Sport Recife"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1301584009,
+   "round": "Round of 128",
+   "date": "2026-03-13T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "4 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 107159,
+    "logo": "https://highlightly.net/soccer/images/teams/107159.png",
+    "name": "América Mineiro"
+   },
+   "homeTeam": {
+    "id": 15549405,
+    "logo": null,
+    "name": "Barra"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300451328,
+   "round": "Round of 128",
+   "date": "2026-03-12T23:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6667518,
+    "logo": "https://highlightly.net/soccer/images/teams/6667518.png",
+    "name": "Novorizontino"
+   },
+   "homeTeam": {
+    "id": 1885749,
+    "logo": "https://highlightly.net/soccer/images/teams/1885749.png",
+    "name": "Mixto"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1301229993,
+   "round": "Round of 128",
+   "date": "2026-03-12T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 117371,
+    "logo": "https://highlightly.net/soccer/images/teams/117371.png",
+    "name": "Figueirense"
+   },
+   "homeTeam": {
+    "id": 9244346,
+    "logo": "https://highlightly.net/soccer/images/teams/9244346.png",
+    "name": "Amazonas"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1302102268,
+   "round": "Round of 128",
+   "date": "2026-03-12T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 125030,
+    "logo": "https://highlightly.net/soccer/images/teams/125030.png",
+    "name": "CRB"
+   },
+   "homeTeam": {
+    "id": 6693048,
+    "logo": "https://highlightly.net/soccer/images/teams/6693048.png",
+    "name": "Sousa"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1301587413,
+   "round": "Round of 128",
+   "date": "2026-03-12T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 10996555,
+    "logo": "https://highlightly.net/soccer/images/teams/10996555.png",
+    "name": "Capital Brasilia"
+   },
+   "homeTeam": {
+    "id": 1041557,
+    "logo": "https://highlightly.net/soccer/images/teams/1041557.png",
+    "name": "Operário-PR"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300595147,
+   "round": "Round of 128",
+   "date": "2026-03-12T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 110563,
+    "logo": "https://highlightly.net/soccer/images/teams/110563.png",
+    "name": "Ceará"
+   },
+   "homeTeam": {
+    "id": 6665816,
+    "logo": null,
+    "name": "Maranhão AC"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1301589966,
+   "round": "Round of 128",
+   "date": "2026-03-12T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "5 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 1887451,
+    "logo": null,
+    "name": "Operário Ferroviário"
+   },
+   "homeTeam": {
+    "id": 121626,
+    "logo": "https://highlightly.net/soccer/images/teams/121626.png",
+    "name": "Vila Nova"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300449626,
+   "round": "Round of 128",
+   "date": "2026-03-12T21:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6705813,
+    "logo": "https://highlightly.net/soccer/images/teams/6705813.png",
+    "name": "Águia de Marabá"
+   },
+   "homeTeam": {
+    "id": 6621564,
+    "logo": "https://highlightly.net/soccer/images/teams/6621564.png",
+    "name": "Madureira EC"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1302101417,
+   "round": "Round of 128",
+   "date": "2026-03-12T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6668369,
+    "logo": "https://highlightly.net/soccer/images/teams/6668369.png",
+    "name": "Portuguesa RJ"
+   },
+   "homeTeam": {
+    "id": 127583,
+    "logo": "https://highlightly.net/soccer/images/teams/127583.png",
+    "name": "Paysandu SC"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1301586562,
+   "round": "Round of 128",
+   "date": "2026-03-12T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "4 - 5"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 126732,
+    "logo": "https://highlightly.net/soccer/images/teams/126732.png",
+    "name": "Londrina"
+   },
+   "homeTeam": {
+    "id": 1884898,
+    "logo": "https://highlightly.net/soccer/images/teams/1884898.png",
+    "name": "Manaus FC"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300595998,
+   "round": "Round of 128",
+   "date": "2026-03-11T23:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 123328,
+    "logo": "https://highlightly.net/soccer/images/teams/123328.png",
+    "name": "Atlético Goianiense"
+   },
+   "homeTeam": {
+    "id": 11017830,
+    "logo": null,
+    "name": "Porto Velho"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1301589115,
+   "round": "Round of 128",
+   "date": "2026-03-11T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6664965,
+    "logo": null,
+    "name": "Jacuipense"
+   },
+   "homeTeam": {
+    "id": 18047941,
+    "logo": null,
+    "name": "Santa Catarina"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1301584860,
+   "round": "Round of 128",
+   "date": "2026-03-11T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 4",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6623266,
+    "logo": "https://highlightly.net/soccer/images/teams/6623266.png",
+    "name": "Nova Iguaçu"
+   },
+   "homeTeam": {
+    "id": 11169308,
+    "logo": "https://highlightly.net/soccer/images/teams/11169308.png",
+    "name": "Castanhal"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300447924,
+   "round": "Round of 128",
+   "date": "2026-03-11T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1895961,
+    "logo": "https://highlightly.net/soccer/images/teams/1895961.png",
+    "name": "Tombense"
+   },
+   "homeTeam": {
+    "id": 6614756,
+    "logo": "https://highlightly.net/soccer/images/teams/6614756.png",
+    "name": "Confiança"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1302100566,
+   "round": "Round of 128",
+   "date": "2026-03-11T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 13290851,
+    "logo": "https://highlightly.net/soccer/images/teams/13290851.png",
+    "name": "Fluminense PI"
+   },
+   "homeTeam": {
+    "id": 129285,
+    "logo": "https://highlightly.net/soccer/images/teams/129285.png",
+    "name": "Goiás"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1301590817,
+   "round": "Round of 128",
+   "date": "2026-03-11T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "5 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 1901067,
+    "logo": "https://highlightly.net/soccer/images/teams/1901067.png",
+    "name": "América-RN"
+   },
+   "homeTeam": {
+    "id": 6650498,
+    "logo": "https://highlightly.net/soccer/images/teams/6650498.png",
+    "name": "Volta Redonda"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1301585711,
+   "round": "Round of 128",
+   "date": "2026-03-11T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 131838,
+    "logo": "https://highlightly.net/soccer/images/teams/131838.png",
+    "name": "Fortaleza"
+   },
+   "homeTeam": {
+    "id": 15580892,
+    "logo": null,
+    "name": "Manauara"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1301583158,
+   "round": "Round of 128",
+   "date": "2026-03-11T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1039855,
+    "logo": "https://highlightly.net/soccer/images/teams/1039855.png",
+    "name": "Ypiranga-RS"
+   },
+   "homeTeam": {
+    "id": 11893509,
+    "logo": "https://highlightly.net/soccer/images/teams/11893509.png",
+    "name": "Athletic Club"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300450477,
+   "round": "Round of 128",
+   "date": "2026-03-11T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1018580,
+    "logo": "https://highlightly.net/soccer/images/teams/1018580.png",
+    "name": "Uberlândia"
+   },
+   "homeTeam": {
+    "id": 6666667,
+    "logo": null,
+    "name": "Maringá"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300452179,
+   "round": "Round of 128",
+   "date": "2026-03-11T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 8552483,
+    "logo": null,
+    "name": "Guaraní de Bagé"
+   },
+   "homeTeam": {
+    "id": 119073,
+    "logo": "https://highlightly.net/soccer/images/teams/119073.png",
+    "name": "Ponte Preta"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1300448775,
+   "round": "Round of 128",
+   "date": "2026-03-10T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6693899,
+    "logo": "https://highlightly.net/soccer/images/teams/6693899.png",
+    "name": "São Bernardo"
+   },
+   "homeTeam": {
+    "id": 677329,
+    "logo": "https://highlightly.net/soccer/images/teams/677329.png",
+    "name": "Joinville"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1301588264,
+   "round": "Round of 128",
+   "date": "2026-03-10T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "4 - 1"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 124179,
+    "logo": "https://highlightly.net/soccer/images/teams/124179.png",
+    "name": "Avaí"
+   },
+   "homeTeam": {
+    "id": 1033898,
+    "logo": "https://highlightly.net/soccer/images/teams/1033898.png",
+    "name": "Portuguesa"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298222559,
+   "round": "1/128-finals",
+   "date": "2026-03-06T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "5 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 11016128,
+    "logo": null,
+    "name": "Guaporé"
+   },
+   "homeTeam": {
+    "id": 130136,
+    "logo": "https://highlightly.net/soccer/images/teams/130136.png",
+    "name": "Juventude"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289501511,
+   "round": "1/128-finals",
+   "date": "2026-03-06T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "2 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 6693048,
+    "logo": "https://highlightly.net/soccer/images/teams/6693048.png",
+    "name": "Sousa"
+   },
+   "homeTeam": {
+    "id": 641587,
+    "logo": "https://highlightly.net/soccer/images/teams/641587.png",
+    "name": "Santa Cruz FC"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1297269439,
+   "round": "1/128-finals",
+   "date": "2026-03-05T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "3 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 105457,
+    "logo": "https://highlightly.net/soccer/images/teams/105457.png",
+    "name": "Sport Recife"
+   },
+   "homeTeam": {
+    "id": 6686240,
+    "logo": "https://highlightly.net/soccer/images/teams/6686240.png",
+    "name": "Desportiva ES"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289498958,
+   "round": "1/128-finals",
+   "date": "2026-03-05T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 11139523,
+    "logo": null,
+    "name": "Maracanaú FC"
+   },
+   "homeTeam": {
+    "id": 6668369,
+    "logo": "https://highlightly.net/soccer/images/teams/6668369.png",
+    "name": "Portuguesa RJ"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289505766,
+   "round": "1/128-finals",
+   "date": "2026-03-05T19:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "3 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 13290851,
+    "logo": "https://highlightly.net/soccer/images/teams/13290851.png",
+    "name": "Fluminense PI"
+   },
+   "homeTeam": {
+    "id": 6696452,
+    "logo": null,
+    "name": "Trem"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298221708,
+   "round": "1/128-finals",
+   "date": "2026-03-05T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "4 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 15998733,
+    "logo": null,
+    "name": "Pague Menos"
+   },
+   "homeTeam": {
+    "id": 107159,
+    "logo": "https://highlightly.net/soccer/images/teams/107159.png",
+    "name": "América Mineiro"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289493852,
+   "round": "1/128-finals",
+   "date": "2026-03-05T00:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1876388,
+    "logo": "https://highlightly.net/soccer/images/teams/1876388.png",
+    "name": "AO Itabaiana"
+   },
+   "homeTeam": {
+    "id": 15580892,
+    "logo": null,
+    "name": "Manauara"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298220006,
+   "round": "1/128-finals",
+   "date": "2026-03-04T23:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 4",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6650498,
+    "logo": "https://highlightly.net/soccer/images/teams/6650498.png",
+    "name": "Volta Redonda"
+   },
+   "homeTeam": {
+    "id": 9095421,
+    "logo": null,
+    "name": "Ivinhema"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298218304,
+   "round": "1/128-finals",
+   "date": "2026-03-04T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "5 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 1016027,
+    "logo": "https://highlightly.net/soccer/images/teams/1016027.png",
+    "name": "Cuiabá"
+   },
+   "homeTeam": {
+    "id": 18047941,
+    "logo": null,
+    "name": "Santa Catarina"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289500660,
+   "round": "1/128-finals",
+   "date": "2026-03-04T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "5 - 6"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 11893509,
+    "logo": "https://highlightly.net/soccer/images/teams/11893509.png",
+    "name": "Athletic Club"
+   },
+   "homeTeam": {
+    "id": 9097974,
+    "logo": "https://highlightly.net/soccer/images/teams/9097974.png",
+    "name": "Rio Branco ES"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298219155,
+   "round": "1/128-finals",
+   "date": "2026-03-04T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1041557,
+    "logo": "https://highlightly.net/soccer/images/teams/1041557.png",
+    "name": "Operário-PR"
+   },
+   "homeTeam": {
+    "id": 11136970,
+    "logo": null,
+    "name": "Betim"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289487044,
+   "round": "1/128-finals",
+   "date": "2026-03-04T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "4 - 5"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 1884898,
+    "logo": "https://highlightly.net/soccer/images/teams/1884898.png",
+    "name": "Manaus FC"
+   },
+   "homeTeam": {
+    "id": 11177818,
+    "logo": null,
+    "name": "Capital"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289485342,
+   "round": "1/128-finals",
+   "date": "2026-03-04T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 17630951,
+    "logo": null,
+    "name": "Porto Vitória"
+   },
+   "homeTeam": {
+    "id": 124179,
+    "logo": "https://highlightly.net/soccer/images/teams/124179.png",
+    "name": "Avaí"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298220857,
+   "round": "1/128-finals",
+   "date": "2026-03-04T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 0",
+     "penalties": "2 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 121626,
+    "logo": "https://highlightly.net/soccer/images/teams/121626.png",
+    "name": "Vila Nova"
+   },
+   "homeTeam": {
+    "id": 8545675,
+    "logo": "https://highlightly.net/soccer/images/teams/8545675.png",
+    "name": "Velo Clube"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289506617,
+   "round": "1/128-finals",
+   "date": "2026-03-04T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "4 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6704962,
+    "logo": "https://highlightly.net/soccer/images/teams/6704962.png",
+    "name": "Tocantinópolis"
+   },
+   "homeTeam": {
+    "id": 13285745,
+    "logo": "https://highlightly.net/soccer/images/teams/13285745.png",
+    "name": "Tuna Luso"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289495554,
+   "round": "1/128-finals",
+   "date": "2026-03-04T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "4 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 8512486,
+    "logo": "https://highlightly.net/soccer/images/teams/8512486.png",
+    "name": "Lagarto"
+   },
+   "homeTeam": {
+    "id": 6623266,
+    "logo": "https://highlightly.net/soccer/images/teams/6623266.png",
+    "name": "Nova Iguaçu"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289489597,
+   "round": "1/128-finals",
+   "date": "2026-03-04T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 11011873,
+    "logo": null,
+    "name": "Azuriz"
+   },
+   "homeTeam": {
+    "id": 117371,
+    "logo": "https://highlightly.net/soccer/images/teams/117371.png",
+    "name": "Figueirense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298217453,
+   "round": "1/128-finals",
+   "date": "2026-03-03T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "6 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 20076725,
+    "logo": null,
+    "name": "Porto BA"
+   },
+   "homeTeam": {
+    "id": 125030,
+    "logo": "https://highlightly.net/soccer/images/teams/125030.png",
+    "name": "CRB"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289498107,
+   "round": "1/128-finals",
+   "date": "2026-02-27T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "5 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1024537,
+    "logo": "https://highlightly.net/soccer/images/teams/1024537.png",
+    "name": "Altos"
+   },
+   "homeTeam": {
+    "id": 1033898,
+    "logo": "https://highlightly.net/soccer/images/teams/1033898.png",
+    "name": "Portuguesa"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289497256,
+   "round": "1/128-finals",
+   "date": "2026-02-27T00:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "1 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 11017830,
+    "logo": null,
+    "name": "Porto Velho"
+   },
+   "homeTeam": {
+    "id": 8509933,
+    "logo": "https://highlightly.net/soccer/images/teams/8509933.png",
+    "name": "CEOV Operário"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298216602,
+   "round": "1/128-finals",
+   "date": "2026-02-26T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 8543973,
+    "logo": "https://highlightly.net/soccer/images/teams/8543973.png",
+    "name": "Primavera SP"
+   },
+   "homeTeam": {
+    "id": 110563,
+    "logo": "https://highlightly.net/soccer/images/teams/110563.png",
+    "name": "Ceará"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289494703,
+   "round": "1/128-finals",
+   "date": "2026-02-26T00:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "4 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 1019431,
+    "logo": "https://highlightly.net/soccer/images/teams/1019431.png",
+    "name": "Botafogo PB"
+   },
+   "homeTeam": {
+    "id": 1885749,
+    "logo": "https://highlightly.net/soccer/images/teams/1885749.png",
+    "name": "Mixto"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298215751,
+   "round": "1/128-finals",
+   "date": "2026-02-25T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 9085209,
+    "logo": null,
+    "name": "Ji-Paraná"
+   },
+   "homeTeam": {
+    "id": 1039855,
+    "logo": "https://highlightly.net/soccer/images/teams/1039855.png",
+    "name": "Ypiranga-RS"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298214900,
+   "round": "1/128-finals",
+   "date": "2026-02-25T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "2 - 2",
+     "penalties": "4 - 5"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 129285,
+    "logo": "https://highlightly.net/soccer/images/teams/129285.png",
+    "name": "Goiás"
+   },
+   "homeTeam": {
+    "id": 1040706,
+    "logo": "https://highlightly.net/soccer/images/teams/1040706.png",
+    "name": "Gama"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289504064,
+   "round": "1/128-finals",
+   "date": "2026-02-25T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 8552483,
+    "logo": null,
+    "name": "Guaraní de Bagé"
+   },
+   "homeTeam": {
+    "id": 6613054,
+    "logo": "https://highlightly.net/soccer/images/teams/6613054.png",
+    "name": "Caxias"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289502362,
+   "round": "1/128-finals",
+   "date": "2026-02-25T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 8508231,
+    "logo": "https://highlightly.net/soccer/images/teams/8508231.png",
+    "name": "Atlético Alagoinhas"
+   },
+   "homeTeam": {
+    "id": 6693899,
+    "logo": "https://highlightly.net/soccer/images/teams/6693899.png",
+    "name": "São Bernardo"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289484491,
+   "round": "1/128-finals",
+   "date": "2026-02-25T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1887451,
+    "logo": null,
+    "name": "Operário Ferroviário"
+   },
+   "homeTeam": {
+    "id": 1027941,
+    "logo": "https://highlightly.net/soccer/images/teams/1027941.png",
+    "name": "ASA"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289481938,
+   "round": "1/128-finals",
+   "date": "2026-02-25T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 9236687,
+    "logo": null,
+    "name": "Independência"
+   },
+   "homeTeam": {
+    "id": 6705813,
+    "logo": "https://highlightly.net/soccer/images/teams/6705813.png",
+    "name": "Águia de Marabá"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289488746,
+   "round": "1/128-finals",
+   "date": "2026-02-25T22:45:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "1 - 4"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 6664965,
+    "logo": null,
+    "name": "Jacuipense"
+   },
+   "homeTeam": {
+    "id": 6613905,
+    "logo": "https://highlightly.net/soccer/images/teams/6613905.png",
+    "name": "Ceilândia"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289490448,
+   "round": "1/128-finals",
+   "date": "2026-02-25T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 9244346,
+    "logo": "https://highlightly.net/soccer/images/teams/9244346.png",
+    "name": "Amazonas"
+   },
+   "homeTeam": {
+    "id": 1884047,
+    "logo": "https://highlightly.net/soccer/images/teams/1884047.png",
+    "name": "Imperatriz"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289483640,
+   "round": "1/128-finals",
+   "date": "2026-02-25T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1016878,
+    "logo": "https://highlightly.net/soccer/images/teams/1016878.png",
+    "name": "Cianorte"
+   },
+   "homeTeam": {
+    "id": 6682836,
+    "logo": "https://highlightly.net/soccer/images/teams/6682836.png",
+    "name": "Anápolis"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289504915,
+   "round": "1/128-finals",
+   "date": "2026-02-25T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "4 - 2"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 9240942,
+    "logo": null,
+    "name": "Oratório"
+   },
+   "homeTeam": {
+    "id": 1895961,
+    "logo": "https://highlightly.net/soccer/images/teams/1895961.png",
+    "name": "Tombense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289503213,
+   "round": "1/128-finals",
+   "date": "2026-02-25T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6665816,
+    "logo": null,
+    "name": "Maranhão AC"
+   },
+   "homeTeam": {
+    "id": 8514188,
+    "logo": "https://highlightly.net/soccer/images/teams/8514188.png",
+    "name": "São Luiz"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289499809,
+   "round": "1/128-finals",
+   "date": "2026-02-25T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1018580,
+    "logo": "https://highlightly.net/soccer/images/teams/1018580.png",
+    "name": "Uberlândia"
+   },
+   "homeTeam": {
+    "id": 11147182,
+    "logo": "https://highlightly.net/soccer/images/teams/11147182.png",
+    "name": "Retrô FC Brasil"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289493001,
+   "round": "1/128-finals",
+   "date": "2026-02-25T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 19422306,
+    "logo": null,
+    "name": "Penedense"
+   },
+   "homeTeam": {
+    "id": 126732,
+    "logo": "https://highlightly.net/soccer/images/teams/126732.png",
+    "name": "Londrina"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298212347,
+   "round": "1/128-finals",
+   "date": "2026-02-25T21:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 642438,
+    "logo": "https://highlightly.net/soccer/images/teams/642438.png",
+    "name": "ABC"
+   },
+   "homeTeam": {
+    "id": 6621564,
+    "logo": "https://highlightly.net/soccer/images/teams/6621564.png",
+    "name": "Madureira EC"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289496405,
+   "round": "1/128-finals",
+   "date": "2026-02-25T21:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "4 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6622415,
+    "logo": "https://highlightly.net/soccer/images/teams/6622415.png",
+    "name": "Nacional AM"
+   },
+   "homeTeam": {
+    "id": 6667518,
+    "logo": "https://highlightly.net/soccer/images/teams/6667518.png",
+    "name": "Novorizontino"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298214049,
+   "round": "1/128-finals",
+   "date": "2026-02-25T19:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 19424859,
+    "logo": null,
+    "name": "Primavera MG"
+   },
+   "homeTeam": {
+    "id": 123328,
+    "logo": "https://highlightly.net/soccer/images/teams/123328.png",
+    "name": "Atlético Goianiense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289492150,
+   "round": "1/128-finals",
+   "date": "2026-02-25T18:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "1 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 10996555,
+    "logo": "https://highlightly.net/soccer/images/teams/10996555.png",
+    "name": "Capital Brasilia"
+   },
+   "homeTeam": {
+    "id": 1042408,
+    "logo": "https://highlightly.net/soccer/images/teams/1042408.png",
+    "name": "Juazeirense"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289487895,
+   "round": "1/128-finals",
+   "date": "2026-02-25T18:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "5 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 118222,
+    "logo": "https://highlightly.net/soccer/images/teams/118222.png",
+    "name": "Guaraní Campinas"
+   },
+   "homeTeam": {
+    "id": 11169308,
+    "logo": "https://highlightly.net/soccer/images/teams/11169308.png",
+    "name": "Castanhal"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1298213198,
+   "round": "1/128-finals",
+   "date": "2026-02-25T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "4 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 17685415,
+    "logo": null,
+    "name": "Maguary PE"
+   },
+   "homeTeam": {
+    "id": 131838,
+    "logo": "https://highlightly.net/soccer/images/teams/131838.png",
+    "name": "Fortaleza"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289482789,
+   "round": "1/128-finals",
+   "date": "2026-02-25T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 10992300,
+    "logo": "https://highlightly.net/soccer/images/teams/10992300.png",
+    "name": "GAS"
+   },
+   "homeTeam": {
+    "id": 1901067,
+    "logo": "https://highlightly.net/soccer/images/teams/1901067.png",
+    "name": "América-RN"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289491299,
+   "round": "1/128-finals",
+   "date": "2026-02-24T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 128434,
+    "logo": "https://highlightly.net/soccer/images/teams/128434.png",
+    "name": "CSA"
+   },
+   "homeTeam": {
+    "id": 677329,
+    "logo": "https://highlightly.net/soccer/images/teams/677329.png",
+    "name": "Joinville"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289486193,
+   "round": "1/128-finals",
+   "date": "2026-02-24T19:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6666667,
+    "logo": null,
+    "name": "Maringá"
+   },
+   "homeTeam": {
+    "id": 1878090,
+    "logo": "https://highlightly.net/soccer/images/teams/1878090.png",
+    "name": "Boavista"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289481087,
+   "round": "1/256-finals",
+   "date": "2026-02-20T00:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "2 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 8545675,
+    "logo": "https://highlightly.net/soccer/images/teams/8545675.png",
+    "name": "Velo Clube"
+   },
+   "homeTeam": {
+    "id": 5421654,
+    "logo": null,
+    "name": "Vasco da Gama AC"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289478534,
+   "round": "1/256-finals",
+   "date": "2026-02-19T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 1878941,
+    "logo": "https://highlightly.net/soccer/images/teams/1878941.png",
+    "name": "Bragantino PA"
+   },
+   "homeTeam": {
+    "id": 19424859,
+    "logo": null,
+    "name": "Primavera MG"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289473428,
+   "round": "1/256-finals",
+   "date": "2026-02-19T00:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "2 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 11016128,
+    "logo": null,
+    "name": "Guaporé"
+   },
+   "homeTeam": {
+    "id": 1045812,
+    "logo": "https://highlightly.net/soccer/images/teams/1045812.png",
+    "name": "Galvez"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289475981,
+   "round": "1/256-finals",
+   "date": "2026-02-18T23:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 19427412,
+    "logo": null,
+    "name": "Portuguesa MS"
+   },
+   "homeTeam": {
+    "id": 9085209,
+    "logo": null,
+    "name": "Ji-Paraná"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289475130,
+   "round": "1/256-finals",
+   "date": "2026-02-18T23:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 9243495,
+    "logo": null,
+    "name": "Independente AP"
+   },
+   "homeTeam": {
+    "id": 9095421,
+    "logo": null,
+    "name": "Ivinhema"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289480236,
+   "round": "1/256-finals",
+   "date": "2026-02-18T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 13281490,
+    "logo": null,
+    "name": "IAPE"
+   },
+   "homeTeam": {
+    "id": 18047941,
+    "logo": null,
+    "name": "Santa Catarina"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289474279,
+   "round": "1/256-finals",
+   "date": "2026-02-18T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 19708242,
+    "logo": null,
+    "name": "Monte Roraima"
+   },
+   "homeTeam": {
+    "id": 1040706,
+    "logo": "https://highlightly.net/soccer/images/teams/1040706.png",
+    "name": "Gama"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289472577,
+   "round": "1/256-finals",
+   "date": "2026-02-18T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 11143778,
+    "logo": null,
+    "name": "Piauí"
+   },
+   "homeTeam": {
+    "id": 10448511,
+    "logo": "https://highlightly.net/soccer/images/teams/10448511.png",
+    "name": "Ipatinga"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289470024,
+   "round": "1/256-finals",
+   "date": "2026-02-18T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "3 - 5"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 15998733,
+    "logo": null,
+    "name": "Pague Menos"
+   },
+   "homeTeam": {
+    "id": 15572382,
+    "logo": "https://highlightly.net/soccer/images/teams/15572382.png",
+    "name": "América SE"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289470875,
+   "round": "1/256-finals",
+   "date": "2026-02-18T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 8543973,
+    "logo": "https://highlightly.net/soccer/images/teams/8543973.png",
+    "name": "Primavera SP"
+   },
+   "homeTeam": {
+    "id": 10459574,
+    "logo": "https://highlightly.net/soccer/images/teams/10459574.png",
+    "name": "Araguaína"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289471726,
+   "round": "1/256-finals",
+   "date": "2026-02-18T20:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 6621564,
+    "logo": "https://highlightly.net/soccer/images/teams/6621564.png",
+    "name": "Madureira EC"
+   },
+   "homeTeam": {
+    "id": 6672624,
+    "logo": "https://highlightly.net/soccer/images/teams/6672624.png",
+    "name": "Baré"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289476832,
+   "round": "1/256-finals",
+   "date": "2026-02-18T19:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 21380457,
+    "logo": null,
+    "name": "Laguna"
+   },
+   "homeTeam": {
+    "id": 17685415,
+    "logo": null,
+    "name": "Maguary PE"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289477683,
+   "round": "1/256-finals",
+   "date": "2026-02-18T19:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 17624994,
+    "logo": null,
+    "name": "Serra Branca"
+   },
+   "homeTeam": {
+    "id": 20076725,
+    "logo": null,
+    "name": "Porto BA"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1289479385,
+   "round": "1/256-finals",
+   "date": "2026-02-17T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "1 - 1",
+     "penalties": "1 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 6686240,
+    "logo": "https://highlightly.net/soccer/images/teams/6686240.png",
+    "name": "Desportiva ES"
+   },
+   "homeTeam": {
+    "id": 11161649,
+    "logo": null,
+    "name": "Sampaio Corrêa"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  }
+ ],
+ "_coletado_em": "2026-10-17T03:02:19.687353+00:00"
+}

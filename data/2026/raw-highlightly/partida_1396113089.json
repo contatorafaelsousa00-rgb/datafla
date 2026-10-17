@@ -12,7 +12,7 @@
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "13.66°C"
+   "temperature": "13.7°C"
   },
   "events": [
    {
@@ -348,6 +348,50 @@
       "away": "42.93%",
       "draw": "31.48%",
       "home": "25.59%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-16T08:08:08.647Z",
+     "probabilities": {
+      "away": "44.43%",
+      "draw": "31.12%",
+      "home": "24.45%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-16T12:13:23.082Z",
+     "probabilities": {
+      "away": "44.43%",
+      "draw": "31.12%",
+      "home": "24.45%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-16T16:38:27.703Z",
+     "probabilities": {
+      "away": "44.43%",
+      "draw": "31.12%",
+      "home": "24.45%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-16T21:26:52.414Z",
+     "probabilities": {
+      "away": "44.43%",
+      "draw": "31.12%",
+      "home": "24.45%"
      }
     }
    ]
@@ -714,8 +758,8 @@
    "name": "Flamengo",
    "topPlayers": [
     {
-     "name": "Gonzalo Plata",
      "position": "Attacker",
+     "name": "Gonzalo Plata",
      "statistics": [
       {
        "name": "Expected Goals",
@@ -732,8 +776,8 @@
      ]
     },
     {
-     "name": "Erick Pulgar",
      "position": "Midfielder",
+     "name": "Erick Pulgar",
      "statistics": [
       {
        "name": "Expected Goals",
@@ -750,8 +794,8 @@
      ]
     },
     {
-     "name": "Emerson Royal",
      "position": "Defender",
+     "name": "Emerson Royal",
      "statistics": [
       {
        "name": "Interceptions",
@@ -770,34 +814,34 @@
    ],
    "shots": [
     {
+     "playerName": "Bruno Henrique",
      "time": "8'",
      "outcome": "Missed",
-     "goalTarget": null,
-     "playerName": "Bruno Henrique"
+     "goalTarget": null
     },
     {
+     "playerName": "Saúl Ñíguez",
      "time": "45 + 2'",
      "outcome": "Missed",
-     "goalTarget": null,
-     "playerName": "Saúl Ñíguez"
+     "goalTarget": null
     },
     {
+     "playerName": "Jorge Carrascal",
      "time": "49'",
      "outcome": "Missed",
-     "goalTarget": "High Right",
-     "playerName": "Jorge Carrascal"
+     "goalTarget": "High Right"
     },
     {
+     "playerName": "Bruno Henrique",
      "time": "68'",
      "outcome": "Blocked",
-     "goalTarget": "Low Right",
-     "playerName": "Bruno Henrique"
+     "goalTarget": "Low Right"
     },
     {
+     "playerName": "Emerson Royal",
      "time": "76'",
      "outcome": "Missed",
-     "goalTarget": null,
-     "playerName": "Emerson Royal"
+     "goalTarget": null
     }
    ]
   },
@@ -807,8 +851,8 @@
    "name": "Estudiantes de La Plata",
    "topPlayers": [
     {
-     "name": "Guido Carrillo",
      "position": "Attacker",
+     "name": "Guido Carrillo",
      "statistics": [
       {
        "name": "Expected Goals",
@@ -825,8 +869,8 @@
      ]
     },
     {
-     "name": "Joaquin Tobio Burgos",
      "position": "Midfielder",
+     "name": "Joaquin Tobio Burgos",
      "statistics": [
       {
        "name": "Expected Goals",
@@ -843,8 +887,8 @@
      ]
     },
     {
-     "name": "Santiago Núñez",
      "position": "Defender",
+     "name": "Santiago Núñez",
      "statistics": [
       {
        "name": "Interceptions",
@@ -863,130 +907,130 @@
    ],
    "shots": [
     {
+     "playerName": "Baltasar Rodríguez",
      "time": "3'",
      "outcome": "Blocked",
-     "goalTarget": "Low Left",
-     "playerName": "Baltasar Rodríguez"
+     "goalTarget": "Low Left"
     },
     {
+     "playerName": "Tiago Palacios",
      "time": "3'",
      "outcome": "Saved",
-     "goalTarget": "Low Left",
-     "playerName": "Tiago Palacios"
+     "goalTarget": "Low Left"
     },
     {
+     "playerName": "Tiago Palacios",
      "time": "3'",
      "outcome": "Blocked",
-     "goalTarget": "Low Centre",
-     "playerName": "Tiago Palacios"
+     "goalTarget": "Low Centre"
     },
     {
+     "playerName": "Ezequiel Piovi",
      "time": "3'",
      "outcome": "Missed",
-     "goalTarget": null,
-     "playerName": "Ezequiel Piovi"
+     "goalTarget": null
     },
     {
+     "playerName": "Baltasar Rodríguez",
      "time": "16'",
      "outcome": "Blocked",
-     "goalTarget": "Low Centre",
-     "playerName": "Baltasar Rodríguez"
+     "goalTarget": "Low Centre"
     },
     {
+     "playerName": "Santiago Núñez",
      "time": "19'",
      "outcome": "Saved",
-     "goalTarget": "Low Centre",
-     "playerName": "Santiago Núñez"
+     "goalTarget": "Low Centre"
     },
     {
+     "playerName": "Tiago Palacios",
      "time": "28'",
      "outcome": "Missed",
-     "goalTarget": null,
-     "playerName": "Tiago Palacios"
+     "goalTarget": null
     },
     {
+     "playerName": "Guido Carrillo",
      "time": "28'",
      "outcome": "Missed",
-     "goalTarget": "CloseLeft",
-     "playerName": "Guido Carrillo"
+     "goalTarget": "CloseLeft"
     },
     {
+     "playerName": "Joaquin Tobio Burgos",
      "time": "32'",
      "outcome": "Missed",
-     "goalTarget": null,
-     "playerName": "Joaquin Tobio Burgos"
+     "goalTarget": null
     },
     {
+     "playerName": "Tiago Palacios",
      "time": "33'",
      "outcome": "Blocked",
-     "goalTarget": "Low Centre",
-     "playerName": "Tiago Palacios"
+     "goalTarget": "Low Centre"
     },
     {
+     "playerName": "Baltasar Rodríguez",
      "time": "38'",
      "outcome": "Blocked",
-     "goalTarget": "Low Centre",
-     "playerName": "Baltasar Rodríguez"
+     "goalTarget": "Low Centre"
     },
     {
+     "playerName": "Santiago Núñez",
      "time": "39'",
      "outcome": "Saved",
-     "goalTarget": "Low Centre",
-     "playerName": "Santiago Núñez"
+     "goalTarget": "Low Centre"
     },
     {
+     "playerName": "Guido Carrillo",
      "time": "45'",
      "outcome": "Saved",
-     "goalTarget": "Low Centre",
-     "playerName": "Guido Carrillo"
+     "goalTarget": "Low Centre"
     },
     {
+     "playerName": "Eros Mancuso",
      "time": "51'",
      "outcome": "Missed",
-     "goalTarget": null,
-     "playerName": "Eros Mancuso"
+     "goalTarget": null
     },
     {
+     "playerName": "Tiago Palacios",
      "time": "53'",
      "outcome": "Missed",
-     "goalTarget": null,
-     "playerName": "Tiago Palacios"
+     "goalTarget": null
     },
     {
+     "playerName": "Santiago Núñez",
      "time": "58'",
      "outcome": "Missed",
-     "goalTarget": "CloseLeft",
-     "playerName": "Santiago Núñez"
+     "goalTarget": "CloseLeft"
     },
     {
+     "playerName": "Baltasar Rodríguez",
      "time": "72'",
      "outcome": "Saved",
-     "goalTarget": "Low Left",
-     "playerName": "Baltasar Rodríguez"
+     "goalTarget": "Low Left"
     },
     {
+     "playerName": "Ramiro Funes Mori",
      "time": "73'",
      "outcome": "Missed",
-     "goalTarget": null,
-     "playerName": "Ramiro Funes Mori"
+     "goalTarget": null
     },
     {
+     "playerName": "Edwuin Cetre",
      "time": "78'",
      "outcome": "Missed",
-     "goalTarget": "CloseLeft",
-     "playerName": "Edwuin Cetre"
+     "goalTarget": "CloseLeft"
     },
     {
+     "playerName": "Santiago Núñez",
      "time": "79'",
      "outcome": "Blocked",
-     "goalTarget": "Low Centre",
-     "playerName": "Santiago Núñez"
+     "goalTarget": "Low Centre"
     },
     {
+     "playerName": "Edwuin Cetre",
      "time": "83'",
      "outcome": "Saved",
-     "goalTarget": "Low Left",
-     "playerName": "Edwuin Cetre"
+     "goalTarget": "Low Left"
     }
    ]
   },
@@ -3358,5 +3402,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-16T02:45:25.354410+00:00"
+ "_coletado_em": "2026-10-17T03:00:56.326465+00:00"
 }

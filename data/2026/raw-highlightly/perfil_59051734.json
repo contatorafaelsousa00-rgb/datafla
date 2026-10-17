@@ -1,0 +1,149 @@
+{
+ "data": [
+  {
+   "id": 59051734,
+   "logo": null,
+   "name": "Iago",
+   "fullName": "Iago Teodoro da Silva Nogueira",
+   "profile": {
+    "club": {
+     "current": "Orlando City SC",
+     "joinedAt": "07/02/2026",
+     "contractExpiry": "30/06/2029",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,88 m",
+    "fullName": "Iago Teodoro da Silva Nogueira",
+    "position": {
+     "main": "Centre-Back",
+     "secondary": null
+    },
+    "birthDate": "18/04/2005",
+    "deathDate": null,
+    "birthPlace": "Volta Redonda",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Orlando City SC",
+      "rumourDate": "19/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Esporte Clube Bahia",
+      "rumourDate": "11/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Club Brugge KV",
+      "rumourDate": "11/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Brentford FC",
+      "rumourDate": "11/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Everton FC",
+      "rumourDate": "11/01/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Orlando City SC",
+      "rumourDate": "19/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Esporte Clube Bahia",
+      "rumourDate": "11/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Club Brugge KV",
+      "rumourDate": "11/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Brentford FC",
+      "rumourDate": "11/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Everton FC",
+      "rumourDate": "11/01/2026",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Orlando",
+     "fee": "€1.20M",
+     "from": "Flamengo",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": "€1.00M",
+     "transferDate": "Feb 7, 2026"
+    },
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Flamengo U20",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": "€1.00M",
+     "transferDate": "Jan 1, 2026"
+    },
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2023"
+    },
+    {
+     "to": "Flamengo U17",
+     "fee": null,
+     "from": "V. Redonda U20",
+     "type": "transfer",
+     "season": "20/21",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2021"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 21,
+     "club": "Orlando City SC",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "02/06/2026"
+    },
+    {
+     "age": 20,
+     "club": "Orlando City SC",
+     "value": 1200000,
+     "currency": "€",
+     "recordedDate": "07/04/2026"
+    },
+    {
+     "age": 20,
+     "club": "CR Flamengo U20",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "25/09/2025"
+    }
+   ],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-17T03:01:42.421668+00:00"
+}
