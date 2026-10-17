@@ -1,0 +1,138 @@
+{
+ "data": [
+  {
+   "id": 91834554,
+   "logo": null,
+   "name": "Ryan Roberto de Oliveira Dantas",
+   "fullName": null,
+   "profile": {
+    "club": {
+     "current": "Shakhtar Donetsk",
+     "joinedAt": "01/07/2026",
+     "contractExpiry": "30/06/2031",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,78 m",
+    "fullName": "Ryan Roberto de Oliveira Dantas",
+    "position": {
+     "main": "Left Winger",
+     "secondary": "Attacking Midfield, Right Winger"
+    },
+    "birthDate": "05/03/2008",
+    "deathDate": null,
+    "birthPlace": "São Paulo",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "SL Benfica",
+      "rumourDate": "13/05/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "LOSC Lille",
+      "rumourDate": "03/05/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CSKA Moscow",
+      "rumourDate": "22/04/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "17/04/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Shakhtar Donetsk",
+      "rumourDate": "17/04/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Shakhtar Donetsk",
+      "rumourDate": "13/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Trabzonspor",
+      "rumourDate": "11/06/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SL Benfica",
+      "rumourDate": "13/05/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "LOSC Lille",
+      "rumourDate": "03/05/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CSKA Moscow",
+      "rumourDate": "22/04/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Barcelona",
+      "rumourDate": "17/04/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Ajax Amsterdam",
+      "rumourDate": "14/07/2025",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/who-is-dell-brazilian-wonderkid-compared-to-erling-halaand-with-dreams-of-man-city/view/news/462833",
+     "date": "Nov 14, 2025",
+     "title": "Who is Dell? Brazilian wonderkid compared to Erling Halaand with 'dreams' of Man City"
+    },
+    {
+     "url": "https://www.transfermarkt.com/who-is-ryan-roberto-barcelona-want-flamengo-wonderkid-compared-to-neymar-amp-vinicius-jr/view/news/457274",
+     "date": "Jul 18, 2025",
+     "title": "Who is Ryan Roberto? Barcelona want Flamengo wonderkid compared to Neymar & Vinicius Jr"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Shakhtar D.",
+     "fee": "€9.00M",
+     "from": "Flamengo U20",
+     "type": "transfer",
+     "season": "26/27",
+     "marketValue": null,
+     "transferDate": "Jul 1, 2026"
+    },
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2026"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 18,
+     "club": "Shakhtar Donetsk",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "21/09/2026"
+    }
+   ],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-17T21:30:56.599864+00:00"
+}

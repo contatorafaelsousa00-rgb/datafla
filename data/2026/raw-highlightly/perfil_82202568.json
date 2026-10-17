@@ -1,0 +1,48 @@
+{
+ "data": [
+  {
+   "id": 82202568,
+   "logo": null,
+   "name": "Luiz Felipe",
+   "fullName": "Luiz Felipe Mariano dos Santos",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo U20",
+     "joinedAt": "01/01/2026",
+     "contractExpiry": "-",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,83 m",
+    "fullName": "Luiz Felipe Mariano dos Santos",
+    "position": {
+     "main": "Defensive Midfield",
+     "secondary": "Central Midfield"
+    },
+    "birthDate": "08/02/2008",
+    "deathDate": null,
+    "birthPlace": "Chapecó",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [],
+    "historical": []
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2026"
+    }
+   ],
+   "marketValue": [],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-17T21:30:53.612746+00:00"
+}

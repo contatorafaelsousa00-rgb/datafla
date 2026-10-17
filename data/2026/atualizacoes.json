@@ -119,5 +119,23 @@
   "requisicoes": 67,
   "cota_restante": 33,
   "erro": null
+ },
+ {
+  "quando": "2026-10-17T21:31:03+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Bahia em menos de 24 h: renova previsão, árbitro e clima",
+  "novos": [],
+  "recoletados": [
+   {
+    "adversario": "Estudiantes de La Plata",
+    "data_utc": "2026-10-16T00:30:00.000Z",
+    "competicao": "CONMEBOL Libertadores"
+   }
+  ],
+  "encerrados": 59,
+  "pendentes": 0,
+  "requisicoes": 29,
+  "cota_restante": 4,
+  "erro": null
  }
 ]

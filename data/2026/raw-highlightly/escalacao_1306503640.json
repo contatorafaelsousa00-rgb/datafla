@@ -1,0 +1,307 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Andrew",
+     "number": 42,
+     "position": "Goalkeeper",
+     "id": 12965162
+    },
+    {
+     "name": "Guillermo Varela",
+     "number": 2,
+     "position": "Defender",
+     "id": 207844
+    },
+    {
+     "name": "Léo Ortiz",
+     "number": 3,
+     "position": "Defender",
+     "id": 1522892
+    },
+    {
+     "name": "Alex Sandro",
+     "number": 26,
+     "position": "Defender",
+     "id": 138614
+    },
+    {
+     "name": "Vitão",
+     "number": 44,
+     "position": "Defender",
+     "id": 1595503
+    },
+    {
+     "name": "Gonzalo Plata",
+     "number": 19,
+     "position": "Midfielder",
+     "id": 2635563
+    },
+    {
+     "name": "Nicolás de la Cruz",
+     "number": 18,
+     "position": "Midfielder",
+     "id": 965349
+    },
+    {
+     "name": "Saul Niguez",
+     "number": 8,
+     "position": "Midfielder",
+     "id": 7882
+    },
+    {
+     "name": "Luiz Araújo",
+     "number": 7,
+     "position": "Midfielder",
+     "id": 3580472
+    },
+    {
+     "name": "Pedro",
+     "number": 9,
+     "position": "Forward",
+     "id": 1661835
+    },
+    {
+     "name": "Wallace Yan",
+     "number": 64,
+     "position": "Forward",
+     "id": 65230914
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Agustín Rossi",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 1892870
+     }
+    ],
+    [
+     {
+      "name": "Ayrton Lucas",
+      "number": 6,
+      "position": "Defender",
+      "id": 285285
+     },
+     {
+      "name": "Leo Pereira",
+      "number": 4,
+      "position": "Defender",
+      "id": 1630118
+     },
+     {
+      "name": "Danilo",
+      "number": 13,
+      "position": "Defender",
+      "id": 99652
+     },
+     {
+      "name": "Emerson Royal",
+      "number": 22,
+      "position": "Defender",
+      "id": 252280
+     }
+    ],
+    [
+     {
+      "name": "Lucas Paquetá",
+      "number": 20,
+      "position": "Midfielder",
+      "id": 265160
+     },
+     {
+      "name": "Evertton Araujo",
+      "number": 52,
+      "position": "Midfielder",
+      "id": 53557448
+     }
+    ],
+    [
+     {
+      "name": "Samuel Lino",
+      "number": 16,
+      "position": "Midfielder",
+      "id": 20436850
+     },
+     {
+      "name": "Giorgian de Arrascaeta",
+      "number": 10,
+      "position": "Midfielder",
+      "id": 420686
+     },
+     {
+      "name": "Jorge Carrascal",
+      "number": 15,
+      "position": "Midfielder",
+      "id": 965188
+     }
+    ],
+    [
+     {
+      "name": "Bruno Henrique",
+      "number": 27,
+      "position": "Forward",
+      "id": 1639134
+     }
+    ]
+   ],
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo"
+  },
+  "awayTeam": {
+   "formation": "4-3-3",
+   "substitutes": [
+    {
+     "name": "Salvador Ichazo",
+     "number": 1,
+     "position": "Goalkeeper",
+     "id": 4909527
+    },
+    {
+     "name": "Marlon Balanta",
+     "number": 3,
+     "position": "Defender",
+     "id": 89356603
+    },
+    {
+     "name": "Luis Escorcia",
+     "number": 5,
+     "position": "Defender",
+     "id": 56174020
+    },
+    {
+     "name": "Málcom Palacios",
+     "number": 23,
+     "position": "Defender",
+     "id": 60512648
+    },
+    {
+     "name": "Hayen Palacios",
+     "number": 30,
+     "position": "Defender",
+     "id": 2143547
+    },
+    {
+     "name": "Juan Viveros",
+     "number": 88,
+     "position": "Defender",
+     "id": 87300633
+    },
+    {
+     "name": "Daniel Cataño",
+     "number": 10,
+     "position": "Midfielder",
+     "id": 2152080
+    },
+    {
+     "name": "Halam Loboa",
+     "number": 16,
+     "position": "Midfielder",
+     "id": 83995464
+    },
+    {
+     "name": "Diego Moreno",
+     "number": 31,
+     "position": "Midfielder",
+     "id": 2134853
+    },
+    {
+     "name": "Alan Valdelamar",
+     "number": 45,
+     "position": "Midfielder",
+     "id": 103425588
+    },
+    {
+     "name": "John Edwin Montaño",
+     "number": 20,
+     "position": "Forward",
+     "id": 66707767
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Eder Chaux",
+      "number": 25,
+      "position": "Goalkeeper",
+      "id": 2205210
+     }
+    ],
+    [
+     {
+      "name": "Frank Fabra",
+      "number": 18,
+      "position": "Defender",
+      "id": 960197
+     },
+     {
+      "name": "José Ortiz",
+      "number": 24,
+      "position": "Defender",
+      "id": 2163833
+     },
+     {
+      "name": "Daniel Londoño",
+      "number": 33,
+      "position": "Defender",
+      "id": 13046467
+     },
+     {
+      "name": "Léyser Chaverra",
+      "number": 2,
+      "position": "Defender",
+      "id": 9587060
+     }
+    ],
+    [
+     {
+      "name": "Baldomero Perlaza",
+      "number": 14,
+      "position": "Midfielder",
+      "id": 2218573
+     },
+     {
+      "name": "Alexis Serna",
+      "number": 8,
+      "position": "Midfielder",
+      "id": 2118109
+     },
+     {
+      "name": "Esneyder Mena",
+      "number": 26,
+      "position": "Midfielder",
+      "id": 5856368
+     }
+    ],
+    [
+     {
+      "name": "Yony Gonzalez",
+      "number": 11,
+      "position": "Midfielder",
+      "id": 1662962
+     },
+     {
+      "name": "Francisco Fydriszewski",
+      "number": 19,
+      "position": "Forward",
+      "id": 1023792
+     },
+     {
+      "name": "Francisco Chaverra",
+      "number": 13,
+      "position": "Midfielder",
+      "id": 2191847
+     }
+    ]
+   ],
+   "id": 960712,
+   "logo": "https://highlightly.net/soccer/images/teams/960712.png",
+   "name": "Independiente Medellin"
+  }
+ },
+ "_coletado_em": "2026-10-17T21:30:47.553246+00:00"
+}

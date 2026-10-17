@@ -1,0 +1,522 @@
+{
+ "data": [
+  {
+   "id": 1661513,
+   "logo": null,
+   "name": "Allan",
+   "fullName": "Allan Rodrigues de Souza",
+   "profile": {
+    "club": {
+     "current": "Sport Club Corinthians Paulista",
+     "joinedAt": "06/02/2026",
+     "contractExpiry": "31/12/2026",
+     "latestContractExtension": null
+    },
+    "foot": "left",
+    "height": "1,72 m",
+    "fullName": "Allan Rodrigues de Souza",
+    "position": {
+     "main": "Defensive Midfield",
+     "secondary": "Central Midfield"
+    },
+    "birthDate": "03/03/1997",
+    "deathDate": null,
+    "birthPlace": "Araçatuba",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [],
+    "historical": [
+     {
+      "club": "Sport Club Corinthians Paulista",
+      "rumourDate": "07/02/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Clube de Regatas Vasco da Gama",
+      "rumourDate": "06/02/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "12/06/2023",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fluminense Football Club",
+      "rumourDate": "16/02/2019",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Eintracht Frankfurt",
+      "rumourDate": "25/07/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Hannover 96",
+      "rumourDate": "04/08/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Hertha BSC",
+      "rumourDate": "20/07/2017",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Hertha BSC",
+      "rumourDate": "05/08/2016",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sint-Truidense VV",
+      "rumourDate": "11/01/2016",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/everton-amp-nottingham-forest-charged-for-psr-breaches-both-clubs-doomed-to-relegation-/view/news/432440",
+     "date": "Jan 15, 2024",
+     "title": "Everton & Nottingham Forest charged for PSR breaches - Both clubs doomed to relegation?"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Corinthians",
+     "type": "end of loan",
+     "season": "26/27",
+     "marketValue": "€2.00M",
+     "transferDate": "Dec 31, 2026"
+    },
+    {
+     "to": "Corinthians",
+     "fee": null,
+     "from": "Flamengo",
+     "type": "loan",
+     "season": "25/26",
+     "marketValue": "€3.00M",
+     "transferDate": "Feb 6, 2026"
+    },
+    {
+     "to": "Flamengo",
+     "fee": "€8.20M",
+     "from": "Atlético-MG",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": "€7.00M",
+     "transferDate": "Jul 1, 2023"
+    },
+    {
+     "to": "Atlético-MG",
+     "fee": "€3.50M",
+     "from": "Liverpool",
+     "type": "transfer",
+     "season": "19/20",
+     "marketValue": "€2.00M",
+     "transferDate": "Jan 1, 2020"
+    },
+    {
+     "to": "Liverpool",
+     "fee": null,
+     "from": "Fluminense",
+     "type": "end of loan",
+     "season": "19/20",
+     "marketValue": "€2.00M",
+     "transferDate": "Dec 31, 2019"
+    },
+    {
+     "to": "Fluminense",
+     "fee": null,
+     "from": "Liverpool",
+     "type": "loan",
+     "season": "18/19",
+     "marketValue": "€1.00M",
+     "transferDate": "Feb 15, 2019"
+    },
+    {
+     "to": "Liverpool U21",
+     "fee": null,
+     "from": "Frankfurt",
+     "type": "end of loan",
+     "season": "18/19",
+     "marketValue": "€1.00M",
+     "transferDate": "Jan 31, 2019"
+    },
+    {
+     "to": "Frankfurt",
+     "fee": null,
+     "from": "Liverpool U21",
+     "type": "loan",
+     "season": "18/19",
+     "marketValue": "€1.20M",
+     "transferDate": "Jul 25, 2018"
+    },
+    {
+     "to": "Liverpool U21",
+     "fee": null,
+     "from": "Apol. Limassol",
+     "type": "end of loan",
+     "season": "17/18",
+     "marketValue": "€1.20M",
+     "transferDate": "Jun 30, 2018"
+    },
+    {
+     "to": "Apol. Limassol",
+     "fee": null,
+     "from": "Liverpool U21",
+     "type": "loan",
+     "season": "17/18",
+     "marketValue": "€1.50M",
+     "transferDate": "Aug 31, 2017"
+    },
+    {
+     "to": "Liverpool U21",
+     "fee": null,
+     "from": "Hertha BSC",
+     "type": "end of loan",
+     "season": "16/17",
+     "marketValue": "€1.50M",
+     "transferDate": "Jun 30, 2017"
+    },
+    {
+     "to": "Hertha BSC",
+     "fee": null,
+     "from": "Liverpool U21",
+     "type": "loan",
+     "season": "16/17",
+     "marketValue": "€800.00K",
+     "transferDate": "Aug 5, 2016"
+    },
+    {
+     "to": "Liverpool U21",
+     "fee": null,
+     "from": "Sint-Truiden",
+     "type": "end of loan",
+     "season": "15/16",
+     "marketValue": "€400.00K",
+     "transferDate": "Jun 30, 2016"
+    },
+    {
+     "to": "Sint-Truiden",
+     "fee": null,
+     "from": "Liverpool U21",
+     "type": "loan",
+     "season": "15/16",
+     "marketValue": "€400.00K",
+     "transferDate": "Jan 18, 2016"
+    },
+    {
+     "to": "Liverpool U21",
+     "fee": null,
+     "from": "SJK Seinäjoki",
+     "type": "end of loan",
+     "season": "15/16",
+     "marketValue": "€400.00K",
+     "transferDate": "Dec 31, 2015"
+    },
+    {
+     "to": "SJK Seinäjoki",
+     "fee": null,
+     "from": "Liverpool U21",
+     "type": "loan",
+     "season": "15/16",
+     "marketValue": null,
+     "transferDate": "Sep 2, 2015"
+    },
+    {
+     "to": "Liverpool U21",
+     "fee": "€700.00K",
+     "from": "Inter U20",
+     "type": "transfer",
+     "season": "15/16",
+     "marketValue": null,
+     "transferDate": "Aug 1, 2015"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 29,
+     "club": "Sport Club Corinthians Paulista",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "28/09/2026"
+    },
+    {
+     "age": 29,
+     "club": "Sport Club Corinthians Paulista",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "26/05/2026"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "17/06/2024"
+    },
+    {
+     "age": 27,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "28/03/2024"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    },
+    {
+     "age": 26,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "25/07/2023"
+    },
+    {
+     "age": 26,
+     "club": "Clube Atlético Mineiro",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "07/04/2023"
+    },
+    {
+     "age": 25,
+     "club": "Clube Atlético Mineiro",
+     "value": 6500000,
+     "currency": "€",
+     "recordedDate": "14/11/2022"
+    },
+    {
+     "age": 25,
+     "club": "Clube Atlético Mineiro",
+     "value": 6500000,
+     "currency": "€",
+     "recordedDate": "19/08/2022"
+    },
+    {
+     "age": 25,
+     "club": "Clube Atlético Mineiro",
+     "value": 6500000,
+     "currency": "€",
+     "recordedDate": "06/04/2022"
+    },
+    {
+     "age": 24,
+     "club": "Clube Atlético Mineiro",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "17/12/2021"
+    },
+    {
+     "age": 24,
+     "club": "Clube Atlético Mineiro",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "28/05/2021"
+    },
+    {
+     "age": 23,
+     "club": "Clube Atlético Mineiro",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "09/02/2021"
+    },
+    {
+     "age": 23,
+     "club": "Clube Atlético Mineiro",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "09/09/2020"
+    },
+    {
+     "age": 23,
+     "club": "Clube Atlético Mineiro",
+     "value": 1600000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 22,
+     "club": "Fluminense Football Club",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "27/11/2019"
+    },
+    {
+     "age": 22,
+     "club": "Fluminense Football Club",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "15/08/2019"
+    },
+    {
+     "age": 21,
+     "club": "Eintracht Frankfurt",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "18/12/2018"
+    },
+    {
+     "age": 21,
+     "club": "Apollon Limassol",
+     "value": 1250000,
+     "currency": "€",
+     "recordedDate": "26/04/2018"
+    },
+    {
+     "age": 20,
+     "club": "Apollon Limassol",
+     "value": 1250000,
+     "currency": "€",
+     "recordedDate": "13/11/2017"
+    },
+    {
+     "age": 20,
+     "club": "Hertha BSC",
+     "value": 1500000,
+     "currency": "€",
+     "recordedDate": "19/06/2017"
+    },
+    {
+     "age": 19,
+     "club": "Hertha BSC",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "07/02/2017"
+    },
+    {
+     "age": 19,
+     "club": "Liverpool FC U23",
+     "value": 800000,
+     "currency": "€",
+     "recordedDate": "15/07/2016"
+    },
+    {
+     "age": 18,
+     "club": "SJK Seinäjoki",
+     "value": 400000,
+     "currency": "€",
+     "recordedDate": "02/11/2015"
+    },
+    {
+     "age": 18,
+     "club": "SJK Seinäjoki",
+     "value": 200000,
+     "currency": "€",
+     "recordedDate": "23/09/2015"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Heel spur",
+     "season": "2026",
+     "toDate": "24.01.2026",
+     "fromDate": "14.10.2025",
+     "missedGames": 19,
+     "absentDurationInDays": 103
+    },
+    {
+     "reason": "Heel spur",
+     "season": "2026",
+     "toDate": "26.07.2025",
+     "fromDate": "21.07.2025",
+     "missedGames": 1,
+     "absentDurationInDays": 6
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "27.05.2025",
+     "fromDate": "11.05.2025",
+     "missedGames": 4,
+     "absentDurationInDays": 17
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2024",
+     "toDate": "20.06.2024",
+     "fromDate": "03.06.2024",
+     "missedGames": 2,
+     "absentDurationInDays": 18
+    },
+    {
+     "reason": "Corona virus",
+     "season": "2021",
+     "toDate": "28.11.2020",
+     "fromDate": "18.11.2020",
+     "missedGames": 3,
+     "absentDurationInDays": 11
+    },
+    {
+     "reason": "Fitness",
+     "season": "2019",
+     "toDate": "20.01.2019",
+     "fromDate": "01.01.2019",
+     "missedGames": 1,
+     "absentDurationInDays": 20
+    },
+    {
+     "reason": "Outer ligament tear",
+     "season": "2019",
+     "toDate": "31.12.2018",
+     "fromDate": "22.11.2018",
+     "missedGames": 8,
+     "absentDurationInDays": 40
+    },
+    {
+     "reason": "Arm injury",
+     "season": "2018",
+     "toDate": "05.07.2018",
+     "fromDate": "01.04.2018",
+     "missedGames": 10,
+     "absentDurationInDays": 96
+    },
+    {
+     "reason": "Muscular problems",
+     "season": "2017",
+     "toDate": "04.05.2017",
+     "fromDate": "01.05.2017",
+     "missedGames": null,
+     "absentDurationInDays": 4
+    },
+    {
+     "reason": "Facial injury",
+     "season": "2016",
+     "toDate": "21.09.2015",
+     "fromDate": "21.09.2015",
+     "missedGames": null,
+     "absentDurationInDays": 1
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-17T21:30:55.549889+00:00"
+}

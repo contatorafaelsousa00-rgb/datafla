@@ -1,0 +1,57 @@
+{
+ "data": [
+  {
+   "id": 94888080,
+   "logo": null,
+   "name": "Kaio Nóbrega",
+   "fullName": null,
+   "profile": {
+    "club": {
+     "current": "Estoril Praia U23",
+     "joinedAt": "27/08/2026",
+     "contractExpiry": "30/06/2028",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,77 m",
+    "fullName": "Kaio Nóbrega",
+    "position": {
+     "main": "Defensive Midfield",
+     "secondary": null
+    },
+    "birthDate": "05/04/2007",
+    "deathDate": null,
+    "birthPlace": "Guarabira",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [],
+    "historical": []
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Estoril U23",
+     "fee": null,
+     "from": "Flamengo U20",
+     "type": "transfer",
+     "season": "26/27",
+     "marketValue": null,
+     "transferDate": "Aug 27, 2026"
+    },
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "transfer",
+     "season": "24/25",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2025"
+    }
+   ],
+   "marketValue": [],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-17T21:30:54.560917+00:00"
+}

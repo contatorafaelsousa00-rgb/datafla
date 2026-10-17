@@ -1,1 +1,345 @@
-{"data": [{"id": 1269883408, "round": "Regular Season - 12", "date": "2026-04-19T22:30:00.000Z", "country": {"code": "BR", "name": "Brazil", "logo": "https://highlightly.net/soccer/images/countries/BR.svg"}, "state": {"clock": 90, "score": {"current": "2 - 0", "penalties": null}, "description": "Finished"}, "awayTeam": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia"}, "homeTeam": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo"}, "league": {"id": 61205, "logo": "https://highlightly.net/soccer/images/leagues/61205.png", "name": "Serie A", "season": 2026}}, {"id": 1149965594, "round": "Regular Season - 27", "date": "2025-10-05T21:30:00.000Z", "country": {"code": "BR", "name": "Brazil", "logo": "https://highlightly.net/soccer/images/countries/BR.svg"}, "state": {"clock": 90, "score": {"current": "1 - 0", "penalties": null}, "description": "Finished"}, "awayTeam": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo"}, "homeTeam": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia"}, "league": {"id": 61205, "logo": "https://highlightly.net/soccer/images/leagues/61205.png", "name": "Serie A", "season": 2025}}, {"id": 1149797947, "round": "Regular Season - 8", "date": "2025-05-11T00:00:00.000Z", "country": {"code": "BR", "name": "Brazil", "logo": "https://highlightly.net/soccer/images/countries/BR.svg"}, "state": {"clock": 90, "score": {"current": "1 - 0", "penalties": null}, "description": "Finished"}, "awayTeam": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia"}, "homeTeam": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo"}, "league": {"id": 61205, "logo": "https://highlightly.net/soccer/images/leagues/61205.png", "name": "Serie A", "season": 2025}}, {"id": 1004722871, "round": "Regular Season - 29", "date": "2024-10-05T22:00:00.000Z", "country": {"code": "BR", "name": "Brazil", "logo": "https://highlightly.net/soccer/images/countries/BR.svg"}, "state": {"clock": 90, "score": {"current": "0 - 2", "penalties": null}, "description": "Finished"}, "awayTeam": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo"}, "homeTeam": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia"}, "league": {"id": 61205, "logo": "https://highlightly.net/soccer/images/leagues/61205.png", "name": "Serie A", "season": 2024}}, {"id": 1101482422, "round": "Quarter-finals", "date": "2024-09-13T00:45:00.000Z", "country": {"code": "BR", "name": "Brazil", "logo": "https://highlightly.net/soccer/images/countries/BR.svg"}, "state": {"clock": 90, "score": {"current": "1 - 0", "penalties": null}, "description": "Finished"}, "awayTeam": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia"}, "homeTeam": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo"}, "league": {"id": 62907, "logo": "https://highlightly.net/soccer/images/leagues/62907.png", "name": "Copa do Brasil", "season": 2024}}, {"id": 1101481571, "round": "Quarter-finals", "date": "2024-08-29T00:30:00.000Z", "country": {"code": "BR", "name": "Brazil", "logo": "https://highlightly.net/soccer/images/countries/BR.svg"}, "state": {"clock": 90, "score": {"current": "0 - 1", "penalties": null}, "description": "Finished"}, "awayTeam": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo"}, "homeTeam": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia"}, "league": {"id": 62907, "logo": "https://highlightly.net/soccer/images/leagues/62907.png", "name": "Copa do Brasil", "season": 2024}}, {"id": 1004562032, "round": "Regular Season - 10", "date": "2024-06-20T23:00:00.000Z", "country": {"code": "BR", "name": "Brazil", "logo": "https://highlightly.net/soccer/images/countries/BR.svg"}, "state": {"clock": 90, "score": {"current": "2 - 1", "penalties": null}, "description": "Finished"}, "awayTeam": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia"}, "homeTeam": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo"}, "league": {"id": 61205, "logo": "https://highlightly.net/soccer/images/leagues/61205.png", "name": "Serie A", "season": 2024}}, {"id": 856012323, "round": "Regular Season - 25", "date": "2023-09-30T19:00:00.000Z", "country": {"code": "BR", "name": "Brazil", "logo": "https://highlightly.net/soccer/images/countries/BR.svg"}, "state": {"clock": 90, "score": {"current": "1 - 0", "penalties": null}, "description": "Finished"}, "awayTeam": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia"}, "homeTeam": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo"}, "league": {"id": 61205, "logo": "https://highlightly.net/soccer/images/leagues/61205.png", "name": "Serie A", "season": 2023}}, {"id": 855857441, "round": "Regular Season - 6", "date": "2023-05-13T19:00:00.000Z", "country": {"code": "BR", "name": "Brazil", "logo": "https://highlightly.net/soccer/images/countries/BR.svg"}, "state": {"clock": 90, "score": {"current": "2 - 3", "penalties": null}, "description": "Finished"}, "awayTeam": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo"}, "homeTeam": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia"}, "league": {"id": 61205, "logo": "https://highlightly.net/soccer/images/leagues/61205.png", "name": "Serie A", "season": 2023}}, {"id": 586517643, "round": "Regular Season - 31", "date": "2021-11-11T22:00:00.000Z", "country": {"code": "BR", "name": "Brazil", "logo": "https://highlightly.net/soccer/images/countries/BR.svg"}, "state": {"clock": 90, "score": {"current": "3 - 0", "penalties": null}, "description": "Finished"}, "awayTeam": {"id": 101202, "logo": "https://highlightly.net/soccer/images/teams/101202.png", "name": "Bahia"}, "homeTeam": {"id": 108861, "logo": "https://highlightly.net/soccer/images/teams/108861.png", "name": "Flamengo"}, "league": {"id": 61205, "logo": "https://highlightly.net/soccer/images/leagues/61205.png", "name": "Serie A", "season": 2021}}], "_coletado_em": "2026-10-16T11:48:27.008795+00:00"}
+{
+ "data": [
+  {
+   "id": 1269883408,
+   "round": "Regular Season - 12",
+   "date": "2026-04-19T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1149965594,
+   "round": "Regular Season - 27",
+   "date": "2025-10-05T21:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2025
+   }
+  },
+  {
+   "id": 1149797947,
+   "round": "Regular Season - 8",
+   "date": "2025-05-11T00:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2025
+   }
+  },
+  {
+   "id": 1004722871,
+   "round": "Regular Season - 29",
+   "date": "2024-10-05T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2024
+   }
+  },
+  {
+   "id": 1101482422,
+   "round": "Quarter-finals",
+   "date": "2024-09-13T00:45:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2024
+   }
+  },
+  {
+   "id": 1101481571,
+   "round": "Quarter-finals",
+   "date": "2024-08-29T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2024
+   }
+  },
+  {
+   "id": 1004562032,
+   "round": "Regular Season - 10",
+   "date": "2024-06-20T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2024
+   }
+  },
+  {
+   "id": 856012323,
+   "round": "Regular Season - 25",
+   "date": "2023-09-30T19:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2023
+   }
+  },
+  {
+   "id": 855857441,
+   "round": "Regular Season - 6",
+   "date": "2023-05-13T19:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 3",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2023
+   }
+  },
+  {
+   "id": 586517643,
+   "round": "Regular Season - 31",
+   "date": "2021-11-11T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2021
+   }
+  }
+ ],
+ "_coletado_em": "2026-10-17T21:30:38.443916+00:00"
+}

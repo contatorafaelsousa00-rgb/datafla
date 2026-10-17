@@ -1,0 +1,303 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Cleiton",
+     "number": 1,
+     "position": "Goalkeeper",
+     "id": 1587936
+    },
+    {
+     "name": "Rodriguinho",
+     "number": 20,
+     "position": "Midfielder",
+     "id": 58554083
+    },
+    {
+     "name": "José Andrés Hurtado",
+     "number": 34,
+     "position": "Defender",
+     "id": 10966347
+    },
+    {
+     "name": "Pedro Henrique",
+     "number": 14,
+     "position": "Defender",
+     "id": 1647989
+    },
+    {
+     "name": "Eric Ramires",
+     "number": 7,
+     "position": "Midfielder",
+     "id": 1614501
+    },
+    {
+     "name": "Cauê Nascimento Santos",
+     "number": 51,
+     "position": "Defender",
+     "id": 84610001
+    },
+    {
+     "name": "Vinicinho",
+     "number": 17,
+     "position": "Forward",
+     "id": 69458291
+    },
+    {
+     "name": "Marcelinho Braz",
+     "number": 57,
+     "position": "Midfielder",
+     "id": 87694922
+    },
+    {
+     "name": "Gustavo Neves",
+     "number": 22,
+     "position": "Midfielder",
+     "id": 65036265
+    },
+    {
+     "name": "Eduardo Santos",
+     "number": 3,
+     "position": "Defender",
+     "id": 6688738
+    },
+    {
+     "name": "Fabinho",
+     "number": 5,
+     "position": "Midfielder",
+     "id": 45048759
+    },
+    {
+     "name": "Ignacio Sosa",
+     "number": 15,
+     "position": "Midfielder",
+     "id": 49959581
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Tiago Volpi",
+      "number": 18,
+      "position": "Goalkeeper",
+      "id": 1601138
+     }
+    ],
+    [
+     {
+      "name": "Juninho Capixaba",
+      "number": 29,
+      "position": "Defender",
+      "id": 1687595
+     },
+     {
+      "name": "Gustavo Marques",
+      "number": 16,
+      "position": "Defender",
+      "id": 49077301
+     },
+     {
+      "name": "Alix Vinicius",
+      "number": 4,
+      "position": "Defender",
+      "id": 47960927
+     },
+     {
+      "name": "Agustin Sant'Anna",
+      "number": 23,
+      "position": "Defender",
+      "id": 8303085
+     }
+    ],
+    [
+     {
+      "name": "Matheus Fernandes",
+      "number": 35,
+      "position": "Midfielder",
+      "id": 1598079
+     },
+     {
+      "name": "Gabriel Girotto",
+      "number": 6,
+      "position": "Midfielder",
+      "id": 1649921
+     }
+    ],
+    [
+     {
+      "name": "Henry Mosquera",
+      "number": 30,
+      "position": "Midfielder",
+      "id": 56499401
+     },
+     {
+      "name": "José Herrera",
+      "number": 32,
+      "position": "Midfielder",
+      "id": 57121505
+     },
+     {
+      "name": "Lucas Barbosa",
+      "number": 21,
+      "position": "Midfielder",
+      "id": 45049725
+     }
+    ],
+    [
+     {
+      "name": "Isidro Pitta",
+      "number": 9,
+      "position": "Forward",
+      "id": 11378024
+     }
+    ]
+   ],
+   "id": 676478,
+   "logo": "https://highlightly.net/soccer/images/teams/676478.png",
+   "name": "RB Bragantino"
+  },
+  "awayTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Andrew",
+     "number": 42,
+     "position": "Goalkeeper",
+     "id": 12965162
+    },
+    {
+     "name": "Jorge Carrascal",
+     "number": 15,
+     "position": "Midfielder",
+     "id": 965188
+    },
+    {
+     "name": "Danilo",
+     "number": 13,
+     "position": "Defender",
+     "id": 99652
+    },
+    {
+     "name": "Everton",
+     "number": 11,
+     "position": "Forward",
+     "id": 388808
+    },
+    {
+     "name": "Dyogo Alves",
+     "number": 49,
+     "position": "Goalkeeper",
+     "id": 59905517
+    },
+    {
+     "name": "Gonzalo Plata",
+     "number": 19,
+     "position": "Forward",
+     "id": 2635563
+    },
+    {
+     "name": "Wallace Yan",
+     "number": 64,
+     "position": "Forward",
+     "id": 65230914
+    },
+    {
+     "name": "Nicolás de la Cruz",
+     "number": 18,
+     "position": "Midfielder",
+     "id": 965349
+    },
+    {
+     "name": "Daniel Sales",
+     "number": 51,
+     "position": "Defender",
+     "id": 64931293
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Agustín Rossi",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 1892870
+     }
+    ],
+    [
+     {
+      "name": "Ayrton Lucas",
+      "number": 6,
+      "position": "Defender",
+      "id": 285285
+     },
+     {
+      "name": "Vitão",
+      "number": 44,
+      "position": "Defender",
+      "id": 1595503
+     },
+     {
+      "name": "Léo Ortiz",
+      "number": 3,
+      "position": "Defender",
+      "id": 1522892
+     },
+     {
+      "name": "Emerson Royal",
+      "number": 22,
+      "position": "Defender",
+      "id": 252280
+     }
+    ],
+    [
+     {
+      "name": "Jorginho",
+      "number": 21,
+      "position": "Midfielder",
+      "id": 368683
+     },
+     {
+      "name": "Erick Pulgar",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 412314
+     }
+    ],
+    [
+     {
+      "name": "Samuel Lino",
+      "number": 16,
+      "position": "Midfielder",
+      "id": 20436850
+     },
+     {
+      "name": "Lucas Paquetá",
+      "number": 20,
+      "position": "Midfielder",
+      "id": 265160
+     },
+     {
+      "name": "Luiz Araújo",
+      "number": 7,
+      "position": "Midfielder",
+      "id": 3580472
+     }
+    ],
+    [
+     {
+      "name": "Pedro",
+      "number": 9,
+      "position": "Forward",
+      "id": 1661835
+     }
+    ]
+   ],
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo"
+  }
+ },
+ "_coletado_em": "2026-10-17T21:31:00.437539+00:00"
+}
