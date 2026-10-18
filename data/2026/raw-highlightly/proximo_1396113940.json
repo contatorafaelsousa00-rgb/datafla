@@ -1,18 +1,18 @@
 {
  "data": {
   "venue": {
-   "city": "La Plata",
-   "name": "Estadio Jorge Luis Hirschi",
-   "country": "Argentina",
-   "capacity": "32530"
+   "city": "Rio de Janeiro",
+   "name": "Maracana Stadium",
+   "country": "Brazil",
+   "capacity": "73139"
   },
   "referee": {
-   "name": "Benitez, Juan Gabriel",
-   "nationality": "Paraguay"
+   "name": null,
+   "nationality": null
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "13.7°C"
+   "temperature": "21.68°C"
   },
   "events": [],
   "predictions": {
@@ -83,6 +83,39 @@
       "draw": "31.12%",
       "home": "24.45%"
      }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-18T12:06:02.908Z",
+     "probabilities": {
+      "away": "11.49%",
+      "draw": "21.77%",
+      "home": "66.74%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-18T16:29:20.013Z",
+     "probabilities": {
+      "away": "11.43%",
+      "draw": "21.78%",
+      "home": "66.79%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-18T20:55:16.953Z",
+     "probabilities": {
+      "away": "11.43%",
+      "draw": "21.78%",
+      "home": "66.79%"
+     }
     }
    ]
   },
@@ -142,5 +175,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-17T21:30:41.412658+00:00"
+ "_coletado_em": "2026-10-18T23:45:30.699610+00:00"
 }

@@ -179,5 +179,23 @@
   "requisicoes": 15,
   "cota_restante": 13,
   "erro": null
+ },
+ {
+  "quando": "2026-10-18T23:45:34+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Bahia já terminou e ainda não foi baixado",
+  "novos": [
+   {
+    "adversario": "Bahia",
+    "data_utc": "2026-10-18T21:30:00.000Z",
+    "competicao": "Serie A"
+   }
+  ],
+  "recoletados": [],
+  "encerrados": 60,
+  "pendentes": 0,
+  "requisicoes": 9,
+  "cota_restante": 4,
+  "erro": null
  }
 ]

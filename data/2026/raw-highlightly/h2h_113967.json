@@ -1,0 +1,345 @@
+{
+ "data": [
+  {
+   "id": 1269900428,
+   "round": "Regular Season - 14",
+   "date": "2026-05-03T19:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1277237750,
+   "round": "Regular Season - 3",
+   "date": "2026-01-22T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 531808,
+    "logo": "https://highlightly.net/soccer/images/leagues/531808.png",
+    "name": "Carioca - 1",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1149934107,
+   "round": "Regular Season - 24",
+   "date": "2025-09-21T20:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2025
+   }
+  },
+  {
+   "id": 1149773268,
+   "round": "Regular Season - 5",
+   "date": "2025-04-19T21:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2025
+   }
+  },
+  {
+   "id": 1152441153,
+   "round": "Championship - Semi-finals",
+   "date": "2025-03-08T20:45:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 531808,
+    "logo": "https://highlightly.net/soccer/images/leagues/531808.png",
+    "name": "Carioca - 1",
+    "season": 2025
+   }
+  },
+  {
+   "id": 1152440302,
+   "round": "Championship - Semi-finals",
+   "date": "2025-03-01T20:45:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "league": {
+    "id": 531808,
+    "logo": "https://highlightly.net/soccer/images/leagues/531808.png",
+    "name": "Carioca - 1",
+    "season": 2025
+   }
+  },
+  {
+   "id": 1121642612,
+   "round": "Championship - 10",
+   "date": "2025-02-16T00:45:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 531808,
+    "logo": "https://highlightly.net/soccer/images/leagues/531808.png",
+    "name": "Carioca - 1",
+    "season": 2025
+   }
+  },
+  {
+   "id": 1004698192,
+   "round": "Regular Season - 26",
+   "date": "2024-09-15T21:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2024
+   }
+  },
+  {
+   "id": 1004537353,
+   "round": "Regular Season - 7",
+   "date": "2024-06-02T19:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 6",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2024
+   }
+  },
+  {
+   "id": 974343873,
+   "round": "Championship - 6",
+   "date": "2024-02-04T22:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "league": {
+    "id": 531808,
+    "logo": "https://highlightly.net/soccer/images/leagues/531808.png",
+    "name": "Carioca - 1",
+    "season": 2024
+   }
+  }
+ ],
+ "_coletado_em": "2026-10-18T23:45:33.417850+00:00"
+}
