@@ -1,0 +1,57 @@
+{
+ "data": [
+  {
+   "id": 94888402,
+   "logo": null,
+   "name": "João Paulo Camargo",
+   "fullName": null,
+   "profile": {
+    "club": {
+     "current": "Goiás Esporte Clube U20",
+     "joinedAt": "11/09/2026",
+     "contractExpiry": "-",
+     "latestContractExtension": null
+    },
+    "foot": "both",
+    "height": "1,86 m",
+    "fullName": "João Paulo Camargo de Barros",
+    "position": {
+     "main": "Centre-Forward",
+     "secondary": "Second Striker"
+    },
+    "birthDate": "12/04/2007",
+    "deathDate": null,
+    "birthPlace": "Lorena",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [],
+    "historical": []
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Goiás EC U20",
+     "fee": null,
+     "from": "Flamengo U20",
+     "type": "transfer",
+     "season": "26/27",
+     "marketValue": null,
+     "transferDate": "Sep 11, 2026"
+    },
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "transfer",
+     "season": "24/25",
+     "marketValue": null,
+     "transferDate": "Mar 1, 2025"
+    }
+   ],
+   "marketValue": [],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-18T03:45:43.744061+00:00"
+}

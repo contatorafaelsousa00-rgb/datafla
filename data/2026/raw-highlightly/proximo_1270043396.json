@@ -302,8 +302,8 @@
    "name": "Flamengo",
    "topPlayers": [
     {
-     "position": "Attacker",
      "name": "Pedro",
+     "position": "Attacker",
      "statistics": [
       {
        "name": "Goals",
@@ -320,8 +320,8 @@
      ]
     },
     {
-     "position": "Midfielder",
      "name": "Samuel Lino",
+     "position": "Midfielder",
      "statistics": [
       {
        "name": "Goals",
@@ -338,8 +338,8 @@
      ]
     },
     {
-     "position": "Defender",
      "name": "Leo Pereira",
+     "position": "Defender",
      "statistics": [
       {
        "name": "Tackles",
@@ -364,8 +364,8 @@
    "name": "Bahia",
    "topPlayers": [
     {
-     "position": "Attacker",
      "name": "Erick Pulga",
+     "position": "Attacker",
      "statistics": [
       {
        "name": "Goals",
@@ -382,8 +382,8 @@
      ]
     },
     {
-     "position": "Midfielder",
      "name": "Jean Lucas",
+     "position": "Midfielder",
      "statistics": [
       {
        "name": "Goals",
@@ -400,8 +400,8 @@
      ]
     },
     {
-     "position": "Defender",
      "name": "David Duarte",
+     "position": "Defender",
      "statistics": [
       {
        "name": "Tackles",
@@ -428,5 +428,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-17T21:30:37.515766+00:00"
+ "_coletado_em": "2026-10-18T03:45:34.081020+00:00"
 }

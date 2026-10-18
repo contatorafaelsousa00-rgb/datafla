@@ -1,0 +1,21 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "Unknown",
+   "substitutes": [],
+   "initialLineup": [],
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo"
+  },
+  "awayTeam": {
+   "formation": "Unknown",
+   "substitutes": [],
+   "initialLineup": [],
+   "id": 112265,
+   "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+   "name": "Corinthians"
+  }
+ },
+ "_coletado_em": "2026-10-18T03:45:52.342957+00:00"
+}

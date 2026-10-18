@@ -1,0 +1,78 @@
+{
+ "data": [
+  {
+   "id": 66711148,
+   "logo": null,
+   "name": "Da Mata",
+   "fullName": "João Pedro do Nascimento da Mata",
+   "profile": {
+    "club": {
+     "current": "Konyaspor",
+     "joinedAt": "14/07/2026",
+     "contractExpiry": "30/06/2029",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,85 m",
+    "fullName": "João Pedro do Nascimento da Mata",
+    "position": {
+     "main": "Centre-Back",
+     "secondary": null
+    },
+    "birthDate": "13/03/2006",
+    "deathDate": null,
+    "birthPlace": "Bauru",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [],
+    "historical": [
+     {
+      "club": "Konyaspor",
+      "rumourDate": "11/07/2026",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Konyaspor",
+     "fee": "€263.50K",
+     "from": "Flamengo U20",
+     "type": "transfer",
+     "season": "26/27",
+     "marketValue": null,
+     "transferDate": "Jul 14, 2026"
+    },
+    {
+     "to": "Flamengo U20",
+     "fee": "€197.60K",
+     "from": "Grêmio U20",
+     "type": "transfer",
+     "season": "23/24",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2024"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 18,
+     "club": "CR Flamengo U20",
+     "value": 300000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 17,
+     "club": "Unknown",
+     "value": 300000,
+     "currency": "€",
+     "recordedDate": "11/12/2023"
+    }
+   ],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-18T03:46:04.486395+00:00"
+}

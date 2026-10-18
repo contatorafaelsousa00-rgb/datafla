@@ -1,0 +1,323 @@
+{
+ "data": [
+  {
+   "id": 1668758,
+   "logo": null,
+   "name": "Michael",
+   "fullName": "Michael Richard Delgado de Oliveira",
+   "profile": {
+    "club": {
+     "current": "Al-Ula FC",
+     "joinedAt": "01/02/2026",
+     "contractExpiry": "30/06/2027",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,66 m",
+    "fullName": "Michael Richard Delgado de Oliveira",
+    "position": {
+     "main": "Left Winger",
+     "secondary": "Right Winger"
+    },
+    "birthDate": "12/03/1996",
+    "deathDate": null,
+    "birthPlace": "Poxoréu",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [
+     {
+      "club": "Santos FC",
+      "rumourDate": "15/01/2026",
+      "transferProbability": "N/A"
+     }
+    ],
+    "historical": [
+     {
+      "club": "Santos FC",
+      "rumourDate": "15/01/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Fluminense Football Club",
+      "rumourDate": "08/08/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Ula FC",
+      "rumourDate": "14/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Duhail SC",
+      "rumourDate": "08/07/2025",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CR Flamengo",
+      "rumourDate": "18/08/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Sport Club Corinthians Paulista",
+      "rumourDate": "29/07/2024",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "NEOM SC",
+      "rumourDate": "16/06/2024",
+      "transferProbability": "N/A"
+     }
+    ]
+   },
+   "relatedNews": [
+    {
+     "url": "https://www.transfermarkt.com/brazil-market-values-kaio-jorge-hits-new-heights-neymar-falls-after-national-team-snub/view/news/460011",
+     "date": "Sep 5, 2025",
+     "title": "Brazil market values: Kaio Jorge hits new heights, Neymar falls after national team snub"
+    }
+   ],
+   "transfers": [
+    {
+     "to": "Al-Ula",
+     "fee": null,
+     "from": "Flamengo",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": "€3.00M",
+     "transferDate": "Feb 1, 2026"
+    },
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Al-Hilal",
+     "type": "transfer",
+     "season": "24/25",
+     "marketValue": "€7.00M",
+     "transferDate": "Aug 22, 2024"
+    },
+    {
+     "to": "Al-Hilal",
+     "fee": "€7.60M",
+     "from": "Flamengo",
+     "type": "transfer",
+     "season": "21/22",
+     "marketValue": "€7.00M",
+     "transferDate": "Jan 27, 2022"
+    },
+    {
+     "to": "Flamengo",
+     "fee": "€7.50M",
+     "from": "Goiás",
+     "type": "transfer",
+     "season": "19/20",
+     "marketValue": "€2.50M",
+     "transferDate": "Jan 20, 2020"
+    },
+    {
+     "to": "Goiás",
+     "fee": null,
+     "from": "Goianésia (GO)",
+     "type": "transfer",
+     "season": "16/17",
+     "marketValue": null,
+     "transferDate": "Apr 11, 2017"
+    },
+    {
+     "to": "Goianésia (GO)",
+     "fee": null,
+     "from": "Goiânia",
+     "type": "transfer",
+     "season": "16/17",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2017"
+    },
+    {
+     "to": "Goiânia",
+     "fee": null,
+     "from": "Monte Cristo",
+     "type": "transfer",
+     "season": "15/16",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2016"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 30,
+     "club": "Al-Ula FC",
+     "value": 2800000,
+     "currency": "€",
+     "recordedDate": "04/06/2026"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "10/12/2025"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "05/09/2025"
+    },
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 6000000,
+     "currency": "€",
+     "recordedDate": "06/06/2025"
+    },
+    {
+     "age": 28,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "09/12/2024"
+    },
+    {
+     "age": 28,
+     "club": "Al-Hilal SFC",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "04/06/2024"
+    },
+    {
+     "age": 27,
+     "club": "Al-Hilal SFC",
+     "value": 8500000,
+     "currency": "€",
+     "recordedDate": "15/12/2023"
+    },
+    {
+     "age": 27,
+     "club": "Al-Hilal SFC",
+     "value": 8000000,
+     "currency": "€",
+     "recordedDate": "12/06/2023"
+    },
+    {
+     "age": 26,
+     "club": "Al-Hilal SFC",
+     "value": 8500000,
+     "currency": "€",
+     "recordedDate": "02/12/2022"
+    },
+    {
+     "age": 26,
+     "club": "Al-Hilal SFC",
+     "value": 8500000,
+     "currency": "€",
+     "recordedDate": "30/06/2022"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 7000000,
+     "currency": "€",
+     "recordedDate": "17/12/2021"
+    },
+    {
+     "age": 25,
+     "club": "CR Flamengo",
+     "value": 3000000,
+     "currency": "€",
+     "recordedDate": "28/05/2021"
+    },
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 3500000,
+     "currency": "€",
+     "recordedDate": "09/02/2021"
+    },
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "09/09/2020"
+    },
+    {
+     "age": 24,
+     "club": "CR Flamengo",
+     "value": 4000000,
+     "currency": "€",
+     "recordedDate": "08/04/2020"
+    },
+    {
+     "age": 23,
+     "club": "CR Flamengo",
+     "value": 5000000,
+     "currency": "€",
+     "recordedDate": "20/02/2020"
+    },
+    {
+     "age": 23,
+     "club": "Goiás EC",
+     "value": 2500000,
+     "currency": "€",
+     "recordedDate": "27/11/2019"
+    },
+    {
+     "age": 23,
+     "club": "Goiás EC",
+     "value": 2000000,
+     "currency": "€",
+     "recordedDate": "15/08/2019"
+    },
+    {
+     "age": 22,
+     "club": "Goiás EC",
+     "value": 1000000,
+     "currency": "€",
+     "recordedDate": "18/02/2019"
+    },
+    {
+     "age": 21,
+     "club": "Goiás EC",
+     "value": 100000,
+     "currency": "€",
+     "recordedDate": "07/12/2017"
+    },
+    {
+     "age": 21,
+     "club": "Goiás EC",
+     "value": 100000,
+     "currency": "€",
+     "recordedDate": "30/10/2017"
+    }
+   ],
+   "injuries": [
+    {
+     "reason": "Ankle injury",
+     "season": "2026",
+     "toDate": "28.08.2025",
+     "fromDate": "13.07.2025",
+     "missedGames": 12,
+     "absentDurationInDays": 47
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "15.03.2025",
+     "fromDate": "16.02.2025",
+     "missedGames": 4,
+     "absentDurationInDays": 28
+    },
+    {
+     "reason": "Hamstring injury",
+     "season": "2025",
+     "toDate": "01.10.2024",
+     "fromDate": "29.08.2024",
+     "missedGames": 7,
+     "absentDurationInDays": 34
+    }
+   ]
+  }
+ ],
+ "_coletado_em": "2026-10-18T03:46:06.235863+00:00"
+}

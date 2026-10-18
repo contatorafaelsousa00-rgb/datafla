@@ -1,0 +1,88 @@
+{
+ "data": [
+  {
+   "id": 73167570,
+   "logo": null,
+   "name": "João Victor Schlickmann Carbone",
+   "fullName": "João Victor Schlickmann Carbone",
+   "profile": {
+    "club": {
+     "current": "FC Lugano",
+     "joinedAt": "10/02/2026",
+     "contractExpiry": "30/06/2029",
+     "latestContractExtension": null
+    },
+    "foot": "left",
+    "height": "1,87 m",
+    "fullName": "João Victor Schlickmann Carbone",
+    "position": {
+     "main": "Centre-Back",
+     "secondary": "Left-Back"
+    },
+    "birthDate": "29/01/2005",
+    "deathDate": null,
+    "birthPlace": null,
+    "citizenship": "Brazil, Italy"
+   },
+   "rumours": {
+    "current": [],
+    "historical": []
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "FC Lugano",
+     "fee": null,
+     "from": "Flamengo",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": null,
+     "transferDate": "Feb 10, 2026"
+    },
+    {
+     "to": "Flamengo",
+     "fee": null,
+     "from": "Flamengo U20",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2026"
+    },
+    {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "transfer",
+     "season": "22/23",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2023"
+    }
+   ],
+   "marketValue": [
+    {
+     "age": 21,
+     "club": "FC Lugano",
+     "value": 300000,
+     "currency": "€",
+     "recordedDate": "02/06/2026"
+    },
+    {
+     "age": 21,
+     "club": "FC Lugano",
+     "value": 400000,
+     "currency": "€",
+     "recordedDate": "17/03/2026"
+    },
+    {
+     "age": 21,
+     "club": "FC Lugano",
+     "value": 200000,
+     "currency": "€",
+     "recordedDate": "12/02/2026"
+    }
+   ],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-18T03:45:44.597263+00:00"
+}

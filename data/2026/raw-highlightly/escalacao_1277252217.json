@@ -1,0 +1,327 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Dyogo Alves",
+     "number": 49,
+     "position": "Goalkeeper",
+     "id": 59905517
+    },
+    {
+     "name": "João Victor",
+     "number": 61,
+     "position": "Defender",
+     "id": 72329887
+    },
+    {
+     "name": "Léo Pereira",
+     "number": 4,
+     "position": "Defender",
+     "id": 1630118
+    },
+    {
+     "name": "Daniel Sales",
+     "number": 51,
+     "position": "Defender",
+     "id": 64931293
+    },
+    {
+     "name": "Guilherme Gomes",
+     "number": 47,
+     "position": "Midfielder",
+     "id": 73183509
+    },
+    {
+     "name": "Erick Pulgar",
+     "number": 5,
+     "position": "Midfielder",
+     "id": 412314
+    },
+    {
+     "name": "Pablo Lucio",
+     "number": 56,
+     "position": "Midfielder",
+     "id": 81390645
+    },
+    {
+     "name": "Everton",
+     "number": 11,
+     "position": "Forward",
+     "id": 388808
+    },
+    {
+     "name": "Bruno Henrique",
+     "number": 27,
+     "position": "Forward",
+     "id": 1639134
+    },
+    {
+     "name": "Douglas Costa Telles",
+     "number": 81,
+     "position": "Forward",
+     "id": 94350179
+    },
+    {
+     "name": "Wallace Yan",
+     "number": 64,
+     "position": "Forward",
+     "id": 65230914
+    },
+    {
+     "name": "João Paulo Camargo",
+     "number": 80,
+     "position": "Forward",
+     "id": 94888402
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Andrew",
+      "number": 42,
+      "position": "Goalkeeper",
+      "id": 12965162
+     }
+    ],
+    [
+     {
+      "name": "Ayrton Lucas",
+      "number": 6,
+      "position": "Defender",
+      "id": 285285
+     },
+     {
+      "name": "Vitão",
+      "number": 44,
+      "position": "Defender",
+      "id": 1595503
+     },
+     {
+      "name": "Danilo",
+      "number": 13,
+      "position": "Defender",
+      "id": 99652
+     },
+     {
+      "name": "Emerson Royal",
+      "number": 22,
+      "position": "Defender",
+      "id": 252280
+     }
+    ],
+    [
+     {
+      "name": "Lucas Paquetá",
+      "number": 20,
+      "position": "Midfielder",
+      "id": 265160
+     },
+     {
+      "name": "Evertton Araujo",
+      "number": 52,
+      "position": "Midfielder",
+      "id": 53557448
+     }
+    ],
+    [
+     {
+      "name": "Samuel Lino",
+      "number": 16,
+      "position": "Midfielder",
+      "id": 20436850
+     },
+     {
+      "name": "Jorge Carrascal",
+      "number": 15,
+      "position": "Midfielder",
+      "id": 965188
+     },
+     {
+      "name": "Gonzalo Plata",
+      "number": 19,
+      "position": "Midfielder",
+      "id": 2635563
+     }
+    ],
+    [
+     {
+      "name": "Pedro",
+      "number": 9,
+      "position": "Forward",
+      "id": 1661835
+     }
+    ]
+   ],
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo"
+  },
+  "awayTeam": {
+   "formation": "4-3-1-2",
+   "substitutes": [
+    {
+     "name": "Eduardo",
+     "number": 12,
+     "position": "Goalkeeper",
+     "id": 102156425
+    },
+    {
+     "name": "Gregory",
+     "number": 17,
+     "position": "Defender",
+     "id": 102623003
+    },
+    {
+     "name": "Ryan Silva",
+     "number": 13,
+     "position": "Defender",
+     "id": 73454955
+    },
+    {
+     "name": "Brayan",
+     "number": 14,
+     "position": "Defender",
+     "id": 102156586
+    },
+    {
+     "name": "Caíque",
+     "number": 24,
+     "position": "Midfielder",
+     "id": null
+    },
+    {
+     "name": "Magno",
+     "number": 15,
+     "position": "Midfielder",
+     "id": 102156747
+    },
+    {
+     "name": "Gabriel Agú",
+     "number": 19,
+     "position": "Midfielder",
+     "id": 47906509
+    },
+    {
+     "name": "Paulo Victor",
+     "number": 22,
+     "position": "Forward",
+     "id": 102373131
+    },
+    {
+     "name": "Ewerton Potiguar",
+     "number": 20,
+     "position": "Forward",
+     "id": 99573502
+    },
+    {
+     "name": "Rodrigo Dantas",
+     "number": 16,
+     "position": "Midfielder",
+     "id": 17165813
+    },
+    {
+     "name": "Alexander Lecaros",
+     "number": 18,
+     "position": "Forward",
+     "id": 6391532
+    },
+    {
+     "name": "Matheus Iacovelli",
+     "number": 21,
+     "position": "Forward",
+     "id": 12957756
+    },
+    {
+     "name": "Zé",
+     "number": 23,
+     "position": "Goalkeeper",
+     "id": 81416083
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Zé Carlos",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 25348477
+     }
+    ],
+    [
+     {
+      "name": "Guilherme",
+      "number": 6,
+      "position": "Defender",
+      "id": 1573124
+     },
+     {
+      "name": "Lucas Marreta",
+      "number": 4,
+      "position": "Defender",
+      "id": 102156264
+     },
+     {
+      "name": "Daniel",
+      "number": 3,
+      "position": "Defender",
+      "id": 60200630
+     },
+     {
+      "name": "Lucas",
+      "number": 2,
+      "position": "Defender",
+      "id": 21466284
+     }
+    ],
+    [
+     {
+      "name": "Luan Gama",
+      "number": 7,
+      "position": "Midfielder",
+      "id": 10357606
+     },
+     {
+      "name": "João Pedro Martini",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 102156908
+     },
+     {
+      "name": "Alexandre Souza",
+      "number": 8,
+      "position": "Midfielder",
+      "id": 48159279
+     }
+    ],
+    [
+     {
+      "name": "Rodrigo Andrade",
+      "number": 10,
+      "position": "Midfielder",
+      "id": 102105388
+     }
+    ],
+    [
+     {
+      "name": "Matheus Goiano",
+      "number": 9,
+      "position": "Forward",
+      "id": 93172947
+     },
+     {
+      "name": "Octávio",
+      "number": 11,
+      "position": "Forward",
+      "id": 31386299
+     }
+    ]
+   ],
+   "id": 11161649,
+   "logo": null,
+   "name": "Sampaio Corrêa"
+  }
+ },
+ "_coletado_em": "2026-10-18T03:45:50.631743+00:00"
+}

@@ -1,0 +1,175 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [],
+   "initialLineup": [
+    [
+     {
+      "name": "Leonardo Nannetti",
+      "number": 58,
+      "position": "Goalkeeper",
+      "id": 81733897
+     }
+    ],
+    [
+     {
+      "name": "Johnny Góes",
+      "number": 77,
+      "position": "Defender",
+      "id": 82551294
+     },
+     {
+      "name": "João Victor",
+      "number": 61,
+      "position": "Defender",
+      "id": 72329887
+     },
+     {
+      "name": "Iago Silva",
+      "number": 57,
+      "position": "Defender",
+      "id": 59051734
+     },
+     {
+      "name": "Daniel Sales",
+      "number": 51,
+      "position": "Defender",
+      "id": 64931293
+     }
+    ],
+    [
+     {
+      "name": "Lucas Vieira dos Santos",
+      "number": 72,
+      "position": "Midfielder",
+      "id": 81838869
+     },
+     {
+      "name": "Guilherme Gomes",
+      "number": 47,
+      "position": "Midfielder",
+      "id": 73183509
+     }
+    ],
+    [
+     {
+      "name": "Caio Joshua",
+      "number": 79,
+      "position": "Midfielder",
+      "id": 82393031
+     },
+     {
+      "name": "Pablo Lucio",
+      "number": 56,
+      "position": "Midfielder",
+      "id": 81390645
+     },
+     {
+      "name": "Douglas Costa Telles",
+      "number": 81,
+      "position": "Midfielder",
+      "id": 94350179
+     }
+    ],
+    [
+     {
+      "name": "Wallace Yan",
+      "number": 64,
+      "position": "Forward",
+      "id": 65230914
+     }
+    ]
+   ],
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo"
+  },
+  "awayTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [],
+   "initialLineup": [
+    [
+     {
+      "name": "Douglas Borges",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 25675951
+     }
+    ],
+    [
+     {
+      "name": "Henrique Rocha",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 47960122
+     },
+     {
+      "name": "Lucas Rodrigues Costa",
+      "number": 13,
+      "position": "Defender",
+      "id": null
+     },
+     {
+      "name": "Carlos Henrique",
+      "number": 93,
+      "position": "Defender",
+      "id": null
+     },
+     {
+      "name": "Savio",
+      "number": 2,
+      "position": "Defender",
+      "id": 1503733
+     }
+    ],
+    [
+     {
+      "name": "João Paulo",
+      "number": 8,
+      "position": "Midfielder",
+      "id": 8691417
+     },
+     {
+      "name": "Guilherme Santos",
+      "number": 33,
+      "position": "Defender",
+      "id": 1516452
+     }
+    ],
+    [
+     {
+      "name": "Rhuan",
+      "number": 18,
+      "position": "Midfielder",
+      "id": 1620458
+     },
+     {
+      "name": "Bruno Mota",
+      "number": 27,
+      "position": "Midfielder",
+      "id": 4385633
+     },
+     {
+      "name": "Guilherme Silveira",
+      "number": 20,
+      "position": "Midfielder",
+      "id": null
+     }
+    ],
+    [
+     {
+      "name": "Leonardo Goncalves Muchacho",
+      "number": 19,
+      "position": "Forward",
+      "id": 44814182
+     }
+    ]
+   ],
+   "id": 6668369,
+   "logo": "https://highlightly.net/soccer/images/teams/6668369.png",
+   "name": "Portuguesa RJ"
+  }
+ },
+ "_coletado_em": "2026-10-18T03:45:57.495632+00:00"
+}

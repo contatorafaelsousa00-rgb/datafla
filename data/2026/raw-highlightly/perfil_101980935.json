@@ -1,0 +1,48 @@
+{
+ "data": [
+  {
+   "id": 101980935,
+   "logo": null,
+   "name": "Pedro Batista",
+   "fullName": "Pedro Henrique Vieira Batista",
+   "profile": {
+    "club": {
+     "current": "CR Flamengo U17",
+     "joinedAt": "23/09/2025",
+     "contractExpiry": "-",
+     "latestContractExtension": null
+    },
+    "foot": "right",
+    "height": "1,90 m",
+    "fullName": "Pedro Henrique Vieira Batista",
+    "position": {
+     "main": "Goalkeeper",
+     "secondary": null
+    },
+    "birthDate": "18/07/2008",
+    "deathDate": null,
+    "birthPlace": "São Paulo",
+    "citizenship": "Brazil"
+   },
+   "rumours": {
+    "current": [],
+    "historical": []
+   },
+   "relatedNews": [],
+   "transfers": [
+    {
+     "to": "Flamengo U17",
+     "fee": null,
+     "from": "Palmeiras U17",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": null,
+     "transferDate": "Sep 23, 2025"
+    }
+   ],
+   "marketValue": [],
+   "injuries": []
+  }
+ ],
+ "_coletado_em": "2026-10-18T03:45:47.192974+00:00"
+}
