@@ -12,7 +12,7 @@
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "26.86°C"
+   "temperature": "26.82°C"
   },
   "events": [],
   "predictions": {
@@ -259,6 +259,28 @@
       "draw": "26.06%",
       "home": "30.41%"
      }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-18T11:01:50.913Z",
+     "probabilities": {
+      "away": "45.01%",
+      "draw": "25.86%",
+      "home": "29.13%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Bahia.",
+     "generatedAt": "2026-10-18T15:18:36.278Z",
+     "probabilities": {
+      "away": "45.20%",
+      "draw": "25.84%",
+      "home": "28.95%"
+     }
     }
    ]
   },
@@ -428,5 +450,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-18T10:00:51.904012+00:00"
+ "_coletado_em": "2026-10-18T16:15:32.572813+00:00"
 }

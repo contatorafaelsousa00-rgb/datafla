@@ -167,5 +167,17 @@
   "requisicoes": 19,
   "cota_restante": 28,
   "erro": null
+ },
+ {
+  "quando": "2026-10-18T16:15:48+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Bahia em menos de 24 h: renova previsão, árbitro e clima",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 59,
+  "pendentes": 0,
+  "requisicoes": 15,
+  "cota_restante": 13,
+  "erro": null
  }
 ]
