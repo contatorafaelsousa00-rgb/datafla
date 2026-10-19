@@ -210,6 +210,12 @@ def planejar(agora: datetime | None = None) -> tuple[bool, str]:
     if prox and agora < _data(prox) <= agora + timedelta(hours=24) and _vencido(f"proximo_{prox['id']}", HORAS_PROXIMO, agora):
         rival = prox["awayTeam"]["name"] if prox["homeTeam"]["id"] == config.TEAM_ID else prox["homeTeam"]["name"]
         return True, f"jogo contra {rival} em menos de 24 h: renova previsão, árbitro e clima"
+    from .extras import HORAS_LIGA_RODADA, jogos_sem_resultado
+    for arq in sorted(config.RAW_DIR.glob("liga_*.json")):
+        n = jogos_sem_resultado(arq.stem, agora)
+        coletado = datetime.fromisoformat((ler_raw(arq.stem) or {}).get("_coletado_em", agora.isoformat()))
+        if n and agora - coletado >= timedelta(hours=HORAS_LIGA_RODADA):
+            return True, f"{n} jogo(s) do Brasileirão terminaram depois da última tabela: renova a rodada"
     if idade >= timedelta(hours=HORAS_LISTA):
         return True, f"atualização diária (última coleta há {idade.total_seconds() / 3600:.0f} h)"
     return False, "nada a coletar agora"

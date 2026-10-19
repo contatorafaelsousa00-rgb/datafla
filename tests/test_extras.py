@@ -72,3 +72,72 @@ def test_correcao_manual_de_wo(tmp_path, monkeypatch):
     tabelas = {"calendario": [{"id_partida": 5, "status": "ABD", "gols_pro": 0, "gols_contra": 0}], "partidas": []}
     assert correcoes.aplicar(tabelas, {5: {"status": "WO", "gols_pro": 3, "gols_contra": 0, "nota": "W.O."}}) == 1
     assert tabelas["calendario"][0] == {"id_partida": 5, "status": "WO", "gols_pro": 3, "gols_contra": 0, "nota": "W.O."}
+
+
+# ---------- rodada do Brasileirão (bug de 18/10/2026: tabela parada sem a rodada) ----------
+from datetime import datetime, timedelta, timezone
+
+
+def _iso(dt):
+    return dt.isoformat()
+
+
+def _rodada(tmp_path, agora, coletado_ha_h):
+    """Liga baixada há `coletado_ha_h` horas; um jogo de outros times terminou depois disso."""
+    jogo = _jogo(50, "Not started")
+    jogo["homeTeam"], jogo["awayTeam"] = {"id": 1, "name": "Bahia"}, {"id": 2, "name": "Santos"}
+    jogo["date"] = _iso(agora - timedelta(hours=4))
+    antigo = _jogo(51, "Not started")  # adiado que a fonte deixou como "Not started": não deve contar
+    antigo["date"] = _iso(agora - timedelta(days=20))
+    salvar_raw("liga_61205", {"data": [jogo, antigo], "_coletado_em": _iso(agora - timedelta(hours=coletado_ha_h))}, tmp_path)
+
+
+def test_rodada_terminada_poe_a_liga_na_frente(tmp_path, monkeypatch):
+    _ambiente(tmp_path, monkeypatch)
+    agora = datetime.now(timezone.utc)
+    _rodada(tmp_path, agora, coletado_ha_h=5)
+    assert extras.jogos_sem_resultado("liga_61205") == 1
+    assert extras.tarefas([_jogo(1, "Finished")])[0][0] == "liga_61205"   # antes das escalações
+    _rodada(tmp_path, agora, coletado_ha_h=1)                                # renovada há pouco: espera 3 h
+    assert "liga_61205" not in [t[0] for t in extras.tarefas([_jogo(1, "Finished")])]
+
+
+def test_resultado_do_flamengo_entra_na_liga_antes_da_renovacao(tmp_path, monkeypatch):
+    _ambiente(tmp_path, monkeypatch)
+    salvar_raw("liga_61205", {"data": [_jogo(1, "Not started")], "_coletado_em": "2026-10-10T19:00:00+00:00"}, tmp_path)
+    liga = extras.linhas_liga([_jogo(1, "Finished")])
+    assert (liga[0]["gols_casa"], liga[0]["gols_fora"]) == (2, 1)
+
+
+class _APIContada:
+    def __init__(self, restantes):
+        self.restantes_hoje, self.chamadas = restantes, []
+
+    def get(self, caminho, **params):
+        self.chamadas.append(caminho)
+        self.restantes_hoje -= 1
+        return {"data": [], "pagination": {"totalCount": 0}}
+
+
+def test_dia_de_jogo_guarda_cota_mas_renova_a_rodada(tmp_path, monkeypatch):
+    _ambiente(tmp_path, monkeypatch)
+    agora = datetime.now(timezone.utc)
+    _rodada(tmp_path, agora, coletado_ha_h=5)
+    proximo = _jogo(9, "Not started")
+    proximo["date"] = _iso(agora + timedelta(hours=10))                   # Flamengo joga hoje
+    salvar_raw("jogos", {"data": [_jogo(1, "Finished"), proximo], "_coletado_em": _iso(agora)}, tmp_path)
+    monkeypatch.setattr(extras, "ARQ_JOGOS", "jogos")
+    api = _APIContada(restantes=20)                                        # abaixo da folga de dia de jogo
+    extras.cmd_extras(api)
+    assert api.chamadas == ["matches"]                                     # só a rodada; escalação/tabelas ficam
+
+
+def test_planejar_coleta_quando_a_rodada_termina(tmp_path, monkeypatch):
+    from coleta import highlightly
+    _ambiente(tmp_path, monkeypatch)
+    agora = datetime.now(timezone.utc)
+    salvar_raw(highlightly.ARQ_JOGOS, {"data": [_jogo(1, "Finished")], "_coletado_em": _iso(agora - timedelta(hours=2))}, tmp_path)
+    salvar_raw("partida_1", {"_coletado_em": _iso(agora)}, tmp_path)
+    _rodada(tmp_path, agora, coletado_ha_h=5)
+    coletar, motivo = highlightly.planejar(agora)
+    assert coletar and "Brasileirão" in motivo

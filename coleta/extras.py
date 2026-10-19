@@ -23,7 +23,7 @@ from datetime import datetime, timedelta, timezone
 
 from . import config
 from .api import ler_raw, salvar_raw
-from .highlightly import ARQ_JOGOS, ClienteHighlightly, ErroAPI, POSICOES, _reserva, _status, numero
+from .highlightly import ARQ_JOGOS, DURACAO_ESPERADA, ClienteHighlightly, ErroAPI, POSICOES, _data, _reserva, _status, numero
 
 MAX_ESCALACOES = int(os.environ.get("FLA_MAX_ESCALACOES", "25"))  # por coleta (carga inicial em partes)
 MAX_CARREIRAS = int(os.environ.get("FLA_MAX_CARREIRAS", "12"))
@@ -31,6 +31,11 @@ MAX_PERFIS = int(os.environ.get("FLA_MAX_PERFIS", "15"))
 DIAS_PERFIL = 7
 HORAS_TABELA = 24
 HORAS_LIGA = 20
+HORAS_LIGA_RODADA = 3  # com jogo da rodada já terminado e sem resultado no arquivo, renova com 3 h+ de intervalo
+# Em dia de jogo do Flamengo, extras não essenciais (perfis, carreiras, escalações antigas) deixam esta folga na cota
+# para a coleta depois do apito (jogo, lista, tabela da liga, próximos jogos). Sem isso, as renovações de pré-jogo
+# gastavam a cota até o fim e a tabela do Brasileirão ficava sem a rodada (18/10/2026, Bahia × Flamengo).
+RESERVA_DIA_DE_JOGO = int(os.environ.get("FLA_HL_RESERVA_JOGO", "25"))
 POR_PAGINA = 100
 DIAS_CARREIRA = 7
 
@@ -44,6 +49,34 @@ def _idade(nome: str) -> timedelta | None:
     if not salvo or "_coletado_em" not in salvo:
         return None
     return _agora() - datetime.fromisoformat(salvo["_coletado_em"])
+
+
+def jogos_sem_resultado(nome: str, agora: datetime | None = None, ignorar: set | None = None) -> int:
+    """Jogos do arquivo `nome` que terminaram depois da última vez que ele foi baixado (ainda sem resultado nele)."""
+    salvo = ler_raw(nome)
+    if not salvo or "_coletado_em" not in salvo:
+        return 0
+    agora = agora or _agora()
+    coletado = datetime.fromisoformat(salvo["_coletado_em"])
+    # Só conta jogo que ainda não tinha acabado quando o arquivo foi baixado: um adiamento antigo que a fonte
+    # deixou como "Not started" não fica renovando o arquivo para sempre.
+    return sum(1 for m in salvo.get("data") or []
+               if _status(m) not in config.STATUS_ENCERRADO | {"PST", "CANC", "ABD"}
+               and coletado - DURACAO_ESPERADA < _data(m) <= agora - DURACAO_ESPERADA
+               and m["id"] not in (ignorar or ()))
+
+
+def dia_de_jogo(jogos: list[dict], agora: datetime | None = None) -> bool:
+    """Jogo do Flamengo nas próximas 30 h, ou já terminado e ainda não baixado."""
+    agora = agora or _agora()
+    for j in jogos:
+        inicio = _data(j)
+        if agora <= inicio <= agora + timedelta(hours=30):
+            return True
+        if inicio <= agora and _status(j) not in {"PST", "CANC", "ABD"} and ler_raw(f"partida_{j['id']}") is None \
+                and agora - inicio <= timedelta(hours=config.JANELA_RECOLETA_HORAS):
+            return True
+    return False
 
 
 def _salvar(nome: str, dados) -> None:
@@ -89,9 +122,15 @@ def tarefas(jogos: list[dict]) -> list[tuple[str, str, dict]]:
     # Campeonato de pontos corridos (Brasileirão): todos os jogos, para a tabela e o simulador
     ligas_corridas = {(j.get("league") or {}).get("id"): (j.get("league") or {}).get("season") for j in jogos
                       if ((j.get("league") or {}).get("name") or "").lower() == "serie a"}
-    liga = [(f"liga_{lid}", "matches", {"leagueId": lid, "season": temp or config.SEASON}) for lid, temp in ligas_corridas.items()
-            if (_idade(f"liga_{lid}") or timedelta(days=999)) >= timedelta(hours=HORAS_LIGA)]
-    return escalacoes[:5] + liga + perfis[:5] + escalacoes[5:] + tabelas + copas(jogos) + perfis[5:] + carreiras
+    liga_rodada, liga = [], []
+    for lid, temp in ligas_corridas.items():
+        nome, idade = f"liga_{lid}", _idade(f"liga_{lid}") or timedelta(days=999)
+        tarefa = (nome, "matches", {"leagueId": lid, "season": temp or config.SEASON})
+        if jogos_sem_resultado(nome) and idade >= timedelta(hours=HORAS_LIGA_RODADA):
+            liga_rodada.append(tarefa)  # rodada terminou: vem antes de tudo
+        elif idade >= timedelta(hours=HORAS_LIGA):
+            liga.append(tarefa)
+    return liga_rodada + escalacoes[:5] + liga + perfis[:5] + escalacoes[5:] + tabelas + copas(jogos) + perfis[5:] + carreiras
 
 
 COPAS = ("libertadores", "copa do brasil")
@@ -118,10 +157,17 @@ def cmd_extras(api: ClienteHighlightly) -> int:
         print("Extras (escalações, tabelas, carreiras): nada a renovar.")
         return 0
     feitas = defaultdict(int)  # por tipo: escalacao, tabela, carreira
+    folga = RESERVA_DIA_DE_JOGO if dia_de_jogo(lista["data"]) else 0
+    adiados = 0
     for nome, caminho, params in pendentes:
-        if api.restantes_hoje is not None and api.restantes_hoje - 1 < _reserva():
-            print("Extras: cota do dia no fim; o resto fica para a próxima coleta.")
-            break
+        essencial = nome.startswith("liga_") and jogos_sem_resultado(nome)
+        reserva = _reserva() + (0 if essencial else folga)
+        if api.restantes_hoje is not None and api.restantes_hoje - 1 < reserva:
+            if essencial or not folga:
+                print("Extras: cota do dia no fim; o resto fica para a próxima coleta.")
+                break
+            adiados += 1
+            continue
         try:
             if nome.startswith(("liga_", "copa_")):
                 _salvar(nome, _todas_as_paginas(api, caminho, params))
@@ -131,7 +177,9 @@ def cmd_extras(api: ClienteHighlightly) -> int:
             print(f"  {nome}: {e}")
             _salvar(nome, None)
         feitas[nome.split("_")[0]] += 1
-    print("Extras: " + ", ".join(f"{n} {t}" for t, n in feitas.items()) + ".")
+    if adiados:
+        print(f"Extras: {adiados} adiados para guardar {folga} requisições para depois do jogo do Flamengo.")
+    print("Extras: " + (", ".join(f"{n} {t}" for t, n in feitas.items()) or "nenhum") + ".")
     return 0
 
 
@@ -211,9 +259,14 @@ def linhas_liga(jogos_fla: list[dict]) -> list[dict]:
     from .highlightly import _placar, rodada
     linhas = []
     nomes = {(j.get("league") or {}).get("id"): (j.get("league") or {}).get("name") for j in jogos_fla}
+    # A lista do Flamengo é renovada a cada coleta e o arquivo da liga não: o resultado do jogo do Flamengo
+    # entra na tabela mesmo antes de a liga ser baixada de novo (mesmo id de jogo nas duas listas).
+    do_fla = {j["id"]: j for j in jogos_fla if _status(j) in config.STATUS_ENCERRADO}
     for arq in config.RAW_DIR.glob("liga_*.json"):
         lid = int(arq.stem.removeprefix("liga_"))
         for m in (ler_raw(arq.stem) or {}).get("data") or []:
+            if _status(m) not in config.STATUS_ENCERRADO and m["id"] in do_fla:
+                m = do_fla[m["id"]]
             casa, fora = _placar(((m.get("state") or {}).get("score") or {}).get("current"))
             status = _status(m)
             linhas.append({
@@ -226,6 +279,18 @@ def linhas_liga(jogos_fla: list[dict]) -> list[dict]:
                 "gols_fora": fora if status in config.STATUS_ENCERRADO else None,
             })
     return linhas
+
+
+def info_liga(jogos_fla: list[dict]) -> dict | None:
+    """Quando o arquivo da liga foi baixado e quantos jogos já terminaram sem resultado (mostrado no painel).
+
+    Jogos do Flamengo não contam: o resultado deles vem da lista do Flamengo (ver `linhas_liga`)."""
+    arqs = sorted(config.RAW_DIR.glob("liga_*.json"))
+    if not arqs:
+        return None
+    salvo = ler_raw(arqs[0].stem) or {}
+    do_fla = {j["id"] for j in jogos_fla if _status(j) in config.STATUS_ENCERRADO}
+    return {"coletado_em": salvo.get("_coletado_em"), "sem_resultado": jogos_sem_resultado(arqs[0].stem, ignorar=do_fla)}
 
 
 ORDEM_FASES = ["Round of 64", "Round of 32", "Round of 16", "Quarter-finals", "Semi-finals", "Final"]

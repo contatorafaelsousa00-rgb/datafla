@@ -176,7 +176,8 @@ def cmd_processar():
     armazenar.salvar_csv(resultado, config.RELATORIO_DIR)
     # "Atualizado em" do painel = última coleta (não a hora do deploy, que roda processar de novo)
     coletado = jogos.get("_coletado_em") if isinstance(jogos, dict) else None
-    site = exportar.exportar(tabelas, resultado, demo=os.environ.get("FLA_DEMO") == "1", coletado_em=coletado)
+    site = exportar.exportar(tabelas, resultado, demo=os.environ.get("FLA_DEMO") == "1", coletado_em=coletado,
+                             liga=extras.info_liga(jogos["data"]) if _hl() and jogos else None)
     # Histórico das coletas, só para a tela de admin (arquivo separado: não pesa no painel)
     historico = config.PASTA_TEMPORADA / highlightly.ARQ_HISTORICO
     if historico.exists():

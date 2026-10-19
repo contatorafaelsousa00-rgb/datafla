@@ -155,6 +155,12 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   Grupos vêm de `/standings` (tabela `classificacao`); mata-mata de `copa_<liga>` = `/matches?leagueId=` das copas (2 páginas,
   a cada 20 h enquanto houver jogo aberto) → tabela `mata_mata` (só fases eliminatórias, com pênaltis). `copas.js`:
   confrontos ida+volta somados, ordem do chaveamento de trás para frente, coluna da Final "a definir" até a fonte criar o jogo.
+- Tabela do Brasileirão parada sem a rodada (bug de 18/10/2026, Bahia × Flamengo; corrigido em 19/10/2026): as renovações de
+  pré-jogo gastavam a cota em extras e `liga_61205` (último da fila, a cada 20 h) ficou de 17/10 18:30. Agora: `liga_*` com jogo
+  terminado depois do download (`extras.jogos_sem_resultado`) vai para o início dos extras (3 h+ entre renovações) e o `planejar`
+  dispara a coleta por isso; em dia de jogo do Flamengo os extras não essenciais deixam `FLA_HL_RESERVA_JOGO` (25) de folga;
+  o resultado do Flamengo entra na liga pela lista dele (mesmo id); `meta.liga` = {coletado_em, sem_resultado} e o aviso
+  `avisoLiga()` aparece na Classificação e no Comparar calendário.
 - Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
 - Aba **Números** (16/10/2026, `numeros.js`; conferida com a planilha do Rafael "Dados Flamengo temporada 2026.xlsx"):
   artilharia (pênaltis entre parênteses), assistências, G+A, mais utilizados, sem sofrer gol (por goleiro), saiu na
