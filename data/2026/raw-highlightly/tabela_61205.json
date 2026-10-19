@@ -6,11 +6,11 @@
     "standings": [
      {
       "away": {
-       "wins": 8,
+       "wins": 9,
        "draws": 4,
-       "games": 15,
+       "games": 16,
        "loses": 3,
-       "scoredGoals": 29,
+       "scoredGoals": 32,
        "receivedGoals": 15
       },
       "home": {
@@ -27,23 +27,23 @@
        "name": "Flamengo"
       },
       "total": {
-       "wins": 19,
+       "wins": 20,
        "draws": 7,
-       "games": 30,
+       "games": 31,
        "loses": 4,
-       "scoredGoals": 58,
+       "scoredGoals": 61,
        "receivedGoals": 25
       },
-      "points": 64,
+      "points": 67,
       "position": 1
      },
      {
       "away": {
-       "wins": 7,
+       "wins": 8,
        "draws": 6,
-       "games": 15,
+       "games": 16,
        "loses": 2,
-       "scoredGoals": 24,
+       "scoredGoals": 26,
        "receivedGoals": 12
       },
       "home": {
@@ -60,14 +60,14 @@
        "name": "Palmeiras"
       },
       "total": {
-       "wins": 18,
+       "wins": 19,
        "draws": 9,
-       "games": 30,
+       "games": 31,
        "loses": 3,
-       "scoredGoals": 52,
+       "scoredGoals": 54,
        "receivedGoals": 22
       },
-      "points": 63,
+      "points": 66,
       "position": 2
      },
      {
@@ -82,10 +82,10 @@
       "home": {
        "wins": 9,
        "draws": 5,
-       "games": 15,
-       "loses": 1,
+       "games": 16,
+       "loses": 2,
        "scoredGoals": 27,
-       "receivedGoals": 13
+       "receivedGoals": 15
       },
       "team": {
        "id": 114818,
@@ -95,88 +95,22 @@
       "total": {
        "wins": 15,
        "draws": 8,
-       "games": 30,
-       "loses": 7,
+       "games": 31,
+       "loses": 8,
        "scoredGoals": 49,
-       "receivedGoals": 35
+       "receivedGoals": 37
       },
       "points": 53,
       "position": 3
      },
      {
       "away": {
-       "wins": 3,
-       "draws": 6,
-       "games": 15,
-       "loses": 6,
-       "scoredGoals": 20,
-       "receivedGoals": 23
-      },
-      "home": {
-       "wins": 11,
-       "draws": 3,
-       "games": 15,
-       "loses": 1,
-       "scoredGoals": 28,
-       "receivedGoals": 14
-      },
-      "team": {
-       "id": 106308,
-       "logo": "https://highlightly.net/soccer/images/teams/106308.png",
-       "name": "Fluminense"
-      },
-      "total": {
-       "wins": 14,
-       "draws": 9,
-       "games": 30,
-       "loses": 7,
-       "scoredGoals": 48,
-       "receivedGoals": 37
-      },
-      "points": 51,
-      "position": 4
-     },
-     {
-      "away": {
-       "wins": 6,
-       "draws": 4,
-       "games": 15,
-       "loses": 5,
-       "scoredGoals": 21,
-       "receivedGoals": 22
-      },
-      "home": {
        "wins": 7,
-       "draws": 6,
-       "games": 15,
-       "loses": 2,
-       "scoredGoals": 23,
-       "receivedGoals": 14
-      },
-      "team": {
-       "id": 101202,
-       "logo": "https://highlightly.net/soccer/images/teams/101202.png",
-       "name": "Bahia"
-      },
-      "total": {
-       "wins": 13,
-       "draws": 10,
-       "games": 30,
-       "loses": 7,
-       "scoredGoals": 44,
-       "receivedGoals": 36
-      },
-      "points": 49,
-      "position": 5
-     },
-     {
-      "away": {
-       "wins": 6,
        "draws": 2,
-       "games": 15,
+       "games": 16,
        "loses": 7,
-       "scoredGoals": 20,
-       "receivedGoals": 28
+       "scoredGoals": 24,
+       "receivedGoals": 30
       },
       "home": {
        "wins": 8,
@@ -192,15 +126,48 @@
        "name": "Cruzeiro"
       },
       "total": {
-       "wins": 14,
+       "wins": 15,
        "draws": 6,
-       "games": 30,
+       "games": 31,
        "loses": 10,
-       "scoredGoals": 46,
-       "receivedGoals": 44
+       "scoredGoals": 50,
+       "receivedGoals": 46
       },
-      "points": 48,
-      "position": 6
+      "points": 51,
+      "position": 4
+     },
+     {
+      "away": {
+       "wins": 3,
+       "draws": 6,
+       "games": 15,
+       "loses": 6,
+       "scoredGoals": 20,
+       "receivedGoals": 23
+      },
+      "home": {
+       "wins": 11,
+       "draws": 3,
+       "games": 16,
+       "loses": 2,
+       "scoredGoals": 29,
+       "receivedGoals": 16
+      },
+      "team": {
+       "id": 106308,
+       "logo": "https://highlightly.net/soccer/images/teams/106308.png",
+       "name": "Fluminense"
+      },
+      "total": {
+       "wins": 14,
+       "draws": 9,
+       "games": 31,
+       "loses": 8,
+       "scoredGoals": 49,
+       "receivedGoals": 39
+      },
+      "points": 51,
+      "position": 5
      },
      {
       "away": {
@@ -212,11 +179,11 @@
        "receivedGoals": 18
       },
       "home": {
-       "wins": 9,
+       "wins": 10,
        "draws": 5,
-       "games": 15,
+       "games": 16,
        "loses": 1,
-       "scoredGoals": 26,
+       "scoredGoals": 27,
        "receivedGoals": 17
       },
       "team": {
@@ -225,24 +192,57 @@
        "name": "Atletico-MG"
       },
       "total": {
-       "wins": 13,
+       "wins": 14,
        "draws": 8,
-       "games": 30,
+       "games": 31,
        "loses": 9,
-       "scoredGoals": 41,
+       "scoredGoals": 42,
        "receivedGoals": 35
       },
-      "points": 47,
+      "points": 50,
+      "position": 6
+     },
+     {
+      "away": {
+       "wins": 6,
+       "draws": 4,
+       "games": 15,
+       "loses": 5,
+       "scoredGoals": 21,
+       "receivedGoals": 22
+      },
+      "home": {
+       "wins": 7,
+       "draws": 6,
+       "games": 16,
+       "loses": 3,
+       "scoredGoals": 23,
+       "receivedGoals": 17
+      },
+      "team": {
+       "id": 101202,
+       "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+       "name": "Bahia"
+      },
+      "total": {
+       "wins": 13,
+       "draws": 10,
+       "games": 31,
+       "loses": 8,
+       "scoredGoals": 44,
+       "receivedGoals": 39
+      },
+      "points": 49,
       "position": 7
      },
      {
       "away": {
-       "wins": 5,
+       "wins": 6,
        "draws": 4,
-       "games": 15,
+       "games": 16,
        "loses": 6,
-       "scoredGoals": 24,
-       "receivedGoals": 25
+       "scoredGoals": 26,
+       "receivedGoals": 26
       },
       "home": {
        "wins": 6,
@@ -258,24 +258,57 @@
        "name": "Santos"
       },
       "total": {
-       "wins": 11,
+       "wins": 12,
        "draws": 9,
-       "games": 30,
+       "games": 31,
        "loses": 10,
-       "scoredGoals": 46,
-       "receivedGoals": 45
+       "scoredGoals": 48,
+       "receivedGoals": 46
       },
-      "points": 42,
+      "points": 45,
       "position": 8
      },
      {
       "away": {
-       "wins": 4,
-       "draws": 4,
+       "wins": 2,
+       "draws": 3,
        "games": 15,
+       "loses": 10,
+       "scoredGoals": 11,
+       "receivedGoals": 22
+      },
+      "home": {
+       "wins": 10,
+       "draws": 3,
+       "games": 16,
+       "loses": 3,
+       "scoredGoals": 25,
+       "receivedGoals": 13
+      },
+      "team": {
+       "id": 108010,
+       "logo": "https://highlightly.net/soccer/images/teams/108010.png",
+       "name": "São Paulo FC"
+      },
+      "total": {
+       "wins": 12,
+       "draws": 6,
+       "games": 31,
+       "loses": 13,
+       "scoredGoals": 36,
+       "receivedGoals": 35
+      },
+      "points": 42,
+      "position": 9
+     },
+     {
+      "away": {
+       "wins": 4,
+       "draws": 5,
+       "games": 16,
        "loses": 7,
-       "scoredGoals": 14,
-       "receivedGoals": 18
+       "scoredGoals": 15,
+       "receivedGoals": 19
       },
       "home": {
        "wins": 7,
@@ -292,56 +325,56 @@
       },
       "total": {
        "wins": 11,
-       "draws": 7,
-       "games": 30,
+       "draws": 8,
+       "games": 31,
        "loses": 12,
-       "scoredGoals": 38,
-       "receivedGoals": 35
+       "scoredGoals": 39,
+       "receivedGoals": 36
       },
-      "points": 40,
-      "position": 9
+      "points": 41,
+      "position": 10
      },
      {
       "away": {
-       "wins": 2,
+       "wins": 4,
        "draws": 3,
        "games": 15,
-       "loses": 10,
-       "scoredGoals": 11,
-       "receivedGoals": 22
+       "loses": 8,
+       "scoredGoals": 18,
+       "receivedGoals": 26
       },
       "home": {
-       "wins": 9,
-       "draws": 3,
-       "games": 15,
-       "loses": 3,
-       "scoredGoals": 24,
-       "receivedGoals": 13
+       "wins": 6,
+       "draws": 6,
+       "games": 16,
+       "loses": 4,
+       "scoredGoals": 26,
+       "receivedGoals": 22
       },
       "team": {
-       "id": 108010,
-       "logo": "https://highlightly.net/soccer/images/teams/108010.png",
-       "name": "São Paulo FC"
+       "id": 102904,
+       "logo": "https://highlightly.net/soccer/images/teams/102904.png",
+       "name": "Botafogo"
       },
       "total": {
-       "wins": 11,
-       "draws": 6,
-       "games": 30,
-       "loses": 13,
-       "scoredGoals": 35,
-       "receivedGoals": 35
+       "wins": 10,
+       "draws": 9,
+       "games": 31,
+       "loses": 12,
+       "scoredGoals": 44,
+       "receivedGoals": 48
       },
       "points": 39,
-      "position": 10
+      "position": 11
      },
      {
       "away": {
        "wins": 5,
        "draws": 4,
-       "games": 15,
-       "loses": 6,
+       "games": 16,
+       "loses": 7,
        "scoredGoals": 18,
-       "receivedGoals": 28
+       "receivedGoals": 29
       },
       "home": {
        "wins": 5,
@@ -359,13 +392,13 @@
       "total": {
        "wins": 10,
        "draws": 9,
-       "games": 30,
-       "loses": 11,
+       "games": 31,
+       "loses": 12,
        "scoredGoals": 38,
-       "receivedGoals": 48
+       "receivedGoals": 49
       },
       "points": 39,
-      "position": 11
+      "position": 12
      },
      {
       "away": {
@@ -396,39 +429,6 @@
        "loses": 14,
        "scoredGoals": 33,
        "receivedGoals": 44
-      },
-      "points": 36,
-      "position": 12
-     },
-     {
-      "away": {
-       "wins": 4,
-       "draws": 3,
-       "games": 15,
-       "loses": 8,
-       "scoredGoals": 18,
-       "receivedGoals": 26
-      },
-      "home": {
-       "wins": 5,
-       "draws": 6,
-       "games": 15,
-       "loses": 4,
-       "scoredGoals": 25,
-       "receivedGoals": 22
-      },
-      "team": {
-       "id": 102904,
-       "logo": "https://highlightly.net/soccer/images/teams/102904.png",
-       "name": "Botafogo"
-      },
-      "total": {
-       "wins": 9,
-       "draws": 9,
-       "games": 30,
-       "loses": 12,
-       "scoredGoals": 43,
-       "receivedGoals": 48
       },
       "points": 36,
       "position": 13
@@ -470,10 +470,10 @@
       "away": {
        "wins": 2,
        "draws": 5,
-       "games": 14,
-       "loses": 7,
+       "games": 15,
+       "loses": 8,
        "scoredGoals": 15,
-       "receivedGoals": 24
+       "receivedGoals": 25
       },
       "home": {
        "wins": 7,
@@ -491,10 +491,10 @@
       "total": {
        "wins": 9,
        "draws": 8,
-       "games": 29,
-       "loses": 12,
+       "games": 30,
+       "loses": 13,
        "scoredGoals": 36,
-       "receivedGoals": 42
+       "receivedGoals": 43
       },
       "points": 35,
       "position": 15
@@ -577,10 +577,10 @@
       "home": {
        "wins": 7,
        "draws": 5,
-       "games": 15,
-       "loses": 3,
-       "scoredGoals": 23,
-       "receivedGoals": 17
+       "games": 16,
+       "loses": 4,
+       "scoredGoals": 25,
+       "receivedGoals": 21
       },
       "team": {
        "id": 111414,
@@ -590,10 +590,10 @@
       "total": {
        "wins": 7,
        "draws": 10,
-       "games": 30,
-       "loses": 13,
-       "scoredGoals": 32,
-       "receivedGoals": 40
+       "games": 31,
+       "loses": 14,
+       "scoredGoals": 34,
+       "receivedGoals": 44
       },
       "points": 31,
       "position": 18
@@ -609,11 +609,11 @@
       },
       "home": {
        "wins": 3,
-       "draws": 6,
-       "games": 15,
+       "draws": 7,
+       "games": 16,
        "loses": 6,
-       "scoredGoals": 19,
-       "receivedGoals": 20
+       "scoredGoals": 20,
+       "receivedGoals": 21
       },
       "team": {
        "id": 1020282,
@@ -622,23 +622,23 @@
       },
       "total": {
        "wins": 5,
-       "draws": 10,
-       "games": 30,
+       "draws": 11,
+       "games": 31,
        "loses": 15,
-       "scoredGoals": 33,
-       "receivedGoals": 48
+       "scoredGoals": 34,
+       "receivedGoals": 49
       },
-      "points": 25,
+      "points": 26,
       "position": 19
      },
      {
       "away": {
        "wins": 1,
        "draws": 4,
-       "games": 15,
-       "loses": 10,
+       "games": 16,
+       "loses": 11,
        "scoredGoals": 11,
-       "receivedGoals": 28
+       "receivedGoals": 29
       },
       "home": {
        "wins": 2,
@@ -656,10 +656,10 @@
       "total": {
        "wins": 3,
        "draws": 9,
-       "games": 29,
-       "loses": 17,
+       "games": 30,
+       "loses": 18,
        "scoredGoals": 30,
-       "receivedGoals": 61
+       "receivedGoals": 62
       },
       "points": 18,
       "position": 20
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-10-18T03:45:58.342083+00:00"
+ "_coletado_em": "2026-10-19T15:01:02.897372+00:00"
 }

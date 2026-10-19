@@ -594,160 +594,160 @@
     },
     "statistics": [
      {
-      "displayName": "Expected Goals",
-      "value": 0.56
+      "value": 0.56,
+      "displayName": "Expected Goals"
      },
      {
-      "displayName": "Big Chances Created",
-      "value": 1
+      "value": 1,
+      "displayName": "Big Chances Created"
      },
      {
-      "displayName": "Free Kicks",
-      "value": 8
+      "value": 8,
+      "displayName": "Free Kicks"
      },
      {
-      "displayName": "Expected Assists",
-      "value": 0.61
+      "value": 0.61,
+      "displayName": "Expected Assists"
      },
      {
-      "displayName": "Successful Crosses",
-      "value": 2
+      "value": 2,
+      "displayName": "Successful Crosses"
      },
      {
-      "displayName": "Crosses",
-      "value": 11
+      "value": 11,
+      "displayName": "Crosses"
      },
      {
-      "displayName": "Passes Own Half",
-      "value": 207
+      "value": 207,
+      "displayName": "Passes Own Half"
      },
      {
-      "displayName": "Passes Opposition Half",
-      "value": 146
+      "value": 146,
+      "displayName": "Passes Opposition Half"
      },
      {
-      "displayName": "Successful Long Passes",
-      "value": 8
+      "value": 8,
+      "displayName": "Successful Long Passes"
      },
      {
-      "displayName": "Long Passes",
-      "value": 34
+      "value": 34,
+      "displayName": "Long Passes"
      },
      {
-      "displayName": "Throw-Ins",
-      "value": 21
+      "value": 21,
+      "displayName": "Throw-Ins"
      },
      {
-      "displayName": "Key Passes",
-      "value": 4
+      "value": 4,
+      "displayName": "Key Passes"
      },
      {
-      "displayName": "Passes Into Final Third",
-      "value": 45
+      "value": 45,
+      "displayName": "Passes Into Final Third"
      },
      {
-      "displayName": "Backward Passes",
-      "value": 52
+      "value": 52,
+      "displayName": "Backward Passes"
      },
      {
-      "displayName": "Goal Kicks",
-      "value": 5
+      "value": 5,
+      "displayName": "Goal Kicks"
      },
      {
-      "displayName": "Interceptions",
-      "value": 7
+      "value": 7,
+      "displayName": "Interceptions"
      },
      {
-      "displayName": "Successful Tackles",
-      "value": 10
+      "value": 10,
+      "displayName": "Successful Tackles"
      },
      {
-      "displayName": "Tackles",
-      "value": 15
+      "value": 15,
+      "displayName": "Tackles"
      },
      {
-      "displayName": "Clearances",
-      "value": 30
+      "value": 30,
+      "displayName": "Clearances"
      },
      {
-      "displayName": "Successful Aerial Duels",
-      "value": 11
+      "value": 11,
+      "displayName": "Successful Aerial Duels"
      },
      {
-      "displayName": "Aerial Duels",
-      "value": 27
+      "value": 27,
+      "displayName": "Aerial Duels"
      },
      {
-      "displayName": "Successful Dribbles",
-      "value": 13
+      "value": 13,
+      "displayName": "Successful Dribbles"
      },
      {
-      "displayName": "Dribbles",
-      "value": 20
+      "value": 20,
+      "displayName": "Dribbles"
      },
      {
-      "displayName": "Shots accuracy",
-      "value": 0.33
+      "value": 0.33,
+      "displayName": "Shots accuracy"
      },
      {
-      "displayName": "Failed passes",
-      "value": 65
+      "value": 65,
+      "displayName": "Failed passes"
      },
      {
-      "displayName": "Possession",
-      "value": 0.37
+      "value": 0.37,
+      "displayName": "Possession"
      },
      {
-      "displayName": "Shots on target",
-      "value": 3
+      "value": 3,
+      "displayName": "Shots on target"
      },
      {
-      "displayName": "Corners",
-      "value": 4
+      "value": 4,
+      "displayName": "Corners"
      },
      {
-      "displayName": "Offsides",
-      "value": 1
+      "value": 1,
+      "displayName": "Offsides"
      },
      {
-      "displayName": "Successful passes",
-      "value": 277
+      "value": 277,
+      "displayName": "Successful passes"
      },
      {
-      "displayName": "Red cards",
-      "value": 0
+      "value": 0,
+      "displayName": "Red cards"
      },
      {
-      "displayName": "Shots off target",
-      "value": 3
+      "value": 3,
+      "displayName": "Shots off target"
      },
      {
-      "displayName": "Blocked shots",
-      "value": 3
+      "value": 3,
+      "displayName": "Blocked shots"
      },
      {
-      "displayName": "Shots within penalty area",
-      "value": 6
+      "value": 6,
+      "displayName": "Shots within penalty area"
      },
      {
-      "displayName": "Total passes",
-      "value": 342
+      "value": 342,
+      "displayName": "Total passes"
      },
      {
-      "displayName": "Goalkeeper saves",
-      "value": 11
+      "value": 11,
+      "displayName": "Goalkeeper saves"
      },
      {
-      "displayName": "Fouls",
-      "value": 12
+      "value": 12,
+      "displayName": "Fouls"
      },
      {
-      "displayName": "Yellow cards",
-      "value": 4
+      "value": 4,
+      "displayName": "Yellow cards"
      },
      {
-      "displayName": "Shots outside penalty area",
-      "value": 3
+      "value": 3,
+      "displayName": "Shots outside penalty area"
      }
     ]
    },
@@ -759,160 +759,160 @@
     },
     "statistics": [
      {
-      "displayName": "Expected Goals",
-      "value": 2.74
+      "value": 2.74,
+      "displayName": "Expected Goals"
      },
      {
-      "displayName": "Big Chances Created",
-      "value": 7
+      "value": 7,
+      "displayName": "Big Chances Created"
      },
      {
-      "displayName": "Free Kicks",
-      "value": 12
+      "value": 12,
+      "displayName": "Free Kicks"
      },
      {
-      "displayName": "Expected Assists",
-      "value": 1.52
+      "value": 1.52,
+      "displayName": "Expected Assists"
      },
      {
-      "displayName": "Successful Crosses",
-      "value": 5
+      "value": 5,
+      "displayName": "Successful Crosses"
      },
      {
-      "displayName": "Crosses",
-      "value": 27
+      "value": 27,
+      "displayName": "Crosses"
      },
      {
-      "displayName": "Passes Own Half",
-      "value": 261
+      "value": 261,
+      "displayName": "Passes Own Half"
      },
      {
-      "displayName": "Passes Opposition Half",
-      "value": 340
+      "value": 340,
+      "displayName": "Passes Opposition Half"
      },
      {
-      "displayName": "Successful Long Passes",
-      "value": 26
+      "value": 26,
+      "displayName": "Successful Long Passes"
      },
      {
-      "displayName": "Long Passes",
-      "value": 41
+      "value": 41,
+      "displayName": "Long Passes"
      },
      {
-      "displayName": "Throw-Ins",
-      "value": 28
+      "value": 28,
+      "displayName": "Throw-Ins"
      },
      {
-      "displayName": "Key Passes",
-      "value": 17
+      "value": 17,
+      "displayName": "Key Passes"
      },
      {
-      "displayName": "Passes Into Final Third",
-      "value": 134
+      "value": 134,
+      "displayName": "Passes Into Final Third"
      },
      {
-      "displayName": "Backward Passes",
-      "value": 76
+      "value": 76,
+      "displayName": "Backward Passes"
      },
      {
-      "displayName": "Goal Kicks",
-      "value": 4
+      "value": 4,
+      "displayName": "Goal Kicks"
      },
      {
-      "displayName": "Interceptions",
-      "value": 6
+      "value": 6,
+      "displayName": "Interceptions"
      },
      {
-      "displayName": "Successful Tackles",
-      "value": 8
+      "value": 8,
+      "displayName": "Successful Tackles"
      },
      {
-      "displayName": "Tackles",
-      "value": 12
+      "value": 12,
+      "displayName": "Tackles"
      },
      {
-      "displayName": "Clearances",
-      "value": 20
+      "value": 20,
+      "displayName": "Clearances"
      },
      {
-      "displayName": "Successful Aerial Duels",
-      "value": 16
+      "value": 16,
+      "displayName": "Successful Aerial Duels"
      },
      {
-      "displayName": "Aerial Duels",
-      "value": 27
+      "value": 27,
+      "displayName": "Aerial Duels"
      },
      {
-      "displayName": "Successful Dribbles",
-      "value": 15
+      "value": 15,
+      "displayName": "Successful Dribbles"
      },
      {
-      "displayName": "Dribbles",
-      "value": 22
+      "value": 22,
+      "displayName": "Dribbles"
      },
      {
-      "displayName": "Shots accuracy",
-      "value": 0.71
+      "value": 0.71,
+      "displayName": "Shots accuracy"
      },
      {
-      "displayName": "Failed passes",
-      "value": 60
+      "value": 60,
+      "displayName": "Failed passes"
      },
      {
-      "displayName": "Possession",
-      "value": 0.63
+      "value": 0.63,
+      "displayName": "Possession"
      },
      {
-      "displayName": "Shots on target",
-      "value": 15
+      "value": 15,
+      "displayName": "Shots on target"
      },
      {
-      "displayName": "Corners",
-      "value": 14
+      "value": 14,
+      "displayName": "Corners"
      },
      {
-      "displayName": "Offsides",
-      "value": 3
+      "value": 3,
+      "displayName": "Offsides"
      },
      {
-      "displayName": "Successful passes",
-      "value": 514
+      "value": 514,
+      "displayName": "Successful passes"
      },
      {
-      "displayName": "Red cards",
-      "value": 0
+      "value": 0,
+      "displayName": "Red cards"
      },
      {
-      "displayName": "Shots off target",
-      "value": 2
+      "value": 2,
+      "displayName": "Shots off target"
      },
      {
-      "displayName": "Blocked shots",
-      "value": 4
+      "value": 4,
+      "displayName": "Blocked shots"
      },
      {
-      "displayName": "Shots within penalty area",
-      "value": 17
+      "value": 17,
+      "displayName": "Shots within penalty area"
      },
      {
-      "displayName": "Total passes",
-      "value": 574
+      "value": 574,
+      "displayName": "Total passes"
      },
      {
-      "displayName": "Goalkeeper saves",
-      "value": 3
+      "value": 3,
+      "displayName": "Goalkeeper saves"
      },
      {
-      "displayName": "Fouls",
-      "value": 9
+      "value": 9,
+      "displayName": "Fouls"
      },
      {
-      "displayName": "Yellow cards",
-      "value": 2
+      "value": 2,
+      "displayName": "Yellow cards"
      },
      {
-      "displayName": "Shots outside penalty area",
-      "value": 4
+      "value": 4,
+      "displayName": "Shots outside penalty area"
      }
     ]
    }
@@ -939,8 +939,8 @@
    "name": "Flamengo",
    "topPlayers": [
     {
-     "position": "Attacker",
      "name": "Joaquín Freitas",
+     "position": "Attacker",
      "statistics": [
       {
        "name": "Expected Goals",
@@ -957,8 +957,8 @@
      ]
     },
     {
-     "position": "Midfielder",
      "name": "Jorge Carrascal",
+     "position": "Midfielder",
      "statistics": [
       {
        "name": "Expected Goals",
@@ -975,8 +975,8 @@
      ]
     },
     {
-     "position": "Defender",
      "name": "Guillermo Varela",
+     "position": "Defender",
      "statistics": [
       {
        "name": "Interceptions",
@@ -995,130 +995,130 @@
    ],
    "shots": [
     {
-     "playerName": "Pedro",
      "time": "1'",
      "outcome": "Blocked",
-     "goalTarget": "Low Right"
+     "goalTarget": "Low Right",
+     "playerName": "Pedro"
     },
     {
-     "playerName": "Jorge Carrascal",
      "time": "10'",
      "outcome": "Saved",
-     "goalTarget": "Low Centre"
+     "goalTarget": "Low Centre",
+     "playerName": "Jorge Carrascal"
     },
     {
-     "playerName": "Jorge Carrascal",
      "time": "15'",
      "outcome": "Saved",
-     "goalTarget": "Low Left"
+     "goalTarget": "Low Left",
+     "playerName": "Jorge Carrascal"
     },
     {
-     "playerName": "Jorge Carrascal",
      "time": "16'",
      "outcome": "Saved",
-     "goalTarget": "High Right"
+     "goalTarget": "High Right",
+     "playerName": "Jorge Carrascal"
     },
     {
-     "playerName": "Pedro",
      "time": "17'",
      "outcome": "Saved",
-     "goalTarget": "High Centre"
+     "goalTarget": "High Centre",
+     "playerName": "Pedro"
     },
     {
-     "playerName": "Erick Pulgar",
      "time": "26'",
      "outcome": "Saved",
-     "goalTarget": "High Centre"
+     "goalTarget": "High Centre",
+     "playerName": "Erick Pulgar"
     },
     {
-     "playerName": "Erick Pulgar",
      "time": "26'",
      "outcome": "Missed",
-     "goalTarget": "High Left"
+     "goalTarget": "High Left",
+     "playerName": "Erick Pulgar"
     },
     {
-     "playerName": "Pedro",
      "time": "29'",
      "outcome": "Blocked",
-     "goalTarget": "Low Centre"
+     "goalTarget": "Low Centre",
+     "playerName": "Pedro"
     },
     {
-     "playerName": "Jorge Carrascal",
      "time": "35'",
      "outcome": "Saved",
-     "goalTarget": "Low Left"
+     "goalTarget": "Low Left",
+     "playerName": "Jorge Carrascal"
     },
     {
-     "playerName": "Pedro",
      "time": "43'",
      "outcome": "Saved",
-     "goalTarget": "Low Left"
+     "goalTarget": "Low Left",
+     "playerName": "Pedro"
     },
     {
-     "playerName": "Samuel Lino",
      "time": "47'",
      "outcome": "Saved",
-     "goalTarget": "Low Left"
+     "goalTarget": "Low Left",
+     "playerName": "Samuel Lino"
     },
     {
-     "playerName": "Léo Ortiz",
      "time": "48'",
      "outcome": "Blocked",
-     "goalTarget": "Low Centre"
+     "goalTarget": "Low Centre",
+     "playerName": "Léo Ortiz"
     },
     {
-     "playerName": "Jorge Carrascal",
      "time": "52'",
      "outcome": "Blocked",
-     "goalTarget": "Low Centre"
+     "goalTarget": "Low Centre",
+     "playerName": "Jorge Carrascal"
     },
     {
-     "playerName": "Jorginho",
      "time": "64'",
      "outcome": "Goal",
-     "goalTarget": "Low Centre"
+     "goalTarget": "Low Centre",
+     "playerName": "Jorginho"
     },
     {
-     "playerName": "Gonzalo Plata",
      "time": "67'",
      "outcome": "Saved",
-     "goalTarget": "Low Left"
+     "goalTarget": "Low Left",
+     "playerName": "Gonzalo Plata"
     },
     {
-     "playerName": "Leo Pereira",
      "time": "68'",
      "outcome": "Saved",
-     "goalTarget": "Low Left"
+     "goalTarget": "Low Left",
+     "playerName": "Leo Pereira"
     },
     {
-     "playerName": "Lucas Paquetá",
      "time": "71'",
      "outcome": "Missed",
-     "goalTarget": "Close Right"
+     "goalTarget": "Close Right",
+     "playerName": "Lucas Paquetá"
     },
     {
-     "playerName": "Gonzalo Plata",
      "time": "73'",
      "outcome": "Goal",
-     "goalTarget": "Low Left"
+     "goalTarget": "Low Left",
+     "playerName": "Gonzalo Plata"
     },
     {
-     "playerName": "Lucas Paquetá",
      "time": "78'",
      "outcome": "Goal",
-     "goalTarget": "Low Left"
+     "goalTarget": "Low Left",
+     "playerName": "Lucas Paquetá"
     },
     {
-     "playerName": "Gonzalo Plata",
      "time": "81'",
      "outcome": "Saved",
-     "goalTarget": "High Left"
+     "goalTarget": "High Left",
+     "playerName": "Gonzalo Plata"
     },
     {
-     "playerName": "Nicolas De La Cruz",
      "time": "87'",
      "outcome": "Blocked",
-     "goalTarget": "Low Centre"
+     "goalTarget": "Low Centre",
+     "playerName": "Nicolas De La Cruz"
     }
    ]
   },
@@ -1128,8 +1128,8 @@
    "name": "Bahia",
    "topPlayers": [
     {
-     "position": "Attacker",
      "name": "Alejo Véliz",
+     "position": "Attacker",
      "statistics": [
       {
        "name": "Expected Goals",
@@ -1146,8 +1146,8 @@
      ]
     },
     {
-     "position": "Midfielder",
      "name": "Rodrigo Nestor",
+     "position": "Midfielder",
      "statistics": [
       {
        "name": "Expected Goals",
@@ -1164,8 +1164,8 @@
      ]
     },
     {
-     "position": "Defender",
      "name": "David Duarte",
+     "position": "Defender",
      "statistics": [
       {
        "name": "Interceptions",
@@ -1184,58 +1184,58 @@
    ],
    "shots": [
     {
-     "playerName": "Luciano Juba",
      "time": "5'",
      "outcome": "Blocked",
-     "goalTarget": "Low Centre"
+     "goalTarget": "Low Centre",
+     "playerName": "Luciano Juba"
     },
     {
-     "playerName": "Nicolás Acevedo",
      "time": "5'",
      "outcome": "Blocked",
-     "goalTarget": "Low Left"
+     "goalTarget": "Low Left",
+     "playerName": "Nicolás Acevedo"
     },
     {
-     "playerName": "Luciano Juba",
      "time": "17'",
      "outcome": "Missed",
-     "goalTarget": "High Left"
+     "goalTarget": "High Left",
+     "playerName": "Luciano Juba"
     },
     {
-     "playerName": "Kike Olivera",
      "time": "39'",
      "outcome": "Missed",
-     "goalTarget": "Close High"
+     "goalTarget": "Close High",
+     "playerName": "Kike Olivera"
     },
     {
-     "playerName": "Erick Pulga",
      "time": "42'",
      "outcome": "Saved",
-     "goalTarget": "Low Left"
+     "goalTarget": "Low Left",
+     "playerName": "Erick Pulga"
     },
     {
-     "playerName": "Alejo Véliz",
      "time": "45 + 2'",
      "outcome": "Saved",
-     "goalTarget": "High Left"
+     "goalTarget": "High Left",
+     "playerName": "Alejo Véliz"
     },
     {
-     "playerName": "Rodrigo Nestor",
      "time": "54'",
      "outcome": "Missed",
-     "goalTarget": "High Left"
+     "goalTarget": "High Left",
+     "playerName": "Rodrigo Nestor"
     },
     {
-     "playerName": "Caio Alexandre",
      "time": "66'",
      "outcome": "Blocked",
-     "goalTarget": "Low Centre"
+     "goalTarget": "Low Centre",
+     "playerName": "Caio Alexandre"
     },
     {
-     "playerName": "Ademir Santos",
      "time": "84'",
      "outcome": "Saved",
-     "goalTarget": "Low Centre"
+     "goalTarget": "Low Centre",
+     "playerName": "Ademir Santos"
     }
    ]
   },
@@ -3659,5 +3659,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-18T23:45:29.768199+00:00"
+ "_coletado_em": "2026-10-19T15:00:49.967209+00:00"
 }
