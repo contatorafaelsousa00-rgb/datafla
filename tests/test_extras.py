@@ -141,3 +141,15 @@ def test_planejar_coleta_quando_a_rodada_termina(tmp_path, monkeypatch):
     _rodada(tmp_path, agora, coletado_ha_h=5)
     coletar, motivo = highlightly.planejar(agora)
     assert coletar and "Brasileirão" in motivo
+
+
+def test_classificacao_renova_depois_do_jogo_do_flamengo(tmp_path, monkeypatch):
+    _ambiente(tmp_path, monkeypatch)
+    agora = datetime.now(timezone.utc)
+    jogo = _jogo(1, "Finished")
+    jogo["date"] = _iso(agora - timedelta(hours=5))                 # terminou ~3 h atrás
+    salvar_raw("escalacao_1", {"data": {}, "_coletado_em": _iso(agora)}, tmp_path)
+    salvar_raw("tabela_61205", {"data": {}, "_coletado_em": _iso(agora - timedelta(hours=6))}, tmp_path)  # antes do jogo
+    assert extras.tarefas([jogo])[0][0] == "tabela_61205"
+    salvar_raw("tabela_61205", {"data": {}, "_coletado_em": _iso(agora - timedelta(hours=1))}, tmp_path)  # já depois
+    assert "tabela_61205" not in [t[0] for t in extras.tarefas([jogo])]

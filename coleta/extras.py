@@ -66,6 +66,16 @@ def jogos_sem_resultado(nome: str, agora: datetime | None = None, ignorar: set |
                and m["id"] not in (ignorar or ()))
 
 
+def tabela_atrasada(nome: str, liga: int, jogos: list[dict]) -> bool:
+    """Classificação baixada antes do fim de um jogo do Flamengo já encerrado nessa competição."""
+    salvo = ler_raw(nome)
+    if not salvo or "_coletado_em" not in salvo:
+        return False
+    coletado = datetime.fromisoformat(salvo["_coletado_em"])
+    return any((j.get("league") or {}).get("id") == liga and _status(j) in config.STATUS_ENCERRADO
+               and _data(j) + DURACAO_ESPERADA > coletado for j in jogos)
+
+
 def dia_de_jogo(jogos: list[dict], agora: datetime | None = None) -> bool:
     """Jogo do Flamengo nas próximas 30 h, ou já terminado e ainda não baixado."""
     agora = agora or _agora()
@@ -94,11 +104,14 @@ def tarefas(jogos: list[dict]) -> list[tuple[str, str, dict]]:
     futuras = {(j.get("league") or {}).get("id") for j in jogos if _status(j) not in config.STATUS_ENCERRADO}
     ligas = {(j.get("league") or {}).get("id"): (j.get("league") or {}).get("season") for j in jogos
              if "friendl" not in ((j.get("league") or {}).get("name") or "").lower()}  # amistoso não tem tabela
-    tabelas = []
+    tabelas, tabelas_rodada = [], []
     for liga, temporada in ligas.items():
         idade = _idade(f"tabela_{liga}")
-        if liga and (idade is None or (liga in futuras and idade >= timedelta(hours=HORAS_TABELA))):
-            tabelas.append((f"tabela_{liga}", "standings", {"leagueId": liga, "season": temporada or config.SEASON}))
+        tarefa = (f"tabela_{liga}", "standings", {"leagueId": liga, "season": temporada or config.SEASON})
+        if liga and tabela_atrasada(f"tabela_{liga}", liga, jogos) and idade >= timedelta(hours=HORAS_LIGA_RODADA):
+            tabelas_rodada.append(tarefa)  # jogo do Flamengo terminou depois da tabela: posição desatualizada
+        elif liga and (idade is None or (liga in futuras and idade >= timedelta(hours=HORAS_TABELA))):
+            tabelas.append(tarefa)
 
     minutos = defaultdict(int)
     for arq in config.RAW_DIR.glob("partida_*.json"):
@@ -130,7 +143,7 @@ def tarefas(jogos: list[dict]) -> list[tuple[str, str, dict]]:
             liga_rodada.append(tarefa)  # rodada terminou: vem antes de tudo
         elif idade >= timedelta(hours=HORAS_LIGA):
             liga.append(tarefa)
-    return liga_rodada + escalacoes[:5] + liga + perfis[:5] + escalacoes[5:] + tabelas + copas(jogos) + perfis[5:] + carreiras
+    return liga_rodada + tabelas_rodada + escalacoes[:5] + liga + perfis[:5] + escalacoes[5:] + tabelas + copas(jogos) + perfis[5:] + carreiras
 
 
 COPAS = ("libertadores", "copa do brasil")
@@ -160,7 +173,8 @@ def cmd_extras(api: ClienteHighlightly) -> int:
     folga = RESERVA_DIA_DE_JOGO if dia_de_jogo(lista["data"]) else 0
     adiados = 0
     for nome, caminho, params in pendentes:
-        essencial = nome.startswith("liga_") and jogos_sem_resultado(nome)
+        essencial = (nome.startswith("liga_") and jogos_sem_resultado(nome)) or (
+            nome.startswith("tabela_") and tabela_atrasada(nome, params.get("leagueId"), lista["data"]))
         reserva = _reserva() + (0 if essencial else folga)
         if api.restantes_hoje is not None and api.restantes_hoje - 1 < reserva:
             if essencial or not folga:
