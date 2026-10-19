@@ -74,7 +74,7 @@ def expandir(tabela):
 
 
 def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | None = None,
-             demo: bool = False, coletado_em: str | None = None) -> Path:
+             demo: bool = False, coletado_em: str | None = None, liga: dict | None = None) -> Path:
     destino = destino or SITE_DADOS
     destino.mkdir(parents=True, exist_ok=True)
     conteudo = {
@@ -118,6 +118,7 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         "temporada": config.SEASON,
         "demo": demo,
         "fonte": config.FONTE,
+        "liga": liga,  # {coletado_em, sem_resultado} do arquivo da liga (aviso no painel)
     }
     arquivo = destino / f"{config.SEASON}.json"
     arquivo.write_text(json.dumps(conteudo, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

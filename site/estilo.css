@@ -738,3 +738,8 @@ body.modo-admin main, body.modo-admin .rodape, body.modo-admin #aviso-demo { dis
 .admin-conteudo .segmentado { flex-wrap: wrap; max-width: 100%; }
 .admin-opiniao-acoes { flex-wrap: wrap; }
 .admin-situacao td.num { white-space: normal; text-align: right; }
+
+/* Aviso de atualização da lista de jogos da liga (Classificação e Comparar calendário) */
+.aviso-liga { font-size: 12px; }
+.aviso-liga.atrasada { display: inline-flex; gap: 6px; align-items: baseline; padding: 6px 10px; border-radius: 8px;
+  background: color-mix(in srgb, var(--alerta) 12%, var(--superficie)); border: 1px solid color-mix(in srgb, var(--alerta) 45%, transparent); color: var(--texto); }

@@ -111,6 +111,17 @@ export function modeloLiga() {
   return { times, encerrados, restantes, atual, idFla, competicao: liga[0].competicao, ...forcas(times, encerrados) };
 }
 
+// De quando é a lista de jogos da liga e se já terminou jogo que ela ainda não tem (a fonte da liga é baixada
+// separada da do Flamengo e pode atrasar quando a cota do dia acaba; o jogo do Flamengo já entra pelo calendário dele)
+export function avisoLiga() {
+  const info = D.bruto.meta?.liga;
+  if (!info?.coletado_em) return null;
+  const quando = `${data(info.coletado_em)} às ${horaBR(info.coletado_em)}`;
+  return h("p", { class: `sutil aviso-liga${info.sem_resultado ? " atrasada" : ""}` },
+    `Resultados dos outros jogos do Brasileirão atualizados em ${quando}.`,
+    info.sem_resultado ? ` ${info.sem_resultado} jogo${info.sem_resultado > 1 ? "s" : ""} que já terminaram ainda não estão na conta; entram na próxima coleta.` : "");
+}
+
 // Probabilidades de um jogo pelo modelo (Poisson com força de ataque/defesa em casa e fora), de forma exata
 export function probabilidades(modelo, m) {
   const { f, media } = modelo;
@@ -242,6 +253,7 @@ function renderBrasileirao() {
     h("article", { class: "cartao" }, h("h2", {}, escolhidos.length ? "Tabela com seus palpites" : "Tabela"),
       h("p", { class: "sutil" }, `${encerrados.length} jogos disputados, ${restantes.length} por jogar. As chances vêm de ${num(SIMULACOES)} simulações dos jogos restantes`
         + (escolhidos.length ? ", respeitando seus palpites." : ".") + " Top 4/Top 6 são referência: as vagas da Libertadores mudam com os campeões das copas."),
+      avisoLiga(),
       h("div", { class: "tabela-rolagem" }, tabelaEl)),
     h("article", { class: "cartao" }, h("h2", {}, "Simulador"),
       h("p", { class: "sutil" }, "Escolha o resultado dos jogos que faltam: a tabela e as chances acima se refazem na hora. Clique de novo para desfazer. Os palpites ficam salvos só neste navegador."),

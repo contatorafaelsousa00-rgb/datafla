@@ -3,7 +3,7 @@
 // (Poisson com força de ataque e defesa em casa e fora). Soma os pontos esperados até o fim.
 import { $, D, data, estado, h, num, pct, preencher, vazio } from "./comum.js";
 import { horaBR } from "./temporada.js";
-import { modeloLiga, probabilidades } from "./classificacao.js";
+import { avisoLiga, modeloLiga, probabilidades } from "./classificacao.js";
 import { exportarImagem } from "./imagem.js";
 
 const escudo = (src) => (src ? h("img", { src, alt: "", width: 18, height: 18, loading: "lazy", class: "escudo-time" }) : null);
@@ -90,6 +90,7 @@ export function renderComparar() {
       h("h2", {}, "Comparar calendário"),
       h("p", { class: "sutil" }, `Jogos que faltam no ${modelo.competicao} para dois times. A chance de cada jogo vem do mesmo modelo do simulador `
         + "(gols marcados e sofridos em casa e fora); pontos esperados = 3 × vitória + empate."),
+      avisoLiga(),
       h("div", { class: "acoes comparar-seletores" }, seletor("compararA"), h("span", { class: "sutil" }, "×"), seletor("compararB")),
       a !== b ? h("p", { class: "comparar-resumo" },
         `Nos jogos que faltam, o modelo espera ${num(ea, 1)} pontos para o ${la.nome} e ${num(eb, 1)} para o ${lb.nome}: `,
