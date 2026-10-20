@@ -1,0 +1,321 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "S. Arzamendia",
+     "number": 15,
+     "position": "Defender",
+     "id": 403942
+    },
+    {
+     "name": "B. Aguirre",
+     "number": 28,
+     "position": "Forward",
+     "id": 46604019
+    },
+    {
+     "name": "R. Borzone",
+     "number": 12,
+     "position": "Goalkeeper",
+     "id": 66835118
+    },
+    {
+     "name": "G. Carrillo",
+     "number": 9,
+     "position": "Forward",
+     "id": 7634935
+    },
+    {
+     "name": "A. Gaich",
+     "number": 19,
+     "position": "Forward",
+     "id": 1067423
+    },
+    {
+     "name": "B. Gallego",
+     "number": 31,
+     "position": "Midfielder",
+     "id": 58498055
+    },
+    {
+     "name": "E. Mancuso",
+     "number": 40,
+     "position": "Defender",
+     "id": 50082424
+    },
+    {
+     "name": "S. Núñez",
+     "number": 4,
+     "position": "Defender",
+     "id": 55749624
+    },
+    {
+     "name": "T. Palacios",
+     "number": 10,
+     "position": "Midfielder",
+     "id": 33324578
+    },
+    {
+     "name": "Lucas Ezequiel Piovi",
+     "number": 21,
+     "position": "Midfielder",
+     "id": 849429
+    },
+    {
+     "name": "F. Pérez Escudero",
+     "number": 29,
+     "position": "Forward",
+     "id": 74680648
+    },
+    {
+     "name": "J. Burgos",
+     "number": 17,
+     "position": "Forward",
+     "id": 74680326
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "F. Iacovich",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 57467011
+     }
+    ],
+    [
+     {
+      "name": "G. Benedetti",
+      "number": 13,
+      "position": "Defender",
+      "id": 46605146
+     },
+     {
+      "name": "M. Rojo",
+      "number": 5,
+      "position": "Defender",
+      "id": 143444
+     },
+     {
+      "name": "L. González",
+      "number": 14,
+      "position": "Defender",
+      "id": 8191029
+     },
+     {
+      "name": "T. Palacios",
+      "number": 24,
+      "position": "Defender",
+      "id": 50129114
+     }
+    ],
+    [
+     {
+      "name": "B. Kociubinski",
+      "number": 52,
+      "position": "Midfielder",
+      "id": 46606112
+     },
+     {
+      "name": "J. Sosa",
+      "number": 7,
+      "position": "Midfielder",
+      "id": 8031961
+     }
+    ],
+    [
+     {
+      "name": "E. Cetré",
+      "number": 18,
+      "position": "Midfielder",
+      "id": 15230593
+     },
+     {
+      "name": "J. Correa",
+      "number": 32,
+      "position": "Midfielder",
+      "id": 298648
+     },
+     {
+      "name": "M. Monsalve",
+      "number": 34,
+      "position": "Midfielder",
+      "id": 44721285
+     }
+    ],
+    [
+     {
+      "name": "L. Alario",
+      "number": 27,
+      "position": "Forward",
+      "id": 158256
+     }
+    ]
+   ],
+   "id": 383734,
+   "logo": "https://highlightly.net/soccer/images/teams/383734.png",
+   "name": "Estudiantes de La Plata"
+  },
+  "awayTeam": {
+   "formation": "3-1-4-2",
+   "substitutes": [
+    {
+     "name": "F. Altamirano",
+     "number": 20,
+     "position": "Goalkeeper",
+     "id": 1024597
+    },
+    {
+     "name": "O. Arias",
+     "number": 30,
+     "position": "Defender",
+     "id": 66739001
+    },
+    {
+     "name": "Maximo Atrio",
+     "number": 34,
+     "position": null,
+     "id": null
+    },
+    {
+     "name": "A. Cordoba",
+     "number": 35,
+     "position": "Defender",
+     "id": 74678877
+    },
+    {
+     "name": "M. Insaurralde",
+     "number": 8,
+     "position": "Midfielder",
+     "id": 1065652
+    },
+    {
+     "name": "F. Lorenzón",
+     "number": 42,
+     "position": "Defender",
+     "id": 56375753
+    },
+    {
+     "name": "Elián Uriel Ojeda",
+     "number": 39,
+     "position": "Midfielder",
+     "id": null
+    },
+    {
+     "name": "M. Río",
+     "number": 27,
+     "position": "Midfielder",
+     "id": 49005656
+    },
+    {
+     "name": "Enzo Alan Salas",
+     "number": 44,
+     "position": "Forward",
+     "id": null
+    },
+    {
+     "name": "M. de Ritis",
+     "number": 6,
+     "position": "Defender",
+     "id": 57004136
+    },
+    {
+     "name": "G. del Prete",
+     "number": 21,
+     "position": "Forward",
+     "id": 8346555
+    },
+    {
+     "name": "G. Alassia",
+     "number": 62,
+     "position": "Midfielder",
+     "id": 47734722
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "J. Devecchi",
+      "number": 25,
+      "position": "Goalkeeper",
+      "id": 1061949
+     }
+    ],
+    [
+     {
+      "name": "G. Corujo",
+      "number": 16,
+      "position": "Defender",
+      "id": 8302280
+     },
+     {
+      "name": "E. Amor",
+      "number": 19,
+      "position": "Defender",
+      "id": 1007853
+     },
+     {
+      "name": "D. Arboleda",
+      "number": 2,
+      "position": "Defender",
+      "id": 86675792
+     }
+    ],
+    [
+     {
+      "name": "A. Ladstatter",
+      "number": 14,
+      "position": "Midfielder",
+      "id": 80367651
+     }
+    ],
+    [
+     {
+      "name": "T. Rodríguez",
+      "number": 3,
+      "position": "Midfielder",
+      "id": 81545688
+     },
+     {
+      "name": "Facundo Gulli",
+      "number": 10,
+      "position": "Midfielder",
+      "id": 105777959
+     },
+     {
+      "name": "N. Tripichio",
+      "number": 24,
+      "position": "Midfielder",
+      "id": 956172
+     },
+     {
+      "name": "E. Herrera",
+      "number": 32,
+      "position": "Midfielder",
+      "id": 58374085
+     }
+    ],
+    [
+     {
+      "name": "R. Auzmendi",
+      "number": 29,
+      "position": "Forward",
+      "id": 31940300
+     },
+     {
+      "name": "F. Farías",
+      "number": 38,
+      "position": "Forward",
+      "id": 25618796
+     }
+    ]
+   ],
+   "id": 392244,
+   "logo": "https://highlightly.net/soccer/images/teams/392244.png",
+   "name": "San Lorenzo de Almagro"
+  }
+ },
+ "_coletado_em": "2026-10-20T01:15:38.976496+00:00"
+}

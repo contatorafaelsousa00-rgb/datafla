@@ -215,5 +215,17 @@
   "requisicoes": 22,
   "cota_restante": 78,
   "erro": null
+ },
+ {
+  "quando": "2026-10-20T01:15:45+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "1 jogo(s) do Brasileirão terminaram depois da última tabela: renova a rodada",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 60,
+  "pendentes": 0,
+  "requisicoes": 11,
+  "cota_restante": 89,
+  "erro": null
  }
 ]
