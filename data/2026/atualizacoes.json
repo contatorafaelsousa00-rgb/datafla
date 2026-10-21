@@ -227,5 +227,23 @@
   "requisicoes": 11,
   "cota_restante": 89,
   "erro": null
+ },
+ {
+  "quando": "2026-10-21T01:30:55+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "atualização diária (última coleta há 24 h)",
+  "novos": [],
+  "recoletados": [
+   {
+    "adversario": "Bahia",
+    "data_utc": "2026-10-18T21:30:00.000Z",
+    "competicao": "Serie A"
+   }
+  ],
+  "encerrados": 60,
+  "pendentes": 0,
+  "requisicoes": 23,
+  "cota_restante": 77,
+  "erro": null
  }
 ]

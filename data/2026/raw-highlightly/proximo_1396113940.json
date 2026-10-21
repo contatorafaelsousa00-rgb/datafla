@@ -7,12 +7,12 @@
    "capacity": "73139"
   },
   "referee": {
-   "name": null,
-   "nationality": null
+   "name": "Tejera, Gustavo",
+   "nationality": "Uruguay"
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "22.02°C"
+   "temperature": "21.97°C"
   },
   "events": [],
   "predictions": {
@@ -160,6 +160,50 @@
       "draw": "20.91%",
       "home": "68.50%"
      }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-20T08:38:36.935Z",
+     "probabilities": {
+      "away": "10.39%",
+      "draw": "20.83%",
+      "home": "68.79%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-20T12:26:59.625Z",
+     "probabilities": {
+      "away": "10.33%",
+      "draw": "20.74%",
+      "home": "68.93%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-20T16:33:30.874Z",
+     "probabilities": {
+      "away": "10.46%",
+      "draw": "20.90%",
+      "home": "68.64%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-20T20:40:17.276Z",
+     "probabilities": {
+      "away": "10.44%",
+      "draw": "20.90%",
+      "home": "68.65%"
+     }
     }
    ]
   },
@@ -219,5 +263,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-20T01:15:38.110048+00:00"
+ "_coletado_em": "2026-10-21T01:30:37.769822+00:00"
 }

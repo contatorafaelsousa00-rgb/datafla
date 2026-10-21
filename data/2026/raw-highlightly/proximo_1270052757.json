@@ -1,21 +1,69 @@
 {
  "data": {
   "venue": {
-   "city": null,
-   "name": null,
-   "country": null,
-   "capacity": null
+   "city": "Rio de Janeiro",
+   "name": "Maracana Stadium",
+   "country": "Brazil",
+   "capacity": "73139"
   },
   "referee": {
    "name": null,
    "nationality": null
   },
   "forecast": {
-   "status": null,
-   "temperature": null
+   "status": "cloudy",
+   "temperature": "22.14°C"
   },
   "events": [],
-  "predictions": null,
+  "predictions": {
+   "live": [],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-20T09:34:02.124Z",
+     "probabilities": {
+      "away": "11.69%",
+      "draw": "18.31%",
+      "home": "70.00%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-20T13:31:45.937Z",
+     "probabilities": {
+      "away": "11.75%",
+      "draw": "18.32%",
+      "home": "69.93%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-20T17:41:43.385Z",
+     "probabilities": {
+      "away": "11.75%",
+      "draw": "18.33%",
+      "home": "69.92%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-20T21:38:47.366Z",
+     "probabilities": {
+      "away": "11.75%",
+      "draw": "18.32%",
+      "home": "69.93%"
+     }
+    }
+   ]
+  },
   "statistics": [
    {
     "statistics": [],
@@ -72,5 +120,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-19T15:00:54.576524+00:00"
+ "_coletado_em": "2026-10-21T01:30:41.066090+00:00"
 }

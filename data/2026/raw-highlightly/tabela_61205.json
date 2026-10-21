@@ -403,11 +403,11 @@
      {
       "away": {
        "wins": 0,
-       "draws": 5,
-       "games": 15,
+       "draws": 6,
+       "games": 16,
        "loses": 10,
-       "scoredGoals": 11,
-       "receivedGoals": 32
+       "scoredGoals": 12,
+       "receivedGoals": 33
       },
       "home": {
        "wins": 10,
@@ -424,13 +424,13 @@
       },
       "total": {
        "wins": 10,
-       "draws": 6,
-       "games": 30,
+       "draws": 7,
+       "games": 31,
        "loses": 14,
-       "scoredGoals": 33,
-       "receivedGoals": 44
+       "scoredGoals": 34,
+       "receivedGoals": 45
       },
-      "points": 36,
+      "points": 37,
       "position": 13
      },
      {
@@ -510,11 +510,11 @@
       },
       "home": {
        "wins": 5,
-       "draws": 3,
-       "games": 15,
+       "draws": 4,
+       "games": 16,
        "loses": 7,
-       "scoredGoals": 15,
-       "receivedGoals": 16
+       "scoredGoals": 16,
+       "receivedGoals": 17
       },
       "team": {
        "id": 112265,
@@ -523,13 +523,13 @@
       },
       "total": {
        "wins": 8,
-       "draws": 8,
-       "games": 30,
+       "draws": 9,
+       "games": 31,
        "loses": 14,
-       "scoredGoals": 31,
-       "receivedGoals": 38
+       "scoredGoals": 32,
+       "receivedGoals": 39
       },
-      "points": 32,
+      "points": 33,
       "position": 16
      },
      {
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-10-19T15:01:02.897372+00:00"
+ "_coletado_em": "2026-10-21T01:30:50.747503+00:00"
 }
