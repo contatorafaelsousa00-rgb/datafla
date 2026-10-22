@@ -248,6 +248,17 @@
       "draw": "17.85%",
       "home": "74.29%"
      }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-22T15:04:10.318Z",
+     "probabilities": {
+      "away": "7.67%",
+      "draw": "18.03%",
+      "home": "74.30%"
+     }
     }
    ]
   },
@@ -307,5 +318,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-22T13:00:51.876836+00:00"
+ "_coletado_em": "2026-10-22T19:15:36.880007+00:00"
 }
