@@ -12,7 +12,7 @@
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "21.97°C"
+   "temperature": "21.61°C"
   },
   "events": [],
   "predictions": {
@@ -204,6 +204,39 @@
       "draw": "20.90%",
       "home": "68.65%"
      }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-21T08:20:04.639Z",
+     "probabilities": {
+      "away": "10.47%",
+      "draw": "20.85%",
+      "home": "68.68%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-21T15:12:09.765Z",
+     "probabilities": {
+      "away": "10.57%",
+      "draw": "21.01%",
+      "home": "68.41%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Estudiantes de La Plata.",
+     "generatedAt": "2026-10-21T19:44:44.560Z",
+     "probabilities": {
+      "away": "10.68%",
+      "draw": "21.08%",
+      "home": "68.24%"
+     }
     }
    ]
   },
@@ -263,5 +296,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-21T01:30:37.769822+00:00"
+ "_coletado_em": "2026-10-22T00:30:44.074962+00:00"
 }
