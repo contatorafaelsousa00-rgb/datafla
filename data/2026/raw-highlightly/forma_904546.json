@@ -1,6 +1,40 @@
 {
  "data": [
   {
+   "id": 1396115642,
+   "round": "Semi-finals",
+   "date": "2026-10-21T22:00:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "homeTeam": {
+    "id": 2013399,
+    "logo": "https://highlightly.net/soccer/images/teams/2013399.png",
+    "name": "Atletico Torque"
+   },
+   "league": {
+    "id": 10145,
+    "logo": "https://highlightly.net/soccer/images/leagues/10145.png",
+    "name": "CONMEBOL Sudamericana",
+    "season": 2026
+   }
+  },
+  {
    "id": 1270042545,
    "round": "Regular Season - 31",
    "date": "2026-10-17T21:30:00.000Z",
@@ -135,41 +169,7 @@
     "name": "Serie A",
     "season": 2026
    }
-  },
-  {
-   "id": 1269956594,
-   "round": "Regular Season - 21",
-   "date": "2026-10-03T21:30:00.000Z",
-   "country": {
-    "code": "BR",
-    "name": "Brazil",
-    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
-   },
-   "state": {
-    "clock": 90,
-    "score": {
-     "current": "1 - 0",
-     "penalties": null
-    },
-    "description": "Finished"
-   },
-   "awayTeam": {
-    "id": 676478,
-    "logo": "https://highlightly.net/soccer/images/teams/676478.png",
-    "name": "RB Bragantino"
-   },
-   "homeTeam": {
-    "id": 904546,
-    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
-    "name": "Atletico-MG"
-   },
-   "league": {
-    "id": 61205,
-    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
-    "name": "Serie A",
-    "season": 2026
-   }
   }
  ],
- "_coletado_em": "2026-10-21T01:30:42.901589+00:00"
+ "_coletado_em": "2026-10-22T06:45:42.435384+00:00"
 }
