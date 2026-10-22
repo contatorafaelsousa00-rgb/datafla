@@ -1,0 +1,319 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "5-4-1",
+   "substitutes": [
+    {
+     "name": "E. Busquets",
+     "number": 15,
+     "position": "Defender",
+     "id": 8306788
+    },
+    {
+     "name": "Luka Andrade",
+     "number": 7,
+     "position": "Forward",
+     "id": 81732448
+    },
+    {
+     "name": "S. Cáceres",
+     "number": 32,
+     "position": "Midfielder",
+     "id": 45617411
+    },
+    {
+     "name": "L. Duré",
+     "number": 23,
+     "position": "Midfielder",
+     "id": 74074483
+    },
+    {
+     "name": "B. Gutierrez",
+     "number": 2,
+     "position": "Defender",
+     "id": 107349158
+    },
+    {
+     "name": "R. Lecchini",
+     "number": 18,
+     "position": "Forward",
+     "id": 102432057
+    },
+    {
+     "name": "ignacio molina",
+     "number": 16,
+     "position": "Forward",
+     "id": null
+    },
+    {
+     "name": "N. Perez",
+     "number": 21,
+     "position": "Defender",
+     "id": 102098948
+    },
+    {
+     "name": "J. Quintana",
+     "number": 30,
+     "position": "Forward",
+     "id": 31800069
+    },
+    {
+     "name": "G. Rodríguez",
+     "number": 13,
+     "position": "Goalkeeper",
+     "id": 8283282
+    },
+    {
+     "name": "J. Tarán",
+     "number": 27,
+     "position": "Midfielder",
+     "id": 74074966
+    },
+    {
+     "name": "N. da Silva",
+     "number": 11,
+     "position": "Forward",
+     "id": 61121228
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "F. Torgnascioli",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 14942242
+     }
+    ],
+    [
+     {
+      "name": "F. Silvera",
+      "number": 26,
+      "position": "Defender",
+      "id": 8331099
+     },
+     {
+      "name": "D. Guzmán",
+      "number": 19,
+      "position": "Defender",
+      "id": 56751044
+     },
+     {
+      "name": "K. Silva",
+      "number": 3,
+      "position": "Defender",
+      "id": 50124767
+     },
+     {
+      "name": "G. Kagelmacher",
+      "number": 24,
+      "position": "Defender",
+      "id": 1373162
+     },
+     {
+      "name": "E. Agüero",
+      "number": 17,
+      "position": "Defender",
+      "id": 57098643
+     }
+    ],
+    [
+     {
+      "name": "E. Obregón",
+      "number": 10,
+      "position": "Midfielder",
+      "id": 46605790
+     },
+     {
+      "name": "G. Montes",
+      "number": 20,
+      "position": "Midfielder",
+      "id": 8281350
+     },
+     {
+      "name": "P. Siles",
+      "number": 8,
+      "position": "Midfielder",
+      "id": 8281994
+     },
+     {
+      "name": "F. Pizzichillo",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 8345267
+     }
+    ],
+    [
+     {
+      "name": "S. Rodríguez",
+      "number": 9,
+      "position": "Forward",
+      "id": 8351385
+     }
+    ]
+   ],
+   "id": 2013399,
+   "logo": "https://highlightly.net/soccer/images/teams/2013399.png",
+   "name": "Atletico Torque"
+  },
+  "awayTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Mamady Cisse",
+     "number": 39,
+     "position": "Midfielder",
+     "id": 99046710
+    },
+    {
+     "name": "Vitor Hugo",
+     "number": 14,
+     "position": "Defender",
+     "id": 4894232
+    },
+    {
+     "name": "Alexsander",
+     "number": 5,
+     "position": "Midfielder",
+     "id": 58495157
+    },
+    {
+     "name": "A. Minda",
+     "number": 27,
+     "position": "Forward",
+     "id": 45192049
+    },
+    {
+     "name": "Natanael",
+     "number": 2,
+     "position": "Defender",
+     "id": 31789604
+    },
+    {
+     "name": "K. Pascini",
+     "number": 36,
+     "position": "Defender",
+     "id": 98136738
+    },
+    {
+     "name": "Dudu",
+     "number": 92,
+     "position": "Forward",
+     "id": 1600333
+    },
+    {
+     "name": "Robert",
+     "number": 31,
+     "position": "Goalkeeper",
+     "id": 74894778
+    },
+    {
+     "name": "A. Preciado",
+     "number": 23,
+     "position": "Defender",
+     "id": 416017
+    },
+    {
+     "name": "T. Pérez",
+     "number": 25,
+     "position": "Midfielder",
+     "id": 66741738
+    },
+    {
+     "name": "Igor Gomes",
+     "number": 17,
+     "position": "Midfielder",
+     "id": 1604841
+    },
+    {
+     "name": "Léo Duarte",
+     "number": 3,
+     "position": "Defender",
+     "id": 1635914
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Gabriel Delfim",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 50115429
+     }
+    ],
+    [
+     {
+      "name": "Renan Lodi",
+      "number": 6,
+      "position": "Defender",
+      "id": 1629796
+     },
+     {
+      "name": "Lyanco",
+      "number": 13,
+      "position": "Defender",
+      "id": 4906790
+     },
+     {
+      "name": "Vitão",
+      "number": 40,
+      "position": "Defender",
+      "id": 83022702
+     },
+     {
+      "name": "A. Franco",
+      "number": 21,
+      "position": "Defender",
+      "id": 2634114
+     }
+    ],
+    [
+     {
+      "name": "K. Castaño",
+      "number": 15,
+      "position": "Midfielder",
+      "id": 46624466
+     },
+     {
+      "name": "Maycon",
+      "number": 8,
+      "position": "Midfielder",
+      "id": 110761
+     }
+    ],
+    [
+     {
+      "name": "Bernard",
+      "number": 11,
+      "position": "Midfielder",
+      "id": 3020675
+     },
+     {
+      "name": "Victor Hugo",
+      "number": 30,
+      "position": "Midfielder",
+      "id": 56731885
+     },
+     {
+      "name": "T. Cuello",
+      "number": 28,
+      "position": "Midfielder",
+      "id": 971145
+     }
+    ],
+    [
+     {
+      "name": "Reinier",
+      "number": 19,
+      "position": "Forward",
+      "id": 1636880
+     }
+    ]
+   ],
+   "id": 904546,
+   "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+   "name": "Atletico-MG"
+  }
+ },
+ "_coletado_em": "2026-10-22T13:00:53.174182+00:00"
+}

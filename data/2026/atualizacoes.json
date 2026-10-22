@@ -269,5 +269,17 @@
   "requisicoes": 13,
   "cota_restante": 76,
   "erro": null
+ },
+ {
+  "quando": "2026-10-22T13:00:53+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Estudiantes de La Plata em menos de 24 h: renova previsão, árbitro e clima",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 60,
+  "pendentes": 0,
+  "requisicoes": 4,
+  "cota_restante": 72,
+  "erro": null
  }
 ]
