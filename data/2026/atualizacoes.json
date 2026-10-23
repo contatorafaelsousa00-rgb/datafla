@@ -293,5 +293,23 @@
   "requisicoes": 3,
   "cota_restante": 69,
   "erro": null
+ },
+ {
+  "quando": "2026-10-23T02:45:51+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Estudiantes de La Plata já terminou e ainda não foi baixado",
+  "novos": [
+   {
+    "adversario": "Estudiantes de La Plata",
+    "data_utc": "2026-10-23T00:30:00.000Z",
+    "competicao": "CONMEBOL Libertadores"
+   }
+  ],
+  "recoletados": [],
+  "encerrados": 61,
+  "pendentes": 0,
+  "requisicoes": 18,
+  "cota_restante": 82,
+  "erro": null
  }
 ]

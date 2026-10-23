@@ -2084,12 +2084,12 @@
     "logo": "https://highlightly.net/soccer/images/countries/World.png"
    },
    "state": {
-    "clock": null,
+    "clock": 120,
     "score": {
-     "current": null,
-     "penalties": null
+     "current": "0 - 0",
+     "penalties": "2 - 3"
     },
-    "description": "Not started"
+    "description": "Finished after penalties"
    },
    "awayTeam": {
     "id": 383734,
@@ -2347,5 +2347,5 @@
    }
   }
  ],
- "_coletado_em": "2026-10-22T19:15:35.784695+00:00"
+ "_coletado_em": "2026-10-23T02:45:35.275254+00:00"
 }

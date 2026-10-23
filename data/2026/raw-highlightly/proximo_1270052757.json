@@ -7,12 +7,12 @@
    "capacity": "73139"
   },
   "referee": {
-   "name": null,
-   "nationality": null
+   "name": "Pereira de Lima, Rodrigo Jose",
+   "nationality": "Brazil"
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "19.86°C"
+   "temperature": "19.72°C"
   },
   "events": [],
   "predictions": {
@@ -94,6 +94,39 @@
       "draw": "18.30%",
       "home": "69.96%"
      }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-22T12:06:20.685Z",
+     "probabilities": {
+      "away": "11.66%",
+      "draw": "18.49%",
+      "home": "69.84%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-22T16:29:26.955Z",
+     "probabilities": {
+      "away": "11.65%",
+      "draw": "18.52%",
+      "home": "69.83%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-22T21:03:30.932Z",
+     "probabilities": {
+      "away": "11.61%",
+      "draw": "18.53%",
+      "home": "69.86%"
+     }
     }
    ]
   },
@@ -153,5 +186,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-22T06:45:39.971294+00:00"
+ "_coletado_em": "2026-10-23T02:45:38.730785+00:00"
 }
