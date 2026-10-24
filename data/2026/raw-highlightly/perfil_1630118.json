@@ -34,6 +34,11 @@
     ],
     "historical": [
      {
+      "club": "Beşiktaş JK",
+      "rumourDate": "14/07/2026",
+      "transferProbability": "N/A"
+     },
+     {
       "club": "AS Monaco",
       "rumourDate": "29/06/2026",
       "transferProbability": "N/A"
@@ -478,5 +483,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-16T13:52:40.619033+00:00"
+ "_coletado_em": "2026-10-24T01:15:39.042808+00:00"
 }

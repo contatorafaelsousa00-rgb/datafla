@@ -1,21 +1,36 @@
 {
  "data": {
   "venue": {
-   "city": null,
-   "name": null,
-   "country": null,
-   "capacity": null
+   "city": "Rio de Janeiro",
+   "name": "Estadio Sao Januario",
+   "country": "Brazil",
+   "capacity": "21880"
   },
   "referee": {
    "name": null,
    "nationality": null
   },
   "forecast": {
-   "status": null,
-   "temperature": null
+   "status": "rain",
+   "temperature": "20.71°C"
   },
   "events": [],
-  "predictions": null,
+  "predictions": {
+   "live": [],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Vasco DA Gama.",
+     "generatedAt": "2026-10-23T09:59:43.985Z",
+     "probabilities": {
+      "away": "46.19%",
+      "draw": "27.07%",
+      "home": "26.74%"
+     }
+    }
+   ]
+  },
   "statistics": [
    {
     "statistics": [],
@@ -72,5 +87,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-22T06:45:43.351881+00:00"
+ "_coletado_em": "2026-10-24T01:15:30.338543+00:00"
 }

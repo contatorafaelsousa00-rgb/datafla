@@ -72,6 +72,39 @@
      },
      {
       "away": {
+       "wins": 7,
+       "draws": 2,
+       "games": 16,
+       "loses": 7,
+       "scoredGoals": 24,
+       "receivedGoals": 30
+      },
+      "home": {
+       "wins": 9,
+       "draws": 4,
+       "games": 16,
+       "loses": 3,
+       "scoredGoals": 27,
+       "receivedGoals": 16
+      },
+      "team": {
+       "id": 115669,
+       "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+       "name": "Cruzeiro"
+      },
+      "total": {
+       "wins": 16,
+       "draws": 6,
+       "games": 32,
+       "loses": 10,
+       "scoredGoals": 51,
+       "receivedGoals": 46
+      },
+      "points": 54,
+      "position": 3
+     },
+     {
+      "away": {
        "wins": 6,
        "draws": 3,
        "games": 15,
@@ -101,39 +134,6 @@
        "receivedGoals": 37
       },
       "points": 53,
-      "position": 3
-     },
-     {
-      "away": {
-       "wins": 7,
-       "draws": 2,
-       "games": 16,
-       "loses": 7,
-       "scoredGoals": 24,
-       "receivedGoals": 30
-      },
-      "home": {
-       "wins": 8,
-       "draws": 4,
-       "games": 15,
-       "loses": 3,
-       "scoredGoals": 26,
-       "receivedGoals": 16
-      },
-      "team": {
-       "id": 115669,
-       "logo": "https://highlightly.net/soccer/images/teams/115669.png",
-       "name": "Cruzeiro"
-      },
-      "total": {
-       "wins": 15,
-       "draws": 6,
-       "games": 31,
-       "loses": 10,
-       "scoredGoals": 50,
-       "receivedGoals": 46
-      },
-      "points": 51,
       "position": 4
      },
      {
@@ -602,10 +602,10 @@
       "away": {
        "wins": 2,
        "draws": 4,
-       "games": 15,
-       "loses": 9,
+       "games": 16,
+       "loses": 10,
        "scoredGoals": 14,
-       "receivedGoals": 28
+       "receivedGoals": 29
       },
       "home": {
        "wins": 3,
@@ -623,10 +623,10 @@
       "total": {
        "wins": 5,
        "draws": 11,
-       "games": 31,
-       "loses": 15,
+       "games": 32,
+       "loses": 16,
        "scoredGoals": 34,
-       "receivedGoals": 49
+       "receivedGoals": 50
       },
       "points": 26,
       "position": 19
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-10-22T06:45:46.040513+00:00"
+ "_coletado_em": "2026-10-24T01:15:42.102241+00:00"
 }

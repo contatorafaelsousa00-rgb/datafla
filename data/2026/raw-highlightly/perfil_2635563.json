@@ -34,6 +34,11 @@
     ],
     "historical": [
      {
+      "club": "Bayer 04 Leverkusen",
+      "rumourDate": "20/06/2022",
+      "transferProbability": "N/A"
+     },
+     {
       "club": "Leeds United",
       "rumourDate": "09/06/2022",
       "transferProbability": "N/A"
@@ -86,6 +91,11 @@
      {
       "club": "FC Barcelona Atlètic",
       "rumourDate": "10/12/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Al-Wasl SC",
+      "rumourDate": "05/09/2026",
       "transferProbability": "N/A"
      },
      {
@@ -156,11 +166,6 @@
      {
       "club": "Real Sociedad",
       "rumourDate": "22/06/2022",
-      "transferProbability": "N/A"
-     },
-     {
-      "club": "Bayer 04 Leverkusen",
-      "rumourDate": "20/06/2022",
       "transferProbability": "N/A"
      }
     ]
@@ -522,5 +527,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-16T13:58:58.805625+00:00"
+ "_coletado_em": "2026-10-24T01:15:54.454037+00:00"
 }

@@ -34,6 +34,11 @@
     ],
     "historical": [
      {
+      "club": "Eintracht Frankfurt",
+      "rumourDate": "27/01/2019",
+      "transferProbability": "N/A"
+     },
+     {
       "club": "UC Sampdoria",
       "rumourDate": "02/01/2019",
       "transferProbability": "N/A"
@@ -51,6 +56,11 @@
      {
       "club": "Arsenal FC",
       "rumourDate": "16/11/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Inter Milan",
+      "rumourDate": "25/11/2022",
       "transferProbability": "N/A"
      },
      {
@@ -84,7 +94,7 @@
       "transferProbability": "N/A"
      },
      {
-      "club": "Bayern Munich",
+      "club": "FC Bayern Munich",
       "rumourDate": "04/05/2021",
       "transferProbability": "N/A"
      },
@@ -124,8 +134,8 @@
       "transferProbability": "N/A"
      },
      {
-      "club": "Eintracht Frankfurt",
-      "rumourDate": "27/01/2019",
+      "club": "Aston Villa",
+      "rumourDate": "21/07/2026",
       "transferProbability": "N/A"
      },
      {
@@ -194,13 +204,8 @@
       "transferProbability": "N/A"
      },
      {
-      "club": "Bayern Munich",
+      "club": "FC Bayern Munich",
       "rumourDate": "19/05/2024",
-      "transferProbability": "N/A"
-     },
-     {
-      "club": "Inter Milan",
-      "rumourDate": "25/11/2022",
       "transferProbability": "N/A"
      }
     ]
@@ -573,5 +578,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-16T13:52:42.563898+00:00"
+ "_coletado_em": "2026-10-24T01:15:41.128969+00:00"
 }
