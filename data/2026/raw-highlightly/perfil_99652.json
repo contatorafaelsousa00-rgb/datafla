@@ -33,7 +33,7 @@
       "transferProbability": "N/A"
      },
      {
-      "club": "Bayern Munich",
+      "club": "FC Bayern Munich",
       "rumourDate": "12/03/2015",
       "transferProbability": "N/A"
      },
@@ -103,7 +103,7 @@
       "transferProbability": "N/A"
      },
      {
-      "club": "Bayern Munich",
+      "club": "FC Bayern Munich",
       "rumourDate": "04/08/2021",
       "transferProbability": "N/A"
      },
@@ -549,6 +549,14 @@
    ],
    "injuries": [
     {
+     "reason": "Hamstring strain",
+     "season": "2020",
+     "toDate": "09.02.2020",
+     "fromDate": "23.01.2020",
+     "missedGames": 3,
+     "absentDurationInDays": 18
+    },
+    {
      "reason": "Hamstring muscle injury",
      "season": "2020",
      "toDate": "15.10.2019",
@@ -739,17 +747,9 @@
      "fromDate": "27.07.2020",
      "missedGames": 1,
      "absentDurationInDays": 4
-    },
-    {
-     "reason": "Hamstring strain",
-     "season": "2020",
-     "toDate": "09.02.2020",
-     "fromDate": "23.01.2020",
-     "missedGames": 3,
-     "absentDurationInDays": 18
     }
    ]
   }
  ],
- "_coletado_em": "2026-10-16T13:59:04.625078+00:00"
+ "_coletado_em": "2026-10-24T21:45:53.234969+00:00"
 }

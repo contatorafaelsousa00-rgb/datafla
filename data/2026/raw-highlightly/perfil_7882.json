@@ -34,12 +34,17 @@
     ],
     "historical": [
      {
+      "club": "FC Barcelona",
+      "rumourDate": "12/08/2021",
+      "transferProbability": "N/A"
+     },
+     {
       "club": "Liverpool FC",
       "rumourDate": "14/07/2021",
       "transferProbability": "N/A"
      },
      {
-      "club": "Bayern Munich",
+      "club": "FC Bayern Munich",
       "rumourDate": "07/06/2021",
       "transferProbability": "N/A"
      },
@@ -79,8 +84,13 @@
       "transferProbability": "N/A"
      },
      {
-      "club": "Bayern Munich",
+      "club": "FC Bayern Munich",
       "rumourDate": "08/08/2013",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "CF América",
+      "rumourDate": "13/09/2026",
       "transferProbability": "N/A"
      },
      {
@@ -151,11 +161,6 @@
      {
       "club": "Manchester United",
       "rumourDate": "24/08/2021",
-      "transferProbability": "N/A"
-     },
-     {
-      "club": "FC Barcelona",
-      "rumourDate": "12/08/2021",
       "transferProbability": "N/A"
      }
     ]
@@ -700,5 +705,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-16T13:52:43.499346+00:00"
+ "_coletado_em": "2026-10-24T21:45:48.608451+00:00"
 }

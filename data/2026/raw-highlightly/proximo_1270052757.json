@@ -12,7 +12,7 @@
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "20.05°C"
+   "temperature": "20.06°C"
   },
   "events": [],
   "predictions": {
@@ -138,6 +138,17 @@
       "draw": "17.82%",
       "home": "71.64%"
      }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-24T11:09:05.077Z",
+     "probabilities": {
+      "away": "10.58%",
+      "draw": "17.95%",
+      "home": "71.47%"
+     }
     }
    ]
   },
@@ -197,5 +208,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-24T01:15:27.609783+00:00"
+ "_coletado_em": "2026-10-24T21:45:29.105744+00:00"
 }
