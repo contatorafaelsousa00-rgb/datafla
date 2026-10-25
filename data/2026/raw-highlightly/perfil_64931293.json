@@ -37,7 +37,18 @@
       "transferProbability": "N/A"
      }
     ],
-    "historical": []
+    "historical": [
+     {
+      "club": "Göztepe",
+      "rumourDate": "14/07/2026",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "FC Porto",
+      "rumourDate": "11/07/2026",
+      "transferProbability": "N/A"
+     }
+    ]
    },
    "relatedNews": [],
    "transfers": [
@@ -55,5 +66,5 @@
    "injuries": []
   }
  ],
- "_coletado_em": "2026-10-17T03:01:37.103908+00:00"
+ "_coletado_em": "2026-10-25T01:01:50.059652+00:00"
 }
