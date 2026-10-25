@@ -7,8 +7,8 @@
    "fullName": "Pedro Henrique Vieira Batista",
    "profile": {
     "club": {
-     "current": "CR Flamengo U17",
-     "joinedAt": "23/09/2025",
+     "current": "CR Flamengo U20",
+     "joinedAt": "01/01/2026",
      "contractExpiry": "-",
      "latestContractExtension": null
     },
@@ -31,6 +31,15 @@
    "relatedNews": [],
    "transfers": [
     {
+     "to": "Flamengo U20",
+     "fee": null,
+     "from": "Flamengo U17",
+     "type": "transfer",
+     "season": "25/26",
+     "marketValue": null,
+     "transferDate": "Jan 1, 2026"
+    },
+    {
      "to": "Flamengo U17",
      "fee": null,
      "from": "Palmeiras U17",
@@ -44,5 +53,5 @@
    "injuries": []
   }
  ],
- "_coletado_em": "2026-10-18T03:45:47.192974+00:00"
+ "_coletado_em": "2026-10-25T04:15:50.735770+00:00"
 }

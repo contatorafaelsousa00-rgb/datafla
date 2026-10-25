@@ -81,8 +81,17 @@
      "recordedDate": "12/02/2026"
     }
    ],
-   "injuries": []
+   "injuries": [
+    {
+     "reason": "Unknown",
+     "season": "2027",
+     "toDate": "14.10.2026",
+     "fromDate": "07.10.2026",
+     "missedGames": 1,
+     "absentDurationInDays": 8
+    }
+   ]
   }
  ],
- "_coletado_em": "2026-10-18T03:45:44.597263+00:00"
+ "_coletado_em": "2026-10-25T04:15:55.499216+00:00"
 }

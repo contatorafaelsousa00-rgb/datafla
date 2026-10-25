@@ -1,6 +1,40 @@
 {
  "data": [
   {
+   "id": 1270057012,
+   "round": "Regular Season - 32",
+   "date": "2026-10-24T21:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "3 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 112265,
+    "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+    "name": "Corinthians"
+   },
+   "homeTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
    "id": 1395525048,
    "round": "Semi-finals",
    "date": "2026-10-21T00:30:00.000Z",
@@ -135,41 +169,7 @@
     "name": "Serie A",
     "season": 2026
    }
-  },
-  {
-   "id": 1270025525,
-   "round": "Regular Season - 29",
-   "date": "2026-10-07T23:30:00.000Z",
-   "country": {
-    "code": "BR",
-    "name": "Brazil",
-    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
-   },
-   "state": {
-    "clock": 90,
-    "score": {
-     "current": "1 - 2",
-     "penalties": null
-    },
-    "description": "Finished"
-   },
-   "awayTeam": {
-    "id": 113967,
-    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
-    "name": "Vasco DA Gama"
-   },
-   "homeTeam": {
-    "id": 102904,
-    "logo": "https://highlightly.net/soccer/images/teams/102904.png",
-    "name": "Botafogo"
-   },
-   "league": {
-    "id": 61205,
-    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
-    "name": "Serie A",
-    "season": 2026
-   }
   }
  ],
- "_coletado_em": "2026-10-24T01:15:32.654857+00:00"
+ "_coletado_em": "2026-10-25T04:15:44.332679+00:00"
 }
