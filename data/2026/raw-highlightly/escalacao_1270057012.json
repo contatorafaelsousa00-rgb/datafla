@@ -1,0 +1,321 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Daniel Fuzato",
+     "number": 13,
+     "position": "Goalkeeper",
+     "id": 122997
+    },
+    {
+     "name": "Tchê Tchê",
+     "number": 3,
+     "position": "Midfielder",
+     "id": 1603392
+    },
+    {
+     "name": "Ramon Rique",
+     "number": 83,
+     "position": "Midfielder",
+     "id": 98886354
+    },
+    {
+     "name": "Paulo Henrique",
+     "number": 96,
+     "position": "Defender",
+     "id": 21559664
+    },
+    {
+     "name": "Nuno Moreira",
+     "number": 17,
+     "position": "Midfielder",
+     "id": 26285014
+    },
+    {
+     "name": "Lucas Piton",
+     "number": 6,
+     "position": "Defender",
+     "id": 1647828
+    },
+    {
+     "name": "Lucas Freitas",
+     "number": 43,
+     "position": "Defender",
+     "id": 46201036
+    },
+    {
+     "name": "Brenner",
+     "number": 20,
+     "position": "Forward",
+     "id": 1606129
+    },
+    {
+     "name": "David",
+     "number": 7,
+     "position": "Forward",
+     "id": 1627059
+    },
+    {
+     "name": "Gabriel Pereira",
+     "number": 55,
+     "position": "Defender",
+     "id": 25681425
+    },
+    {
+     "name": "M. Hinestroza",
+     "number": 18,
+     "position": "Forward",
+     "id": 10325728
+    },
+    {
+     "name": "Jair",
+     "number": 8,
+     "position": "Midfielder",
+     "id": 1592444
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Léo Jardim",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 6628363
+     }
+    ],
+    [
+     {
+      "name": "Cuiabano",
+      "number": 66,
+      "position": "Defender",
+      "id": 56838628
+     },
+     {
+      "name": "Robert Renan",
+      "number": 30,
+      "position": "Defender",
+      "id": 57859046
+     },
+     {
+      "name": "A. Saldivia",
+      "number": 4,
+      "position": "Defender",
+      "id": 50034768
+     },
+     {
+      "name": "J. Rodríguez",
+      "number": 2,
+      "position": "Defender",
+      "id": 8279740
+     }
+    ],
+    [
+     {
+      "name": "S. Sosa",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 967120
+     },
+     {
+      "name": "A. Lescano",
+      "number": 22,
+      "position": "Midfielder",
+      "id": 57699817
+     }
+    ],
+    [
+     {
+      "name": "F. Colidio",
+      "number": 9,
+      "position": "Midfielder",
+      "id": 34608
+     },
+     {
+      "name": "Thiago Mendes",
+      "number": 23,
+      "position": "Midfielder",
+      "id": 3579506
+     },
+     {
+      "name": "A. Gómez",
+      "number": 11,
+      "position": "Midfielder",
+      "id": 55665582
+     }
+    ],
+    [
+     {
+      "name": "Bruno Duarte",
+      "number": 19,
+      "position": "Forward",
+      "id": 10219629
+     }
+    ]
+   ],
+   "id": 113967,
+   "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+   "name": "Vasco DA Gama"
+  },
+  "awayTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Matheus Pereira",
+     "number": 23,
+     "position": "Midfielder",
+     "id": 140385
+    },
+    {
+     "name": "Allan",
+     "number": 29,
+     "position": "Midfielder",
+     "id": 1661513
+    },
+    {
+     "name": "Charles",
+     "number": 35,
+     "position": "Midfielder",
+     "id": 1542051
+    },
+    {
+     "name": "Pedro Raul",
+     "number": 18,
+     "position": "Forward",
+     "id": 1502123
+    },
+    {
+     "name": "P. Milans",
+     "number": 20,
+     "position": "Defender",
+     "id": 29306179
+    },
+    {
+     "name": "I. Machado",
+     "number": 55,
+     "position": "Defender",
+     "id": 91834876
+    },
+    {
+     "name": "J. Lingard",
+     "number": 77,
+     "position": "Midfielder",
+     "id": 145054
+    },
+    {
+     "name": "Kauê Camargo",
+     "number": 51,
+     "position": "Goalkeeper",
+     "id": 66828517
+    },
+    {
+     "name": "Kaio César",
+     "number": 37,
+     "position": "Forward",
+     "id": 61250189
+    },
+    {
+     "name": "João Pedro",
+     "number": 4,
+     "position": "Defender",
+     "id": 66828839
+    },
+    {
+     "name": "Hugo",
+     "number": 46,
+     "position": "Defender",
+     "id": 8709127
+    },
+    {
+     "name": "Guilherme Inácio",
+     "number": 56,
+     "position": "Forward",
+     "id": 74700773
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Hugo Souza",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 19925353
+     }
+    ],
+    [
+     {
+      "name": "F. Angileri",
+      "number": 26,
+      "position": "Defender",
+      "id": 964061
+     },
+     {
+      "name": "Gustavo Henrique",
+      "number": 13,
+      "position": "Defender",
+      "id": 1608866
+     },
+     {
+      "name": "André Ramalho",
+      "number": 5,
+      "position": "Defender",
+      "id": 174839
+     },
+     {
+      "name": "Matheuzinho",
+      "number": 2,
+      "position": "Defender",
+      "id": 1636075
+     }
+    ],
+    [
+     {
+      "name": "Breno",
+      "number": 7,
+      "position": "Midfielder",
+      "id": 58554727
+     },
+     {
+      "name": "Dieguinho",
+      "number": 61,
+      "position": "Midfielder",
+      "id": 74700129
+     }
+    ],
+    [
+     {
+      "name": "Matheus Bidu",
+      "number": 21,
+      "position": "Midfielder",
+      "id": 1568616
+     },
+     {
+      "name": "R. Garro",
+      "number": 8,
+      "position": "Midfielder",
+      "id": 932988
+     },
+     {
+      "name": "Andre",
+      "number": 49,
+      "position": "Midfielder",
+      "id": 87693473
+     }
+    ],
+    [
+     {
+      "name": "Yuri Alberto",
+      "number": 9,
+      "position": "Forward",
+      "id": 1611281
+     }
+    ]
+   ],
+   "id": 112265,
+   "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+   "name": "Corinthians"
+  }
+ },
+ "_coletado_em": "2026-10-25T23:00:44.980170+00:00"
+}

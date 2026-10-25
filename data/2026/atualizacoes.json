@@ -371,5 +371,23 @@
   "requisicoes": 41,
   "cota_restante": 38,
   "erro": null
+ },
+ {
+  "quando": "2026-10-25T23:00:49+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Atletico-MG em menos de 24 h: renova previsão, árbitro e clima",
+  "novos": [],
+  "recoletados": [
+   {
+    "adversario": "Estudiantes de La Plata",
+    "data_utc": "2026-10-23T00:30:00.000Z",
+    "competicao": "CONMEBOL Libertadores"
+   }
+  ],
+  "encerrados": 61,
+  "pendentes": 0,
+  "requisicoes": 9,
+  "cota_restante": 29,
+  "erro": null
  }
 ]
