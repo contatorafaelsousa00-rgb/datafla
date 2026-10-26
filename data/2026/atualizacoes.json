@@ -401,5 +401,17 @@
   "requisicoes": 32,
   "cota_restante": 68,
   "erro": null
+ },
+ {
+  "quando": "2026-10-26T11:30:50+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Atletico-MG em menos de 24 h: renova previsão, árbitro e clima",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 61,
+  "pendentes": 0,
+  "requisicoes": 15,
+  "cota_restante": 53,
+  "erro": null
  }
 ]
