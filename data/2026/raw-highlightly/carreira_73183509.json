@@ -171,7 +171,7 @@
      "gamesPlayed": 1,
      "yellowCards": 0,
      "goalsConceded": 2,
-     "minutesPlayed": 62,
+     "minutesPlayed": 105,
      "substitutedIn": 0,
      "substitutedOut": 1,
      "penaltiesScored": 0,
@@ -531,7 +531,7 @@
      "gamesPlayed": 2,
      "yellowCards": 0,
      "goalsConceded": 2,
-     "minutesPlayed": 80,
+     "minutesPlayed": 123,
      "substitutedIn": 1,
      "substitutedOut": 1,
      "penaltiesScored": 0,
@@ -572,5 +572,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-18T10:00:57.336125+00:00"
+ "_coletado_em": "2026-10-26T05:15:43.614862+00:00"
 }

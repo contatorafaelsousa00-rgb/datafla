@@ -1,6 +1,40 @@
 {
  "data": [
   {
+   "id": 1270052757,
+   "round": "Regular Season - 32",
+   "date": "2026-10-26T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": null,
+    "score": {
+     "current": null,
+     "penalties": null
+    },
+    "description": "Not started"
+   },
+   "awayTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
    "id": 1269889365,
    "round": "Regular Season - 13",
    "date": "2026-04-26T23:30:00.000Z",
@@ -305,41 +339,7 @@
     "name": "Serie A",
     "season": 2024
    }
-  },
-  {
-   "id": 856105933,
-   "round": "Regular Season - 36",
-   "date": "2023-11-29T22:30:00.000Z",
-   "country": {
-    "code": "BR",
-    "name": "Brazil",
-    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
-   },
-   "state": {
-    "clock": 90,
-    "score": {
-     "current": "0 - 3",
-     "penalties": null
-    },
-    "description": "Finished"
-   },
-   "awayTeam": {
-    "id": 904546,
-    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
-    "name": "Atletico-MG"
-   },
-   "homeTeam": {
-    "id": 108861,
-    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
-    "name": "Flamengo"
-   },
-   "league": {
-    "id": 61205,
-    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
-    "name": "Serie A",
-    "season": 2023
-   }
   }
  ],
- "_coletado_em": "2026-10-25T04:15:40.718443+00:00"
+ "_coletado_em": "2026-10-26T05:15:26.471340+00:00"
 }

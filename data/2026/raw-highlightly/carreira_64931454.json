@@ -7,6 +7,25 @@
    "fullName": "Lorran Lucas Pereira de Sousa",
    "perCompetition": [
     {
+     "club": "Sharjah FC",
+     "type": "national league",
+     "goals": 0,
+     "league": "UAE Pro League",
+     "season": "26/27",
+     "assists": 0,
+     "ownGoals": 0,
+     "redCards": 0,
+     "cleanSheets": 0,
+     "gamesPlayed": 1,
+     "yellowCards": 0,
+     "goalsConceded": 1,
+     "minutesPlayed": 45,
+     "substitutedIn": 0,
+     "substitutedOut": 1,
+     "penaltiesScored": 0,
+     "secondYellowCards": 0
+    },
+    {
      "club": "CR Flamengo",
      "type": "national league",
      "goals": 1,
@@ -503,6 +522,22 @@
    ],
    "perClub": [
     {
+     "club": "Sharjah FC",
+     "goals": 0,
+     "assists": 0,
+     "ownGoals": 0,
+     "redCards": 0,
+     "cleanSheets": 0,
+     "gamesPlayed": 1,
+     "yellowCards": 0,
+     "goalsConceded": 1,
+     "minutesPlayed": 45,
+     "substitutedIn": 0,
+     "substitutedOut": 1,
+     "penaltiesScored": 0,
+     "secondYellowCards": 0
+    },
+    {
      "club": "CR Flamengo",
      "goals": 3,
      "assists": 3,
@@ -585,5 +620,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-18T10:01:08.255180+00:00"
+ "_coletado_em": "2026-10-26T05:15:58.644413+00:00"
 }
