@@ -31,7 +31,7 @@ on:
         default: false
   push:
     branches: [main]
-    paths: ["site/**", "coleta/**", "firebase.json"]
+    paths: ["site/**", "coleta/**", "firebase.json", ".github/workflows/atualizar.yml"]
 
 permissions:
   contents: write
