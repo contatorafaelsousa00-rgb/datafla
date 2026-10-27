@@ -161,6 +161,10 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   dispara a coleta por isso; em dia de jogo do Flamengo os extras não essenciais deixam `FLA_HL_RESERVA_JOGO` (25) de folga;
   o resultado do Flamengo entra na liga pela lista dele (mesmo id); `meta.liga` = {coletado_em, sem_resultado} e o aviso
   `avisoLiga()` aparece na Classificação e no Comparar calendário.
+- Deploy parado de 22 a 27/10/2026 (site ficou em Bahia × Flamengo; a coleta seguia normal): o passo "Publicar no Firebase"
+  falhava porque a action usa o firebase-tools mais novo e a 15.34.1 (21/10) quebrou. Corrigido fixando `firebaseToolsVersion:
+  "15.34.0"` (+ `ubuntu-24.04` e Node 22 por previsibilidade). Push no próprio workflow agora dispara deploy. Se o site parar de
+  atualizar: ver se as execuções "coletou" falham no último passo (admin → Coleta mostra falhas).
 - Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
 - Aba **Números** (16/10/2026, `numeros.js`; conferida com a planilha do Rafael "Dados Flamengo temporada 2026.xlsx"):
   artilharia (pênaltis entre parênteses), assistências, G+A, mais utilizados, sem sofrer gol (por goleiro), saiu na
