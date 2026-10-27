@@ -12,7 +12,7 @@
   },
   "forecast": {
    "status": "rain",
-   "temperature": "20.86°C"
+   "temperature": "21.69°C"
   },
   "events": [],
   "predictions": {
@@ -49,6 +49,17 @@
       "away": "46.17%",
       "draw": "27.06%",
       "home": "26.77%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Vasco DA Gama.",
+     "generatedAt": "2026-10-26T09:47:10.870Z",
+     "probabilities": {
+      "away": "46.20%",
+      "draw": "27.10%",
+      "home": "26.69%"
      }
     }
    ]
@@ -109,5 +120,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-26T05:15:28.142219+00:00"
+ "_coletado_em": "2026-10-27T01:15:37.284401+00:00"
 }

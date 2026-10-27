@@ -1,0 +1,319 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "F. Bustos",
+     "number": 14,
+     "position": "Defender",
+     "id": 979034
+    },
+    {
+     "name": "Breno Lopes",
+     "number": 77,
+     "position": "Forward",
+     "id": 8688680
+    },
+    {
+     "name": "Fabinho",
+     "number": 28,
+     "position": "Forward",
+     "id": 23081919
+    },
+    {
+     "name": "Felipe Jonatan",
+     "number": 6,
+     "position": "Defender",
+     "id": 1608383
+    },
+    {
+     "name": "Keiller",
+     "number": 13,
+     "position": "Goalkeeper",
+     "id": 1669724
+    },
+    {
+     "name": "Maicon",
+     "number": 3,
+     "position": "Defender",
+     "id": 7133098
+    },
+    {
+     "name": "B. Ocampo",
+     "number": 17,
+     "position": "Forward",
+     "id": 8305822
+    },
+    {
+     "name": "Richard",
+     "number": 25,
+     "position": "Midfielder",
+     "id": 1648794
+    },
+    {
+     "name": "Rodrigo Moledo",
+     "number": 4,
+     "position": "Defender",
+     "id": 1671012
+    },
+    {
+     "name": "Rodrigo Rodrigues",
+     "number": 99,
+     "position": "Forward",
+     "id": 8711220
+    },
+    {
+     "name": "Tissi",
+     "number": 50,
+     "position": "Midfielder",
+     "id": 81397246
+    },
+    {
+     "name": "Vini Paulista",
+     "number": 36,
+     "position": "Forward",
+     "id": 49829493
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Pedro Luccas",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 68558945
+     }
+    ],
+    [
+     {
+      "name": "Bruno Melo",
+      "number": 26,
+      "position": "Defender",
+      "id": 1677130
+     },
+     {
+      "name": "Jacy",
+      "number": 55,
+      "position": "Defender",
+      "id": 1551067
+     },
+     {
+      "name": "Tiago Cóser",
+      "number": 23,
+      "position": "Defender",
+      "id": 49109340
+     },
+     {
+      "name": "Tinga",
+      "number": 2,
+      "position": "Defender",
+      "id": 1676647
+     }
+    ],
+    [
+     {
+      "name": "S. Gómez",
+      "number": 19,
+      "position": "Midfielder",
+      "id": 2143064
+     },
+     {
+      "name": "N. Fonseca",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 4941244
+     }
+    ],
+    [
+     {
+      "name": "J. Lavega",
+      "number": 7,
+      "position": "Midfielder",
+      "id": 50806763
+     },
+     {
+      "name": "Josué",
+      "number": 10,
+      "position": "Midfielder",
+      "id": 346304
+     },
+     {
+      "name": "Pedro Rocha",
+      "number": 32,
+      "position": "Midfielder",
+      "id": 1627220
+     }
+    ],
+    [
+     {
+      "name": "Paulo Roberto",
+      "number": 18,
+      "position": "Forward",
+      "id": 101701439
+     }
+    ]
+   ],
+   "id": 125881,
+   "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+   "name": "Coritiba"
+  },
+  "awayTeam": {
+   "formation": "3-4-3",
+   "substitutes": [
+    {
+     "name": "Tetê",
+     "number": 11,
+     "position": "Forward",
+     "id": 111405
+    },
+    {
+     "name": "M. Braithwaite",
+     "number": 22,
+     "position": "Forward",
+     "id": 440811
+    },
+    {
+     "name": "J. Enamorado",
+     "number": 99,
+     "position": "Forward",
+     "id": 2192330
+    },
+    {
+     "name": "Gabriel Grando",
+     "number": 12,
+     "position": "Goalkeeper",
+     "id": 49851228
+    },
+    {
+     "name": "F. Krovinović",
+     "number": 10,
+     "position": "Midfielder",
+     "id": 92568
+    },
+    {
+     "name": "João Pedro",
+     "number": 18,
+     "position": "Defender",
+     "id": 60368
+    },
+    {
+     "name": "Dodi",
+     "number": 17,
+     "position": "Midfielder",
+     "id": 1660708
+    },
+    {
+     "name": "Matheus Nascimento",
+     "number": 30,
+     "position": "Forward",
+     "id": 43380155
+    },
+    {
+     "name": "Marcos Rocha",
+     "number": 14,
+     "position": "Defender",
+     "id": 1596630
+    },
+    {
+     "name": "Bernardo Zortea",
+     "number": 50,
+     "position": "Midfielder",
+     "id": 82199348
+    },
+    {
+     "name": "Caio Paulista",
+     "number": 38,
+     "position": "Defender",
+     "id": 1695001
+    },
+    {
+     "name": "Wagner Leonardo",
+     "number": 3,
+     "position": "Defender",
+     "id": 1609027
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Weverton",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 388164
+     }
+    ],
+    [
+     {
+      "name": "Wallace",
+      "number": 82,
+      "position": "Defender",
+      "id": 73243079
+     },
+     {
+      "name": "F. Balbuena",
+      "number": 2,
+      "position": "Defender",
+      "id": 402654
+     },
+     {
+      "name": "Gustavo Martins",
+      "number": 6,
+      "position": "Defender",
+      "id": 49083741
+     }
+    ],
+    [
+     {
+      "name": "Marlon",
+      "number": 23,
+      "position": "Midfielder",
+      "id": 1659903
+     },
+     {
+      "name": "M. Villasanti",
+      "number": 20,
+      "position": "Midfielder",
+      "id": 11361280
+     },
+     {
+      "name": "E. Noriega",
+      "number": 8,
+      "position": "Midfielder",
+      "id": 32061855
+     },
+     {
+      "name": "Diego Caito",
+      "number": 27,
+      "position": "Midfielder",
+      "id": 65318337
+     }
+    ],
+    [
+     {
+      "name": "F. Amuzu",
+      "number": 9,
+      "position": "Forward",
+      "id": 230545
+     },
+     {
+      "name": "Carlos Vinícius",
+      "number": 95,
+      "position": "Forward",
+      "id": 16898
+     },
+     {
+      "name": "C. Pavón",
+      "number": 7,
+      "position": "Forward",
+      "id": 963095
+     }
+    ]
+   ],
+   "id": 111414,
+   "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+   "name": "Gremio"
+  }
+ },
+ "_coletado_em": "2026-10-27T01:15:38.167487+00:00"
+}
