@@ -14,9 +14,284 @@
    "status": "cloudy",
    "temperature": "20.75°C"
   },
-  "events": [],
+  "events": [
+   {
+    "team": {
+     "id": 904546,
+     "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+     "name": "Atletico-MG"
+    },
+    "time": "7",
+    "type": "Goal",
+    "assist": "Angelo Preciado",
+    "player": "Bernard Anício Caldeira Duarte",
+    "playerId": 3020675,
+    "substituted": null,
+    "assistingPlayerId": 416017
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "34",
+    "type": "Goal",
+    "assist": "Guillermo Varela",
+    "player": "Gonzalo Plata",
+    "playerId": 2635563,
+    "substituted": null,
+    "assistingPlayerId": 207844
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "41",
+    "type": "Goal",
+    "assist": "Samuel Lino",
+    "player": "Giorgian de Arrascaeta",
+    "playerId": 420686,
+    "substituted": null,
+    "assistingPlayerId": 20436850
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "45",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Alex Sandro",
+    "playerId": 138614,
+    "substituted": "Ayrton Lucas",
+    "assistingPlayerId": 285285
+   },
+   {
+    "team": {
+     "id": 904546,
+     "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+     "name": "Atletico-MG"
+    },
+    "time": "59",
+    "type": "Goal",
+    "assist": "Victor Hugo Gomes Silva",
+    "player": "Renan Lodi",
+    "playerId": 1629796,
+    "substituted": null,
+    "assistingPlayerId": 56731885
+   },
+   {
+    "team": {
+     "id": 904546,
+     "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+     "name": "Atletico-MG"
+    },
+    "time": "63",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Angelo Preciado",
+    "playerId": 416017,
+    "substituted": "Alan Minda",
+    "assistingPlayerId": 45192049
+   },
+   {
+    "team": {
+     "id": 904546,
+     "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+     "name": "Atletico-MG"
+    },
+    "time": "63",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Igor Gomes",
+    "playerId": 1604841,
+    "substituted": "Reinier Jesus Carvalho",
+    "assistingPlayerId": 1636880
+   },
+   {
+    "team": {
+     "id": 904546,
+     "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+     "name": "Atletico-MG"
+    },
+    "time": "63",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Maycon de Andrade Barberan",
+    "playerId": 110761,
+    "substituted": "Kevin Castaño",
+    "assistingPlayerId": 46624466
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "69",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Pedro",
+    "playerId": 1661835,
+    "substituted": "Bruno Henrique",
+    "assistingPlayerId": 1639134
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "69",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Gonzalo Plata",
+    "playerId": 2635563,
+    "substituted": "Jorge Carrascal",
+    "assistingPlayerId": 965188
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "75",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "Léo Pereira",
+    "playerId": 1630118,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "75",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Giorgian de Arrascaeta",
+    "playerId": 420686,
+    "substituted": "Joaquín Freitas",
+    "assistingPlayerId": 90210708
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "75",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Jorginho",
+    "playerId": 368683,
+    "substituted": "Lucas Paquetá",
+    "assistingPlayerId": 265160
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "76",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "Jorge Carrascal",
+    "playerId": 965188,
+    "substituted": null,
+    "assistingPlayerId": null
+   }
+  ],
   "predictions": {
-   "live": [],
+   "live": [
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-26T23:00:19.358Z",
+     "probabilities": {
+      "away": "8.13%",
+      "draw": "16.35%",
+      "home": "75.52%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-26T23:10:24.245Z",
+     "probabilities": {
+      "away": "19.00%",
+      "draw": "24.44%",
+      "home": "56.55%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-26T23:20:21.770Z",
+     "probabilities": {
+      "away": "19.82%",
+      "draw": "25.68%",
+      "home": "54.50%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-26T23:30:27.171Z",
+     "probabilities": {
+      "away": "21.27%",
+      "draw": "27.34%",
+      "home": "51.40%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-26T23:50:31.999Z",
+     "probabilities": {
+      "away": "2.35%",
+      "draw": "9.80%",
+      "home": "87.84%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-27T00:10:39.893Z",
+     "probabilities": {
+      "away": "2.29%",
+      "draw": "9.95%",
+      "home": "87.76%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Atletico-MG.",
+     "generatedAt": "2026-10-27T00:30:47.732Z",
+     "probabilities": {
+      "away": "6.76%",
+      "draw": "36.35%",
+      "home": "56.89%"
+     }
+    }
+   ],
    "prematch": [
     {
      "type": "prematch",
@@ -176,20 +451,334 @@
   },
   "statistics": [
    {
-    "statistics": [],
     "team": {
      "id": 108861,
      "logo": "https://highlightly.net/soccer/images/teams/108861.png",
      "name": "Flamengo"
-    }
+    },
+    "statistics": [
+     {
+      "value": 1.67,
+      "displayName": "Expected Goals"
+     },
+     {
+      "value": 3,
+      "displayName": "Big Chances Created"
+     },
+     {
+      "value": 9,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 1.94,
+      "displayName": "Expected Assists"
+     },
+     {
+      "value": 12,
+      "displayName": "Successful Crosses"
+     },
+     {
+      "value": 34,
+      "displayName": "Crosses"
+     },
+     {
+      "value": 186,
+      "displayName": "Passes Own Half"
+     },
+     {
+      "value": 584,
+      "displayName": "Passes Opposition Half"
+     },
+     {
+      "value": 22,
+      "displayName": "Successful Long Passes"
+     },
+     {
+      "value": 28,
+      "displayName": "Long Passes"
+     },
+     {
+      "value": 13,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 22,
+      "displayName": "Key Passes"
+     },
+     {
+      "value": 253,
+      "displayName": "Passes Into Final Third"
+     },
+     {
+      "value": 124,
+      "displayName": "Backward Passes"
+     },
+     {
+      "value": 1,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 5,
+      "displayName": "Interceptions"
+     },
+     {
+      "value": 5,
+      "displayName": "Successful Tackles"
+     },
+     {
+      "value": 7,
+      "displayName": "Tackles"
+     },
+     {
+      "value": 4,
+      "displayName": "Clearances"
+     },
+     {
+      "value": 5,
+      "displayName": "Successful Aerial Duels"
+     },
+     {
+      "value": 10,
+      "displayName": "Aerial Duels"
+     },
+     {
+      "value": 8,
+      "displayName": "Successful Dribbles"
+     },
+     {
+      "value": 18,
+      "displayName": "Dribbles"
+     },
+     {
+      "value": 0.32,
+      "displayName": "Shots accuracy"
+     },
+     {
+      "value": 55,
+      "displayName": "Failed passes"
+     },
+     {
+      "value": 0.74,
+      "displayName": "Possession"
+     },
+     {
+      "value": 7,
+      "displayName": "Shots on target"
+     },
+     {
+      "value": 13,
+      "displayName": "Corners"
+     },
+     {
+      "value": 0,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 681,
+      "displayName": "Successful passes"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 7,
+      "displayName": "Shots off target"
+     },
+     {
+      "value": 8,
+      "displayName": "Blocked shots"
+     },
+     {
+      "value": 13,
+      "displayName": "Shots within penalty area"
+     },
+     {
+      "value": 736,
+      "displayName": "Total passes"
+     },
+     {
+      "value": 2,
+      "displayName": "Goalkeeper saves"
+     },
+     {
+      "value": 8,
+      "displayName": "Fouls"
+     },
+     {
+      "value": 2,
+      "displayName": "Yellow cards"
+     },
+     {
+      "value": 9,
+      "displayName": "Shots outside penalty area"
+     }
+    ]
    },
    {
-    "statistics": [],
     "team": {
      "id": 904546,
      "logo": "https://highlightly.net/soccer/images/teams/904546.png",
      "name": "Atletico-MG"
-    }
+    },
+    "statistics": [
+     {
+      "value": 0.95,
+      "displayName": "Expected Goals"
+     },
+     {
+      "value": 3,
+      "displayName": "Big Chances Created"
+     },
+     {
+      "value": 7,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 0.64,
+      "displayName": "Expected Assists"
+     },
+     {
+      "value": 0,
+      "displayName": "Successful Crosses"
+     },
+     {
+      "value": 2,
+      "displayName": "Crosses"
+     },
+     {
+      "value": 166,
+      "displayName": "Passes Own Half"
+     },
+     {
+      "value": 106,
+      "displayName": "Passes Opposition Half"
+     },
+     {
+      "value": 21,
+      "displayName": "Successful Long Passes"
+     },
+     {
+      "value": 44,
+      "displayName": "Long Passes"
+     },
+     {
+      "value": 1,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 5,
+      "displayName": "Key Passes"
+     },
+     {
+      "value": 29,
+      "displayName": "Passes Into Final Third"
+     },
+     {
+      "value": 39,
+      "displayName": "Backward Passes"
+     },
+     {
+      "value": 16,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 14,
+      "displayName": "Interceptions"
+     },
+     {
+      "value": 10,
+      "displayName": "Successful Tackles"
+     },
+     {
+      "value": 18,
+      "displayName": "Tackles"
+     },
+     {
+      "value": 42,
+      "displayName": "Clearances"
+     },
+     {
+      "value": 5,
+      "displayName": "Successful Aerial Duels"
+     },
+     {
+      "value": 10,
+      "displayName": "Aerial Duels"
+     },
+     {
+      "value": 9,
+      "displayName": "Successful Dribbles"
+     },
+     {
+      "value": 12,
+      "displayName": "Dribbles"
+     },
+     {
+      "value": 0.8,
+      "displayName": "Shots accuracy"
+     },
+     {
+      "value": 58,
+      "displayName": "Failed passes"
+     },
+     {
+      "value": 0.26,
+      "displayName": "Possession"
+     },
+     {
+      "value": 4,
+      "displayName": "Shots on target"
+     },
+     {
+      "value": 0,
+      "displayName": "Corners"
+     },
+     {
+      "value": 1,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 212,
+      "displayName": "Successful passes"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 1,
+      "displayName": "Shots off target"
+     },
+     {
+      "value": 0,
+      "displayName": "Blocked shots"
+     },
+     {
+      "value": 5,
+      "displayName": "Shots within penalty area"
+     },
+     {
+      "value": 270,
+      "displayName": "Total passes"
+     },
+     {
+      "value": 5,
+      "displayName": "Goalkeeper saves"
+     },
+     {
+      "value": 10,
+      "displayName": "Fouls"
+     },
+     {
+      "value": 0,
+      "displayName": "Yellow cards"
+     },
+     {
+      "value": 0,
+      "displayName": "Shots outside penalty area"
+     }
+    ]
    }
   ],
   "id": 1270052757,
@@ -201,26 +790,294 @@
    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
   },
   "state": {
-   "clock": null,
+   "clock": 86,
    "score": {
-    "current": null,
+    "current": "2 - 2",
     "penalties": null
    },
-   "description": "Not started"
+   "description": "Second half"
   },
   "awayTeam": {
    "id": 904546,
    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
    "name": "Atletico-MG",
-   "topPlayers": [],
-   "shots": []
+   "topPlayers": [
+    {
+     "name": "Victor Hugo",
+     "position": "Attacker",
+     "statistics": [
+      {
+       "name": "Expected Goals",
+       "value": 0.3
+      },
+      {
+       "name": "Shots On Target",
+       "value": 1
+      },
+      {
+       "name": "Minutes",
+       "value": 82
+      }
+     ]
+    },
+    {
+     "name": "Angelo Preciado",
+     "position": "Midfielder",
+     "statistics": [
+      {
+       "name": "Expected Goals",
+       "value": 0.01
+      },
+      {
+       "name": "Shots On Target",
+       "value": 1
+      },
+      {
+       "name": "Minutes",
+       "value": 62
+      }
+     ]
+    },
+    {
+     "name": "Renan Lodi",
+     "position": "Defender",
+     "statistics": [
+      {
+       "name": "Interceptions",
+       "value": 0
+      },
+      {
+       "name": "Tackles",
+       "value": 0
+      },
+      {
+       "name": "Minutes",
+       "value": 82
+      }
+     ]
+    }
+   ],
+   "shots": [
+    {
+     "time": "7'",
+     "outcome": "Goal",
+     "goalTarget": "Low Right",
+     "playerName": "Bernard"
+    },
+    {
+     "time": "32'",
+     "outcome": "Saved",
+     "goalTarget": "Low Left",
+     "playerName": "Victor Hugo"
+    },
+    {
+     "time": "59'",
+     "outcome": "Goal",
+     "goalTarget": "Low Right",
+     "playerName": "Renan Lodi"
+    },
+    {
+     "time": "61'",
+     "outcome": "Saved",
+     "goalTarget": "Low Right",
+     "playerName": "Angelo Preciado"
+    }
+   ]
   },
   "homeTeam": {
    "id": 108861,
    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
    "name": "Flamengo",
-   "topPlayers": [],
-   "shots": []
+   "topPlayers": [
+    {
+     "name": "Pedro",
+     "position": "Attacker",
+     "statistics": [
+      {
+       "name": "Expected Goals",
+       "value": 0.42
+      },
+      {
+       "name": "Shots On Target",
+       "value": 1
+      },
+      {
+       "name": "Minutes",
+       "value": 68
+      }
+     ]
+    },
+    {
+     "name": "Giorgian de Arrascaeta",
+     "position": "Midfielder",
+     "statistics": [
+      {
+       "name": "Expected Goals",
+       "value": 0.29
+      },
+      {
+       "name": "Shots On Target",
+       "value": 2
+      },
+      {
+       "name": "Minutes",
+       "value": 74
+      }
+     ]
+    },
+    {
+     "name": "Guillermo Varela",
+     "position": "Defender",
+     "statistics": [
+      {
+       "name": "Interceptions",
+       "value": 0
+      },
+      {
+       "name": "Tackles",
+       "value": 0
+      },
+      {
+       "name": "Minutes",
+       "value": 82
+      }
+     ]
+    }
+   ],
+   "shots": [
+    {
+     "time": "2'",
+     "outcome": "Saved",
+     "goalTarget": "Low Centre",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "2'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Gonzalo Plata"
+    },
+    {
+     "time": "8'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Samuel Lino"
+    },
+    {
+     "time": "14'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Left",
+     "playerName": "Gonzalo Plata"
+    },
+    {
+     "time": "17'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Erick Pulgar"
+    },
+    {
+     "time": "19'",
+     "outcome": "Saved",
+     "goalTarget": "Low Centre",
+     "playerName": "Erick Pulgar"
+    },
+    {
+     "time": "19'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Léo Ortiz"
+    },
+    {
+     "time": "24'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Léo Ortiz"
+    },
+    {
+     "time": "27'",
+     "outcome": "Missed",
+     "goalTarget": "Close Right",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "30'",
+     "outcome": "Saved",
+     "goalTarget": "Low Centre",
+     "playerName": "Leo Pereira"
+    },
+    {
+     "time": "32'",
+     "outcome": "Missed",
+     "goalTarget": "Close Right",
+     "playerName": "Alex Sandro"
+    },
+    {
+     "time": "33'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "34'",
+     "outcome": "Goal",
+     "goalTarget": "Low Left",
+     "playerName": "Gonzalo Plata"
+    },
+    {
+     "time": "41'",
+     "outcome": "Goal",
+     "goalTarget": "Low Right",
+     "playerName": "Giorgian de Arrascaeta"
+    },
+    {
+     "time": "45'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Samuel Lino"
+    },
+    {
+     "time": "45 + 1'",
+     "outcome": "Saved",
+     "goalTarget": "Low Centre",
+     "playerName": "Giorgian de Arrascaeta"
+    },
+    {
+     "time": "46'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Giorgian de Arrascaeta"
+    },
+    {
+     "time": "53'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Giorgian de Arrascaeta"
+    },
+    {
+     "time": "55'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Giorgian de Arrascaeta"
+    },
+    {
+     "time": "57'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Left",
+     "playerName": "Samuel Lino"
+    },
+    {
+     "time": "64'",
+     "outcome": "Saved",
+     "goalTarget": "High Centre",
+     "playerName": "Léo Ortiz"
+    },
+    {
+     "time": "73'",
+     "outcome": "Missed",
+     "goalTarget": "Close Right",
+     "playerName": "Bruno Henrique"
+    }
+   ]
   },
   "league": {
    "id": 61205,
@@ -230,5 +1087,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-26T17:45:32.417837+00:00"
+ "_coletado_em": "2026-10-27T00:45:37.583081+00:00"
 }

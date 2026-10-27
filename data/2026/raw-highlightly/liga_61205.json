@@ -2050,12 +2050,12 @@
     "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
    },
    "state": {
-    "clock": null,
+    "clock": 86,
     "score": {
-     "current": null,
+     "current": "2 - 2",
      "penalties": null
     },
-    "description": "Not started"
+    "description": "Second half"
    },
    "awayTeam": {
     "id": 904546,
@@ -2084,12 +2084,12 @@
     "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
    },
    "state": {
-    "clock": null,
+    "clock": 90,
     "score": {
-     "current": null,
+     "current": "0 - 1",
      "penalties": null
     },
-    "description": "Not started"
+    "description": "Finished"
    },
    "awayTeam": {
     "id": 111414,
@@ -12921,5 +12921,5 @@
    }
   }
  ],
- "_coletado_em": "2026-10-26T05:15:33.828115+00:00"
+ "_coletado_em": "2026-10-27T00:45:44.135179+00:00"
 }
