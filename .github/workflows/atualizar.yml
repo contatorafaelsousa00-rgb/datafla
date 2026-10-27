@@ -42,7 +42,9 @@ concurrency:
 
 jobs:
   atualizar:
-    runs-on: ubuntu-latest
+    # Fixo no 24.04: o ubuntu-latest passou a ser o Ubuntu 26 a partir de 19/10/2026 e o deploy do Firebase
+    # (npx firebase-tools na action) começou a falhar em 22/10 — o site ficou parado com os dados de 21/10.
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
       HIGHLIGHTLY_KEY: ${{ secrets.HIGHLIGHTLY_KEY }}
@@ -54,6 +56,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - uses: actions/setup-node@v4  # Node fixo para o firebase-tools do deploy (não depender do que vem na imagem)
+        with:
+          node-version: "22"
 
       - name: Instalar dependências
         run: pip install -r requirements.txt
