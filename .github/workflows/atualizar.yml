@@ -42,8 +42,8 @@ concurrency:
 
 jobs:
   atualizar:
-    # Fixo no 24.04: o ubuntu-latest passou a ser o Ubuntu 26 a partir de 19/10/2026 e o deploy do Firebase
-    # (npx firebase-tools na action) começou a falhar em 22/10 — o site ficou parado com os dados de 21/10.
+    # Fixo no 24.04 (o ubuntu-latest virou Ubuntu 26 em 19/10/2026): imagem previsível. A falha do deploy de 22/10
+    # não era da imagem (seguiu no 24.04), e sim do firebase-tools — ver firebaseToolsVersion abaixo.
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
@@ -113,3 +113,6 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: ${{ vars.FIREBASE_PROJECT_ID }}
           channelId: live
+          # Versão fixa: a action usa a mais nova por padrão e o deploy falha desde a 15.34.1 (21/10/2026 22:18 UTC);
+          # o último deploy bom foi em 21/10 01:30. Subir a versão só testando (o push no workflow dispara um deploy).
+          firebaseToolsVersion: "15.34.0"
