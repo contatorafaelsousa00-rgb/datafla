@@ -42,8 +42,7 @@ concurrency:
 
 jobs:
   atualizar:
-    # Fixo no 24.04 (o ubuntu-latest virou Ubuntu 26 em 19/10/2026): imagem previsível. A falha do deploy de 22/10
-    # não era da imagem (seguiu no 24.04), e sim do firebase-tools — ver firebaseToolsVersion abaixo.
+    # Fixo no 24.04 (o ubuntu-latest virou Ubuntu 26 em 19/10/2026): imagem previsível.
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
@@ -113,6 +112,5 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
           projectId: ${{ vars.FIREBASE_PROJECT_ID }}
           channelId: live
-          # Versão fixa: a action usa a mais nova por padrão e o deploy falha desde a 15.34.1 (21/10/2026 22:18 UTC);
-          # o último deploy bom foi em 21/10 01:30. Subir a versão só testando (o push no workflow dispara um deploy).
-          firebaseToolsVersion: "15.34.0"
+          # firebase-tools mais novo (padrão da action). A 15.34.1 (21/10/2026) passou a checar se a API do Hosting está
+          # ativa: a conta de serviço do deploy precisou do papel "Service Usage Consumer" (dado em 28/10/2026).
