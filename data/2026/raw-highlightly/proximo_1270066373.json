@@ -7,12 +7,12 @@
    "capacity": "21880"
   },
   "referee": {
-   "name": null,
-   "nationality": null
+   "name": "de Araujo, Bruno Arleu",
+   "nationality": "Brazil"
   },
   "forecast": {
    "status": "rain",
-   "temperature": "21.52°C"
+   "temperature": "21.59°C"
   },
   "events": [],
   "predictions": {
@@ -71,6 +71,17 @@
       "away": "49.63%",
       "draw": "25.41%",
       "home": "24.96%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Vasco DA Gama.",
+     "generatedAt": "2026-10-28T09:46:50.134Z",
+     "probabilities": {
+      "away": "51.76%",
+      "draw": "24.68%",
+      "home": "23.56%"
      }
     }
    ]
@@ -131,5 +142,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-28T04:15:30.341530+00:00"
+ "_coletado_em": "2026-10-28T23:00:42.604561+00:00"
 }

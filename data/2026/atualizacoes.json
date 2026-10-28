@@ -485,5 +485,23 @@
   "requisicoes": 20,
   "cota_restante": 80,
   "erro": null
+ },
+ {
+  "quando": "2026-10-28T23:00:47+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Vasco DA Gama em menos de 24 h: renova previsão, árbitro e clima",
+  "novos": [],
+  "recoletados": [
+   {
+    "adversario": "Atletico-MG",
+    "data_utc": "2026-10-26T23:00:00.000Z",
+    "competicao": "Serie A"
+   }
+  ],
+  "encerrados": 62,
+  "pendentes": 0,
+  "requisicoes": 8,
+  "cota_restante": 72,
+  "erro": null
  }
 ]

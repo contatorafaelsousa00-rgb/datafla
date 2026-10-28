@@ -1,0 +1,76 @@
+{
+ "data": {
+  "venue": {
+   "city": null,
+   "name": null,
+   "country": null,
+   "capacity": null
+  },
+  "referee": {
+   "name": null,
+   "nationality": null
+  },
+  "forecast": {
+   "status": null,
+   "temperature": null
+  },
+  "events": [],
+  "predictions": null,
+  "statistics": [
+   {
+    "statistics": [],
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    }
+   },
+   {
+    "statistics": [],
+    "team": {
+     "id": 114818,
+     "logo": "https://highlightly.net/soccer/images/teams/114818.png",
+     "name": "Athletico Paranaense"
+    }
+   }
+  ],
+  "id": 1270078287,
+  "round": "Regular Season - 35",
+  "date": "2026-11-18T21:00:00.000Z",
+  "country": {
+   "code": "BR",
+   "name": "Brazil",
+   "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+  },
+  "state": {
+   "clock": null,
+   "score": {
+    "current": null,
+    "penalties": null
+   },
+   "description": "Not started"
+  },
+  "awayTeam": {
+   "id": 114818,
+   "logo": "https://highlightly.net/soccer/images/teams/114818.png",
+   "name": "Athletico Paranaense",
+   "topPlayers": [],
+   "shots": []
+  },
+  "homeTeam": {
+   "id": 108861,
+   "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+   "name": "Flamengo",
+   "topPlayers": [],
+   "shots": []
+  },
+  "league": {
+   "id": 61205,
+   "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+   "name": "Serie A",
+   "season": 2026
+  },
+  "news": []
+ },
+ "_coletado_em": "2026-10-28T23:00:43.894026+00:00"
+}
