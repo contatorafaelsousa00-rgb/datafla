@@ -20,7 +20,7 @@ function jogosDaTela(js) {
 }
 
 // Números por jogador, somando jogo a jogo (box-score; sem box-score, os lances)
-function porJogador(jogos) {
+export function porJogador(jogos) {
   const nomes = new Map((D.bruto.jogadores ?? []).map((j) => [j.jogador_id, j.jogador]));
   const t = new Map();
   const linha = (id, nome) => {
@@ -58,7 +58,7 @@ function porJogador(jogos) {
   return [...t.values()];
 }
 
-function primeiroGol(p) {
+export function primeiroGol(p) {
   const gols = (D.eventosPorPartida.get(p.id_partida) ?? []).filter(ehGol).sort(ordemLance);
   return gols.length ? (gols[0].eh_flamengo ? "fla" : "adv") : null;
 }
@@ -97,7 +97,7 @@ function listaJogos(chave, jogos, extra) {
 const ved = (l) => `${l.filter((p) => p.resultado === "V").length}V ${l.filter((p) => p.resultado === "E").length}E ${l.filter((p) => p.resultado === "D").length}D`;
 const aproveit = (l) => (l.length ? pct(l.reduce((t, p) => t + (p.resultado === "V" ? 3 : p.resultado === "E" ? 1 : 0), 0) / (3 * l.length), 0) : "–");
 
-function sequencias(jogos) {
+export function sequencias(jogos) {
   const maior = (ok) => { let m = 0, a = 0, ini = null, melhor = null;
     for (const p of jogos) { if (ok(p)) { if (!a) ini = p; a++; if (a > m) { m = a; melhor = [ini, p]; } } else a = 0; }
     return { n: m, de: melhor?.[0], ate: melhor?.[1] }; };

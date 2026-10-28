@@ -170,6 +170,23 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   `data/<ano>/raw-highlightly/`; antes só o ano do relógio, e em 1º/jan a temporada anterior sumiria do site) e o site abre na
   temporada mais recente com jogos (`temporadas.json` → `jogos > 0`). Falha no workflow abre a issue "Atualização do datafla
   falhou" (label `falha-automatica`; uma só enquanto aberta) e ela fecha sozinha na próxima publicação que der certo.
+- Melhorias da análise de 28/10/2026:
+  - Carga: `adversarios` e `carreira` vão para `<ano>-extra.json` (exportar.EXTRAS), baixado depois da 1ª tela
+    (`D.extrasPromessa`; tabela do jogo, ficha do adversário e carreira esperam por ele); fetch com `cache: "no-cache"`
+    (revalida). 1ª carga 198 → 134 KB gzip.
+  - Páginas por jogo `site/jogo/<id>.html` (`coleta/paginas.py`, geradas no processar, fora do Git): título/descrição
+    próprios (mandante × visitante, gols, xG, pênaltis; futuro: data e chances) para a prévia no WhatsApp/X e Google;
+    redirecionam para `?aba=jogos&jogo|proximo=<id>`. + `sitemap.xml`/`robots.txt`. Botão "Compartilhar" na tela do jogo
+    (celular: compartilhar do sistema; computador: copia o link). `servidor_local.py` imita o cleanUrls do Firebase.
+  - Disputa de pênaltis logo após os 90 (sem prorrogação; Estudiantes 22/10, cobranças nos minutos 91–99) era contada como
+    gol: `_cobrancas_da_disputa` = sequência final de pênaltis conferida pelo placar da disputa.
+  - Instalável: `manifest.webmanifest` + `site/icones/` (marca; Android e apple-touch-icon).
+  - Cadastros manuais (admin → Cadastros): lesões (jogador, motivo, volta prevista) e onde passa cada próximo jogo, no
+    Firestore `manual/cadastros` (leitura pública, escrita só admin; `site/manual.js` lê por REST com limite de 2,5 s).
+    Lesão entra nos desfalques e tira da provável escalação até a volta; transmissão no banner, na lista e na tela do jogo.
+    EXIGE publicar as regras do Firestore (`firebase deploy --only firestore:rules`).
+  - Testes de regra de negócio com temporada inventada (`tests/front/test_regras.py`): suspensão, pendurado, amarelo de
+    outra competição, ausente × volta de suspensão, artilharia, pênaltis, expulsão fora da relação, disputa, sequências.
 - Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
 - Aba **Números** (16/10/2026, `numeros.js`; conferida com a planilha do Rafael "Dados Flamengo temporada 2026.xlsx"):
   artilharia (pênaltis entre parênteses), assistências, G+A, mais utilizados, sem sofrer gol (por goleiro), saiu na
