@@ -140,6 +140,28 @@ def _normalizar(partidas: list[dict]) -> dict:
     return highlightly.normalizar(partidas) if _hl() else normalizar.normalizar(partidas, config.TEAM_ID)
 
 
+def temporadas_com_dados() -> list[int]:
+    """Anos com respostas brutas da fonte atual (data/<ano>/<raw>/partida_*.json), do mais antigo ao mais novo."""
+    raw = config.FONTES[config.FONTE]["raw"]
+    return sorted(int(p.name) for p in config.DATA_DIR.glob("[0-9][0-9][0-9][0-9]")
+                  if any((p / raw).glob("partida_*.json")))
+
+
+def cmd_processar_todas() -> int:
+    """Gera o JSON do site de TODAS as temporadas com dados. O site no ar é gerado do zero a cada deploy (site/dados
+    fica fora do Git): processar só o ano do relógio faria a temporada anterior sumir na virada (1º de janeiro)."""
+    anos = temporadas_com_dados()
+    if not anos:
+        print(f"Nenhuma temporada com dados em {config.DATA_DIR} (fonte {config.FONTE}).")
+        return 1
+    erro = 0
+    for ano in anos:
+        config.aplicar_temporada(ano)
+        print(f"--- Temporada {ano}")
+        erro = max(erro, cmd_processar() or 0)
+    return erro
+
+
 def cmd_processar():
     partidas = carregar_partidas()
     if not partidas:
@@ -251,6 +273,7 @@ def main(argv=None):
     parser.add_argument("id_partida", nargs="?", type=int)
     parser.add_argument("-t", "--temporada", type=int, help=f"ano da temporada (padrão: {config.SEASON})")
     parser.add_argument("--forcar", action="store_true", help="planejar: coleta mesmo sem novidade")
+    parser.add_argument("--todas", action="store_true", help="processar: todas as temporadas com dados (usado no deploy)")
     parser.add_argument("-f", "--fonte", choices=sorted(config.FONTES), help=f"fonte dos dados (padrão: {config.FONTE})")
     args = parser.parse_args(argv)
     if args.fonte:
@@ -262,7 +285,7 @@ def main(argv=None):
     if args.comando == "planejar":
         return highlightly.cmd_planejar(args.forcar)
     if args.comando == "processar":
-        return cmd_processar()
+        return cmd_processar_todas() if args.todas else cmd_processar()
     if args.comando == "sumulas":
         return cmd_sumulas()
     if args.comando == "inspecionar":

@@ -213,7 +213,9 @@ async function iniciar() {
   }
   const params = new URLSearchParams(location.search);
   const pedida = Number(params.get("t"));
-  const ano = TEMPORADAS.some((t) => t.temporada === pedida) ? pedida : TEMPORADAS[0].temporada;
+  // Padrão: a temporada mais recente que já tem jogos (em janeiro, a nova pode existir ainda sem nenhum jogo)
+  const padrao = (TEMPORADAS.find((t) => t.jogos > 0) ?? TEMPORADAS[0]).temporada;
+  const ano = TEMPORADAS.some((t) => t.temporada === pedida) ? pedida : padrao;
   montarControlesFixos();
   montarModal();
   montarOpiniao();

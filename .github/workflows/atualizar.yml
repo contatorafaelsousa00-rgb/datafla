@@ -35,6 +35,7 @@ on:
 
 permissions:
   contents: write
+  issues: write  # aviso de falha (abre/fecha issue)
 
 concurrency:
   group: atualizar
@@ -79,8 +80,10 @@ jobs:
         run: python -m coleta.coletar tudo --fonte highlightly
 
       - name: Gerar dados do site
-        if: github.event_name == 'push'
-        run: python -m coleta.coletar processar --fonte highlightly
+        # Todas as temporadas com dados (não só o ano do relógio): sem isso, no 1º deploy de janeiro a temporada
+        # anterior sumiria do site, porque site/dados não fica no Git e é gerado do zero a cada publicação.
+        if: github.event_name == 'push' || steps.plano.outputs.coletar == 'true'
+        run: python -m coleta.coletar processar --fonte highlightly --todas
 
       - name: Salvar dados no repositório
         if: steps.plano.outputs.coletar == 'true'
@@ -114,3 +117,32 @@ jobs:
           channelId: live
           # firebase-tools mais novo (padrão da action). A 15.34.1 (21/10/2026) passou a checar se a API do Hosting está
           # ativa: a conta de serviço do deploy precisou do papel "Service Usage Consumer" (dado em 28/10/2026).
+
+      # ---- Aviso de falha: a 1ª falha abre uma issue (GitHub avisa por e-mail e no app); enquanto ela estiver aberta,
+      # as seguintes não abrem outra (sem enxurrada a cada 15 min). Fecha sozinha quando uma publicação volta a funcionar.
+      # Motivo: o deploy ficou quebrado de 22 a 27/10/2026 sem ninguém saber.
+      - name: Avisar falha
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          execucao="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          aberta=$(gh issue list --label falha-automatica --state open --json number --jq '.[0].number')
+          if [ -z "$aberta" ]; then
+            gh label create falha-automatica --color B60205 --description "Aberta pelo workflow quando a atualização falha" --force
+            gh issue create --label falha-automatica --title "Atualização do datafla falhou" --body "A execução do workflow falhou: $execucao
+
+          Enquanto esta issue estiver aberta, novas falhas não abrem outra. Ela fecha sozinha quando uma publicação voltar a dar certo. O admin do site (Coleta) também lista as execuções."
+          fi
+
+      - name: Fechar aviso de falha
+        if: success() && (github.event_name == 'push' || steps.plano.outputs.coletar == 'true')
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          execucao="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          for n in $(gh issue list --label falha-automatica --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Voltou a funcionar: $execucao"
+          done

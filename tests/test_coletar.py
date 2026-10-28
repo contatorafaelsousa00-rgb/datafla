@@ -94,3 +94,21 @@ def test_temporadas_separadas(tmp_path, monkeypatch):
     config.aplicar_temporada(config.TEMPORADA_ATUAL)
     indice = json.loads((tmp_path / "site" / "temporadas.json").read_text(encoding="utf-8"))
     assert [i["temporada"] for i in indice] == [2026, 2025]
+
+
+def test_processar_todas_gera_cada_temporada_com_dados(tmp_path, monkeypatch):
+    """Virada de ano: o deploy gera o JSON de todas as temporadas com dados, não só a do relógio."""
+    raw = config.FONTES[config.FONTE]["raw"]
+    for ano in (2026, 2027):
+        (tmp_path / str(ano) / raw).mkdir(parents=True)
+    (tmp_path / "2026" / raw / "partida_1.json").write_text("{}")  # 2027 ainda sem jogo: fica de fora
+    (tmp_path / "2024").mkdir()  # pasta sem dados da fonte: fica de fora
+    monkeypatch.setattr(config, "DATA_DIR", tmp_path)
+    assert coletar.temporadas_com_dados() == [2026]
+    (tmp_path / "2027" / raw / "partida_9.json").write_text("{}")
+    processadas = []
+    monkeypatch.setattr(coletar, "cmd_processar", lambda: processadas.append(config.SEASON) or 0)
+    assert coletar.cmd_processar_todas() == 0
+    assert processadas == [2026, 2027]
+    monkeypatch.undo()  # DATA_DIR de volta antes de reapontar os caminhos
+    config.aplicar_temporada(config.TEMPORADA_ATUAL)

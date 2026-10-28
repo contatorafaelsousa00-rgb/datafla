@@ -166,6 +166,10 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   deploy não tinha permissão. Solução definitiva (28/10): papel "Service Usage Consumer" para a conta de serviço no IAM; a
   action voltou a usar o firebase-tools mais novo (ficou `ubuntu-24.04` e Node 22 por previsibilidade). Push no próprio workflow agora dispara deploy. Se o site parar de
   atualizar: ver se as execuções "coletou" falham no último passo (admin → Coleta mostra falhas).
+- Virada de temporada e aviso de falha (28/10/2026): o deploy roda `processar --todas` (todas as temporadas com dados em
+  `data/<ano>/raw-highlightly/`; antes só o ano do relógio, e em 1º/jan a temporada anterior sumiria do site) e o site abre na
+  temporada mais recente com jogos (`temporadas.json` → `jogos > 0`). Falha no workflow abre a issue "Atualização do datafla
+  falhou" (label `falha-automatica`; uma só enquanto aberta) e ela fecha sozinha na próxima publicação que der certo.
 - Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
 - Aba **Números** (16/10/2026, `numeros.js`; conferida com a planilha do Rafael "Dados Flamengo temporada 2026.xlsx"):
   artilharia (pênaltis entre parênteses), assistências, G+A, mais utilizados, sem sofrer gol (por goleiro), saiu na

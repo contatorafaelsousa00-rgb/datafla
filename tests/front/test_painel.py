@@ -4,7 +4,9 @@ mata-mata é testada com jogos inventados, injetados na página."""
 
 from __future__ import annotations
 
+import json
 import struct
+from pathlib import Path
 
 import pytest
 
@@ -191,3 +193,14 @@ def test_exportar_imagem(pagina_escura, modo):
     assert cabecalho[:8] == b"\x89PNG\r\n\x1a\n"
     largura, altura = struct.unpack(">II", cabecalho[16:24])
     assert largura == 2160 and altura > 1000  # 1080 px em resolução dobrada
+
+
+def test_virada_de_ano_abre_a_ultima_temporada_com_jogos(pagina_escura):
+    """Em janeiro a temporada nova entra no índice ainda sem jogos: o site abre a anterior, não uma tela vazia."""
+    pg = pagina_escura.pg
+    real = json.loads((Path(__file__).resolve().parents[2] / "site" / "dados" / "temporadas.json").read_text(encoding="utf-8"))
+    ano = real[0]["temporada"]
+    indice = [{"temporada": ano + 1, "jogos": 0, "gerado_em": "2027-01-01T00:00:00+00:00"}] + real
+    pg.route("**/dados/temporadas.json", lambda r: r.fulfill(status=200, content_type="application/json", body=json.dumps(indice)))
+    pagina_escura.abrir("?aba=temporada", "#aba-temporada svg")
+    assert pg.evaluate("(async () => (await import('/comum.js')).D.bruto.meta.temporada)()") == ano
