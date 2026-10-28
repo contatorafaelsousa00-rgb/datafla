@@ -1,6 +1,7 @@
 // Aba Temporada: cartão do próximo jogo, indicadores e gráficos da temporada.
 import { barrasHorizontais, colunasDivergentes, conteudoDica, dica, linhas, serie } from "./graficos.js";
 import { $, assinado, bola, comDetalhe, compOk, confronto, contar, corComp, D, data, dataLonga, dicaJogo, ENCERRADO, escudo, estado, filtrados, h, iconeComp, kpi, media, mostrar, movel, NOME_RES, num, pct, pontos, pontosDe, preencher, resultado, rotuloMes, soma, tagComp, textoConfronto, vazio } from "./comum.js";
+import { transmissaoDe } from "./manual.js";
 import { abrirJogo, abrirProximo, barraProbabilidade } from "./jogos.js";
 import { trocarAba } from "./app.js";
 
@@ -53,7 +54,8 @@ export function renderProximo() {
     h("div", { class: "proximo-confronto" }, lado(casa),
       h("div", { class: "proximo-meio" }, h("b", {}, horaBR(p.data_utc)), h("span", {}, diaBR(p.data_utc))), lado(fora)),
     h("div", { class: "proximo-info" }, tagComp(p.competicao),
-      ...[p.rodada, local ?? (p.mando === "Casa" ? "em casa" : "fora de casa"), p.arbitro ? `Árbitro: ${p.arbitro}` : null, clima]
+      ...[p.rodada, local ?? (p.mando === "Casa" ? "em casa" : "fora de casa"), p.arbitro ? `Árbitro: ${p.arbitro}` : null, clima,
+        transmissaoDe(p.id_partida) ? `📺 ${transmissaoDe(p.id_partida)}` : null]
         .filter(Boolean).map((t) => h("span", {}, t))),
     barraProbabilidade(p) ?? "",
   );

@@ -744,3 +744,7 @@ body.modo-admin main, body.modo-admin .rodape, body.modo-admin #aviso-demo { dis
 .aviso-liga.atrasada { display: inline-flex; gap: 6px; align-items: baseline; padding: 6px 10px; border-radius: 8px;
   background: color-mix(in srgb, var(--alerta) 12%, var(--superficie)); border: 1px solid color-mix(in srgb, var(--alerta) 45%, transparent); color: var(--texto); }
 .modal-barra { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.admin-form { margin-top: 12px; gap: 8px; }
+.admin-form select, .admin-form input, .admin-tabela input { font: inherit; font-size: 14px; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--borda-forte); background: var(--superficie-2); color: var(--texto); }
+.admin-form input[type=text] { flex: 1 1 220px; }
+.admin-tabela input { width: 100%; min-width: 160px; }

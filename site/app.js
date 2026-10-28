@@ -3,6 +3,7 @@
 // Feito para a temporada 2026 (fonte Highlightly); uma visão some quando a fonte não tem o dado.
 
 import { $, agrupar, contar, D, data, DEMO, ehMes, estado, definirDados, expandir, filtrados, h, mes, mesDe, nomeMes, pct, pontos, preparar, simboloComp } from "./comum.js";
+import { carregarManual } from "./manual.js";
 import { renderTemporada } from "./temporada.js";
 import { abrirJogo, abrirProximo, montarModalJogo, renderJogos } from "./jogos.js";
 import { agregarJogadores, montarModal, renderJogadores, renderPerfil } from "./jogadores.js";
@@ -228,6 +229,7 @@ async function iniciar() {
   // Padrão: a temporada mais recente que já tem jogos (em janeiro, a nova pode existir ainda sem nenhum jogo)
   const padrao = (TEMPORADAS.find((t) => t.jogos > 0) ?? TEMPORADAS[0]).temporada;
   const ano = TEMPORADAS.some((t) => t.temporada === pedida) ? pedida : padrao;
+  const manual = carregarManual(); // cadastros do admin (lesões, transmissão), em paralelo
   montarControlesFixos();
   montarModal();
   montarOpiniao();
@@ -236,6 +238,7 @@ async function iniciar() {
   const aba = params.get("aba");
   if (aba && document.getElementById(`aba-${aba}`)) marcarAba(aba);
   registrarVisita(estado.aba);
+  await manual;
   await carregarTemporada(ano);
   estado.subElenco = params.get("sub") === "ficha" ? "ficha" : "desempenho";
   estado.tabelaComp = { libertadores: "Libertadores", "copa-do-brasil": "Copa do Brasil", carioca: "Carioca" }[params.get("tabela")] ?? "Brasileirão";

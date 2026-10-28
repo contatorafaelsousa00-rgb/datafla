@@ -2,6 +2,7 @@
 // Desfalques são ESTIMATIVA: suspensões e pendurados pela regra de 3 amarelos na competição (a fonte não informa
 // suspensões; algumas competições zeram cartões em certas fases) e lesões pelo perfil dos jogadores.
 import { bola, D, data, h, num, pct, vazio } from "./comum.js";
+import { MANUAL } from "./manual.js";
 import { campinho } from "./graficos.js";
 import { abrirJogador, agregarJogadores } from "./jogadores.js";
 
@@ -46,6 +47,12 @@ export function desfalques(p) {
   }
   const lesionados = (D.bruto.perfis ?? []).filter((x) => x.lesao_atual && /flamengo/i.test(x.clube_atual ?? ""))
     .map((x) => ({ id: x.jogador_id, nome: x.jogador, motivo: x.lesao_atual + (x.lesao_volta ? ` (volta prevista ${data(x.lesao_volta)})` : "") }));
+  // lesões cadastradas no admin (a fonte não traz as recentes); valem enquanto a volta prevista não passou
+  const hoje = new Date().toISOString().slice(0, 10);
+  for (const [id, l] of Object.entries(MANUAL.lesoes)) {
+    if (lesionados.some((x) => x.id === Number(id)) || (l.volta && l.volta < hoje)) continue;
+    lesionados.push({ id: Number(id), nome: l.nome, motivo: (l.motivo || "lesionado") + (l.volta ? ` (volta prevista ${data(l.volta + "T12:00:00Z")})` : "") });
+  }
   pendurados.sort((a, b) => a.nome.localeCompare(b.nome));
 
   // Ausentes: titulares frequentes que não foram relacionados (nem no banco) nos últimos jogos do Flamengo.

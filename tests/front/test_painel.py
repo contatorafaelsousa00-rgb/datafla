@@ -204,3 +204,26 @@ def test_virada_de_ano_abre_a_ultima_temporada_com_jogos(pagina_escura):
     pg.route("**/dados/temporadas.json", lambda r: r.fulfill(status=200, content_type="application/json", body=json.dumps(indice)))
     pagina_escura.abrir("?aba=temporada", "#aba-temporada svg")
     assert pg.evaluate("(async () => (await import('/comum.js')).D.bruto.meta.temporada)()") == ano
+
+
+def test_cadastros_manuais_aparecem_no_site(pagina_escura):
+    """Lesão e transmissão cadastradas no admin (Firestore, manual/cadastros) aparecem no pré-jogo e no banner."""
+    pg = pagina_escura.pg
+    dados = json.loads((Path(__file__).resolve().parents[2] / "site" / "dados" / "2026.json").read_text(encoding="utf-8"))
+    futuros = sorted((c for c in dados["calendario"] if c["status"] == "NS"), key=lambda c: c["data_utc"])
+    if not futuros:
+        pytest.skip("sem jogo futuro")
+    jog = dados["jogadores"]
+    linhas = [dict(zip(jog["colunas"], l)) for l in jog["linhas"]] if isinstance(jog, dict) else jog
+    titular = max(linhas, key=lambda j: j["data_utc"] if "data_utc" in j else j["id_partida"])  # alguém do último jogo
+    s = lambda v: {"stringValue": v}
+    doc = {"fields": {
+        "lesoes": {"mapValue": {"fields": {str(titular["jogador_id"]): {"mapValue": {"fields": {
+            "nome": s(titular["jogador"]), "motivo": s("lesão no joelho"), "volta": s("2099-01-01")}}}}}},
+        "transmissao": {"mapValue": {"fields": {str(futuros[0]["id_partida"]): s("Canal Teste")}}}}}
+    pg.route("https://firestore.googleapis.com/**/manual/cadastros*", lambda r: r.fulfill(status=200, content_type="application/json", body=json.dumps(doc)))
+    pagina_escura.abrir("?aba=temporada", "#card-proximo")
+    assert "Canal Teste" in pg.inner_text("#card-proximo")
+    pg.click("#card-proximo")
+    pg.wait_for_selector("#modal-jogo[open] #detalhe-proximo h3")
+    assert "lesão no joelho" in pg.inner_text("#detalhe-proximo")

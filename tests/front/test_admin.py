@@ -29,15 +29,20 @@ export class GoogleAuthProvider {}
 FAKE_FS = """
 const ACESSOS = %s, OPINIOES = %s;
 window.__apagadas = [];
-const doc = (id, dados) => ({ id, ref: { id }, data: () => dados });
+const linha = (id, dados) => ({ id, ref: { id }, data: () => dados });
+window.__gravado = null;
+export const doc = (db, colecao, id) => ({ colecao, id });
+export const getDoc = async () => ({ exists: () => true, data: () => ({ lesoes: {}, transmissao: {} }) });
+export const setDoc = async (ref, dados) => { window.__gravado = { ref, ...JSON.parse(JSON.stringify({ ...dados, atualizado_em: null })) }; };
+export const serverTimestamp = () => "agora";
 export const getFirestore = () => ({});
 export const collection = (db, nome) => ({ nome });
 export const orderBy = () => null;
 export const limit = () => null;
 export const query = (c) => c;
 export const getDocs = async (c) => ({ docs: c.nome === 'acessos'
-  ? ACESSOS.map(({ dia, ...d }) => doc(dia, d))
-  : OPINIOES.map(({ id, ms, ...d }) => doc(id, { ...d, criado_em: { toDate: () => new Date(Date.now() - ms * 3600e3) } })) });
+  ? ACESSOS.map(({ dia, ...d }) => linha(dia, d))
+  : OPINIOES.map(({ id, ms, ...d }) => linha(id, { ...d, criado_em: { toDate: () => new Date(Date.now() - ms * 3600e3) } })) });
 export const deleteDoc = async (ref) => { window.__apagadas.push(ref.id); };
 """ % (json.dumps(ACESSOS), json.dumps(OPINIOES))
 RUNS = {"workflow_runs": [
@@ -72,7 +77,7 @@ def test_admin_e_uma_tela_e_nao_modal(admin):
     pg = admin.pg
     assert pg.locator("dialog#modal-admin").count() == 0
     assert pg.is_visible("#tela-admin") and not pg.is_visible("main")
-    assert pg.locator(".admin-menu button").count() == 5
+    assert pg.locator(".admin-menu button").count() == 6
     # visão geral: cartões de situação e pendências (1 falha no workflow, 3 opiniões novas)
     assert pg.locator(".admin-status").count() >= 6
     pend = " ".join(pg.locator(".admin-pendencias li").all_inner_texts())
@@ -130,3 +135,27 @@ def test_admin_celular(celular):
         pg.evaluate(f"location.hash = '#admin/{secao}'")
         pg.wait_for_timeout(300)
         assert pg.evaluate("document.documentElement.scrollWidth") <= 390, f"admin/{secao} passa da tela no celular"
+
+
+def test_admin_cadastra_lesao_e_transmissao(admin):
+    pg = admin.pg
+    pg.click(".admin-menu button:has-text('Cadastros')")
+    assert pg.url.endswith("#admin/cadastros")
+    jogador = pg.locator(".admin-form select option").nth(1)
+    nome, valor = jogador.inner_text(), jogador.get_attribute("value")
+    pg.select_option(".admin-form select", valor)
+    pg.fill(".admin-form input[type=text]", "lesão na coxa")
+    pg.fill(".admin-form input[type=date]", "2099-12-31")
+    pg.click(".admin-form button:has-text('Adicionar')")
+    pg.wait_for_function("window.__gravado !== null")
+    gravado = pg.evaluate("window.__gravado")
+    assert gravado["ref"] == {"colecao": "manual", "id": "cadastros"}
+    assert gravado["lesoes"][valor] == {"nome": nome, "motivo": "lesão na coxa", "volta": "2099-12-31"}
+    assert pg.locator(".admin-conteudo table tbody tr", has_text="lesão na coxa").count() == 1
+    campos = pg.locator(".admin-conteudo input[aria-label^='Onde passa']")
+    if campos.count():
+        campos.first.fill("Globo, Premiere")
+        pg.evaluate("window.__gravado = null")
+        pg.click("button:has-text('Salvar transmissões')")
+        pg.wait_for_function("window.__gravado !== null")
+        assert list(pg.evaluate("window.__gravado.transmissao").values()) == ["Globo, Premiere"]

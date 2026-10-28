@@ -67,6 +67,9 @@ class Pagina:
         self.erros: list[str] = []
         self.pg.on("pageerror", lambda e: self.erros.append(str(e)))
         self.pg.on("console", lambda m: m.type == "error" and "favicon" not in m.text and self.erros.append(m.text))
+        # cadastros manuais (Firestore): sem rede nos testes; um teste pode trocar por dados próprios (rota mais nova vale)
+        self.pg.route("https://firestore.googleapis.com/**/manual/cadastros*",
+                      lambda r: r.fulfill(status=200, content_type="application/json", body="{}"))
 
     def abrir(self, caminho: str, espera: str = "#aba-temporada"):
         self.pg.goto(self.url_site + "/" + caminho.lstrip("/"), wait_until="networkidle")

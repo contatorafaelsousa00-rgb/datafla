@@ -34,10 +34,11 @@ const NOME_TIPO = { elogio: "Elogio", critica: "Crítica", sugestao: "Sugestão"
 const PLURAL_TIPO = { elogio: "Elogios", critica: "Críticas", sugestao: "Sugestões" };
 const NOME_REGRA = { minutos: "Minutos somados", finalizacoes: "Finalizações (jogadores × time)", substituicoes_vs_eventos: "Substituições × lances",
   escalacao: "Escalação", titulares: "Titulares", gols: "Gols (jogadores × placar)" };
-const SECOES = [["geral", "Visão geral"], ["acessos", "Acessos"], ["opinioes", "Opiniões"], ["coleta", "Coleta"], ["qualidade", "Qualidade dos dados"]];
+const SECOES = [["geral", "Visão geral"], ["acessos", "Acessos"], ["opinioes", "Opiniões"], ["cadastros", "Cadastros"], ["coleta", "Coleta"], ["qualidade", "Qualidade dos dados"]];
 
 let fb; // SDK do Firebase, carregado na primeira abertura
-const st = { secao: "geral", usuario: null, acessos: [], opinioes: [], historico: [], execucoes: null, filtroOp: "todas", busca: "", regra: "" };
+const st = { secao: "geral", usuario: null, acessos: [], opinioes: [], historico: [], execucoes: null, filtroOp: "todas", busca: "", regra: "",
+  cadastros: { lesoes: {}, transmissao: {} }, cadastrosErro: null };
 
 async function carregarSdk() {
   if (fb) return fb;
@@ -128,6 +129,13 @@ async function carregarPainel(usuario) {
     return aviso("Erro", `Não foi possível ler os dados (${e?.code ?? e.message}).`);
   }
   try { localStorage.setItem("datafla-admin", "1"); } catch {} // este navegador passa a contar como acesso seu, à parte
+  // Cadastros manuais à parte: um erro aqui (ex.: regras ainda não publicadas) não pode derrubar o resto do admin
+  try {
+    const doc = await F.getDoc(F.doc(db, "manual", "cadastros"));
+    const d = doc.exists() ? doc.data() : {};
+    st.cadastros = { lesoes: d.lesoes ?? {}, transmissao: d.transmissao ?? {} };
+    st.cadastrosErro = null;
+  } catch (e) { st.cadastrosErro = e?.code ?? e.message; }
   Object.assign(st, {
     usuario, historico, execucoes,
     acessos: acessos.docs.map((d) => ({ dia: d.id, ...d.data() })),
@@ -163,7 +171,7 @@ function desenhar() {
   const menu = h("nav", { class: "admin-menu", "aria-label": "Seções da administração" },
     SECOES.map(([s, nome]) => h("button", { type: "button", "aria-current": st.secao === s ? "page" : null, onclick: () => irPara(s) },
       h("span", {}, nome), selo[s] ? h("span", { class: "selo-nova" }, selo[s]) : null)));
-  const conteudo = { geral: secaoGeral, acessos: secaoAcessos, opinioes: secaoOpinioes, coleta: secaoColeta, qualidade: secaoQualidade }[st.secao]();
+  const conteudo = { geral: secaoGeral, acessos: secaoAcessos, opinioes: secaoOpinioes, cadastros: secaoCadastros, coleta: secaoColeta, qualidade: secaoQualidade }[st.secao]();
   preencher(corpo(),
     h("div", { class: "admin-cabecalho" },
       h("div", {}, h("h1", {}, "Administração"), h("p", { class: "sutil" }, st.usuario.email)),
@@ -402,6 +410,82 @@ function secaoColeta() {
     h("article", { class: "cartao" }, h("h2", {}, "Execuções recentes do workflow"),
       h("p", { class: "sutil" }, "Cada disparo do agendamento. A maioria termina em \"nada a coletar\": só confere se um jogo acabou."),
       h("div", { class: "rolagem" }, execs)),
+  ] };
+}
+
+// ---------- cadastros manuais (o que a fonte não traz) ----------
+// Documento manual/cadastros no Firestore; o site lê em manual.js. Lesão: some dos desfalques depois da volta prevista.
+async function salvarCadastros(botaoEl) {
+  const antes = botaoEl?.textContent;
+  if (botaoEl) { botaoEl.disabled = true; botaoEl.textContent = "Salvando…"; }
+  try {
+    await fb.F.setDoc(fb.F.doc(fb.db, "manual", "cadastros"),
+      { lesoes: st.cadastros.lesoes, transmissao: st.cadastros.transmissao, atualizado_em: fb.F.serverTimestamp() });
+    st.cadastrosErro = null;
+    desenhar();
+    return true;
+  } catch (e) {
+    alert(`Não foi possível salvar (${e?.code ?? e.message}).`);
+    if (botaoEl) { botaoEl.disabled = false; botaoEl.textContent = antes; }
+    return false;
+  }
+}
+
+function elencoParaCadastro() {
+  // quem jogou pelo Flamengo na temporada e não saiu do clube (perfil com outro clube atual), por nome
+  const saiu = new Set((D.bruto.perfis ?? []).filter((x) => x.clube_atual && !/flamengo/i.test(x.clube_atual)).map((x) => x.jogador_id));
+  const nomes = new Map();
+  for (const j of D.bruto.jogadores) if (!saiu.has(j.jogador_id)) nomes.set(j.jogador_id, j.jogador);
+  return [...nomes].sort((a, b) => a[1].localeCompare(b[1]));
+}
+
+function secaoCadastros() {
+  const { lesoes, transmissao } = st.cadastros;
+  const hoje = new Date().toISOString().slice(0, 10);
+  const elenco = elencoParaCadastro();
+  const selJogador = h("select", { "aria-label": "Jogador" }, h("option", { value: "" }, "Jogador…"),
+    elenco.map(([id, nome]) => h("option", { value: id }, nome)));
+  const motivo = h("input", { type: "text", placeholder: "Lesão (ex.: lesão muscular na coxa)", maxlength: 120, "aria-label": "Lesão" });
+  const volta = h("input", { type: "date", "aria-label": "Volta prevista" });
+  const listaLesoes = Object.entries(lesoes).sort((a, b) => a[1].nome.localeCompare(b[1].nome));
+  const proximos = (D.calendario ?? []).filter((j) => !ENCERRADO.has(j.status) && j.data_utc > new Date().toISOString())
+    .sort((a, b) => a.data_utc.localeCompare(b.data_utc)).slice(0, 10);
+  const campos = new Map(proximos.map((j) => [j.id_partida, h("input", { type: "text", value: transmissao[j.id_partida] ?? "",
+    placeholder: "ex.: Globo, Premiere", maxlength: 80, "aria-label": `Onde passa: ${j.adversario}` })]));
+  return { elementos: [
+    st.cadastrosErro ? h("p", { class: "erro" }, `Não foi possível ler os cadastros (${st.cadastrosErro}). `
+      + "Se for permission-denied, as regras do Firestore com a coleção manual ainda não foram publicadas.") : null,
+    h("article", { class: "cartao" }, h("h2", {}, "Lesões"),
+      h("p", { class: "sutil" }, "A fonte não informa lesões recentes. O que for cadastrado aqui aparece nos desfalques do pré-jogo e tira o "
+        + "jogador da provável escalação, até a volta prevista (sem data: até você remover)."),
+      listaLesoes.length ? h("table", { class: "tabela admin-tabela" },
+        h("thead", {}, h("tr", {}, ["Jogador", "Lesão", "Volta prevista", ""].map((t) => h("th", {}, t)))),
+        h("tbody", {}, listaLesoes.map(([id, l]) => h("tr", { class: l.volta && l.volta < hoje ? "sutil" : "" },
+          h("td", {}, l.nome), h("td", {}, l.motivo || "–"),
+          h("td", {}, l.volta ? data(l.volta + "T12:00:00Z") + (l.volta < hoje ? " (já passou)" : "") : "sem data"),
+          h("td", {}, botao("Remover", (e) => { delete lesoes[id]; salvarCadastros(e.currentTarget); }, "botao-texto perigo"))))))
+        : h("p", { class: "vazio" }, "Nenhuma lesão cadastrada."),
+      h("div", { class: "acoes admin-form" }, selJogador, motivo, volta,
+        botao("Adicionar", async (e) => {
+          const id = selJogador.value;
+          if (!id) { alert("Escolha o jogador."); return; }
+          lesoes[id] = { nome: selJogador.selectedOptions[0].textContent, motivo: motivo.value.trim(), volta: volta.value || null };
+          await salvarCadastros(e.currentTarget);
+        }, "botao-primario"))),
+    h("article", { class: "cartao" }, h("h2", {}, "Onde passa"),
+      h("p", { class: "sutil" }, "Transmissão dos próximos jogos (nenhuma fonte grátis tem). Aparece no banner do próximo jogo, na lista de "
+        + "próximos jogos e na tela do jogo. Deixe em branco para não mostrar."),
+      proximos.length ? h("table", { class: "tabela admin-tabela" },
+        h("tbody", {}, proximos.map((j) => h("tr", {},
+          h("td", {}, `${data(j.data_utc)} ${horaBR(j.data_utc)}`),
+          h("td", {}, j.mando === "Fora" ? `${j.adversario} × Flamengo` : `Flamengo × ${j.adversario}`),
+          h("td", {}, campos.get(j.id_partida))))))
+        : h("p", { class: "vazio" }, "Nenhum jogo futuro no calendário."),
+      proximos.length ? h("div", { class: "acoes" }, botao("Salvar transmissões", (e) => {
+        for (const [id, campo] of campos) { const v = campo.value.trim(); if (v) transmissao[id] = v; else delete transmissao[id]; }
+        for (const id of Object.keys(transmissao)) if (!campos.has(Number(id))) delete transmissao[id]; // jogos que já passaram
+        salvarCadastros(e.currentTarget);
+      }, "botao-primario")) : null),
   ] };
 }
 

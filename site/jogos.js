@@ -1,6 +1,7 @@
 // Aba Jogos: lista e relatório de cada jogo.
 import { barrasEspelhadas, campinho, conteudoDica, dica, linhaTempo, mapaGol, serie } from "./graficos.js";
 import { $, bola, confronto, D, data, dataLonga, escudo, escudoImg, estado, h, logoFla, mandanteVisitante, NOME_RES, notaTag, num, ORDEM_POS, pct, preencher, resultado, tagComp, vazio, textoConfronto } from "./comum.js";
+import { transmissaoDe } from "./manual.js";
 import { abrirJogadorNaPartida } from "./jogadores.js";
 import { render } from "./app.js";
 import { CLIMA, futurosFiltrados, horaBR } from "./temporada.js";
@@ -33,7 +34,7 @@ function renderProximosJogos() {
   const aberto = futuros.find((j) => j.id_partida === estado.proximo);
   const abrir = abrirProximo;
   $("tabela-proximos").replaceChildren(
-    h("thead", {}, h("tr", {}, ["Data", "Hora", "Competição", "Fase", "Jogo (mandante × visitante)", "Local", "Chance do Fla", ""]
+    h("thead", {}, h("tr", {}, ["Data", "Hora", "Competição", "Fase", "Jogo (mandante × visitante)", "Local / onde passa", "Chance do Fla", ""]
       .map((t, i) => h("th", { class: i === 6 ? "num" : "" }, t)))),
     h("tbody", {}, futuros.map((j) => {
       const p = det.get(j.id_partida);
@@ -41,7 +42,7 @@ function renderProximosJogos() {
         onclick: () => abrir(j.id_partida), onkeydown: (e) => { if (e.key === "Enter") abrir(j.id_partida); } },
         h("td", {}, `${diaSemana(j.data_utc)}, ${dataLonga(j.data_utc)}`), h("td", { class: "num" }, horaBR(j.data_utc)),
         h("td", {}, tagComp(j.competicao)), h("td", {}, j.rodada ?? "–"), h("td", {}, confronto(j, "", "", () => "")),
-        h("td", {}, (p?.estadio ?? j.estadio) || "–"),
+        h("td", {}, (p?.estadio ?? j.estadio) || "–", transmissaoDe(j.id_partida) ? h("div", { class: "sutil" }, `📺 ${transmissaoDe(j.id_partida)}`) : null),
         h("td", { class: "num" }, p?.prob_vitoria != null
           ? [h("span", { class: "medidor" }, h("b", { style: `width:${p.prob_vitoria * 100}%` })), pct(p.prob_vitoria, 0)] : "–"),
         h("td", { class: "sutil" }, faltam(j.data_utc)));
@@ -89,7 +90,8 @@ function renderDetalheProximo(j, detalhe) {
     h("div", { class: "placar" }, h("h2", {}, escudoImg(casa === "Flamengo" ? logoFla() : p.adversario_logo, 26), casa),
       h("span", { class: "gols" }, horaBR(p.data_utc)), h("h2", {}, escudoImg(fora === "Flamengo" ? logoFla() : p.adversario_logo, 26), fora)),
     h("p", { class: "sutil" }, [`${dataLonga(p.data_utc)} · ${horaBR(p.data_utc)} (${faltam(p.data_utc)})`, p.competicao, p.rodada,
-      p.estadio ? `${p.estadio}${p.cidade ? `, ${p.cidade}` : ""}` : null, p.arbitro ? `Árbitro: ${p.arbitro}` : null, clima ? `Previsão do tempo: ${clima}` : null]
+      p.estadio ? `${p.estadio}${p.cidade ? `, ${p.cidade}` : ""}` : null, p.arbitro ? `Árbitro: ${p.arbitro}` : null, clima ? `Previsão do tempo: ${clima}` : null,
+      transmissaoDe(p.id_partida) ? `Onde passa: ${transmissaoDe(p.id_partida)}` : null]
       .filter(Boolean).join(" · ")),
     posicoesNaTabela(p),
     barraProbabilidade(p) ?? h("p", { class: "sutil" }, detalhe

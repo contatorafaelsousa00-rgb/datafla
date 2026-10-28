@@ -24,6 +24,14 @@ service cloud.firestore {
       allow delete: if false;
     }
 
+    // manual/cadastros: o que a fonte não traz (lesões recentes, transmissão), feito no admin; o site lê
+    match /manual/{doc} {
+      allow read: if doc == 'cadastros';
+      allow write: if admin() && doc == 'cadastros'
+        && request.resource.data.keys().hasOnly(['lesoes', 'transmissao', 'atualizado_em'])
+        && request.resource.data.lesoes is map && request.resource.data.transmissao is map;
+    }
+
     // Todo o resto do banco fica fechado
     match /{documento=**} {
       allow read, write: if false;
