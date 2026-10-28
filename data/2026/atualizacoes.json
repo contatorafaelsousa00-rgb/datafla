@@ -467,5 +467,23 @@
   "requisicoes": 10,
   "cota_restante": 73,
   "erro": null
+ },
+ {
+  "quando": "2026-10-28T04:15:44+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "atualização diária (última coleta há 24 h)",
+  "novos": [],
+  "recoletados": [
+   {
+    "adversario": "Atletico-MG",
+    "data_utc": "2026-10-26T23:00:00.000Z",
+    "competicao": "Serie A"
+   }
+  ],
+  "encerrados": 62,
+  "pendentes": 0,
+  "requisicoes": 20,
+  "cota_restante": 80,
+  "erro": null
  }
 ]

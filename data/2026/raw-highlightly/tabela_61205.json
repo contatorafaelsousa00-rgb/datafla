@@ -6,6 +6,39 @@
     "standings": [
      {
       "away": {
+       "wins": 9,
+       "draws": 4,
+       "games": 16,
+       "loses": 3,
+       "scoredGoals": 32,
+       "receivedGoals": 15
+      },
+      "home": {
+       "wins": 12,
+       "draws": 3,
+       "games": 16,
+       "loses": 1,
+       "scoredGoals": 32,
+       "receivedGoals": 12
+      },
+      "team": {
+       "id": 108861,
+       "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+       "name": "Flamengo"
+      },
+      "total": {
+       "wins": 21,
+       "draws": 7,
+       "games": 32,
+       "loses": 4,
+       "scoredGoals": 64,
+       "receivedGoals": 27
+      },
+      "points": 70,
+      "position": 1
+     },
+     {
+      "away": {
        "wins": 8,
        "draws": 6,
        "games": 16,
@@ -35,39 +68,6 @@
        "receivedGoals": 22
       },
       "points": 69,
-      "position": 1
-     },
-     {
-      "away": {
-       "wins": 9,
-       "draws": 4,
-       "games": 16,
-       "loses": 3,
-       "scoredGoals": 32,
-       "receivedGoals": 15
-      },
-      "home": {
-       "wins": 11,
-       "draws": 3,
-       "games": 15,
-       "loses": 1,
-       "scoredGoals": 29,
-       "receivedGoals": 10
-      },
-      "team": {
-       "id": 108861,
-       "logo": "https://highlightly.net/soccer/images/teams/108861.png",
-       "name": "Flamengo"
-      },
-      "total": {
-       "wins": 20,
-       "draws": 7,
-       "games": 31,
-       "loses": 4,
-       "scoredGoals": 61,
-       "receivedGoals": 25
-      },
-      "points": 67,
       "position": 2
      },
      {
@@ -173,10 +173,10 @@
       "away": {
        "wins": 4,
        "draws": 3,
-       "games": 15,
-       "loses": 8,
-       "scoredGoals": 15,
-       "receivedGoals": 18
+       "games": 16,
+       "loses": 9,
+       "scoredGoals": 17,
+       "receivedGoals": 21
       },
       "home": {
        "wins": 10,
@@ -194,10 +194,10 @@
       "total": {
        "wins": 14,
        "draws": 8,
-       "games": 31,
-       "loses": 9,
-       "scoredGoals": 42,
-       "receivedGoals": 35
+       "games": 32,
+       "loses": 10,
+       "scoredGoals": 44,
+       "receivedGoals": 38
       },
       "points": 50,
       "position": 6
@@ -379,10 +379,10 @@
       "home": {
        "wins": 5,
        "draws": 5,
-       "games": 15,
-       "loses": 5,
+       "games": 16,
+       "loses": 6,
        "scoredGoals": 20,
-       "receivedGoals": 20
+       "receivedGoals": 21
       },
       "team": {
        "id": 125881,
@@ -392,10 +392,10 @@
       "total": {
        "wins": 10,
        "draws": 9,
-       "games": 31,
-       "loses": 12,
+       "games": 32,
+       "loses": 13,
        "scoredGoals": 38,
-       "receivedGoals": 49
+       "receivedGoals": 50
       },
       "points": 39,
       "position": 12
@@ -534,6 +534,39 @@
      },
      {
       "away": {
+       "wins": 1,
+       "draws": 5,
+       "games": 16,
+       "loses": 10,
+       "scoredGoals": 10,
+       "receivedGoals": 23
+      },
+      "home": {
+       "wins": 7,
+       "draws": 5,
+       "games": 16,
+       "loses": 4,
+       "scoredGoals": 25,
+       "receivedGoals": 21
+      },
+      "team": {
+       "id": 111414,
+       "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+       "name": "Gremio"
+      },
+      "total": {
+       "wins": 8,
+       "draws": 10,
+       "games": 32,
+       "loses": 14,
+       "scoredGoals": 35,
+       "receivedGoals": 44
+      },
+      "points": 34,
+      "position": 17
+     },
+     {
+      "away": {
        "wins": 3,
        "draws": 5,
        "games": 16,
@@ -563,39 +596,6 @@
        "receivedGoals": 42
       },
       "points": 33,
-      "position": 17
-     },
-     {
-      "away": {
-       "wins": 0,
-       "draws": 5,
-       "games": 15,
-       "loses": 10,
-       "scoredGoals": 9,
-       "receivedGoals": 23
-      },
-      "home": {
-       "wins": 7,
-       "draws": 5,
-       "games": 16,
-       "loses": 4,
-       "scoredGoals": 25,
-       "receivedGoals": 21
-      },
-      "team": {
-       "id": 111414,
-       "logo": "https://highlightly.net/soccer/images/teams/111414.png",
-       "name": "Gremio"
-      },
-      "total": {
-       "wins": 7,
-       "draws": 10,
-       "games": 31,
-       "loses": 14,
-       "scoredGoals": 34,
-       "receivedGoals": 44
-      },
-      "points": 31,
       "position": 18
      },
      {
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-10-26T05:15:36.337082+00:00"
+ "_coletado_em": "2026-10-28T04:15:39.755040+00:00"
 }
