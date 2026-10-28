@@ -1,6 +1,6 @@
 // Aba Jogos: lista e relatório de cada jogo.
 import { barrasEspelhadas, campinho, conteudoDica, dica, linhaTempo, mapaGol, serie } from "./graficos.js";
-import { $, bola, confronto, D, data, dataLonga, escudo, escudoImg, estado, h, logoFla, mandanteVisitante, NOME_RES, notaTag, num, ORDEM_POS, pct, preencher, resultado, tagComp, vazio } from "./comum.js";
+import { $, bola, confronto, D, data, dataLonga, escudo, escudoImg, estado, h, logoFla, mandanteVisitante, NOME_RES, notaTag, num, ORDEM_POS, pct, preencher, resultado, tagComp, vazio, textoConfronto } from "./comum.js";
 import { abrirJogadorNaPartida } from "./jogadores.js";
 import { render } from "./app.js";
 import { CLIMA, futurosFiltrados, horaBR } from "./temporada.js";
@@ -185,9 +185,28 @@ export function abrirProximo(id) {
   render();
 }
 
+// Link do jogo = página estática /jogo/<id> (coleta/paginas.py): a prévia no WhatsApp/X mostra placar, gols e xG
+async function compartilharJogo() {
+  const id = estado.jogo ?? estado.proximo;
+  const jogo = D.encerrados.find((x) => x.id_partida === id) ?? D.calendario.find((x) => x.id_partida === id);
+  if (!jogo) return;
+  const url = `${location.origin}/jogo/${id}`;
+  const titulo = jogo.gols_pro != null ? textoConfronto(jogo, jogo.gols_pro, jogo.gols_contra)
+    : jogo.mando === "Fora" ? `${jogo.adversario} × Flamengo` : `Flamengo × ${jogo.adversario}`; // mandante × visitante
+  const botao = $("compartilhar-jogo");
+  if (navigator.share && matchMedia("(pointer: coarse)").matches) {
+    try { await navigator.share({ title: `${titulo} · datafla.`, url }); } catch {}
+    return;
+  }
+  try { await navigator.clipboard.writeText(url); botao.textContent = "Link copiado ✓"; }
+  catch { prompt("Copie o link do jogo:", url); }
+  setTimeout(() => { botao.textContent = "Compartilhar"; }, 2000);
+}
+
 export function montarModalJogo() {
   const modal = $("modal-jogo");
   $("fechar-jogo").addEventListener("click", () => modal.close());
+  $("compartilhar-jogo").addEventListener("click", compartilharJogo);
   modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
   modal.addEventListener("close", () => {
     (document.querySelector("dialog[open]") ?? document.body).append($("dica"));

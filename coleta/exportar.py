@@ -8,7 +8,7 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from . import config
+from . import config, paginas
 
 SITE_DADOS = Path(os.environ.get("FLA_SITE_DADOS", config.ROOT / "site" / "dados"))
 
@@ -109,6 +109,9 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         item["competicao"] = nome_competicao(item["competicao"])
         if "adversario" in item:
             item["adversario"] = nome_time(item["adversario"])
+
+    if not demo:  # páginas por jogo + sitemap (prévia no WhatsApp e Google); site/ = pasta acima de dados/
+        paginas.gerar(conteudo, config.SEASON, destino.parent)
 
     agora = datetime.now(timezone.utc).isoformat(timespec="seconds")
     for nome in COMPACTAR:

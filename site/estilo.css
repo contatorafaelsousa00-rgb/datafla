@@ -743,3 +743,4 @@ body.modo-admin main, body.modo-admin .rodape, body.modo-admin #aviso-demo { dis
 .aviso-liga { font-size: 12px; }
 .aviso-liga.atrasada { display: inline-flex; gap: 6px; align-items: baseline; padding: 6px 10px; border-radius: 8px;
   background: color-mix(in srgb, var(--alerta) 12%, var(--superficie)); border: 1px solid color-mix(in srgb, var(--alerta) 45%, transparent); color: var(--texto); }
+.modal-barra { display: flex; justify-content: space-between; align-items: center; gap: 10px; }

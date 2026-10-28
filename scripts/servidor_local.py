@@ -13,6 +13,11 @@ SITE = Path(__file__).resolve().parent.parent / "site"
 
 
 class SemCache(SimpleHTTPRequestHandler):
+    def translate_path(self, path):
+        # Igual ao "cleanUrls" do Firebase: /jogo/123 serve jogo/123.html
+        caminho = super().translate_path(path)
+        return caminho + ".html" if not Path(caminho).exists() and Path(caminho + ".html").exists() else caminho
+
     def end_headers(self):
         self.send_header("Cache-Control", "no-store")
         super().end_headers()

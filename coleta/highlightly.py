@@ -489,10 +489,39 @@ def _placar(texto):
     return (int(m.group(1)), int(m.group(2))) if m else (None, None)
 
 
+def _cobrancas_da_disputa(m: dict) -> set[int]:
+    """ids (id()) dos lances que são cobranças da disputa de pênaltis.
+
+    A fonte manda as cobranças como "Penalty"/"Missed Penalty" logo depois do fim do jogo: no minuto 120+ quando houve
+    prorrogação, mas no 91–99 quando a disputa vem direto após os 90 (Estudiantes × Flamengo 22/10/2026 — a regra antiga,
+    só 120+, contava as cobranças como gols). Regra: a sequência FINAL de lances de pênalti (ignorando cartões no meio),
+    cortada para que os convertidos batam com o placar da disputa."""
+    pen = ((m.get("state") or {}).get("score") or {}).get("penalties")
+    if not pen:
+        return set()
+    convertidos_disputa = sum(int(x) for x in re.findall(r"\d+", pen)[:2])
+    seq = []
+    for ev in reversed(m.get("events") or []):
+        if ev.get("type") in ("Penalty", "Missed Penalty"):
+            seq.append(ev)
+        elif ev.get("type") in ("Yellow Card", "Red Card", "Card"):
+            continue
+        else:
+            break
+    seq.reverse()  # ordem do jogo
+    # se a sequência pegou um pênalti do tempo normal antes da disputa, descarta do começo até os convertidos baterem
+    while seq and sum(e.get("type") == "Penalty" for e in seq) > convertidos_disputa:
+        seq.pop(0)
+    return {id(e) for e in seq}
+
+
 def _eh_disputa(m: dict, ev: dict) -> bool:
-    """Cobrança da disputa de pênaltis (não é gol do jogo): a fonte manda como "Penalty" no minuto 120+."""
-    tem_disputa = ((m.get("state") or {}).get("score") or {}).get("penalties")
-    return bool(tem_disputa) and ev.get("type") in ("Penalty", "Missed Penalty") and (_minuto(ev.get("time"))[0] or 0) >= 120
+    """Cobrança da disputa de pênaltis (não é gol do jogo)."""
+    if ev.get("type") not in ("Penalty", "Missed Penalty"):
+        return False
+    if (_minuto(ev.get("time"))[0] or 0) >= 120 and ((m.get("state") or {}).get("score") or {}).get("penalties"):
+        return True
+    return id(ev) in _cobrancas_da_disputa(m)
 
 
 def _gols_pelos_lances(m: dict) -> tuple[int, int] | None:

@@ -12,5 +12,9 @@ site/dados-demo/
 data/2024/
 # Gerados por `coletar processar` a partir das respostas brutas (o workflow gera na hora de publicar)
 site/dados/
+# Páginas por jogo, sitemap e robots: gerados por `processar` a cada deploy (coleta/paginas.py)
+site/jogo/
+site/sitemap.xml
+site/robots.txt
 data/*/csv/
 data/*/validacao/

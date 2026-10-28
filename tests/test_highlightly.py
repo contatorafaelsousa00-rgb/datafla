@@ -318,3 +318,16 @@ def test_proximos_pedem_a_escalacao_do_ultimo_jogo_do_adversario(tmp_path, monke
     assert ("escalacao_51", "lineups/51", {}) in tarefas      # o mais recente
     salvar_raw("escalacao_51", {"data": {}, "_coletado_em": "x"}, tmp_path)
     assert ("escalacao_51", "lineups/51", {}) not in hl.tarefas_proximos(jogos, datetime(2026, 10, 16, 12, tzinfo=timezone.utc))
+
+
+def test_disputa_de_penaltis_direto_apos_os_90():
+    """Estudiantes × Flamengo 22/10/2026: sem prorrogação, a fonte manda as cobranças nos minutos 91–99."""
+    pen = lambda minuto, tipo: {"time": str(minuto), "type": tipo, "team": {"id": FLA}}
+    jogo = pen(30, "Penalty")  # pênalti no tempo normal: é gol
+    disputa = [pen(91, "Penalty"), pen(92, "Penalty"), pen(93, "Missed Penalty"), pen(95, "Penalty"), pen(96, "Penalty")]
+    m = {"state": {"score": {"current": "1 - 1", "penalties": "2 - 2"}},
+         "events": [jogo, {"time": "60", "type": "Goal", "team": {"id": FLA}}, *disputa]}
+    assert not hl._eh_disputa(m, jogo)
+    assert all(hl._eh_disputa(m, e) for e in disputa)
+    m["state"]["score"]["penalties"] = None  # sem disputa: nenhum pênalti é cobrança
+    assert not any(hl._eh_disputa(m, e) for e in disputa)
