@@ -2,7 +2,7 @@
 // jogo, quem rende o quê, como está o elenco, como o time joga e quanto confiar nos dados.
 // Feito para a temporada 2026 (fonte Highlightly); uma visão some quando a fonte não tem o dado.
 
-import { $, contar, D, data, DEMO, ehMes, estado, definirDados, filtrados, h, mes, mesDe, nomeMes, pct, pontos, preparar, simboloComp } from "./comum.js";
+import { $, agrupar, contar, D, data, DEMO, ehMes, estado, definirDados, expandir, filtrados, h, mes, mesDe, nomeMes, pct, pontos, preparar, simboloComp } from "./comum.js";
 import { renderTemporada } from "./temporada.js";
 import { abrirJogo, abrirProximo, montarModalJogo, renderJogos } from "./jogos.js";
 import { agregarJogadores, montarModal, renderJogadores, renderPerfil } from "./jogadores.js";
@@ -169,15 +169,27 @@ function semDados(msg) {
 }
 
 async function buscarJson(caminho) {
-  const resp = await fetch(BASE + caminho, { cache: "no-store" });
+  // "no-cache": o navegador confere com o servidor e reaproveita a cópia se nada mudou (antes baixava tudo sempre)
+  const resp = await fetch(BASE + caminho, { cache: "no-cache" });
   if (!resp.ok) throw new Error(`${caminho}: HTTP ${resp.status}`);
   return resp.json();
+}
+
+// Tabelas das telas abertas por clique (jogadores do adversário, carreira), em segundo plano depois da 1ª tela.
+// Quem precisa delas espera `D.extrasPromessa` (ver tabela-partida.js e jogadores.js).
+function carregarExtras(dados) {
+  if (dados.extras) return;
+  dados.extrasPromessa = buscarJson(dados.bruto.meta.extras).then((e) => {
+    dados.adversariosPorPartida = agrupar(expandir(e.adversarios) ?? [], "id_partida");
+    dados.carreiraPorJogador = agrupar(expandir(e.carreira) ?? [], "jogador_id");
+  }).catch(() => {}).finally(() => { dados.extras = true; });
 }
 
 async function carregarTemporada(ano) {
   document.querySelector("main").style.opacity = ".5";
   try {
     definirDados(preparar(await buscarJson(`${ano}.json`)));
+    carregarExtras(D);
   } catch (e) {
     document.querySelector("main").style.opacity = "";
     semDados(`Não foi possível carregar a temporada ${ano} (${e.message}).`);

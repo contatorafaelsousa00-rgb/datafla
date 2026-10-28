@@ -279,6 +279,11 @@ const NOME_POS = { G: "Goleiro", D: "Defensor", M: "Meio-campo", F: "Atacante" }
 
 function renderNaPartida(todos) {
   const caixa = $("detalhe-jogador");
+  if (estado.jogadorAdversario && !D.extras) { // adversário vem do arquivo extra
+    preencher(caixa, h("p", { class: "sutil" }, "Carregando…"));
+    D.extrasPromessa.then(() => renderNaPartida(todos));
+    return;
+  }
   const idp = estado.partidaJogador;
   const p = D.encerrados.find((x) => x.id_partida === idp);
   const lista = estado.jogadorAdversario ? D.adversariosPorPartida.get(idp) : D.jogadoresPorPartida.get(idp);
@@ -346,6 +351,11 @@ function renderNaPartida(todos) {
 // Carreira (fonte: /players/{id}/statistics): por temporada e competição, inclusive em outros clubes
 let carreiraCompleta = false;
 function secaoCarreira(a) {
+  if (!D.extras) { // carreira vem do arquivo extra
+    const espera = h("div", {}, h("h3", {}, "Carreira"), h("p", { class: "sutil" }, "Carregando…"));
+    D.extrasPromessa.then(() => espera.replaceWith(secaoCarreira(a)));
+    return espera;
+  }
   // "25/26" e "2026" são a mesma temporada para a ordem (a europeia termina no ano do 2º número)
   const ano = (t) => { const m = /^(\d{2})\/(\d{2})$/.exec(String(t)); return m ? 2000 + Number(m[2]) : Number(t) || 0; };
   const linhas = (D.carreiraPorJogador.get(a.id) ?? []).slice()

@@ -34,6 +34,11 @@ const filtro = { time: "todos", chave: null, desc: true };
 
 export function tabelaJogadoresPartida(p, flaPrimeiro) {
   const caixa = h("div", { class: "bloco" });
+  if (!D.extras) { // jogadores do adversário ainda chegando (arquivo extra): mostra quando chegar
+    caixa.append(h("p", { class: "sutil" }, "Carregando os jogadores…"));
+    D.extrasPromessa.then(() => caixa.replaceWith(tabelaJogadoresPartida(p, flaPrimeiro)));
+    return caixa;
+  }
   const fla = (D.jogadoresPorPartida.get(p.id_partida) ?? []).map((j) => ({ ...j, eh_flamengo: true }));
   const adv = (D.adversariosPorPartida.get(p.id_partida) ?? []).map((j) => ({ ...j, eh_flamengo: false }));
   const times = flaPrimeiro

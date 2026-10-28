@@ -109,7 +109,7 @@ export function resultado(pro, contra) {
 }
 
 // Tabelas grandes chegam como { colunas, linhas } (JSON menor); aqui voltam a ser objetos.
-const expandir = (t) => (t && !Array.isArray(t) && Array.isArray(t.colunas)
+export const expandir = (t) => (t && !Array.isArray(t) && Array.isArray(t.colunas)
   ? t.linhas.map((l) => Object.fromEntries(t.colunas.map((c, i) => [c, l[i]]))) : t);
 
 export function preparar(bruto) {
@@ -145,8 +145,11 @@ export function preparar(bruto) {
     eventosPorPartida: agrupar(bruto.eventos, "id_partida"),
     finalizacoesPorPartida: agrupar(bruto.finalizacoes ?? [], "id_partida"),
     escalacoesPorPartida: agrupar(bruto.escalacoes ?? [], "id_partida"),
+    // adversários e carreira vêm de <ano>-extra.json, depois da 1ª tela (carregarExtras); os JSON antigos/demo já os trazem
     adversariosPorPartida: agrupar(bruto.adversarios ?? [], "id_partida"),
     carreiraPorJogador: agrupar(bruto.carreira ?? [], "jogador_id"),
+    extras: !bruto.meta?.extras,
+    extrasPromessa: Promise.resolve(),
     fotos: new Map((bruto.fotos ?? []).map((f) => [f.jogador_id, f.foto])),
     competicoes: ORDEM_COMP.filter((c) => comps.has(c)).concat([...comps].filter((c) => !ORDEM_COMP.includes(c))),
     tem: {

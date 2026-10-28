@@ -58,6 +58,7 @@ def _traduzir(linhas: list[dict]) -> list[dict]:
 
 # Tabelas grandes vão em colunas + linhas (os nomes dos campos não se repetem a cada linha): o JSON
 # cai a menos da metade. O site volta a montar os objetos ao carregar (comum.js, expandir).
+EXTRAS = ("adversarios", "carreira")  # vão para <ano>-extra.json
 COMPACTAR = ("jogadores", "adversarios", "eventos", "estatisticas", "finalizacoes", "escalacoes", "carreira", "liga")
 
 
@@ -120,6 +121,11 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         "fonte": config.FONTE,
         "liga": liga,  # {coletado_em, sem_resultado} do arquivo da liga (aviso no painel)
     }
+    # Tabelas usadas só em telas abertas por clique (jogadores do adversário, carreira) vão num arquivo à parte, baixado
+    # depois que o painel aparece: a primeira carga fica ~30% menor (o painel espera por elas onde precisa).
+    extra = {nome: conteudo.pop(nome) for nome in EXTRAS}
+    conteudo["meta"]["extras"] = f"{config.SEASON}-extra.json"
+    (destino / conteudo["meta"]["extras"]).write_text(json.dumps(extra, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     arquivo = destino / f"{config.SEASON}.json"
     arquivo.write_text(json.dumps(conteudo, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     atualizar_indice(destino)
