@@ -40,8 +40,8 @@
      {
       "away": {
        "wins": 8,
-       "draws": 6,
-       "games": 16,
+       "draws": 7,
+       "games": 17,
        "loses": 2,
        "scoredGoals": 26,
        "receivedGoals": 12
@@ -61,13 +61,13 @@
       },
       "total": {
        "wins": 20,
-       "draws": 9,
-       "games": 32,
+       "draws": 10,
+       "games": 33,
        "loses": 3,
        "scoredGoals": 56,
        "receivedGoals": 22
       },
-      "points": 69,
+      "points": 70,
       "position": 2
      },
      {
@@ -146,12 +146,12 @@
        "receivedGoals": 25
       },
       "home": {
-       "wins": 11,
+       "wins": 12,
        "draws": 3,
-       "games": 16,
+       "games": 17,
        "loses": 2,
-       "scoredGoals": 29,
-       "receivedGoals": 16
+       "scoredGoals": 31,
+       "receivedGoals": 17
       },
       "team": {
        "id": 106308,
@@ -159,15 +159,48 @@
        "name": "Fluminense"
       },
       "total": {
-       "wins": 14,
+       "wins": 15,
        "draws": 9,
-       "games": 32,
+       "games": 33,
        "loses": 9,
-       "scoredGoals": 50,
-       "receivedGoals": 41
+       "scoredGoals": 52,
+       "receivedGoals": 42
       },
-      "points": 51,
+      "points": 54,
       "position": 5
+     },
+     {
+      "away": {
+       "wins": 6,
+       "draws": 5,
+       "games": 16,
+       "loses": 5,
+       "scoredGoals": 22,
+       "receivedGoals": 23
+      },
+      "home": {
+       "wins": 8,
+       "draws": 6,
+       "games": 17,
+       "loses": 3,
+       "scoredGoals": 26,
+       "receivedGoals": 19
+      },
+      "team": {
+       "id": 101202,
+       "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+       "name": "Bahia"
+      },
+      "total": {
+       "wins": 14,
+       "draws": 11,
+       "games": 33,
+       "loses": 8,
+       "scoredGoals": 48,
+       "receivedGoals": 42
+      },
+      "points": 53,
+      "position": 6
      },
      {
       "away": {
@@ -200,39 +233,6 @@
        "receivedGoals": 38
       },
       "points": 50,
-      "position": 6
-     },
-     {
-      "away": {
-       "wins": 6,
-       "draws": 5,
-       "games": 16,
-       "loses": 5,
-       "scoredGoals": 22,
-       "receivedGoals": 23
-      },
-      "home": {
-       "wins": 7,
-       "draws": 6,
-       "games": 16,
-       "loses": 3,
-       "scoredGoals": 23,
-       "receivedGoals": 17
-      },
-      "team": {
-       "id": 101202,
-       "logo": "https://highlightly.net/soccer/images/teams/101202.png",
-       "name": "Bahia"
-      },
-      "total": {
-       "wins": 13,
-       "draws": 11,
-       "games": 32,
-       "loses": 8,
-       "scoredGoals": 45,
-       "receivedGoals": 40
-      },
-      "points": 50,
       "position": 7
      },
      {
@@ -246,8 +246,8 @@
       },
       "home": {
        "wins": 6,
-       "draws": 6,
-       "games": 16,
+       "draws": 7,
+       "games": 17,
        "loses": 4,
        "scoredGoals": 23,
        "receivedGoals": 21
@@ -259,23 +259,56 @@
       },
       "total": {
        "wins": 12,
-       "draws": 10,
-       "games": 32,
+       "draws": 11,
+       "games": 33,
        "loses": 10,
        "scoredGoals": 49,
        "receivedGoals": 47
       },
-      "points": 46,
+      "points": 47,
       "position": 8
+     },
+     {
+      "away": {
+       "wins": 4,
+       "draws": 5,
+       "games": 17,
+       "loses": 8,
+       "scoredGoals": 15,
+       "receivedGoals": 21
+      },
+      "home": {
+       "wins": 8,
+       "draws": 3,
+       "games": 16,
+       "loses": 5,
+       "scoredGoals": 27,
+       "receivedGoals": 17
+      },
+      "team": {
+       "id": 676478,
+       "logo": "https://highlightly.net/soccer/images/teams/676478.png",
+       "name": "RB Bragantino"
+      },
+      "total": {
+       "wins": 12,
+       "draws": 8,
+       "games": 33,
+       "loses": 13,
+       "scoredGoals": 42,
+       "receivedGoals": 38
+      },
+      "points": 44,
+      "position": 9
      },
      {
       "away": {
        "wins": 2,
        "draws": 4,
-       "games": 16,
-       "loses": 10,
-       "scoredGoals": 12,
-       "receivedGoals": 23
+       "games": 17,
+       "loses": 11,
+       "scoredGoals": 14,
+       "receivedGoals": 26
       },
       "home": {
        "wins": 10,
@@ -293,55 +326,22 @@
       "total": {
        "wins": 12,
        "draws": 7,
-       "games": 32,
-       "loses": 13,
-       "scoredGoals": 37,
-       "receivedGoals": 36
+       "games": 33,
+       "loses": 14,
+       "scoredGoals": 39,
+       "receivedGoals": 39
       },
       "points": 43,
-      "position": 9
-     },
-     {
-      "away": {
-       "wins": 4,
-       "draws": 5,
-       "games": 17,
-       "loses": 8,
-       "scoredGoals": 15,
-       "receivedGoals": 21
-      },
-      "home": {
-       "wins": 7,
-       "draws": 3,
-       "games": 15,
-       "loses": 5,
-       "scoredGoals": 24,
-       "receivedGoals": 17
-      },
-      "team": {
-       "id": 676478,
-       "logo": "https://highlightly.net/soccer/images/teams/676478.png",
-       "name": "RB Bragantino"
-      },
-      "total": {
-       "wins": 11,
-       "draws": 8,
-       "games": 32,
-       "loses": 13,
-       "scoredGoals": 39,
-       "receivedGoals": 38
-      },
-      "points": 41,
       "position": 10
      },
      {
       "away": {
        "wins": 4,
        "draws": 3,
-       "games": 16,
-       "loses": 9,
-       "scoredGoals": 18,
-       "receivedGoals": 29
+       "games": 17,
+       "loses": 10,
+       "scoredGoals": 19,
+       "receivedGoals": 31
       },
       "home": {
        "wins": 6,
@@ -359,10 +359,10 @@
       "total": {
        "wins": 10,
        "draws": 9,
-       "games": 32,
-       "loses": 13,
-       "scoredGoals": 44,
-       "receivedGoals": 51
+       "games": 33,
+       "loses": 14,
+       "scoredGoals": 45,
+       "receivedGoals": 53
       },
       "points": 39,
       "position": 11
@@ -503,10 +503,10 @@
       "away": {
        "wins": 3,
        "draws": 6,
-       "games": 16,
-       "loses": 7,
-       "scoredGoals": 15,
-       "receivedGoals": 23
+       "games": 17,
+       "loses": 8,
+       "scoredGoals": 16,
+       "receivedGoals": 25
       },
       "home": {
        "wins": 5,
@@ -524,10 +524,10 @@
       "total": {
        "wins": 8,
        "draws": 11,
-       "games": 32,
-       "loses": 13,
-       "scoredGoals": 36,
-       "receivedGoals": 40
+       "games": 33,
+       "loses": 14,
+       "scoredGoals": 37,
+       "receivedGoals": 42
       },
       "points": 35,
       "position": 16
@@ -608,12 +608,12 @@
        "receivedGoals": 29
       },
       "home": {
-       "wins": 3,
+       "wins": 4,
        "draws": 7,
-       "games": 16,
+       "games": 17,
        "loses": 6,
-       "scoredGoals": 20,
-       "receivedGoals": 21
+       "scoredGoals": 22,
+       "receivedGoals": 22
       },
       "team": {
        "id": 1020282,
@@ -621,24 +621,24 @@
        "name": "Remo"
       },
       "total": {
-       "wins": 5,
+       "wins": 6,
        "draws": 11,
-       "games": 32,
+       "games": 33,
        "loses": 16,
-       "scoredGoals": 34,
-       "receivedGoals": 50
+       "scoredGoals": 36,
+       "receivedGoals": 51
       },
-      "points": 26,
+      "points": 29,
       "position": 19
      },
      {
       "away": {
        "wins": 1,
        "draws": 4,
-       "games": 16,
-       "loses": 11,
+       "games": 17,
+       "loses": 12,
        "scoredGoals": 11,
-       "receivedGoals": 29
+       "receivedGoals": 32
       },
       "home": {
        "wins": 3,
@@ -656,10 +656,10 @@
       "total": {
        "wins": 4,
        "draws": 9,
-       "games": 31,
-       "loses": 18,
+       "games": 32,
+       "loses": 19,
        "scoredGoals": 32,
-       "receivedGoals": 63
+       "receivedGoals": 66
       },
       "points": 21,
       "position": 20
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-10-28T04:15:39.755040+00:00"
+ "_coletado_em": "2026-10-29T05:15:34.578648+00:00"
 }

@@ -1,21 +1,36 @@
 {
  "data": {
   "venue": {
-   "city": null,
-   "name": null,
-   "country": null,
-   "capacity": null
+   "city": "Rio de Janeiro",
+   "name": "Maracana Stadium",
+   "country": "Brazil",
+   "capacity": "73139"
   },
   "referee": {
    "name": null,
    "nationality": null
   },
   "forecast": {
-   "status": null,
-   "temperature": null
+   "status": "partly cloudy night",
+   "temperature": "27.32°C"
   },
   "events": [],
-  "predictions": null,
+  "predictions": {
+   "live": [],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Gremio.",
+     "generatedAt": "2026-10-28T10:52:31.152Z",
+     "probabilities": {
+      "away": "7.26%",
+      "draw": "14.70%",
+      "home": "78.04%"
+     }
+    }
+   ]
+  },
   "statistics": [
    {
     "statistics": [],
@@ -72,5 +87,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-28T04:15:33.038945+00:00"
+ "_coletado_em": "2026-10-29T05:15:31.831216+00:00"
 }
