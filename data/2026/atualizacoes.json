@@ -551,5 +551,17 @@
   "requisicoes": 3,
   "cota_restante": 71,
   "erro": null
+ },
+ {
+  "quando": "2026-10-29T17:45:46+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Vasco DA Gama em menos de 24 h: renova previsão, árbitro e clima",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 62,
+  "pendentes": 0,
+  "requisicoes": 3,
+  "cota_restante": 68,
+  "erro": null
  }
 ]
