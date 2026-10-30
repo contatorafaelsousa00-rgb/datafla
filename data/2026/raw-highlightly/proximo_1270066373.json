@@ -14,9 +14,273 @@
    "status": "rain",
    "temperature": "21.94°C"
   },
-  "events": [],
+  "events": [
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "10",
+    "type": "Goal",
+    "assist": "G. Varela",
+    "player": "Pedro",
+    "playerId": 1661835,
+    "substituted": null,
+    "assistingPlayerId": 207844
+   },
+   {
+    "team": {
+     "id": 113967,
+     "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+     "name": "Vasco DA Gama"
+    },
+    "time": "15",
+    "type": "Goal",
+    "assist": "Brenner",
+    "player": "A. Lescano",
+    "playerId": 57699817,
+    "substituted": null,
+    "assistingPlayerId": 1606129
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "41",
+    "type": "Goal",
+    "assist": null,
+    "player": "Pedro",
+    "playerId": 1661835,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "45+5",
+    "type": "Yellow Card",
+    "assist": null,
+    "player": "G. Plata",
+    "playerId": 2635563,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "46",
+    "type": "Substitution",
+    "assist": null,
+    "player": "G. Plata",
+    "playerId": 2635563,
+    "substituted": "Lucas Paqueta",
+    "assistingPlayerId": 265160
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "53",
+    "type": "Goal",
+    "assist": null,
+    "player": "Samuel Lino",
+    "playerId": 20436850,
+    "substituted": null,
+    "assistingPlayerId": null
+   },
+   {
+    "team": {
+     "id": 113967,
+     "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+     "name": "Vasco DA Gama"
+    },
+    "time": "60",
+    "type": "Substitution",
+    "assist": null,
+    "player": "M. Hinestroza",
+    "playerId": 10325728,
+    "substituted": "Bruno Duarte",
+    "assistingPlayerId": 10219629
+   },
+   {
+    "team": {
+     "id": 113967,
+     "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+     "name": "Vasco DA Gama"
+    },
+    "time": "60",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Thiago Mendes",
+    "playerId": 3579506,
+    "substituted": "Tche Tche",
+    "assistingPlayerId": 1603392
+   },
+   {
+    "team": {
+     "id": 113967,
+     "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+     "name": "Vasco DA Gama"
+    },
+    "time": "61",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Cuiabano",
+    "playerId": 56838628,
+    "substituted": "Lucas Piton",
+    "assistingPlayerId": 1647828
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "63",
+    "type": "Substitution",
+    "assist": null,
+    "player": "G. de Arrascaeta",
+    "playerId": 420686,
+    "substituted": "Luiz Araujo",
+    "assistingPlayerId": 3580472
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "70",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Pedro",
+    "playerId": 1661835,
+    "substituted": "Bruno Henrique",
+    "assistingPlayerId": 1639134
+   },
+   {
+    "team": {
+     "id": 113967,
+     "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+     "name": "Vasco DA Gama"
+    },
+    "time": "72",
+    "type": "Substitution",
+    "assist": null,
+    "player": "F. Colidio",
+    "playerId": 34608,
+    "substituted": "N. Moreira",
+    "assistingPlayerId": 26285014
+   },
+   {
+    "team": {
+     "id": 113967,
+     "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+     "name": "Vasco DA Gama"
+    },
+    "time": "72",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Brenner",
+    "playerId": 1606129,
+    "substituted": "David",
+    "assistingPlayerId": 1627059
+   },
+   {
+    "team": {
+     "id": 108861,
+     "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+     "name": "Flamengo"
+    },
+    "time": "77",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Lucas Paqueta",
+    "playerId": 265160,
+    "substituted": "J. Freitas",
+    "assistingPlayerId": 90210708
+   }
+  ],
   "predictions": {
-   "live": [],
+   "live": [
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Vasco DA Gama.",
+     "generatedAt": "2026-10-29T23:00:15.248Z",
+     "probabilities": {
+      "away": "57.03%",
+      "draw": "24.02%",
+      "home": "18.95%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Vasco DA Gama.",
+     "generatedAt": "2026-10-29T23:10:28.779Z",
+     "probabilities": {
+      "away": "67.09%",
+      "draw": "21.50%",
+      "home": "11.40%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Vasco DA Gama.",
+     "generatedAt": "2026-10-29T23:30:30.251Z",
+     "probabilities": {
+      "away": "54.78%",
+      "draw": "27.89%",
+      "home": "17.33%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Vasco DA Gama.",
+     "generatedAt": "2026-10-29T23:50:32.236Z",
+     "probabilities": {
+      "away": "77.08%",
+      "draw": "17.05%",
+      "home": "5.87%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Vasco DA Gama.",
+     "generatedAt": "2026-10-30T00:10:50.137Z",
+     "probabilities": {
+      "away": "77.08%",
+      "draw": "17.03%",
+      "home": "5.89%"
+     }
+    },
+    {
+     "type": "live",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Vasco DA Gama.",
+     "generatedAt": "2026-10-30T00:30:56.693Z",
+     "probabilities": {
+      "away": "92.58%",
+      "draw": "5.97%",
+      "home": "1.45%"
+     }
+    }
+   ],
    "prematch": [
     {
      "type": "prematch",
@@ -99,20 +363,334 @@
   },
   "statistics": [
    {
-    "statistics": [],
     "team": {
      "id": 113967,
      "logo": "https://highlightly.net/soccer/images/teams/113967.png",
      "name": "Vasco DA Gama"
-    }
+    },
+    "statistics": [
+     {
+      "value": 0.84,
+      "displayName": "Expected Goals"
+     },
+     {
+      "value": 1,
+      "displayName": "Big Chances Created"
+     },
+     {
+      "value": 6,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 0.66,
+      "displayName": "Expected Assists"
+     },
+     {
+      "value": 3,
+      "displayName": "Successful Crosses"
+     },
+     {
+      "value": 28,
+      "displayName": "Crosses"
+     },
+     {
+      "value": 254,
+      "displayName": "Passes Own Half"
+     },
+     {
+      "value": 308,
+      "displayName": "Passes Opposition Half"
+     },
+     {
+      "value": 16,
+      "displayName": "Successful Long Passes"
+     },
+     {
+      "value": 34,
+      "displayName": "Long Passes"
+     },
+     {
+      "value": 11,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 10,
+      "displayName": "Key Passes"
+     },
+     {
+      "value": 119,
+      "displayName": "Passes Into Final Third"
+     },
+     {
+      "value": 89,
+      "displayName": "Backward Passes"
+     },
+     {
+      "value": 7,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 13,
+      "displayName": "Interceptions"
+     },
+     {
+      "value": 11,
+      "displayName": "Successful Tackles"
+     },
+     {
+      "value": 15,
+      "displayName": "Tackles"
+     },
+     {
+      "value": 9,
+      "displayName": "Clearances"
+     },
+     {
+      "value": 4,
+      "displayName": "Successful Aerial Duels"
+     },
+     {
+      "value": 11,
+      "displayName": "Aerial Duels"
+     },
+     {
+      "value": 11,
+      "displayName": "Successful Dribbles"
+     },
+     {
+      "value": 18,
+      "displayName": "Dribbles"
+     },
+     {
+      "value": 0.15,
+      "displayName": "Shots accuracy"
+     },
+     {
+      "value": 61,
+      "displayName": "Failed passes"
+     },
+     {
+      "value": 0.58,
+      "displayName": "Possession"
+     },
+     {
+      "value": 2,
+      "displayName": "Shots on target"
+     },
+     {
+      "value": 4,
+      "displayName": "Corners"
+     },
+     {
+      "value": 0,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 473,
+      "displayName": "Successful passes"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 9,
+      "displayName": "Shots off target"
+     },
+     {
+      "value": 2,
+      "displayName": "Blocked shots"
+     },
+     {
+      "value": 5,
+      "displayName": "Shots within penalty area"
+     },
+     {
+      "value": 534,
+      "displayName": "Total passes"
+     },
+     {
+      "value": 2,
+      "displayName": "Goalkeeper saves"
+     },
+     {
+      "value": 11,
+      "displayName": "Fouls"
+     },
+     {
+      "value": 0,
+      "displayName": "Yellow cards"
+     },
+     {
+      "value": 5,
+      "displayName": "Shots outside penalty area"
+     }
+    ]
    },
    {
-    "statistics": [],
     "team": {
      "id": 108861,
      "logo": "https://highlightly.net/soccer/images/teams/108861.png",
      "name": "Flamengo"
-    }
+    },
+    "statistics": [
+     {
+      "value": 1.39,
+      "displayName": "Expected Goals"
+     },
+     {
+      "value": 2,
+      "displayName": "Big Chances Created"
+     },
+     {
+      "value": 10,
+      "displayName": "Free Kicks"
+     },
+     {
+      "value": 0.65,
+      "displayName": "Expected Assists"
+     },
+     {
+      "value": 4,
+      "displayName": "Successful Crosses"
+     },
+     {
+      "value": 11,
+      "displayName": "Crosses"
+     },
+     {
+      "value": 212,
+      "displayName": "Passes Own Half"
+     },
+     {
+      "value": 186,
+      "displayName": "Passes Opposition Half"
+     },
+     {
+      "value": 21,
+      "displayName": "Successful Long Passes"
+     },
+     {
+      "value": 37,
+      "displayName": "Long Passes"
+     },
+     {
+      "value": 20,
+      "displayName": "Throw-Ins"
+     },
+     {
+      "value": 9,
+      "displayName": "Key Passes"
+     },
+     {
+      "value": 59,
+      "displayName": "Passes Into Final Third"
+     },
+     {
+      "value": 44,
+      "displayName": "Backward Passes"
+     },
+     {
+      "value": 10,
+      "displayName": "Goal Kicks"
+     },
+     {
+      "value": 15,
+      "displayName": "Interceptions"
+     },
+     {
+      "value": 8,
+      "displayName": "Successful Tackles"
+     },
+     {
+      "value": 15,
+      "displayName": "Tackles"
+     },
+     {
+      "value": 32,
+      "displayName": "Clearances"
+     },
+     {
+      "value": 7,
+      "displayName": "Successful Aerial Duels"
+     },
+     {
+      "value": 11,
+      "displayName": "Aerial Duels"
+     },
+     {
+      "value": 3,
+      "displayName": "Successful Dribbles"
+     },
+     {
+      "value": 11,
+      "displayName": "Dribbles"
+     },
+     {
+      "value": 0.42,
+      "displayName": "Shots accuracy"
+     },
+     {
+      "value": 64,
+      "displayName": "Failed passes"
+     },
+     {
+      "value": 0.42,
+      "displayName": "Possession"
+     },
+     {
+      "value": 5,
+      "displayName": "Shots on target"
+     },
+     {
+      "value": 4,
+      "displayName": "Corners"
+     },
+     {
+      "value": 1,
+      "displayName": "Offsides"
+     },
+     {
+      "value": 323,
+      "displayName": "Successful passes"
+     },
+     {
+      "value": 0,
+      "displayName": "Red cards"
+     },
+     {
+      "value": 4,
+      "displayName": "Shots off target"
+     },
+     {
+      "value": 3,
+      "displayName": "Blocked shots"
+     },
+     {
+      "value": 9,
+      "displayName": "Shots within penalty area"
+     },
+     {
+      "value": 387,
+      "displayName": "Total passes"
+     },
+     {
+      "value": 1,
+      "displayName": "Goalkeeper saves"
+     },
+     {
+      "value": 8,
+      "displayName": "Fouls"
+     },
+     {
+      "value": 1,
+      "displayName": "Yellow cards"
+     },
+     {
+      "value": 3,
+      "displayName": "Shots outside penalty area"
+     }
+    ]
    }
   ],
   "id": 1270066373,
@@ -124,26 +702,288 @@
    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
   },
   "state": {
-   "clock": null,
+   "clock": 82,
    "score": {
-    "current": null,
+    "current": "1 - 3",
     "penalties": null
    },
-   "description": "Not started"
+   "description": "Second half"
   },
   "awayTeam": {
    "id": 108861,
    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
    "name": "Flamengo",
-   "topPlayers": [],
-   "shots": []
+   "topPlayers": [
+    {
+     "name": "Pedro",
+     "position": "Attacker",
+     "statistics": [
+      {
+       "name": "Expected Goals",
+       "value": 0.94
+      },
+      {
+       "name": "Shots On Target",
+       "value": 2
+      },
+      {
+       "name": "Minutes",
+       "value": 69
+      }
+     ]
+    },
+    {
+     "name": "Samuel Lino",
+     "position": "Midfielder",
+     "statistics": [
+      {
+       "name": "Expected Goals",
+       "value": 0.2
+      },
+      {
+       "name": "Shots On Target",
+       "value": 2
+      },
+      {
+       "name": "Minutes",
+       "value": 81
+      }
+     ]
+    },
+    {
+     "name": "Guillermo Varela",
+     "position": "Defender",
+     "statistics": [
+      {
+       "name": "Interceptions",
+       "value": 0
+      },
+      {
+       "name": "Tackles",
+       "value": 0
+      },
+      {
+       "name": "Minutes",
+       "value": 81
+      }
+     ]
+    }
+   ],
+   "shots": [
+    {
+     "time": "10'",
+     "outcome": "Goal",
+     "goalTarget": "Low Right",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "16'",
+     "outcome": "Saved",
+     "goalTarget": "High Right",
+     "playerName": "Giorgian de Arrascaeta"
+    },
+    {
+     "time": "17'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Jorginho"
+    },
+    {
+     "time": "21'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Left",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "25'",
+     "outcome": "Missed",
+     "goalTarget": "Close Left And High",
+     "playerName": "Emerson Royal"
+    },
+    {
+     "time": "26'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Erick Pulgar"
+    },
+    {
+     "time": "41'",
+     "outcome": "Saved",
+     "goalTarget": "Low Centre",
+     "playerName": "Samuel Lino"
+    },
+    {
+     "time": "41'",
+     "outcome": "Goal",
+     "goalTarget": "Low Right",
+     "playerName": "Pedro"
+    },
+    {
+     "time": "45 + 3'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Giorgian de Arrascaeta"
+    },
+    {
+     "time": "45 + 4'",
+     "outcome": "Missed",
+     "goalTarget": "CloseLeft",
+     "playerName": "Léo Ortiz"
+    },
+    {
+     "time": "53'",
+     "outcome": "Goal",
+     "goalTarget": "Low Right",
+     "playerName": "Samuel Lino"
+    },
+    {
+     "time": "80'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Joaquín Freitas"
+    }
+   ]
   },
   "homeTeam": {
    "id": 113967,
    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
    "name": "Vasco DA Gama",
-   "topPlayers": [],
-   "shots": []
+   "topPlayers": [
+    {
+     "name": "Brenner",
+     "position": "Attacker",
+     "statistics": [
+      {
+       "name": "Expected Goals",
+       "value": 0.13
+      },
+      {
+       "name": "Shots On Target",
+       "value": 1
+      },
+      {
+       "name": "Minutes",
+       "value": 71
+      }
+     ]
+    },
+    {
+     "name": "Alan Lescano",
+     "position": "Midfielder",
+     "statistics": [
+      {
+       "name": "Expected Goals",
+       "value": 0.29
+      },
+      {
+       "name": "Shots On Target",
+       "value": 1
+      },
+      {
+       "name": "Minutes",
+       "value": 81
+      }
+     ]
+    },
+    {
+     "name": "Lucas Piton",
+     "position": "Defender",
+     "statistics": [
+      {
+       "name": "Interceptions",
+       "value": 0
+      },
+      {
+       "name": "Tackles",
+       "value": 0
+      },
+      {
+       "name": "Minutes",
+       "value": 21
+      }
+     ]
+    }
+   ],
+   "shots": [
+    {
+     "time": "15'",
+     "outcome": "Goal",
+     "goalTarget": "Low Right",
+     "playerName": "Alan Lescano"
+    },
+    {
+     "time": "37'",
+     "outcome": "Missed",
+     "goalTarget": "High Left",
+     "playerName": "Marino Hinestroza"
+    },
+    {
+     "time": "47'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Thiago Mendes"
+    },
+    {
+     "time": "56'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Cuiabano"
+    },
+    {
+     "time": "61'",
+     "outcome": "Missed",
+     "goalTarget": "CloseLeft",
+     "playerName": "Facundo Colidio"
+    },
+    {
+     "time": "62'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Brenner"
+    },
+    {
+     "time": "65'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Gabriel Pereira"
+    },
+    {
+     "time": "66'",
+     "outcome": "Saved",
+     "goalTarget": "Low Left",
+     "playerName": "Brenner"
+    },
+    {
+     "time": "73'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Centre",
+     "playerName": "Nuno Moreira"
+    },
+    {
+     "time": "73'",
+     "outcome": "Missed",
+     "goalTarget": null,
+     "playerName": "Jair"
+    },
+    {
+     "time": "76'",
+     "outcome": "Missed",
+     "goalTarget": "Close High",
+     "playerName": "Tchê Tchê"
+    },
+    {
+     "time": "81'",
+     "outcome": "Blocked",
+     "goalTarget": "Low Left",
+     "playerName": "Lucas Piton"
+    },
+    {
+     "time": "81'",
+     "outcome": "Missed",
+     "goalTarget": "CloseLeft",
+     "playerName": "Puma Rodriguez"
+    }
+   ]
   },
   "league": {
    "id": 61205,
@@ -153,5 +993,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-29T17:45:46.264562+00:00"
+ "_coletado_em": "2026-10-30T00:45:30.166325+00:00"
 }
