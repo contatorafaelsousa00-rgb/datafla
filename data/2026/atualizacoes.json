@@ -575,5 +575,23 @@
   "requisicoes": 14,
   "cota_restante": 86,
   "erro": null
+ },
+ {
+  "quando": "2026-10-30T01:15:58+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Vasco DA Gama já terminou e ainda não foi baixado",
+  "novos": [
+   {
+    "adversario": "Vasco DA Gama",
+    "data_utc": "2026-10-29T23:00:00.000Z",
+    "competicao": "Serie A"
+   }
+  ],
+  "recoletados": [],
+  "encerrados": 63,
+  "pendentes": 0,
+  "requisicoes": 7,
+  "cota_restante": 79,
+  "erro": null
  }
 ]
