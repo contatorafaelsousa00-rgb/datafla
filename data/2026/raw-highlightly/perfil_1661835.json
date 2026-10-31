@@ -3,7 +3,7 @@
   {
    "id": 1661835,
    "logo": null,
-   "name": "Pedro",
+   "name": "Pedro Guilherme",
    "fullName": "Pedro Guilherme Abreu dos Santos",
    "profile": {
     "club": {
@@ -39,8 +39,28 @@
     ],
     "historical": [
      {
+      "club": "FC Girondins Bordeaux",
+      "rumourDate": "20/08/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Spartak Moscow",
+      "rumourDate": "18/08/2018",
+      "transferProbability": "N/A"
+     },
+     {
       "club": "Olympique Lyon",
       "rumourDate": "27/07/2018",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "SPAL",
+      "rumourDate": "02/01/2020",
+      "transferProbability": "N/A"
+     },
+     {
+      "club": "Beşiktaş JK",
+      "rumourDate": "30/12/2019",
       "transferProbability": "N/A"
      },
      {
@@ -109,13 +129,13 @@
       "transferProbability": "N/A"
      },
      {
-      "club": "FC Girondins Bordeaux",
-      "rumourDate": "20/08/2018",
+      "club": "Trabzonspor",
+      "rumourDate": "22/08/2026",
       "transferProbability": "N/A"
      },
      {
-      "club": "Spartak Moscow",
-      "rumourDate": "18/08/2018",
+      "club": "Ajax Amsterdam",
+      "rumourDate": "14/07/2026",
       "transferProbability": "N/A"
      },
      {
@@ -181,16 +201,6 @@
      {
       "club": "US Sassuolo",
       "rumourDate": "02/01/2020",
-      "transferProbability": "N/A"
-     },
-     {
-      "club": "SPAL",
-      "rumourDate": "02/01/2020",
-      "transferProbability": "N/A"
-     },
-     {
-      "club": "Beşiktaş JK",
-      "rumourDate": "30/12/2019",
       "transferProbability": "N/A"
      }
     ]
@@ -280,6 +290,13 @@
     }
    ],
    "marketValue": [
+    {
+     "age": 29,
+     "club": "CR Flamengo",
+     "value": 22000000,
+     "currency": "€",
+     "recordedDate": "28/09/2026"
+    },
     {
      "age": 28,
      "club": "CR Flamengo",
@@ -523,5 +540,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-24T01:15:51.815861+00:00"
+ "_coletado_em": "2026-10-31T21:15:58.814563+00:00"
 }

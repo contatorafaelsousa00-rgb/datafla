@@ -1,0 +1,175 @@
+{
+ "data": [
+  {
+   "id": 1270065522,
+   "round": "Regular Season - 33",
+   "date": "2026-10-28T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "homeTeam": {
+    "id": 109712,
+    "logo": "https://highlightly.net/soccer/images/teams/109712.png",
+    "name": "Santos"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1270055310,
+   "round": "Regular Season - 32",
+   "date": "2026-10-24T21:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 676478,
+    "logo": "https://highlightly.net/soccer/images/teams/676478.png",
+    "name": "RB Bragantino"
+   },
+   "homeTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1395658655,
+   "round": "Semi-finals",
+   "date": "2026-10-22T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "0 - 1",
+     "penalties": "5 - 3"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 106308,
+    "logo": "https://highlightly.net/soccer/images/teams/106308.png",
+    "name": "Fluminense"
+   },
+   "homeTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1270041694,
+   "round": "Regular Season - 31",
+   "date": "2026-10-17T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "homeTeam": {
+    "id": 114818,
+    "logo": "https://highlightly.net/soccer/images/teams/114818.png",
+    "name": "Athletico Paranaense"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1395657804,
+   "round": "Semi-finals",
+   "date": "2026-10-15T00:30:00.000Z",
+   "country": {
+    "code": "World",
+    "name": "World",
+    "logo": "https://highlightly.net/soccer/images/countries/World.png"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "homeTeam": {
+    "id": 106308,
+    "logo": "https://highlightly.net/soccer/images/teams/106308.png",
+    "name": "Fluminense"
+   },
+   "league": {
+    "id": 11847,
+    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
+    "name": "CONMEBOL Libertadores",
+    "season": 2026
+   }
+  }
+ ],
+ "_coletado_em": "2026-10-31T21:15:49.986430+00:00"
+}
