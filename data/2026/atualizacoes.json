@@ -605,5 +605,23 @@
   "requisicoes": 6,
   "cota_restante": 73,
   "erro": null
+ },
+ {
+  "quando": "2026-10-31T01:16:00+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "1 jogo(s) do Brasileirão terminaram depois da última tabela: renova a rodada",
+  "novos": [],
+  "recoletados": [
+   {
+    "adversario": "Vasco DA Gama",
+    "data_utc": "2026-10-29T23:00:00.000Z",
+    "competicao": "Serie A"
+   }
+  ],
+  "encerrados": 63,
+  "pendentes": 0,
+  "requisicoes": 25,
+  "cota_restante": 75,
+  "erro": null
  }
 ]

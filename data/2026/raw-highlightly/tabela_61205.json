@@ -6,12 +6,12 @@
     "standings": [
      {
       "away": {
-       "wins": 9,
+       "wins": 10,
        "draws": 4,
-       "games": 16,
+       "games": 17,
        "loses": 3,
-       "scoredGoals": 32,
-       "receivedGoals": 15
+       "scoredGoals": 36,
+       "receivedGoals": 16
       },
       "home": {
        "wins": 12,
@@ -27,14 +27,14 @@
        "name": "Flamengo"
       },
       "total": {
-       "wins": 21,
+       "wins": 22,
        "draws": 7,
-       "games": 32,
+       "games": 33,
        "loses": 4,
-       "scoredGoals": 64,
-       "receivedGoals": 27
+       "scoredGoals": 68,
+       "receivedGoals": 28
       },
-      "points": 70,
+      "points": 73,
       "position": 1
      },
      {
@@ -72,11 +72,11 @@
      },
      {
       "away": {
-       "wins": 7,
+       "wins": 8,
        "draws": 2,
-       "games": 16,
+       "games": 17,
        "loses": 7,
-       "scoredGoals": 24,
+       "scoredGoals": 25,
        "receivedGoals": 30
       },
       "home": {
@@ -93,48 +93,15 @@
        "name": "Cruzeiro"
       },
       "total": {
-       "wins": 16,
+       "wins": 17,
        "draws": 6,
-       "games": 32,
+       "games": 33,
        "loses": 10,
-       "scoredGoals": 51,
+       "scoredGoals": 52,
        "receivedGoals": 46
       },
-      "points": 54,
+      "points": 57,
       "position": 3
-     },
-     {
-      "away": {
-       "wins": 6,
-       "draws": 4,
-       "games": 16,
-       "loses": 6,
-       "scoredGoals": 23,
-       "receivedGoals": 23
-      },
-      "home": {
-       "wins": 9,
-       "draws": 5,
-       "games": 16,
-       "loses": 2,
-       "scoredGoals": 27,
-       "receivedGoals": 15
-      },
-      "team": {
-       "id": 114818,
-       "logo": "https://highlightly.net/soccer/images/teams/114818.png",
-       "name": "Athletico Paranaense"
-      },
-      "total": {
-       "wins": 15,
-       "draws": 9,
-       "games": 32,
-       "loses": 8,
-       "scoredGoals": 50,
-       "receivedGoals": 38
-      },
-      "points": 54,
-      "position": 4
      },
      {
       "away": {
@@ -165,6 +132,39 @@
        "loses": 9,
        "scoredGoals": 52,
        "receivedGoals": 42
+      },
+      "points": 54,
+      "position": 4
+     },
+     {
+      "away": {
+       "wins": 6,
+       "draws": 4,
+       "games": 17,
+       "loses": 7,
+       "scoredGoals": 23,
+       "receivedGoals": 25
+      },
+      "home": {
+       "wins": 9,
+       "draws": 5,
+       "games": 16,
+       "loses": 2,
+       "scoredGoals": 27,
+       "receivedGoals": 15
+      },
+      "team": {
+       "id": 114818,
+       "logo": "https://highlightly.net/soccer/images/teams/114818.png",
+       "name": "Athletico Paranaense"
+      },
+      "total": {
+       "wins": 15,
+       "draws": 9,
+       "games": 33,
+       "loses": 9,
+       "scoredGoals": 50,
+       "receivedGoals": 40
       },
       "points": 54,
       "position": 5
@@ -214,10 +214,10 @@
       "home": {
        "wins": 10,
        "draws": 5,
-       "games": 16,
-       "loses": 1,
+       "games": 17,
+       "loses": 2,
        "scoredGoals": 27,
-       "receivedGoals": 17
+       "receivedGoals": 18
       },
       "team": {
        "id": 904546,
@@ -227,10 +227,10 @@
       "total": {
        "wins": 14,
        "draws": 8,
-       "games": 32,
-       "loses": 10,
+       "games": 33,
+       "loses": 11,
        "scoredGoals": 44,
-       "receivedGoals": 38
+       "receivedGoals": 39
       },
       "points": 50,
       "position": 7
@@ -412,10 +412,10 @@
       "home": {
        "wins": 8,
        "draws": 3,
-       "games": 16,
-       "loses": 5,
-       "scoredGoals": 24,
-       "receivedGoals": 20
+       "games": 17,
+       "loses": 6,
+       "scoredGoals": 25,
+       "receivedGoals": 24
       },
       "team": {
        "id": 113967,
@@ -425,10 +425,10 @@
       "total": {
        "wins": 10,
        "draws": 8,
-       "games": 31,
-       "loses": 13,
-       "scoredGoals": 39,
-       "receivedGoals": 45
+       "games": 32,
+       "loses": 14,
+       "scoredGoals": 40,
+       "receivedGoals": 49
       },
       "points": 38,
       "position": 13
@@ -468,6 +468,39 @@
      },
      {
       "away": {
+       "wins": 1,
+       "draws": 5,
+       "games": 16,
+       "loses": 10,
+       "scoredGoals": 10,
+       "receivedGoals": 23
+      },
+      "home": {
+       "wins": 8,
+       "draws": 5,
+       "games": 17,
+       "loses": 4,
+       "scoredGoals": 27,
+       "receivedGoals": 21
+      },
+      "team": {
+       "id": 111414,
+       "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+       "name": "Gremio"
+      },
+      "total": {
+       "wins": 9,
+       "draws": 10,
+       "games": 33,
+       "loses": 14,
+       "scoredGoals": 37,
+       "receivedGoals": 44
+      },
+      "points": 37,
+      "position": 15
+     },
+     {
+      "away": {
        "wins": 2,
        "draws": 4,
        "games": 15,
@@ -491,13 +524,46 @@
       "total": {
        "wins": 9,
        "draws": 10,
-       "games": 32,
-       "loses": 13,
+       "games": 33,
+       "loses": 14,
        "scoredGoals": 37,
-       "receivedGoals": 45
+       "receivedGoals": 47
       },
       "points": 37,
-      "position": 15
+      "position": 16
+     },
+     {
+      "away": {
+       "wins": 3,
+       "draws": 5,
+       "games": 16,
+       "loses": 8,
+       "scoredGoals": 18,
+       "receivedGoals": 25
+      },
+      "home": {
+       "wins": 5,
+       "draws": 4,
+       "games": 16,
+       "loses": 7,
+       "scoredGoals": 16,
+       "receivedGoals": 17
+      },
+      "team": {
+       "id": 112265,
+       "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+       "name": "Corinthians"
+      },
+      "total": {
+       "wins": 9,
+       "draws": 9,
+       "games": 33,
+       "loses": 15,
+       "scoredGoals": 36,
+       "receivedGoals": 42
+      },
+      "points": 36,
+      "position": 17
      },
      {
       "away": {
@@ -530,72 +596,6 @@
        "receivedGoals": 42
       },
       "points": 35,
-      "position": 16
-     },
-     {
-      "away": {
-       "wins": 1,
-       "draws": 5,
-       "games": 16,
-       "loses": 10,
-       "scoredGoals": 10,
-       "receivedGoals": 23
-      },
-      "home": {
-       "wins": 7,
-       "draws": 5,
-       "games": 16,
-       "loses": 4,
-       "scoredGoals": 25,
-       "receivedGoals": 21
-      },
-      "team": {
-       "id": 111414,
-       "logo": "https://highlightly.net/soccer/images/teams/111414.png",
-       "name": "Gremio"
-      },
-      "total": {
-       "wins": 8,
-       "draws": 10,
-       "games": 32,
-       "loses": 14,
-       "scoredGoals": 35,
-       "receivedGoals": 44
-      },
-      "points": 34,
-      "position": 17
-     },
-     {
-      "away": {
-       "wins": 3,
-       "draws": 5,
-       "games": 16,
-       "loses": 8,
-       "scoredGoals": 18,
-       "receivedGoals": 25
-      },
-      "home": {
-       "wins": 5,
-       "draws": 4,
-       "games": 16,
-       "loses": 7,
-       "scoredGoals": 16,
-       "receivedGoals": 17
-      },
-      "team": {
-       "id": 112265,
-       "logo": "https://highlightly.net/soccer/images/teams/112265.png",
-       "name": "Corinthians"
-      },
-      "total": {
-       "wins": 8,
-       "draws": 9,
-       "games": 32,
-       "loses": 15,
-       "scoredGoals": 34,
-       "receivedGoals": 42
-      },
-      "points": 33,
       "position": 18
      },
      {
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-10-29T05:15:34.578648+00:00"
+ "_coletado_em": "2026-10-31T01:15:55.611099+00:00"
 }

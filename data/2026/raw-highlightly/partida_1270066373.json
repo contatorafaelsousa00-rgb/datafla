@@ -2,9 +2,9 @@
  "match": {
   "venue": {
    "city": "Rio de Janeiro",
-   "name": "Estadio Sao Januario",
+   "name": "Estadio Nilton Santos",
    "country": "Brazil",
-   "capacity": "21880"
+   "capacity": "46931"
   },
   "referee": {
    "name": "de Araujo, Bruno Arleu",
@@ -12,7 +12,7 @@
   },
   "forecast": {
    "status": "rain",
-   "temperature": "21.94°C"
+   "temperature": "22.65°C"
   },
   "events": [
    {
@@ -147,7 +147,7 @@
      "logo": "https://highlightly.net/soccer/images/teams/108861.png",
      "name": "Flamengo"
     },
-    "time": "63",
+    "time": "62",
     "type": "Substitution",
     "assist": null,
     "player": "G. de Arrascaeta",
@@ -231,7 +231,7 @@
      "logo": "https://highlightly.net/soccer/images/teams/108861.png",
      "name": "Flamengo"
     },
-    "time": "87",
+    "time": "86",
     "type": "Yellow Card",
     "assist": null,
     "player": "Samuel Lino",
@@ -397,6 +397,28 @@
       "draw": "25.76%",
       "home": "23.89%"
      }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Vasco DA Gama.",
+     "generatedAt": "2026-10-30T10:21:28.870Z",
+     "probabilities": {
+      "away": "55.61%",
+      "draw": "24.49%",
+      "home": "19.90%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Vasco DA Gama.",
+     "generatedAt": "2026-10-30T15:52:27.196Z",
+     "probabilities": {
+      "away": "55.61%",
+      "draw": "24.49%",
+      "home": "19.90%"
+     }
     }
    ]
   },
@@ -561,8 +583,8 @@
       "displayName": "Yellow cards"
      },
      {
-      "displayName": "Shots outside penalty area",
-      "value": 7
+      "value": 7,
+      "displayName": "Shots outside penalty area"
      }
     ]
    },
@@ -726,8 +748,8 @@
       "displayName": "Yellow cards"
      },
      {
-      "displayName": "Shots outside penalty area",
-      "value": 3
+      "value": 3,
+      "displayName": "Shots outside penalty area"
      }
     ]
    }
@@ -3468,5 +3490,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-30T01:15:55.439954+00:00"
+ "_coletado_em": "2026-10-31T01:15:40.145556+00:00"
 }

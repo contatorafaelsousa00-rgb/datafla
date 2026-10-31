@@ -12,7 +12,7 @@
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "26.94°C"
+   "temperature": "26.26°C"
   },
   "events": [],
   "predictions": {
@@ -38,6 +38,28 @@
       "away": "6.99%",
       "draw": "14.60%",
       "home": "78.41%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Gremio.",
+     "generatedAt": "2026-10-30T12:06:16.886Z",
+     "probabilities": {
+      "away": "7.61%",
+      "draw": "14.18%",
+      "home": "78.21%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Gremio.",
+     "generatedAt": "2026-10-30T17:25:46.023Z",
+     "probabilities": {
+      "away": "7.41%",
+      "draw": "13.55%",
+      "home": "79.04%"
      }
     }
    ]
@@ -98,5 +120,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-10-30T01:15:56.382424+00:00"
+ "_coletado_em": "2026-10-31T01:15:41.076484+00:00"
 }

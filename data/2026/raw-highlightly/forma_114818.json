@@ -1,6 +1,40 @@
 {
  "data": [
   {
+   "id": 1270063820,
+   "round": "Regular Season - 33",
+   "date": "2026-10-30T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 114818,
+    "logo": "https://highlightly.net/soccer/images/teams/114818.png",
+    "name": "Athletico Paranaense"
+   },
+   "homeTeam": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+    "name": "Gremio"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
    "id": 1270057863,
    "round": "Regular Season - 32",
    "date": "2026-10-24T19:30:00.000Z",
@@ -135,41 +169,7 @@
     "name": "Serie A",
     "season": 2026
    }
-  },
-  {
-   "id": 1270016164,
-   "round": "Regular Season - 28",
-   "date": "2026-09-20T22:30:00.000Z",
-   "country": {
-    "code": "BR",
-    "name": "Brazil",
-    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
-   },
-   "state": {
-    "clock": 90,
-    "score": {
-     "current": "2 - 1",
-     "penalties": null
-    },
-    "description": "Finished"
-   },
-   "awayTeam": {
-    "id": 101202,
-    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
-    "name": "Bahia"
-   },
-   "homeTeam": {
-    "id": 114818,
-    "logo": "https://highlightly.net/soccer/images/teams/114818.png",
-    "name": "Athletico Paranaense"
-   },
-   "league": {
-    "id": 61205,
-    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
-    "name": "Serie A",
-    "season": 2026
-   }
   }
  ],
- "_coletado_em": "2026-10-30T00:45:32.809995+00:00"
+ "_coletado_em": "2026-10-31T01:15:45.916155+00:00"
 }
