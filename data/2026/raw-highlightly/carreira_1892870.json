@@ -3,7 +3,7 @@
   {
    "id": 1892870,
    "logo": null,
-   "name": "A. Rossi",
+   "name": "Agustín Rossi",
    "fullName": "Agustín Daniel Rossi",
    "perCompetition": [
     {
@@ -15,11 +15,11 @@
      "assists": 0,
      "ownGoals": 0,
      "redCards": 0,
-     "cleanSheets": 13,
-     "gamesPlayed": 30,
+     "cleanSheets": 14,
+     "gamesPlayed": 33,
      "yellowCards": 0,
-     "goalsConceded": 25,
-     "minutesPlayed": 2700,
+     "goalsConceded": 28,
+     "minutesPlayed": 2970,
      "substitutedIn": 0,
      "substitutedOut": 0,
      "penaltiesScored": 0,
@@ -908,11 +908,11 @@
      "assists": 1,
      "ownGoals": 0,
      "redCards": 0,
-     "cleanSheets": 4,
-     "gamesPlayed": 9,
+     "cleanSheets": 5,
+     "gamesPlayed": 10,
      "yellowCards": 0,
      "goalsConceded": 5,
-     "minutesPlayed": 810,
+     "minutesPlayed": 900,
      "substitutedIn": 0,
      "substitutedOut": 0,
      "penaltiesScored": 0,
@@ -1192,11 +1192,11 @@
      "assists": 1,
      "ownGoals": 0,
      "redCards": 0,
-     "cleanSheets": 91,
-     "gamesPlayed": 191,
+     "cleanSheets": 93,
+     "gamesPlayed": 195,
      "yellowCards": 4,
-     "goalsConceded": 139,
-     "minutesPlayed": 17250,
+     "goalsConceded": 142,
+     "minutesPlayed": 17610,
      "substitutedIn": 0,
      "substitutedOut": 0,
      "penaltiesScored": 0,
@@ -1365,5 +1365,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-24T21:45:57.210202+00:00"
+ "_coletado_em": "2026-11-01T21:31:27.614927+00:00"
 }

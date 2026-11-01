@@ -1140,7 +1140,7 @@
     },
     {
      "id": 8279740,
-     "name": "Puma Rodríguez",
+     "name": "J. Rodríguez",
      "offsides": 0,
      "position": "Defender",
      "isCaptain": false,
@@ -1400,7 +1400,7 @@
     },
     {
      "id": 10325728,
-     "name": "Marino Hinestroza",
+     "name": "M. Hinestroza",
      "offsides": 0,
      "position": "Midfielder",
      "isCaptain": false,
@@ -1452,7 +1452,7 @@
     },
     {
      "id": 57699817,
-     "name": "Alan Lescano",
+     "name": "A. Lescano",
      "offsides": 0,
      "position": "Midfielder",
      "isCaptain": false,
@@ -1556,7 +1556,7 @@
     },
     {
      "id": 34608,
-     "name": "Facundo Colidio",
+     "name": "F. Colidio",
      "offsides": 0,
      "position": "Midfielder",
      "isCaptain": false,
@@ -1972,7 +1972,7 @@
     },
     {
      "id": 50034768,
-     "name": "Alan Saldivia",
+     "name": "A. Saldivia",
      "offsides": 0,
      "position": "Defender",
      "isCaptain": false,
@@ -2180,7 +2180,7 @@
     },
     {
      "id": 967120,
-     "name": "Santiago Sosa",
+     "name": "S. Sosa",
      "offsides": 0,
      "position": "Midfielder",
      "isCaptain": false,
@@ -3490,5 +3490,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-31T21:15:44.728622+00:00"
+ "_coletado_em": "2026-11-01T21:30:54.951064+00:00"
 }

@@ -9,20 +9,20 @@
     {
      "club": "CR Flamengo",
      "type": "national league",
-     "goals": 6,
+     "goals": 7,
      "league": "Campeonato Brasileiro Série A",
      "season": "2026",
      "assists": 8,
      "ownGoals": 0,
      "redCards": 2,
-     "cleanSheets": 7,
-     "gamesPlayed": 24,
-     "yellowCards": 2,
+     "cleanSheets": 8,
+     "gamesPlayed": 26,
+     "yellowCards": 3,
      "goalsConceded": 9,
-     "minutesPlayed": 1341,
-     "substitutedIn": 9,
-     "substitutedOut": 12,
-     "penaltiesScored": 0,
+     "minutesPlayed": 1430,
+     "substitutedIn": 10,
+     "substitutedOut": 13,
+     "penaltiesScored": 1,
      "secondYellowCards": 0
     },
     {
@@ -833,12 +833,12 @@
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 3,
-     "gamesPlayed": 9,
+     "gamesPlayed": 10,
      "yellowCards": 1,
      "goalsConceded": 3,
-     "minutesPlayed": 564,
+     "minutesPlayed": 628,
      "substitutedIn": 3,
-     "substitutedOut": 5,
+     "substitutedOut": 6,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -998,18 +998,18 @@
    "perClub": [
     {
      "club": "CR Flamengo",
-     "goals": 10,
+     "goals": 11,
      "assists": 16,
      "ownGoals": 0,
      "redCards": 3,
-     "cleanSheets": 17,
-     "gamesPlayed": 68,
-     "yellowCards": 9,
+     "cleanSheets": 18,
+     "gamesPlayed": 71,
+     "yellowCards": 10,
      "goalsConceded": 31,
-     "minutesPlayed": 3895,
-     "substitutedIn": 19,
-     "substitutedOut": 39,
-     "penaltiesScored": 0,
+     "minutesPlayed": 4048,
+     "substitutedIn": 20,
+     "substitutedOut": 41,
+     "penaltiesScored": 1,
      "secondYellowCards": 0
     },
     {
@@ -1143,5 +1143,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-24T21:46:05.377039+00:00"
+ "_coletado_em": "2026-11-01T21:31:34.423965+00:00"
 }

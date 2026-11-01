@@ -3,7 +3,7 @@
   {
    "id": 420686,
    "logo": null,
-   "name": "G. de Arrascaeta",
+   "name": "Giorgian de Arrascaeta",
    "fullName": "Giorgian Daniel de Arrascaeta Benedetti",
    "profile": {
     "club": {
@@ -499,6 +499,14 @@
      "absentDurationInDays": 55
     },
     {
+     "reason": "Wrist fracture",
+     "season": "2027",
+     "toDate": "21.10.2026",
+     "fromDate": "29.09.2026",
+     "missedGames": 5,
+     "absentDurationInDays": 23
+    },
+    {
      "reason": "Muscle injury",
      "season": "2026",
      "toDate": "25.06.2026",
@@ -613,5 +621,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-24T21:45:40.922660+00:00"
+ "_coletado_em": "2026-11-01T21:31:08.330010+00:00"
 }

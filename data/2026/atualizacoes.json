@@ -641,5 +641,23 @@
   "requisicoes": 25,
   "cota_restante": 50,
   "erro": null
+ },
+ {
+  "quando": "2026-11-01T21:31:38+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "atualização diária (última coleta há 24 h)",
+  "novos": [],
+  "recoletados": [
+   {
+    "adversario": "Vasco DA Gama",
+    "data_utc": "2026-10-29T23:00:00.000Z",
+    "competicao": "Serie A"
+   }
+  ],
+  "encerrados": 63,
+  "pendentes": 0,
+  "requisicoes": 50,
+  "cota_restante": 50,
+  "erro": null
  }
 ]

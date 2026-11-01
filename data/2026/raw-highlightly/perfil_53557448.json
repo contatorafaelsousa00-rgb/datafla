@@ -3,7 +3,7 @@
   {
    "id": 53557448,
    "logo": null,
-   "name": "Evertton Araújo",
+   "name": "Evertton Araujo",
    "fullName": "Evertton Gustavo Fernandes Araújo",
    "profile": {
     "club": {
@@ -197,8 +197,17 @@
      "recordedDate": "11/12/2023"
     }
    ],
-   "injuries": []
+   "injuries": [
+    {
+     "reason": "Hamstring injury",
+     "season": "2027",
+     "toDate": "28.10.2026",
+     "fromDate": "05.09.2026",
+     "missedGames": 11,
+     "absentDurationInDays": 54
+    }
+   ]
   }
  ],
- "_coletado_em": "2026-10-24T21:45:56.281380+00:00"
+ "_coletado_em": "2026-11-01T21:31:21.430308+00:00"
 }

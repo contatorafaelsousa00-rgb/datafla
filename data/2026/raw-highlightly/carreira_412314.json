@@ -3,7 +3,7 @@
   {
    "id": 412314,
    "logo": null,
-   "name": "E. Pulgar",
+   "name": "Erick Pulgar",
    "fullName": "Erick Antonio Pulgar Farfán",
    "perCompetition": [
     {
@@ -16,12 +16,12 @@
      "ownGoals": 0,
      "redCards": 1,
      "cleanSheets": 8,
-     "gamesPlayed": 20,
-     "yellowCards": 7,
-     "goalsConceded": 11,
-     "minutesPlayed": 1498,
+     "gamesPlayed": 23,
+     "yellowCards": 8,
+     "goalsConceded": 14,
+     "minutesPlayed": 1761,
      "substitutedIn": 2,
-     "substitutedOut": 6,
+     "substitutedOut": 7,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -786,6 +786,25 @@
      "secondYellowCards": 0
     },
     {
+     "club": "Deportes Antofagasta",
+     "type": "national cup",
+     "goals": 0,
+     "league": "Copa Chile",
+     "season": "2012",
+     "assists": 0,
+     "ownGoals": 0,
+     "redCards": 0,
+     "cleanSheets": 0,
+     "gamesPlayed": 0,
+     "yellowCards": 0,
+     "goalsConceded": 0,
+     "minutesPlayed": 0,
+     "substitutedIn": 0,
+     "substitutedOut": 0,
+     "penaltiesScored": 0,
+     "secondYellowCards": 0
+    },
+    {
      "club": "CR Flamengo",
      "type": "international competition",
      "goals": 0,
@@ -795,12 +814,12 @@
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 3,
-     "gamesPlayed": 6,
+     "gamesPlayed": 7,
      "yellowCards": 2,
      "goalsConceded": 3,
-     "minutesPlayed": 480,
+     "minutesPlayed": 562,
      "substitutedIn": 1,
-     "substitutedOut": 0,
+     "substitutedOut": 1,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -1022,12 +1041,12 @@
      "ownGoals": 1,
      "redCards": 1,
      "cleanSheets": 71,
-     "gamesPlayed": 173,
-     "yellowCards": 60,
-     "goalsConceded": 93,
-     "minutesPlayed": 12725,
+     "gamesPlayed": 177,
+     "yellowCards": 61,
+     "goalsConceded": 96,
+     "minutesPlayed": 13070,
      "substitutedIn": 29,
-     "substitutedOut": 48,
+     "substitutedOut": 50,
      "penaltiesScored": 0,
      "secondYellowCards": 1
     },
@@ -1130,5 +1149,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-24T21:46:06.350024+00:00"
+ "_coletado_em": "2026-11-01T21:31:33.405052+00:00"
 }

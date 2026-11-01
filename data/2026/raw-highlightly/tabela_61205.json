@@ -336,6 +336,39 @@
      },
      {
       "away": {
+       "wins": 5,
+       "draws": 4,
+       "games": 16,
+       "loses": 7,
+       "scoredGoals": 18,
+       "receivedGoals": 29
+      },
+      "home": {
+       "wins": 6,
+       "draws": 5,
+       "games": 17,
+       "loses": 6,
+       "scoredGoals": 22,
+       "receivedGoals": 21
+      },
+      "team": {
+       "id": 125881,
+       "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+       "name": "Coritiba"
+      },
+      "total": {
+       "wins": 11,
+       "draws": 9,
+       "games": 33,
+       "loses": 13,
+       "scoredGoals": 40,
+       "receivedGoals": 50
+      },
+      "points": 42,
+      "position": 11
+     },
+     {
+      "away": {
        "wins": 4,
        "draws": 3,
        "games": 17,
@@ -363,39 +396,6 @@
        "loses": 14,
        "scoredGoals": 45,
        "receivedGoals": 53
-      },
-      "points": 39,
-      "position": 11
-     },
-     {
-      "away": {
-       "wins": 5,
-       "draws": 4,
-       "games": 16,
-       "loses": 7,
-       "scoredGoals": 18,
-       "receivedGoals": 29
-      },
-      "home": {
-       "wins": 5,
-       "draws": 5,
-       "games": 16,
-       "loses": 6,
-       "scoredGoals": 20,
-       "receivedGoals": 21
-      },
-      "team": {
-       "id": 125881,
-       "logo": "https://highlightly.net/soccer/images/teams/125881.png",
-       "name": "Coritiba"
-      },
-      "total": {
-       "wins": 10,
-       "draws": 9,
-       "games": 32,
-       "loses": 13,
-       "scoredGoals": 38,
-       "receivedGoals": 50
       },
       "points": 39,
       "position": 12
@@ -437,10 +437,10 @@
       "away": {
        "wins": 0,
        "draws": 6,
-       "games": 16,
-       "loses": 10,
+       "games": 17,
+       "loses": 11,
        "scoredGoals": 12,
-       "receivedGoals": 33
+       "receivedGoals": 35
       },
       "home": {
        "wins": 10,
@@ -458,10 +458,10 @@
       "total": {
        "wins": 10,
        "draws": 8,
-       "games": 32,
-       "loses": 14,
+       "games": 33,
+       "loses": 15,
        "scoredGoals": 35,
-       "receivedGoals": 46
+       "receivedGoals": 48
       },
       "points": 38,
       "position": 14
@@ -503,10 +503,10 @@
       "away": {
        "wins": 2,
        "draws": 4,
-       "games": 15,
-       "loses": 9,
+       "games": 16,
+       "loses": 10,
        "scoredGoals": 13,
-       "receivedGoals": 23
+       "receivedGoals": 25
       },
       "home": {
        "wins": 7,
@@ -542,11 +542,11 @@
        "receivedGoals": 25
       },
       "home": {
-       "wins": 5,
+       "wins": 6,
        "draws": 4,
-       "games": 16,
+       "games": 17,
        "loses": 7,
-       "scoredGoals": 16,
+       "scoredGoals": 18,
        "receivedGoals": 17
       },
       "team": {
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-10-31T01:15:55.611099+00:00"
+ "_coletado_em": "2026-11-01T21:31:12.765711+00:00"
 }
