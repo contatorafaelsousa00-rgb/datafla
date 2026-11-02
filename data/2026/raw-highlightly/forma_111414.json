@@ -1,6 +1,40 @@
 {
  "data": [
   {
+   "id": 1394142173,
+   "round": "Semi-finals",
+   "date": "2026-11-01T21:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "homeTeam": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+    "name": "Gremio"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
    "id": 1270063820,
    "round": "Regular Season - 33",
    "date": "2026-10-30T00:30:00.000Z",
@@ -135,41 +169,7 @@
     "name": "Serie A",
     "season": 2026
    }
-  },
-  {
-   "id": 1270030631,
-   "round": "Regular Season - 29",
-   "date": "2026-10-07T22:30:00.000Z",
-   "country": {
-    "code": "BR",
-    "name": "Brazil",
-    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
-   },
-   "state": {
-    "clock": 90,
-    "score": {
-     "current": "1 - 1",
-     "penalties": null
-    },
-    "description": "Finished"
-   },
-   "awayTeam": {
-    "id": 111414,
-    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
-    "name": "Gremio"
-   },
-   "homeTeam": {
-    "id": 1020282,
-    "logo": "https://highlightly.net/soccer/images/teams/1020282.png",
-    "name": "Remo"
-   },
-   "league": {
-    "id": 61205,
-    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
-    "name": "Serie A",
-    "season": 2026
-   }
   }
  ],
- "_coletado_em": "2026-11-01T21:30:57.988443+00:00"
+ "_coletado_em": "2026-11-02T21:45:31.356252+00:00"
 }

@@ -3,25 +3,25 @@
   {
    "id": 2635563,
    "logo": null,
-   "name": "G. Plata",
+   "name": "Gonzalo Plata",
    "fullName": "Gonzalo Jordy Plata Jiménez",
    "perCompetition": [
     {
      "club": "CR Flamengo",
      "type": "national league",
-     "goals": 2,
+     "goals": 4,
      "league": "Campeonato Brasileiro Série A",
      "season": "2026",
      "assists": 3,
      "ownGoals": 0,
      "redCards": 0,
-     "cleanSheets": 6,
-     "gamesPlayed": 18,
-     "yellowCards": 2,
-     "goalsConceded": 10,
-     "minutesPlayed": 901,
+     "cleanSheets": 7,
+     "gamesPlayed": 21,
+     "yellowCards": 3,
+     "goalsConceded": 13,
+     "minutesPlayed": 1105,
      "substitutedIn": 8,
-     "substitutedOut": 7,
+     "substitutedOut": 9,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -585,12 +585,12 @@
      "assists": 1,
      "ownGoals": 0,
      "redCards": 0,
-     "cleanSheets": 7,
-     "gamesPlayed": 9,
+     "cleanSheets": 8,
+     "gamesPlayed": 10,
      "yellowCards": 0,
      "goalsConceded": 2,
-     "minutesPlayed": 439,
-     "substitutedIn": 5,
+     "minutesPlayed": 447,
+     "substitutedIn": 6,
      "substitutedOut": 2,
      "penaltiesScored": 0,
      "secondYellowCards": 0
@@ -770,17 +770,17 @@
    "perClub": [
     {
      "club": "CR Flamengo",
-     "goals": 9,
+     "goals": 11,
      "assists": 14,
      "ownGoals": 0,
      "redCards": 2,
-     "cleanSheets": 43,
-     "gamesPlayed": 106,
-     "yellowCards": 9,
-     "goalsConceded": 44,
-     "minutesPlayed": 5973,
-     "substitutedIn": 39,
-     "substitutedOut": 44,
+     "cleanSheets": 45,
+     "gamesPlayed": 110,
+     "yellowCards": 10,
+     "goalsConceded": 47,
+     "minutesPlayed": 6185,
+     "substitutedIn": 40,
+     "substitutedOut": 46,
      "penaltiesScored": 0,
      "secondYellowCards": 1
     },
@@ -915,5 +915,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-25T04:16:07.357062+00:00"
+ "_coletado_em": "2026-11-02T21:46:02.335316+00:00"
 }

@@ -3,25 +3,25 @@
   {
    "id": 420686,
    "logo": null,
-   "name": "G. de Arrascaeta",
+   "name": "Giorgian de Arrascaeta",
    "fullName": "Giorgian Daniel de Arrascaeta Benedetti",
    "perCompetition": [
     {
      "club": "CR Flamengo",
      "type": "national league",
-     "goals": 3,
+     "goals": 4,
      "league": "Campeonato Brasileiro Série A",
      "season": "2026",
      "assists": 4,
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 2,
-     "gamesPlayed": 21,
+     "gamesPlayed": 23,
      "yellowCards": 2,
-     "goalsConceded": 12,
-     "minutesPlayed": 1399,
+     "goalsConceded": 15,
+     "minutesPlayed": 1536,
      "substitutedIn": 5,
-     "substitutedOut": 14,
+     "substitutedOut": 16,
      "penaltiesScored": 1,
      "secondYellowCards": 0
     },
@@ -737,12 +737,12 @@
      "assists": 1,
      "ownGoals": 0,
      "redCards": 0,
-     "cleanSheets": 2,
-     "gamesPlayed": 7,
+     "cleanSheets": 3,
+     "gamesPlayed": 8,
      "yellowCards": 1,
      "goalsConceded": 3,
-     "minutesPlayed": 321,
-     "substitutedIn": 2,
+     "minutesPlayed": 347,
+     "substitutedIn": 3,
      "substitutedOut": 5,
      "penaltiesScored": 0,
      "secondYellowCards": 0
@@ -1112,17 +1112,17 @@
    "perClub": [
     {
      "club": "CR Flamengo",
-     "goals": 107,
+     "goals": 108,
      "assists": 119,
      "ownGoals": 0,
      "redCards": 0,
-     "cleanSheets": 77,
-     "gamesPlayed": 389,
+     "cleanSheets": 78,
+     "gamesPlayed": 392,
      "yellowCards": 33,
-     "goalsConceded": 238,
-     "minutesPlayed": 27810,
-     "substitutedIn": 58,
-     "substitutedOut": 225,
+     "goalsConceded": 241,
+     "minutesPlayed": 27973,
+     "substitutedIn": 59,
+     "substitutedOut": 227,
      "penaltiesScored": 8,
      "secondYellowCards": 0
     },
@@ -1193,5 +1193,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-25T04:16:05.569459+00:00"
+ "_coletado_em": "2026-11-02T21:46:00.461764+00:00"
 }

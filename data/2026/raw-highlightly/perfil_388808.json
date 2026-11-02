@@ -581,7 +581,7 @@
      "season": "2027",
      "toDate": "29.08.2026",
      "fromDate": "11.08.2026",
-     "missedGames": null,
+     "missedGames": 4,
      "absentDurationInDays": 19
     },
     {
@@ -699,5 +699,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-24T21:45:55.039381+00:00"
+ "_coletado_em": "2026-11-02T21:45:41.449550+00:00"
 }
