@@ -683,5 +683,17 @@
   "requisicoes": 34,
   "cota_restante": 66,
   "erro": null
+ },
+ {
+  "quando": "2026-11-03T22:31:28+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Gremio em menos de 24 h: renova previsão, árbitro e clima",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 63,
+  "pendentes": 0,
+  "requisicoes": 35,
+  "cota_restante": 31,
+  "erro": null
  }
 ]

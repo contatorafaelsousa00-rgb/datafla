@@ -237,12 +237,45 @@
      },
      {
       "away": {
+       "wins": 4,
+       "draws": 5,
+       "games": 17,
+       "loses": 8,
+       "scoredGoals": 15,
+       "receivedGoals": 21
+      },
+      "home": {
+       "wins": 9,
+       "draws": 3,
+       "games": 17,
+       "loses": 5,
+       "scoredGoals": 29,
+       "receivedGoals": 18
+      },
+      "team": {
+       "id": 676478,
+       "logo": "https://highlightly.net/soccer/images/teams/676478.png",
+       "name": "RB Bragantino"
+      },
+      "total": {
+       "wins": 13,
+       "draws": 8,
+       "games": 34,
+       "loses": 13,
+       "scoredGoals": 44,
+       "receivedGoals": 39
+      },
+      "points": 47,
+      "position": 8
+     },
+     {
+      "away": {
        "wins": 6,
        "draws": 4,
-       "games": 16,
-       "loses": 6,
-       "scoredGoals": 26,
-       "receivedGoals": 26
+       "games": 17,
+       "loses": 7,
+       "scoredGoals": 27,
+       "receivedGoals": 28
       },
       "home": {
        "wins": 6,
@@ -260,45 +293,12 @@
       "total": {
        "wins": 12,
        "draws": 11,
-       "games": 33,
-       "loses": 10,
-       "scoredGoals": 49,
-       "receivedGoals": 47
+       "games": 34,
+       "loses": 11,
+       "scoredGoals": 50,
+       "receivedGoals": 49
       },
       "points": 47,
-      "position": 8
-     },
-     {
-      "away": {
-       "wins": 4,
-       "draws": 5,
-       "games": 17,
-       "loses": 8,
-       "scoredGoals": 15,
-       "receivedGoals": 21
-      },
-      "home": {
-       "wins": 8,
-       "draws": 3,
-       "games": 16,
-       "loses": 5,
-       "scoredGoals": 27,
-       "receivedGoals": 17
-      },
-      "team": {
-       "id": 676478,
-       "logo": "https://highlightly.net/soccer/images/teams/676478.png",
-       "name": "RB Bragantino"
-      },
-      "total": {
-       "wins": 12,
-       "draws": 8,
-       "games": 33,
-       "loses": 13,
-       "scoredGoals": 42,
-       "receivedGoals": 38
-      },
-      "points": 44,
       "position": 9
      },
      {
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-11-02T21:45:45.877692+00:00"
+ "_coletado_em": "2026-11-03T22:31:12.524921+00:00"
 }
