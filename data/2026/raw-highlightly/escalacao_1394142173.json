@@ -1,0 +1,321 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-1-4-1",
+   "substitutes": [
+    {
+     "name": "Tetê",
+     "number": 11,
+     "position": "Forward",
+     "id": 111405
+    },
+    {
+     "name": "M. Braithwaite",
+     "number": 22,
+     "position": "Forward",
+     "id": 440811
+    },
+    {
+     "name": "Pedro Gabriel",
+     "number": 54,
+     "position": "Defender",
+     "id": 104250230
+    },
+    {
+     "name": "Gabriel Grando",
+     "number": 12,
+     "position": "Goalkeeper",
+     "id": 49851228
+    },
+    {
+     "name": "W. Kannemann",
+     "number": 4,
+     "position": "Defender",
+     "id": 397180
+    },
+    {
+     "name": "F. Krovinović",
+     "number": 10,
+     "position": "Midfielder",
+     "id": 92568
+    },
+    {
+     "name": "Dodi",
+     "number": 17,
+     "position": "Midfielder",
+     "id": 1660708
+    },
+    {
+     "name": "Matheus Nascimento",
+     "number": 30,
+     "position": "Forward",
+     "id": 43380155
+    },
+    {
+     "name": "Marcos Rocha",
+     "number": 14,
+     "position": "Defender",
+     "id": 1596630
+    },
+    {
+     "name": "Bernardo Zortea",
+     "number": 50,
+     "position": "Midfielder",
+     "id": 82199348
+    },
+    {
+     "name": "Caio Paulista",
+     "number": 38,
+     "position": "Defender",
+     "id": 1695001
+    },
+    {
+     "name": "Wagner Leonardo",
+     "number": 3,
+     "position": "Defender",
+     "id": 1609027
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Weverton",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 388164
+     }
+    ],
+    [
+     {
+      "name": "Marlon",
+      "number": 23,
+      "position": "Defender",
+      "id": 1659903
+     },
+     {
+      "name": "F. Balbuena",
+      "number": 2,
+      "position": "Defender",
+      "id": 402654
+     },
+     {
+      "name": "Gustavo Martins",
+      "number": 6,
+      "position": "Defender",
+      "id": 49083741
+     },
+     {
+      "name": "João Pedro",
+      "number": 18,
+      "position": "Defender",
+      "id": 60368
+     }
+    ],
+    [
+     {
+      "name": "E. Noriega",
+      "number": 8,
+      "position": "Midfielder",
+      "id": 32061855
+     }
+    ],
+    [
+     {
+      "name": "F. Amuzu",
+      "number": 9,
+      "position": "Midfielder",
+      "id": 230545
+     },
+     {
+      "name": "Wallace",
+      "number": 82,
+      "position": "Midfielder",
+      "id": 73243079
+     },
+     {
+      "name": "M. Villasanti",
+      "number": 20,
+      "position": "Midfielder",
+      "id": 11361280
+     },
+     {
+      "name": "J. Enamorado",
+      "number": 99,
+      "position": "Midfielder",
+      "id": 2192330
+     }
+    ],
+    [
+     {
+      "name": "Carlos Vinícius",
+      "number": 95,
+      "position": "Forward",
+      "id": 16898
+     }
+    ]
+   ],
+   "id": 111414,
+   "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+   "name": "Gremio"
+  },
+  "awayTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Mamady Cisse",
+     "number": 39,
+     "position": "Midfielder",
+     "id": 99046710
+    },
+    {
+     "name": "Vitão",
+     "number": 40,
+     "position": "Defender",
+     "id": 83022702
+    },
+    {
+     "name": "Gustavo Scarpa",
+     "number": 10,
+     "position": "Midfielder",
+     "id": 1598240
+    },
+    {
+     "name": "Everson",
+     "number": 22,
+     "position": "Goalkeeper",
+     "id": 1606612
+    },
+    {
+     "name": "A. Minda",
+     "number": 27,
+     "position": "Forward",
+     "id": 45192049
+    },
+    {
+     "name": "Igor Gomes",
+     "number": 17,
+     "position": "Midfielder",
+     "id": 1604841
+    },
+    {
+     "name": "T. Pérez",
+     "number": 25,
+     "position": "Midfielder",
+     "id": 66741738
+    },
+    {
+     "name": "A. Preciado",
+     "number": 23,
+     "position": "Defender",
+     "id": 416017
+    },
+    {
+     "name": "Dudu",
+     "number": 92,
+     "position": "Forward",
+     "id": 1600333
+    },
+    {
+     "name": "K. Pascini",
+     "number": 36,
+     "position": "Defender",
+     "id": 98136738
+    },
+    {
+     "name": "Natanael",
+     "number": 2,
+     "position": "Defender",
+     "id": 31789604
+    },
+    {
+     "name": "Caua",
+     "number": 29,
+     "position": "Forward",
+     "id": 98132713
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Gabriel Delfim",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 50115429
+     }
+    ],
+    [
+     {
+      "name": "Renan Lodi",
+      "number": 6,
+      "position": "Defender",
+      "id": 1629796
+     },
+     {
+      "name": "Vitor Hugo",
+      "number": 14,
+      "position": "Defender",
+      "id": 4894232
+     },
+     {
+      "name": "Léo Duarte",
+      "number": 3,
+      "position": "Defender",
+      "id": 1635914
+     },
+     {
+      "name": "A. Franco",
+      "number": 21,
+      "position": "Defender",
+      "id": 2634114
+     }
+    ],
+    [
+     {
+      "name": "K. Castaño",
+      "number": 15,
+      "position": "Midfielder",
+      "id": 46624466
+     },
+     {
+      "name": "Maycon",
+      "number": 8,
+      "position": "Midfielder",
+      "id": 110761
+     }
+    ],
+    [
+     {
+      "name": "Bernard",
+      "number": 11,
+      "position": "Midfielder",
+      "id": 3020675
+     },
+     {
+      "name": "Victor Hugo",
+      "number": 30,
+      "position": "Midfielder",
+      "id": 56731885
+     },
+     {
+      "name": "T. Cuello",
+      "number": 28,
+      "position": "Midfielder",
+      "id": 971145
+     }
+    ],
+    [
+     {
+      "name": "Lyanco",
+      "number": 13,
+      "position": "Forward",
+      "id": 4906790
+     }
+    ]
+   ],
+   "id": 904546,
+   "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+   "name": "Atletico-MG"
+  }
+ },
+ "_coletado_em": "2026-11-03T01:15:28.644167+00:00"
+}
