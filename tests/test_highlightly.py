@@ -331,3 +331,85 @@ def test_disputa_de_penaltis_direto_apos_os_90():
     assert all(hl._eh_disputa(m, e) for e in disputa)
     m["state"]["score"]["penalties"] = None  # sem disputa: nenhum pênalti é cobrança
     assert not any(hl._eh_disputa(m, e) for e in disputa)
+
+
+def _lineup(n=11):
+    jogadores = [{"id": i, "name": f"J{i}", "number": i, "position": "Midfielder"} for i in range(1, n + 1)]
+    return {"formation": "4-3-3" if n else "Unknown", "initialLineup": [jogadores] if n else [], "substitutes": []}
+
+
+class _ClienteFalso:
+    respostas = []
+    chamadas = 0
+
+    def __init__(self, *a, **k):
+        pass
+
+    def get(self, caminho, **k):
+        type(self).chamadas += 1
+        return type(self).respostas.pop(0)
+
+
+def _oficial(tmp_path, monkeypatch, respostas):
+    jogos = [_jogo(1, "2026-11-04T22:30:00.000Z")]
+    _cenario(tmp_path, monkeypatch, jogos, lista_coletada="2026-11-04T18:00:00+00:00")
+    _ClienteFalso.respostas, _ClienteFalso.chamadas = list(respostas), 0
+    monkeypatch.setattr(hl, "ClienteHighlightly", _ClienteFalso)
+
+
+def test_escalacao_oficial_so_consulta_na_janela(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+    _oficial(tmp_path, monkeypatch, [])
+    assert hl.verificar_escalacao_oficial(datetime(2026, 11, 4, 20, 59, tzinfo=timezone.utc)) is None  # 91 min antes
+    assert hl.verificar_escalacao_oficial(datetime(2026, 11, 4, 23, 1, tzinfo=timezone.utc)) is None  # 31 min depois
+    assert _ClienteFalso.chamadas == 0
+
+
+def test_escalacao_oficial_vazia_nao_publica_e_completa_para_de_consultar(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+    from coleta.api import ler_raw
+    vazio, um_time = {"homeTeam": _lineup(0), "awayTeam": _lineup(0)}, {"homeTeam": _lineup(), "awayTeam": _lineup(0)}
+    _oficial(tmp_path, monkeypatch, [vazio, um_time, um_time, {"homeTeam": _lineup(), "awayTeam": _lineup()}])
+    agora = datetime(2026, 11, 4, 21, 30, tzinfo=timezone.utc)
+    assert hl.verificar_escalacao_oficial(agora) is None and ler_raw("oficial_1") is None
+    assert "escalação" in hl.verificar_escalacao_oficial(agora)  # saiu a de um time: já publica
+    assert hl.verificar_escalacao_oficial(agora) is None  # sem novidade
+    assert hl.verificar_escalacao_oficial(agora)  # saiu a do outro
+    n = _ClienteFalso.chamadas
+    assert hl.verificar_escalacao_oficial(agora) is None and _ClienteFalso.chamadas == n  # completa: não gasta mais
+
+
+def test_escalacao_oficial_com_erro_nao_atrapalha_a_coleta(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+
+    class Falha(_ClienteFalso):
+        def get(self, *a, **k):
+            raise hl.ErroAPI("HTTP 500")
+
+    _oficial(tmp_path, monkeypatch, [])
+    monkeypatch.setattr(hl, "ClienteHighlightly", Falha)
+    assert hl.verificar_escalacao_oficial(datetime(2026, 11, 4, 21, 30, tzinfo=timezone.utc)) is None
+
+
+def test_renovacao_perto_do_inicio(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+    from coleta.api import salvar_raw
+    _cenario(tmp_path, monkeypatch, [_jogo(1, "2026-11-04T22:30:00.000Z")], lista_coletada="2026-11-04T18:00:00+00:00")
+    salvar_raw("proximo_1", {"data": {}, "_coletado_em": "2026-11-04T19:00:00+00:00"}, tmp_path)
+    assert hl.planejar(datetime(2026, 11, 4, 20, 0, tzinfo=timezone.utc))[0] is False  # 2h30 antes: vale o intervalo de 6 h
+    assert hl.planejar(datetime(2026, 11, 4, 21, 0, tzinfo=timezone.utc))[0] is True  # 1h30 antes, dado com 2 h
+    salvar_raw("proximo_1", {"data": {}, "_coletado_em": "2026-11-04T20:45:00+00:00"}, tmp_path)
+    assert hl.planejar(datetime(2026, 11, 4, 21, 15, tzinfo=timezone.utc))[0] is False  # renovado há 30 min
+
+
+def test_oficial_vira_tabela_so_ate_o_jogo_ser_baixado(tmp_path, monkeypatch):
+    from coleta import extras
+    from coleta.api import salvar_raw
+    _cenario(tmp_path, monkeypatch, [])
+    time_a = {"id": config.TEAM_ID, **_lineup()}
+    salvar_raw("oficial_1", {"data": {"homeTeam": time_a, "awayTeam": {"id": 9, **_lineup(0)}}, "_coletado_em": "2026-11-04T21:00:00+00:00"}, tmp_path)
+    linhas = extras.linhas_oficiais()
+    assert len(linhas) == 11 and linhas[0]["coletado_em"].startswith("2026-11-04T21") and linhas[0]["eh_flamengo"]
+    assert extras.linhas_escalacoes()[0] == []  # não se mistura com as escalações dos jogos
+    salvar_raw("partida_1", {"match": {"id": 1}, "_coletado_em": "2026-11-05T01:00:00+00:00"}, tmp_path)
+    assert extras.linhas_oficiais() == []

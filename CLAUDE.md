@@ -187,6 +187,11 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
     EXIGE publicar as regras do Firestore (`firebase deploy --only firestore:rules`).
   - Testes de regra de negócio com temporada inventada (`tests/front/test_regras.py`): suspensão, pendurado, amarelo de
     outra competição, ausente × volta de suspensão, artilharia, pênaltis, expulsão fora da relação, disputa, sequências.
+- Escalação oficial no pré-jogo (04/11/2026): `coletar planejar` chama `verificar_escalacao_oficial` de 90 min antes a 30 min
+  depois do início (1 req por execução, até os 2 times terem 11 titulares; a fonte devolve listas vazias antes, confirmado 11 h
+  antes do Grêmio). Raw `oficial_<id>` (hora em `_coletado_em` mede quando a fonte publicou) → tabela `escalacao_oficial`, só até
+  o jogo ser baixado; `preview.js` troca a provável time a time e tira da lista de desfalques quem está na relação. Só publica
+  quando sai novidade. Nas 2 h finais o detalhe do jogo renova com 1 h+ (antes a última renovação era cerca de 5h10 antes do início).
 - Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
 - Aba **Números** (16/10/2026, `numeros.js`; conferida com a planilha do Rafael "Dados Flamengo temporada 2026.xlsx"):
   artilharia (pênaltis entre parênteses), assistências, G+A, mais utilizados, sem sofrer gol (por goleiro), saiu na

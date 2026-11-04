@@ -93,6 +93,7 @@ def exportar(tabelas: dict[str, list[dict]], validacao: dict, destino: Path | No
         "confrontos": tabelas.get("confrontos", []),
         "forma_adversario": tabelas.get("forma_adversario", []),
         "escalacoes": tabelas.get("escalacoes", []),
+        "escalacao_oficial": tabelas.get("escalacao_oficial", []),
         "classificacao": tabelas.get("classificacao", []),
         "carreira": tabelas.get("carreira", []),
         "liga": tabelas.get("liga", []),

@@ -6,8 +6,9 @@
 #   - em push no painel ou na coleta (site/, coleta/, firebase.json): gera os dados e publica, sem usar a API.
 # Só as respostas brutas da Highlightly, as fotos e os logos ficam no Git; o JSON do site e os CSVs são
 # gerados a cada publicação por `coletar processar` (não gasta cota), para o repositório não inchar.
-# Cada execução agendada primeiro decide, sem gastar cota da API, se há algo para coletar
-# (`coletar planejar`: jogo que acabou há pouco, ou atualização diária 24 h após a última coleta).
+# Cada execução agendada primeiro decide se há algo para coletar (`coletar planejar`: jogo que acabou há pouco, ou
+# atualização diária 24 h após a última coleta). Não gasta cota, salvo de 90 min antes a 30 min depois do início de um
+# jogo: 1 requisição por execução até sair a escalação oficial, que então é publicada.
 # Se não houver, termina em segundos sem coletar nem publicar.
 #
 # Temporadas passadas: rode localmente `python -m coleta.coletar tudo --fonte api-football --temporada 2024`.

@@ -201,7 +201,15 @@ def _jogador_escalacao(p: dict, **extra) -> dict:
             "posicao": POSICOES.get(p.get("position"), p.get("position")), **extra}
 
 
-def linhas_escalacoes(ids_partidas=None, team_id: int | None = None) -> tuple[list[dict], dict]:
+def linhas_oficiais() -> list[dict]:
+    """Escalação oficial dos jogos que ainda não têm os dados baixados (depois disso vale a do relatório do jogo)."""
+    ids = [int(a.stem.removeprefix("oficial_")) for a in config.RAW_DIR.glob("oficial_*.json")]
+    ids = sorted(i for i in ids if ler_raw(f"partida_{i}") is None)
+    return [{**linha, "coletado_em": ler_raw(f"oficial_{linha['id_partida']}")["_coletado_em"]}
+            for linha in linhas_escalacoes(ids, prefixo="oficial")[0]]
+
+
+def linhas_escalacoes(ids_partidas=None, team_id: int | None = None, prefixo: str = "escalacao") -> tuple[list[dict], dict]:
     """Escalações (titulares por linha do campo + banco) e {jogo: (formação do Flamengo, do adversário)}.
     Sem lista de ids, usa todas as salvas (inclui o último jogo dos próximos adversários: provável escalação)."""
     team_id = team_id or config.TEAM_ID
@@ -209,7 +217,7 @@ def linhas_escalacoes(ids_partidas=None, team_id: int | None = None) -> tuple[li
     if ids_partidas is None:
         ids_partidas = sorted(int(a.stem.removeprefix("escalacao_")) for a in config.RAW_DIR.glob("escalacao_*.json"))
     for pid in ids_partidas:
-        dados = (ler_raw(f"escalacao_{pid}") or {}).get("data")
+        dados = (ler_raw(f"{prefixo}_{pid}") or {}).get("data")
         if not dados:
             continue
         fla = adv = None

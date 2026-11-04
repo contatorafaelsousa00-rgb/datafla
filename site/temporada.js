@@ -47,14 +47,15 @@ export function renderProximo() {
   const clima = p.clima ? `${CLIMA[p.clima] ?? p.clima}${p.temperatura != null ? `, ${num(p.temperatura, 0)} °C` : ""}` : null;
   const cartao = $("card-proximo");
   cartao.classList.add("clicavel");
-  cartao.title = "Ver desfalques, prováveis escalações e mais";
+  const temOficial = (D.bruto.escalacao_oficial ?? []).some((e) => e.id_partida === p.id_partida && e.eh_flamengo && e.titular);
+  cartao.title = temOficial ? "Ver a escalação oficial, desfalques e mais" : "Ver desfalques, prováveis escalações e mais";
   cartao.onclick = () => { trocarAba("jogos"); abrirProximo(base.id_partida); };
   preencher($("card-proximo"),
     h("div", { class: "proximo-topo" }, h("span", { class: "proximo-rotulo" }, "Próximo jogo"), cont),
     h("div", { class: "proximo-confronto" }, lado(casa),
       h("div", { class: "proximo-meio" }, h("b", {}, horaBR(p.data_utc)), h("span", {}, diaBR(p.data_utc))), lado(fora)),
     h("div", { class: "proximo-info" }, tagComp(p.competicao),
-      ...[p.rodada, local ?? (p.mando === "Casa" ? "em casa" : "fora de casa"), p.arbitro ? `Árbitro: ${p.arbitro}` : null, clima,
+      ...[temOficial ? "Escalação oficial disponível" : null, p.rodada, local ?? (p.mando === "Casa" ? "em casa" : "fora de casa"), p.arbitro ? `Árbitro: ${p.arbitro}` : null, clima,
         transmissaoDe(p.id_partida) ? `📺 ${transmissaoDe(p.id_partida)}` : null]
         .filter(Boolean).map((t) => h("span", {}, t))),
     barraProbabilidade(p) ?? "",

@@ -141,6 +141,22 @@ function provavelFlamengo(p, fora, voltam = []) {
     linhas: linhas.filter(Boolean).map((l) => l.sort((a, b) => a.ordem - b.ordem)) };
 }
 
+// Escalação oficial, se já saiu: consultada na fonte a partir de 90 min antes do jogo. Só vale o time com os 11 titulares.
+function escalacaoOficial(idPartida) {
+  const linhas = (D.bruto.escalacao_oficial ?? []).filter((e) => e.id_partida === idPartida);
+  const time = (ehFla) => {
+    const doTime = linhas.filter((e) => e.eh_flamengo === ehFla);
+    const xi = doTime.filter((e) => e.titular);
+    if (xi.length < 11) return null;
+    const campo = [];
+    for (const e of xi) (campo[e.linha] ??= []).push({ numero: e.numero, nome: e.jogador, id: e.jogador_id, ordem: e.ordem });
+    return { formacao: xi[0].formacao === "Unknown" ? "" : xi[0].formacao, ids: new Set(doTime.map((e) => e.jogador_id)),
+      banco: doTime.filter((e) => !e.titular).sort((a, b) => a.ordem - b.ordem).map((e) => e.jogador),
+      linhas: campo.filter(Boolean).map((l) => l.sort((a, b) => a.ordem - b.ordem)) };
+  };
+  return { fla: time(true), adv: time(false), coletado_em: linhas[0]?.coletado_em };
+}
+
 // Provável escalação do adversário: a do último jogo dele
 function provavelAdversario(p) {
   const ultimo = (D.bruto.forma_adversario ?? []).filter((c) => c.adversario_id === p.adversario_id)
@@ -160,7 +176,12 @@ const listaNomes = (itens, vazioTexto) => (itens.length
 
 // Elementos do pré-jogo + função que desenha o campinho depois que eles estão na tela (o desenho mede a largura)
 export function secoesPreview(p) {
-  const { suspensos, pendurados, lesionados, ausentes, voltam } = desfalques(p);
+  const oficial = escalacaoOficial(p.id_partida);
+  // Quem está na relação oficial não é desfalque, mesmo que a estimativa diga o contrário
+  const naoRelacionado = (x) => !oficial.fla?.ids.has(x.id);
+  const est = desfalques(p);
+  const [suspensos, lesionados, ausentes, voltam] = [est.suspensos, est.lesionados, est.ausentes, est.voltam].map((l) => l.filter(naoRelacionado));
+  const { pendurados } = est;
   const fora = new Set([...suspensos, ...lesionados, ...ausentes].map((x) => x.id));
   const penduradosIds = new Set(pendurados.map((x) => x.id));
   const fla = provavelFlamengo(p, fora, voltam), adv = provavelAdversario(p);
@@ -175,20 +196,27 @@ export function secoesPreview(p) {
   const pts = (l) => conta(l, "V") * 3 + conta(l, "E");
 
   const casaPrimeiro = p.mando !== "Fora";
-  const timeFla = fla && { nome: "Flamengo", fla: true, formacao: fla.formacao,
-    linhas: fla.linhas.map((l) => l.map((j) => ({ ...j, pendurado: penduradosIds.has(j.id) }))) };
-  const timeAdv = adv?.linhas && { nome: p.adversario, fla: false, formacao: adv.formacao, linhas: adv.linhas };
+  const baseFla = oficial.fla ?? fla;
+  const timeFla = baseFla && { nome: "Flamengo", fla: true, formacao: baseFla.formacao,
+    linhas: baseFla.linhas.map((l) => l.map((j) => ({ ...j, pendurado: penduradosIds.has(j.id) }))) };
+  const baseAdv = oficial.adv ?? (adv?.linhas && adv);
+  const timeAdv = baseAdv && { nome: p.adversario, fla: false, formacao: baseAdv.formacao, linhas: baseAdv.linhas };
+  const hora = oficial.coletado_em && new Date(oficial.coletado_em).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Sao_Paulo" });
+  const banco = [["Flamengo", oficial.fla], [p.adversario, oficial.adv]].filter(([, t]) => t?.banco.length);
 
   const elementos = [
-    h("div", { class: "bloco" }, h("h3", {}, "Prováveis escalações"),
+    h("div", { class: "bloco" }, h("h3", {}, oficial.fla && oficial.adv ? "Escalações oficiais" : oficial.fla || oficial.adv ? "Escalações" : "Prováveis escalações"),
       h("p", { class: "sutil" }, [
-        fla ? `Flamengo: formação do último jogo (${data(fla.base.data_utc)}, ${fla.base.adversario}), com o mais usado de cada posição ${naNo(p.competicao)}` + (fla.trocas.length
+        oficial.fla ? `Flamengo: oficial, informada pela fonte (vista às ${hora})${penduradosIds.size ? "; dois cartões amarelos = pendurado" : ""}`
+        : fla ? `Flamengo: formação do último jogo (${data(fla.base.data_utc)}, ${fla.base.adversario}), com o mais usado de cada posição ${naNo(p.competicao)}` + (fla.trocas.length
           ? `, trocando ${fla.trocas.map(([s, e, m]) => `${s} por ${e}${m ? ` (${m})` : ""}`).join(", ")}`
             + (fla.trocas.some((t) => !t[2]) ? " (círculo tracejado = substituto provável)" : "") : "")
           + (penduradosIds.size ? "; dois cartões amarelos = pendurado" : "") : "Flamengo: sem escalação recente",
-        adv?.linhas ? `${p.adversario}: a do último jogo (${data(adv.ultimo.data_utc)}, contra ${adv.ultimo.oponente})`
+        oficial.adv ? `${p.adversario}: oficial, informada pela fonte (vista às ${hora})`
+        : adv?.linhas ? `${p.adversario}: a do último jogo (${data(adv.ultimo.data_utc)}, contra ${adv.ultimo.oponente})`
           : `${p.adversario}: escalação do último jogo ainda não baixada`].join(" · ")),
-      timeFla && timeAdv ? campo : timeFla ? campo : vazio("Sem escalações para estimar.")),
+      timeFla && timeAdv ? campo : timeFla ? campo : vazio("Sem escalações para estimar."),
+      banco.map(([nome, t]) => h("p", { class: "sutil" }, h("b", {}, `Banco do ${nome}: `), t.banco.join(", ")))),
     h("div", { class: "detalhe-grade" },
       h("div", {}, h("h3", {}, "Desfalques do Flamengo"),
         h("p", { class: "sutil" }, "Estimativa pelos cartões na competição (3 amarelos = suspensão), pelo perfil dos jogadores e por quem ficou fora dos últimos jogos."),

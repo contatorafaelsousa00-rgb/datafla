@@ -178,6 +178,7 @@ def cmd_processar():
     if _hl() and jogos:
         tabelas.update(highlightly.linhas_proximos(jogos["data"]))
         tabelas["escalacoes"], formacoes = extras.linhas_escalacoes()
+        tabelas["escalacao_oficial"] = extras.linhas_oficiais()
         for p in tabelas["partidas"]:
             p["formacao"], p["formacao_adversario"] = formacoes.get(p["id_partida"], (None, None))
         tabelas["classificacao"] = extras.linhas_classificacao(jogos["data"])

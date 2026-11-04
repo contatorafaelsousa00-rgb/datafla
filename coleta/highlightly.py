@@ -189,8 +189,8 @@ def planejar(agora: datetime | None = None) -> tuple[bool, str]:
     """Decide, sem chamar a API, se vale coletar agora (o workflow é disparado a cada 30 min).
 
     Coleta quando: um jogo já deveria ter terminado (início + 2h10) e ainda não foi baixado; o próximo jogo
-    começa em menos de 24 h e a previsão dele tem 6 h ou mais; ou a última coleta tem 24 h (atualização diária,
-    que também recoleta os jogos das últimas 48 h).
+    começa em menos de 24 h e a previsão dele tem 6 h ou mais (1 h ou mais nas 2 h finais); ou a última coleta tem
+    24 h (atualização diária, que também recoleta os jogos das últimas 48 h).
     """
     agora = agora or datetime.now(timezone.utc)
     lista = ler_raw(ARQ_JOGOS)
@@ -207,7 +207,7 @@ def planejar(agora: datetime | None = None) -> tuple[bool, str]:
             rival = jogo["awayTeam"]["name"] if jogo["homeTeam"]["id"] == config.TEAM_ID else jogo["homeTeam"]["name"]
             return True, f"jogo contra {rival} já terminou e ainda não foi baixado"
     prox = proximo_jogo(lista["data"], agora)
-    if prox and agora < _data(prox) <= agora + timedelta(hours=24) and _vencido(f"proximo_{prox['id']}", HORAS_PROXIMO, agora):
+    if prox and agora < _data(prox) <= agora + timedelta(hours=24) and _vencido(f"proximo_{prox['id']}", _horas_proximo(prox, agora), agora):
         rival = prox["awayTeam"]["name"] if prox["homeTeam"]["id"] == config.TEAM_ID else prox["homeTeam"]["name"]
         return True, f"jogo contra {rival} em menos de 24 h: renova previsão, árbitro e clima"
     from .extras import HORAS_LIGA_RODADA, jogos_sem_resultado
@@ -237,8 +237,40 @@ def situacao_coleta() -> dict:
     return {"encerrados": len(encerrados), "baixados": baixados, "pendentes": len(encerrados) - baixados}
 
 
+def _lados_escalados(dados: dict | None) -> int:
+    """Quantos times da resposta de /lineups já têm os 11 titulares (antes de sair, a fonte devolve listas vazias)."""
+    return sum(sum(len(linha) for linha in ((dados or {}).get(lado) or {}).get("initialLineup") or []) >= 11
+               for lado in ("homeTeam", "awayTeam"))
+
+
+def verificar_escalacao_oficial(agora: datetime | None = None) -> str | None:
+    """Perto do próximo jogo, pergunta à fonte (1 requisição) se saiu a escalação. Fica em oficial_<id>, à parte da
+    escalacao_<id> que é baixada depois do jogo. Devolve o motivo para publicar, ou None se não há novidade."""
+    agora = agora or datetime.now(timezone.utc)
+    prox = proximo_jogo((ler_raw(ARQ_JOGOS) or {}).get("data") or [], agora)
+    if not prox or not _data(prox) - ANTES_ESCALACAO <= agora <= _data(prox) + DEPOIS_ESCALACAO:
+        return None
+    nome = f"oficial_{prox['id']}"
+    ja_tinha = _lados_escalados((ler_raw(nome) or {}).get("data"))
+    if ja_tinha == 2:
+        return None
+    try:
+        dados = ClienteHighlightly().get(f"lineups/{prox['id']}")
+    except (ErroAPI, RuntimeError, requests.RequestException) as e:  # não pode impedir a coleta normal; tenta na próxima execução
+        print(f"Escalação oficial: {e}")
+        return None
+    if _lados_escalados(dados) <= ja_tinha:
+        return None
+    salvar_raw(nome, {"data": dados, "_coletado_em": agora.isoformat()})
+    rival = prox["awayTeam"]["name"] if prox["homeTeam"]["id"] == config.TEAM_ID else prox["homeTeam"]["name"]
+    return f"saiu a escalação do jogo contra {rival}"
+
+
 def cmd_planejar(forcar: bool = False) -> int:
     coletar, motivo = (True, "coleta forçada") if forcar else planejar()
+    escalacao = verificar_escalacao_oficial()
+    if escalacao:
+        coletar, motivo = True, escalacao
     print(f"{'Coletar' if coletar else 'Pular'}: {motivo}.")
     resumo_github(f"**{'Coletar' if coletar else 'Pular'}:** {motivo}.\n")
     saida = os.environ.get("GITHUB_OUTPUT")
@@ -336,6 +368,9 @@ def cmd_detalhes(api: ClienteHighlightly):
 N_PROXIMOS = 3                 # quantos jogos à frente recebem detalhe
 JANELA_PROXIMOS_DIAS = 21      # além do primeiro, só jogos nas próximas 3 semanas
 HORAS_PROXIMO = 6              # renovação do detalhe do jogo mais próximo
+HORAS_PROXIMO_FINAL = 1        # ... nas 2 h antes do início (árbitro, clima e previsão de última hora)
+ANTES_ESCALACAO = timedelta(minutes=90)  # janela em que se pergunta pela escalação oficial (a fonte devolve vazio antes)
+DEPOIS_ESCALACAO = timedelta(minutes=30)
 HORAS_PROXIMOS_DEMAIS = 24     # renovação do detalhe dos seguintes, dos confrontos e da forma do adversário
 
 
@@ -365,13 +400,18 @@ def _vencido(nome: str, horas: float, agora: datetime | None = None) -> bool:
     return agora - datetime.fromisoformat(salvo["_coletado_em"]) >= timedelta(hours=horas)
 
 
+def _horas_proximo(jogo: dict, agora: datetime) -> int:
+    return HORAS_PROXIMO_FINAL if agora < _data(jogo) <= agora + timedelta(hours=2) else HORAS_PROXIMO
+
+
 def tarefas_proximos(jogos: list[dict], agora: datetime | None = None) -> list[tuple[str, str, dict]]:
     """(arquivo, endpoint, parâmetros) que estão vencidos, do jogo mais próximo para o mais distante."""
     tarefas = []
+    agora = agora or datetime.now(timezone.utc)
     for ordem, jogo in enumerate(proximos_jogos(jogos, agora)):
         adv = _adversario_id(jogo)
         candidatos = [
-            (f"proximo_{jogo['id']}", f"matches/{jogo['id']}", {}, HORAS_PROXIMO if ordem == 0 else HORAS_PROXIMOS_DEMAIS),
+            (f"proximo_{jogo['id']}", f"matches/{jogo['id']}", {}, _horas_proximo(jogo, agora) if ordem == 0 else HORAS_PROXIMOS_DEMAIS),
             (f"h2h_{adv}", "head-2-head", {"teamIdOne": config.TEAM_ID, "teamIdTwo": adv}, HORAS_PROXIMOS_DEMAIS),
             (f"forma_{adv}", "last-five-games", {"teamId": adv}, HORAS_PROXIMOS_DEMAIS),
         ]

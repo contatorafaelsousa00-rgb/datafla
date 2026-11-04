@@ -98,6 +98,29 @@ def test_desfalques_do_pre_jogo(regras):
     assert r["voltam"] == ["Cumpriu"]  # ausência por suspensão: volta, e não é "fora dos últimos jogos"
 
 
+def test_escalacao_oficial_substitui_a_provavel(regras):
+    r = regras.evaluate("""async () => {
+      const { D } = await import('/comum.js');
+      const { secoesPreview } = await import('/preview.js');
+      const p = D.calendario.find((c) => c.id_partida === 5);
+      const texto = () => secoesPreview(p).elementos.map((e) => e.textContent).join(" ");
+      const antes = texto();
+      const linha = (id, nome, fla, titular, ordem) => ({ id_partida: 5, jogador_id: id, jogador: nome, numero: id, eh_flamengo: fla, titular,
+        linha: titular ? 0 : null, ordem, formacao: "4-3-3", coletado_em: "2026-08-29T21:00:00+00:00" });
+      // Expulso (estimado como suspenso) está na relação oficial; time incompleto não vale como oficial
+      const xi = [13, ...Array.from({ length: 10 }, (_, i) => 100 + i)].map((id, i) => linha(id, id === 13 ? "Expulso" : `T${id}`, true, true, i));
+      D.bruto.escalacao_oficial = [...xi, linha(200, "Reserva", true, false, 0), linha(300, "Rival1", false, true, 0)];
+      const depois = texto();
+      D.bruto.escalacao_oficial = [];
+      return { antes, depois };
+    }""")
+    assert "Prováveis escalações" in r["antes"] and "expulso no último jogo" in r["antes"]
+    assert "Prováveis" not in r["depois"] and "Flamengo: oficial" in r["depois"]
+    assert "Banco do Flamengo: Reserva" in r["depois"]
+    assert "expulso no último jogo" not in r["depois"]  # quem está na relação oficial não é desfalque
+    assert "Rival 5: oficial" not in r["depois"]  # adversário com 1 titular segue como estimativa
+
+
 def test_numeros_por_jogador_e_sequencias(regras):
     r = regras.evaluate("""async () => {
       const { D } = await import('/comum.js');
