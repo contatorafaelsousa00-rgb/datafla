@@ -11,8 +11,8 @@
    "nationality": "Brazil"
   },
   "forecast": {
-   "status": "cloudy",
-   "temperature": "26.73°C"
+   "status": "partly cloudy night",
+   "temperature": "24.98°C"
   },
   "events": [],
   "predictions": {
@@ -105,6 +105,17 @@
       "draw": "12.91%",
       "home": "80.06%"
      }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Gremio.",
+     "generatedAt": "2026-11-04T09:15:34.516Z",
+     "probabilities": {
+      "away": "6.71%",
+      "draw": "12.26%",
+      "home": "81.03%"
+     }
     }
    ]
   },
@@ -164,5 +175,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-11-04T04:45:28.145868+00:00"
+ "_coletado_em": "2026-11-04T10:53:05.241696+00:00"
 }
