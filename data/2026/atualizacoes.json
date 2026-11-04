@@ -779,5 +779,17 @@
   "requisicoes": 3,
   "cota_restante": 64,
   "erro": null
+ },
+ {
+  "quando": "2026-11-04T22:00:40+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "saiu a escalação do jogo contra Gremio",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 63,
+  "pendentes": 0,
+  "requisicoes": 2,
+  "cota_restante": 60,
+  "erro": null
  }
 ]
