@@ -791,5 +791,23 @@
   "requisicoes": 2,
   "cota_restante": 60,
   "erro": null
+ },
+ {
+  "quando": "2026-11-05T00:45:54+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Gremio já terminou e ainda não foi baixado",
+  "novos": [
+   {
+    "adversario": "Gremio",
+    "data_utc": "2026-11-04T22:30:00.000Z",
+    "competicao": "Serie A"
+   }
+  ],
+  "recoletados": [],
+  "encerrados": 64,
+  "pendentes": 0,
+  "requisicoes": 18,
+  "cota_restante": 82,
+  "erro": null
  }
 ]

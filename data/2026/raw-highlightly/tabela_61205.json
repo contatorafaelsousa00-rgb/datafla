@@ -27,14 +27,14 @@
        "name": "Flamengo"
       },
       "total": {
-       "wins": 22,
+       "wins": 23,
        "draws": 7,
-       "games": 33,
+       "games": 34,
        "loses": 4,
-       "scoredGoals": 68,
-       "receivedGoals": 28
+       "scoredGoals": 71,
+       "receivedGoals": 29
       },
-      "points": 73,
+      "points": 76,
       "position": 1
      },
      {
@@ -148,10 +148,10 @@
       "home": {
        "wins": 9,
        "draws": 5,
-       "games": 16,
-       "loses": 2,
-       "scoredGoals": 27,
-       "receivedGoals": 15
+       "games": 17,
+       "loses": 3,
+       "scoredGoals": 28,
+       "receivedGoals": 18
       },
       "team": {
        "id": 114818,
@@ -161,10 +161,10 @@
       "total": {
        "wins": 15,
        "draws": 9,
-       "games": 33,
-       "loses": 9,
-       "scoredGoals": 50,
-       "receivedGoals": 40
+       "games": 34,
+       "loses": 10,
+       "scoredGoals": 51,
+       "receivedGoals": 43
       },
       "points": 54,
       "position": 5
@@ -338,10 +338,10 @@
       "away": {
        "wins": 5,
        "draws": 4,
-       "games": 16,
-       "loses": 7,
+       "games": 17,
+       "loses": 8,
        "scoredGoals": 18,
-       "receivedGoals": 29
+       "receivedGoals": 30
       },
       "home": {
        "wins": 6,
@@ -359,13 +359,79 @@
       "total": {
        "wins": 11,
        "draws": 9,
-       "games": 33,
-       "loses": 13,
+       "games": 34,
+       "loses": 14,
        "scoredGoals": 40,
-       "receivedGoals": 50
+       "receivedGoals": 51
       },
       "points": 42,
       "position": 11
+     },
+     {
+      "away": {
+       "wins": 3,
+       "draws": 5,
+       "games": 16,
+       "loses": 8,
+       "scoredGoals": 18,
+       "receivedGoals": 26
+      },
+      "home": {
+       "wins": 8,
+       "draws": 3,
+       "games": 17,
+       "loses": 6,
+       "scoredGoals": 25,
+       "receivedGoals": 24
+      },
+      "team": {
+       "id": 113967,
+       "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+       "name": "Vasco DA Gama"
+      },
+      "total": {
+       "wins": 11,
+       "draws": 8,
+       "games": 33,
+       "loses": 14,
+       "scoredGoals": 43,
+       "receivedGoals": 50
+      },
+      "points": 41,
+      "position": 12
+     },
+     {
+      "away": {
+       "wins": 3,
+       "draws": 4,
+       "games": 17,
+       "loses": 10,
+       "scoredGoals": 15,
+       "receivedGoals": 26
+      },
+      "home": {
+       "wins": 7,
+       "draws": 6,
+       "games": 17,
+       "loses": 4,
+       "scoredGoals": 24,
+       "receivedGoals": 22
+      },
+      "team": {
+       "id": 6679432,
+       "logo": "https://highlightly.net/soccer/images/teams/6679432.png",
+       "name": "Mirassol"
+      },
+      "total": {
+       "wins": 10,
+       "draws": 10,
+       "games": 34,
+       "loses": 14,
+       "scoredGoals": 39,
+       "receivedGoals": 48
+      },
+      "points": 40,
+      "position": 13
      },
      {
       "away": {
@@ -398,40 +464,7 @@
        "receivedGoals": 53
       },
       "points": 39,
-      "position": 12
-     },
-     {
-      "away": {
-       "wins": 2,
-       "draws": 5,
-       "games": 15,
-       "loses": 8,
-       "scoredGoals": 15,
-       "receivedGoals": 25
-      },
-      "home": {
-       "wins": 8,
-       "draws": 3,
-       "games": 17,
-       "loses": 6,
-       "scoredGoals": 25,
-       "receivedGoals": 24
-      },
-      "team": {
-       "id": 113967,
-       "logo": "https://highlightly.net/soccer/images/teams/113967.png",
-       "name": "Vasco DA Gama"
-      },
-      "total": {
-       "wins": 10,
-       "draws": 8,
-       "games": 32,
-       "loses": 14,
-       "scoredGoals": 40,
-       "receivedGoals": 49
-      },
-      "points": 38,
-      "position": 13
+      "position": 14
      },
      {
       "away": {
@@ -464,7 +497,40 @@
        "receivedGoals": 48
       },
       "points": 38,
-      "position": 14
+      "position": 15
+     },
+     {
+      "away": {
+       "wins": 3,
+       "draws": 6,
+       "games": 17,
+       "loses": 8,
+       "scoredGoals": 16,
+       "receivedGoals": 25
+      },
+      "home": {
+       "wins": 6,
+       "draws": 5,
+       "games": 17,
+       "loses": 6,
+       "scoredGoals": 22,
+       "receivedGoals": 17
+      },
+      "team": {
+       "id": 102053,
+       "logo": "https://highlightly.net/soccer/images/teams/102053.png",
+       "name": "Internacional"
+      },
+      "total": {
+       "wins": 9,
+       "draws": 11,
+       "games": 34,
+       "loses": 14,
+       "scoredGoals": 38,
+       "receivedGoals": 42
+      },
+      "points": 38,
+      "position": 16
      },
      {
       "away": {
@@ -491,46 +557,13 @@
       "total": {
        "wins": 9,
        "draws": 10,
-       "games": 33,
-       "loses": 14,
-       "scoredGoals": 37,
-       "receivedGoals": 44
-      },
-      "points": 37,
-      "position": 15
-     },
-     {
-      "away": {
-       "wins": 2,
-       "draws": 4,
-       "games": 16,
-       "loses": 10,
-       "scoredGoals": 13,
-       "receivedGoals": 25
-      },
-      "home": {
-       "wins": 7,
-       "draws": 6,
-       "games": 17,
-       "loses": 4,
-       "scoredGoals": 24,
-       "receivedGoals": 22
-      },
-      "team": {
-       "id": 6679432,
-       "logo": "https://highlightly.net/soccer/images/teams/6679432.png",
-       "name": "Mirassol"
-      },
-      "total": {
-       "wins": 9,
-       "draws": 10,
-       "games": 33,
-       "loses": 14,
-       "scoredGoals": 37,
+       "games": 34,
+       "loses": 15,
+       "scoredGoals": 38,
        "receivedGoals": 47
       },
       "points": 37,
-      "position": 16
+      "position": 17
      },
      {
       "away": {
@@ -563,39 +596,6 @@
        "receivedGoals": 42
       },
       "points": 36,
-      "position": 17
-     },
-     {
-      "away": {
-       "wins": 3,
-       "draws": 6,
-       "games": 17,
-       "loses": 8,
-       "scoredGoals": 16,
-       "receivedGoals": 25
-      },
-      "home": {
-       "wins": 5,
-       "draws": 5,
-       "games": 16,
-       "loses": 6,
-       "scoredGoals": 21,
-       "receivedGoals": 17
-      },
-      "team": {
-       "id": 102053,
-       "logo": "https://highlightly.net/soccer/images/teams/102053.png",
-       "name": "Internacional"
-      },
-      "total": {
-       "wins": 8,
-       "draws": 11,
-       "games": 33,
-       "loses": 14,
-       "scoredGoals": 37,
-       "receivedGoals": 42
-      },
-      "points": 35,
       "position": 18
      },
      {
@@ -643,10 +643,10 @@
       "home": {
        "wins": 3,
        "draws": 5,
-       "games": 15,
-       "loses": 7,
-       "scoredGoals": 21,
-       "receivedGoals": 34
+       "games": 16,
+       "loses": 8,
+       "scoredGoals": 22,
+       "receivedGoals": 36
       },
       "team": {
        "id": 113116,
@@ -656,10 +656,10 @@
       "total": {
        "wins": 4,
        "draws": 9,
-       "games": 32,
-       "loses": 19,
-       "scoredGoals": 32,
-       "receivedGoals": 66
+       "games": 33,
+       "loses": 20,
+       "scoredGoals": 33,
+       "receivedGoals": 68
       },
       "points": 21,
       "position": 20
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-11-03T22:31:12.524921+00:00"
+ "_coletado_em": "2026-11-05T00:45:54.003026+00:00"
 }
