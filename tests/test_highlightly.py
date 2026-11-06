@@ -413,3 +413,43 @@ def test_oficial_vira_tabela_so_ate_o_jogo_ser_baixado(tmp_path, monkeypatch):
     assert extras.linhas_escalacoes()[0] == []  # não se mistura com as escalações dos jogos
     salvar_raw("partida_1", {"match": {"id": 1}, "_coletado_em": "2026-11-05T01:00:00+00:00"}, tmp_path)
     assert extras.linhas_oficiais() == []
+
+
+def test_chutes_bloqueados_somam_com_lista_um_pouco_menor():
+    """Corinthians 13/09: 20 + 13 bloqueados para 32 chutes na lista. Sem somar, faltavam 12 finalizações."""
+    chutes = [{"outcome": "Blocked", "playerName": "Leo Pereira"}] * 13 + [{"outcome": "Missed", "playerName": "Pedro"}] * 19
+    m = {"homeTeam": {"id": FLA, "shots": chutes}, "awayTeam": {"id": ADV, "shots": []}}
+    jogadores = [{"id": 1, "name": "Leo Pereira", "statistics": {"shotsTotal": 20}}]
+    assert hl._bloqueadas_por_jogador(m, FLA, jogadores) == ({1: 13}, True)
+
+
+def _partida_pen(minutos):
+    return {**partida("0 - 0", estado="Finished after penalties"), "boxscore": [{"team": {"id": FLA}, "players": [jogador(1, "A", minutos)]}]}
+
+
+def test_duracao_de_jogo_nos_penaltis_depende_de_ter_havido_prorrogacao():
+    assert hl.normalizar([_partida_pen(94)], FLA)["partidas"][0]["duracao"] == 90
+    assert hl.normalizar([_partida_pen(122)], FLA)["partidas"][0]["duracao"] == 120
+
+
+def test_problemas_coleta(tmp_path, monkeypatch):
+    from datetime import datetime, timezone
+    jogos = [_jogo(1, "2026-11-04T10:00:00.000Z"), _jogo(2, "2026-11-04T15:00:00.000Z")]
+    _cenario(tmp_path, monkeypatch, jogos, partidas=[(1, "2026-11-04T12:15:00+00:00")])
+    agora = datetime(2026, 11, 4, 18, tzinfo=timezone.utc)
+    assert hl.problemas_coleta("2026-11-04T17:45:00Z", agora) == []  # jogo 2 começou há 3 h: ainda pode chegar
+    assert "cron-job" in hl.problemas_coleta("2026-11-04T10:00:00Z", agora)[0]
+    assert "cron-job" in hl.problemas_coleta("", agora)[0]
+    assert "cron-job" in hl.problemas_coleta("null", agora)[0]  # o gh escreve "null" quando não acha execução
+    tarde = datetime(2026, 11, 5, 0, tzinfo=timezone.utc)
+    assert hl.problemas_coleta("2026-11-04T23:45:00Z", tarde) == ["o jogo contra Fluminense começou há 9 h e não foi baixado"]
+
+
+def test_chutes_bloqueados_comparam_com_o_total_do_time_quando_existe():
+    """Estudiantes 22/10: a lista traz as cobranças da disputa; 13 chutes já com os bloqueados, e o time teve 13."""
+    chutes = [{"outcome": "Blocked", "playerName": "Leo Pereira"}] * 5 + [{"outcome": "Missed", "playerName": "Pedro"}] * 13
+    estatisticas = [{"team": {"id": FLA}, "statistics": [{"displayName": "Shots on target", "value": 5},
+                                                         {"displayName": "Shots off target", "value": 3}, {"displayName": "Blocked shots", "value": 5}]}]
+    m = {"homeTeam": {"id": FLA, "shots": chutes}, "awayTeam": {"id": ADV, "shots": []}, "statistics": estatisticas}
+    jogadores = [{"id": 1, "name": "Leo Pereira", "statistics": {"shotsTotal": 13}}]
+    assert hl._bloqueadas_por_jogador(m, FLA, jogadores)[1] is False

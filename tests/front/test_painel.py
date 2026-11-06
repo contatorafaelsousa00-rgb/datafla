@@ -210,20 +210,59 @@ def test_cadastros_manuais_aparecem_no_site(pagina_escura):
     """Lesão e transmissão cadastradas no admin (Firestore, manual/cadastros) aparecem no pré-jogo e no banner."""
     pg = pagina_escura.pg
     dados = json.loads((Path(__file__).resolve().parents[2] / "site" / "dados" / "2026.json").read_text(encoding="utf-8"))
-    futuros = sorted((c for c in dados["calendario"] if c["status"] == "NS"), key=lambda c: c["data_utc"])
+    # Transmissão em todos os jogos não encerrados: o cartão pode mostrar um jogo em andamento (até 3 h após o início),
+    # não só os "NS" (falhou assim em 30/10, durante Vasco × Flamengo)
+    futuros = [c for c in dados["calendario"] if c["status"] not in ("FT", "AET", "PEN", "WO", "CANC", "PST", "ABD")]
     if not futuros:
         pytest.skip("sem jogo futuro")
     jog = dados["jogadores"]
     linhas = [dict(zip(jog["colunas"], l)) for l in jog["linhas"]] if isinstance(jog, dict) else jog
-    titular = max(linhas, key=lambda j: j["data_utc"] if "data_utc" in j else j["id_partida"])  # alguém do último jogo
+    # Quem está na escalação oficial já publicada não aparece como desfalque (falhou assim em 04/11, antes do Grêmio)
+    relacionados = {e["jogador_id"] for e in dados.get("escalacao_oficial") or []}
+    titular = max((j for j in linhas if j["jogador_id"] not in relacionados), key=lambda j: j["id_partida"])  # alguém do último jogo
     s = lambda v: {"stringValue": v}
     doc = {"fields": {
         "lesoes": {"mapValue": {"fields": {str(titular["jogador_id"]): {"mapValue": {"fields": {
             "nome": s(titular["jogador"]), "motivo": s("lesão no joelho"), "volta": s("2099-01-01")}}}}}},
-        "transmissao": {"mapValue": {"fields": {str(futuros[0]["id_partida"]): s("Canal Teste")}}}}}
+        "transmissao": {"mapValue": {"fields": {str(c["id_partida"]): s("Canal Teste") for c in futuros}}}}}
     pg.route("https://firestore.googleapis.com/**/manual/cadastros*", lambda r: r.fulfill(status=200, content_type="application/json", body=json.dumps(doc)))
     pagina_escura.abrir("?aba=temporada", "#card-proximo")
     assert "Canal Teste" in pg.inner_text("#card-proximo")
     pg.click("#card-proximo")
     pg.wait_for_selector("#modal-jogo[open] #detalhe-proximo h3")
     assert "lesão no joelho" in pg.inner_text("#detalhe-proximo")
+
+
+def test_avisa_quando_ha_dados_novos(pagina_escura):
+    pg = pagina_escura.abrir("?aba=temporada", "#aba-temporada svg")
+    conferir = "async () => (await import('/app.js')).conferirNovidade(true)"
+    pg.evaluate(conferir)
+    assert pg.locator("#aviso-novidade").count() == 0  # mesma versão: nada
+
+    def nova_versao(rota):
+        resp = rota.fetch()
+        dados = resp.json()
+        dados["meta"]["coletado_em"] = "2099-01-01T00:00:00+00:00"
+        rota.fulfill(response=resp, body=json.dumps(dados))
+
+    pg.route("**/dados/*.json", nova_versao)
+    pg.evaluate(conferir)
+    assert pg.locator("#aviso-novidade button").inner_text() == "Atualizar"
+    pg.unroute("**/dados/*.json")
+    pg.evaluate("() => document.getElementById('aviso-novidade').remove()")
+    assert pagina_escura.erros == []
+
+
+def test_aviso_de_dados_novos_cabe_no_celular(celular):
+    pg = celular.abrir("?aba=temporada", "#aba-temporada svg")
+    pg.evaluate("""async () => {
+      const { D } = await import('/comum.js');
+      const antes = D.bruto.meta.coletado_em;
+      D.bruto.meta.coletado_em = '2000-01-01T00:00:00+00:00';
+      await (await import('/app.js')).conferirNovidade(true);
+      D.bruto.meta.coletado_em = antes;
+    }""")
+    caixa = pg.locator("#aviso-novidade").bounding_box()
+    largura = pg.evaluate("document.documentElement.clientWidth")
+    assert caixa["x"] >= 0 and caixa["x"] + caixa["width"] <= largura
+    assert pg.evaluate("document.documentElement.scrollWidth") <= largura

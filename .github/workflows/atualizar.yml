@@ -37,6 +37,7 @@ on:
 permissions:
   contents: write
   issues: write  # aviso de falha (abre/fecha issue)
+  actions: read  # conferir quando foi o último disparo externo
 
 concurrency:
   group: atualizar
@@ -70,8 +71,50 @@ jobs:
         if: github.event_name != 'push' && env.HIGHLIGHTLY_KEY != ''
         run: python -m coleta.coletar planejar ${{ inputs.forcar && '--forcar' || '' }}
 
+      # Nas execuções reservas: o que não falha no workflow e por isso não abre o aviso de falha (cron-job.org parado,
+      # jogo que nunca chega). Issue própria, porque a de falha fecha em qualquer publicação que dê certo.
+      - name: Conferir se a coleta está em dia
+        if: github.event_name == 'schedule'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          ultimo=$(gh run list --workflow atualizar.yml --event workflow_dispatch --limit 1 --json createdAt --jq '.[0].createdAt')
+          saida=$(python -m coleta.coletar conferir --ultimo-disparo "$ultimo")
+          echo "$saida"
+          problemas=$(echo "$saida" | grep '^Coleta: ')
+          aberta=$(gh issue list --label coleta-parada --state open --json number --jq '.[0].number')
+          if [ "$problemas" != "Coleta: em dia." ]; then
+            if [ -z "$aberta" ]; then
+              gh label create coleta-parada --color B60205 --description "Aberta quando a coleta para sem erro" --force
+              gh issue create --label coleta-parada --title "A coleta do datafla parou" --body "$problemas"
+            fi
+          elif [ -n "$aberta" ]; then
+            gh issue close "$aberta" --comment "A coleta voltou ao normal."
+          fi
+
+      # Publica também quando a execução anterior falhou: os dados dela já foram para o Git, mas o site ficou sem eles
+      # (04/11/2026: a escalação do Grêmio foi capturada às 19h e nunca apareceu, porque nada novo veio depois).
+      - name: Decidir se publica
+        id: pub
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if [ "${{ github.event_name }}" = push ] || [ "${{ steps.plano.outputs.coletar }}" = true ]; then
+            echo "publicar=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          # Só a falha de uma coleta: um push que falhou foi barrado de propósito e não é publicado por aqui
+          anterior=$(gh run list --workflow atualizar.yml --status completed --limit 1 --json conclusion,event \
+            --jq '.[0] | "\(.conclusion) \(.event)"' || true)
+          if [ "${anterior%% *}" = failure ] && [ "${anterior##* }" != push ]; then
+            echo "**Publicar:** a execução anterior falhou; publica de novo os dados que já estão no repositório." >> "$GITHUB_STEP_SUMMARY"
+            echo "publicar=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Testes
-        if: github.event_name == 'push' || steps.plano.outputs.coletar == 'true'
+        if: steps.pub.outputs.publicar == 'true'
         run: python -m pytest -q
 
       - name: Coletar e processar
@@ -83,7 +126,7 @@ jobs:
       - name: Gerar dados do site
         # Todas as temporadas com dados (não só o ano do relógio): sem isso, no 1º deploy de janeiro a temporada
         # anterior sumiria do site, porque site/dados não fica no Git e é gerado do zero a cada publicação.
-        if: github.event_name == 'push' || steps.plano.outputs.coletar == 'true'
+        if: steps.pub.outputs.publicar == 'true'
         run: python -m coleta.coletar processar --fonte highlightly --todas
 
       - name: Salvar dados no repositório
@@ -100,16 +143,40 @@ jobs:
 
       - name: Testar o painel
         # abre cada aba num Chrome sem janela; erro de JavaScript ou aba vazia barra a publicação
-        if: env.TEM_FIREBASE == 'true' && (github.event_name == 'push' || steps.plano.outputs.coletar == 'true')
+        if: env.TEM_FIREBASE == 'true' && steps.pub.outputs.publicar == 'true'
         run: python scripts/teste_painel.py
 
       - name: Testes de front-end
-        # Playwright com o Chrome do ubuntu-latest: telas, filtros, contraste, celular, mata-mata, imagem exportada
-        if: env.TEM_FIREBASE == 'true' && (github.event_name == 'push' || steps.plano.outputs.coletar == 'true')
+        # Playwright com o Chrome do ubuntu-latest: telas, filtros, contraste, celular, mata-mata, imagem exportada.
+        # Barram a publicação, com uma exceção (passo seguinte). Foi um teste frágil que segurou a escalação do Grêmio (04/11).
+        id: frente
+        if: env.TEM_FIREBASE == 'true' && steps.pub.outputs.publicar == 'true'
+        continue-on-error: true
         run: python -m pytest tests/front -q
 
+      - name: Liberar a publicação
+        # Falha nos testes de front-end numa coleta, com o mesmo código do último push que passou em todos os testes: a falha
+        # depende dos dados ou do horário e não pode segurar os dados novos (o teste do painel acima segue barrando tela
+        # quebrada; o aviso de falha abre do mesmo jeito). Código diferente, ou push: não publica.
+        id: libera
+        if: env.TEM_FIREBASE == 'true' && steps.pub.outputs.publicar == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if [ "${{ steps.frente.outcome }}" = success ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ "${{ github.event_name }}" = push ]; then echo "Testes de front-end falharam no push."; exit 1; fi
+          aprovado=$(gh run list --workflow atualizar.yml --event push --status success --limit 1 --json headSha --jq '.[0].headSha')
+          git fetch -q --depth=1 origin "$aprovado"
+          if git diff --quiet "$aprovado" HEAD -- site coleta tests firebase.json scripts requirements.txt; then
+            echo "**Testes de front-end falharam, mas o código é o mesmo do último push aprovado ($aprovado): publica os dados.**" >> "$GITHUB_STEP_SUMMARY"
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Código diferente do último push aprovado ($aprovado): não publica."; exit 1
+          fi
+
       - name: Publicar no Firebase
-        if: env.TEM_FIREBASE == 'true' && (github.event_name == 'push' || steps.plano.outputs.coletar == 'true')
+        if: env.TEM_FIREBASE == 'true' && steps.libera.outputs.ok == 'true'
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
@@ -123,7 +190,7 @@ jobs:
       # as seguintes não abrem outra (sem enxurrada a cada 15 min). Fecha sozinha quando uma publicação volta a funcionar.
       # Motivo: o deploy ficou quebrado de 22 a 27/10/2026 sem ninguém saber.
       - name: Avisar falha
-        if: failure()
+        if: failure() || steps.frente.outcome == 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
@@ -138,7 +205,7 @@ jobs:
           fi
 
       - name: Fechar aviso de falha
-        if: success() && (github.event_name == 'push' || steps.plano.outputs.coletar == 'true')
+        if: success() && steps.pub.outputs.publicar == 'true' && steps.frente.outcome != 'failure'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}

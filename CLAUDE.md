@@ -192,6 +192,17 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   antes do Grêmio). Raw `oficial_<id>` (hora em `_coletado_em` mede quando a fonte publicou) → tabela `escalacao_oficial`, só até
   o jogo ser baixado; `preview.js` troca a provável time a time e tira da lista de desfalques quem está na relação. Só publica
   quando sai novidade. Nas 2 h finais o detalhe do jogo renova com 1 h+ (antes a última renovação era cerca de 5h10 antes do início).
+- Avisos e correções de 04/11/2026: execução reserva roda `coletar conferir` e abre a issue "A coleta do datafla parou" (label
+  `coleta-parada`, fecha sozinha) se o último disparo externo tem 2 h+ ou um jogo com 8 h+ de início não foi baixado. Site confere
+  a cada 5 min e ao voltar para a tela se `meta.coletado_em` mudou e oferece "Atualizar" (`conferirNovidade`, não recarrega sozinho).
+  Bloqueados somam ao `shotsTotal` só se aproximam do total do time (a lista de chutes pode trazer a disputa de pênaltis; a regra
+  antiga perdia 28 finalizações do Flamengo em 5 jogos). Pênaltis sem prorrogação têm `duracao` 90 (box-score abaixo de 100 min).
+  Validação: 47 apontamentos, quase todos limitação da fonte (Carioca antigo, jogos sem jogadores, acréscimos, Vasco 29/10 com 87 min).
+- Escalação do Grêmio (04/11/2026) capturada às 19h, mas nunca publicada: os testes de front-end falharam na execução das 22:00 UTC
+  (`test_cadastros_manuais_aparecem_no_site` cadastrava como lesionado um titular que estava na relação oficial; em 30/10 falhou
+  com Vasco × Flamengo em andamento) e as execuções seguintes não tinham novidade. Agora: falha nos testes de front-end numa
+  coleta só libera a publicação ("Liberar a publicação") se o código for igual ao do último push aprovado (o teste do painel
+  segue barrando; o aviso abre); "Decidir se publica" publica de novo quando a coleta anterior falhou (push falho não). Para reproduzir uma falha: worktree no commit de dados + `clock.set_system_time`.
 - Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
 - Aba **Números** (16/10/2026, `numeros.js`; conferida com a planilha do Rafael "Dados Flamengo temporada 2026.xlsx"):
   artilharia (pênaltis entre parênteses), assistências, G+A, mais utilizados, sem sofrer gol (por goleiro), saiu na

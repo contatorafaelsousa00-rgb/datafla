@@ -173,6 +173,8 @@ def _data(jogo: dict) -> datetime:
 HORAS_ENTRE_RECOLETAS = 12    # recoleta (dentro de 48 h) só na atualização diária e com 12 h+ desde a última
 DURACAO_ESPERADA = timedelta(hours=2, minutes=10)  # início → apito final (com acréscimos e intervalo)
 HORAS_LISTA = 24              # atualização diária: lista da temporada, próximo jogo e recoletas
+DISPARO_ATRASADO = timedelta(hours=2)  # o cron-job.org dispara a cada 15 min
+JOGO_ATRASADO = timedelta(hours=8)     # início → jogo ainda não baixado: algo está errado (o normal é 2h15)
 
 
 def _precisa_coletar(jogo: dict, agora: datetime | None = None) -> bool:
@@ -264,6 +266,34 @@ def verificar_escalacao_oficial(agora: datetime | None = None) -> str | None:
     salvar_raw(nome, {"data": dados, "_coletado_em": agora.isoformat()})
     rival = prox["awayTeam"]["name"] if prox["homeTeam"]["id"] == config.TEAM_ID else prox["homeTeam"]["name"]
     return f"saiu a escalação do jogo contra {rival}"
+
+
+def problemas_coleta(ultimo_disparo: str | None, agora: datetime | None = None) -> list[str]:
+    """O que não aparece como falha no workflow: disparo externo parado ou jogo que nunca chega. Não chama a API."""
+    agora = agora or datetime.now(timezone.utc)
+    problemas = []
+    try:
+        idade = agora - datetime.fromisoformat((ultimo_disparo or "").replace("Z", "+00:00"))
+    except ValueError:  # vazio ou "null" (o gh não achou nenhum)
+        idade = None
+    if idade is None:
+        problemas.append("nenhum disparo externo encontrado (cron-job.org)")
+    else:
+        if idade > DISPARO_ATRASADO:
+            problemas.append(f"o último disparo externo (cron-job.org) foi há {idade.total_seconds() / 3600:.0f} h")
+    for jogo in (ler_raw(ARQ_JOGOS) or {}).get("data") or []:
+        inicio = _data(jogo)
+        if (_status(jogo) not in {"ABD", "PST", "CANC"} and JOGO_ATRASADO <= agora - inicio <= timedelta(hours=config.JANELA_RECOLETA_HORAS)
+                and ler_raw(f"partida_{jogo['id']}") is None):
+            rival = jogo["awayTeam"]["name"] if jogo["homeTeam"]["id"] == config.TEAM_ID else jogo["homeTeam"]["name"]
+            problemas.append(f"o jogo contra {rival} começou há {(agora - inicio).total_seconds() / 3600:.0f} h e não foi baixado")
+    return problemas
+
+
+def cmd_conferir(ultimo_disparo: str | None) -> int:
+    problemas = problemas_coleta(ultimo_disparo)
+    print("Coleta: " + ("; ".join(problemas) if problemas else "em dia") + ".")
+    return 0
 
 
 def cmd_planejar(forcar: bool = False) -> int:
@@ -714,13 +744,21 @@ def _bloqueadas_por_jogador(m: dict, time_id: int, jogadores: list[dict]) -> tup
     """Chutes bloqueados de cada jogador, da lista de chutes da partida (casados pelo nome).
 
     Na maioria dos jogos o shotsTotal do jogador na fonte NÃO conta os bloqueados (o total do time conta); em alguns
-    (vários a partir de set/2026) já conta. Por isso só somam quando cabem: soma dos jogadores + bloqueados <= chutes da
-    lista. Somar sempre contava duas vezes (Estudiantes 16/10: 21 + 6 = 27 para 21 chutes).
+    (vários a partir de set/2026) já conta. Por isso só somam quando isso aproxima a soma dos jogadores do total do
+    time. Somar sempre contava duas vezes (Estudiantes 16/10: 21 + 6 = 27 para 21 chutes); exigir que coubessem
+    exatamente perdia jogos em que a lista vem com 1 ou 2 chutes a menos (Corinthians 13/09: 20 + 13 para 32).
     Devolve (bloqueados por jogador, se precisam ser somados ao shotsTotal)."""
     lado = "homeTeam" if m["homeTeam"]["id"] == time_id else "awayTeam"
     chutes = m[lado].get("shots") or []
     soma = sum(numero((p.get("statistics") or {}).get("shotsTotal")) or 0 for p in jogadores)
-    somar = soma + sum(1 for c in chutes if c.get("outcome") == "Blocked") <= len(chutes)
+    # O total do time vale mais que a lista, que às vezes traz as cobranças da disputa de pênaltis (Estudiantes 22/10)
+    total = len(chutes)
+    for s in m.get("statistics") or []:
+        if (s.get("team") or {}).get("id") == time_id:
+            v = {x.get("displayName"): numero(x.get("value")) for x in s.get("statistics") or []}
+            partes = [v.get("Shots on target"), v.get("Shots off target"), v.get("Blocked shots")]
+            total = sum(partes) if all(x is not None for x in partes) else total
+    somar = abs(soma + sum(1 for c in chutes if c.get("outcome") == "Blocked") - total) < abs(soma - total)
     contagem = Counter()
     for chute in chutes:
         if chute.get("outcome") == "Blocked":
@@ -915,7 +953,12 @@ def normalizar(partidas: list[dict], team_id: int | None = None) -> dict[str, li
     t = {"partidas": [], "jogadores_partida": [], "eventos": [], "estatisticas_time": [], "finalizacoes": []}
     for raw in partidas:
         m = raw["match"]
-        t["partidas"].append(linha_partida(m, team_id))
+        linha = linha_partida(m, team_id)
+        # Pênaltis sem prorrogação (Carioca, Libertadores até a semifinal): ninguém passa muito dos 90 no box-score
+        minutos = [numero(p.get("minutesPlayed")) or 0 for bloco in raw.get("boxscore") or [] for p in bloco.get("players", [])]
+        if linha["status"] == "PEN" and minutos and max(minutos) < 100:
+            linha["duracao"] = 90
+        t["partidas"].append(linha)
         t["jogadores_partida"] += linhas_jogadores(m, raw.get("boxscore"), team_id)
         t["eventos"] += linhas_eventos(m, team_id)
         t["estatisticas_time"] += linhas_estatisticas(m, team_id)

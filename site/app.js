@@ -186,6 +186,26 @@ function carregarExtras(dados) {
   }).catch(() => {}).finally(() => { dados.extras = true; });
 }
 
+// Aba aberta ou app instalado: a cada 5 min (e ao voltar para a tela) confere se a coleta publicou dados novos e oferece
+// recarregar. Não recarrega sozinho para não perder uma tela aberta ou uma opinião sendo escrita. A URL guarda a tela atual.
+const INTERVALO_NOVIDADE = 5 * 60e3;
+const versaoDados = (d) => d.meta.coletado_em ?? d.meta.gerado_em;
+let ultimaConferencia = Date.now();
+
+export async function conferirNovidade(forcar = false) {
+  if (!forcar && (document.hidden || Date.now() - ultimaConferencia < INTERVALO_NOVIDADE)) return;
+  if (!D?.bruto?.meta || document.getElementById("aviso-novidade")) return;
+  ultimaConferencia = Date.now();
+  try {
+    const novo = await buscarJson(`${D.bruto.meta.temporada}.json`);
+    if (versaoDados(novo) === versaoDados(D.bruto)) return;
+  } catch { return; } // sem rede agora: tenta de novo mais tarde
+  // Com a tela de um jogo aberta, o aviso entra nela (o <dialog> fica por cima da página)
+  (document.querySelector("dialog[open]") ?? document.body).append(h("div", { id: "aviso-novidade", role: "status" },
+    h("span", {}, "Há dados novos no datafla."),
+    h("button", { type: "button", class: "botao-primario", onclick: () => location.reload() }, "Atualizar")));
+}
+
 async function carregarTemporada(ano) {
   document.querySelector("main").style.opacity = ".5";
   try {
@@ -254,6 +274,8 @@ async function iniciar() {
   alturaTopo();
   let t;
   window.addEventListener("resize", () => { clearTimeout(t); t = setTimeout(() => { alturaTopo(); render(); }, 150); });
+  document.addEventListener("visibilitychange", () => conferirNovidade());
+  setInterval(() => conferirNovidade(), 60e3);
 }
 
 iniciar();

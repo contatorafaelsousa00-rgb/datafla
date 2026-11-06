@@ -379,7 +379,9 @@ export function situacao(j, p) {
   if (!p.detalhe) return "detalhes ainda não baixados";
   if (!j) return "não relacionado";
   if (!(j.minutos > 0)) return "no banco, não entrou";
-  if (j.titular) return j.minutos < (p.duracao ?? 90) ? `titular, saiu (${j.minutos} min)` : "titular, jogo inteiro";
+  // Jogo inteiro = o máximo de minutos daquele jogo: a fonte às vezes registra menos de 90 para todos (Vasco 29/10: 87)
+  const maximo = Math.max(...(D.jogadoresPorPartida.get(p.id_partida) ?? []).map((x) => x.minutos || 0), 0);
+  if (j.titular) return j.minutos < Math.min(p.duracao ?? 90, maximo || 90) ? `titular, saiu (${j.minutos} min)` : "titular, jogo inteiro";
   return `entrou (${j.minutos} min)`;
 }
 
