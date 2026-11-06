@@ -49,7 +49,7 @@
      "logo": "https://highlightly.net/soccer/images/teams/108861.png",
      "name": "Flamengo"
     },
-    "time": "45+2",
+    "time": "45",
     "type": "Goal",
     "assist": null,
     "player": "Pedro",
@@ -157,20 +157,6 @@
    },
    {
     "team": {
-     "id": 111414,
-     "logo": "https://highlightly.net/soccer/images/teams/111414.png",
-     "name": "Gremio"
-    },
-    "time": "75",
-    "type": "Substitution",
-    "assist": null,
-    "player": "Walter Kannemann",
-    "playerId": 397180,
-    "substituted": "F. Krovinovic",
-    "assistingPlayerId": 92568
-   },
-   {
-    "team": {
      "id": 108861,
      "logo": "https://highlightly.net/soccer/images/teams/108861.png",
      "name": "Flamengo"
@@ -182,6 +168,20 @@
     "playerId": 420686,
     "substituted": "Bruno Henrique",
     "assistingPlayerId": 1639134
+   },
+   {
+    "team": {
+     "id": 111414,
+     "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+     "name": "Gremio"
+    },
+    "time": "75",
+    "type": "Substitution",
+    "assist": null,
+    "player": "Walter Kannemann",
+    "playerId": 397180,
+    "substituted": "F. Krovinovic",
+    "assistingPlayerId": 92568
    },
    {
     "team": {
@@ -1057,7 +1057,7 @@
       "expectedGoalsOnTargetConceded": 0.31,
       "expectedGoalsPrevented": -0.69
      },
-     "matchRating": "6.34",
+     "matchRating": "6.32",
      "shirtNumber": 1,
      "isSubstitute": false,
      "minutesPlayed": 92,
@@ -1109,7 +1109,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.73",
+     "matchRating": "6.66",
      "shirtNumber": 2,
      "isSubstitute": false,
      "minutesPlayed": 92,
@@ -1213,7 +1213,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "7.32",
+     "matchRating": "7.30",
      "shirtNumber": 4,
      "isSubstitute": false,
      "minutesPlayed": 92,
@@ -1265,7 +1265,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.88",
+     "matchRating": "6.86",
      "shirtNumber": 6,
      "isSubstitute": false,
      "minutesPlayed": 45,
@@ -1317,7 +1317,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "7.20",
+     "matchRating": "7.15",
      "shirtNumber": 5,
      "isSubstitute": false,
      "minutesPlayed": 92,
@@ -1369,7 +1369,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "7.73",
+     "matchRating": "7.67",
      "shirtNumber": 21,
      "isSubstitute": false,
      "minutesPlayed": 92,
@@ -1421,7 +1421,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "7.18",
+     "matchRating": "7.20",
      "shirtNumber": 15,
      "isSubstitute": false,
      "minutesPlayed": 45,
@@ -1473,7 +1473,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "7.18",
+     "matchRating": "7.17",
      "shirtNumber": 10,
      "isSubstitute": false,
      "minutesPlayed": 75,
@@ -1525,7 +1525,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "7.20",
+     "matchRating": "7.15",
      "shirtNumber": 16,
      "isSubstitute": false,
      "minutesPlayed": 86,
@@ -1577,7 +1577,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "8.86",
+     "matchRating": "8.85",
      "shirtNumber": 9,
      "isSubstitute": false,
      "minutesPlayed": 92,
@@ -1629,7 +1629,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.90",
+     "matchRating": "6.85",
      "shirtNumber": 22,
      "isSubstitute": true,
      "minutesPlayed": 47,
@@ -1681,7 +1681,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.19",
+     "matchRating": "6.21",
      "shirtNumber": 7,
      "isSubstitute": true,
      "minutesPlayed": 47,
@@ -1733,7 +1733,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.74",
+     "matchRating": "6.68",
      "shirtNumber": 27,
      "isSubstitute": true,
      "minutesPlayed": 17,
@@ -2366,7 +2366,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.72",
+     "matchRating": "6.75",
      "shirtNumber": 6,
      "isSubstitute": false,
      "minutesPlayed": 92,
@@ -2418,7 +2418,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.20",
+     "matchRating": "6.19",
      "shirtNumber": 4,
      "isSubstitute": false,
      "minutesPlayed": 75,
@@ -2470,7 +2470,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "5.89",
+     "matchRating": "5.85",
      "shirtNumber": 54,
      "isSubstitute": false,
      "minutesPlayed": 45,
@@ -2522,7 +2522,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.97",
+     "matchRating": "7.03",
      "shirtNumber": 8,
      "isSubstitute": false,
      "minutesPlayed": 92,
@@ -2626,7 +2626,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.87",
+     "matchRating": "6.90",
      "shirtNumber": 20,
      "isSubstitute": false,
      "minutesPlayed": 92,
@@ -2678,7 +2678,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "7.03",
+     "matchRating": "6.99",
      "shirtNumber": 17,
      "isSubstitute": false,
      "minutesPlayed": 92,
@@ -2730,7 +2730,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.50",
+     "matchRating": "6.53",
      "shirtNumber": 38,
      "isSubstitute": false,
      "minutesPlayed": 92,
@@ -2834,7 +2834,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.64",
+     "matchRating": "6.58",
      "shirtNumber": 18,
      "isSubstitute": true,
      "minutesPlayed": 47,
@@ -2886,7 +2886,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "7.75",
+     "matchRating": "7.68",
      "shirtNumber": 9,
      "isSubstitute": true,
      "minutesPlayed": 47,
@@ -2938,7 +2938,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.28",
+     "matchRating": "6.34",
      "shirtNumber": 99,
      "isSubstitute": true,
      "minutesPlayed": 47,
@@ -2990,7 +2990,7 @@
       "expectedGoalsOnTargetConceded": null,
       "expectedGoalsPrevented": null
      },
-     "matchRating": "6.66",
+     "matchRating": "6.68",
      "shirtNumber": 10,
      "isSubstitute": true,
      "minutesPlayed": 17,
@@ -3416,5 +3416,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-05T00:45:40.376529+00:00"
+ "_coletado_em": "2026-11-06T00:45:39.992363+00:00"
 }
