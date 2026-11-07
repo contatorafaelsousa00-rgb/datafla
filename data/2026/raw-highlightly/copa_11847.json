@@ -3,7 +3,7 @@
   {
    "id": 1401749262,
    "round": "Final",
-   "date": "2026-11-28T21:00:00.000Z",
+   "date": "2026-11-28T20:00:00.000Z",
    "country": {
     "code": "World",
     "name": "World",
@@ -18,14 +18,14 @@
     "description": "Not started"
    },
    "awayTeam": {
-    "id": 103755,
-    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
-    "name": "Palmeiras"
-   },
-   "homeTeam": {
     "id": 383734,
     "logo": "https://highlightly.net/soccer/images/teams/383734.png",
     "name": "Estudiantes de La Plata"
+   },
+   "homeTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
    },
    "league": {
     "id": 11847,
@@ -5271,5 +5271,5 @@
    }
   }
  ],
- "_coletado_em": "2026-11-06T00:45:46.691090+00:00"
+ "_coletado_em": "2026-11-07T01:15:43.493928+00:00"
 }
