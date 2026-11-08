@@ -849,7 +849,7 @@
      "season": "2024",
      "toDate": "13.05.2024",
      "fromDate": "03.05.2024",
-     "missedGames": null,
+     "missedGames": 2,
      "absentDurationInDays": 11
     },
     {
@@ -857,7 +857,7 @@
      "season": "2024",
      "toDate": "02.04.2024",
      "fromDate": "30.03.2024",
-     "missedGames": null,
+     "missedGames": 1,
      "absentDurationInDays": 4
     },
     {
@@ -865,7 +865,7 @@
      "season": "2024",
      "toDate": "08.01.2024",
      "fromDate": "28.12.2023",
-     "missedGames": null,
+     "missedGames": 3,
      "absentDurationInDays": 12
     },
     {
@@ -873,7 +873,7 @@
      "season": "2024",
      "toDate": "22.11.2023",
      "fromDate": "18.09.2023",
-     "missedGames": 3,
+     "missedGames": 11,
      "absentDurationInDays": 66
     },
     {
@@ -887,5 +887,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-10-31T01:15:54.698139+00:00"
+ "_coletado_em": "2026-11-08T01:31:17.601331+00:00"
 }

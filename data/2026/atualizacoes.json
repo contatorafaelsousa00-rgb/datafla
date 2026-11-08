@@ -869,5 +869,17 @@
   "requisicoes": 14,
   "cota_restante": 86,
   "erro": null
+ },
+ {
+  "quando": "2026-11-08T01:31:18+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "atualização diária (última coleta há 24 h)",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 64,
+  "pendentes": 0,
+  "requisicoes": 34,
+  "cota_restante": 66,
+  "erro": null
  }
 ]

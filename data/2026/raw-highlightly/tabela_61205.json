@@ -105,11 +105,11 @@
      },
      {
       "away": {
-       "wins": 3,
+       "wins": 4,
        "draws": 6,
-       "games": 16,
+       "games": 17,
        "loses": 7,
-       "scoredGoals": 21,
+       "scoredGoals": 24,
        "receivedGoals": 25
       },
       "home": {
@@ -126,14 +126,14 @@
        "name": "Fluminense"
       },
       "total": {
-       "wins": 15,
+       "wins": 16,
        "draws": 9,
-       "games": 33,
+       "games": 34,
        "loses": 9,
-       "scoredGoals": 52,
+       "scoredGoals": 55,
        "receivedGoals": 42
       },
-      "points": 54,
+      "points": 57,
       "position": 4
      },
      {
@@ -478,10 +478,10 @@
       "home": {
        "wins": 10,
        "draws": 2,
-       "games": 16,
-       "loses": 4,
+       "games": 17,
+       "loses": 5,
        "scoredGoals": 23,
-       "receivedGoals": 13
+       "receivedGoals": 16
       },
       "team": {
        "id": 116520,
@@ -491,10 +491,10 @@
       "total": {
        "wins": 10,
        "draws": 8,
-       "games": 33,
-       "loses": 15,
+       "games": 34,
+       "loses": 16,
        "scoredGoals": 35,
-       "receivedGoals": 48
+       "receivedGoals": 51
       },
       "points": 38,
       "position": 15
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-11-06T04:01:17.419768+00:00"
+ "_coletado_em": "2026-11-08T01:31:03.216816+00:00"
 }

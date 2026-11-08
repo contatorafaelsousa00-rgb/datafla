@@ -44,12 +44,12 @@
     "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
    },
    "state": {
-    "clock": null,
+    "clock": 90,
     "score": {
-     "current": null,
+     "current": "1 - 1",
      "penalties": null
     },
-    "description": "Not started"
+    "description": "Finished"
    },
    "awayTeam": {
     "id": 111414,
@@ -5237,5 +5237,5 @@
    }
   }
  ],
- "_coletado_em": "2026-11-07T01:15:45.366733+00:00"
+ "_coletado_em": "2026-11-08T01:31:08.961357+00:00"
 }
