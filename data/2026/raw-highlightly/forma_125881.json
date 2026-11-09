@@ -1,0 +1,175 @@
+{
+ "data": [
+  {
+   "id": 1270072330,
+   "round": "Regular Season - 34",
+   "date": "2026-11-04T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 125881,
+    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+    "name": "Coritiba"
+   },
+   "homeTeam": {
+    "id": 102053,
+    "logo": "https://highlightly.net/soccer/images/teams/102053.png",
+    "name": "Internacional"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1270062118,
+   "round": "Regular Season - 33",
+   "date": "2026-10-31T19:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 116520,
+    "logo": "https://highlightly.net/soccer/images/teams/116520.png",
+    "name": "Vitoria"
+   },
+   "homeTeam": {
+    "id": 125881,
+    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+    "name": "Coritiba"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1270051055,
+   "round": "Regular Season - 32",
+   "date": "2026-10-26T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 111414,
+    "logo": "https://highlightly.net/soccer/images/teams/111414.png",
+    "name": "Gremio"
+   },
+   "homeTeam": {
+    "id": 125881,
+    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+    "name": "Coritiba"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1270042545,
+   "round": "Regular Season - 31",
+   "date": "2026-10-17T21:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 0",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 125881,
+    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+    "name": "Coritiba"
+   },
+   "homeTeam": {
+    "id": 904546,
+    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
+    "name": "Atletico-MG"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
+   "id": 1270036588,
+   "round": "Regular Season - 30",
+   "date": "2026-10-12T19:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "1 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 102904,
+    "logo": "https://highlightly.net/soccer/images/teams/102904.png",
+    "name": "Botafogo"
+   },
+   "homeTeam": {
+    "id": 125881,
+    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+    "name": "Coritiba"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  }
+ ],
+ "_coletado_em": "2026-11-09T01:45:39.991595+00:00"
+}

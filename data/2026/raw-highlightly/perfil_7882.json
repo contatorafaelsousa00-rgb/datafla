@@ -3,7 +3,7 @@
   {
    "id": 7882,
    "logo": null,
-   "name": "Saúl",
+   "name": "Saúl Ñíguez",
    "fullName": "Saúl Ñíguez Esclapez",
    "profile": {
     "club": {
@@ -643,7 +643,7 @@
      "season": "2021",
      "toDate": "02.11.2020",
      "fromDate": "15.10.2020",
-     "missedGames": null,
+     "missedGames": 5,
      "absentDurationInDays": 19
     },
     {
@@ -651,7 +651,7 @@
      "season": "2019",
      "toDate": "08.02.2019",
      "fromDate": "28.01.2019",
-     "missedGames": null,
+     "missedGames": 1,
      "absentDurationInDays": 12
     },
     {
@@ -659,7 +659,7 @@
      "season": "2019",
      "toDate": "25.01.2019",
      "fromDate": "17.01.2019",
-     "missedGames": null,
+     "missedGames": 1,
      "absentDurationInDays": 9
     },
     {
@@ -667,7 +667,7 @@
      "season": "2017",
      "toDate": "19.10.2016",
      "fromDate": "03.10.2016",
-     "missedGames": 4,
+     "missedGames": 5,
      "absentDurationInDays": 17
     },
     {
@@ -705,5 +705,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-01T21:31:23.992030+00:00"
+ "_coletado_em": "2026-11-09T01:45:57.257200+00:00"
 }

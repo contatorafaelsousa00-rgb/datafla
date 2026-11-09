@@ -1,6 +1,40 @@
 {
  "data": [
   {
+   "id": 1394107282,
+   "round": "Semi-finals",
+   "date": "2026-11-08T20:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 120,
+    "score": {
+     "current": "2 - 1",
+     "penalties": "4 - 5"
+    },
+    "description": "Finished after penalties"
+   },
+   "awayTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "homeTeam": {
+    "id": 113967,
+    "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+    "name": "Vasco DA Gama"
+   },
+   "league": {
+    "id": 62907,
+    "logo": "https://highlightly.net/soccer/images/leagues/62907.png",
+    "name": "Copa do Brasil",
+    "season": 2026
+   }
+  },
+  {
    "id": 1270073181,
    "round": "Regular Season - 34",
    "date": "2026-11-05T22:30:00.000Z",
@@ -135,41 +169,7 @@
     "name": "Serie A",
     "season": 2026
    }
-  },
-  {
-   "id": 1395658655,
-   "round": "Semi-finals",
-   "date": "2026-10-22T00:30:00.000Z",
-   "country": {
-    "code": "World",
-    "name": "World",
-    "logo": "https://highlightly.net/soccer/images/countries/World.png"
-   },
-   "state": {
-    "clock": 120,
-    "score": {
-     "current": "0 - 1",
-     "penalties": "5 - 3"
-    },
-    "description": "Finished after penalties"
-   },
-   "awayTeam": {
-    "id": 106308,
-    "logo": "https://highlightly.net/soccer/images/teams/106308.png",
-    "name": "Fluminense"
-   },
-   "homeTeam": {
-    "id": 103755,
-    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
-    "name": "Palmeiras"
-   },
-   "league": {
-    "id": 11847,
-    "logo": "https://highlightly.net/soccer/images/leagues/11847.png",
-    "name": "CONMEBOL Libertadores",
-    "season": 2026
-   }
   }
  ],
- "_coletado_em": "2026-11-08T01:30:53.388793+00:00"
+ "_coletado_em": "2026-11-09T01:45:37.480779+00:00"
 }
