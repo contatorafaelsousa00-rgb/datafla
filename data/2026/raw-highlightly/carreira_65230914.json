@@ -3,25 +3,25 @@
   {
    "id": 65230914,
    "logo": null,
-   "name": "Wallace",
+   "name": "Wallace Yan",
    "fullName": "Wallace Yan de Souza Barreto",
    "perCompetition": [
     {
      "club": "Red Bull Bragantino",
      "type": "national league",
-     "goals": 0,
+     "goals": 3,
      "league": "Campeonato Brasileiro Série A",
      "season": "2026",
-     "assists": 2,
+     "assists": 3,
      "ownGoals": 0,
      "redCards": 1,
      "cleanSheets": 0,
-     "gamesPlayed": 5,
+     "gamesPlayed": 9,
      "yellowCards": 0,
-     "goalsConceded": 6,
-     "minutesPlayed": 332,
-     "substitutedIn": 0,
-     "substitutedOut": 4,
+     "goalsConceded": 9,
+     "minutesPlayed": 608,
+     "substitutedIn": 1,
+     "substitutedOut": 7,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -599,17 +599,17 @@
    "perClub": [
     {
      "club": "Red Bull Bragantino",
-     "goals": 0,
-     "assists": 2,
+     "goals": 3,
+     "assists": 3,
      "ownGoals": 0,
      "redCards": 1,
      "cleanSheets": 0,
-     "gamesPlayed": 5,
+     "gamesPlayed": 9,
      "yellowCards": 0,
-     "goalsConceded": 6,
-     "minutesPlayed": 332,
-     "substitutedIn": 0,
-     "substitutedOut": 4,
+     "goalsConceded": 9,
+     "minutesPlayed": 608,
+     "substitutedIn": 1,
+     "substitutedOut": 7,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -648,5 +648,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-02T21:46:10.413755+00:00"
+ "_coletado_em": "2026-11-10T02:01:58.739063+00:00"
 }
