@@ -25,8 +25,10 @@ function renderFicha(js) {
   const temporada = new Map(agregarJogadores(js).map((a) => [a.id, a]));
   const linhas = perfis.map((p) => ({ ...p, idade: idade(p.nascimento), meses: mesesAte(p.contrato_ate), t: temporada.get(p.jogador_id),
     numero: temporada.get(p.jogador_id)?.numero }));
-  const total = linhas.reduce((s, l) => s + (l.valor_mercado ?? 0), 0);
-  const idades = linhas.map((l) => l.idade).filter((x) => x != null);
+  const principal = linhas.filter((l) => !/u20|u17|sub-?\d/i.test(l.clube_atual ?? "")); // KPIs sem a base (U20)
+  const base = linhas.length - principal.length;
+  const total = principal.reduce((s, l) => s + (l.valor_mercado ?? 0), 0);
+  const idades = principal.map((l) => l.idade).filter((x) => x != null);
   const vencendo = linhas.filter((l) => l.meses != null && l.meses <= 12);
   const lesionados = linhas.filter((l) => l.lesao_atual);
   const kpi = (r, v, e) => h("div", { class: "kpi" }, h("div", { class: "rotulo" }, r), h("div", { class: "valor" }, v), e ? h("div", { class: "extra" }, e) : null);
@@ -65,7 +67,7 @@ function renderFicha(js) {
   };
   preencher(caixa,
     h("div", { class: "kpis" },
-      kpi("Jogadores", linhas.length, "com perfil na fonte"),
+      kpi("Jogadores", principal.length, base ? `do profissional; + ${base} da base na tabela` : "com perfil na fonte"),
       kpi("Valor de mercado", euros(total), "soma do elenco"),
       kpi("Idade média", idades.length ? num(idades.reduce((a, b) => a + b, 0) / idades.length, 1) : "–", `${Math.min(...idades)} a ${Math.max(...idades)} anos`),
       kpi("Contratos até 12 meses", vencendo.length, vencendo.length ? vencendo.slice(0, 3).map((l) => l.jogador).join(", ") + (vencendo.length > 3 ? "…" : "") : "nenhum"),
@@ -98,7 +100,11 @@ export function renderElenco(js) {
     if (!porJogador.has(j.jogador_id)) porJogador.set(j.jogador_id, { nome: j.jogador, posicao: j.posicao, notas: [] });
     porJogador.get(j.jogador_id).notas.push(j.nota);
   }
-  const momento = [...porJogador.entries()].filter(([, v]) => v.notas.length >= 8).map(([id, v]) => {
+  // Só quem segue no clube e esteve em campo em algum dos 5 últimos jogos do time (antes entravam Everton, já no Santos,
+  // e quem não jogava havia meses: os "últimos 5" eram os dele, mesmo antigos)
+  const saiu = new Set((D.bruto.perfis ?? []).filter((x) => x.clube_atual && !/flamengo/i.test(x.clube_atual)).map((x) => x.jogador_id));
+  const recentes = new Set(det.slice(-5).flatMap((p) => (D.jogadoresPorPartida.get(p.id_partida) ?? []).filter((j) => j.minutos > 0).map((j) => j.jogador_id)));
+  const momento = [...porJogador.entries()].filter(([id, v]) => v.notas.length >= 8 && !saiu.has(id) && recentes.has(id)).map(([id, v]) => {
     const recente = media(v.notas.slice(-5)), temporada = media(v.notas);
     return { id, ...v, recente, temporada, delta: recente - temporada };
   });
@@ -115,7 +121,7 @@ export function renderElenco(js) {
   if (!ultimo) { $("graf-carga").replaceChildren(vazio("Nenhum jogo no filtro.")); $("nota-carga").textContent = ""; }
   else {
     const fim = new Date(ultimo.data_utc), ini = new Date(fim - 30 * 864e5);
-    const janela = det.filter((p) => new Date(p.data_utc) > ini);
+    const janela = det.filter((p) => new Date(p.data_utc) > ini && (D.jogadoresPorPartida.get(p.id_partida) ?? []).length);
     const carga = new Map();
     for (const p of janela) for (const j of D.jogadoresPorPartida.get(p.id_partida) ?? []) {
       if (!(j.minutos > 0)) continue;

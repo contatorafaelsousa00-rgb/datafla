@@ -266,3 +266,17 @@ def test_aviso_de_dados_novos_cabe_no_celular(celular):
     largura = pg.evaluate("document.documentElement.clientWidth")
     assert caixa["x"] >= 0 and caixa["x"] + caixa["width"] <= largura
     assert pg.evaluate("document.documentElement.scrollWidth") <= largura
+
+
+def test_simulacao_nao_fica_salva(pagina_escura):
+    """Palpites do simulador duram só até recarregar: guardados, voltavam dias depois no lugar da tabela real (11/11)."""
+    pg = pagina_escura.abrir("?aba=classificacao", "#aba-classificacao table")
+    pg.evaluate("() => localStorage.setItem('datafla-palpites', '[[1, \"C\"]]')")  # sobra de versão antiga
+    if not pg.locator(".lista-palpites button").count():
+        pytest.skip("sem jogos restantes no Brasileirão")
+    pg.locator(".lista-palpites button").first.click()
+    assert "não é a classificação real" in pg.inner_text(".aviso-simulacao")
+    pg.reload(wait_until="networkidle")
+    pg.wait_for_selector("#aba-classificacao table")
+    assert pg.locator(".aviso-simulacao").count() == 0
+    assert pg.evaluate("() => localStorage.getItem('datafla-palpites')") is None

@@ -749,3 +749,5 @@ body.modo-admin main, body.modo-admin .rodape, body.modo-admin #aviso-demo { dis
 .admin-form input[type=text] { flex: 1 1 220px; }
 .admin-tabela input { width: 100%; min-width: 160px; }
 #aviso-novidade { position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 50; display: flex; align-items: center; gap: 12px; width: max-content; max-width: calc(100vw - 32px); padding: 10px 14px; border-radius: 10px; border: 1px solid var(--borda-forte); background: var(--superficie-2); color: var(--texto); font-size: 14px; box-shadow: 0 4px 16px rgba(0, 0, 0, .35); }
+.aviso-simulacao { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 16px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--marca); background: var(--marca-suave); color: var(--texto); font-size: 14px; }
+.penaltis-placar { text-align: center; margin: -4px 0 8px; font-family: var(--fonte-numero); font-size: 14px; color: var(--mudo); }

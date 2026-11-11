@@ -141,3 +141,27 @@ def test_planejar_coleta_quando_a_rodada_termina(tmp_path, monkeypatch):
     _rodada(tmp_path, agora, coletado_ha_h=5)
     coletar, motivo = highlightly.planejar(agora)
     assert coletar and "Brasileirão" in motivo
+
+
+def _copa(pid, rodada, data, estado="Finished"):
+    return {"id": pid, "round": rodada, "date": data, "state": {"description": estado}}
+
+
+def test_final_so_depois_das_outras_fases():
+    """A fonte chama de "Final" a 3ª preliminar da Libertadores (março); a final de verdade vem depois das semifinais."""
+    jogos = [_copa(1, "Final", "2026-03-04T00:00:00.000Z"), _copa(2, "Round of 16", "2026-08-10T00:00:00.000Z"),
+             _copa(3, "Semi-finals", "2026-10-20T00:00:00.000Z"), _copa(4, "Final", "2026-11-28T20:00:00.000Z", "Not started")]
+    assert [m["id"] for m in extras._finais(jogos)] == [4]
+    assert extras._finais(jogos[:1]) == []  # só preliminares: ainda não há final
+
+
+def test_copa_sem_final_continua_sendo_renovada(tmp_path, monkeypatch):
+    from coleta.api import salvar_raw
+    monkeypatch.setattr(config, "RAW_DIR", tmp_path)
+    jogos_fla = [{"league": {"id": 7, "name": "Copa do Brasil", "season": 2026}}]
+    encerrados = [_copa(1, "Semi-finals", "2026-11-08T00:00:00.000Z")]
+    salvar_raw("copa_7", {"data": encerrados, "_coletado_em": "2026-11-01T00:00:00+00:00"}, tmp_path)
+    assert [t[0] for t in extras.copas(jogos_fla)] == ["copa_7"]  # todos encerrados, mas sem a final
+    salvar_raw("copa_7", {"data": encerrados + [_copa(2, "Final", "2026-12-01T00:00:00.000Z")],
+                          "_coletado_em": "2026-11-01T00:00:00+00:00"}, tmp_path)
+    assert extras.copas(jogos_fla) == []  # final disputada: acabou

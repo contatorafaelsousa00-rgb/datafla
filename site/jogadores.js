@@ -17,22 +17,28 @@ export function agregarJogadores(js) {
     if (!ag.has(j.jogador_id)) {
       ag.set(j.jogador_id, { id: j.jogador_id, jogador: j.jogador, posicao: j.posicao, numero: j.numero,
         relacionado: 0, jogos: 0, titular: 0, somaNota: 0, nNota: 0,
-        ...Object.fromEntries(SOMAS.map((c) => [c, 0])), ...Object.fromEntries(OPCIONAIS.map((c) => [c, null])) });
+        ...Object.fromEntries(SOMAS.map((c) => [c, 0])), ...Object.fromEntries(OPCIONAIS.map((c) => [c, null])),
+        ...Object.fromEntries(OPCIONAIS.map((c) => [`min_${c}`, 0])), golsComXg: 0, assistComXa: 0 });
     }
     const a = ag.get(j.jogador_id);
     a.relacionado++;
     if (j.minutos > 0) a.jogos++;
     if (j.titular) a.titular++;
     for (const c of SOMAS) a[c] += j[c] ?? 0;
-    for (const c of OPCIONAIS) if (j[c] != null) a[c] = (a[c] ?? 0) + j[c];
+    // xG e cia. só existem em parte dos jogos (o Carioca não tem): guarda os minutos de cada um, para "por 90" e
+    // "G − xG" compararem a mesma base (antes os gols do Carioca entravam e o xG não: Pedro +10,1 em vez de +4,1)
+    for (const c of OPCIONAIS) if (j[c] != null) { a[c] = (a[c] ?? 0) + j[c]; a[`min_${c}`] += j.minutos ?? 0; }
+    if (j.xg != null) a.golsComXg += j.gols ?? 0;
+    if (j.xa != null) a.assistComXa += j.assistencias ?? 0;
     if (j.nota != null && j.minutos > 0) { a.somaNota += j.nota; a.nNota++; }
   }
-  const possiveis = soma(comDetalhe(js), (p) => p.duracao ?? 90);
+  // só jogos com jogadores na fonte (Supercopa, Recopa e amistosos têm detalhe mas não têm jogadores)
+  const possiveis = soma(comDetalhe(js).filter((p) => (D.jogadoresPorPartida.get(p.id_partida) ?? []).length), (p) => p.duracao ?? 90);
   for (const a of ag.values()) {
     a.pctMin = possiveis ? a.minutos / possiveis : null;
     a.nota = a.nNota ? a.somaNota / a.nNota : null;
-    a.gMenosXg = a.xg != null ? a.gols - a.xg : null;
-    a.aMenosXa = a.xa != null ? a.assistencias - a.xa : null;
+    a.gMenosXg = a.xg != null ? a.golsComXg - a.xg : null;
+    a.aMenosXa = a.xa != null ? a.assistComXa - a.xa : null;
     a.precisaoFin = a.finalizacoes ? a.finalizacoes_alvo / a.finalizacoes : null;
     a.passesPct = a.passes ? a.passes_certos / a.passes : null;
     a.duelosPct = a.duelos ? a.duelos_ganhos / a.duelos : null;
@@ -71,10 +77,14 @@ export const GRUPOS = {
   goleiros: { nome: "Goleiros", ordem: "xg_evitado", cols: ["jogos", "minutos", "defesas", "gols_sofridos", "xgot_enfrentado", "xg_evitado", "passesPct", "nota"], filtro: (a) => a.posicao === "Goleiro" },
 };
 
+// Minutos que servem de base para "por 90": os de xG/xA são só os dos jogos que têm esse dado
+const BASE_MIN = { gMenosXg: "min_xg", aMenosXa: "min_xa", ...Object.fromEntries(OPCIONAIS.map((c) => [c, `min_${c}`])) };
+export const minutosBase = (a, campo) => (BASE_MIN[campo] ? a[BASE_MIN[campo]] : a.minutos);
+
 export function valorCol(a, campo) {
   const c = COL[campo];
   const v = a[campo];
-  if (estado.modo === "p90" && (c.tipo === "soma" || c.tipo === "dif") && v != null) return a.minutos ? (v / a.minutos) * 90 : null;
+  if (estado.modo === "p90" && (c.tipo === "soma" || c.tipo === "dif") && v != null) return minutosBase(a, campo) ? (v / minutosBase(a, campo)) * 90 : null;
   return v;
 }
 export function formatarCol(campo, v) {
@@ -212,7 +222,7 @@ export function renderPerfil(js, todos) {
   const goleiro = a.posicao === "Goleiro";
   let pares = todos.filter((x) => x.posicao === a.posicao && x.minutos >= MIN_MINUTOS);
   if (pares.length < 4) pares = todos.filter((x) => x.minutos >= MIN_MINUTOS && goleiro === (x.posicao === "Goleiro"));
-  const taxa = (x, c, fixo) => (fixo ? x[c] : x[c] != null && x.minutos ? (x[c] / x.minutos) * 90 : null);
+  const taxa = (x, c, fixo) => (fixo ? x[c] : x[c] != null && minutosBase(x, c) ? (x[c] / minutosBase(x, c)) * 90 : null);
   const linhaPerfil = ({ rot, v, percentil, fixo, c }) => h("div", { class: "perfil-linha", title: `Melhor ou igual a ${pct(percentil, 0)} dos comparados` },
     h("span", { class: "perfil-rotulo" }, rot),
     h("span", { class: "perfil-barra" }, h("b", { style: `width:${Math.max(3, percentil * 100)}%`, class: percentil >= 0.75 ? "alto" : percentil < 0.25 ? "baixo" : "" })),

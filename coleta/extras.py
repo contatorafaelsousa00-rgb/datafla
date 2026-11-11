@@ -91,7 +91,8 @@ def tarefas(jogos: list[dict]) -> list[tuple[str, str, dict]]:
     escalacoes = [(f"escalacao_{j['id']}", f"lineups/{j['id']}", {}) for j in encerrados
                   if ler_raw(f"escalacao_{j['id']}") is None][:MAX_ESCALACOES]
 
-    futuras = {(j.get("league") or {}).get("id") for j in jogos if _status(j) not in config.STATUS_ENCERRADO}
+    # abandonado/cancelado não vai acontecer (o W.O. de Medellín × Flamengo renovava a tabela da Libertadores todo dia)
+    futuras = {(j.get("league") or {}).get("id") for j in jogos if _status(j) not in config.STATUS_ENCERRADO | {"ABD", "CANC"}}
     ligas = {(j.get("league") or {}).get("id"): (j.get("league") or {}).get("season") for j in jogos
              if "friendl" not in ((j.get("league") or {}).get("name") or "").lower()}  # amistoso não tem tabela
     tabelas = []
@@ -144,7 +145,12 @@ def copas(jogos: list[dict]) -> list[tuple[str, str, dict]]:
     for lid, temp in ids.items():
         nome = f"copa_{lid}"
         salvo = ler_raw(nome)
-        aberto = salvo is None or salvo.get("_parcial") or any(_status(m) not in config.STATUS_ENCERRADO for m in salvo.get("data") or [])
+        jogos_copa = (salvo or {}).get("data") or []
+        # Aberta: jogo por acontecer (adiado conta; abandonado e cancelado não) ou final ainda não criada pela fonte, que
+        # só cria o jogo da final depois das semifinais (Copa do Brasil 2026 ficou com todos os jogos encerrados e sem final)
+        aberto = (salvo is None or salvo.get("_parcial")
+                  or any(_status(m) not in config.STATUS_ENCERRADO | {"ABD", "CANC"} for m in jogos_copa)
+                  or not _finais(jogos_copa))
         if aberto and (_idade(nome) or timedelta(days=999)) >= timedelta(hours=HORAS_LIGA):
             saida.append((nome, "matches", {"leagueId": lid, "season": temp or config.SEASON}))
     return saida
@@ -301,7 +307,15 @@ def info_liga(jogos_fla: list[dict]) -> dict | None:
     return {"coletado_em": salvo.get("_coletado_em"), "sem_resultado": jogos_sem_resultado(arqs[0].stem, ignorar=do_fla)}
 
 
-ORDEM_FASES = ["Round of 64", "Round of 32", "Round of 16", "Quarter-finals", "Semi-finals", "Final"]
+# "Round of 64" saiu: na Copa do Brasil a fonte espalha essa fase por outros nomes e a coluna ficava com 6 dos confrontos
+ORDEM_FASES = ["Round of 32", "Round of 16", "Quarter-finals", "Semi-finals", "Final"]
+
+
+def _finais(jogos: list[dict]) -> list[dict]:
+    """Jogos da final de verdade. A fonte chama de "Final" também a 3ª fase preliminar da Libertadores (março): vale só
+    o que vem depois de todas as outras fases do mata-mata; sem elas, ainda não há final."""
+    outras = [m["date"] for m in jogos if m.get("round") in ORDEM_FASES[:-1]]
+    return [m for m in jogos if m.get("round") == "Final" and outras and m["date"] > max(outras)]
 
 
 def linhas_mata_mata(jogos_fla: list[dict]) -> list[dict]:
@@ -311,9 +325,11 @@ def linhas_mata_mata(jogos_fla: list[dict]) -> list[dict]:
     linhas = []
     for arq in config.RAW_DIR.glob("copa_*.json"):
         lid = int(arq.stem.removeprefix("copa_"))
-        for m in (ler_raw(arq.stem) or {}).get("data") or []:
+        jogos_copa = (ler_raw(arq.stem) or {}).get("data") or []
+        finais = {m["id"] for m in _finais(jogos_copa)}
+        for m in jogos_copa:
             fase = m.get("round")
-            if fase not in ORDEM_FASES:
+            if fase not in ORDEM_FASES or (fase == "Final" and m["id"] not in finais):
                 continue
             score = (m.get("state") or {}).get("score") or {}
             casa, fora = _placar(score.get("current"))

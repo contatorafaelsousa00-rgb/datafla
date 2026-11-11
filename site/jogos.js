@@ -4,7 +4,7 @@ import { $, bola, confronto, D, data, dataLonga, escudo, escudoImg, estado, h, l
 import { transmissaoDe } from "./manual.js";
 import { abrirJogadorNaPartida } from "./jogadores.js";
 import { render } from "./app.js";
-import { CLIMA, futurosFiltrados, horaBR } from "./temporada.js";
+import { futurosFiltrados, horaBR, traduzClima } from "./temporada.js";
 import { secoesPreview } from "./preview.js";
 import { tabelaJogadoresPartida } from "./tabela-partida.js";
 import { renderComparar } from "./calendario.js";
@@ -69,7 +69,7 @@ function renderDetalheProximo(j, detalhe) {
   const p = { ...j, ...(detalhe ?? {}) };
   const pre = secoesPreview(p); // desfalques, prováveis escalações, árbitro, momento
   const [casa, fora] = p.mando === "Fora" ? [p.adversario, "Flamengo"] : ["Flamengo", p.adversario];
-  const clima = p.clima ? [CLIMA[p.clima?.toLowerCase()] ?? p.clima, p.temperatura != null ? `${num(p.temperatura, 0)} °C` : null].filter(Boolean).join(", ") : null;
+  const clima = p.clima ? [traduzClima(p.clima), p.temperatura != null ? `${num(p.temperatura, 0)} °C` : null].filter(Boolean).join(", ") : null;
   const confrontos = (D.bruto.confrontos ?? []).filter((c) => c.adversario_id === p.adversario_id)
     .sort((a, b) => b.data_utc.localeCompare(a.data_utc));
   const forma = (D.bruto.forma_adversario ?? []).filter((c) => c.adversario_id === p.adversario_id)
@@ -141,7 +141,7 @@ export function renderJogos(js) {
     },
       h("td", {}, dataLonga(p.data_utc)), h("td", {}, tagComp(p.competicao)),
       h("td", {}, confronto(p), p.status === "WO" ? h("span", { class: "selo-wo", title: p.nota ?? "Vitória por W.O." }, "W.O.") : null, p.penaltis_pro != null
-        ? h("span", { class: "sutil" }, ` (pên. ${mandanteVisitante(p, p.penaltis_pro, p.penaltis_contra).map((t) => t.valor).join("–")})`) : null),
+        ? h("span", { class: "sutil" }, ` (pên. ${penaltisTexto(p)})`) : null),
       h("td", { class: "num" }, bola(p.resultado)),
       D.tem.xg ? h("td", { class: "num" }, p.xg_pro != null
         ? mandanteVisitante(p, p.xg_pro, p.xg_contra).map((t) => num(t.valor, 2)).join(" × ") : "–") : null,
@@ -187,6 +187,9 @@ export function abrirProximo(id) {
   render();
 }
 
+// Placar da disputa de pênaltis, mandante–visitante
+const penaltisTexto = (p) => mandanteVisitante(p, p.penaltis_pro, p.penaltis_contra).map((t) => t.valor).join("–");
+
 // Link do jogo = página estática /jogo/<id> (coleta/paginas.py): a prévia no WhatsApp/X mostra placar, gols e xG
 async function compartilharJogo() {
   const id = estado.jogo ?? estado.proximo;
@@ -194,6 +197,7 @@ async function compartilharJogo() {
   if (!jogo) return;
   const url = `${location.origin}/jogo/${id}`;
   const titulo = jogo.gols_pro != null ? textoConfronto(jogo, jogo.gols_pro, jogo.gols_contra)
+      + (jogo.penaltis_pro != null ? ` (pên. ${penaltisTexto(jogo)})` : "")
     : jogo.mando === "Fora" ? `${jogo.adversario} × Flamengo` : `Flamengo × ${jogo.adversario}`; // mandante × visitante
   const botao = $("compartilhar-jogo");
   if (navigator.share && matchMedia("(pointer: coarse)").matches) {
@@ -288,6 +292,7 @@ export function renderDetalheJogo(js) {
     t.xg != null ? h("span", { class: "sutil" }, `xG ${num(t.xg, 2)}`) : null);
   const cabecalho = [
     h("div", { class: "placar" }, lado(esq, "esq"), h("span", { class: "gols" }, `${esq.gols} × ${dir.gols}`), lado(dir, "dir")),
+    p.penaltis_pro != null ? h("p", { class: "penaltis-placar" }, `Pênaltis: ${penaltisTexto(p)}`) : null,
     h("p", { class: "sutil" }, [p.competicao, p.rodada, dataLonga(p.data_utc), p.estadio, p.arbitro ? `Árbitro: ${p.arbitro}` : null,
       p.temperatura != null ? `${num(p.temperatura, 0)} °C` : null, p.formacao ? `Formação ${p.formacao}` : null].filter(Boolean).join(" · ")),
   ];

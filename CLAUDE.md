@@ -124,7 +124,8 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   `/matches?leagueId=61205` (380 jogos do Brasileirão em 4 páginas, a cada 20 h). A API NÃO tem mapa de calor, coordenadas
   nem posição média; vídeos vêm vazios no plano grátis; odds fora do plano. Painel: campinho (`graficos.campinho`,
   mandante à esquerda/em cima), aba **Classificação** (`classificacao.js`: tabela calculada dos jogos = igual à oficial;
-  simulador de palpites salvo no navegador; chances por 4.000 simulações Poisson com força casa/fora encolhida para a
+  simulador de palpites só na memória da página (desde 11/11/2026: guardado no navegador, a simulação voltava dias depois no
+  lugar da tabela real; aviso "Simulação" com "Ver a tabela real"); chances por 4.000 simulações Poisson com força casa/fora encolhida para a
   média, semente fixa), Formações (Estilo de jogo), Carreira (perfil), xGOT enfrentado (goleiros), Ataques (comparativo),
   posição na tabela no próximo jogo. Regras do Firestore ganharam `aba_classificacao` (publicar regras junto com o site).
 - Ficha do elenco (16/10/2026): `/players/{id}` (perfil com dados do Transfermarkt: nascimento, altura, pé, nacionalidade,
@@ -203,6 +204,14 @@ diz estabilizar em 1–2 h. Por isso: recoleta até 48 h e `alteracoes.csv` para
   com Vasco × Flamengo em andamento) e as execuções seguintes não tinham novidade. Agora: falha nos testes de front-end numa
   coleta só libera a publicação ("Liberar a publicação") se o código for igual ao do último push aprovado (o teste do painel
   segue barrando; o aviso abre); "Decidir se publica" publica de novo quando a coleta anterior falhou (push falho não). Para reproduzir uma falha: worktree no commit de dados + `clock.set_system_time`.
+- Revisão de código de 11/11/2026 (corrigido): empate na artilharia comparava o texto ("4 (4)" × "4"); clima com "day/night"
+  em inglês (`traduzClima`); pênaltis no cabeçalho e no título de compartilhar; xG/xA, "G − xG" e por 90 só sobre os jogos com
+  xG do jogador (`min_<campo>`, `golsComXg`; o Carioca não tem xG); "% min." e carga só com jogos que têm jogadores; Em alta/baixa
+  só com quem é do clube e jogou um dos 5 últimos; provável: substituto da mesma linha (`posicao` já vem por extenso); "Unknown"
+  fora das formações; disputa de pênaltis fora das faixas de minuto; KPIs da ficha sem a base (U20). Coleta: copa sem a final
+  continua renovando (`extras._finais`; a fonte cria a final depois das semis); "Final" da 3ª preliminar da Libertadores fora do
+  chaveamento; "Round of 64" fora (fase incompleta); abandonado/cancelado não mantém tabela/copa abertas; `tudo` sem jogo na
+  temporada nova não falha (virada do ano); jogador com 2 ids juntado por `correcoes.json` → "jogadores".
 - Previsão pré-jogo: a fonte gera previsões "pré-jogo" até depois do apito; usar a última com generatedAt <= início.
 - Aba **Números** (16/10/2026, `numeros.js`; conferida com a planilha do Rafael "Dados Flamengo temporada 2026.xlsx"):
   artilharia (pênaltis entre parênteses), assistências, G+A, mais utilizados, sem sofrer gol (por goleiro), saiu na

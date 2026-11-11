@@ -8,16 +8,11 @@ import { horaBR } from "./temporada.js";
 
 const SIMULACOES = 4000;
 const ZONAS = [["titulo", "Título", (p) => p === 1], ["g4", "Top 4", (p) => p <= 4], ["g6", "Top 6", (p) => p <= 6], ["z4", "Rebaixamento", (p, n) => p > n - 4]];
-const CHAVE = "datafla-palpites";
-let palpites = carregar();
+// Palpites só existem enquanto a página está aberta: guardados no navegador, a simulação voltava dias depois no lugar da
+// tabela real (11/11/2026). Apaga o que versões antigas guardaram.
+const palpites = new Map();
 let soFla = false;
-
-function carregar() {
-  try { return new Map(JSON.parse(localStorage.getItem(CHAVE) || "[]")); } catch { return new Map(); }
-}
-function guardar() {
-  try { localStorage.setItem(CHAVE, JSON.stringify([...palpites])); } catch {}
-}
+try { localStorage.removeItem("datafla-palpites"); } catch {}
 
 // ---------- tabela ----------
 const novaLinha = (t) => ({ ...t, pontos: 0, jogos: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0 });
@@ -228,7 +223,7 @@ function renderBrasileirao() {
   const rodadas = new Map();
   for (const m of visiveis) { const k = m.rodada ?? "Sem rodada"; if (!rodadas.has(k)) rodadas.set(k, []); rodadas.get(k).push(m); }
   const botao = (m, r, rotulo) => h("button", { type: "button", "aria-pressed": String(palpites.get(m.id_partida) === r), title: rotulo,
-    onclick: () => { palpites.get(m.id_partida) === r ? palpites.delete(m.id_partida) : palpites.set(m.id_partida, r); guardar(); renderClassificacao(); } },
+    onclick: () => { palpites.get(m.id_partida) === r ? palpites.delete(m.id_partida) : palpites.set(m.id_partida, r); renderClassificacao(); } },
     r === "E" ? "Empate" : "Vence");
   const jogosEl = h("div", { class: "rodadas" }, [...rodadas].map(([rod, ms]) => h("div", { class: "rodada" },
     h("h3", {}, rod, h("span", { class: "sutil" }, ` · ${data(ms[0].data_utc)}${ms.some((m) => m.status === "PST") ? " · inclui jogo adiado" : ""}`)),
@@ -244,11 +239,15 @@ function renderBrasileirao() {
       h("button", { type: "button", "aria-pressed": String(soFla), onclick: () => { soFla = true; renderClassificacao(); } }, "Só do Flamengo")),
     h("button", { type: "button", class: "botao-secundario", onclick: () => {
       for (const m of restantes) if (m.casa_id === idFla) palpites.set(m.id_partida, "C"); else if (m.fora_id === idFla) palpites.set(m.id_partida, "F");
-      guardar(); renderClassificacao(); } }, "Flamengo vence todos"),
-    escolhidos.length ? h("button", { type: "button", class: "botao-secundario", onclick: () => { palpites.clear(); guardar(); renderClassificacao(); } },
+      renderClassificacao(); } }, "Flamengo vence todos"),
+    escolhidos.length ? h("button", { type: "button", class: "botao-secundario", onclick: () => { palpites.clear(); renderClassificacao(); } },
       `Limpar ${escolhidos.length} palpite${escolhidos.length > 1 ? "s" : ""}`) : null);
 
   preencher($("classificacao-corpo"),
+    escolhidos.length ? h("div", { class: "aviso-simulacao", role: "status" },
+      h("span", {}, h("b", {}, "Simulação: "), `a tabela abaixo usa ${escolhidos.length} palpite${escolhidos.length > 1 ? "s" : ""} seu${escolhidos.length > 1 ? "s" : ""}, `
+        + "não é a classificação real. Some ao recarregar a página."),
+      h("button", { type: "button", class: "botao-secundario", onclick: () => { palpites.clear(); renderClassificacao(); } }, "Ver a tabela real")) : null,
     ...resumo,
     h("article", { class: "cartao" }, h("h2", {}, escolhidos.length ? "Tabela com seus palpites" : "Tabela"),
       h("p", { class: "sutil" }, `${encerrados.length} jogos disputados, ${restantes.length} por jogar. As chances vêm de ${num(SIMULACOES)} simulações dos jogos restantes`
@@ -256,7 +255,7 @@ function renderBrasileirao() {
       avisoLiga(),
       h("div", { class: "tabela-rolagem" }, tabelaEl)),
     h("article", { class: "cartao" }, h("h2", {}, "Simulador"),
-      h("p", { class: "sutil" }, "Escolha o resultado dos jogos que faltam: a tabela e as chances acima se refazem na hora. Clique de novo para desfazer. Os palpites ficam salvos só neste navegador."),
+      h("p", { class: "sutil" }, "Escolha o resultado dos jogos que faltam: a tabela e as chances acima se refazem na hora. Clique de novo para desfazer. É só uma simulação: nada é salvo, e ao recarregar a página volta a tabela real."),
       acoes, visiveis.length ? jogosEl : vazio("Nenhum jogo restante.")),
   );
 }

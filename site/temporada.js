@@ -11,8 +11,10 @@ import { trocarAba } from "./app.js";
 export const CANCELADO = new Set(["ABD", "PST", "CANC"]);
 export const horaBR = (iso) => new Date(iso).toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit", timeZone: "America/Sao_Paulo" });
 export const diaBR = (iso) => new Date(iso).toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long", timeZone: "America/Sao_Paulo" });
-export const CLIMA = { rain: "chuva", cloudy: "nublado", clear: "céu limpo", sunny: "sol", "partly cloudy": "parcialmente nublado",
+const CLIMAS = { rain: "chuva", cloudy: "nublado", clear: "céu limpo", sunny: "sol", "partly cloudy": "parcialmente nublado",
   overcast: "encoberto", snow: "neve", fog: "neblina", thunderstorm: "tempestade", drizzle: "garoa" };
+// A fonte manda "clear night", "partly cloudy day"...: sem o período, cai no nome em português
+export const traduzClima = (c) => CLIMAS[c.toLowerCase().replace(/ (day|night)$/, "")] ?? c;
 export let relogio; // atualiza a contagem regressiva
 
 // Próximos jogos do calendário que passam pelos filtros de competição e mando (o período não se aplica ao futuro).
@@ -44,7 +46,7 @@ export function renderProximo() {
     t.logo ? h("img", { src: t.logo, alt: "", width: 64, height: 64 }) : h("span", { class: "escudo-vazio" }), h("b", {}, t.nome));
   const cont = h("span", { class: "proximo-contagem" }, contagem(p.data_utc));
   const local = p.estadio ? `${p.estadio}${p.cidade ? `, ${p.cidade}` : ""}` : null;
-  const clima = p.clima ? `${CLIMA[p.clima] ?? p.clima}${p.temperatura != null ? `, ${num(p.temperatura, 0)} °C` : ""}` : null;
+  const clima = p.clima ? `${traduzClima(p.clima)}${p.temperatura != null ? `, ${num(p.temperatura, 0)} °C` : ""}` : null;
   const cartao = $("card-proximo");
   cartao.classList.add("clicavel");
   const temOficial = (D.bruto.escalacao_oficial ?? []).some((e) => e.id_partida === p.id_partida && e.eh_flamengo && e.titular);

@@ -112,3 +112,12 @@ def test_processar_todas_gera_cada_temporada_com_dados(tmp_path, monkeypatch):
     assert processadas == [2026, 2027]
     monkeypatch.undo()  # DATA_DIR de volta antes de reapontar os caminhos
     config.aplicar_temporada(config.TEMPORADA_ATUAL)
+
+
+def test_juntar_jogador_com_dois_ids():
+    from coleta import correcoes
+    t = {"jogadores_partida": [{"jogador_id": 1, "minutos": 45}, {"jogador_id": 2, "minutos": 82}],
+         "eventos": [{"jogador_id": 3, "assist_id": 1}], "perfis": [{"jogador_id": 1}, {"jogador_id": 2}]}
+    correcoes.juntar_jogadores(t, {1: 2})
+    assert [j["jogador_id"] for j in t["jogadores_partida"]] == [2, 2]
+    assert t["eventos"][0]["assist_id"] == 2 and t["perfis"] == [{"jogador_id": 2}]

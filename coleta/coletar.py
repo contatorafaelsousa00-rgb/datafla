@@ -188,6 +188,7 @@ def cmd_processar():
         tabelas["perfis"] = extras.linhas_perfis()
         tabelas["fotos"] = fotos.linhas_fotos(tabelas["jogadores_partida"])
         imagens.logos_locais(tabelas)
+    correcoes.juntar_jogadores(tabelas)  # mesmo atleta com dois ids na fonte (data/<ano>/correcoes.json)
     armazenar.salvar_sqlite(tabelas)
     armazenar.salvar_csv(tabelas)
 
@@ -333,7 +334,9 @@ def main(argv=None):
                     raise
                 # o histórico entra antes de processar, para o site publicado já levar esta coleta
                 highlightly.registrar_atualizacao(salvas, api)
-                return codigo or cmd_processar()
+                # Temporada nova sem nenhum jogo ainda (janeiro): a coleta deu certo e não há o que processar. Antes isso
+                # falhava o passo, o raw não ia para o Git e a coleta inteira se repetia a cada 15 min até o 1º jogo.
+                return codigo or (cmd_processar() if carregar_partidas() else 0)
             finally:
                 s = highlightly.situacao_coleta()
                 highlightly.resumo_github(

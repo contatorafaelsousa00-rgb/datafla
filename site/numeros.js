@@ -78,8 +78,9 @@ function ranking(chave, titulo, subtitulo, linhas, colunas) {
     linhas.length ? h("div", { class: "tabela-rolagem" }, h("table", { class: "tabela tabela-ranking" },
       h("thead", {}, h("tr", {}, h("th", { class: "num" }, "#"), h("th", {}, "Jogador"), ...colunas.map(([t]) => h("th", { class: "num" }, t)))),
       h("tbody", {}, mostrar.map((l, i) => {
-        const v = colunas[0][1](l);
-        if (v !== anterior) { pos = i + 1; anterior = v; }  // empate divide a posição
+        // empate divide a posição; compara o valor, não o texto ("4 (4)" com pênaltis × "4" eram posições diferentes)
+        const v = (colunas[0][2] ?? colunas[0][1])(l);
+        if (v !== anterior) { pos = i + 1; anterior = v; }
         return h("tr", {}, h("td", { class: "num sutil" }, `${pos}º`), h("td", {}, jogadorEl(l)),
           ...colunas.map(([, f], k) => h("td", { class: "num" }, k === 0 ? h("b", {}, f(l)) : f(l))));
       })))) : vazio("Nenhum jogador no filtro."),
@@ -173,7 +174,7 @@ export function renderNumeros(js) {
     h("div", { class: "grade-2" },
       ranking("gols", "Artilharia", "Gols do jogador (pênaltis entre parênteses). Clique no nome para o perfil.",
         ord((l) => l.gols, (a, b) => a.minutos - b.minutos),
-        [["Gols", (l) => (l.penaltis ? `${l.gols} (${l.penaltis})` : l.gols)], ["Jogos", (l) => l.jogos], ["Min./gol", (l) => (l.minutos ? num(l.minutos / l.gols) : "–")]]),
+        [["Gols", (l) => (l.penaltis ? `${l.gols} (${l.penaltis})` : l.gols), (l) => l.gols], ["Jogos", (l) => l.jogos], ["Min./gol", (l) => (l.minutos ? num(l.minutos / l.gols) : "–")]]),
       ranking("assist", "Assistências", null, ord((l) => l.assistencias, (a, b) => a.minutos - b.minutos),
         [["Assist.", (l) => l.assistencias], ["Jogos", (l) => l.jogos]]),
       ranking("ga", "Participações em gol", "Gols + assistências.", ord((l) => l.gols + l.assistencias, (a, b) => b.gols - a.gols),

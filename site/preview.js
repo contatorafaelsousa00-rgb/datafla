@@ -7,7 +7,6 @@ import { campinho } from "./graficos.js";
 import { abrirJogador, agregarJogadores } from "./jogadores.js";
 
 const naNo = (comp) => (/^(Libertadores|Copa|Recopa|Supercopa|Taça)/.test(comp) ? `na ${comp}` : `no ${comp}`);
-const POS_ESCALACAO = { G: "Goleiro", D: "Defensor", M: "Meio-campo", F: "Atacante" };
 
 // Suspenso num jogo? Pela regra de 3 amarelos ou expulsão no jogo anterior DA MESMA competição.
 // Devolve o motivo (texto) ou null.
@@ -46,7 +45,7 @@ export function desfalques(p) {
     else if (c.amarelos % 3 === 2) pendurados.push({ ...c, motivo: `${c.amarelos} amarelos` });
   }
   const lesionados = (D.bruto.perfis ?? []).filter((x) => x.lesao_atual && /flamengo/i.test(x.clube_atual ?? ""))
-    .map((x) => ({ id: x.jogador_id, nome: x.jogador, motivo: x.lesao_atual + (x.lesao_volta ? ` (volta prevista ${data(x.lesao_volta)})` : "") }));
+    .map((x) => ({ id: x.jogador_id, nome: x.jogador, motivo: x.lesao_atual + (x.lesao_volta ? ` (volta prevista ${data(x.lesao_volta + "T12:00:00Z")})` : "") }));
   // lesões cadastradas no admin (a fonte não traz as recentes); valem enquanto a volta prevista não passou
   const hoje = new Date().toISOString().slice(0, 10);
   for (const [id, l] of Object.entries(MANUAL.lesoes)) {
@@ -131,7 +130,7 @@ function provavelFlamengo(p, fora, voltam = []) {
   const recentes8 = agregarJogadores(recentes.slice(0, 8));
   for (const v of vagas) {
     if (!fora.has(v.id)) continue;
-    const sub = recentes8.filter((a) => a.posicao === POS_ESCALACAO[v.posicao] && !usados.has(a.id) && !fora.has(a.id))
+    const sub = recentes8.filter((a) => a.posicao === v.posicao && !usados.has(a.id) && !fora.has(a.id))
       .sort((a, b) => b.minutos - a.minutos)[0];
     if (sub) trocar(v, sub, null, true);
   }

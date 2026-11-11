@@ -18,7 +18,7 @@ export const FAIXAS = ["1–15", "16–30", "31–45", "46–60", "61–75", "76
 export const faixaDe = (min, acrescimo) => (min > 90 || (min === 90 && acrescimo) ? 6 : Math.min(5, Math.max(0, Math.ceil(min / 15) - 1)));
 
 function renderFormacoes(js) {
-  const comFormacao = js.filter((p) => p.formacao);
+  const comFormacao = js.filter((p) => p.formacao && p.formacao !== "Unknown");
   if (!mostrar("card-formacoes", comFormacao.length > 0)) return;
   const grupos = new Map();
   for (const p of comFormacao) { if (!grupos.has(p.formacao)) grupos.set(p.formacao, []); grupos.get(p.formacao).push(p); }
@@ -54,7 +54,9 @@ export function renderEstilo(js) {
   const comChutes = det.filter((p) => (D.finalizacoesPorPartida.get(p.id_partida) ?? []).length);
   if (mostrar("card-chutes-minuto", comChutes.length >= 2)) {
     const pro = Array(7).fill(0), contra = Array(7).fill(0);
-    for (const p of comChutes) for (const c of D.finalizacoesPorPartida.get(p.id_partida)) (c.eh_flamengo ? pro : contra)[faixaDe(c.minuto, c.acrescimo)]++;
+    for (const p of comChutes) for (const c of D.finalizacoesPorPartida.get(p.id_partida)) {
+      if (c.minuto != null) (c.eh_flamengo ? pro : contra)[faixaDe(c.minuto, c.acrescimo)]++; // sem minuto = disputa de pênaltis
+    }
     const n = comChutes.length;
     colunasAgrupadas($("graf-chutes-minuto"), FAIXAS, [
       { nome: "Flamengo", cor: "var(--serie-1)", valores: pro.map((v) => +(v / n).toFixed(1)) },
