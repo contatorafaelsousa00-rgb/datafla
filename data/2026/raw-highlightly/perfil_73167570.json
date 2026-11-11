@@ -85,13 +85,21 @@
     {
      "reason": "Unknown",
      "season": "2027",
+     "toDate": "28.10.2026",
+     "fromDate": "21.10.2026",
+     "missedGames": 3,
+     "absentDurationInDays": 8
+    },
+    {
+     "reason": "Unknown",
+     "season": "2027",
      "toDate": "14.10.2026",
      "fromDate": "07.10.2026",
-     "missedGames": 1,
+     "missedGames": 2,
      "absentDurationInDays": 8
     }
    ]
   }
  ],
- "_coletado_em": "2026-11-03T01:15:38.519694+00:00"
+ "_coletado_em": "2026-11-11T02:15:56.408156+00:00"
 }
