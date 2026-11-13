@@ -1,21 +1,36 @@
 {
  "data": {
   "venue": {
-   "city": null,
-   "name": null,
-   "country": null,
-   "capacity": null
+   "city": "Rio de Janeiro",
+   "name": "Maracana Stadium",
+   "country": "Brazil",
+   "capacity": "73139"
   },
   "referee": {
    "name": null,
    "nationality": null
   },
   "forecast": {
-   "status": null,
-   "temperature": null
+   "status": "cloudy",
+   "temperature": "25.88°C"
   },
   "events": [],
-  "predictions": null,
+  "predictions": {
+   "live": [],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Athletico Paranaense.",
+     "generatedAt": "2026-11-12T09:48:57.735Z",
+     "probabilities": {
+      "away": "8.75%",
+      "draw": "15.38%",
+      "home": "75.87%"
+     }
+    }
+   ]
+  },
   "statistics": [
    {
     "statistics": [],
@@ -72,5 +87,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-11-12T02:30:41.531695+00:00"
+ "_coletado_em": "2026-11-13T02:45:37.153045+00:00"
 }

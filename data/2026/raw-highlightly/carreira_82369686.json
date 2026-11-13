@@ -7,6 +7,25 @@
    "fullName": "Wanderson Junior de Souza Vaz",
    "perCompetition": [
     {
+     "club": "Clube Atlético Mineiro",
+     "type": "national league",
+     "goals": 0,
+     "league": "Campeonato Brasileiro Série A",
+     "season": "2026",
+     "assists": 0,
+     "ownGoals": 0,
+     "redCards": 0,
+     "cleanSheets": 0,
+     "gamesPlayed": 0,
+     "yellowCards": 0,
+     "goalsConceded": 0,
+     "minutesPlayed": 0,
+     "substitutedIn": 0,
+     "substitutedOut": 0,
+     "penaltiesScored": 0,
+     "secondYellowCards": 0
+    },
+    {
      "club": "CR Flamengo U20",
      "type": "national league",
      "goals": 0,
@@ -180,6 +199,22 @@
    ],
    "perClub": [
     {
+     "club": "Clube Atlético Mineiro",
+     "goals": 0,
+     "assists": 0,
+     "ownGoals": 0,
+     "redCards": 0,
+     "cleanSheets": 0,
+     "gamesPlayed": 0,
+     "yellowCards": 0,
+     "goalsConceded": 0,
+     "minutesPlayed": 0,
+     "substitutedIn": 0,
+     "substitutedOut": 0,
+     "penaltiesScored": 0,
+     "secondYellowCards": 0
+    },
+    {
      "club": "CR Flamengo U20",
      "goals": 0,
      "assists": 1,
@@ -214,5 +249,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-04T01:45:31.216384+00:00"
+ "_coletado_em": "2026-11-13T02:45:56.487068+00:00"
 }

@@ -213,7 +213,7 @@
    "name": "J. Carrascal",
    "age": 27,
    "number": 15,
-   "position": "Attacker",
+   "position": "Midfielder",
    "photo": "https://media.api-sports.io/football/players/5994.png"
   },
   {
@@ -253,7 +253,7 @@
    "name": "G. Plata",
    "age": 25,
    "number": 19,
-   "position": "Midfielder",
+   "position": "Attacker",
    "photo": "https://media.api-sports.io/football/players/16369.png"
   },
   {
@@ -273,5 +273,5 @@
    "photo": "https://media.api-sports.io/football/players/198347.png"
   }
  ],
- "_coletado_em": "2026-11-06T00:45:55.319171+00:00"
+ "_coletado_em": "2026-11-13T02:46:03.436544+00:00"
 }
