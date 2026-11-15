@@ -455,7 +455,7 @@
      "season": "2017",
      "toDate": "16.01.2017",
      "fromDate": "12.09.2016",
-     "missedGames": 15,
+     "missedGames": 19,
      "absentDurationInDays": 127
     },
     {
@@ -559,7 +559,7 @@
      "season": "2017",
      "toDate": "13.04.2017",
      "fromDate": "27.03.2017",
-     "missedGames": 3,
+     "missedGames": 4,
      "absentDurationInDays": 18
     },
     {
@@ -581,5 +581,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-08T01:31:00.972564+00:00"
+ "_coletado_em": "2026-11-15T03:01:15.475915+00:00"
 }
