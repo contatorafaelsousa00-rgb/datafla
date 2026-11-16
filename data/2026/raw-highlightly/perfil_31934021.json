@@ -185,11 +185,19 @@
    ],
    "injuries": [
     {
+     "reason": "Eye injury",
+     "season": "2027",
+     "toDate": "03.11.2026",
+     "fromDate": "21.10.2026",
+     "missedGames": 3,
+     "absentDurationInDays": 14
+    },
+    {
      "reason": "Cruciate ligament tear",
      "season": "2025",
      "toDate": "13.10.2025",
      "fromDate": "27.02.2025",
-     "missedGames": 24,
+     "missedGames": 31,
      "absentDurationInDays": 229
     },
     {
@@ -205,7 +213,7 @@
      "season": "2024",
      "toDate": "02.04.2024",
      "fromDate": "25.10.2023",
-     "missedGames": 29,
+     "missedGames": 33,
      "absentDurationInDays": 161
     },
     {
@@ -213,7 +221,7 @@
      "season": "2023",
      "toDate": "30.06.2023",
      "fromDate": "16.02.2023",
-     "missedGames": 17,
+     "missedGames": 21,
      "absentDurationInDays": 135
     },
     {
@@ -235,5 +243,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-09T01:45:58.134766+00:00"
+ "_coletado_em": "2026-11-16T03:16:09.529304+00:00"
 }

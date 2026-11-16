@@ -205,8 +205,8 @@
      {
       "away": {
        "wins": 4,
-       "draws": 3,
-       "games": 17,
+       "draws": 4,
+       "games": 18,
        "loses": 10,
        "scoredGoals": 17,
        "receivedGoals": 22
@@ -226,13 +226,13 @@
       },
       "total": {
        "wins": 14,
-       "draws": 8,
-       "games": 34,
+       "draws": 9,
+       "games": 35,
        "loses": 12,
        "scoredGoals": 44,
        "receivedGoals": 40
       },
-      "points": 50,
+      "points": 51,
       "position": 7
      },
      {
@@ -337,6 +337,39 @@
      {
       "away": {
        "wins": 4,
+       "draws": 5,
+       "games": 17,
+       "loses": 8,
+       "scoredGoals": 20,
+       "receivedGoals": 26
+      },
+      "home": {
+       "wins": 8,
+       "draws": 3,
+       "games": 17,
+       "loses": 6,
+       "scoredGoals": 25,
+       "receivedGoals": 24
+      },
+      "team": {
+       "id": 113967,
+       "logo": "https://highlightly.net/soccer/images/teams/113967.png",
+       "name": "Vasco DA Gama"
+      },
+      "total": {
+       "wins": 12,
+       "draws": 8,
+       "games": 34,
+       "loses": 14,
+       "scoredGoals": 45,
+       "receivedGoals": 50
+      },
+      "points": 44,
+      "position": 11
+     },
+     {
+      "away": {
+       "wins": 4,
        "draws": 3,
        "games": 17,
        "loses": 10,
@@ -365,7 +398,7 @@
        "receivedGoals": 53
       },
       "points": 42,
-      "position": 11
+      "position": 12
      },
      {
       "away": {
@@ -398,39 +431,6 @@
        "receivedGoals": 51
       },
       "points": 42,
-      "position": 12
-     },
-     {
-      "away": {
-       "wins": 3,
-       "draws": 5,
-       "games": 16,
-       "loses": 8,
-       "scoredGoals": 18,
-       "receivedGoals": 26
-      },
-      "home": {
-       "wins": 8,
-       "draws": 3,
-       "games": 17,
-       "loses": 6,
-       "scoredGoals": 25,
-       "receivedGoals": 24
-      },
-      "team": {
-       "id": 113967,
-       "logo": "https://highlightly.net/soccer/images/teams/113967.png",
-       "name": "Vasco DA Gama"
-      },
-      "total": {
-       "wins": 11,
-       "draws": 8,
-       "games": 33,
-       "loses": 14,
-       "scoredGoals": 43,
-       "receivedGoals": 50
-      },
-      "points": 41,
       "position": 13
      },
      {
@@ -444,8 +444,8 @@
       },
       "home": {
        "wins": 7,
-       "draws": 6,
-       "games": 17,
+       "draws": 7,
+       "games": 18,
        "loses": 4,
        "scoredGoals": 24,
        "receivedGoals": 22
@@ -457,13 +457,13 @@
       },
       "total": {
        "wins": 10,
-       "draws": 10,
-       "games": 34,
+       "draws": 11,
+       "games": 35,
        "loses": 14,
        "scoredGoals": 39,
        "receivedGoals": 48
       },
-      "points": 40,
+      "points": 41,
       "position": 14
      },
      {
@@ -643,10 +643,10 @@
       "home": {
        "wins": 3,
        "draws": 5,
-       "games": 16,
-       "loses": 8,
+       "games": 17,
+       "loses": 9,
        "scoredGoals": 22,
-       "receivedGoals": 36
+       "receivedGoals": 38
       },
       "team": {
        "id": 113116,
@@ -656,10 +656,10 @@
       "total": {
        "wins": 4,
        "draws": 9,
-       "games": 33,
-       "loses": 20,
+       "games": 34,
+       "loses": 21,
        "scoredGoals": 33,
-       "receivedGoals": 68
+       "receivedGoals": 70
       },
       "points": 21,
       "position": 20
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-11-14T03:01:24.101839+00:00"
+ "_coletado_em": "2026-11-16T03:15:57.305812+00:00"
 }

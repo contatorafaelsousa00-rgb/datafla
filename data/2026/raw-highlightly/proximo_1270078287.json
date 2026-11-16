@@ -7,12 +7,12 @@
    "capacity": "73139"
   },
   "referee": {
-   "name": null,
-   "nationality": null
+   "name": "Klein, Rafael Rodrigo",
+   "nationality": "Brazil"
   },
   "forecast": {
-   "status": "partly cloudy night",
-   "temperature": "26.26°C"
+   "status": "cloudy",
+   "temperature": "25.56°C"
   },
   "events": [],
   "predictions": {
@@ -49,6 +49,17 @@
       "away": "8.73%",
       "draw": "15.34%",
       "home": "75.93%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Athletico Paranaense.",
+     "generatedAt": "2026-11-15T10:11:49.757Z",
+     "probabilities": {
+      "away": "8.69%",
+      "draw": "15.28%",
+      "home": "76.03%"
      }
     }
    ]
@@ -109,5 +120,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-11-14T23:45:27.618798+00:00"
+ "_coletado_em": "2026-11-16T03:15:39.097425+00:00"
 }

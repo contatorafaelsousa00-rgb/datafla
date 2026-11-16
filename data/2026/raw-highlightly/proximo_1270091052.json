@@ -1,21 +1,47 @@
 {
  "data": {
   "venue": {
-   "city": null,
-   "name": null,
-   "country": null,
-   "capacity": null
+   "city": "Sao Paulo",
+   "name": "Nubank Parque",
+   "country": "Brazil",
+   "capacity": "43600"
   },
   "referee": {
    "name": null,
    "nationality": null
   },
   "forecast": {
-   "status": null,
-   "temperature": null
+   "status": "cloudy",
+   "temperature": "24.15°C"
   },
   "events": [],
-  "predictions": null,
+  "predictions": {
+   "live": [],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Palmeiras is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-11-14T11:29:47.832Z",
+     "probabilities": {
+      "away": "32.38%",
+      "draw": "27.43%",
+      "home": "40.19%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Palmeiras is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-11-15T10:23:21.223Z",
+     "probabilities": {
+      "away": "32.38%",
+      "draw": "27.43%",
+      "home": "40.19%"
+     }
+    }
+   ]
+  },
   "statistics": [
    {
     "statistics": [],
@@ -72,5 +98,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-11-14T03:01:04.868508+00:00"
+ "_coletado_em": "2026-11-16T03:15:41.926613+00:00"
 }
