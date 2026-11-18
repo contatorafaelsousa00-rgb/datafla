@@ -12,7 +12,7 @@
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "24.13°C"
+   "temperature": "24.39°C"
   },
   "events": [],
   "predictions": {
@@ -83,6 +83,17 @@
       "draw": "15.18%",
       "home": "75.93%"
      }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Athletico Paranaense.",
+     "generatedAt": "2026-11-18T09:16:50.693Z",
+     "probabilities": {
+      "away": "7.93%",
+      "draw": "14.20%",
+      "home": "77.87%"
+     }
     }
    ]
   },
@@ -142,5 +153,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-11-18T05:31:10.279901+00:00"
+ "_coletado_em": "2026-11-18T11:38:23.578220+00:00"
 }
