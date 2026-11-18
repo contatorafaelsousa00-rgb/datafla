@@ -1037,5 +1037,17 @@
   "requisicoes": 3,
   "cota_restante": 58,
   "erro": null
+ },
+ {
+  "quando": "2026-11-18T17:45:30+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Athletico Paranaense em menos de 24 h: renova previsão, árbitro e clima",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 64,
+  "pendentes": 0,
+  "requisicoes": 3,
+  "cota_restante": 55,
+  "erro": null
  }
 ]
