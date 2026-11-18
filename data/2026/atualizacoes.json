@@ -1073,5 +1073,17 @@
   "requisicoes": 3,
   "cota_restante": 36,
   "erro": null
+ },
+ {
+  "quando": "2026-11-18T23:31:02+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "saiu a escalação do jogo contra Athletico Paranaense",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 64,
+  "pendentes": 0,
+  "requisicoes": 2,
+  "cota_restante": 31,
+  "erro": null
  }
 ]
