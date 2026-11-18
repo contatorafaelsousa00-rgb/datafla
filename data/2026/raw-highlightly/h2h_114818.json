@@ -1,6 +1,40 @@
 {
  "data": [
   {
+   "id": 1270078287,
+   "round": "Regular Season - 35",
+   "date": "2026-11-18T23:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": null,
+    "score": {
+     "current": null,
+     "penalties": null
+    },
+    "description": "Not started"
+   },
+   "awayTeam": {
+    "id": 114818,
+    "logo": "https://highlightly.net/soccer/images/teams/114818.png",
+    "name": "Athletico Paranaense"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
    "id": 1269914044,
    "round": "Regular Season - 16",
    "date": "2026-05-17T22:30:00.000Z",
@@ -305,41 +339,7 @@
     "name": "Copa do Brasil",
     "season": 2022
    }
-  },
-  {
-   "id": 713310686,
-   "round": "Regular Season - 22",
-   "date": "2022-08-14T19:00:00.000Z",
-   "country": {
-    "code": "BR",
-    "name": "Brazil",
-    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
-   },
-   "state": {
-    "clock": 90,
-    "score": {
-     "current": "5 - 0",
-     "penalties": null
-    },
-    "description": "Finished"
-   },
-   "awayTeam": {
-    "id": 114818,
-    "logo": "https://highlightly.net/soccer/images/teams/114818.png",
-    "name": "Athletico Paranaense"
-   },
-   "homeTeam": {
-    "id": 108861,
-    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
-    "name": "Flamengo"
-   },
-   "league": {
-    "id": 61205,
-    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
-    "name": "Serie A",
-    "season": 2022
-   }
   }
  ],
- "_coletado_em": "2026-11-17T03:16:07.064684+00:00"
+ "_coletado_em": "2026-11-18T05:31:11.331391+00:00"
 }

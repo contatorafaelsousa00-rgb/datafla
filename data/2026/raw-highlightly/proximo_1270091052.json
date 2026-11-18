@@ -12,7 +12,7 @@
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "25.68°C"
+   "temperature": "25.3°C"
   },
   "events": [],
   "predictions": {
@@ -49,6 +49,17 @@
       "away": "32.38%",
       "draw": "27.43%",
       "home": "40.19%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Palmeiras is most likely to win the game against Flamengo.",
+     "generatedAt": "2026-11-17T13:19:19.736Z",
+     "probabilities": {
+      "away": "32.66%",
+      "draw": "27.38%",
+      "home": "39.95%"
      }
     }
    ]
@@ -109,5 +120,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-11-17T03:16:09.175374+00:00"
+ "_coletado_em": "2026-11-18T05:31:13.271092+00:00"
 }

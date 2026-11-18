@@ -16,12 +16,12 @@
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 0,
-     "gamesPlayed": 1,
+     "gamesPlayed": 2,
      "yellowCards": 0,
      "goalsConceded": 1,
-     "minutesPlayed": 45,
+     "minutesPlayed": 128,
      "substitutedIn": 0,
-     "substitutedOut": 1,
+     "substitutedOut": 2,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -547,12 +547,12 @@
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 1,
-     "gamesPlayed": 2,
+     "gamesPlayed": 3,
      "yellowCards": 0,
      "goalsConceded": 1,
-     "minutesPlayed": 65,
+     "minutesPlayed": 148,
      "substitutedIn": 1,
-     "substitutedOut": 1,
+     "substitutedOut": 2,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -639,5 +639,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-11T02:16:16.128538+00:00"
+ "_coletado_em": "2026-11-18T05:31:47.601812+00:00"
 }
