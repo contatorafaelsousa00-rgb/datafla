@@ -2220,12 +2220,12 @@
     "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
    },
    "state": {
-    "clock": 52,
+    "clock": 90,
     "score": {
      "current": "2 - 1",
      "penalties": null
     },
-    "description": "Second half"
+    "description": "Finished"
    },
    "awayTeam": {
     "id": 114818,
@@ -2347,5 +2347,5 @@
    }
   }
  ],
- "_coletado_em": "2026-11-19T00:45:33.330010+00:00"
+ "_coletado_em": "2026-11-19T01:45:30.354388+00:00"
 }

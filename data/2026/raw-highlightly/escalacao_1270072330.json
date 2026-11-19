@@ -1,0 +1,321 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Henrique Menke",
+     "number": 43,
+     "position": "Goalkeeper",
+     "id": 74696265
+    },
+    {
+     "name": "Guillermo Maripán",
+     "number": 3,
+     "position": "Defender",
+     "id": 411187
+    },
+    {
+     "name": "Alexandro Bernabei",
+     "number": 26,
+     "position": "Defender",
+     "id": 20914376
+    },
+    {
+     "name": "Victor Gabriel",
+     "number": 41,
+     "position": "Defender",
+     "id": 49111916
+    },
+    {
+     "name": "Ronaldo",
+     "number": 16,
+     "position": "Midfielder",
+     "id": 1637041
+    },
+    {
+     "name": "João Victor Alves de Morais Francisco",
+     "number": 44,
+     "position": "Forward",
+     "id": 101958878
+    },
+    {
+     "name": "Allex",
+     "number": 31,
+     "position": "Midfielder",
+     "id": 66823526
+    },
+    {
+     "name": "Calebe Gonçalves",
+     "number": 30,
+     "position": "Midfielder",
+     "id": 42932092
+    },
+    {
+     "name": "Paulinho Paula",
+     "number": 27,
+     "position": "Midfielder",
+     "id": 15512987
+    },
+    {
+     "name": "Bruno Henrique",
+     "number": 8,
+     "position": "Midfielder",
+     "id": 1597435
+    },
+    {
+     "name": "Niclas Eliasson",
+     "number": 17,
+     "position": "Midfielder",
+     "id": 3102624
+    },
+    {
+     "name": "João Pedro Bezerra de Oliveira Lo",
+     "number": 49,
+     "position": "Forward",
+     "id": 98142534
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Kauan",
+      "number": 22,
+      "position": "Goalkeeper",
+      "id": 66822560
+     }
+    ],
+    [
+     {
+      "name": "Matheus Bahia",
+      "number": 6,
+      "position": "Defender",
+      "id": 31725365
+     },
+     {
+      "name": "Jose Juninho",
+      "number": 18,
+      "position": "Defender",
+      "id": 1595986
+     },
+     {
+      "name": "Gabriel Mercado",
+      "number": 25,
+      "position": "Defender",
+      "id": 329238
+     },
+     {
+      "name": "Braian Aguirre",
+      "number": 35,
+      "position": "Defender",
+      "id": 46484074
+     }
+    ],
+    [
+     {
+      "name": "Thiago Maia",
+      "number": 29,
+      "position": "Midfielder",
+      "id": 3579345
+     },
+     {
+      "name": "Rodrigo Villagra",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 1049713
+     }
+    ],
+    [
+     {
+      "name": "Johan Carbonero",
+      "number": 7,
+      "position": "Midfielder",
+      "id": 2204405
+     },
+     {
+      "name": "Bruno Gomes",
+      "number": 15,
+      "position": "Midfielder",
+      "id": 23082402
+     },
+     {
+      "name": "Vitinho",
+      "number": 28,
+      "position": "Midfielder",
+      "id": 1633821
+     }
+    ],
+    [
+     {
+      "name": "Alerrandro",
+      "number": 9,
+      "position": "Forward",
+      "id": 1592927
+     }
+    ]
+   ],
+   "id": 102053,
+   "logo": "https://highlightly.net/soccer/images/teams/102053.png",
+   "name": "Internacional"
+  },
+  "awayTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Pedro Rangel",
+     "number": 22,
+     "position": "Goalkeeper",
+     "id": 47262509
+    },
+    {
+     "name": "Maicon",
+     "number": 3,
+     "position": "Defender",
+     "id": 7133098
+    },
+    {
+     "name": "Rodrigo Gelado",
+     "number": 66,
+     "position": "Defender",
+     "id": 65057839
+    },
+    {
+     "name": "Fabricio Bustos",
+     "number": 14,
+     "position": "Defender",
+     "id": 979034
+    },
+    {
+     "name": "Rodrigo Moledo",
+     "number": 4,
+     "position": "Defender",
+     "id": 1671012
+    },
+    {
+     "name": "Vitor Gonçalves Tissi",
+     "number": 50,
+     "position": "Midfielder",
+     "id": 81397246
+    },
+    {
+     "name": "Paulo Roberto",
+     "number": 18,
+     "position": "Midfielder",
+     "id": 101701439
+    },
+    {
+     "name": "Joaquín Lavega",
+     "number": 7,
+     "position": "Forward",
+     "id": 50806763
+    },
+    {
+     "name": "Vini Paulista",
+     "number": 36,
+     "position": "Forward",
+     "id": 49829493
+    },
+    {
+     "name": "Brian Ocampo",
+     "number": 17,
+     "position": "Forward",
+     "id": 8305822
+    },
+    {
+     "name": "Richard",
+     "number": 25,
+     "position": "Midfielder",
+     "id": 1648794
+    },
+    {
+     "name": "Rodrigo Rodrigues",
+     "number": 99,
+     "position": "Forward",
+     "id": 8711220
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Pedro Morisco",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 68558945
+     }
+    ],
+    [
+     {
+      "name": "Bruno Melo",
+      "number": 26,
+      "position": "Defender",
+      "id": 1677130
+     },
+     {
+      "name": "Jacy Maranhão",
+      "number": 55,
+      "position": "Defender",
+      "id": 1551067
+     },
+     {
+      "name": "Tiago Cóser",
+      "number": 23,
+      "position": "Defender",
+      "id": 49109340
+     },
+     {
+      "name": "Tinga",
+      "number": 2,
+      "position": "Defender",
+      "id": 1676647
+     }
+    ],
+    [
+     {
+      "name": "Sebastián Gómez",
+      "number": 19,
+      "position": "Midfielder",
+      "id": 2143064
+     },
+     {
+      "name": "Thiago Santos",
+      "number": 21,
+      "position": "Midfielder",
+      "id": 1597918
+     }
+    ],
+    [
+     {
+      "name": "Pedro Rocha",
+      "number": 32,
+      "position": "Midfielder",
+      "id": 1627220
+     },
+     {
+      "name": "Breno Lopes",
+      "number": 77,
+      "position": "Midfielder",
+      "id": 8688680
+     },
+     {
+      "name": "Nicolas Fonseca",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 4941244
+     }
+    ],
+    [
+     {
+      "name": "Josué",
+      "number": 10,
+      "position": "Forward",
+      "id": 346304
+     }
+    ]
+   ],
+   "id": 125881,
+   "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+   "name": "Coritiba"
+  }
+ },
+ "_coletado_em": "2026-11-19T01:45:34.970380+00:00"
+}

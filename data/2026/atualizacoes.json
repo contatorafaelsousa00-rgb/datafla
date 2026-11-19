@@ -1097,5 +1097,23 @@
   "requisicoes": 6,
   "cota_restante": 94,
   "erro": null
+ },
+ {
+  "quando": "2026-11-19T01:45:39+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Athletico Paranaense já terminou e ainda não foi baixado",
+  "novos": [
+   {
+    "adversario": "Athletico Paranaense",
+    "data_utc": "2026-11-18T23:30:00.000Z",
+    "competicao": "Serie A"
+   }
+  ],
+  "recoletados": [],
+  "encerrados": 65,
+  "pendentes": 0,
+  "requisicoes": 10,
+  "cota_restante": 84,
+  "erro": null
  }
 ]

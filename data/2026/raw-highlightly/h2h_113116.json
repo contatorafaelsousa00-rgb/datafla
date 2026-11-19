@@ -1,0 +1,107 @@
+{
+ "data": [
+  {
+   "id": 1269941276,
+   "round": "Regular Season - 19",
+   "date": "2026-07-23T00:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 4",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 113116,
+    "logo": "https://highlightly.net/soccer/images/teams/113116.png",
+    "name": "Chapecoense"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
+   "id": 586515941,
+   "round": "Regular Season - 30",
+   "date": "2021-11-08T23:00:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 2",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 113116,
+    "logo": "https://highlightly.net/soccer/images/teams/113116.png",
+    "name": "Chapecoense"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2021
+   }
+  },
+  {
+   "id": 586347443,
+   "round": "Regular Season - 11",
+   "date": "2021-07-11T21:15:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 113116,
+    "logo": "https://highlightly.net/soccer/images/teams/113116.png",
+    "name": "Chapecoense"
+   },
+   "homeTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2021
+   }
+  }
+ ],
+ "_coletado_em": "2026-11-19T01:45:37.477854+00:00"
+}
