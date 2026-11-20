@@ -1,6 +1,40 @@
 {
  "data": [
   {
+   "id": 1270076585,
+   "round": "Regular Season - 35",
+   "date": "2026-11-18T22:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 109712,
+    "logo": "https://highlightly.net/soccer/images/teams/109712.png",
+    "name": "Santos"
+   },
+   "homeTeam": {
+    "id": 125881,
+    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+    "name": "Coritiba"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
    "id": 1270072330,
    "round": "Regular Season - 34",
    "date": "2026-11-04T00:30:00.000Z",
@@ -135,41 +169,7 @@
     "name": "Serie A",
     "season": 2026
    }
-  },
-  {
-   "id": 1270036588,
-   "round": "Regular Season - 30",
-   "date": "2026-10-12T19:00:00.000Z",
-   "country": {
-    "code": "BR",
-    "name": "Brazil",
-    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
-   },
-   "state": {
-    "clock": 90,
-    "score": {
-     "current": "1 - 1",
-     "penalties": null
-    },
-    "description": "Finished"
-   },
-   "awayTeam": {
-    "id": 102904,
-    "logo": "https://highlightly.net/soccer/images/teams/102904.png",
-    "name": "Botafogo"
-   },
-   "homeTeam": {
-    "id": 125881,
-    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
-    "name": "Coritiba"
-   },
-   "league": {
-    "id": 61205,
-    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
-    "name": "Serie A",
-    "season": 2026
-   }
   }
  ],
- "_coletado_em": "2026-11-18T05:31:18.372581+00:00"
+ "_coletado_em": "2026-11-20T00:45:54.456221+00:00"
 }

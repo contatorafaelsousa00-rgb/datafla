@@ -1,6 +1,40 @@
 {
  "data": [
   {
+   "id": 1270077436,
+   "round": "Regular Season - 35",
+   "date": "2026-11-18T23:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "2 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "homeTeam": {
+    "id": 115669,
+    "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+    "name": "Cruzeiro"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
    "id": 1394107282,
    "round": "Semi-finals",
    "date": "2026-11-08T20:00:00.000Z",
@@ -135,41 +169,7 @@
     "name": "Serie A",
     "season": 2026
    }
-  },
-  {
-   "id": 1270055310,
-   "round": "Regular Season - 32",
-   "date": "2026-10-24T21:30:00.000Z",
-   "country": {
-    "code": "BR",
-    "name": "Brazil",
-    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
-   },
-   "state": {
-    "clock": 90,
-    "score": {
-     "current": "2 - 0",
-     "penalties": null
-    },
-    "description": "Finished"
-   },
-   "awayTeam": {
-    "id": 676478,
-    "logo": "https://highlightly.net/soccer/images/teams/676478.png",
-    "name": "RB Bragantino"
-   },
-   "homeTeam": {
-    "id": 103755,
-    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
-    "name": "Palmeiras"
-   },
-   "league": {
-    "id": 61205,
-    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
-    "name": "Serie A",
-    "season": 2026
-   }
   }
  ],
- "_coletado_em": "2026-11-18T05:31:15.310936+00:00"
+ "_coletado_em": "2026-11-20T00:45:51.364099+00:00"
 }
