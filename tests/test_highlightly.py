@@ -453,3 +453,45 @@ def test_chutes_bloqueados_comparam_com_o_total_do_time_quando_existe():
     m = {"homeTeam": {"id": FLA, "shots": chutes}, "awayTeam": {"id": ADV, "shots": []}, "statistics": estatisticas}
     jogadores = [{"id": 1, "name": "Leo Pereira", "statistics": {"shotsTotal": 13}}]
     assert hl._bloqueadas_por_jogador(m, FLA, jogadores)[1] is False
+
+
+def test_motivo_com_quebra_de_linha_nao_cria_outra_saida(tmp_path, monkeypatch):
+    saida = tmp_path / "saida.txt"
+    monkeypatch.setenv("GITHUB_OUTPUT", str(saida))
+    monkeypatch.setattr(hl, "planejar", lambda: (False, "jogo contra X\ncoletar=true"))
+    monkeypatch.setattr(hl, "verificar_escalacao_oficial", lambda: None)
+    hl.cmd_planejar()
+    assert saida.read_text(encoding="utf-8").splitlines() == ["coletar=false", "motivo=jogo contra X coletar=true"]
+
+
+def test_erro_de_rede_vira_erro_da_api(monkeypatch):
+    import pytest
+    import requests
+    from coleta.api import ErroAPI
+
+    class _SessaoSemRede:
+        headers = {}
+
+        def get(self, *a, **k):
+            raise requests.ConnectionError("sem rede")
+    monkeypatch.setattr(hl.time, "sleep", lambda s: None)
+    with pytest.raises(ErroAPI) as e:
+        hl.ClienteHighlightly(key="x", sessao=_SessaoSemRede()).get("matches/1")
+    assert e.value.status is None and not e.value.definitivo
+
+
+def test_consulta_de_proximo_jogo_que_falha_nao_derruba_as_outras(tmp_path, monkeypatch):
+    from coleta.api import ErroAPI, ler_raw
+    monkeypatch.setattr(config, "RAW_DIR", tmp_path)
+    monkeypatch.setattr(hl, "tarefas_proximos", lambda jogos: [("h2h_9", "head-2-head", {}), ("forma_9", "last-five-games", {})])
+    hl.salvar_raw(hl.ARQ_JOGOS, {"data": [], "_coletado_em": "2026-11-20T00:00:00+00:00"})
+
+    class _API:
+        restantes_hoje = 90
+
+        def get(self, caminho, **k):
+            if caminho == "head-2-head":
+                raise ErroAPI("HTTP 404", status=404)
+            return {"data": [1]}
+    assert hl.cmd_proximo(_API()) == 0
+    assert ler_raw("h2h_9") is None and ler_raw("forma_9")["data"] == {"data": [1]}

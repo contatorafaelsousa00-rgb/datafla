@@ -165,3 +165,46 @@ def test_copa_sem_final_continua_sendo_renovada(tmp_path, monkeypatch):
     salvar_raw("copa_7", {"data": encerrados + [_copa(2, "Final", "2026-12-01T00:00:00.000Z")],
                           "_coletado_em": "2026-11-01T00:00:00+00:00"}, tmp_path)
     assert extras.copas(jogos_fla) == []  # final disputada: acabou
+
+
+class _APIComErro:
+    """Cliente que falha toda chamada com o código HTTP dado (None = erro de rede)."""
+
+    def __init__(self, status):
+        self.status, self.restantes_hoje, self.chamadas = status, 90, []
+
+    def get(self, caminho, **params):
+        from coleta.api import ErroAPI
+        self.chamadas.append(caminho)
+        raise ErroAPI(f"{caminho}: HTTP {self.status}", status=self.status)
+
+
+def test_erro_passageiro_nao_apaga_a_liga_e_espera_para_tentar_de_novo(tmp_path, monkeypatch):
+    from coleta import highlightly
+    from coleta.api import ler_raw
+    _ambiente(tmp_path, monkeypatch)
+    agora = datetime.now(timezone.utc)
+    _rodada(tmp_path, agora, coletado_ha_h=5)
+    coletado_antes = ler_raw("liga_61205")["_coletado_em"]
+    salvar_raw("jogos", {"data": [_jogo(1, "Finished")], "_coletado_em": _iso(agora)}, tmp_path)
+    salvar_raw("partida_1", {"_coletado_em": _iso(agora)}, tmp_path)
+    monkeypatch.setattr(extras, "ARQ_JOGOS", "jogos")
+    extras.cmd_extras(_APIComErro(503))
+    salvo = ler_raw("liga_61205")
+    assert len(salvo["data"]) == 2                       # dado anterior mantido (antes virava None)
+    assert salvo["_coletado_em"] == coletado_antes        # segue "sem a rodada" no aviso do site
+    assert "_tentado_em" in salvo
+    assert extras.jogos_sem_resultado("liga_61205") == 1
+    assert "liga_61205" not in [t[0] for t in extras.tarefas([_jogo(1, "Finished")])]  # espera 3 h
+    assert highlightly.planejar(agora)[0] is False        # e o planejar não dispara a cada 30 min
+
+
+def test_erro_sem_dado_anterior_so_grava_vazio_se_for_definitivo(tmp_path, monkeypatch):
+    from coleta.api import ler_raw
+    _ambiente(tmp_path, monkeypatch)
+    salvar_raw("jogos", {"data": [_jogo(1, "Finished")], "_coletado_em": _iso(datetime.now(timezone.utc))}, tmp_path)
+    monkeypatch.setattr(extras, "ARQ_JOGOS", "jogos")
+    extras.cmd_extras(_APIComErro(None))                  # rede: não grava, tenta na próxima
+    assert ler_raw("escalacao_1") is None
+    extras.cmd_extras(_APIComErro(404))                   # não existe: guarda vazio para não insistir
+    assert ler_raw("escalacao_1")["data"] is None

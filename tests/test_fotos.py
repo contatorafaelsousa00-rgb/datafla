@@ -54,3 +54,29 @@ def test_logos_locais_troca_url_pela_copia_por_tipo(tmp_path, monkeypatch):
     assert linha["adversario_logo"] == "logos/teams/5.png"
     assert linha["competicao_logo"] == url_liga  # mesmo ID, outro tipo: sem cópia e sem rede, mantém a URL
     assert linha["flamengo_logo"] is None
+
+
+class _Resposta:
+    def __init__(self, conteudo, tipo="image/png"):
+        self.ok, self.content, self.headers = True, conteudo, {"content-type": tipo}
+
+
+def test_copia_local_so_aceita_imagem_de_dominio_da_fonte(tmp_path, monkeypatch):
+    from coleta import imagens
+    png = b"\x89PNG\r\n\x1a\n" + b"0" * 20
+    monkeypatch.setattr(imagens.requests, "get", lambda *a, **k: _Resposta(png))
+    for url in ("https://mau.com/soccer/images/teams/1.png",             # outro domínio
+                "https://highlightly.net/soccer/images/teams/x.html",    # extensão que vira página
+                "https://highlightly.net/soccer/images/teams/1.svg",     # SVG pode levar script
+                "http://highlightly.net/soccer/images/teams/1.png"):     # sem https
+        assert imagens.copia_local(url, tmp_path, "logos/teams") == url
+    assert not list(tmp_path.iterdir())
+    assert imagens.copia_local("https://highlightly.net/soccer/images/teams/1.png", tmp_path, "logos/teams") == "logos/teams/1.png"
+
+
+def test_copia_local_confere_a_assinatura_do_arquivo(tmp_path, monkeypatch):
+    from coleta import imagens
+    monkeypatch.setattr(imagens.requests, "get", lambda *a, **k: _Resposta(b"<html><script>alert(1)</script>"))
+    url = "https://highlightly.net/soccer/images/teams/2.png"
+    assert imagens.copia_local(url, tmp_path, "logos/teams") == url   # diz image/png, mas é HTML: não copia
+    assert not (tmp_path / "2.png").exists()

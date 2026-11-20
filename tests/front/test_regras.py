@@ -98,6 +98,27 @@ def test_desfalques_do_pre_jogo(regras):
     assert r["voltam"] == ["Cumpriu"]  # ausência por suspensão: volta, e não é "fora dos últimos jogos"
 
 
+def test_suspensao_cumprida_no_jogo_anterior_da_competicao(regras):
+    """Abrindo o 2º próximo jogo do Brasileirão: quem foi expulso ou levou o 3º amarelo cumpre no 1º."""
+    r = regras.evaluate("""async () => {
+      const { D } = await import('/comum.js');
+      const { desfalques } = await import('/preview.js');
+      const p5 = D.calendario.find((c) => c.id_partida === 5);
+      const p6 = { ...p5, id_partida: 6, data_utc: "2026-09-05T22:00:00+00:00", adversario: "Rival 6" };
+      D.calendario.push(p6);
+      const d5 = desfalques(p5), d6 = desfalques(p6);
+      D.calendario.pop();
+      const nomes = (l) => l.map((x) => x.nome).sort();
+      return { s5: nomes(d5.suspensos), s6: nomes(d6.suspensos), v6: nomes(d6.voltam), p6: nomes(d6.pendurados),
+               motivo: d6.voltam.find((x) => x.nome === "Expulso")?.motivo };
+    }""")
+    assert r["s5"] == ["Amarelo3", "Expulso"]  # o 1º próximo jogo segue com os suspensos
+    assert r["s6"] == []
+    assert r["v6"] == ["Amarelo3", "Cumpriu", "Expulso"]
+    assert "Rival 5" in r["motivo"]
+    assert r["p6"] == ["Pendurado"]  # pendurado continua pendurado
+
+
 def test_escalacao_oficial_substitui_a_provavel(regras):
     r = regras.evaluate("""async () => {
       const { D } = await import('/comum.js');

@@ -101,8 +101,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
+          # saída do planejar lida por variável, nunca colada no script com ${{ }} (o motivo traz texto da API)
+          COLETAR: ${{ steps.plano.outputs.coletar }}
         run: |
-          if [ "${{ github.event_name }}" = push ] || [ "${{ steps.plano.outputs.coletar }}" = true ]; then
+          if [ "${{ github.event_name }}" = push ] || [ "$COLETAR" = true ]; then
             echo "publicar=true" >> "$GITHUB_OUTPUT"; exit 0
           fi
           # Só a falha de uma coleta: um push que falhou foi barrado de propósito e não é publicado por aqui
@@ -130,7 +132,10 @@ jobs:
         run: python -m coleta.coletar processar --fonte highlightly --todas
 
       - name: Salvar dados no repositório
-        if: steps.plano.outputs.coletar == 'true'
+        # Também quando a coleta ou o processar falharam: o que já foi baixado vai para o Git e a próxima execução
+        # não paga de novo (antes, uma falha no meio jogava fora tudo e a coleta se repetia até esgotar a cota).
+        # O passo que falhou continua marcando a execução como falha (aviso abre, nada é publicado).
+        if: ${{ !cancelled() && steps.plano.outputs.coletar == 'true' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

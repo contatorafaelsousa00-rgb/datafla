@@ -1,11 +1,12 @@
 // Pré-jogo (tela de um próximo jogo): desfalques, prováveis escalações, árbitro e momento dos times.
 // Desfalques são ESTIMATIVA: suspensões e pendurados pela regra de 3 amarelos na competição (a fonte não informa
 // suspensões; algumas competições zeram cartões em certas fases) e lesões pelo perfil dos jogadores.
-import { bola, D, data, h, num, pct, vazio } from "./comum.js";
+import { bola, D, data, ENCERRADO, h, num, pct, vazio } from "./comum.js";
 import { MANUAL } from "./manual.js";
 import { campinho } from "./graficos.js";
 import { abrirJogador, agregarJogadores } from "./jogadores.js";
 
+const SEM_DATA = new Set(["ABD", "PST", "CANC"]); // abandonado, adiado, cancelado
 const naNo = (comp) => (/^(Libertadores|Copa|Recopa|Supercopa|Taça)/.test(comp) ? `na ${comp}` : `no ${comp}`);
 
 // Suspenso num jogo? Pela regra de 3 amarelos ou expulsão no jogo anterior DA MESMA competição.
@@ -37,11 +38,20 @@ export function desfalques(p) {
   }
   // quem já saiu do clube (perfil com outro clube atual) não entra na conta
   const saiu = new Set((D.bruto.perfis ?? []).filter((x) => x.clube_atual && !/flamengo/i.test(x.clube_atual)).map((x) => x.jogador_id));
-  const suspensos = [], pendurados = [];
+  // Outro jogo da mesma competição antes deste (ex.: abrindo o 2º próximo jogo do Brasileirão): a suspensão do
+  // último jogo é cumprida nele, então não vale para este. Adiado/cancelado não conta (não tem data certa).
+  const cumpreAntes = ultimo && D.calendario
+    .filter((x) => x.competicao === p.competicao && x.id_partida !== p.id_partida && !ENCERRADO.has(x.status)
+      && !SEM_DATA.has(x.status) && x.data_utc > ultimo.data_utc && x.data_utc < p.data_utc)
+    .sort((a, b) => a.data_utc.localeCompare(b.data_utc))[0];
+  const suspensos = [], pendurados = [], cumprem = [];
   for (const c of cont.values()) {
     if (saiu.has(c.id)) continue;
-    if (c.vermelhoNoUltimo) suspensos.push({ ...c, motivo: "expulso no último jogo" });
-    else if (c.amareloNoUltimo && c.amarelos > 0 && c.amarelos % 3 === 0) suspensos.push({ ...c, motivo: `${c.amarelos}º amarelo` });
+    let motivo = null;
+    if (c.vermelhoNoUltimo) motivo = "expulso no último jogo";
+    else if (c.amareloNoUltimo && c.amarelos > 0 && c.amarelos % 3 === 0) motivo = `${c.amarelos}º amarelo`;
+    if (motivo && cumpreAntes) cumprem.push({ ...c, motivo: `cumpre suspensão (${motivo}) contra o ${cumpreAntes.adversario} (${data(cumpreAntes.data_utc)})` });
+    else if (motivo) suspensos.push({ ...c, motivo });
     else if (c.amarelos % 3 === 2) pendurados.push({ ...c, motivo: `${c.amarelos} amarelos` });
   }
   const lesionados = (D.bruto.perfis ?? []).filter((x) => x.lesao_atual && /flamengo/i.test(x.clube_atual ?? ""))
@@ -76,7 +86,9 @@ export function desfalques(p) {
   // Voltam de suspensão: faltaram por suspensão e não estão suspensos para este jogo
   const suspensosIds = new Set(suspensos.map((x) => x.id));
   const voltam = candidatos.filter((a) => a.cumpridas.length && a.seguidos === 0 && !suspensosIds.has(a.id))
-    .map((a) => ({ id: a.id, nome: a.nome, motivo: `cumpriu suspensão (${a.cumpridas.map(([, m]) => m).join("; ")})` }));
+    .map((a) => ({ id: a.id, nome: a.nome, motivo: `cumpriu suspensão (${a.cumpridas.map(([, m]) => m).join("; ")})` }))
+    .filter((a) => !cumprem.some((c) => c.id === a.id))
+    .concat(cumprem.map((c) => ({ id: c.id, nome: c.nome, motivo: c.motivo })));
   return { suspensos, pendurados, lesionados, ausentes, voltam, ultimo };
 }
 

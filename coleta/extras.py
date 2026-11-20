@@ -44,11 +44,16 @@ def _agora():
     return datetime.now(timezone.utc)
 
 
+def ultima_tentativa(salvo: dict) -> datetime:
+    """Hora da última consulta (com ou sem sucesso): conta para o intervalo até a próxima renovação."""
+    return max(datetime.fromisoformat(salvo[c]) for c in ("_coletado_em", "_tentado_em") if c in salvo)
+
+
 def _idade(nome: str) -> timedelta | None:
     salvo = ler_raw(nome)
     if not salvo or "_coletado_em" not in salvo:
         return None
-    return _agora() - datetime.fromisoformat(salvo["_coletado_em"])
+    return _agora() - ultima_tentativa(salvo)
 
 
 def jogos_sem_resultado(nome: str, agora: datetime | None = None, ignorar: set | None = None) -> int:
@@ -179,9 +184,18 @@ def cmd_extras(api: ClienteHighlightly) -> int:
                 _salvar(nome, _todas_as_paginas(api, caminho, params))
             else:
                 _salvar(nome, api.get(caminho, **params))
-        except ErroAPI as e:  # ex.: competição sem tabela (mata-mata) ou jogo sem escalação: guarda vazio para não insistir
+        except ErroAPI as e:
             print(f"  {nome}: {e}")
-            _salvar(nome, None)
+            anterior = ler_raw(nome)
+            if anterior is not None:
+                # Já havia arquivo: um erro (passageiro ou não) não apaga o dado. Marca a tentativa, para esperar o
+                # intervalo normal antes de tentar de novo; `_coletado_em` fica, e a tabela segue "sem a rodada".
+                salvar_raw(nome, {**anterior, "_tentado_em": _agora().isoformat()})
+            elif e.definitivo:
+                _salvar(nome, None)  # ex.: competição sem tabela (mata-mata) ou jogo sem escalação: guarda vazio para não insistir
+            # erro passageiro sem dado anterior (rede, 429, 5xx): não grava nada; tenta na próxima coleta
+            feitas[nome.split("_")[0]] += 1
+            continue
         feitas[nome.split("_")[0]] += 1
     if adiados:
         print(f"Extras: {adiados} adiados para guardar {folga} requisições para depois do jogo do Flamengo.")

@@ -103,12 +103,20 @@ class ClienteHighlightly:
 
     def get(self, caminho: str, **params):
         url = f"{BASE_URL}/{caminho.lstrip('/')}"
+        resp = None
         for tentativa in range(4):
-            resp = self.sessao.get(url, params=params, timeout=30)
+            try:
+                resp = self.sessao.get(url, params=params, timeout=30)
+            except requests.RequestException as e:  # timeout/conexão: tenta de novo e, no fim, vira ErroAPI
+                erro_rede = e
+                time.sleep(2 ** (tentativa + 1))
+                continue
             if resp.status_code == 429 or resp.status_code >= 500:
                 time.sleep(2 ** (tentativa + 1))
                 continue
             break
+        if resp is None:
+            raise ErroAPI(f"{caminho} {params}: falha de rede ({type(erro_rede).__name__})")
         self.chamadas += 1
         restantes = resp.headers.get("x-ratelimit-requests-remaining")
         if restantes is not None:
@@ -118,10 +126,13 @@ class ClienteHighlightly:
                 msg = resp.json().get("message")
             except ValueError:
                 msg = resp.text[:200]
-            raise ErroAPI(f"{caminho} {params}: HTTP {resp.status_code} {msg}")
+            raise ErroAPI(f"{caminho} {params}: HTTP {resp.status_code} {msg}", status=resp.status_code)
         # 100 por minuto no plano grátis; uma pausa curta basta.
         time.sleep(float(os.environ.get("FLA_HL_PAUSA_SEG", "0.7")))
-        return resp.json()
+        try:
+            return resp.json()
+        except ValueError:  # 200 com corpo que não é JSON (página de erro do provedor)
+            raise ErroAPI(f"{caminho} {params}: resposta não é JSON") from None
 
 
 # ---------- coleta ----------
@@ -212,10 +223,12 @@ def planejar(agora: datetime | None = None) -> tuple[bool, str]:
     if prox and agora < _data(prox) <= agora + timedelta(hours=24) and _vencido(f"proximo_{prox['id']}", _horas_proximo(prox, agora), agora):
         rival = prox["awayTeam"]["name"] if prox["homeTeam"]["id"] == config.TEAM_ID else prox["homeTeam"]["name"]
         return True, f"jogo contra {rival} em menos de 24 h: renova previsão, árbitro e clima"
-    from .extras import HORAS_LIGA_RODADA, jogos_sem_resultado
+    from .extras import HORAS_LIGA_RODADA, jogos_sem_resultado, ultima_tentativa
     for arq in sorted(config.RAW_DIR.glob("liga_*.json")):
         n = jogos_sem_resultado(arq.stem, agora)
-        coletado = datetime.fromisoformat((ler_raw(arq.stem) or {}).get("_coletado_em", agora.isoformat()))
+        salvo = ler_raw(arq.stem) or {}
+        # tentativa que falhou também conta: sem isso, cada execução (30 min) gastaria cota numa liga com erro
+        coletado = ultima_tentativa(salvo) if "_coletado_em" in salvo else agora
         if n and agora - coletado >= timedelta(hours=HORAS_LIGA_RODADA):
             return True, f"{n} jogo(s) do Brasileirão terminaram depois da última tabela: renova a rodada"
     if idade >= timedelta(hours=HORAS_LISTA):
@@ -307,7 +320,8 @@ def cmd_planejar(forcar: bool = False) -> int:
     if saida:  # no GitHub Actions, os próximos passos leem steps.<id>.outputs.coletar
         with open(saida, "a", encoding="utf-8") as f:
             f.write(f"coletar={'true' if coletar else 'false'}\n")
-            f.write(f"motivo={motivo}\n")
+            # O motivo leva o nome do adversário, vindo da API: sem quebra de linha, para não criar outra saída
+            f.write("motivo=" + re.sub(r"[\r\n]+", " ", motivo) + "\n")
     return 0
 
 
@@ -379,7 +393,11 @@ def cmd_detalhes(api: ClienteHighlightly):
             break
         mid = jogo["id"]
         partida = api.get(f"matches/{mid}")
-        partida = partida[0] if isinstance(partida, list) else partida
+        if isinstance(partida, list):
+            if not partida:  # (antes: IndexError derrubava a coleta) fica pendente e é tentado na próxima
+                print(f"  partida {mid}: resposta vazia da fonte; fica para a próxima coleta.")
+                continue
+            partida = partida[0]
         nova = {"match": partida, "boxscore": api.get(f"box-score/{mid}"),
                 "_coletado_em": datetime.now(timezone.utc).isoformat()}
         anterior = ler_raw(f"partida_{mid}")
@@ -466,9 +484,18 @@ def cmd_proximo(api: ClienteHighlightly):
         if api.restantes_hoje is not None and api.restantes_hoje - 1 < _reserva():
             print(f"Próximos jogos: sem cota; {len(tarefas) - feitas} consultas ficam para a próxima coleta.")
             break
-        corpo = api.get(caminho, **params)
-        if nome.startswith("proximo_"):
-            corpo = corpo[0] if isinstance(corpo, list) else corpo
+        # Uma consulta que falha (ex.: 404 no head-2-head) não derruba a coleta: o que já foi baixado nesta
+        # execução segue para o Git e esta consulta é tentada de novo na próxima.
+        try:
+            corpo = api.get(caminho, **params)
+        except ErroAPI as e:
+            print(f"  {nome}: {e}")
+            continue
+        if nome.startswith("proximo_") and isinstance(corpo, list):
+            if not corpo:
+                print(f"  {nome}: resposta vazia")
+                continue
+            corpo = corpo[0]
         salvar_raw(nome, {"data": corpo, "_coletado_em": datetime.now(timezone.utc).isoformat()})
         feitas += 1
     print(f"Próximos jogos: {feitas} consultas (detalhe, confrontos diretos, forma do adversário).")

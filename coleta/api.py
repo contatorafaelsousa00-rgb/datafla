@@ -13,7 +13,16 @@ from . import config
 
 
 class ErroAPI(RuntimeError):
-    pass
+    """`status` = código HTTP quando a API respondeu (None: rede, timeout ou erro no corpo da resposta)."""
+
+    def __init__(self, mensagem: str, status: int | None = None):
+        super().__init__(mensagem)
+        self.status = status
+
+    @property
+    def definitivo(self) -> bool:
+        """4xx que não seja 429: o recurso não existe ou não está no plano; repetir não adianta."""
+        return self.status is not None and 400 <= self.status < 500 and self.status != 429
 
 
 class ClienteAPI:
