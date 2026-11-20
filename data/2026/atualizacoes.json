@@ -1157,5 +1157,23 @@
   "requisicoes": 12,
   "cota_restante": 68,
   "erro": null
+ },
+ {
+  "quando": "2026-11-20T19:30:48+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Palmeiras em menos de 24 h: renova previsão, árbitro e clima",
+  "novos": [],
+  "recoletados": [
+   {
+    "adversario": "Athletico Paranaense",
+    "data_utc": "2026-11-18T23:30:00.000Z",
+    "competicao": "Serie A"
+   }
+  ],
+  "encerrados": 65,
+  "pendentes": 0,
+  "requisicoes": 5,
+  "cota_restante": 63,
+  "erro": null
  }
 ]
