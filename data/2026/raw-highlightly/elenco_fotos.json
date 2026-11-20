@@ -213,7 +213,7 @@
    "name": "J. Carrascal",
    "age": 27,
    "number": 15,
-   "position": "Midfielder",
+   "position": "Attacker",
    "photo": "https://media.api-sports.io/football/players/5994.png"
   },
   {
@@ -261,7 +261,7 @@
    "name": "Samuel Lino",
    "age": 26,
    "number": 16,
-   "position": "Midfielder",
+   "position": "Attacker",
    "photo": "https://media.api-sports.io/football/players/126936.png"
   },
   {
@@ -273,5 +273,5 @@
    "photo": "https://media.api-sports.io/football/players/198347.png"
   }
  ],
- "_coletado_em": "2026-11-13T02:46:03.436544+00:00"
+ "_coletado_em": "2026-11-20T04:01:35.237740+00:00"
 }

@@ -1,0 +1,321 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Keiller",
+     "number": 13,
+     "position": "Goalkeeper",
+     "id": 1669724
+    },
+    {
+     "name": "Fabricio Bustos",
+     "number": 14,
+     "position": "Defender",
+     "id": 979034
+    },
+    {
+     "name": "Felipe Jonatan",
+     "number": 6,
+     "position": "Defender",
+     "id": 1608383
+    },
+    {
+     "name": "Maicon",
+     "number": 3,
+     "position": "Defender",
+     "id": 7133098
+    },
+    {
+     "name": "Brian Ocampo",
+     "number": 17,
+     "position": "Forward",
+     "id": 8305822
+    },
+    {
+     "name": "Richard",
+     "number": 25,
+     "position": "Midfielder",
+     "id": 1648794
+    },
+    {
+     "name": "Vini Paulista",
+     "number": 36,
+     "position": "Forward",
+     "id": 49829493
+    },
+    {
+     "name": "Joaquín Lavega",
+     "number": 7,
+     "position": "Forward",
+     "id": 50806763
+    },
+    {
+     "name": "Paulo Roberto",
+     "number": 18,
+     "position": "Midfielder",
+     "id": 101701439
+    },
+    {
+     "name": "Vitor Gonçalves Tissi",
+     "number": 50,
+     "position": "Midfielder",
+     "id": 81397246
+    },
+    {
+     "name": "Rodrigo Rodrigues",
+     "number": 99,
+     "position": "Forward",
+     "id": 8711220
+    },
+    {
+     "name": "Renato Marques",
+     "number": 78,
+     "position": "Forward",
+     "id": 58008937
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Pedro Rangel",
+      "number": 22,
+      "position": "Goalkeeper",
+      "id": 47262509
+     }
+    ],
+    [
+     {
+      "name": "Bruno Melo",
+      "number": 26,
+      "position": "Defender",
+      "id": 1677130
+     },
+     {
+      "name": "Jacy Maranhão",
+      "number": 55,
+      "position": "Defender",
+      "id": 1551067
+     },
+     {
+      "name": "Tiago Cóser",
+      "number": 23,
+      "position": "Defender",
+      "id": 49109340
+     },
+     {
+      "name": "Tinga",
+      "number": 2,
+      "position": "Defender",
+      "id": 1676647
+     }
+    ],
+    [
+     {
+      "name": "Sebastián Gómez",
+      "number": 19,
+      "position": "Midfielder",
+      "id": 2143064
+     },
+     {
+      "name": "Thiago Santos",
+      "number": 21,
+      "position": "Midfielder",
+      "id": 1597918
+     }
+    ],
+    [
+     {
+      "name": "Breno Lopes",
+      "number": 77,
+      "position": "Midfielder",
+      "id": 8688680
+     },
+     {
+      "name": "Josué",
+      "number": 10,
+      "position": "Midfielder",
+      "id": 346304
+     },
+     {
+      "name": "Nicolas Fonseca",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 4941244
+     }
+    ],
+    [
+     {
+      "name": "Pedro Rocha",
+      "number": 32,
+      "position": "Forward",
+      "id": 1627220
+     }
+    ]
+   ],
+   "id": 125881,
+   "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+   "name": "Coritiba"
+  },
+  "awayTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "João Paulo",
+     "number": 34,
+     "position": "Goalkeeper",
+     "id": 1606773
+    },
+    {
+     "name": "Davizinho",
+     "number": 27,
+     "position": "Forward",
+     "id": 98148813
+    },
+    {
+     "name": "Gonzalo Escobar",
+     "number": 31,
+     "position": "Defender",
+     "id": 1068711
+    },
+    {
+     "name": "Igor Vinícius",
+     "number": 18,
+     "position": "Defender",
+     "id": 1601943
+    },
+    {
+     "name": "Samuel Mendes",
+     "number": 81,
+     "position": "Midfielder",
+     "id": 98133357
+    },
+    {
+     "name": "Gabriel Menino",
+     "number": 25,
+     "position": "Midfielder",
+     "id": 31413025
+    },
+    {
+     "name": "Christian Oliva",
+     "number": 28,
+     "position": "Midfielder",
+     "id": 4921602
+    },
+    {
+     "name": "Benjamín Rollheiser",
+     "number": 32,
+     "position": "Forward",
+     "id": 19237239
+    },
+    {
+     "name": "Lima",
+     "number": 45,
+     "position": "Midfielder",
+     "id": 8135806
+    },
+    {
+     "name": "Thaciano",
+     "number": 16,
+     "position": "Midfielder",
+     "id": 1689366
+    },
+    {
+     "name": "João Schmidt",
+     "number": 5,
+     "position": "Midfielder",
+     "id": 5297215
+    },
+    {
+     "name": "Rony",
+     "number": 33,
+     "position": "Forward",
+     "id": 1633177
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Diogenes",
+      "number": 1,
+      "position": "Goalkeeper",
+      "id": 51754248
+     }
+    ],
+    [
+     {
+      "name": "João Alencar",
+      "number": 42,
+      "position": "Defender",
+      "id": 84155176
+     },
+     {
+      "name": "Luan Peres",
+      "number": 14,
+      "position": "Defender",
+      "id": 11585
+     },
+     {
+      "name": "Willian Arão",
+      "number": 15,
+      "position": "Defender",
+      "id": 1638007
+     },
+     {
+      "name": "Rodinei",
+      "number": 23,
+      "position": "Defender",
+      "id": 1635431
+     }
+    ],
+    [
+     {
+      "name": "Arthur",
+      "number": 6,
+      "position": "Midfielder",
+      "id": 24304
+     },
+     {
+      "name": "Gustavinho",
+      "number": 48,
+      "position": "Midfielder",
+      "id": 81543434
+     }
+    ],
+    [
+     {
+      "name": "Everton Cebolinha",
+      "number": 7,
+      "position": "Midfielder",
+      "id": 388808
+     },
+     {
+      "name": "Philippe Coutinho",
+      "number": 11,
+      "position": "Midfielder",
+      "id": 23821
+     },
+     {
+      "name": "Neymar",
+      "number": 10,
+      "position": "Midfielder",
+      "id": 44590
+     }
+    ],
+    [
+     {
+      "name": "Gabriel Barbosa",
+      "number": 9,
+      "position": "Forward",
+      "id": 1638168
+     }
+    ]
+   ],
+   "id": 109712,
+   "logo": "https://highlightly.net/soccer/images/teams/109712.png",
+   "name": "Santos"
+  }
+ },
+ "_coletado_em": "2026-11-20T04:01:11.209666+00:00"
+}
