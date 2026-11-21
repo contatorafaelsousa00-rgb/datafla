@@ -7,12 +7,12 @@
    "capacity": "43600"
   },
   "referee": {
-   "name": null,
-   "nationality": null
+   "name": "Pereira de Lima, Rodrigo Jose",
+   "nationality": "Brazil"
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "29.5°C"
+   "temperature": "28.86°C"
   },
   "events": [],
   "predictions": {
@@ -83,6 +83,17 @@
       "draw": "29.53%",
       "home": "33.49%"
      }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Palmeiras.",
+     "generatedAt": "2026-11-21T10:48:46.881Z",
+     "probabilities": {
+      "away": "45.66%",
+      "draw": "26.97%",
+      "home": "27.37%"
+     }
     }
    ]
   },
@@ -142,5 +153,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-11-21T08:01:11.895308+00:00"
+ "_coletado_em": "2026-11-21T14:15:47.653395+00:00"
 }
