@@ -1,6 +1,40 @@
 {
  "data": [
   {
+   "id": 1270091052,
+   "round": "Regular Season - 36",
+   "date": "2026-11-21T19:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": null,
+    "score": {
+     "current": null,
+     "penalties": null
+    },
+    "description": "Not started"
+   },
+   "awayTeam": {
+    "id": 108861,
+    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
+    "name": "Flamengo"
+   },
+   "homeTeam": {
+    "id": 103755,
+    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+    "name": "Palmeiras"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
    "id": 1269925107,
    "round": "Regular Season - 17",
    "date": "2026-05-24T00:00:00.000Z",
@@ -305,41 +339,7 @@
     "name": "Serie A",
     "season": 2023
    }
-  },
-  {
-   "id": 855920415,
-   "round": "Regular Season - 14",
-   "date": "2023-07-09T00:00:00.000Z",
-   "country": {
-    "code": "BR",
-    "name": "Brazil",
-    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
-   },
-   "state": {
-    "clock": 90,
-    "score": {
-     "current": "1 - 1",
-     "penalties": null
-    },
-    "description": "Finished"
-   },
-   "awayTeam": {
-    "id": 108861,
-    "logo": "https://highlightly.net/soccer/images/teams/108861.png",
-    "name": "Flamengo"
-   },
-   "homeTeam": {
-    "id": 103755,
-    "logo": "https://highlightly.net/soccer/images/teams/103755.png",
-    "name": "Palmeiras"
-   },
-   "league": {
-    "id": 61205,
-    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
-    "name": "Serie A",
-    "season": 2023
-   }
   }
  ],
- "_coletado_em": "2026-11-20T00:45:50.394851+00:00"
+ "_coletado_em": "2026-11-21T01:45:53.453401+00:00"
 }

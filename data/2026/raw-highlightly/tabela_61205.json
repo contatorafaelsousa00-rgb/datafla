@@ -105,11 +105,11 @@
      },
      {
       "away": {
-       "wins": 4,
+       "wins": 5,
        "draws": 6,
-       "games": 17,
+       "games": 18,
        "loses": 7,
-       "scoredGoals": 24,
+       "scoredGoals": 25,
        "receivedGoals": 25
       },
       "home": {
@@ -126,14 +126,14 @@
        "name": "Fluminense"
       },
       "total": {
-       "wins": 16,
+       "wins": 17,
        "draws": 9,
-       "games": 34,
+       "games": 35,
        "loses": 9,
-       "scoredGoals": 55,
+       "scoredGoals": 56,
        "receivedGoals": 42
       },
-      "points": 57,
+      "points": 60,
       "position": 4
      },
      {
@@ -272,10 +272,10 @@
       "away": {
        "wins": 4,
        "draws": 5,
-       "games": 17,
-       "loses": 8,
-       "scoredGoals": 15,
-       "receivedGoals": 21
+       "games": 18,
+       "loses": 9,
+       "scoredGoals": 16,
+       "receivedGoals": 23
       },
       "home": {
        "wins": 9,
@@ -346,10 +346,10 @@
       "home": {
        "wins": 10,
        "draws": 4,
-       "games": 17,
-       "loses": 3,
+       "games": 18,
+       "loses": 4,
        "scoredGoals": 25,
-       "receivedGoals": 13
+       "receivedGoals": 14
       },
       "team": {
        "id": 108010,
@@ -359,10 +359,10 @@
       "total": {
        "wins": 12,
        "draws": 8,
-       "games": 34,
-       "loses": 14,
+       "games": 35,
+       "loses": 15,
        "scoredGoals": 39,
-       "receivedGoals": 39
+       "receivedGoals": 40
       },
       "points": 44,
       "position": 11
@@ -443,12 +443,12 @@
        "receivedGoals": 35
       },
       "home": {
-       "wins": 10,
+       "wins": 11,
        "draws": 2,
-       "games": 17,
+       "games": 18,
        "loses": 5,
-       "scoredGoals": 23,
-       "receivedGoals": 16
+       "scoredGoals": 25,
+       "receivedGoals": 17
       },
       "team": {
        "id": 116520,
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-11-20T00:45:59.529105+00:00"
+ "_coletado_em": "2026-11-21T01:46:02.349140+00:00"
 }

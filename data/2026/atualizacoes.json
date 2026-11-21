@@ -1175,5 +1175,17 @@
   "requisicoes": 5,
   "cota_restante": 63,
   "erro": null
+ },
+ {
+  "quando": "2026-11-21T01:46:07+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Palmeiras em menos de 24 h: renova previsão, árbitro e clima",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 65,
+  "pendentes": 0,
+  "requisicoes": 18,
+  "cota_restante": 82,
+  "erro": null
  }
 ]
