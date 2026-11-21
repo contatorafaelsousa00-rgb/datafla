@@ -1253,5 +1253,23 @@
   "requisicoes": 2,
   "cota_restante": 58,
   "erro": null
+ },
+ {
+  "quando": "2026-11-21T21:46:11+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "jogo contra Palmeiras já terminou e ainda não foi baixado",
+  "novos": [
+   {
+    "adversario": "Palmeiras",
+    "data_utc": "2026-11-21T19:30:00.000Z",
+    "competicao": "Serie A"
+   }
+  ],
+  "recoletados": [],
+  "encerrados": 66,
+  "pendentes": 0,
+  "requisicoes": 12,
+  "cota_restante": 46,
+  "erro": null
  }
 ]

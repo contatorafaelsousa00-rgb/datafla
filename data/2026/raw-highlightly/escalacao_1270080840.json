@@ -1,0 +1,309 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Ygor Vinhas",
+     "number": 94,
+     "position": "Goalkeeper",
+     "id": 1560888
+    },
+    {
+     "name": "Ivan",
+     "number": 97,
+     "position": "Goalkeeper",
+     "id": 1560566
+    },
+    {
+     "name": "Marllon",
+     "number": 13,
+     "position": "Defender",
+     "id": 1647506
+    },
+    {
+     "name": "João Lucas",
+     "number": 2,
+     "position": "Defender",
+     "id": 11329402
+    },
+    {
+     "name": "Marlon Lopes",
+     "number": 6,
+     "position": "Defender",
+     "id": 12545757
+    },
+    {
+     "name": "Jáderson",
+     "number": 10,
+     "position": "Forward",
+     "id": 1633660
+    },
+    {
+     "name": "Edson Fernando",
+     "number": 35,
+     "position": "Midfielder",
+     "id": 10309306
+    },
+    {
+     "name": "Yago Pikachu",
+     "number": 22,
+     "position": "Midfielder",
+     "id": 1703695
+    },
+    {
+     "name": "Antonio Galeano",
+     "number": 21,
+     "position": "Forward",
+     "id": 15358266
+    },
+    {
+     "name": "Vitor Bueno",
+     "number": 15,
+     "position": "Forward",
+     "id": 1604036
+    },
+    {
+     "name": "Eduardo Melo",
+     "number": 39,
+     "position": "Forward",
+     "id": 31728907
+    },
+    {
+     "name": "Gabriel Poveda",
+     "number": 9,
+     "position": "Forward",
+     "id": 1632855
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Marcelo Rangel",
+      "number": 88,
+      "position": "Goalkeeper",
+      "id": 12527886
+     }
+    ],
+    [
+     {
+      "name": "Mayk",
+      "number": 77,
+      "position": "Defender",
+      "id": 12958078
+     },
+     {
+      "name": "Duplexe Tchamba",
+      "number": 18,
+      "position": "Defender",
+      "id": 3582565
+     },
+     {
+      "name": "Zé Ivaldo",
+      "number": 27,
+      "position": "Defender",
+      "id": 1628508
+     },
+     {
+      "name": "Marcelinho",
+      "number": 79,
+      "position": "Defender",
+      "id": 43289351
+     }
+    ],
+    [
+     {
+      "name": "Patrick",
+      "number": 8,
+      "position": "Midfielder",
+      "id": 1672622
+     },
+     {
+      "name": "Zé Welison",
+      "number": 28,
+      "position": "Midfielder",
+      "id": 1591156
+     }
+    ],
+    [
+     {
+      "name": "Jajá",
+      "number": 7,
+      "position": "Midfielder",
+      "id": 8838088
+     },
+     {
+      "name": "David Braga",
+      "number": 26,
+      "position": "Midfielder",
+      "id": 57186227
+     },
+     {
+      "name": "Leonel Picco",
+      "number": 14,
+      "position": "Midfielder",
+      "id": 839125
+     }
+    ],
+    [
+     {
+      "name": "Gabriel Taliari",
+      "number": 19,
+      "position": "Forward",
+      "id": 12924107
+     }
+    ]
+   ],
+   "id": 1020282,
+   "logo": "https://highlightly.net/soccer/images/teams/1020282.png",
+   "name": "Remo"
+  },
+  "awayTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Matheus",
+     "number": 30,
+     "position": "Goalkeeper",
+     "id": 19295521
+    },
+    {
+     "name": "Victor Caetano",
+     "number": 25,
+     "position": "Defender",
+     "id": 1556380
+    },
+    {
+     "name": "Mancha",
+     "number": 6,
+     "position": "Defender",
+     "id": 49307048
+    },
+    {
+     "name": "Everton",
+     "number": 26,
+     "position": "Defender",
+     "id": 8884939
+    },
+    {
+     "name": "Miguel Carvalho",
+     "number": 80,
+     "position": "Midfielder",
+     "id": 54258603
+    },
+    {
+     "name": "Rubens Tadeu",
+     "number": 70,
+     "position": "Midfielder",
+     "id": 65744021
+    },
+    {
+     "name": "Robert Santos",
+     "number": 8,
+     "position": "Forward",
+     "id": 73269805
+    },
+    {
+     "name": "Rosivan",
+     "number": 55,
+     "position": "Midfielder",
+     "id": 51027172
+    },
+    {
+     "name": "Rodrigo Endrio",
+     "number": 39,
+     "position": "Forward",
+     "id": 101596628
+    },
+    {
+     "name": "Gleidson Lima dos Santos",
+     "number": 51,
+     "position": "Forward",
+     "id": 102139198
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Gabriel Werner",
+      "number": 14,
+      "position": "Goalkeeper",
+      "id": 56707091
+     }
+    ],
+    [
+     {
+      "name": "Fernando",
+      "number": 12,
+      "position": "Defender",
+      "id": 29304569
+     },
+     {
+      "name": "Eduardo Doma",
+      "number": 3,
+      "position": "Defender",
+      "id": 17141341
+     },
+     {
+      "name": "Kauan",
+      "number": 21,
+      "position": "Defender",
+      "id": 56707574
+     },
+     {
+      "name": "Bruno Tubarão",
+      "number": 20,
+      "position": "Defender",
+      "id": 1524502
+     }
+    ],
+    [
+     {
+      "name": "David Antunes",
+      "number": 19,
+      "position": "Midfielder",
+      "id": 87743544
+     },
+     {
+      "name": "Camilo",
+      "number": 27,
+      "position": "Midfielder",
+      "id": 10303832
+     }
+    ],
+    [
+     {
+      "name": "Dylan Borrero",
+      "number": 77,
+      "position": "Midfielder",
+      "id": 2217285
+     },
+     {
+      "name": "Giovanni Augusto",
+      "number": 10,
+      "position": "Midfielder",
+      "id": 1667470
+     },
+     {
+      "name": "Max",
+      "number": 22,
+      "position": "Midfielder",
+      "id": 49300447
+     }
+    ],
+    [
+     {
+      "name": "Tulio Eduardo",
+      "number": 9,
+      "position": "Forward",
+      "id": 64892814
+     }
+    ]
+   ],
+   "id": 113116,
+   "logo": "https://highlightly.net/soccer/images/teams/113116.png",
+   "name": "Chapecoense"
+  }
+ },
+ "_coletado_em": "2026-11-21T21:46:04.791012+00:00"
+}
