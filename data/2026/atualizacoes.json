@@ -1241,5 +1241,17 @@
   "requisicoes": 3,
   "cota_restante": 61,
   "erro": null
+ },
+ {
+  "quando": "2026-11-21T19:01:05+00:00",
+  "origem": "disparo externo / manual",
+  "motivo": "saiu a escalação do jogo contra Palmeiras",
+  "novos": [],
+  "recoletados": [],
+  "encerrados": 65,
+  "pendentes": 0,
+  "requisicoes": 2,
+  "cota_restante": 58,
+  "erro": null
  }
 ]
