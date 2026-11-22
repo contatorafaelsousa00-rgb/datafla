@@ -3,25 +3,25 @@
   {
    "id": 1661835,
    "logo": null,
-   "name": "Pedro Guilherme",
+   "name": "Pedro",
    "fullName": "Pedro Guilherme Abreu dos Santos",
    "perCompetition": [
     {
      "club": "CR Flamengo",
      "type": "national league",
-     "goals": 18,
+     "goals": 20,
      "league": "Campeonato Brasileiro Série A",
      "season": "2026",
      "assists": 6,
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 5,
-     "gamesPlayed": 33,
+     "gamesPlayed": 35,
      "yellowCards": 2,
-     "goalsConceded": 18,
-     "minutesPlayed": 2607,
+     "goalsConceded": 20,
+     "minutesPlayed": 2783,
      "substitutedIn": 1,
-     "substitutedOut": 26,
+     "substitutedOut": 28,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -941,17 +941,17 @@
    "perClub": [
     {
      "club": "CR Flamengo",
-     "goals": 177,
+     "goals": 179,
      "assists": 49,
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 128,
-     "gamesPlayed": 356,
+     "gamesPlayed": 358,
      "yellowCards": 26,
-     "goalsConceded": 184,
-     "minutesPlayed": 21163,
+     "goalsConceded": 186,
+     "minutesPlayed": 21339,
      "substitutedIn": 119,
-     "substitutedOut": 143,
+     "substitutedOut": 145,
      "penaltiesScored": 16,
      "secondYellowCards": 0
     },
@@ -1038,5 +1038,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-15T03:01:39.241367+00:00"
+ "_coletado_em": "2026-11-22T04:16:13.089702+00:00"
 }

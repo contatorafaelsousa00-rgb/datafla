@@ -7,11 +7,11 @@
      {
       "away": {
        "wins": 10,
-       "draws": 4,
-       "games": 17,
+       "draws": 5,
+       "games": 18,
        "loses": 3,
-       "scoredGoals": 36,
-       "receivedGoals": 16
+       "scoredGoals": 37,
+       "receivedGoals": 17
       },
       "home": {
        "wins": 14,
@@ -28,13 +28,13 @@
       },
       "total": {
        "wins": 24,
-       "draws": 7,
-       "games": 35,
+       "draws": 8,
+       "games": 36,
        "loses": 4,
-       "scoredGoals": 73,
-       "receivedGoals": 30
+       "scoredGoals": 74,
+       "receivedGoals": 31
       },
-      "points": 79,
+      "points": 80,
       "position": 1
      },
      {
@@ -48,11 +48,11 @@
       },
       "home": {
        "wins": 13,
-       "draws": 3,
-       "games": 17,
+       "draws": 4,
+       "games": 18,
        "loses": 1,
-       "scoredGoals": 36,
-       "receivedGoals": 11
+       "scoredGoals": 37,
+       "receivedGoals": 12
       },
       "team": {
        "id": 103755,
@@ -61,23 +61,23 @@
       },
       "total": {
        "wins": 21,
-       "draws": 10,
-       "games": 35,
+       "draws": 11,
+       "games": 36,
        "loses": 4,
-       "scoredGoals": 63,
-       "receivedGoals": 25
+       "scoredGoals": 64,
+       "receivedGoals": 26
       },
-      "points": 73,
+      "points": 74,
       "position": 2
      },
      {
       "away": {
-       "wins": 8,
+       "wins": 9,
        "draws": 2,
-       "games": 17,
+       "games": 18,
        "loses": 7,
-       "scoredGoals": 25,
-       "receivedGoals": 30
+       "scoredGoals": 27,
+       "receivedGoals": 31
       },
       "home": {
        "wins": 11,
@@ -93,14 +93,14 @@
        "name": "Cruzeiro"
       },
       "total": {
-       "wins": 19,
+       "wins": 20,
        "draws": 6,
-       "games": 35,
+       "games": 36,
        "loses": 10,
-       "scoredGoals": 57,
-       "receivedGoals": 49
+       "scoredGoals": 59,
+       "receivedGoals": 50
       },
-      "points": 63,
+      "points": 66,
       "position": 3
      },
      {
@@ -181,10 +181,10 @@
       "home": {
        "wins": 8,
        "draws": 6,
-       "games": 17,
-       "loses": 3,
+       "games": 18,
+       "loses": 4,
        "scoredGoals": 26,
-       "receivedGoals": 19
+       "receivedGoals": 20
       },
       "team": {
        "id": 101202,
@@ -194,10 +194,10 @@
       "total": {
        "wins": 14,
        "draws": 12,
-       "games": 35,
-       "loses": 9,
+       "games": 36,
+       "loses": 10,
        "scoredGoals": 50,
-       "receivedGoals": 45
+       "receivedGoals": 46
       },
       "points": 54,
       "position": 6
@@ -336,6 +336,39 @@
      },
      {
       "away": {
+       "wins": 6,
+       "draws": 4,
+       "games": 18,
+       "loses": 8,
+       "scoredGoals": 19,
+       "receivedGoals": 30
+      },
+      "home": {
+       "wins": 6,
+       "draws": 5,
+       "games": 18,
+       "loses": 7,
+       "scoredGoals": 22,
+       "receivedGoals": 22
+      },
+      "team": {
+       "id": 125881,
+       "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+       "name": "Coritiba"
+      },
+      "total": {
+       "wins": 12,
+       "draws": 9,
+       "games": 36,
+       "loses": 15,
+       "scoredGoals": 41,
+       "receivedGoals": 52
+      },
+      "points": 45,
+      "position": 11
+     },
+     {
+      "away": {
        "wins": 2,
        "draws": 4,
        "games": 17,
@@ -365,7 +398,7 @@
        "receivedGoals": 40
       },
       "points": 44,
-      "position": 11
+      "position": 12
      },
      {
       "away": {
@@ -396,39 +429,6 @@
        "loses": 15,
        "scoredGoals": 46,
        "receivedGoals": 57
-      },
-      "points": 42,
-      "position": 12
-     },
-     {
-      "away": {
-       "wins": 5,
-       "draws": 4,
-       "games": 17,
-       "loses": 8,
-       "scoredGoals": 18,
-       "receivedGoals": 30
-      },
-      "home": {
-       "wins": 6,
-       "draws": 5,
-       "games": 18,
-       "loses": 7,
-       "scoredGoals": 22,
-       "receivedGoals": 22
-      },
-      "team": {
-       "id": 125881,
-       "logo": "https://highlightly.net/soccer/images/teams/125881.png",
-       "name": "Coritiba"
-      },
-      "total": {
-       "wins": 11,
-       "draws": 9,
-       "games": 35,
-       "loses": 15,
-       "scoredGoals": 40,
-       "receivedGoals": 52
       },
       "points": 42,
       "position": 13
@@ -643,10 +643,10 @@
       "home": {
        "wins": 3,
        "draws": 5,
-       "games": 17,
-       "loses": 9,
-       "scoredGoals": 22,
-       "receivedGoals": 38
+       "games": 18,
+       "loses": 10,
+       "scoredGoals": 23,
+       "receivedGoals": 40
       },
       "team": {
        "id": 113116,
@@ -656,10 +656,10 @@
       "total": {
        "wins": 4,
        "draws": 9,
-       "games": 35,
-       "loses": 22,
-       "scoredGoals": 33,
-       "receivedGoals": 72
+       "games": 36,
+       "loses": 23,
+       "scoredGoals": 34,
+       "receivedGoals": 74
       },
       "points": 21,
       "position": 20
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-11-21T01:46:02.349140+00:00"
+ "_coletado_em": "2026-11-22T04:16:02.345070+00:00"
 }

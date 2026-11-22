@@ -1,6 +1,40 @@
 {
  "data": [
   {
+   "id": 1270085946,
+   "round": "Regular Season - 36",
+   "date": "2026-11-21T20:30:00.000Z",
+   "country": {
+    "code": "BR",
+    "name": "Brazil",
+    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
+   },
+   "state": {
+    "clock": 90,
+    "score": {
+     "current": "0 - 1",
+     "penalties": null
+    },
+    "description": "Finished"
+   },
+   "awayTeam": {
+    "id": 125881,
+    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
+    "name": "Coritiba"
+   },
+   "homeTeam": {
+    "id": 101202,
+    "logo": "https://highlightly.net/soccer/images/teams/101202.png",
+    "name": "Bahia"
+   },
+   "league": {
+    "id": 61205,
+    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
+    "name": "Serie A",
+    "season": 2026
+   }
+  },
+  {
    "id": 1270076585,
    "round": "Regular Season - 35",
    "date": "2026-11-18T22:30:00.000Z",
@@ -135,41 +169,7 @@
     "name": "Serie A",
     "season": 2026
    }
-  },
-  {
-   "id": 1270042545,
-   "round": "Regular Season - 31",
-   "date": "2026-10-17T21:30:00.000Z",
-   "country": {
-    "code": "BR",
-    "name": "Brazil",
-    "logo": "https://highlightly.net/soccer/images/countries/BR.svg"
-   },
-   "state": {
-    "clock": 90,
-    "score": {
-     "current": "1 - 0",
-     "penalties": null
-    },
-    "description": "Finished"
-   },
-   "awayTeam": {
-    "id": 125881,
-    "logo": "https://highlightly.net/soccer/images/teams/125881.png",
-    "name": "Coritiba"
-   },
-   "homeTeam": {
-    "id": 904546,
-    "logo": "https://highlightly.net/soccer/images/teams/904546.png",
-    "name": "Atletico-MG"
-   },
-   "league": {
-    "id": 61205,
-    "logo": "https://highlightly.net/soccer/images/leagues/61205.png",
-    "name": "Serie A",
-    "season": 2026
-   }
   }
  ],
- "_coletado_em": "2026-11-21T01:45:57.227641+00:00"
+ "_coletado_em": "2026-11-22T04:15:52.499130+00:00"
 }

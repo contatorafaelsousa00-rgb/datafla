@@ -3,7 +3,7 @@
   {
    "id": 2635563,
    "logo": null,
-   "name": "Gonzalo Plata",
+   "name": "G. Plata",
    "fullName": "Gonzalo Jordy Plata Jiménez",
    "profile": {
     "club": {
@@ -409,7 +409,7 @@
      "season": "2027",
      "toDate": "07.10.2026",
      "fromDate": "21.09.2026",
-     "missedGames": null,
+     "missedGames": 3,
      "absentDurationInDays": 17
     },
     {
@@ -527,5 +527,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-15T03:01:33.829969+00:00"
+ "_coletado_em": "2026-11-22T04:16:05.368098+00:00"
 }
