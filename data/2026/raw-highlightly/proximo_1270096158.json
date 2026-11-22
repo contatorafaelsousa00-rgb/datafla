@@ -1,21 +1,36 @@
 {
  "data": {
   "venue": {
-   "city": null,
-   "name": null,
-   "country": null,
-   "capacity": null
+   "city": "Curitiba",
+   "name": "Estadio Couto Pereira",
+   "country": "Brazil",
+   "capacity": "40502"
   },
   "referee": {
    "name": null,
    "nationality": null
   },
   "forecast": {
-   "status": null,
-   "temperature": null
+   "status": "cloudy",
+   "temperature": "21.58°C"
   },
   "events": [],
-  "predictions": null,
+  "predictions": {
+   "live": [],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-11-22T11:35:15.045Z",
+     "probabilities": {
+      "away": "55.76%",
+      "draw": "23.11%",
+      "home": "21.13%"
+     }
+    }
+   ]
+  },
   "statistics": [
    {
     "statistics": [],
@@ -72,5 +87,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-11-22T04:15:50.655883+00:00"
+ "_coletado_em": "2026-11-22T21:15:58.709824+00:00"
 }
