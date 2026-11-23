@@ -1,0 +1,321 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Miguel Carvalho",
+     "number": 80,
+     "position": "Midfielder",
+     "id": 54258603
+    },
+    {
+     "name": "Rodrigo",
+     "number": 39,
+     "position": "Forward",
+     "id": 101596628
+    },
+    {
+     "name": "Juan Ferreira Leite",
+     "number": 66,
+     "position": "Midfielder",
+     "id": null
+    },
+    {
+     "name": "Rubens",
+     "number": 70,
+     "position": "Midfielder",
+     "id": 65744021
+    },
+    {
+     "name": "Rosivan Macedo Soares",
+     "number": 55,
+     "position": "Midfielder",
+     "id": null
+    },
+    {
+     "name": "Matheus Aurélio",
+     "number": 30,
+     "position": "Goalkeeper",
+     "id": 19295521
+    },
+    {
+     "name": "Fernando",
+     "number": 12,
+     "position": "Defender",
+     "id": 29304569
+    },
+    {
+     "name": "Mancha",
+     "number": 6,
+     "position": "Defender",
+     "id": 49307048
+    },
+    {
+     "name": "Everton",
+     "number": 26,
+     "position": "Defender",
+     "id": 8884939
+    },
+    {
+     "name": "Vinicius Eduardo",
+     "number": 35,
+     "position": "Defender",
+     "id": null
+    },
+    {
+     "name": "Marcinho",
+     "number": 7,
+     "position": "Forward",
+     "id": 1668597
+    },
+    {
+     "name": "Robert Dos Santos Conceicao",
+     "number": 8,
+     "position": "Forward",
+     "id": null
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Gabriel Werner",
+      "number": 14,
+      "position": "Goalkeeper",
+      "id": 56707091
+     }
+    ],
+    [
+     {
+      "name": "Bruno Pacheco",
+      "number": 91,
+      "position": "Defender",
+      "id": 1641066
+     },
+     {
+      "name": "Doma",
+      "number": 3,
+      "position": "Defender",
+      "id": 17141341
+     },
+     {
+      "name": "Victor Caetano",
+      "number": 25,
+      "position": "Defender",
+      "id": 1556380
+     },
+     {
+      "name": "Bruno Tubarão",
+      "number": 20,
+      "position": "Defender",
+      "id": 1524502
+     }
+    ],
+    [
+     {
+      "name": "David Antunes",
+      "number": 19,
+      "position": "Midfielder",
+      "id": 87743544
+     },
+     {
+      "name": "Camilo",
+      "number": 27,
+      "position": "Midfielder",
+      "id": 10303832
+     }
+    ],
+    [
+     {
+      "name": "Kauan Faria Gomes",
+      "number": 21,
+      "position": "Midfielder",
+      "id": 56707574
+     },
+     {
+      "name": "Heitor",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 1671978
+     },
+     {
+      "name": "Max",
+      "number": 22,
+      "position": "Midfielder",
+      "id": 49300447
+     }
+    ],
+    [
+     {
+      "name": "Tulio Eduardo Silva De Oliveira",
+      "number": 9,
+      "position": "Forward",
+      "id": null
+     }
+    ]
+   ],
+   "id": 113116,
+   "logo": "https://highlightly.net/soccer/images/teams/113116.png",
+   "name": "Chapecoense"
+  },
+  "awayTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Vitor Hugo De Oliveira Costa",
+     "number": 64,
+     "position": "Defender",
+     "id": null
+    },
+    {
+     "name": "M. Viña",
+     "number": 6,
+     "position": "Defender",
+     "id": 8303246
+    },
+    {
+     "name": "Gustavo Alves Inácio",
+     "number": 54,
+     "position": "Defender",
+     "id": null
+    },
+    {
+     "name": "Wesley Gassova",
+     "number": 20,
+     "position": "Forward",
+     "id": 58811361
+    },
+    {
+     "name": "Vitor Lamounier",
+     "number": 51,
+     "position": "Goalkeeper",
+     "id": 84198968
+    },
+    {
+     "name": "Wanderson",
+     "number": 94,
+     "position": "Forward",
+     "id": 335517
+    },
+    {
+     "name": "Kauã Moraes",
+     "number": 2,
+     "position": "Defender",
+     "id": 84081760
+    },
+    {
+     "name": "Cássio",
+     "number": 1,
+     "position": "Goalkeeper",
+     "id": 1647023
+    },
+    {
+     "name": "L. Rodríguez",
+     "number": 97,
+     "position": "Forward",
+     "id": 47937743
+    },
+    {
+     "name": "Lucas Silva",
+     "number": 16,
+     "position": "Midfielder",
+     "id": 1626576
+    },
+    {
+     "name": "L. Villalba",
+     "number": 25,
+     "position": "Defender",
+     "id": 1009302
+    },
+    {
+     "name": "João Gabriel e Costa Cesco",
+     "number": 67,
+     "position": "Forward",
+     "id": 59263610
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Otávio Eleodoro Rezende Costa",
+      "number": 81,
+      "position": "Goalkeeper",
+      "id": 58009420
+     }
+    ],
+    [
+     {
+      "name": "G. Rojas",
+      "number": 27,
+      "position": "Defender",
+      "id": 1064042
+     },
+     {
+      "name": "Jonathan",
+      "number": 34,
+      "position": "Defender",
+      "id": 67966304
+     },
+     {
+      "name": "Fabrício Bruno",
+      "number": 15,
+      "position": "Defender",
+      "id": 1624483
+     },
+     {
+      "name": "Fágner",
+      "number": 23,
+      "position": "Defender",
+      "id": 388325
+     }
+    ],
+    [
+     {
+      "name": "Zé Lucas",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 81297104
+     },
+     {
+      "name": "Matheus Henrique",
+      "number": 7,
+      "position": "Midfielder",
+      "id": 1689688
+     }
+    ],
+    [
+     {
+      "name": "Bruno Rodrigues",
+      "number": 9,
+      "position": "Midfielder",
+      "id": 1520799
+     },
+     {
+      "name": "Matheus Pereira",
+      "number": 10,
+      "position": "Midfielder",
+      "id": 4124652
+     },
+     {
+      "name": "Marquinhos",
+      "number": 11,
+      "position": "Midfielder",
+      "id": 50154874
+     }
+    ],
+    [
+     {
+      "name": "N. Villareal",
+      "number": 22,
+      "position": "Forward",
+      "id": 70770280
+     }
+    ]
+   ],
+   "id": 115669,
+   "logo": "https://highlightly.net/soccer/images/teams/115669.png",
+   "name": "Cruzeiro"
+  }
+ },
+ "_coletado_em": "2026-11-23T00:30:58.842368+00:00"
+}
