@@ -3,25 +3,25 @@
   {
    "id": 965188,
    "logo": null,
-   "name": "Jorge Carrascal",
+   "name": "J. Carrascal",
    "fullName": "Jorge Andrés Carrascal Guardo",
    "perCompetition": [
     {
      "club": "CR Flamengo",
      "type": "national league",
-     "goals": 7,
+     "goals": 8,
      "league": "Campeonato Brasileiro Série A",
      "season": "2026",
-     "assists": 8,
+     "assists": 9,
      "ownGoals": 0,
      "redCards": 2,
-     "cleanSheets": 8,
-     "gamesPlayed": 26,
+     "cleanSheets": 9,
+     "gamesPlayed": 29,
      "yellowCards": 3,
-     "goalsConceded": 9,
-     "minutesPlayed": 1430,
-     "substitutedIn": 10,
-     "substitutedOut": 13,
+     "goalsConceded": 10,
+     "minutesPlayed": 1589,
+     "substitutedIn": 11,
+     "substitutedOut": 15,
      "penaltiesScored": 1,
      "secondYellowCards": 0
     },
@@ -998,17 +998,17 @@
    "perClub": [
     {
      "club": "CR Flamengo",
-     "goals": 11,
-     "assists": 16,
+     "goals": 12,
+     "assists": 17,
      "ownGoals": 0,
      "redCards": 3,
-     "cleanSheets": 18,
-     "gamesPlayed": 71,
+     "cleanSheets": 19,
+     "gamesPlayed": 74,
      "yellowCards": 10,
-     "goalsConceded": 31,
-     "minutesPlayed": 4048,
-     "substitutedIn": 20,
-     "substitutedOut": 41,
+     "goalsConceded": 32,
+     "minutesPlayed": 4207,
+     "substitutedIn": 21,
+     "substitutedOut": 43,
      "penaltiesScored": 1,
      "secondYellowCards": 0
     },
@@ -1143,5 +1143,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-16T03:16:20.997114+00:00"
+ "_coletado_em": "2026-11-23T03:46:15.630470+00:00"
 }

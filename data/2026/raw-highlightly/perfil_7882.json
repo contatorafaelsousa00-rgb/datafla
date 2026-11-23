@@ -3,7 +3,7 @@
   {
    "id": 7882,
    "logo": null,
-   "name": "Saúl Ñíguez",
+   "name": "Saúl",
    "fullName": "Saúl Ñíguez Esclapez",
    "profile": {
     "club": {
@@ -27,8 +27,8 @@
    "rumours": {
     "current": [
      {
-      "club": "CF América",
-      "rumourDate": "13/09/2026",
+      "club": "Santos FC",
+      "rumourDate": "16/11/2026",
       "transferProbability": "N/A"
      }
     ],
@@ -713,5 +713,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-16T03:16:08.613189+00:00"
+ "_coletado_em": "2026-11-23T03:45:58.348986+00:00"
 }

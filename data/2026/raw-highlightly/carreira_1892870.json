@@ -3,7 +3,7 @@
   {
    "id": 1892870,
    "logo": null,
-   "name": "Agustín Rossi",
+   "name": "A. Rossi",
    "fullName": "Agustín Daniel Rossi",
    "perCompetition": [
     {
@@ -16,10 +16,10 @@
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 14,
-     "gamesPlayed": 33,
+     "gamesPlayed": 36,
      "yellowCards": 0,
-     "goalsConceded": 28,
-     "minutesPlayed": 2970,
+     "goalsConceded": 31,
+     "minutesPlayed": 3240,
      "substitutedIn": 0,
      "substitutedOut": 0,
      "penaltiesScored": 0,
@@ -1193,10 +1193,10 @@
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 93,
-     "gamesPlayed": 195,
+     "gamesPlayed": 198,
      "yellowCards": 4,
-     "goalsConceded": 142,
-     "minutesPlayed": 17610,
+     "goalsConceded": 145,
+     "minutesPlayed": 17880,
      "substitutedIn": 0,
      "substitutedOut": 0,
      "penaltiesScored": 0,
@@ -1365,5 +1365,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-16T03:16:14.271124+00:00"
+ "_coletado_em": "2026-11-23T03:46:08.837810+00:00"
 }

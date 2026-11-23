@@ -3,7 +3,7 @@
   {
    "id": 207844,
    "logo": null,
-   "name": "Guillermo Varela",
+   "name": "G. Varela",
    "fullName": "Guillermo Varela Olivera",
    "perCompetition": [
     {
@@ -12,14 +12,14 @@
      "goals": 1,
      "league": "Campeonato Brasileiro Série A",
      "season": "2026",
-     "assists": 6,
+     "assists": 7,
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 11,
-     "gamesPlayed": 25,
+     "gamesPlayed": 28,
      "yellowCards": 4,
-     "goalsConceded": 20,
-     "minutesPlayed": 2059,
+     "goalsConceded": 23,
+     "minutesPlayed": 2329,
      "substitutedIn": 3,
      "substitutedOut": 0,
      "penaltiesScored": 0,
@@ -1322,14 +1322,14 @@
     {
      "club": "CR Flamengo",
      "goals": 5,
-     "assists": 11,
+     "assists": 12,
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 84,
-     "gamesPlayed": 160,
+     "gamesPlayed": 163,
      "yellowCards": 16,
-     "goalsConceded": 78,
-     "minutesPlayed": 10420,
+     "goalsConceded": 81,
+     "minutesPlayed": 10690,
      "substitutedIn": 42,
      "substitutedOut": 39,
      "penaltiesScored": 0,
@@ -1342,10 +1342,10 @@
      "ownGoals": 0,
      "redCards": 1,
      "cleanSheets": 17,
-     "gamesPlayed": 32,
-     "yellowCards": 4,
-     "goalsConceded": 14,
-     "minutesPlayed": 2176,
+     "gamesPlayed": 33,
+     "yellowCards": 5,
+     "goalsConceded": 15,
+     "minutesPlayed": 2266,
      "substitutedIn": 9,
      "substitutedOut": 5,
      "penaltiesScored": 0,
@@ -1498,5 +1498,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-16T03:16:21.962760+00:00"
+ "_coletado_em": "2026-11-23T03:46:16.590059+00:00"
 }
