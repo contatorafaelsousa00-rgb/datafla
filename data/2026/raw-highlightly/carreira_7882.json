@@ -3,7 +3,7 @@
   {
    "id": 7882,
    "logo": null,
-   "name": "Saúl Ñíguez",
+   "name": "Saúl",
    "fullName": "Saúl Ñíguez Esclapez",
    "perCompetition": [
     {
@@ -15,12 +15,12 @@
      "assists": 1,
      "ownGoals": 0,
      "redCards": 0,
-     "cleanSheets": 5,
-     "gamesPlayed": 11,
+     "cleanSheets": 8,
+     "gamesPlayed": 14,
      "yellowCards": 1,
      "goalsConceded": 7,
-     "minutesPlayed": 310,
-     "substitutedIn": 8,
+     "minutesPlayed": 327,
+     "substitutedIn": 11,
      "substitutedOut": 2,
      "penaltiesScored": 0,
      "secondYellowCards": 0
@@ -1135,12 +1135,12 @@
      "assists": 3,
      "ownGoals": 0,
      "redCards": 0,
-     "cleanSheets": 19,
-     "gamesPlayed": 40,
+     "cleanSheets": 22,
+     "gamesPlayed": 43,
      "yellowCards": 6,
      "goalsConceded": 22,
-     "minutesPlayed": 2044,
-     "substitutedIn": 20,
+     "minutesPlayed": 2061,
+     "substitutedIn": 23,
      "substitutedOut": 6,
      "penaltiesScored": 0,
      "secondYellowCards": 0
@@ -1324,5 +1324,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-17T03:16:49.529970+00:00"
+ "_coletado_em": "2026-11-24T04:01:32.018790+00:00"
 }

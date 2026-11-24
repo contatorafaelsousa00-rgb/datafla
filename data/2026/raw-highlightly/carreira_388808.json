@@ -3,7 +3,7 @@
   {
    "id": 388808,
    "logo": null,
-   "name": "Everton Cebolinha",
+   "name": "Everton",
    "fullName": "Everton Sousa Soares",
    "perCompetition": [
     {
@@ -16,12 +16,12 @@
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 0,
-     "gamesPlayed": 7,
+     "gamesPlayed": 8,
      "yellowCards": 2,
      "goalsConceded": 5,
-     "minutesPlayed": 541,
+     "minutesPlayed": 628,
      "substitutedIn": 0,
-     "substitutedOut": 7,
+     "substitutedOut": 8,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -1155,12 +1155,12 @@
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 0,
-     "gamesPlayed": 7,
+     "gamesPlayed": 8,
      "yellowCards": 2,
      "goalsConceded": 5,
-     "minutesPlayed": 541,
+     "minutesPlayed": 628,
      "substitutedIn": 0,
-     "substitutedOut": 7,
+     "substitutedOut": 8,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -1231,5 +1231,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-17T03:16:47.345786+00:00"
+ "_coletado_em": "2026-11-24T04:01:30.137632+00:00"
 }

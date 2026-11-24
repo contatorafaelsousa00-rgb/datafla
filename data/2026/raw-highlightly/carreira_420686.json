@@ -3,7 +3,7 @@
   {
    "id": 420686,
    "logo": null,
-   "name": "Giorgian de Arrascaeta",
+   "name": "G. de Arrascaeta",
    "fullName": "Giorgian Daniel de Arrascaeta Benedetti",
    "perCompetition": [
     {
@@ -16,12 +16,12 @@
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 2,
-     "gamesPlayed": 23,
+     "gamesPlayed": 26,
      "yellowCards": 2,
-     "goalsConceded": 15,
-     "minutesPlayed": 1536,
+     "goalsConceded": 18,
+     "minutesPlayed": 1781,
      "substitutedIn": 5,
-     "substitutedOut": 16,
+     "substitutedOut": 18,
      "penaltiesScored": 1,
      "secondYellowCards": 0
     },
@@ -1117,28 +1117,28 @@
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 78,
-     "gamesPlayed": 392,
+     "gamesPlayed": 395,
      "yellowCards": 33,
-     "goalsConceded": 241,
-     "minutesPlayed": 27973,
+     "goalsConceded": 244,
+     "minutesPlayed": 28218,
      "substitutedIn": 59,
-     "substitutedOut": 227,
+     "substitutedOut": 229,
      "penaltiesScored": 8,
      "secondYellowCards": 0
     },
     {
      "club": "Uruguay",
      "goals": 14,
-     "assists": 8,
+     "assists": 9,
      "ownGoals": 0,
      "redCards": 0,
      "cleanSheets": 18,
-     "gamesPlayed": 61,
+     "gamesPlayed": 62,
      "yellowCards": 1,
-     "goalsConceded": 28,
-     "minutesPlayed": 3262,
+     "goalsConceded": 29,
+     "minutesPlayed": 3338,
      "substitutedIn": 24,
-     "substitutedOut": 33,
+     "substitutedOut": 34,
      "penaltiesScored": 2,
      "secondYellowCards": 0
     },
@@ -1193,5 +1193,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-17T03:16:40.591870+00:00"
+ "_coletado_em": "2026-11-24T04:01:23.459005+00:00"
 }

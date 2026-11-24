@@ -12,15 +12,15 @@
      "goals": 2,
      "league": "Campeonato Brasileiro Série A",
      "season": "2026",
-     "assists": 3,
+     "assists": 4,
      "ownGoals": 1,
      "redCards": 0,
-     "cleanSheets": 15,
-     "gamesPlayed": 26,
+     "cleanSheets": 18,
+     "gamesPlayed": 29,
      "yellowCards": 5,
      "goalsConceded": 13,
-     "minutesPlayed": 721,
-     "substitutedIn": 22,
+     "minutesPlayed": 765,
+     "substitutedIn": 25,
      "substitutedOut": 3,
      "penaltiesScored": 0,
      "secondYellowCards": 0
@@ -961,15 +961,15 @@
     {
      "club": "CR Flamengo",
      "goals": 119,
-     "assists": 66,
+     "assists": 67,
      "ownGoals": 1,
      "redCards": 5,
-     "cleanSheets": 109,
-     "gamesPlayed": 386,
+     "cleanSheets": 112,
+     "gamesPlayed": 389,
      "yellowCards": 84,
      "goalsConceded": 264,
-     "minutesPlayed": 25625,
-     "substitutedIn": 107,
+     "minutesPlayed": 25669,
+     "substitutedIn": 110,
      "substitutedOut": 152,
      "penaltiesScored": 6,
      "secondYellowCards": 1
@@ -1041,5 +1041,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-17T03:16:43.460370+00:00"
+ "_coletado_em": "2026-11-24T04:01:26.335292+00:00"
 }

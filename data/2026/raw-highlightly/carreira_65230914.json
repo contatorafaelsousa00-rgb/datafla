@@ -3,7 +3,7 @@
   {
    "id": 65230914,
    "logo": null,
-   "name": "Wallace Yan",
+   "name": "Wallace",
    "fullName": "Wallace Yan de Souza Barreto",
    "perCompetition": [
     {
@@ -16,12 +16,12 @@
      "ownGoals": 0,
      "redCards": 1,
      "cleanSheets": 0,
-     "gamesPlayed": 9,
-     "yellowCards": 0,
-     "goalsConceded": 9,
-     "minutesPlayed": 608,
+     "gamesPlayed": 11,
+     "yellowCards": 1,
+     "goalsConceded": 11,
+     "minutesPlayed": 779,
      "substitutedIn": 1,
-     "substitutedOut": 7,
+     "substitutedOut": 8,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -604,12 +604,12 @@
      "ownGoals": 0,
      "redCards": 1,
      "cleanSheets": 0,
-     "gamesPlayed": 9,
-     "yellowCards": 0,
-     "goalsConceded": 9,
-     "minutesPlayed": 608,
+     "gamesPlayed": 11,
+     "yellowCards": 1,
+     "goalsConceded": 11,
+     "minutesPlayed": 779,
      "substitutedIn": 1,
-     "substitutedOut": 7,
+     "substitutedOut": 8,
      "penaltiesScored": 0,
      "secondYellowCards": 0
     },
@@ -648,5 +648,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-17T03:16:51.532579+00:00"
+ "_coletado_em": "2026-11-24T04:01:33.902059+00:00"
 }
