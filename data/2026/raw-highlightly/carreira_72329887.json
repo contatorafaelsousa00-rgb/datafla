@@ -3,7 +3,7 @@
   {
    "id": 72329887,
    "logo": null,
-   "name": "João Victor",
+   "name": "João Victor Cunha",
    "fullName": "João Victor de Souza Cunha",
    "perCompetition": [
     {
@@ -448,11 +448,11 @@
      "assists": 0,
      "ownGoals": 1,
      "redCards": 0,
-     "cleanSheets": 4,
-     "gamesPlayed": 11,
+     "cleanSheets": 5,
+     "gamesPlayed": 12,
      "yellowCards": 4,
      "goalsConceded": 7,
-     "minutesPlayed": 972,
+     "minutesPlayed": 1062,
      "substitutedIn": 0,
      "substitutedOut": 2,
      "penaltiesScored": 0,
@@ -493,5 +493,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-18T05:31:36.571703+00:00"
+ "_coletado_em": "2026-11-25T23:31:22.560242+00:00"
 }

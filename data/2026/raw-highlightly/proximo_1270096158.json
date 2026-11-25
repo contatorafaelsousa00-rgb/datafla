@@ -12,7 +12,7 @@
   },
   "forecast": {
    "status": "cloudy",
-   "temperature": "22.44°C"
+   "temperature": "21.7°C"
   },
   "events": [],
   "predictions": {
@@ -49,6 +49,17 @@
       "away": "54.48%",
       "draw": "23.10%",
       "home": "22.42%"
+     }
+    },
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Coritiba.",
+     "generatedAt": "2026-11-25T10:51:06.870Z",
+     "probabilities": {
+      "away": "54.45%",
+      "draw": "23.03%",
+      "home": "22.51%"
      }
     }
    ]
@@ -109,5 +120,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-11-24T23:15:56.577624+00:00"
+ "_coletado_em": "2026-11-25T23:30:53.090900+00:00"
 }

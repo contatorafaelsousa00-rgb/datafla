@@ -162,25 +162,6 @@
      "club": "Gil Vicente FC",
      "type": "national cup",
      "goals": 0,
-     "league": "Allianz Cup",
-     "season": "26/27",
-     "assists": 0,
-     "ownGoals": 0,
-     "redCards": 0,
-     "cleanSheets": 0,
-     "gamesPlayed": 1,
-     "yellowCards": 0,
-     "goalsConceded": 2,
-     "minutesPlayed": 45,
-     "substitutedIn": 0,
-     "substitutedOut": 1,
-     "penaltiesScored": 0,
-     "secondYellowCards": 0
-    },
-    {
-     "club": "Gil Vicente FC",
-     "type": "national cup",
-     "goals": 0,
      "league": "Taça de Portugal",
      "season": "26/27",
      "assists": 0,
@@ -191,6 +172,25 @@
      "yellowCards": 0,
      "goalsConceded": 2,
      "minutesPlayed": 105,
+     "substitutedIn": 0,
+     "substitutedOut": 1,
+     "penaltiesScored": 0,
+     "secondYellowCards": 0
+    },
+    {
+     "club": "Gil Vicente FC",
+     "type": "national cup",
+     "goals": 0,
+     "league": "Allianz Cup",
+     "season": "26/27",
+     "assists": 0,
+     "ownGoals": 0,
+     "redCards": 0,
+     "cleanSheets": 0,
+     "gamesPlayed": 1,
+     "yellowCards": 0,
+     "goalsConceded": 2,
+     "minutesPlayed": 45,
      "substitutedIn": 0,
      "substitutedOut": 1,
      "penaltiesScored": 0,
@@ -591,5 +591,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-18T05:31:38.513388+00:00"
+ "_coletado_em": "2026-11-25T23:31:24.445186+00:00"
 }

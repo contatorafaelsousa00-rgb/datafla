@@ -41,10 +41,10 @@
       "away": {
        "wins": 8,
        "draws": 7,
-       "games": 18,
-       "loses": 3,
+       "games": 19,
+       "loses": 4,
        "scoredGoals": 27,
-       "receivedGoals": 14
+       "receivedGoals": 17
       },
       "home": {
        "wins": 13,
@@ -62,10 +62,10 @@
       "total": {
        "wins": 21,
        "draws": 11,
-       "games": 36,
-       "loses": 4,
+       "games": 37,
+       "loses": 5,
        "scoredGoals": 64,
-       "receivedGoals": 26
+       "receivedGoals": 29
       },
       "points": 74,
       "position": 2
@@ -226,13 +226,13 @@
       },
       "total": {
        "wins": 14,
-       "draws": 9,
-       "games": 35,
+       "draws": 10,
+       "games": 36,
        "loses": 12,
        "scoredGoals": 44,
        "receivedGoals": 40
       },
-      "points": 51,
+      "points": 52,
       "position": 7
      },
      {
@@ -280,10 +280,10 @@
       "home": {
        "wins": 6,
        "draws": 7,
-       "games": 17,
-       "loses": 4,
+       "games": 18,
+       "loses": 5,
        "scoredGoals": 23,
-       "receivedGoals": 21
+       "receivedGoals": 23
       },
       "team": {
        "id": 109712,
@@ -296,43 +296,10 @@
        "games": 36,
        "loses": 12,
        "scoredGoals": 51,
-       "receivedGoals": 50
+       "receivedGoals": 51
       },
       "points": 50,
       "position": 9
-     },
-     {
-      "away": {
-       "wins": 2,
-       "draws": 4,
-       "games": 17,
-       "loses": 11,
-       "scoredGoals": 14,
-       "receivedGoals": 26
-      },
-      "home": {
-       "wins": 10,
-       "draws": 4,
-       "games": 18,
-       "loses": 4,
-       "scoredGoals": 25,
-       "receivedGoals": 14
-      },
-      "team": {
-       "id": 108010,
-       "logo": "https://highlightly.net/soccer/images/teams/108010.png",
-       "name": "São Paulo FC"
-      },
-      "total": {
-       "wins": 13,
-       "draws": 8,
-       "games": 36,
-       "loses": 15,
-       "scoredGoals": 40,
-       "receivedGoals": 40
-      },
-      "points": 47,
-      "position": 10
      },
      {
       "away": {
@@ -365,6 +332,39 @@
        "receivedGoals": 52
       },
       "points": 47,
+      "position": 10
+     },
+     {
+      "away": {
+       "wins": 2,
+       "draws": 5,
+       "games": 18,
+       "loses": 11,
+       "scoredGoals": 15,
+       "receivedGoals": 27
+      },
+      "home": {
+       "wins": 10,
+       "draws": 4,
+       "games": 18,
+       "loses": 4,
+       "scoredGoals": 25,
+       "receivedGoals": 14
+      },
+      "team": {
+       "id": 108010,
+       "logo": "https://highlightly.net/soccer/images/teams/108010.png",
+       "name": "São Paulo FC"
+      },
+      "total": {
+       "wins": 12,
+       "draws": 9,
+       "games": 36,
+       "loses": 15,
+       "scoredGoals": 40,
+       "receivedGoals": 41
+      },
+      "points": 45,
       "position": 11
      },
      {
@@ -402,12 +402,12 @@
      },
      {
       "away": {
-       "wins": 0,
+       "wins": 1,
        "draws": 6,
-       "games": 17,
+       "games": 18,
        "loses": 11,
-       "scoredGoals": 12,
-       "receivedGoals": 35
+       "scoredGoals": 17,
+       "receivedGoals": 37
       },
       "home": {
        "wins": 11,
@@ -444,11 +444,11 @@
       },
       "home": {
        "wins": 7,
-       "draws": 6,
-       "games": 17,
+       "draws": 7,
+       "games": 18,
        "loses": 4,
-       "scoredGoals": 27,
-       "receivedGoals": 22
+       "scoredGoals": 28,
+       "receivedGoals": 23
       },
       "team": {
        "id": 102904,
@@ -457,22 +457,55 @@
       },
       "total": {
        "wins": 11,
-       "draws": 9,
+       "draws": 10,
        "games": 36,
-       "loses": 16,
-       "scoredGoals": 46,
+       "loses": 15,
+       "scoredGoals": 47,
        "receivedGoals": 58
       },
-      "points": 42,
+      "points": 43,
       "position": 14
      },
      {
       "away": {
-       "wins": 1,
-       "draws": 5,
+       "wins": 3,
+       "draws": 6,
        "games": 17,
+       "loses": 8,
+       "scoredGoals": 18,
+       "receivedGoals": 25
+      },
+      "home": {
+       "wins": 7,
+       "draws": 4,
+       "games": 18,
+       "loses": 7,
+       "scoredGoals": 22,
+       "receivedGoals": 17
+      },
+      "team": {
+       "id": 112265,
+       "logo": "https://highlightly.net/soccer/images/teams/112265.png",
+       "name": "Corinthians"
+      },
+      "total": {
+       "wins": 10,
+       "draws": 11,
+       "games": 36,
+       "loses": 15,
+       "scoredGoals": 40,
+       "receivedGoals": 42
+      },
+      "points": 41,
+      "position": 15
+     },
+     {
+      "away": {
+       "wins": 2,
+       "draws": 5,
+       "games": 18,
        "loses": 11,
-       "scoredGoals": 11,
+       "scoredGoals": 13,
        "receivedGoals": 26
       },
       "home": {
@@ -493,11 +526,11 @@
        "draws": 11,
        "games": 36,
        "loses": 15,
-       "scoredGoals": 39,
+       "scoredGoals": 40,
        "receivedGoals": 47
       },
       "points": 41,
-      "position": 15
+      "position": 16
      },
      {
       "away": {
@@ -530,39 +563,6 @@
        "receivedGoals": 49
       },
       "points": 41,
-      "position": 16
-     },
-     {
-      "away": {
-       "wins": 3,
-       "draws": 6,
-       "games": 17,
-       "loses": 8,
-       "scoredGoals": 18,
-       "receivedGoals": 25
-      },
-      "home": {
-       "wins": 7,
-       "draws": 4,
-       "games": 18,
-       "loses": 7,
-       "scoredGoals": 22,
-       "receivedGoals": 17
-      },
-      "team": {
-       "id": 112265,
-       "logo": "https://highlightly.net/soccer/images/teams/112265.png",
-       "name": "Corinthians"
-      },
-      "total": {
-       "wins": 10,
-       "draws": 10,
-       "games": 35,
-       "loses": 15,
-       "scoredGoals": 40,
-       "receivedGoals": 42
-      },
-      "points": 40,
       "position": 17
      },
      {
@@ -577,10 +577,10 @@
       "home": {
        "wins": 6,
        "draws": 5,
-       "games": 17,
-       "loses": 6,
-       "scoredGoals": 22,
-       "receivedGoals": 17
+       "games": 18,
+       "loses": 7,
+       "scoredGoals": 24,
+       "receivedGoals": 22
       },
       "team": {
        "id": 102053,
@@ -641,11 +641,11 @@
        "receivedGoals": 34
       },
       "home": {
-       "wins": 3,
+       "wins": 4,
        "draws": 5,
-       "games": 18,
+       "games": 19,
        "loses": 10,
-       "scoredGoals": 23,
+       "scoredGoals": 26,
        "receivedGoals": 40
       },
       "team": {
@@ -654,14 +654,14 @@
        "name": "Chapecoense"
       },
       "total": {
-       "wins": 4,
+       "wins": 5,
        "draws": 9,
-       "games": 36,
+       "games": 37,
        "loses": 23,
-       "scoredGoals": 34,
+       "scoredGoals": 37,
        "receivedGoals": 74
       },
-      "points": 21,
+      "points": 24,
       "position": 20
      }
     ]
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-11-24T00:46:17.427340+00:00"
+ "_coletado_em": "2026-11-25T23:31:07.580880+00:00"
 }
