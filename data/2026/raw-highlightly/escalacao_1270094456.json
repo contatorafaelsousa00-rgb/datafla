@@ -1,0 +1,291 @@
+{
+ "data": {
+  "homeTeam": {
+   "formation": "4-2-3-1",
+   "substitutes": [
+    {
+     "name": "Gabriel Werner",
+     "number": 14,
+     "position": "Goalkeeper",
+     "id": 56707091
+    },
+    {
+     "name": "Everton",
+     "number": 26,
+     "position": "Defender",
+     "id": 8884939
+    },
+    {
+     "name": "Marcinho",
+     "number": 7,
+     "position": "Forward",
+     "id": 1668597
+    },
+    {
+     "name": "Juan Ferreira Leite",
+     "number": 66,
+     "position": "Midfielder",
+     "id": null
+    },
+    {
+     "name": "Miguel Carvalho",
+     "number": 80,
+     "position": "Midfielder",
+     "id": 54258603
+    },
+    {
+     "name": "Rodrigo",
+     "number": 39,
+     "position": "Forward",
+     "id": 101596628
+    },
+    {
+     "name": "Rubens",
+     "number": 70,
+     "position": "Midfielder",
+     "id": 65744021
+    },
+    {
+     "name": "Rosivan Macedo Soares",
+     "number": 55,
+     "position": "Midfielder",
+     "id": null
+    },
+    {
+     "name": "Bruno Tubarão",
+     "number": 20,
+     "position": "Forward",
+     "id": 1524502
+    },
+    {
+     "name": "Fernando",
+     "number": 12,
+     "position": "Defender",
+     "id": 29304569
+    },
+    {
+     "name": "Mancha",
+     "number": 6,
+     "position": "Defender",
+     "id": 49307048
+    },
+    {
+     "name": "Vinicius Eduardo",
+     "number": 35,
+     "position": "Defender",
+     "id": null
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Matheus Aurélio",
+      "number": 30,
+      "position": "Goalkeeper",
+      "id": 19295521
+     }
+    ],
+    [
+     {
+      "name": "Bruno Pacheco",
+      "number": 91,
+      "position": "Defender",
+      "id": 1641066
+     },
+     {
+      "name": "Doma",
+      "number": 3,
+      "position": "Defender",
+      "id": 17141341
+     },
+     {
+      "name": "Victor Caetano",
+      "number": 25,
+      "position": "Defender",
+      "id": 1556380
+     },
+     {
+      "name": "Kauan Faria Gomes",
+      "number": 21,
+      "position": "Defender",
+      "id": 56707574
+     }
+    ],
+    [
+     {
+      "name": "David Antunes",
+      "number": 19,
+      "position": "Midfielder",
+      "id": 87743544
+     },
+     {
+      "name": "Camilo",
+      "number": 27,
+      "position": "Midfielder",
+      "id": 10303832
+     }
+    ],
+    [
+     {
+      "name": "Heitor",
+      "number": 5,
+      "position": "Midfielder",
+      "id": 1671978
+     },
+     {
+      "name": "Giovanni Augusto",
+      "number": 10,
+      "position": "Midfielder",
+      "id": 1667470
+     },
+     {
+      "name": "Max",
+      "number": 22,
+      "position": "Midfielder",
+      "id": 49300447
+     }
+    ],
+    [
+     {
+      "name": "Tulio Eduardo Silva De Oliveira",
+      "number": 9,
+      "position": "Forward",
+      "id": null
+     }
+    ]
+   ],
+   "id": 113116,
+   "logo": "https://highlightly.net/soccer/images/teams/113116.png",
+   "name": "Chapecoense"
+  },
+  "awayTeam": {
+   "formation": "3-4-2-1",
+   "substitutes": [
+    {
+     "name": "Victor Gabriel Leite dos Santos",
+     "number": 47,
+     "position": "Midfielder",
+     "id": null
+    },
+    {
+     "name": "Rafael Coutinho",
+     "number": 65,
+     "position": "Midfielder",
+     "id": 74707535
+    },
+    {
+     "name": "Lucas Andre",
+     "number": 66,
+     "position": "Defender",
+     "id": 101576181
+    },
+    {
+     "name": "Bruno",
+     "number": 21,
+     "position": "Goalkeeper",
+     "id": 5047987
+    },
+    {
+     "name": "Kauan Lima",
+     "number": 72,
+     "position": "Goalkeeper",
+     "id": null
+    },
+    {
+     "name": "Robson Fernandes dos Santos",
+     "number": 63,
+     "position": "Defender",
+     "id": null
+    },
+    {
+     "name": "M. C. Bilong",
+     "number": 29,
+     "position": "Forward",
+     "id": 107785146
+    }
+   ],
+   "initialLineup": [
+    [
+     {
+      "name": "Marcelo Lomba",
+      "number": 14,
+      "position": "Goalkeeper",
+      "id": 1670046
+     }
+    ],
+    [
+     {
+      "name": "Benedetti",
+      "number": 43,
+      "position": "Defender",
+      "id": 66826102
+     },
+     {
+      "name": "Fabiano",
+      "number": 37,
+      "position": "Defender",
+      "id": 66916745
+     },
+     {
+      "name": "Mohamed Zie Kone",
+      "number": 44,
+      "position": "Defender",
+      "id": null
+     }
+    ],
+    [
+     {
+      "name": "Luis Felipe",
+      "number": 50,
+      "position": "Midfielder",
+      "id": 92548911
+     },
+     {
+      "name": "Larson",
+      "number": 48,
+      "position": "Midfielder",
+      "id": 92627157
+     },
+     {
+      "name": "E. Martínez",
+      "number": 32,
+      "position": "Midfielder",
+      "id": 24646517
+     },
+     {
+      "name": "Khellven",
+      "number": 12,
+      "position": "Midfielder",
+      "id": 1630279
+     }
+    ],
+    [
+     {
+      "name": "Felipe Anderson",
+      "number": 7,
+      "position": "Midfielder",
+      "id": 388486
+     },
+     {
+      "name": "Erick Machado",
+      "number": 45,
+      "position": "Midfielder",
+      "id": 82516196
+     }
+    ],
+    [
+     {
+      "name": "Heittor",
+      "number": 39,
+      "position": "Forward",
+      "id": 92627318
+     }
+    ]
+   ],
+   "id": 103755,
+   "logo": "https://highlightly.net/soccer/images/teams/103755.png",
+   "name": "Palmeiras"
+  }
+ },
+ "_coletado_em": "2026-11-26T02:45:34.936891+00:00"
+}
