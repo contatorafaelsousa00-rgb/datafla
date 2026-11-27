@@ -213,11 +213,11 @@
       },
       "home": {
        "wins": 10,
-       "draws": 5,
-       "games": 17,
+       "draws": 6,
+       "games": 18,
        "loses": 2,
-       "scoredGoals": 27,
-       "receivedGoals": 18
+       "scoredGoals": 28,
+       "receivedGoals": 19
       },
       "team": {
        "id": 904546,
@@ -229,8 +229,8 @@
        "draws": 10,
        "games": 36,
        "loses": 12,
-       "scoredGoals": 44,
-       "receivedGoals": 40
+       "scoredGoals": 45,
+       "receivedGoals": 41
       },
       "points": 52,
       "position": 7
@@ -303,6 +303,39 @@
      },
      {
       "away": {
+       "wins": 2,
+       "draws": 5,
+       "games": 18,
+       "loses": 11,
+       "scoredGoals": 15,
+       "receivedGoals": 27
+      },
+      "home": {
+       "wins": 10,
+       "draws": 4,
+       "games": 18,
+       "loses": 4,
+       "scoredGoals": 25,
+       "receivedGoals": 14
+      },
+      "team": {
+       "id": 108010,
+       "logo": "https://highlightly.net/soccer/images/teams/108010.png",
+       "name": "São Paulo FC"
+      },
+      "total": {
+       "wins": 13,
+       "draws": 9,
+       "games": 37,
+       "loses": 15,
+       "scoredGoals": 43,
+       "receivedGoals": 42
+      },
+      "points": 48,
+      "position": 10
+     },
+     {
+      "away": {
        "wins": 4,
        "draws": 5,
        "games": 18,
@@ -332,39 +365,6 @@
        "receivedGoals": 52
       },
       "points": 47,
-      "position": 10
-     },
-     {
-      "away": {
-       "wins": 2,
-       "draws": 5,
-       "games": 18,
-       "loses": 11,
-       "scoredGoals": 15,
-       "receivedGoals": 27
-      },
-      "home": {
-       "wins": 10,
-       "draws": 4,
-       "games": 18,
-       "loses": 4,
-       "scoredGoals": 25,
-       "receivedGoals": 14
-      },
-      "team": {
-       "id": 108010,
-       "logo": "https://highlightly.net/soccer/images/teams/108010.png",
-       "name": "São Paulo FC"
-      },
-      "total": {
-       "wins": 12,
-       "draws": 9,
-       "games": 36,
-       "loses": 15,
-       "scoredGoals": 40,
-       "receivedGoals": 41
-      },
-      "points": 45,
       "position": 11
      },
      {
@@ -469,11 +469,11 @@
      {
       "away": {
        "wins": 3,
-       "draws": 6,
-       "games": 17,
+       "draws": 7,
+       "games": 18,
        "loses": 8,
-       "scoredGoals": 18,
-       "receivedGoals": 25
+       "scoredGoals": 19,
+       "receivedGoals": 26
       },
       "home": {
        "wins": 7,
@@ -493,8 +493,8 @@
        "draws": 11,
        "games": 36,
        "loses": 15,
-       "scoredGoals": 40,
-       "receivedGoals": 42
+       "scoredGoals": 41,
+       "receivedGoals": 43
       },
       "points": 41,
       "position": 15
@@ -623,10 +623,10 @@
       "total": {
        "wins": 7,
        "draws": 11,
-       "games": 36,
-       "loses": 18,
-       "scoredGoals": 41,
-       "receivedGoals": 61
+       "games": 37,
+       "loses": 19,
+       "scoredGoals": 42,
+       "receivedGoals": 64
       },
       "points": 32,
       "position": 19
@@ -674,5 +674,5 @@
    "season": 2026
   }
  },
- "_coletado_em": "2026-11-25T23:31:07.580880+00:00"
+ "_coletado_em": "2026-11-27T01:15:39.429399+00:00"
 }

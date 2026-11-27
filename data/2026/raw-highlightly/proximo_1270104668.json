@@ -1,21 +1,36 @@
 {
  "data": {
   "venue": {
-   "city": null,
-   "name": null,
-   "country": null,
-   "capacity": null
+   "city": "Rio de Janeiro",
+   "name": "Maracana Stadium",
+   "country": "Brazil",
+   "capacity": "73139"
   },
   "referee": {
    "name": null,
    "nationality": null
   },
   "forecast": {
-   "status": null,
-   "temperature": null
+   "status": "cloudy",
+   "temperature": "25.06°C"
   },
   "events": [],
-  "predictions": null,
+  "predictions": {
+   "live": [],
+   "prematch": [
+    {
+     "type": "prematch",
+     "modelType": "three-way",
+     "description": "Flamengo is most likely to win the game against Chapecoense.",
+     "generatedAt": "2026-11-26T12:53:20.154Z",
+     "probabilities": {
+      "away": "3.43%",
+      "draw": "7.26%",
+      "home": "89.31%"
+     }
+    }
+   ]
+  },
   "statistics": [
    {
     "statistics": [],
@@ -72,5 +87,5 @@
   },
   "news": []
  },
- "_coletado_em": "2026-11-25T23:30:55.851354+00:00"
+ "_coletado_em": "2026-11-27T01:15:31.354707+00:00"
 }

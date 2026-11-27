@@ -3,7 +3,7 @@
   {
    "id": 31934021,
    "logo": null,
-   "name": "Anthony Valencia",
+   "name": "A. Valencia",
    "fullName": "Anthony Lenín Valencia Bajaña",
    "perCompetition": [
     {
@@ -581,12 +581,12 @@
      "assists": 1,
      "ownGoals": 0,
      "redCards": 0,
-     "cleanSheets": 2,
-     "gamesPlayed": 6,
+     "cleanSheets": 3,
+     "gamesPlayed": 7,
      "yellowCards": 0,
      "goalsConceded": 3,
-     "minutesPlayed": 311,
-     "substitutedIn": 3,
+     "minutesPlayed": 327,
+     "substitutedIn": 4,
      "substitutedOut": 1,
      "penaltiesScored": 0,
      "secondYellowCards": 0
@@ -674,5 +674,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-19T04:01:38.800066+00:00"
+ "_coletado_em": "2026-11-27T01:15:54.406513+00:00"
 }
