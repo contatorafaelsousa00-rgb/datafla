@@ -193,14 +193,6 @@
    "photo": "https://media.api-sports.io/football/players/5995.png"
   },
   {
-   "id": 589367,
-   "name": "Alan",
-   "age": 18,
-   "number": 59,
-   "position": "Attacker",
-   "photo": "https://media.api-sports.io/football/players/589367.png"
-  },
-  {
    "id": 10180,
    "name": "Bruno Henrique",
    "age": 35,
@@ -213,7 +205,7 @@
    "name": "J. Carrascal",
    "age": 27,
    "number": 15,
-   "position": "Attacker",
+   "position": "Midfielder",
    "photo": "https://media.api-sports.io/football/players/5994.png"
   },
   {
@@ -253,7 +245,7 @@
    "name": "G. Plata",
    "age": 25,
    "number": 19,
-   "position": "Attacker",
+   "position": "Midfielder",
    "photo": "https://media.api-sports.io/football/players/16369.png"
   },
   {
@@ -261,7 +253,7 @@
    "name": "Samuel Lino",
    "age": 26,
    "number": 16,
-   "position": "Attacker",
+   "position": "Midfielder",
    "photo": "https://media.api-sports.io/football/players/126936.png"
   },
   {
@@ -273,5 +265,5 @@
    "photo": "https://media.api-sports.io/football/players/198347.png"
   }
  ],
- "_coletado_em": "2026-11-20T04:01:35.237740+00:00"
+ "_coletado_em": "2026-11-28T01:15:49.382429+00:00"
 }

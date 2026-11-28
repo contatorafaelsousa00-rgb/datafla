@@ -102,6 +102,25 @@
      "secondYellowCards": 0
     },
     {
+     "club": "Clube Atlético Mineiro",
+     "type": "national cup",
+     "goals": 0,
+     "league": "Copa do Brasil",
+     "season": "2026",
+     "assists": 0,
+     "ownGoals": 0,
+     "redCards": 0,
+     "cleanSheets": 0,
+     "gamesPlayed": 0,
+     "yellowCards": 0,
+     "goalsConceded": 0,
+     "minutesPlayed": 0,
+     "substitutedIn": 0,
+     "substitutedOut": 0,
+     "penaltiesScored": 0,
+     "secondYellowCards": 0
+    },
+    {
      "club": "CR Flamengo",
      "type": "national cup",
      "goals": 0,
@@ -199,6 +218,22 @@
    ],
    "perClub": [
     {
+     "club": "Brazil U20",
+     "goals": 0,
+     "assists": 0,
+     "ownGoals": 0,
+     "redCards": 0,
+     "cleanSheets": 0,
+     "gamesPlayed": 1,
+     "yellowCards": 0,
+     "goalsConceded": 0,
+     "minutesPlayed": 11,
+     "substitutedIn": 0,
+     "substitutedOut": 1,
+     "penaltiesScored": 0,
+     "secondYellowCards": 0
+    },
+    {
      "club": "Clube Atlético Mineiro",
      "goals": 0,
      "assists": 0,
@@ -249,5 +284,5 @@
    ]
   }
  ],
- "_coletado_em": "2026-11-20T04:01:28.488435+00:00"
+ "_coletado_em": "2026-11-28T01:15:42.677067+00:00"
 }
